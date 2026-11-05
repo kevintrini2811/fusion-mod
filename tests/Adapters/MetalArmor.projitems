@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/MetalArmor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ArmorTypes.cs" />
+  </ItemGroup>
+</Project>

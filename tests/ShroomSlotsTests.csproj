@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ShroomSlotsTests.cs" />
+    <Compile Include="ShroomSlotsStubs.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+    <Compile Include="../src/FusionService.cs" />
+    <Compile Include="../src/PlantingPatches.cs" />
+    <Compile Include="../src/PlayerCursorScope.cs" />
+    <Compile Include="../src/ShroomSlots.cs" />
+    <Compile Include="../src/PuffSpreading.cs" />
+    <Compile Include="../src/ShroomSlotPatches.cs" />
+    <Compile Include="../src/FusionHighlightPatch.cs" />
+  </ItemGroup>
+  <ItemGroup><Compile Include="Adapters/AirPlants.cs" /></ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+</Project>

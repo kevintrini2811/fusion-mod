@@ -1,0 +1,26 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)LevelMoney.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlantLibraryIdentity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeCombatVisuals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BiteEvents.cs" Condition="'$(MSBuildProjectName)' == 'WeedFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/LobberFlight.cs" Condition="'$(MSBuildProjectName)' == 'ShootingPotsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)PhoenixProjectiles.cs" Condition="'$(MSBuildProjectName)' == 'PumpkinSupportTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)GoldenPlants.cs" Condition="'$(MSBuildProjectName)' == 'SunflowerFusionsTests' Or '$(MSBuildProjectName)' == 'TileFixesTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)SeaNut.cs" Condition="'$(MSBuildProjectName)' != 'WeedFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)FumeSupport.cs" Condition="'$(MSBuildProjectName)' == 'UmbrellaShellTests' Or '$(MSBuildProjectName)' == 'SunflowerFusionsTests' Or '$(MSBuildProjectName)' == 'TileFixesTests' Or '$(MSBuildProjectName)' == 'WeedFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)DoomShooters.cs" Condition="'$(MSBuildProjectName)' == 'SunflowerFusionsTests' Or '$(MSBuildProjectName)' == 'TileFixesTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)DoomFusions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IllumiNut.cs" Condition="'$(MSBuildProjectName)' != 'StarFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)ZombieAttackType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PumpkinFertilizer.cs" Condition="'$(MSBuildProjectName)' == 'WeedFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FusionPlant.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SeedType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReactivePots.cs" Condition="'$(MSBuildProjectName)' != 'DefensivePotsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShootingPots.cs" Condition="'$(MSBuildProjectName)' != 'ShootingPotsTests' And '$(MSBuildProjectName)' != 'PumpkinSupportTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)ActiveNuts.cs" Condition="'$(MSBuildProjectName)' != 'ActiveNutsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)SeaFusions.cs" Condition="'$(MSBuildProjectName)' != 'StarFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)RollingChunks.cs" Condition="'$(MSBuildProjectName)' == 'ActiveNutsTests' Or '$(MSBuildProjectName)' == 'FumeFusionsTests'" />
+    <Compile Include="$(MSBuildThisFileDirectory)RollingHistory.cs" Condition="'$(MSBuildProjectName)' == 'ChomperFusionsTests' Or '$(MSBuildProjectName)' == 'SolarChomperTests' Or '$(MSBuildProjectName)' == 'UmbrellaShellTests'" />
+  </ItemGroup>
+</Project>

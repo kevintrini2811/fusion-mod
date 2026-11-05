@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DoomShootersTests.cs" />
+    <Compile Include="DoomShootersStubs.cs" />
+    <Compile Include="Adapters/SeedType.cs" />
+    <Compile Include="Adapters/PlantLibraryIdentity.cs" />
+    <Compile Include="../src/FusionPlant.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+    <Compile Include="../src/DoomShooters.cs" />
+    <Compile Include="../src/DoomProjectiles.cs" />
+  </ItemGroup>
+</Project>

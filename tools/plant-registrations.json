@@ -1,0 +1,1973 @@
+{
+  "plants": [
+    {
+      "name": "BuckShroom",
+      "native": "Puffshroom",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "SproutPult",
+      "native": "Puffshroom",
+      "marker": "Cabbagepult"
+    },
+    {
+      "name": "BabyCorn",
+      "native": "Puffshroom",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "SlicePult",
+      "native": "Puffshroom",
+      "marker": "Melonpult"
+    },
+    {
+      "name": "GnomeShroom",
+      "native": "Puffshroom",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "UmbrellaCap",
+      "native": "Puffshroom",
+      "marker": "Umbrella"
+    },
+    {
+      "name": "HailShroom",
+      "native": "Puffshroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "IcicleShroom",
+      "native": "Puffshroom",
+      "marker": "Snowpea"
+    },
+    {
+      "name": "TwinkleShroom",
+      "native": "Puffshroom",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "NuggetShroom",
+      "native": "Puffshroom",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "NutShroom",
+      "native": "Puffshroom",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "BellPepper",
+      "native": "Puffshroom",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "BoomShroom",
+      "native": "Puffshroom",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "PennyShroom",
+      "native": "Puffshroom",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SunnyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "StarryShroom",
+      "native": "Scaredyshroom",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "SturdyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "CamoShroom",
+      "native": "Scaredyshroom",
+      "marker": "Blover"
+    },
+    {
+      "name": "PeaShroom",
+      "native": "Puffshroom",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "RepeatShroom",
+      "native": "Puffshroom",
+      "marker": "Repeater"
+    },
+    {
+      "name": "SplitPeaShroom",
+      "native": "Puffshroom",
+      "marker": "Splitpea"
+    },
+    {
+      "name": "GatlingPeaShroom",
+      "native": "Puffshroom",
+      "marker": "Gatlingpea"
+    },
+    {
+      "name": "SpeedyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "BlastyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "ShiveryShroom",
+      "native": "Scaredyshroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "SpuddyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "BlackCherry",
+      "native": "Cherrybomb",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "FrozenCherry",
+      "native": "Peashooter",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "DemiseShroom",
+      "native": "Doomshroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "SundaeShroom",
+      "native": "Sunshroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "DoomSquash",
+      "native": "Squash",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "Jawbreaker",
+      "native": "Squash",
+      "marker": "Chomper"
+    },
+    {
+      "name": "DoomChomper",
+      "native": "Chomper",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "Frostbiter",
+      "native": "Chomper",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "FrostShroom",
+      "native": "Fumeshroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "FlameShroom",
+      "native": "Fumeshroom",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "SootShroom",
+      "native": "Fumeshroom",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "FumeSpreader",
+      "native": "Fumeshroom",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "FoulShroom",
+      "native": "Fumeshroom",
+      "marker": "Garlic"
+    },
+    {
+      "name": "GloomShroom",
+      "native": "Gloomshroom",
+      "marker": "None"
+    },
+    {
+      "name": "FrostGloomShroom",
+      "native": "Gloomshroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "FlameGloomShroom",
+      "native": "Gloomshroom",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "GutsyShroom",
+      "native": "Fumeshroom",
+      "marker": "Scaredyshroom"
+    },
+    {
+      "name": "StarchShroom",
+      "native": "Fumeshroom",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "Icerock",
+      "native": "Spikerock",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "Hearthrock",
+      "native": "Spikerock",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "StarrySquash",
+      "native": "Squash",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "SolarSquash",
+      "native": "Squash",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "SpicyKelp",
+      "native": "Tanglekelp",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "DoomKelp",
+      "native": "Tanglekelp",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "ButterNut",
+      "native": "Wallnut",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "UmbrellaHusk",
+      "native": "Umbrella",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "Torchflower",
+      "native": "Sunflower",
+      "marker": "Torchwood"
+    },
+    {
+      "name": "SilverNut",
+      "native": "Wallnut",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverGarlic",
+      "native": "Garlic",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverIceShroom",
+      "native": "Iceshroom",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverSunflower",
+      "native": "Sunflower",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverDoomShroom",
+      "native": "Doomshroom",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverHypnoShroom",
+      "native": "Hypnoshroom",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverCabbage",
+      "native": "Cabbagepult",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverMelon",
+      "native": "Melonpult",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SolarPot",
+      "native": "Flowerpot",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "SunsetShroom",
+      "native": "Seashroom",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "SolarFlare",
+      "native": "Jalapeno",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "SolarBlover",
+      "native": "Blover",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "LandMine",
+      "native": "Potatomine",
+      "marker": "Seashroom"
+    },
+    {
+      "name": "FoulNut",
+      "native": "Wallnut",
+      "marker": "Garlic"
+    },
+    {
+      "name": "StarNut",
+      "native": "Wallnut",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "PeaSquash",
+      "native": "Squash",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "IronSquash",
+      "native": "Squash",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "StenchSpreader",
+      "native": "Threepeater",
+      "marker": "Garlic"
+    },
+    {
+      "name": "SnowThreepeater",
+      "native": "Threepeater",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "CherrySpreader",
+      "native": "Threepeater",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "ScorchedThreepeater",
+      "native": "Threepeater",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "CharredThreepeater",
+      "native": "Threepeater",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "FalloutBlover",
+      "native": "Blover",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "Solarfruit",
+      "native": "Starfruit",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "HypnoGarlic",
+      "native": "Garlic",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "Flytrapper",
+      "native": "Chomper",
+      "marker": "Blover"
+    },
+    {
+      "name": "HypnoPea",
+      "native": "Peashooter",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "HypnoRepeater",
+      "native": "Repeater",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "SplitHypno",
+      "native": "Splitpea",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "GatlingHypno",
+      "native": "Gatlingpea",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "PoisonPea",
+      "native": "Peashooter",
+      "marker": "Garlic"
+    },
+    {
+      "name": "PoisonRepeater",
+      "native": "Repeater",
+      "marker": "Garlic"
+    },
+    {
+      "name": "SplitPoison",
+      "native": "Splitpea",
+      "marker": "Garlic"
+    },
+    {
+      "name": "GatlingPoison",
+      "native": "Gatlingpea",
+      "marker": "Garlic"
+    },
+    {
+      "name": "ThornNut",
+      "native": "Wallnut",
+      "marker": "Cactus"
+    },
+    {
+      "name": "IceMine",
+      "native": "Potatomine",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "HypnoMine",
+      "native": "Potatomine",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "ChipMine",
+      "native": "Potatomine",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "BlazePea",
+      "native": "Peashooter",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "BlazeRepeater",
+      "native": "Repeater",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "SplitBlaze",
+      "native": "Splitpea",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "GatlingBlaze",
+      "native": "Gatlingpea",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "Solarweed",
+      "native": "Spikeweed",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "Iceweed",
+      "native": "Spikeweed",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "Scorchweed",
+      "native": "Spikeweed",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "SpikeNut",
+      "native": "Wallnut",
+      "marker": "Spikeweed"
+    },
+    {
+      "name": "FlameWallNut",
+      "native": "Wallnut",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "FrostWallNut",
+      "native": "Wallnut",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "FlameTallNut",
+      "native": "Tallnut",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "FrostTallNut",
+      "native": "Tallnut",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "CherrySquash",
+      "native": "Squash",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "SpicySquash",
+      "native": "Squash",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "IcySquash",
+      "native": "Squash",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "HypnoSquash",
+      "native": "Squash",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "TwinMarigold",
+      "native": "Marigold",
+      "marker": "Marigold"
+    },
+    {
+      "name": "UmbrellaShell",
+      "native": "Umbrella",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "ChompMine",
+      "native": "Chomper",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "SolarChomper",
+      "native": "Chomper",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "SolarNut",
+      "native": "Wallnut",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "TwinSolarNut",
+      "native": "Wallnut",
+      "marker": "Twinsunflower"
+    },
+    {
+      "name": "PeatatoMine",
+      "native": "Potatomine",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "SolarMine",
+      "native": "Potatomine",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "MineNut",
+      "native": "Potatomine",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "Bucket",
+      "native": "Potatomine",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "FootballHelmet",
+      "native": "Potatomine",
+      "marker": "GoldMagnet"
+    },
+    {
+      "name": "FootballNut",
+      "native": "Tallnut",
+      "marker": "GoldMagnet"
+    },
+    {
+      "name": "FootballGatling",
+      "native": "Gatlingpea",
+      "marker": "GoldMagnet"
+    },
+    {
+      "name": "BuckNut",
+      "native": "Wallnut",
+      "marker": "GoldMagnet"
+    },
+    {
+      "name": "Buckshooter",
+      "native": "Peashooter",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "PeaNut",
+      "native": "Peashooter",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "ChompShooter",
+      "native": "Chomper",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "ChompNut",
+      "native": "Chomper",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "Chompzilla",
+      "native": "Chomper",
+      "marker": "Tallnut"
+    },
+    {
+      "name": "CherryChomper",
+      "native": "Chomper",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "CherryNut",
+      "native": "Wallnut",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "SolarBomb",
+      "native": "Cherrybomb",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "ClusterMine",
+      "native": "Potatomine",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "SnowRepeater",
+      "native": "Repeater",
+      "marker": "Snowpea"
+    },
+    {
+      "name": "SnowSplit",
+      "native": "Splitpea",
+      "marker": "Snowpea"
+    },
+    {
+      "name": "GatlingSnow",
+      "native": "Gatlingpea",
+      "marker": "Snowpea"
+    },
+    {
+      "name": "SolarShooter",
+      "native": "Peashooter",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "CherryShooter",
+      "native": "Peashooter",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "Cherrypeater",
+      "native": "Repeater",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "SplitCherry",
+      "native": "Splitpea",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "GatlingCherry",
+      "native": "Gatlingpea",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "ExplodeOShooter",
+      "native": "Peashooter",
+      "marker": "ExplodeONut"
+    },
+    {
+      "name": "SilverPot",
+      "native": "Flowerpot",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverUmbrella",
+      "native": "Umbrella",
+      "marker": "Marigold"
+    },
+    {
+      "name": "SilverKernel",
+      "native": "Kernelpult",
+      "marker": "Marigold"
+    },
+    {
+      "name": "LumosPot",
+      "native": "Flowerpot",
+      "marker": "Plantern"
+    },
+    {
+      "name": "CabbagePot",
+      "native": "Flowerpot",
+      "marker": "Cabbagepult"
+    },
+    {
+      "name": "ButterPot",
+      "native": "Flowerpot",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "UmbrellaPot",
+      "native": "Flowerpot",
+      "marker": "Umbrella"
+    },
+    {
+      "name": "NutPot",
+      "native": "Flowerpot",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "GarlicPot",
+      "native": "Flowerpot",
+      "marker": "Garlic"
+    },
+    {
+      "name": "SpikePot",
+      "native": "Flowerpot",
+      "marker": "Spikeweed"
+    },
+    {
+      "name": "MelonPot",
+      "native": "Flowerpot",
+      "marker": "Melonpult"
+    },
+    {
+      "name": "CherryPot",
+      "native": "Flowerpot",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "HotPot",
+      "native": "Flowerpot",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "HypnoPot",
+      "native": "Flowerpot",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "DoomPot",
+      "native": "Flowerpot",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "PeaPot",
+      "native": "Flowerpot",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "TriPot",
+      "native": "Flowerpot",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "KernelTriPult",
+      "native": "Kernelpult",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "MelonTriPult",
+      "native": "Melonpult",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "TacoPult",
+      "native": "Cabbagepult",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "CobPult",
+      "native": "Melonpult",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "OverripeMelon",
+      "native": "Melonpult",
+      "marker": "Cabbagepult"
+    },
+    {
+      "name": "CabbageTriPult",
+      "native": "Cabbagepult",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "Coldslaw",
+      "native": "Cabbagepult",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "KimchiPult",
+      "native": "Cabbagepult",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "Cobsicle",
+      "native": "Kernelpult",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "SaladPult",
+      "native": "Melonpult",
+      "marker": "Repeater"
+    },
+    {
+      "name": "CabbageNut",
+      "native": "Wallnut",
+      "marker": "Cabbagepult"
+    },
+    {
+      "name": "MelonNut",
+      "native": "Wallnut",
+      "marker": "Melonpult"
+    },
+    {
+      "name": "ThreeNuts",
+      "native": "Tallnut",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "SquashNut",
+      "native": "Wallnut",
+      "marker": "Squash"
+    },
+    {
+      "name": "TingleKelp",
+      "native": "Tanglekelp",
+      "marker": "Puffshroom"
+    },
+    {
+      "name": "GrappleKelp",
+      "native": "Tanglekelp",
+      "marker": "Fumeshroom"
+    },
+    {
+      "name": "TangleNut",
+      "native": "Tanglekelp",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "SpikeKelp",
+      "native": "Tanglekelp",
+      "marker": "Spikeweed"
+    },
+    {
+      "name": "EyesZombieHead",
+      "native": "Potatomine",
+      "marker": "Gravebuster"
+    },
+    {
+      "name": "BloodSunflower",
+      "native": "Sunflower",
+      "marker": "Gravebuster"
+    },
+    {
+      "name": "Cyclover",
+      "native": "Blover",
+      "marker": "Blover"
+    },
+    {
+      "name": "Disguster",
+      "native": "Blover",
+      "marker": "Garlic"
+    },
+    {
+      "name": "BreezeBlover",
+      "native": "Blover",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "MindBlover",
+      "native": "Blover",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "BoostShroom",
+      "native": "Fumeshroom",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "BlowtorchShroom",
+      "native": "Fumeshroom",
+      "marker": "Torchwood"
+    },
+    {
+      "name": "WallopShroom",
+      "native": "Fumeshroom",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "CaltropShroom",
+      "native": "Spikeweed",
+      "marker": "Fumeshroom"
+    },
+    {
+      "name": "GarbagePult",
+      "native": "Cabbagepult",
+      "marker": "Garlic"
+    },
+    {
+      "name": "ClovePult",
+      "native": "Kernelpult",
+      "marker": "Garlic"
+    },
+    {
+      "name": "GarlicPult",
+      "native": "Melonpult",
+      "marker": "Garlic"
+    },
+    {
+      "name": "SummerMelon",
+      "native": "Melonpult",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "Starlic",
+      "native": "Starfruit",
+      "marker": "Garlic"
+    },
+    {
+      "name": "WinterStarfruit",
+      "native": "Starfruit",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "SpicyStarfruit",
+      "native": "Starfruit",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "Starshooter",
+      "native": "Peashooter",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "FrostCattail",
+      "native": "Cattail",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "FlameCattail",
+      "native": "Cattail",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "HypnoMelon",
+      "native": "Melonpult",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "HypnoPepper",
+      "native": "Jalapeno",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "MinnowShroom",
+      "native": "Seashroom",
+      "marker": "Puffshroom"
+    },
+    {
+      "name": "UrchinShroom",
+      "native": "Seashroom",
+      "marker": "Cactus"
+    },
+    {
+      "name": "SharkShroom",
+      "native": "Seashroom",
+      "marker": "Fumeshroom"
+    },
+    {
+      "name": "SeaStar",
+      "native": "Seashroom",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "BeaconShroom",
+      "native": "Seashroom",
+      "marker": "Plantern"
+    },
+    {
+      "name": "JellyShroom",
+      "native": "Seashroom",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "SwellShroom",
+      "native": "Seashroom",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "HermitShroom",
+      "native": "Seashroom",
+      "marker": "Scaredyshroom"
+    },
+    {
+      "name": "StarryPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "ThornyPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Cactus"
+    },
+    {
+      "name": "PuffKin",
+      "native": "Pumpkinshell",
+      "marker": "Puffshroom"
+    },
+    {
+      "name": "FumingPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Fumeshroom"
+    },
+    {
+      "name": "CherryPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "StinkyPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Garlic"
+    },
+    {
+      "name": "ScarelessPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Scaredyshroom"
+    },
+    {
+      "name": "NutShell",
+      "native": "Pumpkinshell",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "WindyPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Blover"
+    },
+    {
+      "name": "SpikyPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Spikeweed"
+    },
+    {
+      "name": "JackOPlantern",
+      "native": "Pumpkinshell",
+      "marker": "Plantern"
+    },
+    {
+      "name": "SeaShell",
+      "native": "Pumpkinshell",
+      "marker": "Seashroom"
+    },
+    {
+      "name": "LettucePult",
+      "native": "Cabbagepult",
+      "marker": "Squash"
+    },
+    {
+      "name": "ButternutPult",
+      "native": "Kernelpult",
+      "marker": "Squash"
+    },
+    {
+      "name": "GourdPult",
+      "native": "Melonpult",
+      "marker": "Squash"
+    },
+    {
+      "name": "SpringMelon",
+      "native": "Melonpult",
+      "marker": "Fumeshroom"
+    },
+    {
+      "name": "DormantShroom",
+      "native": "Doomshroom",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "MorphShroom",
+      "native": "Fumeshroom",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "MelonMorph",
+      "native": "Melonpult",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "Starmorph",
+      "native": "Starfruit",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "SaguaroShroom",
+      "native": "Fumeshroom",
+      "marker": "Cactus"
+    },
+    {
+      "name": "IceCactus",
+      "native": "Cactus",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "MagnetCactus",
+      "native": "Cactus",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "IllumiNut",
+      "native": "Wallnut",
+      "marker": "Plantern"
+    },
+    {
+      "name": "DoomGarlic",
+      "native": "Garlic",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "DoomNut",
+      "native": "Wallnut",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "Doomflower",
+      "native": "Sunflower",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "CraterTot",
+      "native": "Potatomine",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "DoomSeed",
+      "native": "Doomshroom",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "PumpkinPod",
+      "native": "Pumpkinshell",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "MelonShell",
+      "native": "Pumpkinshell",
+      "marker": "Melonpult"
+    },
+    {
+      "name": "CryoPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "PyroPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "KernelMorph",
+      "native": "Kernelpult",
+      "marker": "Magnetshroom"
+    },
+    {
+      "name": "RustShroom",
+      "native": "Fumeshroom",
+      "marker": "Tallnut"
+    },
+    {
+      "name": "MetalPult",
+      "native": "Melonpult",
+      "marker": "Tallnut"
+    },
+    {
+      "name": "IronStar",
+      "native": "Starfruit",
+      "marker": "Tallnut"
+    },
+    {
+      "name": "DoomPea",
+      "native": "Peashooter",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "GatlingDoom",
+      "native": "Gatlingpea",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "DoomSpreader",
+      "native": "Threepeater",
+      "marker": "Peashooter"
+    },
+    {
+      "name": "DeathStar",
+      "native": "Starfruit",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "UmbrellaClove",
+      "native": "Umbrella",
+      "marker": "Garlic"
+    },
+    {
+      "name": "UmbrellaThorn",
+      "native": "Umbrella",
+      "marker": "Cactus"
+    },
+    {
+      "name": "DamagePult",
+      "native": "Cabbagepult",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "StarburstShroom",
+      "native": "Fumeshroom",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "RayShroom",
+      "native": "Fumeshroom",
+      "marker": "Plantern"
+    },
+    {
+      "name": "BlubberShroom",
+      "native": "Fumeshroom",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "SunriseShroom",
+      "native": "Fumeshroom",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "BushShroom",
+      "native": "Umbrella",
+      "marker": "Fumeshroom"
+    },
+    {
+      "name": "Beamshooter",
+      "native": "Peashooter",
+      "marker": "Plantern"
+    },
+    {
+      "name": "Rebeamer",
+      "native": "Repeater",
+      "marker": "Plantern"
+    },
+    {
+      "name": "SplitBeam",
+      "native": "Splitpea",
+      "marker": "Plantern"
+    },
+    {
+      "name": "GatlingBeam",
+      "native": "Gatlingpea",
+      "marker": "Plantern"
+    },
+    {
+      "name": "Starthorn",
+      "native": "Starfruit",
+      "marker": "Cactus"
+    },
+    {
+      "name": "DoomCactus",
+      "native": "Cactus",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "LumosCactus",
+      "native": "Cactus",
+      "marker": "Plantern"
+    },
+    {
+      "name": "Thornweed",
+      "native": "Spikeweed",
+      "marker": "Cactus"
+    },
+    {
+      "name": "Butterweed",
+      "native": "Spikeweed",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "Springweed",
+      "native": "Spikeweed",
+      "marker": "Melonpult"
+    },
+    {
+      "name": "Splash",
+      "native": "Squash",
+      "marker": "Seashroom"
+    },
+    {
+      "name": "SeaNut",
+      "native": "Wallnut",
+      "marker": "Seashroom"
+    },
+    {
+      "name": "StrangleKelp",
+      "native": "Tanglekelp",
+      "marker": "Squash"
+    },
+    {
+      "name": "KelpSpreader",
+      "native": "Tanglekelp",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "SquashSpreader",
+      "native": "Threepeater",
+      "marker": "Squash"
+    },
+    {
+      "name": "Squashweed",
+      "native": "Spikeweed",
+      "marker": "Squash"
+    },
+    {
+      "name": "GoldenNut",
+      "native": "Wallnut",
+      "marker": "InstantCoffee"
+    },
+    {
+      "name": "GoldenSunflower",
+      "native": "Sunflower",
+      "marker": "GoldMagnet"
+    },
+    {
+      "name": "TangleMine",
+      "native": "Potatomine",
+      "marker": "Tanglekelp"
+    },
+    {
+      "name": "KelpMine",
+      "native": "Tanglekelp",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "SeaMine",
+      "native": "Seashroom",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "PotatoMasher",
+      "native": "Potatomine",
+      "marker": "Squash"
+    },
+    {
+      "name": "PotatoMash",
+      "native": "Squash",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "PerfumeShroom",
+      "native": "Fumeshroom",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "TangleWeed",
+      "native": "Spikeweed",
+      "marker": "Tanglekelp"
+    },
+    {
+      "name": "Glowver",
+      "native": "Blover",
+      "marker": "Plantern"
+    },
+    {
+      "name": "FrenzyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "PhoenixThreepeater",
+      "native": "Threepeater",
+      "marker": "Torchwood"
+    },
+    {
+      "name": "SolarPult",
+      "native": "Cabbagepult",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "Triplantern",
+      "native": "Plantern",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "AuroraPlantern",
+      "native": "Plantern",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "BloverPot",
+      "native": "Flowerpot",
+      "marker": "Blover"
+    },
+    {
+      "name": "ScaredyPot",
+      "native": "Flowerpot",
+      "marker": "Scaredyshroom"
+    },
+    {
+      "name": "Multipeater",
+      "native": "Threepeater",
+      "marker": "Repeater"
+    },
+    {
+      "name": "SeaPot",
+      "native": "Flowerpot",
+      "marker": "Seashroom"
+    },
+    {
+      "name": "CabbageDropper",
+      "native": "Blover",
+      "marker": "Cabbagepult"
+    },
+    {
+      "name": "ButterFly",
+      "native": "Blover",
+      "marker": "Kernelpult"
+    },
+    {
+      "name": "CherryPop",
+      "native": "Puffshroom",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "BallCactus",
+      "native": "Puffshroom",
+      "marker": "Cactus"
+    },
+    {
+      "name": "BelchShroom",
+      "native": "Fumeshroom",
+      "marker": "Chomper"
+    },
+    {
+      "name": "HungryShroom",
+      "native": "Scaredyshroom",
+      "marker": "Chomper"
+    },
+    {
+      "name": "TriggerShroom",
+      "native": "Fumeshroom",
+      "marker": "Cherrybomb"
+    },
+    {
+      "name": "Spicicle",
+      "native": "Iceshroom",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "Chompkin",
+      "native": "Pumpkinshell",
+      "marker": "Chomper"
+    },
+    {
+      "name": "PumpkinMine",
+      "native": "Pumpkinshell",
+      "marker": "Potatomine"
+    },
+    {
+      "name": "SunnyPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Sunflower"
+    },
+    {
+      "name": "GlacierShroom",
+      "native": "Fumeshroom",
+      "marker": "Wintermelon"
+    },
+    {
+      "name": "ThreetatoMine",
+      "native": "Potatomine",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "MarigoldMine",
+      "native": "Potatomine",
+      "marker": "Marigold"
+    },
+    {
+      "name": "UmbrellaKale",
+      "native": "Umbrella",
+      "marker": "Cabbagepult"
+    },
+    {
+      "name": "UmbrellaRind",
+      "native": "Umbrella",
+      "marker": "Melonpult"
+    },
+    {
+      "name": "LumosUmbrella",
+      "native": "Umbrella",
+      "marker": "Plantern"
+    },
+    {
+      "name": "IcePot",
+      "native": "Flowerpot",
+      "marker": "Iceshroom"
+    },
+    {
+      "name": "RoastedSquash",
+      "native": "Squash",
+      "marker": "Cobcannon"
+    },
+    {
+      "name": "RoastedWallNut",
+      "native": "Wallnut",
+      "marker": "Cobcannon"
+    },
+    {
+      "name": "RoastedPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Cobcannon"
+    },
+    {
+      "name": "RoastedPotato",
+      "native": "Potatomine",
+      "marker": "Cobcannon"
+    },
+    {
+      "name": "TideShroom",
+      "native": "Seashroom",
+      "marker": "Blover"
+    },
+    {
+      "name": "BlacklightPlantern",
+      "native": "Plantern",
+      "marker": "Doomshroom"
+    },
+    {
+      "name": "Scorchwood",
+      "native": "Torchwood",
+      "marker": "Jalapeno"
+    },
+    {
+      "name": "Stenchwood",
+      "native": "Torchwood",
+      "marker": "Garlic"
+    },
+    {
+      "name": "Nutwood",
+      "native": "Torchwood",
+      "marker": "Wallnut"
+    },
+    {
+      "name": "Torchthree",
+      "native": "Torchwood",
+      "marker": "Threepeater"
+    },
+    {
+      "name": "Sparkwood",
+      "native": "Torchwood",
+      "marker": "Starfruit"
+    },
+    {
+      "name": "Hypnowood",
+      "native": "Torchwood",
+      "marker": "Hypnoshroom"
+    }
+  ],
+  "reserved": [],
+  "families": {
+    "IsSilver": [
+      "SilverNut",
+      "SilverGarlic",
+      "SilverIceShroom",
+      "SilverSunflower",
+      "SilverDoomShroom",
+      "SilverHypnoShroom",
+      "IsSilverLobber",
+      "SilverPot",
+      "SilverUmbrella"
+    ],
+    "IsSilverLobber": [
+      "SilverCabbage",
+      "SilverMelon",
+      "SilverKernel"
+    ],
+    "IsSunflowerFusion": [
+      "SilverSunflower",
+      "SolarPot",
+      "SunsetShroom",
+      "SolarFlare",
+      "SolarBlover"
+    ],
+    "IsPuffLobber": [
+      "SproutPult",
+      "BabyCorn",
+      "SlicePult"
+    ],
+    "IsPuffSpecial": [
+      "HailShroom",
+      "IcicleShroom",
+      "TwinkleShroom",
+      "NuggetShroom"
+    ],
+    "IsPuffSupport": [
+      "NutShroom",
+      "BellPepper",
+      "BoomShroom",
+      "PennyShroom",
+      "GnomeShroom",
+      "UmbrellaCap",
+      "CherryPop"
+    ],
+    "IsPuffVariant": [
+      "IsPuffShooter",
+      "IsPuffSupport",
+      "IsPuffSpecial",
+      "IsPuffLobber",
+      "BallCactus"
+    ],
+    "IsPuffShooter": [
+      "PeaShroom",
+      "RepeatShroom",
+      "SplitPeaShroom",
+      "GatlingPeaShroom",
+      "BuckShroom"
+    ],
+    "IsSupportFusion": [
+      "FalloutBlover",
+      "Solarfruit",
+      "HypnoGarlic",
+      "Flytrapper"
+    ],
+    "IsHypnoShooter": [
+      "HypnoPea",
+      "HypnoRepeater",
+      "SplitHypno",
+      "GatlingHypno"
+    ],
+    "IsScaredy": [
+      "SunnyShroom",
+      "StarryShroom",
+      "SturdyShroom",
+      "CamoShroom",
+      "SpeedyShroom",
+      "BlastyShroom",
+      "ShiveryShroom",
+      "SpuddyShroom",
+      "FrenzyShroom",
+      "HungryShroom"
+    ],
+    "IsIceInstant": [
+      "BlackCherry",
+      "FrozenCherry",
+      "DemiseShroom",
+      "SundaeShroom"
+    ],
+    "IsGloom": [
+      "GloomShroom",
+      "FrostGloomShroom",
+      "FlameGloomShroom"
+    ],
+    "IsThreepeater": [
+      "StenchSpreader",
+      "SnowThreepeater",
+      "ScorchedThreepeater",
+      "CharredThreepeater",
+      "CherrySpreader",
+      "PhoenixThreepeater",
+      "Multipeater"
+    ],
+    "IsRock": [
+      "Icerock",
+      "Hearthrock"
+    ],
+    "IsFume": [
+      "GutsyShroom",
+      "FoulShroom",
+      "StarchShroom",
+      "FrostShroom",
+      "FlameShroom",
+      "SootShroom",
+      "FumeSpreader",
+      "BoostShroom",
+      "BlowtorchShroom",
+      "WallopShroom",
+      "CaltropShroom",
+      "MorphShroom",
+      "RustShroom",
+      "StarburstShroom",
+      "RayShroom",
+      "BlubberShroom",
+      "BushShroom",
+      "PerfumeShroom",
+      "BelchShroom",
+      "TriggerShroom",
+      "GlacierShroom"
+    ],
+    "IsKelp": [
+      "SpicyKelp",
+      "DoomKelp"
+    ],
+    "IsContactUmbrella": [
+      "UmbrellaShell",
+      "UmbrellaHusk",
+      "SilverUmbrella",
+      "UmbrellaClove",
+      "UmbrellaThorn",
+      "UmbrellaKale",
+      "UmbrellaRind",
+      "LumosUmbrella"
+    ],
+    "IsReactiveNut": [
+      "FoulNut",
+      "StarNut"
+    ],
+    "IsPoisonShooter": [
+      "StenchSpreader",
+      "PoisonPea",
+      "PoisonRepeater",
+      "SplitPoison",
+      "GatlingPoison"
+    ],
+    "IsBurstMine": [
+      "IceMine",
+      "HypnoMine",
+      "ChipMine"
+    ],
+    "IsBlazeShooter": [
+      "BlazePea",
+      "BlazeRepeater",
+      "SplitBlaze",
+      "GatlingBlaze"
+    ],
+    "IsWeed": [
+      "IsRock",
+      "Solarweed",
+      "Iceweed",
+      "Scorchweed",
+      "TangleWeed"
+    ],
+    "IsRetaliatingNut": [
+      "IsElementalNut",
+      "SpikeNut",
+      "ThornNut",
+      "ButterNut"
+    ],
+    "IsElementalNut": [
+      "FlameWallNut",
+      "FrostWallNut",
+      "FlameTallNut",
+      "FrostTallNut"
+    ],
+    "IsFlameNut": [
+      "FlameWallNut",
+      "FlameTallNut"
+    ],
+    "IsSquash": [
+      "DoomSquash",
+      "Jawbreaker",
+      "CherrySquash",
+      "SpicySquash",
+      "IcySquash",
+      "HypnoSquash",
+      "PeaSquash",
+      "IronSquash",
+      "StarrySquash",
+      "SolarSquash",
+      "Splash",
+      "PotatoMash"
+    ],
+    "IsSolarNut": [
+      "SolarNut",
+      "TwinSolarNut"
+    ],
+    "IsMine": [
+      "PeatatoMine",
+      "SolarMine",
+      "MineNut",
+      "IsBurstMine",
+      "LandMine",
+      "SeaMine",
+      "ThreetatoMine"
+    ],
+    "IsFootball": [
+      "FootballHelmet",
+      "FootballNut",
+      "FootballGatling"
+    ],
+    "IsCherryShooter": [
+      "CherryShooter",
+      "Cherrypeater",
+      "SplitCherry",
+      "GatlingCherry",
+      "ExplodeOShooter"
+    ],
+    "IsSnowShooter": [
+      "SnowThreepeater",
+      "SnowRepeater",
+      "SnowSplit",
+      "GatlingSnow"
+    ],
+    "IsFusionPot": [
+      "SolarPot",
+      "SilverPot",
+      "LumosPot",
+      "CabbagePot",
+      "ButterPot",
+      "UmbrellaPot",
+      "NutPot",
+      "GarlicPot",
+      "SpikePot",
+      "MelonPot",
+      "CherryPot",
+      "HotPot",
+      "HypnoPot",
+      "DoomPot",
+      "PeaPot",
+      "TriPot",
+      "BloverPot",
+      "ScaredyPot",
+      "SeaPot",
+      "IcePot"
+    ],
+    "IsTriLobber": [
+      "KernelTriPult",
+      "MelonTriPult",
+      "CabbageTriPult"
+    ],
+    "IsMixedLobber": [
+      "TacoPult",
+      "CobPult",
+      "OverripeMelon",
+      "Coldslaw",
+      "KimchiPult",
+      "Cobsicle",
+      "SaladPult",
+      "GarbagePult",
+      "ClovePult",
+      "GarlicPult",
+      "SummerMelon",
+      "HypnoMelon",
+      "LettucePult",
+      "ButternutPult",
+      "GourdPult",
+      "SpringMelon",
+      "MelonMorph",
+      "KernelMorph",
+      "MetalPult",
+      "DamagePult",
+      "SolarPult"
+    ],
+    "IsEnergyNut": [
+      "CabbageNut",
+      "MelonNut"
+    ],
+    "IsActiveNut": [
+      "IsEnergyNut",
+      "ThreeNuts",
+      "SquashNut"
+    ],
+    "IsWindBlover": [
+      "Cyclover",
+      "Disguster",
+      "BreezeBlover",
+      "MindBlover",
+      "Glowver"
+    ],
+    "IsStarFusion": [
+      "Starlic",
+      "WinterStarfruit",
+      "SpicyStarfruit",
+      "Starshooter",
+      "Starmorph",
+      "IronStar"
+    ],
+    "IsElementalCattail": [
+      "FrostCattail",
+      "FlameCattail"
+    ],
+    "IsSeaFusion": [
+      "MinnowShroom",
+      "UrchinShroom",
+      "SharkShroom",
+      "SeaStar"
+    ],
+    "IsSeaSupport": [
+      "BeaconShroom",
+      "JellyShroom",
+      "SwellShroom",
+      "HermitShroom"
+    ],
+    "IsPumpkinFusion": [
+      "StarryPumpkin",
+      "ThornyPumpkin",
+      "PuffKin",
+      "FumingPumpkin",
+      "CherryPumpkin",
+      "StinkyPumpkin",
+      "ScarelessPumpkin",
+      "NutShell",
+      "WindyPumpkin",
+      "SpikyPumpkin",
+      "JackOPlantern",
+      "SeaShell",
+      "PumpkinPod",
+      "MelonShell",
+      "CryoPumpkin",
+      "PyroPumpkin",
+      "Chompkin",
+      "PumpkinMine",
+      "SunnyPumpkin"
+    ],
+    "IsCactusFusion": [
+      "SaguaroShroom",
+      "IceCactus",
+      "MagnetCactus",
+      "DoomCactus",
+      "LumosCactus"
+    ],
+    "IsDoomFusion": [
+      "DoomGarlic",
+      "DoomNut",
+      "Doomflower",
+      "CraterTot",
+      "DoomSeed"
+    ],
+    "IsDoomShooter": [
+      "DoomPea",
+      "GatlingDoom",
+      "DoomSpreader"
+    ],
+    "IsBeamShooter": [
+      "Beamshooter",
+      "Rebeamer",
+      "SplitBeam",
+      "GatlingBeam"
+    ],
+    "IsGroundWeed": [
+      "Butterweed",
+      "Springweed"
+    ],
+    "IsAirLobber": [
+      "CabbageDropper",
+      "ButterFly"
+    ]
+  }
+}

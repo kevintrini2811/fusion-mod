@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../src/ButterEffects.cs" />
+    <Compile Include="WeedFusionsTests.cs" />
+    <Compile Include="WeedFusionsStubs.cs" />
+    <Compile Include="../src/ElementalNuts.cs" />
+    <Compile Include="../src/WeedFusions.cs" />
+    <Compile Include="../src/GroundWeeds.cs" />
+    <Compile Include="../src/SpringEffects.cs" />
+    <Compile Include="../src/SeaNut.cs" />
+    <Compile Include="../src/Overheat.cs" />
+    <Compile Include="../src/SnowPea.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+  <ItemGroup>
+    <Compile Include="Adapters/PumpkinSupport.cs" />
+    <Compile Include="Adapters/SavedOverheat.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)UtilityMines.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/SunflowerFusions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/Fertilizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../TileFixesStubs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../SunflowerFusionsStubs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PumpkinFertilizer.cs" />
+  </ItemGroup>
+  <Import Project="PotBoosts.projitems" />
+</Project>

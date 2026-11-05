@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ShootingPotsTests.cs" />
+    <Compile Include="ShootingPotsStubs.cs" />
+    <Compile Include="../src/ShootingPots.cs" />
+    <Compile Include="../src/TriLobbers.cs" />
+    <Compile Include="../src/LobberFusions.cs" />
+    <Compile Include="../src/SquashLobbers.cs" />
+    <Compile Include="SquashLobberCases.cs" />
+    <Compile Include="../src/ElementalLobbers.cs" />
+    <Compile Include="../src/CattailFusions.cs" />
+    <Compile Include="../src/HypnoPlants.cs" />
+    <Compile Include="../src/LobberProjectiles.cs" />
+    <Compile Include="../src/PotBoosts.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+  <Import Project="Adapters/LobberImpact.projitems" />
+  <Import Project="Adapters/MetalArmor.projitems" />
+</Project>

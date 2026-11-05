@@ -1,0 +1,10 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)../BlazeShootersStubs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/BlazeShooters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ShooterGrowth.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/Overheat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PoisonShooters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FusionRecipes.cs" />
+  </ItemGroup>
+</Project>

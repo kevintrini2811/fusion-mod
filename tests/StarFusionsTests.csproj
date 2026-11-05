@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Adapters/PlanternFusions.cs" />
+    <Compile Include="StarFusionsTests.cs" />
+    <Compile Include="CactusCases.cs" />
+    <Compile Include="CactusNewCases.cs" />
+    <Compile Include="../src/CactusFusions.cs" />
+    <Compile Include="../src/CactusProjectiles.cs" />
+    <Compile Include="../src/IllumiNut.cs" />
+    <Compile Include="SeaFusionsCases.cs" />
+    <Compile Include="SeaSupportCases.cs" />
+    <Compile Include="PumpkinCases.cs" />
+    <Compile Include="../src/PumpkinFusions.cs" />
+    <Compile Include="../src/SeaSupportFusions.cs" />
+    <Compile Include="../src/SeaFusions.cs" />
+    <Compile Include="../src/SeaProjectiles.cs" />
+    <Compile Include="StarFusionsStubs.cs" />
+    <Compile Include="../src/StarFusions.cs" />
+    <Compile Include="../src/DormantShroom.cs" />
+    <Compile Include="../src/StarProjectiles.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+      <Compile Include="Adapters/Glowver.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+  <Import Project="Adapters/MetalArmor.projitems" />
+</Project>

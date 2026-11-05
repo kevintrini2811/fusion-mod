@@ -1,0 +1,18 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PuffContactFusions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/LobberFlight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PuffLobbers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PuffShooters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PuffSupport.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PuffSpecials.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ScaredyFusions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FrenzyShroom.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ScaredySupport.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ScaredyProjectiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/RetaliationProjectiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FusionRecipes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../ScaredyFusionsStubs.cs" />
+  </ItemGroup>
+  <Import Project="PotBoosts.projitems" />
+</Project>

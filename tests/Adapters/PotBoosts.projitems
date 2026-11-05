@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PotBoosts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../PotBoostRandomStub.cs" />
+  </ItemGroup>
+</Project>

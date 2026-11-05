@@ -1,0 +1,14 @@
+[
+  {
+    "result": "Cherry Chomper",
+    "slug": "batch-example-cherry-chomper",
+    "types": ["::CherryChomper", "::Chomper"],
+    "prefab": 47417
+  },
+  {
+    "result": "Cherryshooter",
+    "slug": "batch-example-cherry-shooter",
+    "types": ["::CherryShooter"],
+    "prefab": 37187
+  }
+]

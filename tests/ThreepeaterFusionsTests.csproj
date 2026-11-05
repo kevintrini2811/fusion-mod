@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ThreepeaterFusionsTests.cs" />
+    <Compile Include="ThreepeaterFusionsStubs.cs" />
+    <Compile Include="../src/ThreepeaterFusions.cs" />
+    <Compile Include="../src/PhoenixProjectiles.cs" />
+    <Compile Include="../src/SolarShooter.cs" />
+    <Compile Include="../src/BlazeShooters.cs" />
+    <Compile Include="../src/ShooterGrowth.cs" />
+    <Compile Include="../src/Overheat.cs" />
+    <Compile Include="../src/PoisonShooters.cs" />
+    <Compile Include="../src/CherrySpreader.cs" />
+    <Compile Include="../src/CherryShooter.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+  <ItemGroup>
+    <Compile Include="Adapters/PumpkinSupport.cs" />
+    <Compile Include="Adapters/SavedOverheat.cs" />
+  </ItemGroup>
+</Project>
