@@ -89,12 +89,12 @@ class NativeFlowChecks(unittest.TestCase):
         self.assertIn("replanted-0x6000001.asm", files)
         self.assertEqual(evidence["methods"][0]["callers"][0]["caller_symbol"], "Zombie.Caller [0x6000003]")
         self.assertIn("Other.Alias", markdown)
-        self.assertIn("Ziel offen", markdown)
-        self.assertIn("Offsetkandidaten ohne Nachweis des Objekttyps", markdown)
+        self.assertIn("target unresolved", markdown)
+        self.assertIn("candidate offsets without proof of the object type", markdown)
         index["methods"] += [method("Alias", f"Shared{i}", hex(0x6000100 + i), 0x1000) for i in range(30)]
         _, evidence, markdown = native.report(index, {"0x6000001"}, [], pe, decoder())
         self.assertEqual(len(evidence["aliases"][0x1000]), 32)
-        self.assertIn("29 weitere Aliase", markdown)
+        self.assertIn("29 more aliases", markdown)
         self.assertNotIn("Alias.Shared29", markdown)
 
 

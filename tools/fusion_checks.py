@@ -130,8 +130,8 @@ def documentation_patch():
 
     pending = originals["fusionen.txt"].decode("utf-8")
     pending_lines = pending.splitlines()
-    header = "Pflanze1 | Pflanze2 | Fusionname"
-    if not pending_lines or pending_lines[0] != header:
+    header = "Plant1 | Plant2 | Fusion name"
+    if not pending_lines or pending_lines[0] not in (header, "Pflanze1 | Pflanze2 | Fusionname"):
         raise ValueError("Invalid pending header")
     for line in pending_lines[1:]:
         if line.strip():
@@ -142,21 +142,21 @@ def documentation_patch():
     updated_pending = newline.join([header, *(" | ".join(row) for row in pending_rows)]) + newline
 
     readme = originals["README.md"].decode("utf-8")
-    start, end = section(readme, "Liste")
+    start, end = section(readme, "List")
     summary = readme[start:end]
     for pattern, replacement in (
-            (r"\*\*\d+ offene Rezepte\*\*", f"**{len(remaining)} offene Rezepte**"),
-            (r"\*\*\d+ Ergebnis-Pflanzen\*\*",
-             f"**{len({result for _, result in remaining})} Ergebnis-Pflanzen**")):
+            (r"\*\*\d+ open recipes\*\*", f"**{len(remaining)} open recipes**"),
+            (r"\*\*\d+ result plants\*\*",
+             f"**{len({result for _, result in remaining})} result plants**")):
         summary, count = re.subn(pattern, replacement, summary)
         if count != 1:
-            raise ValueError("Expected one pending recipe/result count in README Liste")
+            raise ValueError("Expected one pending recipe/result count in README List")
     updated_readme = readme[:start] + summary + readme[end:]
-    start, end = section(updated_readme, "Stand")
+    start, end = section(updated_readme, "Status")
     status = updated_readme[start:end]
     blocks = list(re.finditer(r"(?m)^```text\r?\n(.*?)^```\r?$", status, re.DOTALL))
     if len(blocks) != 1:
-        raise ValueError("Expected one text recipe block in README Stand")
+        raise ValueError("Expected one text recipe block in README Status")
     block = blocks[0]
     kept, seen = [], set()
     for line in block[1].splitlines(keepends=True):
@@ -208,61 +208,61 @@ def documentation_notes(result):
     name = selected[0]["fusion"]
     entry = entries.get(name, {})
     identity = entry.get("identity") if entry.get("available", False) else None
-    lines = [f"# {name}: Fähigkeiten und Grenzen", "",
-             "**Entwurf: Die fachlichen Abschnitte sind noch nicht ausgefüllt oder freigegeben.**", "",
-             "Automatisch übernommen werden ausschließlich Archiv- und Registrierungsangaben. "
-             "Sie bestätigen weder Fähigkeiten noch Spielverhalten. "
-             "Ersetze jeden offenen Prüfpunkt durch einen belegten Befund oder eine ausdrückliche Grenze.", "",
-             "## Identität und Rezepte", "",
-             f"- Quellen-ID laut Rezeptarchiv: `{ids[0]}`. Kein Replanted-`SeedType`.",
-             f"- Ergebnisidentität laut Verfügbarkeitsliste: `{identity}`." if identity else
-             "- Ergebnisidentität: nicht als verfügbar freigegeben.",
-             f"- Hinterlegter Verfügbarkeitsbeleg: {entry.get('evidence', 'Kein Eintrag vorhanden.')}", ""]
+    lines = [f"# {name}: Capabilities and limitations", "",
+             "**Draft: The technical sections have not been completed or approved yet.**", "",
+             "Only archive and registration details are copied automatically. "
+             "They do not confirm capabilities or gameplay behavior. "
+             "Replace each unchecked item with an evidenced finding or an explicit limitation.", "",
+             "## Identity and recipes", "",
+             f"- Source ID from the recipe archive: `{ids[0]}`. Not a Replanted `SeedType`.",
+             f"- Result identity from the availability list: `{identity}`." if identity else
+             "- Result identity: not marked as available.",
+             f"- Recorded availability evidence: {entry.get('evidence', 'No entry available.')}", ""]
     for row in selected:
         pair = tuple(sorted((row["plant1"], row["plant2"])))
         missing = [ingredient for ingredient in pair
                    if not entries.get(ingredient, {}).get("available", False)]
         if (pair, name) in implemented:
-            status = "aktiv registriert; Verhalten weiterhin fachlich prüfen"
+            status = "actively registered; behavior still requires technical review"
         elif missing:
-            status = "gesperrt; nicht verfügbare Zutaten: " + ", ".join(missing)
+            status = "blocked; unavailable ingredients: " + ", ".join(missing)
         else:
-            status = "Zutaten verfügbar; Rezept noch nicht registriert"
+            status = "ingredients available; recipe not registered yet"
         lines.append(f"- `{row['plant1']} | {row['plant2']} | {name}`: {status}.")
-    lines.extend(["", "## Fähigkeiten im Original", "",
-                  "- [ ] Verbinde Quellen-ID, tatsächlichen Quelltyp und Prefab-Script. "
-                  "Nenne DLL-Prüfsumme, Methoden/RVAs und relative Belegpfade.",
-                  "- [ ] Beschreibe Auslöser, Wirkung, Schaden/HP, Intervalle, Dauer, Reichweite "
-                  "und Einheiten. Trenne Grundverhalten, Upgrades und Synergien.",
-                  "- [ ] Belege Zielregeln für Reihen, Boden/Luft, Hypnose, Tod, Rüstung und Terrain. "
-                  "Verfolge Schaden bis zum tatsächlichen Gesundheitsschreiber.", "",
-                  "## Umsetzung in Replanted", "",
-                  "- [ ] Nenne zuständige Modmethoden und tatsächlich verwendete native Aufrufer. "
-                  "Ordne jede Originalfähigkeit einer Umsetzung oder einer Grenze zu.",
-                  "- [ ] Dokumentiere beide Kartenreihenfolgen, beide Handschuhrichtungen, "
-                  "Kosten/Cooldown, Terrain, Unterlagen und Verhalten bei fehlgeschlagener Erzeugung.",
-                  "- [ ] Nenne Grafikmodelle, Animationen, Ereignisse, Größen/Anker sowie "
-                  "englischen und deutschen Almanacheintrag. Trenne Darstellung und Simulation.", "",
-                  "## Abweichungen und Grenzen", "",
-                  "- [ ] Benenne jede bewusste Anpassung mit Grund und Beleg. "
-                  "Führe nicht portierte Fähigkeiten, Klickupgrades, Synergien, gesperrte Rezepte "
-                  "und Modusgrenzen ausdrücklich auf.",
-                  "- [ ] Kennzeichne unbelegte Annahmen als offen. "
-                  "Ein fehlender Beleg bedeutet nicht, dass eine Fähigkeit fehlt oder unterstützt wird.", "",
-                  "## Speicherung und Lebenszyklus", "",
-                  "- [ ] Belege natives Speicherpaar und alle Zustandsfelder einschließlich "
-                  "Initialisierung, Serialisierung, Laden, Reset, Tod, Pool-Wiederverwendung und Board-Ende.",
-                  "- [ ] Nenne flüchtige Zustände, Verhalten bei Pause/Zielverlust und bekannte "
-                  "Verluste beim Laden. Beschreibe kompatible Spielstände und sicheren Rückbau.", "",
-                  "## Nachweis und Übergabe", "",
-                  "- [ ] Nenne tatsächlich ausgeführte Builds und statische Prüfungen mit Ergebnis "
-                  "und Belegpfad. Der Entwurf führt keine dieser Prüfungen aus.",
-                  "- [ ] Nenne vorhandene Regressionstests und konkrete manuelle Spielprüfungen. "
-                  "Dokumentiere separat, wer welche Prüfung tatsächlich ausgeführt hat.",
-                  "Spielstart und Tests bleiben beim Benutzer. "
-                  "Quellenanalyse, Build und Vorschau bestätigen kein Spielverhalten.", "",
-                  "## Eingabestand des Entwurfs", "",
-                  "SHA-256 der gelesenen Projektdateien; kein Nachweis eines aktuellen Quellenexports:", ""])
+    lines.extend(["", "## Original capabilities", "",
+                  "- [ ] Connect the source ID, actual source type, and prefab script. "
+                  "Record the DLL checksum, methods/RVAs, and relative evidence paths.",
+                  "- [ ] Describe triggers, effects, damage/HP, intervals, duration, range, "
+                  "and units. Separate base behavior, upgrades, and synergies.",
+                  "- [ ] Document targeting rules for lanes, ground/air, hypnosis, death, armor, and terrain. "
+                  "Trace damage to the code that actually writes health.", "",
+                  "## Implementation in Replanted", "",
+                  "- [ ] Name the responsible mod methods and the native callers actually used. "
+                  "Map each original capability to its implementation or limitation.",
+                  "- [ ] Document both card orders, both glove directions, "
+                  "cost/cooldown, terrain, support plants, and behavior when creation fails.",
+                  "- [ ] Name graphics models, animations, events, sizes/anchors, and "
+                  "English and German almanac entries. Separate rendering from simulation.", "",
+                  "## Differences and limitations", "",
+                  "- [ ] Name each deliberate adaptation with its reason and evidence. "
+                  "Explicitly list unported capabilities, click upgrades, synergies, blocked recipes, "
+                  "and mode limitations.",
+                  "- [ ] Mark unsupported assumptions as unresolved. "
+                  "Missing evidence does not establish whether a capability is absent or supported.", "",
+                  "## Persistence and lifecycle", "",
+                  "- [ ] Document the native storage pair and all state fields, including "
+                  "initialization, serialization, loading, reset, death, pool reuse, and board teardown.",
+                  "- [ ] Describe transient state, behavior on pause/target loss, and known "
+                  "losses on loading. Describe compatible saves and safe removal.", "",
+                  "## Validation and handoff", "",
+                  "- [ ] List builds and static checks actually performed, with their results "
+                  "and evidence paths. This draft does not perform any of these checks.",
+                  "- [ ] List existing regression tests and specific manual gameplay checks. "
+                  "Document separately who actually performed each check.",
+                  "Game launches and gameplay tests remain the user's responsibility. "
+                  "Source analysis, builds, and previews do not confirm gameplay behavior.", "",
+                  "## Draft input snapshot", "",
+                  "SHA-256 hashes of the project files read; not proof of a current source export:", ""])
     lines.extend(f"- `{path}`: `{hashlib.sha256(data).hexdigest()}`."
                  for path, data in originals.items())
     if any((PROJECT / path).read_bytes() != data for path, data in originals.items()):
@@ -555,18 +555,18 @@ def check():
     mod = (PROJECT / "src/FusionMod.cs").read_text()
     require(re.search(r'MelonInfo\([^\n]*"' + re.escape(current) + '"', mod) is not None, "MelonInfo version mismatch")
     readme = (PROJECT / "README.md").read_text()
-    require(readme.splitlines()[0] == f"# Fusion-Mod {current}", "README version mismatch")
+    require(readme.splitlines()[0] == f"# Fusion Mod {current}", "README version mismatch")
     pending_lines = (PROJECT / "fusionen.txt").read_text().splitlines()
-    require(pending_lines[0] == "Pflanze1 | Pflanze2 | Fusionname", "Invalid pending header")
+    require(pending_lines[0] in ("Plant1 | Plant2 | Fusion name", "Pflanze1 | Pflanze2 | Fusionname"), "Invalid pending header")
     pending = [tuple(x.strip() for x in line.split("|")) for line in pending_lines[1:] if line.strip()]
     require(all(len(row) == 3 for row in pending), "Malformed pending recipe")
     require(len(set(pending)) == len(pending), "Duplicate pending rows")
     remaining = {(tuple(sorted((r[0], r[1]))), r[2]) for r in pending if len(r) == 3}
     require(remaining == expected_pending, "Pending list differs from source minus implemented recipes")
-    section = readme.split("## Liste\n", 1)[1].split("\n## ", 1)[0]
-    require(f"**{len(pending)} offene Rezepte**" in section, "README pending recipe count mismatch")
-    require(f"**{len({r[2] for r in pending})} Ergebnis-Pflanzen**" in section, "README result count mismatch")
-    active_section = readme.split("## Stand\n", 1)[1].split("```text\n", 1)[1].split("```", 1)[0]
+    section = readme.split("## List\n", 1)[1].split("\n## ", 1)[0]
+    require(f"**{len(pending)} open recipes**" in section, "README pending recipe count mismatch")
+    require(f"**{len({r[2] for r in pending})} result plants**" in section, "README result count mismatch")
+    active_section = readme.split("## Status\n", 1)[1].split("```text\n", 1)[1].split("```", 1)[0]
     active = {tuple(x.strip() for x in line.split("|")) for line in active_section.splitlines() if line.strip()}
     active_normalized = {(tuple(sorted((a, b))), c) for a, b, c in active}
     require(active_normalized == implemented, "README active recipes mismatch")

@@ -204,7 +204,7 @@ class WorkflowChecks(unittest.TestCase):
 
     def test_wrong_count_fails(self):
         path = self.project/'README.md'
-        path.write_text(re.sub(r'\*\*\d+ offene Rezepte\*\*', '**999999 offene Rezepte**', path.read_text()))
+        path.write_text(re.sub(r'\*\*\d+ open recipes\*\*', '**999999 open recipes**', path.read_text()))
         self.assertFalse(self.checked())
 
     def test_registration_is_not_availability(self):
@@ -340,6 +340,13 @@ class DocumentationPatchChecks(unittest.TestCase):
         (workspace / "zombie-library").symlink_to(source_index.PROJECT.parent / "zombie-library", target_is_directory=True)
         (self.project / "src").mkdir()
         (self.project / "tools").mkdir()
+        content_path = self.project / fusion_checks.CONTENT_PATH
+        content_path.parent.mkdir(parents=True)
+        content_path.write_text("{}")
+        # This fixture owns its complete recipe archive; exclude live additions.
+        merge_patch = patch.object(fusion_checks, "merged_recipe_source", side_effect=json.loads)
+        merge_patch.start()
+        self.addCleanup(merge_patch.stop)
         self.source = {
             "recipes": [dict(zip(("plant1", "plant2", "fusion"), row)) for row in (
                 ("Alpha", "Beta", "Cherry"), ("Alpha", "Blocked", "Cherry"),
@@ -348,6 +355,7 @@ class DocumentationPatchChecks(unittest.TestCase):
             "recipe_count": 5, "result_plant_count": 3,
         }
         for row in self.source["recipes"]:
+            row["both_orders"] = True
             row["fusion_id"] = {"Cherry": 100, "Future": 101, "Beta": 1}[row["fusion"]]
         self.source_path = self.project / "fusionen-quellen.json"
         self.source_path.write_text(json.dumps(self.source))
@@ -365,7 +373,7 @@ class DocumentationPatchChecks(unittest.TestCase):
         self.availability_path = self.project / "tools/ingredient-availability.json"
         self.availability_path.write_text(json.dumps(self.entries))
         self.pending_path = self.project / "fusionen.txt"
-        self.pending = ("Pflanze1 | Pflanze2 | Fusionname\n"
+        self.pending = ("Plant1 | Plant2 | Fusion name\n"
                         "Alpha | Alpha | Beta\n"
                         "Alpha | Beta | Cherry\n"
                         "Alpha | Blocked | Cherry\n"
@@ -373,15 +381,15 @@ class DocumentationPatchChecks(unittest.TestCase):
         self.expected_pending = self.pending.replace("Alpha | Beta | Cherry\n", "")
         self.pending_path.write_text(self.pending)
         self.readme_path = self.project / "README.md"
-        self.readme = ("# Fusion-Mod 1.7.3\n\n"
-                       "## Änderung alt\n\nHistorie: **99 offene Rezepte**.\n\n"
-                       "## Liste\n\n**99 offene Rezepte** mit **98 Ergebnis-Pflanzen**.\n"
-                       "Beschreibung bleibt erhalten.\n\n"
-                       "## Stand\n\nAktive Rezepte:\n\n```text\nBeta | Beta | Beta\n```\n\n"
-                       "Verhalten bleibt erhalten.\n\n## Weitere Angaben\n\nNicht ändern.\n")
+        self.readme = ("# Fusion Mod 1.7.3\n\n"
+                       "## Older change\n\nHistory: **99 open recipes**.\n\n"
+                       "## List\n\n**99 open recipes** with **98 result plants**.\n"
+                       "Description is preserved.\n\n"
+                       "## Status\n\nActive recipes:\n\n```text\nBeta | Beta | Beta\n```\n\n"
+                       "Behavior is preserved.\n\n## Further information\n\nDo not change.\n")
         self.expected_readme = self.readme.replace(
-            "**99 offene Rezepte** mit **98 Ergebnis-Pflanzen**",
-            "**3 offene Rezepte** mit **3 Ergebnis-Pflanzen**").replace(
+            "**99 open recipes** with **98 result plants**",
+            "**3 open recipes** with **3 result plants**").replace(
                 "```text\nBeta | Beta | Beta\n```",
                 "```text\nBeta | Beta | Beta\nAlpha | Beta | Cherry\n```")
         self.readme_path.write_text(self.readme)
@@ -392,34 +400,40 @@ class DocumentationPatchChecks(unittest.TestCase):
     def snapshot(self):
         return {p: p.read_bytes() for p in self.project.rglob("*") if p.is_file()}
 
+    def test_legacy_pending_header_is_migrated_to_english(self):
+        self.pending_path.write_text(self.pending.replace(
+            "Plant1 | Plant2 | Fusion name", "Pflanze1 | Pflanze2 | Fusionname"))
+        self.apply(fusion_checks.documentation_patch())
+        self.assertEqual(self.pending_path.read_text(), self.expected_pending)
+
     def test_notes_keep_active_and_blocked_alternatives_without_claiming_capabilities(self):
         before = self.snapshot()
         with contextlib.redirect_stdout(io.StringIO()) as output:
             generated = fusion_checks.documentation_notes("cHeRrY")
         self.assertEqual(output.getvalue(), "")
         self.assertEqual(self.snapshot(), before)
-        self.assertTrue(generated.startswith("# Cherry: Fähigkeiten und Grenzen\n"))
-        self.assertIn("**Entwurf:", generated)
-        self.assertIn("`100`. Kein Replanted-`SeedType`", generated)
+        self.assertTrue(generated.startswith("# Cherry: Capabilities and limitations\n"))
+        self.assertIn("**Draft:", generated)
+        self.assertIn("`100`. Not a Replanted `SeedType`", generated)
         self.assertIn("`FusionPlant.Cherry`", generated)
-        self.assertIn("`Alpha | Beta | Cherry`: aktiv registriert", generated)
-        self.assertIn("`Alpha | Blocked | Cherry`: gesperrt; nicht verfügbare Zutaten: Blocked", generated)
-        self.assertIn("## Fähigkeiten im Original", generated)
-        self.assertIn("## Abweichungen und Grenzen", generated)
-        self.assertIn("## Speicherung und Lebenszyklus", generated)
+        self.assertIn("`Alpha | Beta | Cherry`: actively registered", generated)
+        self.assertIn("`Alpha | Blocked | Cherry`: blocked; unavailable ingredients: Blocked", generated)
+        self.assertIn("## Original capabilities", generated)
+        self.assertIn("## Differences and limitations", generated)
+        self.assertIn("## Persistence and lifecycle", generated)
         self.assertIn(source_index.sha256(self.recipe_path), generated)
 
     def test_notes_do_not_confuse_available_ingredients_with_active_recipe(self):
         generated = fusion_checks.documentation_notes("Beta")
-        self.assertIn("`Alpha | Alpha | Beta`: Zutaten verfügbar; Rezept noch nicht registriert", generated)
-        self.assertIn("`Beta | Beta | Beta`: aktiv registriert", generated)
+        self.assertIn("`Alpha | Alpha | Beta`: ingredients available; recipe not registered yet", generated)
+        self.assertIn("`Beta | Beta | Beta`: actively registered", generated)
 
     def test_notes_do_not_infer_result_availability(self):
         del self.entries["ingredients"]["Future"]
         self.availability_path.write_text(json.dumps(self.entries))
         generated = fusion_checks.documentation_notes("Future")
-        self.assertIn("Ergebnisidentität: nicht als verfügbar freigegeben", generated)
-        self.assertIn("Kein Eintrag vorhanden", generated)
+        self.assertIn("Result identity: not marked as available", generated)
+        self.assertIn("No entry available", generated)
 
     def test_notes_reject_unknown_results_and_ambiguous_source_ids(self):
         with self.assertRaisesRegex(ValueError, "Unknown result"):
@@ -488,7 +502,7 @@ class DocumentationPatchChecks(unittest.TestCase):
         self.recipe_path.write_text(self.recipe_path.read_text().splitlines(keepends=True)[1])
         self.apply(fusion_checks.documentation_patch())
         self.assertIn("Beta | Beta | Beta\n", self.pending_path.read_text())
-        status = self.readme_path.read_text().split("## Stand\n", 1)[1]
+        status = self.readme_path.read_text().split("## Status\n", 1)[1]
         self.assertNotIn("Beta | Beta | Beta", status)
         self.assertIn("Alpha | Beta | Cherry", status)
 
@@ -540,7 +554,7 @@ class DocumentationPatchChecks(unittest.TestCase):
     def test_duplicate_unordered_registrations_refuse_generation(self):
         self.recipe_path.write_text(self.recipe_path.read_text()
                                    + "[(SeedType.Alpha, SeedType.Beta)] = FusionPlant.Cherry,\n")
-        with self.assertRaisesRegex(ValueError, "Duplicate unordered recipes"):
+        with self.assertRaisesRegex(ValueError, "Conflicting recipe directions"):
             fusion_checks.documentation_patch()
 
     def test_duplicate_archive_rows_refuse_generation(self):
@@ -562,12 +576,12 @@ class DocumentationPatchChecks(unittest.TestCase):
             fusion_checks.documentation_patch()
 
     def test_unrecognized_document_layout_refuses_generation(self):
-        variants = (self.readme.replace("## Liste\n", "## Backlog\n"),
-                    self.readme.replace("## Stand\n", "## Aktuell\n"),
-                    self.readme + "\n## Liste\nDuplicate section.\n",
+        variants = (self.readme.replace("## List\n", "## Backlog\n"),
+                    self.readme.replace("## Status\n", "## Current\n"),
+                    self.readme + "\n## List\nDuplicate section.\n",
                     self.readme.replace("```text\n", "```\n"),
-                    self.readme.replace("**98 Ergebnis-Pflanzen**", "unbekannt"),
-                    self.readme.replace("**98 Ergebnis-Pflanzen**", "**98 Ergebnis-Pflanzen** **98 Ergebnis-Pflanzen**"),
+                    self.readme.replace("**98 result plants**", "unknown"),
+                    self.readme.replace("**98 result plants**", "**98 result plants** **98 result plants**"),
                     self.readme.replace("Beta | Beta | Beta", "Beta | Beta | Beta\nBeta | Beta | Beta"),
                     self.readme.replace("Beta | Beta | Beta", "Not a recipe"))
         for text in variants:

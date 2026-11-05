@@ -302,7 +302,7 @@ def report(index, selected, fields, pe, decoder):
 
     def alias_label(rva):
         labels = aliases[rva]
-        suffix = f" / {len(labels) - 3} weitere Aliase (JSON aliases[{rva}])" if len(labels) > 3 else ""
+        suffix = f" / {len(labels) - 3} more aliases (JSON aliases[{rva}])" if len(labels) > 3 else ""
         return " / ".join(labels[:3]) + suffix
 
     def symbol(rva):
@@ -328,40 +328,40 @@ def report(index, selected, fields, pe, decoder):
                 incoming[target_start].append(dict(edge, caller=int(source), caller_symbol=symbol(int(source)),
                                                    target_symbol=symbol(edge["target"])))
     files, evidence = {}, []
-    lines = ["# Native Verhaltensanalyse: Replanted", "",
-             "Dieser Bericht sammelt statische Belege. Er bestätigt kein Spielverhalten.", "",
-             "## Grenzen", "",
-             "- Aufrufer: direkte Aufrufe und externe Sprünge aus Assembly-CSharp-Methodenbereichen, einschließlich `jmp`.",
-             "- Bereiche enden am nächsten Methodenzeiger oder Sektionsende. Innere Adressen sind nur Zuordnungskandidaten.",
-             "- Bereiche können zusätzliche native Hilfsfunktionen enthalten; auch der angegebene Aufrufername ist dann nur ein Kandidat.",
-             "- Indirekte Aufrufe, native Funktionen außerhalb dieser Bereiche und eingebettete Kopien bleiben fachlich zu verfolgen.",
-             "- Aliasnamen teilen dieselbe Adresse. Automatische Ziel- und Lebenszyklusauswahl beruht auf Methodennamen.",
-             "- Die Anzeige begrenzt Aliasnamen auf drei und Listen pro Methode auf 20 Einträge. Das JSON enthält die vollständigen Listen.",
-             "- Feldbelege sind Offsetkandidaten ohne Nachweis des Objekttyps. `lea` belegt nur eine Adresse.",
-             "- Feldsuche umfasst Methoden des deklarierten Feldbesitzers. Fremde Schreiber und Registeralias müssen manuell geprüft werden.",
-             "- Fehlende Treffer beweisen weder unbenutzte Helfer noch freie Felder oder fehlende Speicherung.", "",
-             "## Abdeckung", "",
-             f"{len(index['graph'])} eindeutige Bereiche; {len(index['missing'])} Methoden ohne analysierbaren Bereich.",
-             f"{sum(node['decoded_end'] < node['end'] for node in index['graph'].values())} Bereiche mit vorzeitigem Decoderende.", ""]
-    lines += ["## Speicherung und Feldkandidaten", ""]
+    lines = ["# Native behavior analysis: Replanted", "",
+             "This report collects static evidence. It does not confirm gameplay behavior.", "",
+             "## Limitations", "",
+             "- Callers: direct calls and external jumps from Assembly-CSharp method ranges, including `jmp`.",
+             "- Ranges end at the next method pointer or section boundary. Interior addresses are only attribution candidates.",
+             "- Ranges may contain additional native helpers; in that case the reported caller name is also only a candidate.",
+             "- Indirect calls, native functions outside these ranges, and embedded copies still require manual tracing.",
+             "- Aliases share the same address. Automatic target and lifecycle selection relies on method names.",
+             "- The display limits aliases to three and per-method lists to 20 entries. The JSON contains the complete lists.",
+             "- Field evidence consists of candidate offsets without proof of the object type. `lea` only establishes an address.",
+             "- Field searches cover methods of the declared field owner. External writers and register aliases require manual review.",
+             "- Missing matches do not prove unused helpers, available fields, or absent persistence.", "",
+             "## Coverage", "",
+             f"{len(index['graph'])} unique ranges; {len(index['missing'])} methods without an analyzable range.",
+             f"{sum(node['decoded_end'] < node['end'] for node in index['graph'].values())} ranges where decoding ended early.", ""]
+    lines += ["## Persistence and field candidates", ""]
     for field in fields:
-        lines += [f"### {field['type']}.{field['field']} bei {hex(field['offset'])}", ""]
+        lines += [f"### {field['type']}.{field['field']} at {hex(field['offset'])}", ""]
         hits = [c for c in candidates if c["field"] == field]
         lines += [f"- {c['method']['method']} [{c['method']['token']}] `{hex(c['site'])}` {c['access']}: `{c['instruction']}`."
-                  for c in hits] or ["- Keine Offsetkandidaten im Suchbereich gefunden."]
+                  for c in hits] or ["- No candidate offsets found in the search range."]
         lines += [""]
 
     def display(items, empty):
         shown = items[:20] or [empty]
         if len(items) > 20:
-            shown += [f"- Weitere {len(items) - 20} Einträge vollständig in native-analysis.json."]
+            shown += [f"- Another {len(items) - 20} entries are available in full in native-analysis.json."]
         return shown
 
     for m in chosen:
         rva = m["rva"]
         lines += [f"## {m['type']}.{m['method']} [{m['token']}]", "", ", ".join(m["reasons"]), ""]
         if rva not in decoded:
-            lines += ["Kein analysierbarer Methodenbereich; kein negativer Verhaltensnachweis.", ""]
+            lines += ["No analyzable method range; this does not prove absent behavior.", ""]
             continue
         node = index["graph"][str(rva)]
         filename = f"replanted-{m['token']}.asm"
@@ -369,25 +369,25 @@ def report(index, selected, fields, pe, decoder):
                                      for ins in decoded[rva]) + "\n"
         record = dict(m, assembly=filename, callers=incoming[rva], **node)
         evidence.append(record)
-        lines += [f"RVA `{hex(rva)}`; Bereichsende `{hex(node['end'])}`; Beleg [{filename}]({filename}).", "",
-                  "Aufrufer:", ""]
-        lines += display([f"- `{hex(e['site'])}` `{e['instruction']}`: {e['caller_symbol']} nach `{hex(e['target'])}` ({e['target_symbol']})."
-                          for e in incoming[rva]], "- Keine direkten Aufrufer im analysierten Bereich gefunden.")
-        lines += ["", "Ziele:", ""]
-        lines += display([f"- `{hex(e['site'])}` `{e['instruction']}` nach `{hex(e['target'])}`: {symbol(e['target'])}."
-                          for e in node["direct"]], "- Keine direkten externen Ziele gefunden.")
-        lines += ["", "Indirekte Aufrufe und Sprünge:", ""]
-        lines += display([f"- `{hex(e['site'])}`: `{e['instruction']} {e['operand']}`; Ziel offen."
-                          for e in node["indirect"]], "- Keine im dekodierten Bereich gefunden.")
+        lines += [f"RVA `{hex(rva)}`; range end `{hex(node['end'])}`; evidence [{filename}]({filename}).", "",
+                  "Callers:", ""]
+        lines += display([f"- `{hex(e['site'])}` `{e['instruction']}`: {e['caller_symbol']} to `{hex(e['target'])}` ({e['target_symbol']})."
+                          for e in incoming[rva]], "- No direct callers found in the analyzed range.")
+        lines += ["", "Targets:", ""]
+        lines += display([f"- `{hex(e['site'])}` `{e['instruction']}` to `{hex(e['target'])}`: {symbol(e['target'])}."
+                          for e in node["direct"]], "- No direct external targets found.")
+        lines += ["", "Indirect calls and jumps:", ""]
+        lines += display([f"- `{hex(e['site'])}`: `{e['instruction']} {e['operand']}`; target unresolved."
+                          for e in node["indirect"]], "- None found in the decoded range.")
         if node["decoded_end"] < node["end"]:
-            lines += [f"", f"Decoder endet vorzeitig bei `{hex(node['decoded_end'])}`. Rest manuell untersuchen."]
+            lines += [f"", f"Decoder ends early at `{hex(node['decoded_end'])}`. Inspect the remainder manually."]
         lines += [""]
-    lines += ["## Fachliche Übergabe", "",
-              "1. Verfolge die relevanten Aufrufer und Ziele bis zum tatsächlichen Zustandsschreiber. Wähle weitere Methoden mit `--method`.",
-              "2. Prüfe Zielregeln: Reihen, Entfernung, Flugzustand, Freund/Feind, Tod und Terrain an den konkreten Zweigen.",
-              "3. Belege je Feld Objekttyp, Initialisierung, Schreiber, Serialize/Deserialize, Reset und Pool-Wiederverwendung.",
-              "4. Prüfe Boardwechsel, DataID, Pause, Abbruch, Tod und Aufräumen. Dokumentiere nicht gespeicherte Zustände.",
-              "5. Ergänze fachliche Ergebnisse in einer separaten port-notes.md; dieser Bericht wird beim erneuten Aufruf ersetzt.", ""]
+    lines += ["## Technical handoff", "",
+              "1. Trace relevant callers and targets to the code that actually writes state. Select additional methods with `--method`.",
+              "2. Check targeting rules at the actual branches: lanes, distance, flight state, friend/foe, death, and terrain.",
+              "3. For each field, document object type, initialization, writers, Serialize/Deserialize, reset, and pool reuse.",
+              "4. Check board changes, DataID, pause, cancellation, death, and cleanup. Document state that is not saved.",
+              "5. Record technical findings in a separate port-notes.md; this report is replaced when the command is run again.", ""]
     return files, dict(methods=evidence, fields=fields, field_candidates=candidates, aliases=dict(aliases),
                        missing=index["missing"]), "\n".join(lines)
 

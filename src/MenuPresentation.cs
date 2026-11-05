@@ -21,7 +21,7 @@ internal static class MenuPresentation {
             // The native menu owns icon placement and its border. The sprite
             // contains Chompzilla and bright lawn; no UI is added behind the text.
             ModMenuService.CreateEntry(mod).AddIcon(icon)
-                .AddDescription("Pflanzenfusionen, goldene Kaffeebohne und eigene Pflanzen und Zombies.").Register();
+                .AddDescription("Plant fusions, a golden coffee bean, and custom plants and zombies.").Register();
         } catch {
             if (icon != null) { Object.Destroy(icon); icon = null; }
             Object.Destroy(texture); throw;
