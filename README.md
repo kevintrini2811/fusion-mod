@@ -1,4 +1,6 @@
-# Fusion Mod 22.2.3
+# Fusion Mod 22.2.4
+
+Version 22.2.4 forwards custom zombie bite events through native Hypno-shroom consumption and hypnosis. Zombie Library validates registered actors and the actual native bite target; Eyes calls the shared helper at its own bite event. Native AI and saved identities remain unchanged.
 
 Version 22.2.3 uses native character colour state for imported zombie sprites, including cold blue, armour and pool ducks. Zombie Library owns the shared colour adapter; source alpha and pool clipping remain intact.
 

@@ -228,6 +228,7 @@ internal static class ScaredPlantBitePatch
         if (!ScaredContent.Eyes(__instance)) return true;
         ScaredContent.Contact(__instance);
         if (!ScaredContent.BiteReady(__instance)) return false;
+        if (ZombieLibrary.Zombies.TryHypnotizeBite(__instance, thePlant)) return false;
         // Eyes owns the bite clock; apply Gnome's bite only at that same event.
         // Its prefix can otherwise lose ordering against this replacement AI.
         if (PuffSupport.BiteGnome(thePlant, __instance)) return false;

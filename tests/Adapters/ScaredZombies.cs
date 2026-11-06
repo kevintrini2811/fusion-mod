@@ -8,6 +8,8 @@ namespace ZombieLibrary
 {
     internal static class Zombies
     {
+        // Native chew callbacks are covered by Zombie Library and live review.
+        internal static bool TryHypnotizeBite(Il2CppReloaded.Gameplay.Zombie zombie, Il2CppReloaded.Gameplay.Plant plant) => false;
         internal static bool IsExplicitSpawn => false;
         internal static void Apply(object definition, Il2CppReloaded.Gameplay.Zombie zombie)
         {
