@@ -1,0 +1,8 @@
+[
+  {
+    "type": "Entity",
+    "method": "RemoveBuff",
+    "rva": "0x9e6630",
+    "token": "0x6000a0d"
+  }
+]

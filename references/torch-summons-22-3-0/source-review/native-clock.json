@@ -1,0 +1,588 @@
+{
+  "rawEvidence": {
+    "localPath": "/home/kevin/modding/pvzreplanted/.test-runs/task1-two-fusions-source-review/native-clock.json",
+    "sha256": "ef4216db784fb940a738a2687c0e3f646fbde6bf39e864840628cdd833febece"
+  },
+  "samples": [
+    {
+      "fps": {
+        "simulationTick": 1434,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 89,
+        "mAnimCounter": 12,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1434,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 10000
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1474,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 53,
+        "mAnimCounter": 48,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1474,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9980
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1504,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 23,
+        "mAnimCounter": 29,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1534,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 94,
+        "mAnimCounter": 12,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1564,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 64,
+        "mAnimCounter": 42,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1564,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9960
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1594,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 34,
+        "mAnimCounter": 35,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1624,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 4,
+        "mAnimCounter": 5,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1654,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 74,
+        "mAnimCounter": 37,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1654,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9940
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1685,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 44,
+        "mAnimCounter": 40,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1716,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 13,
+        "mAnimCounter": 9,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1752,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 77,
+        "mAnimCounter": 39,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1752,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9920
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1783,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 47,
+        "mAnimCounter": 38,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1814,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 16,
+        "mAnimCounter": 7,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1845,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 86,
+        "mAnimCounter": 35,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1875,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 56,
+        "mAnimCounter": 42,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1875,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9900
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1912,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 19,
+        "mAnimCounter": 5,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1943,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 89,
+        "mAnimCounter": 37,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1974,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 58,
+        "mAnimCounter": 39,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1974,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9880
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2010,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 22,
+        "mAnimCounter": 3,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2039,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 94,
+        "mAnimCounter": 37,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2070,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 63,
+        "mAnimCounter": 39,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2070,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9860
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2101,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 32,
+        "mAnimCounter": 8,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2137,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 96,
+        "mAnimCounter": 40,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2166,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 68,
+        "mAnimCounter": 39,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2166,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9840
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2197,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 37,
+        "mAnimCounter": 8,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2230,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 4,
+        "mAnimCounter": 36,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2261,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 74,
+        "mAnimCounter": 40,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2261,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9820
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2289,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 46,
+        "mAnimCounter": 12,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2320,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 15,
+        "mAnimCounter": 30,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2357,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 79,
+        "mAnimCounter": 40,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2357,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "zombie": {
+        "DataID": 22,
+        "mZombieType": "Normal",
+        "mBodyHealth": 9800
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2387,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 49,
+        "mAnimCounter": 10,
+        "mPlantHealth": 300
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 2387,
+        "tickSeconds": 0.008333333333333333,
+        "board": "f6c5a12c9e1845b9ab20a43394f0901a"
+      },
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Spikeweed",
+        "mStateCountdown": 24,
+        "mAnimCounter": 26,
+        "mPlantHealth": 300
+      }
+    }
+  ]
+}

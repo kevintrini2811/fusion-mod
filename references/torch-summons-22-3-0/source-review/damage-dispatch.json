@@ -1,0 +1,92 @@
+[
+  {
+    "type": "BalloonZombie",
+    "method": "FirstArmorTakeDamage",
+    "slot": 68,
+    "rva": "0x5c0020",
+    "token": "0x6002100",
+    "parameters": [
+      "theDamage"
+    ]
+  },
+  {
+    "type": "BalloonZombie",
+    "method": "Fall",
+    "slot": 79,
+    "rva": "0x5bff10",
+    "token": "0x6002101",
+    "parameters": []
+  },
+  {
+    "type": "IronBalloonZombie",
+    "method": "FirstArmorTakeDamage",
+    "slot": 68,
+    "rva": "0x607370",
+    "token": "0x6002369",
+    "parameters": [
+      "theDamage"
+    ]
+  },
+  {
+    "type": "IronBalloonZombie",
+    "method": "Fall",
+    "slot": 79,
+    "rva": "0x6070a0",
+    "token": "0x600236a",
+    "parameters": []
+  },
+  {
+    "type": "IronBalloonZombie2",
+    "method": "FirstArmorTakeDamage",
+    "slot": 68,
+    "rva": "0x5c0020",
+    "token": "0x6002370",
+    "parameters": [
+      "theDamage"
+    ]
+  },
+  {
+    "type": "IronBalloonZombie2",
+    "method": "Fall",
+    "slot": 79,
+    "rva": "0x606e10",
+    "token": "0x6002371",
+    "parameters": []
+  },
+  {
+    "type": "PortalBalloonZombie",
+    "method": "TakeDamage",
+    "slot": 12,
+    "rva": "0x6221f0",
+    "token": "0x6002554",
+    "parameters": [
+      "theDamage",
+      "damageFrom",
+      "theDamageType",
+      "reportType",
+      "fix"
+    ]
+  },
+  {
+    "type": "PortalBalloonZombie",
+    "method": "Fall",
+    "slot": 79,
+    "rva": "0x621920",
+    "token": "0x600255a",
+    "parameters": []
+  },
+  {
+    "type": "Zombie",
+    "method": "TakeDamage",
+    "slot": 12,
+    "rva": "0x65d080",
+    "token": "0x600287b",
+    "parameters": [
+      "theDamage",
+      "damageFrom",
+      "theDamageType",
+      "reportType",
+      "fix"
+    ]
+  }
+]

@@ -17,7 +17,7 @@ internal static class PlantValue
             if (!results.Contains((SeedType)i))
                 costs[(SeedType)i] = Plant.GetCost(value.mApp, (SeedType)i, SeedType.None);
         foreach (var item in new[] { FusionPlant.Bucket, FusionPlant.FootballHelmet, FusionPlant.EyesZombieHead }) costs[item] = 100;
-        foreach (var item in new[] { FusionPlant.RoastedSquash, FusionPlant.RoastedWallNut, FusionPlant.RoastedPumpkin, FusionPlant.RoastedPotato })
+        foreach (var item in new[] { FusionPlant.RoastedSquash, FusionPlant.RoastedWallNut, FusionPlant.RoastedPumpkin, FusionPlant.RoastedPotato, FusionPlant.RoastedSpikeweed })
             costs[item] = Plant.GetCost(value.mApp, item.NativeType, SeedType.None);
         // Relax the recipe graph. A minimum over all available paths handles
         // alternative recipes and cycles without recursive self-dependence.

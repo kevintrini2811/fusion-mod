@@ -1,0 +1,34 @@
+[
+  {
+    "name": "SquashTorch",
+    "value": 1059,
+    "field_index": 8632,
+    "type_index": 25955,
+    "data_index": 3756,
+    "compressed_bytes": "8846"
+  },
+  {
+    "name": "TorchSpike",
+    "value": 1061,
+    "field_index": 8634,
+    "type_index": 25955,
+    "data_index": 3760,
+    "compressed_bytes": "884a"
+  },
+  {
+    "name": "JalaCaltrop",
+    "value": 1062,
+    "field_index": 8635,
+    "type_index": 25955,
+    "data_index": 3762,
+    "compressed_bytes": "884c"
+  },
+  {
+    "name": "FireCaltrop",
+    "value": 1155,
+    "field_index": 8728,
+    "type_index": 25955,
+    "data_index": 3948,
+    "compressed_bytes": "8906"
+  }
+]

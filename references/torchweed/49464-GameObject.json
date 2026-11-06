@@ -1,0 +1,44 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 99939
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 126990
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124846
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124722
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 192892
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 121829
+      }
+    }
+  ],
+  "m_Layer": 10,
+  "m_Name": "FireSpikePrefab",
+  "m_Tag": 20001,
+  "m_IsActive": true
+}

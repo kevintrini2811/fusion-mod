@@ -1,0 +1,77 @@
+[
+  {
+    "path_id": 185993,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 3696
+      },
+      "m_Name": "SquashTorch Skeleton"
+    }
+  },
+  {
+    "path_id": 186562,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 3696
+      },
+      "m_Name": "FireCaltrop Skeleton"
+    }
+  },
+  {
+    "path_id": 186835,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 787
+      },
+      "m_Name": "FireCaltrop"
+    }
+  },
+  {
+    "path_id": 186846,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 787
+      },
+      "m_Name": "FireSquash"
+    }
+  },
+  {
+    "path_id": 187197,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 0
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 787
+      },
+      "m_Name": "SquashTorch"
+    }
+  }
+]

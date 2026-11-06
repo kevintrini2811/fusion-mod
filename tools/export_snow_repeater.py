@@ -46,6 +46,11 @@ PLANTS = {
     "roasted-wall-nut": 49517,
     "roasted-pumpkin": 61663,
     "roasted-potato": 44434,
+    "squashwood": 40367,
+    "torchweed": 49464,
+    # The authoritative enum maps FireCaltrop to helper type 1155. JalaCaltrop
+    # is the separate type 1062 and uses JalaSpikePrefab, not this source model.
+    "roasted-spikeweed": 64169,
     "umbrella-kale": 40541,
     "umbrella-rind": 40542,
     "lumos-umbrella": 40551,
@@ -836,7 +841,7 @@ def export(plant, assets, bundle_sha256, *, output_root=None):
         passive = True
         assert len(layers) == 1 and layers[0]["data"]["(int&)m_LayerBlendingMode"] == 0
         assert not layers[0]["data"]["m_SkeletonMask"]["data"]["m_Data"]
-    if PLANT in ("tide-shroom", "blacklight-plantern", "scorchwood", "stenchwood", "nutwood", "torchthree", "sparkwood", "hypnowood"):
+    if PLANT in ("tide-shroom", "blacklight-plantern", "scorchwood", "stenchwood", "nutwood", "torchthree", "sparkwood", "hypnowood", "squashwood", "torchweed", "roasted-spikeweed"):
         passive = True
         assert len(layers) == 1
     shoot_layer = layers[1]["data"] if PLANT in ("little-lettuce-projectile", "salad-pult", "black-cherry", "flame-gloom-shroom", "peatato-mine", "threetato-mine", "flame-wall-nut", "flame-tall-nut", "solar-squash", "spicy-kelp", "doom-kelp") else None if passive else ((layers[1]["data"] if not projectile else layers[0]["data"]) if controller else None)
@@ -1090,7 +1095,9 @@ def export(plant, assets, bundle_sha256, *, output_root=None):
                           "cabbage-pot": {"idle"}, "butter-pot": {"idle"}, "umbrella-pot": {"idle"},
                           "silver-pot": {"idle"}, "lumos-pot": {"idle"},
                           "silver-umbrella": {"idle", "block"},
-                          "silver-kernel": {"idle", "shoot", "shoot2"}}[PLANT]
+                          "silver-kernel": {"idle", "shoot", "shoot2"},
+                          "squashwood": {"idle"}, "torchweed": {"idle"},
+                          "roasted-spikeweed": {"idle", "attack"}}[PLANT]
     if PLANT in ("strangle-kelp", "kelp-spreader", "squashweed", "butterweed", "springweed"):
         expected_clips = {"idle", "attack"}
     if PLANT == "splash":
@@ -1223,7 +1230,7 @@ def export(plant, assets, bundle_sha256, *, output_root=None):
                      "tangle-nut": "Wallnut_body/Tanglekelp_whitewater1", "spike-kelp": "Tanglekelp_whitewater1"}.get(PLANT, "Tanglekelp_whitewater")
         ground = next(i for i, node in enumerate(nodes) if node["Path"] == footprint)
         assert nodes[ground]["Sprite"] >= 0
-    if PLANT in ("solarweed", "iceweed", "scorchweed", "tangle-weed", "icerock", "hearthrock"):
+    if PLANT in ("solarweed", "iceweed", "scorchweed", "tangle-weed", "icerock", "hearthrock", "torchweed", "roasted-spikeweed"):
         # These three original prefabs deliberately have an empty Shadow.
         # Their visible ground-cover body supplies the footprint instead.
         assert nodes[ground]["Sprite"] == -1

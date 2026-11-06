@@ -1,0 +1,14 @@
+[
+  {
+    "plant1": "Squash",
+    "plant2": "Torchwood",
+    "fusion": "Squashwood",
+    "plant1_id": 13,
+    "plant2_id": 18,
+    "fusion_id": 1059,
+    "both_orders": true,
+    "registration_rvas": [
+      "0x47d450"
+    ]
+  }
+]

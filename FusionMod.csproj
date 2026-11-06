@@ -6,13 +6,16 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>22.2.6</Version>
+    <Version>22.3.4</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="assets/fire-nut-projectile/*" LogicalName="FusionMod.FireNutProjectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/cherry-drone-projectile/*" LogicalName="FusionMod.CherryDroneProjectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/eyes-armor/*.png;assets/eyes-armor/placement.json" LogicalName="FusionMod.EyesArmor.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/squashwood/*" LogicalName="FusionMod.Squashwood.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/torchweed/*" LogicalName="FusionMod.Torchweed.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/roasted-spikeweed/*" LogicalName="FusionMod.RoastedSpikeweed.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/hot-potato/*" LogicalName="FusionMod.HotPotato.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/boomwood/*" LogicalName="FusionMod.Boomwood.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/fire-cherry-projectile/*" LogicalName="FusionMod.FireCherryProjectile.%(Filename)%(Extension)" />

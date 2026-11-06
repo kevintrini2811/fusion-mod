@@ -1,0 +1,1106 @@
+[
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Awake",
+    "token": "0x6000ea2",
+    "rva": "0x466cf0",
+    "end": "0x466fd0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Hid",
+    "token": "0x6000ea3",
+    "rva": "0x4695c0",
+    "end": "0x4695e0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Start",
+    "token": "0x6000ea4",
+    "rva": "0x46e840",
+    "end": "0x46e8f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Update",
+    "token": "0x6000ea5",
+    "rva": "0x470150",
+    "end": "0x4701c0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "FixedUpdate",
+    "token": "0x6000ea6",
+    "rva": "0x468b30",
+    "end": "0x468c40"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnFixedUpdate",
+    "token": "0x6000ea7",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SetColor",
+    "token": "0x6000ea8",
+    "rva": "0x46e450",
+    "end": "0x46e5d0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "KillZombie",
+    "token": "0x6000ea9",
+    "rva": "0x46a9f0",
+    "end": "0x46aa00"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Charge",
+    "token": "0x6000eaa",
+    "rva": "0x466ff0",
+    "end": "0x467010"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "TryBeDisable",
+    "token": "0x6000eab",
+    "rva": "0x46f9d0",
+    "end": "0x46fab0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "FindPineFunrce",
+    "token": "0x6000eac",
+    "rva": "0x468950",
+    "end": "0x468b30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "TryBeActive",
+    "token": "0x6000ead",
+    "rva": "0x46f480",
+    "end": "0x46f9d0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "CheckOrActive",
+    "token": "0x6000eae",
+    "rva": "0x4673b0",
+    "end": "0x467410"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "InitText",
+    "token": "0x6000eaf",
+    "rva": "0x4695e0",
+    "end": "0x469900"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnAfterInitText",
+    "token": "0x6000eb0",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UpdateText",
+    "token": "0x6000eb1",
+    "rva": "0x470050",
+    "end": "0x470150"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Recover",
+    "token": "0x6000eb2",
+    "rva": "0x46c9d0",
+    "end": "0x46d380"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "GetShield",
+    "token": "0x6000eb3",
+    "rva": "0x469390",
+    "end": "0x4693f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "InsteadRecover",
+    "token": "0x6000eb4",
+    "rva": "0x469900",
+    "end": "0x469b30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "LimHealth",
+    "token": "0x6000eb5",
+    "rva": "0x46aa00",
+    "end": "0x46aa20"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ReplaceSprite",
+    "token": "0x6000eb6",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Broken",
+    "token": "0x6000eb7",
+    "rva": "0x466fd0",
+    "end": "0x466ff0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "CheckJackbox",
+    "token": "0x6000eb8",
+    "rva": "0x467010",
+    "end": "0x4673b0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "RealTakeDamage",
+    "token": "0x6000eb9",
+    "rva": "0x46c8e0",
+    "end": "0x46c9d0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "TakeDamage",
+    "token": "0x6000eba",
+    "rva": "0x46eac0",
+    "end": "0x46f480"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "DecreateShield",
+    "token": "0x6000ebb",
+    "rva": "0x467d40",
+    "end": "0x467d50"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "DecreaseHealth",
+    "token": "0x6000ebc",
+    "rva": "0x467b80",
+    "end": "0x467d40"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "GetDamage",
+    "token": "0x6000ebd",
+    "rva": "0x468e30",
+    "end": "0x469390"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Instead",
+    "token": "0x6000ebe",
+    "rva": "0x469b30",
+    "end": "0x46a9f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "FlashOnce",
+    "token": "0x6000ebf",
+    "rva": "0x468c40",
+    "end": "0x468c60"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Die",
+    "token": "0x6000ec0",
+    "rva": "0x467d50",
+    "end": "0x4688f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Crashed",
+    "token": "0x6000ec1",
+    "rva": "0x467470",
+    "end": "0x467990"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnCrash",
+    "token": "0x6000ec2",
+    "rva": "0x404b10",
+    "end": "0x404b20"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AdjustPosition",
+    "token": "0x6000ec3",
+    "rva": "0x466a80",
+    "end": "0x466b80"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ModifyScaleAsync",
+    "token": "0x6000ec4",
+    "rva": "0x46b140",
+    "end": "0x46b330"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AdjustPositionY",
+    "token": "0x6000ec5",
+    "rva": "0x4669e0",
+    "end": "0x466a80"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AdjustY",
+    "token": "0x6000ec6",
+    "rva": "0x466b80",
+    "end": "0x466c20"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ProducerUpdate",
+    "token": "0x6000ec7",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SetBrightness",
+    "token": "0x6000ec8",
+    "rva": "0x46e3e0",
+    "end": "0x46e450"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "FlashUpdate",
+    "token": "0x6000ec9",
+    "rva": "0x468c60",
+    "end": "0x468e30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "PlantUpdate",
+    "token": "0x6000eca",
+    "rva": "0x46bbd0",
+    "end": "0x46c880"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnUpdate",
+    "token": "0x6000ecb",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "PositionUpdate",
+    "token": "0x6000ecc",
+    "rva": "0x46c880",
+    "end": "0x46c8e0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "MovePosition",
+    "token": "0x6000ecd",
+    "rva": "0x46b640",
+    "end": "0x46ba30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Near",
+    "token": "0x6000ece",
+    "rva": "0x46ba30",
+    "end": "0x46baf0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "MoveBox",
+    "token": "0x6000ecf",
+    "rva": "0x46b4f0",
+    "end": "0x46b640"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AttributeEvent",
+    "token": "0x6000ed0",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "WheatUpdate",
+    "token": "0x6000ed1",
+    "rva": "0x470f10",
+    "end": "0x4713a0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SetWheat",
+    "token": "0x6000ed2",
+    "rva": "0x46e5d0",
+    "end": "0x46e720"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SearchBoss",
+    "token": "0x6000ed3",
+    "rva": "0x46d890",
+    "end": "0x46da30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AnimSuperShoot",
+    "token": "0x6000ed4",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SuperSkill",
+    "token": "0x6000ed5",
+    "rva": "0x46e8f0",
+    "end": "0x46eac0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SearchZombie",
+    "token": "0x6000ed6",
+    "rva": "0x46e040",
+    "end": "0x46e290"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "PlantShootUpdate",
+    "token": "0x6000ed7",
+    "rva": "0x46bb10",
+    "end": "0x46bbd0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UpdateAttackCountDown",
+    "token": "0x6000ed8",
+    "rva": "0x46fad0",
+    "end": "0x46fb30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Shootable",
+    "token": "0x6000ed9",
+    "rva": "0x46e720",
+    "end": "0x46e7f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SearchGoldMagnet",
+    "token": "0x6000eda",
+    "rva": "0x46da30",
+    "end": "0x46de00"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SearchUniqueZombie",
+    "token": "0x6000edb",
+    "rva": "0x46de00",
+    "end": "0x46e040"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AttackLandZombie",
+    "token": "0x6000edc",
+    "rva": "0x466c20",
+    "end": "0x466cf0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Connected",
+    "token": "0x6000edd",
+    "rva": "0x467410",
+    "end": "0x467470"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "DisConnected",
+    "token": "0x6000ede",
+    "rva": "0x4688f0",
+    "end": "0x468950"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UpdateMagnetCount",
+    "token": "0x6000edf",
+    "rva": "0x46fc80",
+    "end": "0x46fc90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "RemoveFromList",
+    "token": "0x6000ee0",
+    "rva": "0x46d380",
+    "end": "0x46d890"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "DieEvent",
+    "token": "0x6000ee1",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "DieEventMustExecute",
+    "token": "0x6000ee2",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnDestroy",
+    "token": "0x6000ee3",
+    "rva": "0x46baf0",
+    "end": "0x46bb10"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "GiveSunInIZ",
+    "token": "0x6000ee4",
+    "rva": "0x4693f0",
+    "end": "0x4695c0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnMove",
+    "token": "0x6000ee5",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnCreate",
+    "token": "0x6000ee6",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ModifyTempDamage",
+    "token": "0x6000ee7",
+    "rva": "0x46b400",
+    "end": "0x46b4f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ModifyDamage",
+    "token": "0x6000ee8",
+    "rva": "0x46aa20",
+    "end": "0x46ae10"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AddSpeed",
+    "token": "0x6000ee9",
+    "rva": "0x4667e0",
+    "end": "0x466820"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ModifySpeed",
+    "token": "0x6000eea",
+    "rva": "0x46b330",
+    "end": "0x46b400"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AddSpeed",
+    "token": "0x6000eeb",
+    "rva": "0x466630",
+    "end": "0x4667e0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "ModifyHealth",
+    "token": "0x6000eec",
+    "rva": "0x46ae10",
+    "end": "0x46b140"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AdjustDamage",
+    "token": "0x6000eed",
+    "rva": "0x466820",
+    "end": "0x4669e0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UpdateStarIcon",
+    "token": "0x6000eee",
+    "rva": "0x46fc90",
+    "end": "0x470050"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "Upgrade",
+    "token": "0x6000eef",
+    "rva": "0x4701c0",
+    "end": "0x470ac0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "StarUp",
+    "token": "0x6000ef0",
+    "rva": "0x46e7f0",
+    "end": "0x46e840"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnStarUp",
+    "token": "0x6000ef1",
+    "rva": "0x404b10",
+    "end": "0x404b20"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UpgradeEvent",
+    "token": "0x6000ef2",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "InfluenceByIceShroom",
+    "token": "0x6000ef3",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "InfluenceByBigsnow",
+    "token": "0x6000ef4",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "InfluenceByJalapeno",
+    "token": "0x6000ef5",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "TryUseCard",
+    "token": "0x6000ef6",
+    "rva": "0x46fab0",
+    "end": "0x46fad0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UseItem",
+    "token": "0x6000ef7",
+    "rva": "0x470ac0",
+    "end": "0x470f10"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnClicked",
+    "token": "0x6000ef8",
+    "rva": "0x404b10",
+    "end": "0x404b20"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnMix",
+    "token": "0x6000ef9",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "CreateCannonTarget",
+    "token": "0x6000efa",
+    "rva": "0x467990",
+    "end": "0x467b80"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SetTargetByMouse",
+    "token": "0x6000efb",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "OnEat",
+    "token": "0x6000efc",
+    "rva": "0x404b10",
+    "end": "0x404b20"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_PreviewType",
+    "token": "0x6000efd",
+    "rva": "0x471b90",
+    "end": "0x471ba0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_AttributeCountdownMaximum",
+    "token": "0x6000efe",
+    "rva": "0x471690",
+    "end": "0x471730"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "UpdateAttributeCountdown",
+    "token": "0x6000eff",
+    "rva": "0x46fb30",
+    "end": "0x46fc80"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SetAttributeCountdown",
+    "token": "0x6000f00",
+    "rva": "0x46e380",
+    "end": "0x46e3e0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_AttributeCountdown",
+    "token": "0x6000f01",
+    "rva": "0x471730",
+    "end": "0x471740"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "set_AttributeCountdown",
+    "token": "0x6000f02",
+    "rva": "0x472e10",
+    "end": "0x472e50"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "SetAttributeCountdownValue",
+    "token": "0x6000f03",
+    "rva": "0x46e290",
+    "end": "0x46e380"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_Active",
+    "token": "0x6000f04",
+    "rva": "0x471600",
+    "end": "0x471690"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_BoxType",
+    "token": "0x6000f05",
+    "rva": "0x4717b0",
+    "end": "0x4717f0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_Timers",
+    "token": "0x6000f06",
+    "rva": "0x472ae0",
+    "end": "0x472c10"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_LimDamage",
+    "token": "0x6000f07",
+    "rva": "0x471990",
+    "end": "0x4719a0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_SameUpper",
+    "token": "0x6000f08",
+    "rva": "0x4728d0",
+    "end": "0x472ae0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_SameLower",
+    "token": "0x6000f09",
+    "rva": "0x4724b0",
+    "end": "0x4726c0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_SameLeft",
+    "token": "0x6000f0a",
+    "rva": "0x4722a0",
+    "end": "0x4724b0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_SameRight",
+    "token": "0x6000f0b",
+    "rva": "0x4726c0",
+    "end": "0x4728d0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_WithGoldPot",
+    "token": "0x6000f0c",
+    "rva": "0x472c10",
+    "end": "0x472e10"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_PotType",
+    "token": "0x6000f0d",
+    "rva": "0x4719a0",
+    "end": "0x471b90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_Pumpkin",
+    "token": "0x6000f0e",
+    "rva": "0x471f30",
+    "end": "0x4722a0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_BlockedByPumpkin",
+    "token": "0x6000f0f",
+    "rva": "0x471740",
+    "end": "0x4717b0"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_PumpkinType",
+    "token": "0x6000f10",
+    "rva": "0x471ba0",
+    "end": "0x471f30"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "get_Ladder",
+    "token": "0x6000f11",
+    "rva": "0x4717f0",
+    "end": "0x471990"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "BeforeSerialized",
+    "token": "0x6000f12",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": "AfterDeserialized",
+    "token": "0x6000f13",
+    "rva": "0x3eab80",
+    "end": "0x3eab90"
+  },
+  {
+    "type": "Plant",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6000f14",
+    "rva": "0x4713a0",
+    "end": "0x471600"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "Update",
+    "token": "0x6001102",
+    "rva": "0x4979d0",
+    "end": "0x497a70"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "get_Cols",
+    "token": "0x6001103",
+    "rva": "0x497a70",
+    "end": "0x497be0"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "ReadyToAttack",
+    "token": "0x6001104",
+    "rva": "0x4978b0",
+    "end": "0x4979d0"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "OnTriggerEnter2D",
+    "token": "0x6001105",
+    "rva": "0x4977f0",
+    "end": "0x4978b0"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "KillCar",
+    "token": "0x6001106",
+    "rva": "0x497570",
+    "end": "0x497790"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "Crashed",
+    "token": "0x6001107",
+    "rva": "0x495f60",
+    "end": "0x496000"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "AnimAttack",
+    "token": "0x6001108",
+    "rva": "0x4973f0",
+    "end": "0x497570"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": "OnAttack",
+    "token": "0x6001109",
+    "rva": "0x497790",
+    "end": "0x4977f0"
+  },
+  {
+    "type": "Caltrop",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x600110a",
+    "rva": "0x492180",
+    "end": "0x4921a0"
+  },
+  {
+    "type": "CaltropTorch",
+    "namespace": "",
+    "method": "Update",
+    "token": "0x6001125",
+    "rva": "0x497380",
+    "end": "0x4973f0"
+  },
+  {
+    "type": "CaltropTorch",
+    "namespace": "",
+    "method": "OnTriggerEnter2D",
+    "token": "0x6001126",
+    "rva": "0x496cd0",
+    "end": "0x496eb0"
+  },
+  {
+    "type": "CaltropTorch",
+    "namespace": "",
+    "method": "SummonCaltrop",
+    "token": "0x6001127",
+    "rva": "0x496eb0",
+    "end": "0x4970c0"
+  },
+  {
+    "type": "CaltropTorch",
+    "namespace": "",
+    "method": "FireUpdate",
+    "token": "0x6001128",
+    "rva": "0x496c70",
+    "end": "0x496cd0"
+  },
+  {
+    "type": "CaltropTorch",
+    "namespace": "",
+    "method": "SummonFire",
+    "token": "0x6001129",
+    "rva": "0x4970c0",
+    "end": "0x497380"
+  },
+  {
+    "type": "CaltropTorch",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x600112a",
+    "rva": "0x436060",
+    "end": "0x436070"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Awake",
+    "token": "0x6002a86",
+    "rva": "0x6823c0",
+    "end": "0x682410"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Start",
+    "token": "0x6002a87",
+    "rva": "0x682470",
+    "end": "0x682490"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Update",
+    "token": "0x6002a88",
+    "rva": "0x682490",
+    "end": "0x682810"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Pick",
+    "token": "0x6002a89",
+    "rva": "0x682410",
+    "end": "0x682470"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Use",
+    "token": "0x6002a8a",
+    "rva": "0x683730",
+    "end": "0x683dc0"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Use",
+    "token": "0x6002a8b",
+    "rva": "0x683dc0",
+    "end": "0x683df0"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": "Upgrade",
+    "token": "0x6002a8c",
+    "rva": "0x682810",
+    "end": "0x683730"
+  },
+  {
+    "type": "Fertilize",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6002a8d",
+    "rva": "0x683df0",
+    "end": "0x683e40"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "path_id": 3979,
+    "name": "attack",
+    "events": [
+      {
+        "time": 0.3333333432674408,
+        "functionName": "AnimAttack",
+        "data": "",
+        "objectReferenceParameter": {
+          "m_FileID": 0,
+          "m_PathID": 0
+        },
+        "floatParameter": 0.0,
+        "intParameter": 0,
+        "messageOptions": 0
+      }
+    ],
+    "stop_time": 0.6666666865348816
+  },
+  {
+    "path_id": 3980,
+    "name": "idle",
+    "events": [],
+    "stop_time": 2.0
+  }
+]

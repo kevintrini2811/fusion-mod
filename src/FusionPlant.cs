@@ -328,6 +328,9 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant Hypnowood = new(SeedType.Torchwood, SeedType.Hypnoshroom);
     internal static readonly FusionPlant HotPotato = new(SeedType.Potatomine, SeedType.Torchwood);
     internal static readonly FusionPlant Boomwood = new(SeedType.Torchwood, SeedType.Cherrybomb);
+    internal static readonly FusionPlant Squashwood = new(SeedType.Torchwood, SeedType.Squash);
+    internal static readonly FusionPlant Torchweed = new(SeedType.Spikeweed, SeedType.Torchwood);
+    internal static readonly FusionPlant RoastedSpikeweed = new(SeedType.Spikeweed, SeedType.Cobcannon);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -644,7 +647,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == RoastedPotato || plant == TideShroom || plant == BlacklightPlantern ||
         plant == Scorchwood || plant == Stenchwood || plant == Nutwood ||
         plant == Torchthree || plant == Sparkwood || plant == Hypnowood ||
-        plant == HotPotato || plant == Boomwood;
+        plant == HotPotato || plant == Boomwood || plant == Squashwood ||
+        plant == Torchweed || plant == RoastedSpikeweed;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -968,6 +972,9 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Torchwood, SeedType.Hypnoshroom) => Hypnowood,
             (SeedType.Potatomine, SeedType.Torchwood) => HotPotato,
             (SeedType.Torchwood, SeedType.Cherrybomb) => Boomwood,
+            (SeedType.Torchwood, SeedType.Squash) => Squashwood,
+            (SeedType.Spikeweed, SeedType.Torchwood) => Torchweed,
+            (SeedType.Spikeweed, SeedType.Cobcannon) => RoastedSpikeweed,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

@@ -7,7 +7,7 @@ namespace FusionMod;
 // Crossing is swept before movement; spawned peas cannot ignite again here.
 internal static class TorchFusions
 {
-    internal static bool Owns(FusionPlant identity) => identity == FusionPlant.Nutwood
+    internal static bool Owns(FusionPlant identity) => identity == FusionPlant.Nutwood || identity == FusionPlant.Squashwood
         || identity == FusionPlant.Torchthree || identity == FusionPlant.Sparkwood || identity == FusionPlant.Hypnowood;
 
     internal static void Initialize(Plant plant)
@@ -54,7 +54,8 @@ internal static class TorchFusions
             if (snow)
             {
                 shot.ConvertToPea(plant.mPlantCol);
-                return; // Thawing does not count as ignition.
+                if (identity == FusionPlant.Squashwood) CreditSquash(plant);
+                return; // Squashwood counts thawing; other stumps do not.
             }
             if (hypno)
             {
@@ -84,8 +85,16 @@ internal static class TorchFusions
             shot.ConvertToFireball(plant.mPlantCol);
             shot.mHitTorchwoodGridX = plant.mPlantCol;
             if (identity == FusionPlant.Nutwood || identity == FusionPlant.Hypnowood) Credit(plant, 1);
+            if (identity == FusionPlant.Squashwood) CreditSquash(plant);
             return;
         }
+    }
+
+    internal static void CreditSquash(Plant plant)
+    {
+        // SquashTorch consumes charge only after SetPlant finds a legal tile.
+        if (++plant.mTargetY <= 50) return;
+        if (TorchweedFusions.SummonAhead(plant, FusionPlant.RoastedSquash)) plant.mTargetY = 0;
     }
 
     private static void Spawn(Board board, float x, float y, int origin, int row, int order, int col)

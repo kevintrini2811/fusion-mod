@@ -1599,6 +1599,21 @@
       "name": "Boomwood",
       "native": "Torchwood",
       "marker": "Cherrybomb"
+    },
+    {
+      "name": "Squashwood",
+      "native": "Torchwood",
+      "marker": "Squash"
+    },
+    {
+      "name": "Torchweed",
+      "native": "Spikeweed",
+      "marker": "Torchwood"
+    },
+    {
+      "name": "RoastedSpikeweed",
+      "native": "Spikeweed",
+      "marker": "Cobcannon"
     }
   ],
   "reserved": [],

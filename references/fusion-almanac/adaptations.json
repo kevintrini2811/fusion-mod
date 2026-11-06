@@ -770,5 +770,13 @@
   "1178": {
     "info": "Ignites ordinary peas and thaws snow peas. After more than 30 conversions, creates a homing fire cherry with 300 explosion damage. Converts explosive cherries into fire cherries with the same damage. Up to three fire cherries per stump exist at once; they orbit their stump while no enemies are present. Triggers a 1800-damage Cherry Bomb explosion on death.",
     "notes": "The original checks strictly more than 30 conversions. A full rack preserves incoming explosive cherries. Fertilizer heals without special development."
+  },
+  "1059": {
+    "info": "Ignites ordinary peas and thaws snow peas. After more than 50 conversions, summons a non-fusible Roasted Squash on the first free tile ahead.",
+    "notes": "The executable uses a strict greater-than-50 threshold; the English source description says 60. A full row preserves the charge. Fertilizer heals without changing charge or evolving it."
+  },
+  "1061": {
+    "info": "Burns nearby hostile zombies in its lane for 40 fire damage every second, including airborne Balloon Zombies. The first hit pops a normal flying Balloon without body damage; later grounded hits deal 40 damage. Punctures vehicles. Ignites small peas, adding 20 damage, and doubles rolling Wall-nut damage while allowing previous targets to be hit again. After more than 100 conversions, summons a non-fusible Roasted Spikeweed on the first free tile ahead.",
+    "notes": "Only small peas and rolling Wall-nuts count; ordinary peas and potato peas are unaffected. A full row consumes the summon charge. Fertilizer heals without accelerating the independent fire timer."
   }
 }

@@ -1838,6 +1838,21 @@
       "available": true,
       "identity": "FusionPlant.Boomwood",
       "evidence": "references/boomwood/port.md"
+    },
+    "Squashwood": {
+      "available": true,
+      "identity": "FusionPlant.Squashwood",
+      "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
+    },
+    "Torchweed": {
+      "available": true,
+      "identity": "FusionPlant.Torchweed",
+      "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
+    },
+    "Roasted Spikeweed": {
+      "available": true,
+      "identity": "FusionPlant.RoastedSpikeweed",
+      "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
     }
   }
 }

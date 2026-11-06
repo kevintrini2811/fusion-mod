@@ -1,4 +1,6 @@
-# Fusion Mod 22.2.6
+# Fusion Mod 22.3.4
+
+Version 22.3.4 adds Squashwood and Torchweed with their original models, complete source recipes, charge-based Roasted summons, small fire peas, fire-nut conversions and fertilizer behavior. Roasted Spikeweed is a non-fusible source summon. See [source and port contracts](references/torch-summons-22-3-0/port-notes.md).
 
 Version 22.2.6 renders armored Eyes portraits from the imported walk pose and the same native helmet fit used on the live zombie. Placement previews and generated cards no longer use manually positioned portrait helmets.
 
@@ -2430,7 +2432,7 @@ Installation: `Mods/FusionMod.dll`, version 0.1.30. Dismantling when the game is
 
 ## List
 
-`fusionen.txt` contains **286 open recipes** with **228 result plants** in the format:
+`fusionen.txt` contains **284 open recipes** with **226 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2840,6 +2842,8 @@ Hypno-shroom | Torchwood | Hypnowood
 Starfruit | Torchwood | Sparkwood
 Threepeater | Torchwood | Torchthree
 Torchwood | Wall-nut | Nutwood
+Spikeweed | Torchwood | Torchweed
+Squash | Torchwood | Squashwood
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

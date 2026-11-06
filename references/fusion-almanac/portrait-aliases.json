@@ -1,0 +1,178 @@
+{
+  "DoubleShooter": {
+    "name": "DoublePea",
+    "sprite": 16170
+  },
+  "JalaCaltrop": {
+    "name": "JalaSpike",
+    "sprite": 15021
+  },
+  "PeaChomper": {
+    "name": "ChomperShooter",
+    "sprite": 15254
+  },
+  "SeaSunShroom": {
+    "name": "SunSeaShroom",
+    "sprite": 15682
+  },
+  "BigWallNut": {
+    "name": "WallNut",
+    "sprite": 15073
+  },
+  "TallNutFootball": {
+    "name": "TallNut",
+    "sprite": 14761
+  },
+  "TwinFlower": {
+    "name": "TwinFlowerPreview",
+    "sprite": 15473
+  },
+  "ScaredSun": {
+    "name": "ScaredySun",
+    "sprite": 15217
+  },
+  "PotatoNut": {
+    "name": "NutMine",
+    "sprite": 16236
+  },
+  "PeaPuff": {
+    "name": "PeaSmallPuff",
+    "sprite": 15507
+  },
+  "DoubleCherry": {
+    "name": "CherryShooter2",
+    "sprite": 14397
+  },
+  "Jalakelp": {
+    "name": "Jalatang",
+    "sprite": 14437
+  },
+  "IronPea": {
+    "name": "IronPeaShooter",
+    "sprite": 14742
+  },
+  "IceNut": {
+    "name": "IceNut_body",
+    "sprite": 15922
+  },
+  "WinterMelon": {
+    "name": "WinterMelon",
+    "sprite": 14473
+  },
+  "SilverNut": {
+    "name": "Silvernut_body",
+    "sprite": 20694
+  },
+  "SilverGarlic": {
+    "name": "SilverGarlic",
+    "sprite": 14850
+  },
+  "SilverIceShroom": {
+    "name": "SilverIceShroom",
+    "sprite": 16370
+  },
+  "SilverSunflower": {
+    "name": "SilverSunflower",
+    "sprite": 15998
+  },
+  "JalaStar": {
+    "name": "JalaStar",
+    "sprite": 16065
+  },
+  "SeaStarfruit": {
+    "name": "SeaStar",
+    "sprite": 16131
+  },
+  "SeaCactus": {
+    "name": "SeaCurtus",
+    "sprite": 15850
+  },
+  "SeaScaredyshroom": {
+    "name": "SeaScaedyshroom",
+    "sprite": 14318
+  },
+  "BlowerPumpkin": {
+    "name": "BloverPumpkin",
+    "sprite": 14477
+  },
+  "CabbageSquash": {
+    "name": "SquashCabbage",
+    "sprite": 15632
+  },
+  "MagnetCactus": {
+    "name": "MagnetCactus",
+    "sprite": 15410
+  },
+  "IceCactus": {
+    "name": "IceCactus",
+    "sprite": 14818
+  },
+  "LanternNut": {
+    "name": "LanternNut",
+    "sprite": 14193
+  },
+  "CactusFume": {
+    "name": "CactusFume",
+    "sprite": 15707
+  },
+  "IronFume": {
+    "name": "BucketFume",
+    "sprite": 14795
+  },
+  "CactusUmbrella": {
+    "name": "CactusUmbrellaleaf",
+    "sprite": 16083
+  },
+  "DoomCactus": {
+    "name": "DoomCactus",
+    "sprite": 15691
+  },
+  "LanternCactus": {
+    "name": "LanternCactus",
+    "sprite": 16026
+  },
+  "SuperThreePeater": {
+    "name": "SuperThreePeater",
+    "sprite": 14500
+  },
+  "CacstusStar": {
+    "name": "CactusStar",
+    "sprite": 16276
+  },
+  "GoldNut": {
+    "name": "Goldnut_body",
+    "sprite": 10212
+  },
+  "KelpMine_land": {
+    "name": "KelpMine_land",
+    "sprite": 15562
+  },
+  "TallNut": {
+    "name": "Tallnut_body",
+    "sprite": 14506
+  },
+  "SuperFume": {
+    "name": "IceDoomFume",
+    "sprite": 16323
+  },
+  "ChomperPumpkin": {
+    "name": "ChomperPumpkin",
+    "sprite": 15892
+  },
+  "PotatoPumpkin": {
+    "name": "PotatoPumpkin",
+    "sprite": 15434
+  },
+  "SunPumpkin": {
+    "name": "SunPumpkin",
+    "sprite": 15051
+  },
+  "FireMine": {
+    "name": "Fire",
+    "sprite": 15314
+  },
+  "TorchSpike": {
+    "name": "FireSpike",
+    "sprite": 16300
+  }
+}

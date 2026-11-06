@@ -1,0 +1,26 @@
+[
+  {
+    "type": "SquashTorch",
+    "namespace": "",
+    "method": "OnTriggerEnter2D",
+    "token": "0x60015d6",
+    "rva": "0x4eb450",
+    "end": "0x4eb590"
+  },
+  {
+    "type": "SquashTorch",
+    "namespace": "",
+    "method": "SummonPlant",
+    "token": "0x60015d7",
+    "rva": "0x4eb590",
+    "end": "0x4eb810"
+  },
+  {
+    "type": "SquashTorch",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x60015d8",
+    "rva": "0x464260",
+    "end": "0x464270"
+  }
+]

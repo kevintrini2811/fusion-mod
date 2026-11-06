@@ -474,6 +474,9 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Hypnowood, "Hypnowood"),
         new(FusionPlant.HotPotato, "HotPotato"),
         new(FusionPlant.Boomwood, "Boomwood"),
+        new(FusionPlant.Squashwood, "Squashwood"),
+        new(FusionPlant.Torchweed, "Torchweed"),
+        new(FusionPlant.RoastedSpikeweed, "RoastedSpikeweed"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -1571,6 +1574,13 @@ internal static partial class ImportedPeaVisuals
                 // at countdown 25. Fit the clip into the final half-second.
                 baseTime = Math.Clamp((50 - Plant.mStateCountdown) / 50f * model.Clips[baseClip].Duration,
                     0, model.Clips[baseClip].Duration - .00001f);
+            }
+            if (!preview && assets.Identity == FusionPlant.RoastedSpikeweed)
+            {
+                baseClip = Plant.mStartRow > 0 ? "attack" : "idle";
+                baseTime = Plant.mStartRow > 0
+                    ? (float)((TorchweedFusions.RoastedAttackTicks - Plant.mStartRow) * Il2CppReloaded.Constants.Gameplay.TIME_FOR_UPDATE) : idle;
+                shoot = null;
             }
             if ((FusionPlant.IsThreepeater(assets.Identity) || assets.Identity == FusionPlant.SquashSpreader) && !preview && Plant.mStartRow > 0)
                 shoot = (100 - Plant.mStartRow) * .01f;

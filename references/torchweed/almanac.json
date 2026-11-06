@@ -1,0 +1,7 @@
+{
+  "seedType": 1061,
+  "name": "火炬地刺",
+  "introduce": "<color=#3D1400>“我是火炬地刺，僵尸们的‘热情烤肉师’。点燃小豌豆，我就能给他们来个‘烧烤派对’，不过别担心，我是专业级的，保证外焦里嫩！”</color>",
+  "info": "旺盛燃烧的地刺，能点燃小豌豆，还能生成焰光地刺。\n\n<color=#3D1400>伤害：</color><color=red>40/1秒</color>\n<color=#3D1400>特性：</color><color=red>低矮</color>\n<color=#3D1400>特点：①</color><color=red>火焰伤害。能攻击空中的气球</color>\n<color=#3D1400>②</color><color=red>影响经过的特定子弹</color>\n<color=#A86A44>·小豌豆：</color><color=red>点燃，伤害+20</color>\n<color=#A86A44>·滚地坚果：</color><color=red>伤害×2，重置穿透次数</color>\n<color=#3D1400>③</color><color=red>每影响超过100个子弹，在前方生成一个不能用于融合的焰光地刺</color>\n<color=#3D1400>融合配方：</color><color=red>地刺+火炬树桩</color>",
+  "cost": ""
+}

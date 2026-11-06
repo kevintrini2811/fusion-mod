@@ -1,0 +1,3007 @@
+{
+  "bundle": "/home/kevin/modding/pvzreplanted/pvzfusion/english-4.0.5.2/Game Files/PlantsVsZombiesRH_Data/data.unity3d",
+  "bundle_sha256": "30094749d8dfbcae49f53cba4844deb8f67ef30882953311dac27799bcb68d03",
+  "original_almanac": "/home/kevin/modding/pvzreplanted/pvzfusion/english-4.0.5.2/Game Files/Mods/PvZ_Fusion_Translator/Dumps/LawnStrings.json",
+  "original_sha256": "36eb4e97ad3496edcd973ef9c52e7009973059c74cd3e90d2e2ba52b4a3b0ece",
+  "source_assembly_sha256": "6b0ec7002c4e5b581891601ca8fa95ad610b22236c2019735642f85dddf4ffec",
+  "translation_url": "https://raw.githubusercontent.com/Teyliu/PVZF-Translation/43982fb929e71ce51911015fb7b01831c939694e/PvZ_Fusion_Translator/Localization/English/Almanac/LawnStringsTranslate.json",
+  "german_translation_url": "https://raw.githubusercontent.com/Teyliu/PVZF-Translation/43982fb929e71ce51911015fb7b01831c939694e/PvZ_Fusion_Translator/Localization/German/Almanac/LawnStringsTranslate.json",
+  "inputs": {
+    "references/golden-bean-10-0-0/upgrades.json": "7331599ac457e7c7a0fd9dd31addc232d2ce95759a78e6359ab6a3395f1c441f",
+    "references/fusion-almanac/LawnStringsTranslate.en.json": "2b37fd12ccd7083f322bdd5df9702db289ec28c02d95de48e32b20d177d55d67",
+    "references/fusion-almanac/LawnStringsTranslate.de.json": "5f3068dd5f7f41891de58c85601962c58aa3fe46ef138cb504b2876af5c5d1cc",
+    "references/fusion-almanac/translations.de.json": "ddcc8666828fbeb59f47088faf0e93e27563795691b52f10595cf934d8657c26",
+    "references/fusion-almanac/PlantType.cs": "b5befa63bcfa46ace0bb46675d3b2a4bb27933850940e4955cc1d33376bafb2d",
+    "references/fusion-almanac/adaptations.json": "87b5ac315bd602c340d103049edb6079b9ede57521531798e1bca0ce921f9e5a",
+    "references/fusion-almanac/portrait-aliases.json": "37712e7bc87937df1a9ce535720d0dc4c5fc83478cba6a062d32de85968fc9eb",
+    "tools/almanac.py": "8ad4ef75a16e9f2c6ce2307a65088d3616278a162ca869451c944ee0c1fa73d0",
+    "references/scared-2-12-0/content.json": "f9a06eaf8d682e7fc39b921793335fa4229ddf00bc0db38bfc0f034bb4b026a5",
+    "references/scared-2-12-0/portrait.png": "774b38e32bf8771245f1a21bab7985f188ce70e625d0764f9c2210b5c61b0749",
+    "tools/scared_content.py": "a54c10716fd0284dc68fdbfa09bd35b3214164fad44e976bde4f12b9ee354a67"
+  },
+  "portraits": [
+    {
+      "source_id": 1338,
+      "source_enum": "IcePlantern",
+      "sprite_name": "IcePlantern",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14914,
+      "texture_path_id": 1773
+    },
+    {
+      "source_id": 1203,
+      "source_enum": "CornPuff",
+      "sprite_name": "CornPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14366,
+      "texture_path_id": 1208
+    },
+    {
+      "source_id": 1488,
+      "source_enum": "CactusPuff",
+      "sprite_name": "CactusPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14867,
+      "texture_path_id": 1722
+    },
+    {
+      "source_id": 1078,
+      "source_enum": "SeaLantern",
+      "sprite_name": "SeaLantern",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15055,
+      "texture_path_id": 1919
+    },
+    {
+      "source_id": 1373,
+      "source_enum": "LanternPea",
+      "sprite_name": "LanternPea",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16307,
+      "texture_path_id": 3224
+    },
+    {
+      "source_id": 1458,
+      "source_enum": "FumeChomper",
+      "sprite_name": "FumeChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15994,
+      "texture_path_id": 2897
+    },
+    {
+      "source_id": 1384,
+      "source_enum": "PuffJalapeno",
+      "sprite_name": "PuffJalapeno",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14499,
+      "texture_path_id": 1346
+    },
+    {
+      "source_id": 1332,
+      "source_enum": "DoomCherry",
+      "sprite_name": "DoomCherry",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16093,
+      "texture_path_id": 3001
+    },
+    {
+      "source_id": 1341,
+      "source_enum": "DoomPlantern",
+      "sprite_name": "DoomPlantern",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15609,
+      "texture_path_id": 2492
+    },
+    {
+      "source_id": 1274,
+      "source_enum": "CherryScaredy",
+      "sprite_name": "CherryScaredy",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14865,
+      "texture_path_id": 1720
+    },
+    {
+      "source_id": 1319,
+      "source_enum": "JalaPeashooter",
+      "sprite_name": "JalaPeashooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14735,
+      "texture_path_id": 1585
+    },
+    {
+      "source_id": 1320,
+      "source_enum": "JalaDoubleshooter",
+      "sprite_name": "JalaDoubleshooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14423,
+      "texture_path_id": 1267
+    },
+    {
+      "source_id": 901001,
+      "source_enum": "BloodSunFlower",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 6131,
+      "sprite_name": "BloodSunFlower",
+      "source": "PVZ-Scared",
+      "source_portrait": "references/scared-2-12-0/portrait.png"
+    },
+    {
+      "source_id": 1437,
+      "source_enum": "BloverPot",
+      "sprite_name": "BloverPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15296,
+      "texture_path_id": 2167
+    },
+    {
+      "source_id": 1389,
+      "source_enum": "TorchFume",
+      "sprite_name": "TorchFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14778,
+      "texture_path_id": 1628
+    },
+    {
+      "source_id": 1346,
+      "source_enum": "CornFume",
+      "sprite_name": "CornFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15644,
+      "texture_path_id": 2529
+    },
+    {
+      "source_id": 1044,
+      "source_enum": "PuffDoom",
+      "sprite_name": "PuffDoom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15331,
+      "texture_path_id": 2202
+    },
+    {
+      "source_id": 1178,
+      "source_enum": "CherryTorch",
+      "sprite_name": "CherryTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15088,
+      "texture_path_id": 1955
+    },
+    {
+      "source_id": 1298,
+      "source_enum": "PeaFume",
+      "sprite_name": "PeaFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14859,
+      "texture_path_id": 1714
+    },
+    {
+      "source_id": 1276,
+      "source_enum": "IceBlover",
+      "sprite_name": "IceBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14858,
+      "texture_path_id": 1713
+    },
+    {
+      "source_id": 1029,
+      "source_enum": "IronNut",
+      "sprite_name": "IronNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14401,
+      "texture_path_id": 1244
+    },
+    {
+      "source_id": 1152,
+      "source_enum": "IronPuff",
+      "sprite_name": "IronPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14553,
+      "texture_path_id": 1399
+    },
+    {
+      "source_id": 1020,
+      "source_enum": "IronPea",
+      "sprite_name": "IronPeaShooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14742,
+      "texture_path_id": 1591
+    },
+    {
+      "source_id": 1453,
+      "source_enum": "UmbrellaFume",
+      "sprite_name": "UmbrellaFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15774,
+      "texture_path_id": 2664
+    },
+    {
+      "source_id": 1360,
+      "source_enum": "CornBlover",
+      "sprite_name": "CornBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14629,
+      "texture_path_id": 1475
+    },
+    {
+      "source_id": 1114,
+      "source_enum": "CornPot",
+      "sprite_name": "CornPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15498,
+      "texture_path_id": 2376
+    },
+    {
+      "source_id": 1263,
+      "source_enum": "CornNut",
+      "sprite_name": "CornNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15059,
+      "texture_path_id": 1923
+    },
+    {
+      "source_id": 1363,
+      "source_enum": "SquashCorn",
+      "sprite_name": "SquashCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16250,
+      "texture_path_id": 3166
+    },
+    {
+      "source_id": 1337,
+      "source_enum": "CornCaltrop",
+      "sprite_name": "CornCaltrop",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15769,
+      "texture_path_id": 2660
+    },
+    {
+      "source_id": 1359,
+      "source_enum": "CabbageBlover",
+      "sprite_name": "CabbageBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14577,
+      "texture_path_id": 1422
+    },
+    {
+      "source_id": 1112,
+      "source_enum": "CabbagePot",
+      "sprite_name": "CabbagePot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14416,
+      "texture_path_id": 1260
+    },
+    {
+      "source_id": 1439,
+      "source_enum": "ThreeCabbage",
+      "sprite_name": "ThreeCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14592,
+      "texture_path_id": 1438
+    },
+    {
+      "source_id": 1262,
+      "source_enum": "CabbageNut",
+      "sprite_name": "CabbageNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14709,
+      "texture_path_id": 1559
+    },
+    {
+      "source_id": 1438,
+      "source_enum": "CaltropFume",
+      "sprite_name": "CaltropFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16359,
+      "texture_path_id": 3278
+    },
+    {
+      "source_id": 1273,
+      "source_enum": "ScaredyBlover",
+      "sprite_name": "ScaredyBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14765,
+      "texture_path_id": 1614
+    },
+    {
+      "source_id": 1067,
+      "source_enum": "CattailPlant",
+      "sprite_name": "CattailPlant",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16379,
+      "texture_path_id": 3298
+    },
+    {
+      "source_id": 918,
+      "source_enum": "AshThreePeater",
+      "sprite_name": "AshThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15719,
+      "texture_path_id": 2609
+    },
+    {
+      "source_id": 1016,
+      "source_enum": "CherryChomper",
+      "sprite_name": "CherryChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16362,
+      "texture_path_id": 3281
+    },
+    {
+      "source_id": 1451,
+      "source_enum": "CherryPuff",
+      "sprite_name": "CherryPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14860,
+      "texture_path_id": 1715
+    },
+    {
+      "source_id": 1243,
+      "source_enum": "CherryPot",
+      "sprite_name": "CherryPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14447,
+      "texture_path_id": 1291
+    },
+    {
+      "source_id": 1164,
+      "source_enum": "CherryPumpkin",
+      "sprite_name": "CherryPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14395,
+      "texture_path_id": 1237
+    },
+    {
+      "source_id": 1344,
+      "source_enum": "CherrySquash",
+      "sprite_name": "CherrySquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16289,
+      "texture_path_id": 3207
+    },
+    {
+      "source_id": 1003,
+      "source_enum": "CherryNut",
+      "sprite_name": "CherryNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16119,
+      "texture_path_id": 3028
+    },
+    {
+      "source_id": 1330,
+      "source_enum": "CherryThreePeater",
+      "sprite_name": "CherryThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15431,
+      "texture_path_id": 2307
+    },
+    {
+      "source_id": 1008,
+      "source_enum": "DoubleCherry",
+      "sprite_name": "CherryShooter2",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14397,
+      "texture_path_id": 1239
+    },
+    {
+      "source_id": 1001,
+      "source_enum": "Cherryshooter",
+      "sprite_name": "CherryShooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15660,
+      "texture_path_id": 2544
+    },
+    {
+      "source_id": 1163,
+      "source_enum": "JalaMine",
+      "sprite_name": "JalaMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14694,
+      "texture_path_id": 1545
+    },
+    {
+      "source_id": 1015,
+      "source_enum": "PotatoChomper",
+      "sprite_name": "PotatoChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14611,
+      "texture_path_id": 1457
+    },
+    {
+      "source_id": 1012,
+      "source_enum": "NutChomper",
+      "sprite_name": "NutChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16210,
+      "texture_path_id": 3124
+    },
+    {
+      "source_id": 1011,
+      "source_enum": "PeaChomper",
+      "sprite_name": "ChomperShooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15254,
+      "texture_path_id": 2125
+    },
+    {
+      "source_id": 1327,
+      "source_enum": "ChomperPumpkin",
+      "sprite_name": "ChomperPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15892,
+      "texture_path_id": 2785
+    },
+    {
+      "source_id": 1013,
+      "source_enum": "SuperChomper",
+      "sprite_name": "SuperChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15728,
+      "texture_path_id": 2618
+    },
+    {
+      "source_id": 1117,
+      "source_enum": "GarlicCorn",
+      "sprite_name": "GarlicCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15593,
+      "texture_path_id": 2476
+    },
+    {
+      "source_id": 1162,
+      "source_enum": "CherryMine",
+      "sprite_name": "CherryMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16357,
+      "texture_path_id": 3276
+    },
+    {
+      "source_id": 1120,
+      "source_enum": "CobCannon",
+      "sprite_name": "CobCannon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15663,
+      "texture_path_id": 2548
+    },
+    {
+      "source_id": 1121,
+      "source_enum": "CornMelon",
+      "sprite_name": "CornMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15041,
+      "texture_path_id": 1905
+    },
+    {
+      "source_id": 1376,
+      "source_enum": "IceCorn",
+      "sprite_name": "IceCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14810,
+      "texture_path_id": 1662
+    },
+    {
+      "source_id": 1375,
+      "source_enum": "IceCabbage",
+      "sprite_name": "IceCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15580,
+      "texture_path_id": 2462
+    },
+    {
+      "source_id": 1364,
+      "source_enum": "PotatoDoom",
+      "sprite_name": "PotatoDoom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16315,
+      "texture_path_id": 3232
+    },
+    {
+      "source_id": 1436,
+      "source_enum": "IcePumpkin",
+      "sprite_name": "IcePumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15248,
+      "texture_path_id": 2119
+    },
+    {
+      "source_id": 1420,
+      "source_enum": "HurricaneBlover",
+      "sprite_name": "HurricaneBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16133,
+      "texture_path_id": 3043
+    },
+    {
+      "source_id": 1399,
+      "source_enum": "DoomCabbage",
+      "sprite_name": "DoomCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15739,
+      "texture_path_id": 2630
+    },
+    {
+      "source_id": 1277,
+      "source_enum": "DoomStar",
+      "sprite_name": "DoomStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14356,
+      "texture_path_id": 1198
+    },
+    {
+      "source_id": 1040,
+      "source_enum": "IceDoom",
+      "sprite_name": "IceDoom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16122,
+      "texture_path_id": 3031
+    },
+    {
+      "source_id": 1181,
+      "source_enum": "GarlicBlover",
+      "sprite_name": "GarlicBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15575,
+      "texture_path_id": 2457
+    },
+    {
+      "source_id": 1191,
+      "source_enum": "DoomCactus",
+      "sprite_name": "DoomCactus",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15691,
+      "texture_path_id": 2578
+    },
+    {
+      "source_id": 1192,
+      "source_enum": "DoomChomper",
+      "sprite_name": "DoomChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15196,
+      "texture_path_id": 2066
+    },
+    {
+      "source_id": 1355,
+      "source_enum": "DoomGarlic",
+      "sprite_name": "DoomGarlic",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14791,
+      "texture_path_id": 1642
+    },
+    {
+      "source_id": 1414,
+      "source_enum": "DoomKelp",
+      "sprite_name": "DoomKelp",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14960,
+      "texture_path_id": 1822
+    },
+    {
+      "source_id": 1194,
+      "source_enum": "DoomPeashooter",
+      "sprite_name": "DoomPeashooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14399,
+      "texture_path_id": 1241
+    },
+    {
+      "source_id": 1454,
+      "source_enum": "DoomPot",
+      "sprite_name": "DoomPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15974,
+      "texture_path_id": 2876
+    },
+    {
+      "source_id": 1345,
+      "source_enum": "DoomSquash",
+      "sprite_name": "DoomSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15003,
+      "texture_path_id": 1866
+    },
+    {
+      "source_id": 1236,
+      "source_enum": "DoomNut",
+      "sprite_name": "DoomNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14804,
+      "texture_path_id": 1656
+    },
+    {
+      "source_id": 1440,
+      "source_enum": "DoomThreePeater",
+      "sprite_name": "DoomThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15969,
+      "texture_path_id": 2870
+    },
+    {
+      "source_id": 1248,
+      "source_enum": "DoomSunflower",
+      "sprite_name": "DoomSunflower",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14934,
+      "texture_path_id": 1793
+    },
+    {
+      "source_id": 1213,
+      "source_enum": "MagnetDoom",
+      "sprite_name": "MagnetDoom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15203,
+      "texture_path_id": 2074
+    },
+    {
+      "source_id": 1005,
+      "source_enum": "SuperCherryShooter",
+      "sprite_name": "SuperCherryShooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14662,
+      "texture_path_id": 1511
+    },
+    {
+      "source_id": 1275,
+      "source_enum": "DoomBlover",
+      "sprite_name": "DoomBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15858,
+      "texture_path_id": 2749
+    },
+    {
+      "source_id": 1069,
+      "source_enum": "FireCattail",
+      "sprite_name": "FireCattail",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15478,
+      "texture_path_id": 2356
+    },
+    {
+      "source_id": 1071,
+      "source_enum": "FireGloom",
+      "sprite_name": "FireGloom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15215,
+      "texture_path_id": 2086
+    },
+    {
+      "source_id": 1073,
+      "source_enum": "TallFireNut",
+      "sprite_name": "TallFireNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15141,
+      "texture_path_id": 2008
+    },
+    {
+      "source_id": 1235,
+      "source_enum": "FireNut",
+      "sprite_name": "FireNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15540,
+      "texture_path_id": 2421
+    },
+    {
+      "source_id": 1193,
+      "source_enum": "FireFume",
+      "sprite_name": "FireFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15946,
+      "texture_path_id": 2844
+    },
+    {
+      "source_id": 1486,
+      "source_enum": "ChomperBlover",
+      "sprite_name": "ChomperBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14647,
+      "texture_path_id": 1496
+    },
+    {
+      "source_id": 1306,
+      "source_enum": "HelmetGatling",
+      "sprite_name": "HelmetGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15714,
+      "texture_path_id": 2604
+    },
+    {
+      "source_id": 1028,
+      "source_enum": "TallNutFootball",
+      "sprite_name": "TallNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14761,
+      "texture_path_id": 1610
+    },
+    {
+      "source_id": 1278,
+      "source_enum": "GarlicNut",
+      "sprite_name": "GarlicNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15995,
+      "texture_path_id": 2898
+    },
+    {
+      "source_id": 1172,
+      "source_enum": "GarlicFume",
+      "sprite_name": "GarlicFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15888,
+      "texture_path_id": 2781
+    },
+    {
+      "source_id": 1042,
+      "source_enum": "ScaredyDoom",
+      "sprite_name": "ScaredyDoom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14298,
+      "texture_path_id": 1138
+    },
+    {
+      "source_id": 1068,
+      "source_enum": "IceCattail",
+      "sprite_name": "IceCattail",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15803,
+      "texture_path_id": 2693
+    },
+    {
+      "source_id": 1072,
+      "source_enum": "IceGloom",
+      "sprite_name": "IceGloom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14930,
+      "texture_path_id": 1789
+    },
+    {
+      "source_id": 1039,
+      "source_enum": "TallIceNut",
+      "sprite_name": "TallIceNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15401,
+      "texture_path_id": 2276
+    },
+    {
+      "source_id": 1189,
+      "source_enum": "IceNut",
+      "sprite_name": "IceNut_body",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15922,
+      "texture_path_id": 2818
+    },
+    {
+      "source_id": 1037,
+      "source_enum": "IceFumeShroom",
+      "sprite_name": "IceFumeShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15855,
+      "texture_path_id": 2746
+    },
+    {
+      "source_id": 1462,
+      "source_enum": "IceChomper",
+      "sprite_name": "IceChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15535,
+      "texture_path_id": 2416
+    },
+    {
+      "source_id": 1212,
+      "source_enum": "IceCherry",
+      "sprite_name": "IceCherry",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15465,
+      "texture_path_id": 2341
+    },
+    {
+      "source_id": 1472,
+      "source_enum": "ThreeFume",
+      "sprite_name": "ThreeFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14365,
+      "texture_path_id": 1207
+    },
+    {
+      "source_id": 1350,
+      "source_enum": "FumePumpkin",
+      "sprite_name": "FumePumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15770,
+      "texture_path_id": 2661
+    },
+    {
+      "source_id": 1118,
+      "source_enum": "GarlicCabbage",
+      "sprite_name": "GarlicCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14780,
+      "texture_path_id": 1630
+    },
+    {
+      "source_id": 1130,
+      "source_enum": "GarlicPot",
+      "sprite_name": "GarlicPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15828,
+      "texture_path_id": 2720
+    },
+    {
+      "source_id": 1119,
+      "source_enum": "GarlicMelon",
+      "sprite_name": "GarlicMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15308,
+      "texture_path_id": 2179
+    },
+    {
+      "source_id": 1383,
+      "source_enum": "LanternGatling",
+      "sprite_name": "LanternGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15066,
+      "texture_path_id": 1931
+    },
+    {
+      "source_id": 1322,
+      "source_enum": "JalaGatling",
+      "sprite_name": "JalaGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15105,
+      "texture_path_id": 1972
+    },
+    {
+      "source_id": 1017,
+      "source_enum": "CherryGatling",
+      "sprite_name": "CherryGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14530,
+      "texture_path_id": 1377
+    },
+    {
+      "source_id": 907,
+      "source_enum": "DoomGatling",
+      "sprite_name": "DoomGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14703,
+      "texture_path_id": 1554
+    },
+    {
+      "source_id": 1270,
+      "source_enum": "HypnoGatling",
+      "sprite_name": "HypnoGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14187,
+      "texture_path_id": 1026
+    },
+    {
+      "source_id": 1032,
+      "source_enum": "GatlingPea",
+      "sprite_name": "GatlingPea",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14305,
+      "texture_path_id": 1145
+    },
+    {
+      "source_id": 1065,
+      "source_enum": "GatlingPuff",
+      "sprite_name": "GatlingPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15050,
+      "texture_path_id": 1914
+    },
+    {
+      "source_id": 1388,
+      "source_enum": "GarlicGatling",
+      "sprite_name": "GarlicGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15612,
+      "texture_path_id": 2496
+    },
+    {
+      "source_id": 1106,
+      "source_enum": "SnowGatling",
+      "sprite_name": "SnowGatling",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15843,
+      "texture_path_id": 2735
+    },
+    {
+      "source_id": 255,
+      "source_enum": "BigWallNut",
+      "sprite_name": "WallNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15073,
+      "texture_path_id": 1939
+    },
+    {
+      "source_id": 1046,
+      "source_enum": "SuperFume",
+      "sprite_name": "IceDoomFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16323,
+      "texture_path_id": 3240
+    },
+    {
+      "source_id": 1070,
+      "source_enum": "GloomShroom",
+      "sprite_name": "GloomShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15463,
+      "texture_path_id": 2339
+    },
+    {
+      "source_id": 1080,
+      "source_enum": "LanternBlover",
+      "sprite_name": "LanternBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15832,
+      "texture_path_id": 2724
+    },
+    {
+      "source_id": 1022,
+      "source_enum": "HypnoPuff",
+      "sprite_name": "HypnoPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16034,
+      "texture_path_id": 2940
+    },
+    {
+      "source_id": 1150,
+      "source_enum": "GoldMagnet",
+      "sprite_name": "GoldMagnet",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15028,
+      "texture_path_id": 1892
+    },
+    {
+      "source_id": 1188,
+      "source_enum": "GoldSunflower",
+      "sprite_name": "GoldSunflower",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15027,
+      "texture_path_id": 1891
+    },
+    {
+      "source_id": 1285,
+      "source_enum": "GoldNut",
+      "sprite_name": "Goldnut_body",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 10212,
+      "texture_path_id": 225
+    },
+    {
+      "source_id": 1343,
+      "source_enum": "SquashMelon",
+      "sprite_name": "SquashMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14479,
+      "texture_path_id": 1325
+    },
+    {
+      "source_id": 1395,
+      "source_enum": "KelpFume",
+      "sprite_name": "KelpFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14678,
+      "texture_path_id": 1528
+    },
+    {
+      "source_id": 1025,
+      "source_enum": "ScaredFume",
+      "sprite_name": "ScaredFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14838,
+      "texture_path_id": 1690
+    },
+    {
+      "source_id": 1036,
+      "source_enum": "SmallIceShroom",
+      "sprite_name": "SmallIceShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15902,
+      "texture_path_id": 2797
+    },
+    {
+      "source_id": 1075,
+      "source_enum": "FireSpikeRock",
+      "sprite_name": "FireSpikeRock",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14696,
+      "texture_path_id": 1547
+    },
+    {
+      "source_id": 1294,
+      "source_enum": "SeaScaredyshroom",
+      "sprite_name": "SeaScaedyshroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14318,
+      "texture_path_id": 1158
+    },
+    {
+      "source_id": 1474,
+      "source_enum": "JalaPot",
+      "sprite_name": "JalaPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16239,
+      "texture_path_id": 3155
+    },
+    {
+      "source_id": 1421,
+      "source_enum": "TorchMine",
+      "sprite_name": "TorchMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14579,
+      "texture_path_id": 1424
+    },
+    {
+      "source_id": 1452,
+      "source_enum": "ChomperScaredy",
+      "sprite_name": "ChomperScaredy",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15686,
+      "texture_path_id": 2573
+    },
+    {
+      "source_id": 1230,
+      "source_enum": "HypnoGarlic",
+      "sprite_name": "HypnoGarlic",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16166,
+      "texture_path_id": 3077
+    },
+    {
+      "source_id": 1286,
+      "source_enum": "HypnoMelon",
+      "sprite_name": "HypnoMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14704,
+      "texture_path_id": 1555
+    },
+    {
+      "source_id": 1231,
+      "source_enum": "HypnoMine",
+      "sprite_name": "HypnoMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14539,
+      "texture_path_id": 1385
+    },
+    {
+      "source_id": 1267,
+      "source_enum": "HypnoPeashooter",
+      "sprite_name": "HypnoPeashooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14319,
+      "texture_path_id": 1159
+    },
+    {
+      "source_id": 1336,
+      "source_enum": "HypnoJalapeno",
+      "sprite_name": "HypnoJalapeno",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16080,
+      "texture_path_id": 2987
+    },
+    {
+      "source_id": 1380,
+      "source_enum": "HypnoPot",
+      "sprite_name": "HypnoPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14896,
+      "texture_path_id": 1753
+    },
+    {
+      "source_id": 1268,
+      "source_enum": "HypnoRepeater",
+      "sprite_name": "HypnoRepeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14639,
+      "texture_path_id": 1487
+    },
+    {
+      "source_id": 1229,
+      "source_enum": "HypnoSquash",
+      "sprite_name": "HypnoSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16175,
+      "texture_path_id": 3086
+    },
+    {
+      "source_id": 1394,
+      "source_enum": "HypnoTorch",
+      "sprite_name": "HypnoTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15423,
+      "texture_path_id": 2298
+    },
+    {
+      "source_id": 1427,
+      "source_enum": "IceCactus",
+      "sprite_name": "IceCactus",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14818,
+      "texture_path_id": 1670
+    },
+    {
+      "source_id": 1401,
+      "source_enum": "IceMine",
+      "sprite_name": "IceMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15823,
+      "texture_path_id": 2714
+    },
+    {
+      "source_id": 1287,
+      "source_enum": "IcePot",
+      "sprite_name": "IcePot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15018,
+      "texture_path_id": 1881
+    },
+    {
+      "source_id": 1074,
+      "source_enum": "IceSpikeRock",
+      "sprite_name": "IceSpikeRock",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15602,
+      "texture_path_id": 2485
+    },
+    {
+      "source_id": 1180,
+      "source_enum": "IceCaltrop",
+      "sprite_name": "IceCaltrop",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15285,
+      "texture_path_id": 2156
+    },
+    {
+      "source_id": 1035,
+      "source_enum": "IcePuff",
+      "sprite_name": "IcePuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15557,
+      "texture_path_id": 2439
+    },
+    {
+      "source_id": 1228,
+      "source_enum": "IceSquash",
+      "sprite_name": "IceSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15794,
+      "texture_path_id": 2684
+    },
+    {
+      "source_id": 1309,
+      "source_enum": "LanternNut",
+      "sprite_name": "LanternNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14193,
+      "texture_path_id": 1031
+    },
+    {
+      "source_id": 1253,
+      "source_enum": "IronSquash",
+      "sprite_name": "IronSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15395,
+      "texture_path_id": 2268
+    },
+    {
+      "source_id": 1096,
+      "source_enum": "IronStar",
+      "sprite_name": "IronStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16228,
+      "texture_path_id": 3142
+    },
+    {
+      "source_id": 1087,
+      "source_enum": "LanternPumpkin",
+      "sprite_name": "LanternPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15750,
+      "texture_path_id": 2641
+    },
+    {
+      "source_id": 1390,
+      "source_enum": "ChomperSquash",
+      "sprite_name": "ChomperSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14756,
+      "texture_path_id": 1605
+    },
+    {
+      "source_id": 1305,
+      "source_enum": "SeaHypno",
+      "sprite_name": "SeaHypno",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15781,
+      "texture_path_id": 2671
+    },
+    {
+      "source_id": 1233,
+      "source_enum": "KelpMine_water",
+      "sprite_name": "KelpMine_water",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15534,
+      "texture_path_id": 2415
+    },
+    {
+      "source_id": 1051,
+      "source_enum": "Threekelp",
+      "sprite_name": "Threekelp",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15172,
+      "texture_path_id": 2043
+    },
+    {
+      "source_id": 1209,
+      "source_enum": "MagnetCorn",
+      "sprite_name": "MagnetCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16206,
+      "texture_path_id": 3119
+    },
+    {
+      "source_id": 1434,
+      "source_enum": "ThreeCorn",
+      "sprite_name": "ThreeCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15030,
+      "texture_path_id": 1894
+    },
+    {
+      "source_id": 1398,
+      "source_enum": "FireCabbage",
+      "sprite_name": "FireCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15963,
+      "texture_path_id": 2862
+    },
+    {
+      "source_id": 1339,
+      "source_enum": "SeaMine_land",
+      "sprite_name": "SeaMine_land",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15098,
+      "texture_path_id": 1965
+    },
+    {
+      "source_id": 1378,
+      "source_enum": "CabbageSquash",
+      "sprite_name": "SquashCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15632,
+      "texture_path_id": 2517
+    },
+    {
+      "source_id": 1079,
+      "source_enum": "LanternCactus",
+      "sprite_name": "LanternCactus",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16026,
+      "texture_path_id": 2932
+    },
+    {
+      "source_id": 1195,
+      "source_enum": "LanternPot",
+      "sprite_name": "LanternPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14424,
+      "texture_path_id": 1268
+    },
+    {
+      "source_id": 1185,
+      "source_enum": "LanternUmbrella",
+      "sprite_name": "LanternUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14403,
+      "texture_path_id": 1246
+    },
+    {
+      "source_id": 1103,
+      "source_enum": "MagnetCactus",
+      "sprite_name": "MagnetCactus",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15410,
+      "texture_path_id": 2285
+    },
+    {
+      "source_id": 1296,
+      "source_enum": "TreasureMine",
+      "sprite_name": "TreasureMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15600,
+      "texture_path_id": 2483
+    },
+    {
+      "source_id": 1314,
+      "source_enum": "MagnetMelon",
+      "sprite_name": "MagnetMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15808,
+      "texture_path_id": 2698
+    },
+    {
+      "source_id": 1125,
+      "source_enum": "MelonPot",
+      "sprite_name": "MelonPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16072,
+      "texture_path_id": 2979
+    },
+    {
+      "source_id": 1352,
+      "source_enum": "MelonPumpkin",
+      "sprite_name": "MelonPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16295,
+      "texture_path_id": 3213
+    },
+    {
+      "source_id": 1433,
+      "source_enum": "ThreeMelon",
+      "sprite_name": "ThreeMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14355,
+      "texture_path_id": 1197
+    },
+    {
+      "source_id": 1261,
+      "source_enum": "MelonNut",
+      "sprite_name": "MelonNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15460,
+      "texture_path_id": 2335
+    },
+    {
+      "source_id": 1315,
+      "source_enum": "IronMelon",
+      "sprite_name": "IronMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14864,
+      "texture_path_id": 1719
+    },
+    {
+      "source_id": 1176,
+      "source_enum": "HypnoBlover",
+      "sprite_name": "HypnoBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15510,
+      "texture_path_id": 2389
+    },
+    {
+      "source_id": 1010,
+      "source_enum": "PotatoNut",
+      "sprite_name": "NutMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16236,
+      "texture_path_id": 3150
+    },
+    {
+      "source_id": 1302,
+      "source_enum": "PuffSeaShroom",
+      "sprite_name": "PuffSeaShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14495,
+      "texture_path_id": 1342
+    },
+    {
+      "source_id": 1158,
+      "source_enum": "MagnetFume",
+      "sprite_name": "MagnetFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14951,
+      "texture_path_id": 1812
+    },
+    {
+      "source_id": 1347,
+      "source_enum": "AllPeater",
+      "sprite_name": "AllPeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15269,
+      "texture_path_id": 2140
+    },
+    {
+      "source_id": 1170,
+      "source_enum": "PotatoPuff",
+      "sprite_name": "PotatoPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15780,
+      "texture_path_id": 2670
+    },
+    {
+      "source_id": 1311,
+      "source_enum": "NutPot",
+      "sprite_name": "NutPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15880,
+      "texture_path_id": 2773
+    },
+    {
+      "source_id": 1299,
+      "source_enum": "NutPumpkin",
+      "sprite_name": "NutPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15758,
+      "texture_path_id": 2649
+    },
+    {
+      "source_id": 1021,
+      "source_enum": "PuffNut",
+      "sprite_name": "PuffNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14757,
+      "texture_path_id": 1606
+    },
+    {
+      "source_id": 1282,
+      "source_enum": "NutTorch",
+      "sprite_name": "NutTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15791,
+      "texture_path_id": 2681
+    },
+    {
+      "source_id": 1124,
+      "source_enum": "CabbageMelon",
+      "sprite_name": "CabbageMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14799,
+      "texture_path_id": 1650
+    },
+    {
+      "source_id": 1404,
+      "source_enum": "PeaPot",
+      "sprite_name": "PeaPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14546,
+      "texture_path_id": 1392
+    },
+    {
+      "source_id": 1366,
+      "source_enum": "PeaSquash",
+      "sprite_name": "PeaSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14444,
+      "texture_path_id": 1288
+    },
+    {
+      "source_id": 1004,
+      "source_enum": "PeaNut",
+      "sprite_name": "PeaNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15676,
+      "texture_path_id": 2561
+    },
+    {
+      "source_id": 1018,
+      "source_enum": "PeaPuff",
+      "sprite_name": "PeaSmallPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15507,
+      "texture_path_id": 2386
+    },
+    {
+      "source_id": 1007,
+      "source_enum": "PeaMine",
+      "sprite_name": "PeaMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16123,
+      "texture_path_id": 3032
+    },
+    {
+      "source_id": 1446,
+      "source_enum": "CoinShroom",
+      "sprite_name": "CoinShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15684,
+      "texture_path_id": 2571
+    },
+    {
+      "source_id": 1023,
+      "source_enum": "HypnoFume",
+      "sprite_name": "HypnoFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14905,
+      "texture_path_id": 1763
+    },
+    {
+      "source_id": 919,
+      "source_enum": "SuperThreePeater",
+      "sprite_name": "SuperThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14500,
+      "texture_path_id": 1347
+    },
+    {
+      "source_id": 1385,
+      "source_enum": "GarlicPea",
+      "sprite_name": "GarlicPea",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14933,
+      "texture_path_id": 1792
+    },
+    {
+      "source_id": 1386,
+      "source_enum": "GarlicRepeater",
+      "sprite_name": "GarlicRepeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14821,
+      "texture_path_id": 1674
+    },
+    {
+      "source_id": 1353,
+      "source_enum": "PotatoSquashBody",
+      "sprite_name": "PotatoSquashBody",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15519,
+      "texture_path_id": 2399
+    },
+    {
+      "source_id": 1349,
+      "source_enum": "PuffPumpkin",
+      "sprite_name": "PuffPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14722,
+      "texture_path_id": 1572
+    },
+    {
+      "source_id": 1190,
+      "source_enum": "PotatoPumpkin",
+      "sprite_name": "PotatoPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15434,
+      "texture_path_id": 2310
+    },
+    {
+      "source_id": 1318,
+      "source_enum": "PeaPumpkin",
+      "sprite_name": "PeaPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14894,
+      "texture_path_id": 1751
+    },
+    {
+      "source_id": 1413,
+      "source_enum": "JalaPumpkin",
+      "sprite_name": "JalaPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14666,
+      "texture_path_id": 1516
+    },
+    {
+      "source_id": 1358,
+      "source_enum": "LanternFume",
+      "sprite_name": "LanternFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15218,
+      "texture_path_id": 2089
+    },
+    {
+      "source_id": 1381,
+      "source_enum": "LanternRepeater",
+      "sprite_name": "LanternRepeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16238,
+      "texture_path_id": 3154
+    },
+    {
+      "source_id": 1019,
+      "source_enum": "DoublePuff",
+      "sprite_name": "DoublePuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15157,
+      "texture_path_id": 2024
+    },
+    {
+      "source_id": 1030,
+      "source_enum": "DoubleShooter",
+      "sprite_name": "DoublePea",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16170,
+      "texture_path_id": 3081
+    },
+    {
+      "source_id": 1422,
+      "source_enum": "FireMine",
+      "sprite_name": "Fire",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15314,
+      "texture_path_id": 2184
+    },
+    {
+      "source_id": 1289,
+      "source_enum": "TorchFirePumpkin",
+      "sprite_name": "TorchFirePumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14872,
+      "texture_path_id": 1727
+    },
+    {
+      "source_id": 1155,
+      "source_enum": "FireCaltrop",
+      "sprite_name": "FireCaltrop",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15476,
+      "texture_path_id": 2352
+    },
+    {
+      "source_id": 1057,
+      "source_enum": "FireSquash",
+      "sprite_name": "FireSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16172,
+      "texture_path_id": 3083
+    },
+    {
+      "source_id": 1283,
+      "source_enum": "TorchFireNut",
+      "sprite_name": "TorchFireNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14740,
+      "texture_path_id": 1589
+    },
+    {
+      "source_id": 1159,
+      "source_enum": "IronFume",
+      "sprite_name": "BucketFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14795,
+      "texture_path_id": 1646
+    },
+    {
+      "source_id": 1393,
+      "source_enum": "CactusFume",
+      "sprite_name": "CactusFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15707,
+      "texture_path_id": 2597
+    },
+    {
+      "source_id": 1126,
+      "source_enum": "SuperMelon",
+      "sprite_name": "SuperMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15481,
+      "texture_path_id": 2359
+    },
+    {
+      "source_id": 1357,
+      "source_enum": "ScaredyPot",
+      "sprite_name": "ScaredyPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14345,
+      "texture_path_id": 1187
+    },
+    {
+      "source_id": 1200,
+      "source_enum": "ScaredyPumpkin",
+      "sprite_name": "ScaredyPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14215,
+      "texture_path_id": 1053
+    },
+    {
+      "source_id": 1058,
+      "source_enum": "DarkThreePeater",
+      "sprite_name": "DarkThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15807,
+      "texture_path_id": 2697
+    },
+    {
+      "source_id": 1062,
+      "source_enum": "JalaCaltrop",
+      "sprite_name": "JalaSpike",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15021,
+      "texture_path_id": 1885
+    },
+    {
+      "source_id": 1053,
+      "source_enum": "JalaTorch",
+      "sprite_name": "JalaTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16306,
+      "texture_path_id": 3223
+    },
+    {
+      "source_id": 1460,
+      "source_enum": "SeaPot",
+      "sprite_name": "SeaPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16358,
+      "texture_path_id": 3277
+    },
+    {
+      "source_id": 1083,
+      "source_enum": "SeaStarfruit",
+      "sprite_name": "SeaStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16131,
+      "texture_path_id": 3040
+    },
+    {
+      "source_id": 1340,
+      "source_enum": "SeaMine_water",
+      "sprite_name": "SeaMine_water",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16021,
+      "texture_path_id": 2927
+    },
+    {
+      "source_id": 1293,
+      "source_enum": "SeaNut",
+      "sprite_name": "SeaNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15509,
+      "texture_path_id": 2388
+    },
+    {
+      "source_id": 1334,
+      "source_enum": "SeaPumpkin",
+      "sprite_name": "SeaPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14551,
+      "texture_path_id": 1397
+    },
+    {
+      "source_id": 1291,
+      "source_enum": "SeaFume",
+      "sprite_name": "SeaFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14445,
+      "texture_path_id": 1289
+    },
+    {
+      "source_id": 1038,
+      "source_enum": "IceScaredyShroom",
+      "sprite_name": "IceScaredyShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14322,
+      "texture_path_id": 1162
+    },
+    {
+      "source_id": 1134,
+      "source_enum": "SilverCabbage",
+      "sprite_name": "SilverCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14382,
+      "texture_path_id": 1224
+    },
+    {
+      "source_id": 1251,
+      "source_enum": "SilverDoom",
+      "sprite_name": "SilverDoom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15072,
+      "texture_path_id": 1938
+    },
+    {
+      "source_id": 1145,
+      "source_enum": "SilverGarlic",
+      "sprite_name": "SilverGarlic",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14850,
+      "texture_path_id": 1703
+    },
+    {
+      "source_id": 1449,
+      "source_enum": "SilverHypnoShroom",
+      "sprite_name": "SilverHypnoShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15669,
+      "texture_path_id": 2554
+    },
+    {
+      "source_id": 1367,
+      "source_enum": "SilverIceShroom",
+      "sprite_name": "SilverIceShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16370,
+      "texture_path_id": 3289
+    },
+    {
+      "source_id": 1138,
+      "source_enum": "SilverCorn",
+      "sprite_name": "SilverCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16095,
+      "texture_path_id": 3003
+    },
+    {
+      "source_id": 1141,
+      "source_enum": "SilverMelon",
+      "sprite_name": "SilverMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14439,
+      "texture_path_id": 1283
+    },
+    {
+      "source_id": 1136,
+      "source_enum": "SilverPot",
+      "sprite_name": "SilverPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16286,
+      "texture_path_id": 3204
+    },
+    {
+      "source_id": 1187,
+      "source_enum": "SilverSunflower",
+      "sprite_name": "SilverSunflower",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15998,
+      "texture_path_id": 2902
+    },
+    {
+      "source_id": 1143,
+      "source_enum": "SilverUmbrella",
+      "sprite_name": "SilverUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15152,
+      "texture_path_id": 2019
+    },
+    {
+      "source_id": 1284,
+      "source_enum": "SilverNut",
+      "sprite_name": "Silvernut_body",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 20694,
+      "texture_path_id": 225
+    },
+    {
+      "source_id": 1280,
+      "source_enum": "MelonPuff",
+      "sprite_name": "MelonPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14566,
+      "texture_path_id": 1412
+    },
+    {
+      "source_id": 1034,
+      "source_enum": "SnowPeaShooter",
+      "sprite_name": "SnowPeaShooter",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14993,
+      "texture_path_id": 1856
+    },
+    {
+      "source_id": 1105,
+      "source_enum": "DoubleSnow",
+      "sprite_name": "DoubleSnow",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15319,
+      "texture_path_id": 2190
+    },
+    {
+      "source_id": 1485,
+      "source_enum": "IceThreePeater",
+      "sprite_name": "IceThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15746,
+      "texture_path_id": 2637
+    },
+    {
+      "source_id": 1348,
+      "source_enum": "SunBlover",
+      "sprite_name": "SunBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15538,
+      "texture_path_id": 2419
+    },
+    {
+      "source_id": 1002,
+      "source_enum": "SunBomb",
+      "sprite_name": "SunBomb",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14587,
+      "texture_path_id": 1432
+    },
+    {
+      "source_id": 1014,
+      "source_enum": "SunChomper",
+      "sprite_name": "SunChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14773,
+      "texture_path_id": 1622
+    },
+    {
+      "source_id": 1308,
+      "source_enum": "SunJalapeno",
+      "sprite_name": "SunJalapeno",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15759,
+      "texture_path_id": 2650
+    },
+    {
+      "source_id": 1009,
+      "source_enum": "SunMine",
+      "sprite_name": "SunMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16204,
+      "texture_path_id": 3117
+    },
+    {
+      "source_id": 1184,
+      "source_enum": "SunPot",
+      "sprite_name": "SunPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15412,
+      "texture_path_id": 2287
+    },
+    {
+      "source_id": 1351,
+      "source_enum": "SunSquash",
+      "sprite_name": "SunSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15113,
+      "texture_path_id": 1980
+    },
+    {
+      "source_id": 1006,
+      "source_enum": "SunNut",
+      "sprite_name": "SunNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15789,
+      "texture_path_id": 2679
+    },
+    {
+      "source_id": 1111,
+      "source_enum": "SunCabbage",
+      "sprite_name": "SunCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15779,
+      "texture_path_id": 2669
+    },
+    {
+      "source_id": 1000,
+      "source_enum": "PeaSunFlower",
+      "sprite_name": "PeaSunFlower",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15474,
+      "texture_path_id": 2350
+    },
+    {
+      "source_id": 1307,
+      "source_enum": "SunStar",
+      "sprite_name": "SunStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15265,
+      "texture_path_id": 2136
+    },
+    {
+      "source_id": 1419,
+      "source_enum": "SunCaltrop",
+      "sprite_name": "SunCaltrop",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15372,
+      "texture_path_id": 2245
+    },
+    {
+      "source_id": 1043,
+      "source_enum": "DoomFume",
+      "sprite_name": "DoomFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15427,
+      "texture_path_id": 2303
+    },
+    {
+      "source_id": 1197,
+      "source_enum": "StarTorch",
+      "sprite_name": "StarTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14909,
+      "texture_path_id": 1768
+    },
+    {
+      "source_id": 1425,
+      "source_enum": "PeaScaredy",
+      "sprite_name": "PeaScaredy",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14276,
+      "texture_path_id": 1115
+    },
+    {
+      "source_id": 1173,
+      "source_enum": "ObsidianJalapeno",
+      "sprite_name": "ObsidianJalapeno",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15630,
+      "texture_path_id": 2514
+    },
+    {
+      "source_id": 1049,
+      "source_enum": "Jalakelp",
+      "sprite_name": "Jalatang",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14437,
+      "texture_path_id": 1281
+    },
+    {
+      "source_id": 1054,
+      "source_enum": "JalaSquash",
+      "sprite_name": "JalaSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14944,
+      "texture_path_id": 1804
+    },
+    {
+      "source_id": 1198,
+      "source_enum": "JalaStar",
+      "sprite_name": "JalaStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16065,
+      "texture_path_id": 2971
+    },
+    {
+      "source_id": 1372,
+      "source_enum": "CaltropPot",
+      "sprite_name": "CaltropPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15251,
+      "texture_path_id": 2122
+    },
+    {
+      "source_id": 1237,
+      "source_enum": "CaltropKelp_water",
+      "sprite_name": "CaltropKelp_water",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14226,
+      "texture_path_id": 1064
+    },
+    {
+      "source_id": 1048,
+      "source_enum": "CaltropNut",
+      "sprite_name": "CaltropNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15390,
+      "texture_path_id": 2262
+    },
+    {
+      "source_id": 1060,
+      "source_enum": "SpikeRock",
+      "sprite_name": "SpikeRock",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14394,
+      "texture_path_id": 1236
+    },
+    {
+      "source_id": 1464,
+      "source_enum": "CaltropPumpkin",
+      "sprite_name": "CaltropPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14764,
+      "texture_path_id": 1613
+    },
+    {
+      "source_id": 1392,
+      "source_enum": "SeaSquash",
+      "sprite_name": "SeaSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15015,
+      "texture_path_id": 1878
+    },
+    {
+      "source_id": 1382,
+      "source_enum": "LanternSplit",
+      "sprite_name": "LanternSplit",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15126,
+      "texture_path_id": 1993
+    },
+    {
+      "source_id": 1321,
+      "source_enum": "JalaSplit",
+      "sprite_name": "JalaSplit",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16073,
+      "texture_path_id": 2980
+    },
+    {
+      "source_id": 1108,
+      "source_enum": "CherrySplit",
+      "sprite_name": "CherrySplit",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14548,
+      "texture_path_id": 1394
+    },
+    {
+      "source_id": 1269,
+      "source_enum": "HypnoSplit",
+      "sprite_name": "HypnoSplit",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14883,
+      "texture_path_id": 1740
+    },
+    {
+      "source_id": 1090,
+      "source_enum": "SplitPea",
+      "sprite_name": "SplitPea",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14460,
+      "texture_path_id": 1306
+    },
+    {
+      "source_id": 1153,
+      "source_enum": "SplitPuff",
+      "sprite_name": "SplitPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14931,
+      "texture_path_id": 1790
+    },
+    {
+      "source_id": 1387,
+      "source_enum": "GarlicSplit",
+      "sprite_name": "GarlicSplit",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14681,
+      "texture_path_id": 1531
+    },
+    {
+      "source_id": 1107,
+      "source_enum": "SnowSplit",
+      "sprite_name": "SnowSplit",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15525,
+      "texture_path_id": 2406
+    },
+    {
+      "source_id": 1196,
+      "source_enum": "MelonFume",
+      "sprite_name": "MelonFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14370,
+      "texture_path_id": 1211
+    },
+    {
+      "source_id": 1418,
+      "source_enum": "MelonCaltrop",
+      "sprite_name": "MelonCaltrop",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15292,
+      "texture_path_id": 2163
+    },
+    {
+      "source_id": 1281,
+      "source_enum": "CabbagePuff",
+      "sprite_name": "CabbagePuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16207,
+      "texture_path_id": 3120
+    },
+    {
+      "source_id": 1171,
+      "source_enum": "ScaredyPotato",
+      "sprite_name": "ScaredyPotato",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14726,
+      "texture_path_id": 1576
+    },
+    {
+      "source_id": 1250,
+      "source_enum": "SquashNut",
+      "sprite_name": "SquashNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14965,
+      "texture_path_id": 1827
+    },
+    {
+      "source_id": 1047,
+      "source_enum": "ThreeSquash",
+      "sprite_name": "ThreeSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16330,
+      "texture_path_id": 3247
+    },
+    {
+      "source_id": 1063,
+      "source_enum": "SquashSpike",
+      "sprite_name": "SquashSpike",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14651,
+      "texture_path_id": 1500
+    },
+    {
+      "source_id": 1059,
+      "source_enum": "SquashTorch",
+      "sprite_name": "SquashTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14991,
+      "texture_path_id": 1854
+    },
+    {
+      "source_id": 1257,
+      "source_enum": "StarNut",
+      "sprite_name": "StarNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16027,
+      "texture_path_id": 2933
+    },
+    {
+      "source_id": 1356,
+      "source_enum": "StarFume",
+      "sprite_name": "StarFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14341,
+      "texture_path_id": 1183
+    },
+    {
+      "source_id": 1362,
+      "source_enum": "PotatoFume",
+      "sprite_name": "PotatoFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14188,
+      "texture_path_id": 1027
+    },
+    {
+      "source_id": 1461,
+      "source_enum": "GarlicStar",
+      "sprite_name": "GarlicStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14230,
+      "texture_path_id": 1068
+    },
+    {
+      "source_id": 1093,
+      "source_enum": "MagnetStar",
+      "sprite_name": "MagnetStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15201,
+      "texture_path_id": 2071
+    },
+    {
+      "source_id": 1089,
+      "source_enum": "StarPumpkin",
+      "sprite_name": "StarPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14452,
+      "texture_path_id": 1297
+    },
+    {
+      "source_id": 1441,
+      "source_enum": "StarSquash",
+      "sprite_name": "StarSquash",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14564,
+      "texture_path_id": 1410
+    },
+    {
+      "source_id": 1201,
+      "source_enum": "ScaredyStar",
+      "sprite_name": "ScaredyStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15335,
+      "texture_path_id": 2206
+    },
+    {
+      "source_id": 1412,
+      "source_enum": "StarPea",
+      "sprite_name": "StarPea",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15320,
+      "texture_path_id": 2191
+    },
+    {
+      "source_id": 1085,
+      "source_enum": "CacstusStar",
+      "sprite_name": "CactusStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16276,
+      "texture_path_id": 3194
+    },
+    {
+      "source_id": 1328,
+      "source_enum": "GarlicThreePeater",
+      "sprite_name": "GarlicThreePeater",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14325,
+      "texture_path_id": 1165
+    },
+    {
+      "source_id": 1391,
+      "source_enum": "GarlicTorch",
+      "sprite_name": "GarlicTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15253,
+      "texture_path_id": 2124
+    },
+    {
+      "source_id": 1323,
+      "source_enum": "GarlicPumpkin",
+      "sprite_name": "GarlicPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14449,
+      "texture_path_id": 1293
+    },
+    {
+      "source_id": 1050,
+      "source_enum": "Squashkelp",
+      "sprite_name": "Squashkelp",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14984,
+      "texture_path_id": 1847
+    },
+    {
+      "source_id": 1310,
+      "source_enum": "ScaredyNut",
+      "sprite_name": "ScaredyNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15091,
+      "texture_path_id": 1958
+    },
+    {
+      "source_id": 1149,
+      "source_enum": "FireMelon",
+      "sprite_name": "FireMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15729,
+      "texture_path_id": 2620
+    },
+    {
+      "source_id": 1031,
+      "source_enum": "SunShroom",
+      "sprite_name": "SunShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15188,
+      "texture_path_id": 2058
+    },
+    {
+      "source_id": 1325,
+      "source_enum": "SunIceShroom",
+      "sprite_name": "SunIceShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15913,
+      "texture_path_id": 2809
+    },
+    {
+      "source_id": 1324,
+      "source_enum": "SunPumpkin",
+      "sprite_name": "SunPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15051,
+      "texture_path_id": 1915
+    },
+    {
+      "source_id": 1246,
+      "source_enum": "ScaredSun",
+      "sprite_name": "ScaredySun",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15217,
+      "texture_path_id": 2088
+    },
+    {
+      "source_id": 1245,
+      "source_enum": "BigSunShroom",
+      "sprite_name": "BigSunShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15457,
+      "texture_path_id": 2333
+    },
+    {
+      "source_id": 1077,
+      "source_enum": "SeaSunShroom",
+      "sprite_name": "SunSeaShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15682,
+      "texture_path_id": 2569
+    },
+    {
+      "source_id": 1297,
+      "source_enum": "IceSeashroom",
+      "sprite_name": "IceSeaShroom",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14646,
+      "texture_path_id": 1495
+    },
+    {
+      "source_id": 1113,
+      "source_enum": "CornCabbage",
+      "sprite_name": "CornCabbage",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15413,
+      "texture_path_id": 2288
+    },
+    {
+      "source_id": 1027,
+      "source_enum": "TallNut",
+      "sprite_name": "Tallnut_body",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14506,
+      "texture_path_id": 1353
+    },
+    {
+      "source_id": 1232,
+      "source_enum": "KelpMine_land",
+      "sprite_name": "KelpMine_land",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15562,
+      "texture_path_id": 2444
+    },
+    {
+      "source_id": 1238,
+      "source_enum": "CaltropKelp_land",
+      "sprite_name": "CaltropKelp_land",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15228,
+      "texture_path_id": 2099
+    },
+    {
+      "source_id": 1313,
+      "source_enum": "KelpNut",
+      "sprite_name": "KelpNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14957,
+      "texture_path_id": 1819
+    },
+    {
+      "source_id": 1256,
+      "source_enum": "CactusNut",
+      "sprite_name": "CactusNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15437,
+      "texture_path_id": 2313
+    },
+    {
+      "source_id": 1415,
+      "source_enum": "CactusCaltrop",
+      "sprite_name": "CactusCaltrop",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16145,
+      "texture_path_id": 3056
+    },
+    {
+      "source_id": 1088,
+      "source_enum": "CactusPumpkin",
+      "sprite_name": "CactusPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14763,
+      "texture_path_id": 1612
+    },
+    {
+      "source_id": 1295,
+      "source_enum": "ThreeNut",
+      "sprite_name": "ThreeNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14627,
+      "texture_path_id": 1473
+    },
+    {
+      "source_id": 1240,
+      "source_enum": "ThreeMine",
+      "sprite_name": "ThreeMine",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14270,
+      "texture_path_id": 1109
+    },
+    {
+      "source_id": 1086,
+      "source_enum": "SeaBlover",
+      "sprite_name": "SeaBlover",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15915,
+      "texture_path_id": 2811
+    },
+    {
+      "source_id": 1377,
+      "source_enum": "KelpPuff",
+      "sprite_name": "KelpPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15229,
+      "texture_path_id": 2100
+    },
+    {
+      "source_id": 1304,
+      "source_enum": "TorchSunflower",
+      "sprite_name": "TorchSunflower",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16185,
+      "texture_path_id": 3097
+    },
+    {
+      "source_id": 1055,
+      "source_enum": "ThreeTorch",
+      "sprite_name": "ThreeTorch",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14503,
+      "texture_path_id": 1350
+    },
+    {
+      "source_id": 1061,
+      "source_enum": "TorchSpike",
+      "sprite_name": "FireSpike",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16300,
+      "texture_path_id": 3218
+    },
+    {
+      "source_id": 1442,
+      "source_enum": "ThreePot",
+      "sprite_name": "ThreePot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15914,
+      "texture_path_id": 2810
+    },
+    {
+      "source_id": 1428,
+      "source_enum": "CherryFume",
+      "sprite_name": "CherryFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15629,
+      "texture_path_id": 2513
+    },
+    {
+      "source_id": 1379,
+      "source_enum": "ThreePlantern",
+      "sprite_name": "ThreePlantern",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15606,
+      "texture_path_id": 2489
+    },
+    {
+      "source_id": 1140,
+      "source_enum": "TwinMarigold",
+      "sprite_name": "TwinMarigold",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14798,
+      "texture_path_id": 1649
+    },
+    {
+      "source_id": 905,
+      "source_enum": "SuperSunNut",
+      "sprite_name": "SuperSunNut",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15371,
+      "texture_path_id": 2244
+    },
+    {
+      "source_id": 1033,
+      "source_enum": "TwinFlower",
+      "sprite_name": "TwinFlowerPreview",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15473,
+      "texture_path_id": 2349
+    },
+    {
+      "source_id": 1183,
+      "source_enum": "StarPuff",
+      "sprite_name": "StarPuff",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14454,
+      "texture_path_id": 1299
+    },
+    {
+      "source_id": 1301,
+      "source_enum": "SmallUmbrella",
+      "sprite_name": "SmallUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14489,
+      "texture_path_id": 1336
+    },
+    {
+      "source_id": 1127,
+      "source_enum": "GarlicUmbrella",
+      "sprite_name": "GarlicUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16105,
+      "texture_path_id": 3014
+    },
+    {
+      "source_id": 1115,
+      "source_enum": "CornUmbrella",
+      "sprite_name": "CornUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14525,
+      "texture_path_id": 1373
+    },
+    {
+      "source_id": 1128,
+      "source_enum": "CabbageUmbrella",
+      "sprite_name": "CabbageUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15379,
+      "texture_path_id": 2251
+    },
+    {
+      "source_id": 1133,
+      "source_enum": "UmbrellaPot",
+      "sprite_name": "UmbrellaPot",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15179,
+      "texture_path_id": 2049
+    },
+    {
+      "source_id": 1131,
+      "source_enum": "MelonUmbrella",
+      "sprite_name": "MelonUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16024,
+      "texture_path_id": 2930
+    },
+    {
+      "source_id": 1206,
+      "source_enum": "NutUmbrella",
+      "sprite_name": "NutUmbrella",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15037,
+      "texture_path_id": 1901
+    },
+    {
+      "source_id": 1186,
+      "source_enum": "CactusUmbrella",
+      "sprite_name": "CactusUmbrellaleaf",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16083,
+      "texture_path_id": 2990
+    },
+    {
+      "source_id": 1076,
+      "source_enum": "SeaCactus",
+      "sprite_name": "SeaCurtus",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15850,
+      "texture_path_id": 2741
+    },
+    {
+      "source_id": 1312,
+      "source_enum": "NutFume",
+      "sprite_name": "NutFume",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15918,
+      "texture_path_id": 2814
+    },
+    {
+      "source_id": 1091,
+      "source_enum": "BlowerPumpkin",
+      "sprite_name": "BloverPumpkin",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14477,
+      "texture_path_id": 1323
+    },
+    {
+      "source_id": 1116,
+      "source_enum": "WinterMelon",
+      "sprite_name": "WinterMelon",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 14473,
+      "texture_path_id": 1319
+    },
+    {
+      "source_id": 1457,
+      "source_enum": "IceStar",
+      "sprite_name": "IceStar",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15146,
+      "texture_path_id": 2013
+    }
+  ],
+  "files": {
+    "1203.png": "d82d924a75bbf6da3942174b9f88eda79da9786b9952439b9d089d0ad9c59c37",
+    "1384.png": "563cca5282fd3508201b457512a97c56b08b73652f0bb27b6b3123adb24a8945",
+    "1332.png": "c908e9728b561aa4e828822b6b765feae95bf54f548f50c1e0ccd19c0927906f",
+    "1274.png": "cd374d75e1c9e9f57853a541bab6a66996ecf38f13ad121d1acc79aa1e0de347",
+    "1319.png": "fdb438c411e1bebe4bc4eb6ca8a7f8779e173b1d4827de26c56b7e5b0ba36f8e",
+    "1320.png": "81a55eb6d75232433e70f9c41e00791ed28a97fb1b8c5ebf780a51b4c654513f",
+    "1044.png": "2c8d9586802336d66b06e9c1afe0eebadb6f787232657b9a731b41f801bc4bbb",
+    "1029.png": "32d5ce581e4b4bf95a77820f1229017fc861bb132c04339b107f7ae85d5d5979",
+    "1152.png": "dc6c2a97947e59634ba310b27f5a7ca21b3a5a435999f700b7834af70ea11c05",
+    "1020.png": "9320d84a410ec9633eaec3db1124176c3f758177b1c500b394b97743a4f012c8",
+    "1263.png": "7437f17d1460396c7c15216d256303eeb2a9b9acfc7fbfaa9270feff5cd0bf5c",
+    "1273.png": "4715309dd3100eb90926ec28e38defad6c7c17504b7eb778164efc89afdc015e",
+    "918.png": "66bfbcca08dfd1d3a51bfe0c58beee968b7fee2c48900186cfa80bd7a5c16f8d",
+    "1016.png": "a2d583a25ccf55989bc07a1ce731d3396d847fd303a4cc92cbb9cb7b72d4063f",
+    "1344.png": "b9602efb2c020435869f631c2164c25278d9d3dc1bb4cbc05a5739d41b0428a0",
+    "1003.png": "aaeb98ed2c2dfad22a45ec6398ebf8d8c5c5a13c0b838d54fa98ee8be4316bb0",
+    "1330.png": "cf1637848ae0a1432e54241f9e7e2668d12ae80c1a4a9a45f16feee447e115ba",
+    "1008.png": "08e1bb9877de15b1cae386f26184b53ca68360a54f5d34ff3be9f53f383b4ecc",
+    "1001.png": "e734ad20bd572a5cd549947f976fefc3162a44bc3b290b1d660022d4b742b245",
+    "1163.png": "65268ef376a1c9490d62d9c67ec7f36f84297bd7644e6abcb24bd55e0c78636a",
+    "1015.png": "04796ed7332e28a6c4a8d9d661864bf627fceec08a138d4104e726055decaf31",
+    "1012.png": "48ac07bd696ea017d8c73b1819fdc73f0a46821b1e08970ebf3bf4fd69cbf3c1",
+    "1011.png": "d65d875862d52723d5488a94cf763def26b920acf91aa5bb4393f9e170f209d3",
+    "1013.png": "5d7cc40d2f86e40392dafb8eae5eb0f82c50b5df5cabe80b26fdc8cf9b673fcd",
+    "1162.png": "a1ba8501e881cd64b6ab2cc9b6d02f92f2547750ccb5efba8fb6f0615e05d990",
+    "1040.png": "49f8cc94595307cc8c6c77f9dc48d65c101c8bb844df783cc101f48e69cae5e4",
+    "1192.png": "a5603cc5e644c337b4347cb9c13f11ebd0bddcb822af0fff84b9b60932918743",
+    "1414.png": "517b2afab06c8e2398e566812c5687c79a731c12889571669e8e35e304abebd9",
+    "1345.png": "106576140f81fccd2292d46568df75ba4c2e21b45edf55f5b2cc0f066c3ef40b",
+    "1005.png": "bc8c88988d7e02f251475e4ead6e0d9ce44e62e8c2bdc5ab6cf75d91fd5fb7be",
+    "1275.png": "81a55d24a9a765acda1fb7c9a4e2e45c409494e1a9bcf1120e2145a5212b4eeb",
+    "1071.png": "04f85d271229411cf9d2222c89561f653fa6561280777bedc629d10e527a3cb1",
+    "1073.png": "189c679ddfc79679d78a6f1d9a50a7baa39a90b2c174c5b69f5afb75e320be17",
+    "1235.png": "98ed9a80913f43f37c81b0a2faba5a4e375f25681afbfeea29b1a0079f52f383",
+    "1193.png": "d3435965856c5a27261e5b1d4d157f1b013926b03f193bf9161b43b588ff075c",
+    "1486.png": "69226e898e2d84433cee2bb3d158f3c95758d9ea2a06feacefb646c18346a7fa",
+    "1306.png": "88fc721673e47c4fbde96a46425be5d9b4fa0a191849b53ef285e95ea5fa1343",
+    "1028.png": "8e2822e6dc285f290e96095fd0e346639b7ebee47ade9c24b5a78294648efeb0",
+    "1278.png": "f9e9668a58f3af985a3223c4d6239f98a0de1b4a498df23ac51c4f99ba44d0a4",
+    "1172.png": "f8f472c860d3d6ecba8cc0cf67ce1a757cd1498fffa9f35f7fb4d39d8715e0ba",
+    "1072.png": "4e070235928b248dfd8d04e037acd343b2a6be51c0f8580794874300d650e167",
+    "1039.png": "cb920949239bea5c92d90897abb5591e0b394af6f01cf15c8e008cb2883502fd",
+    "1189.png": "5b0c016d5612b76ca0b1df8e12daccb6f29990c30c39861d27c4d1d0ead291e1",
+    "1037.png": "3f03e02e8cd7661cc94b6bdb668933a36b385c77436a8a26c46feb2dfd06034b",
+    "1462.png": "5f64ce8449de78892124fbf5d70ab109640cb450705f93767eca5389c3e9a29a",
+    "1212.png": "3448fcb965ff02aa823ef881dfeef831522b8824a1a30bdec3efcc1fac890de3",
+    "1472.png": "cefd81fa2cd21d3bc3f9fa165cd776cd1595051790e3fff4f679a5455b91e57e",
+    "1322.png": "e08d00115adb1248937079b8edac6a68ccdd0bbcc6e745f42bd8f9ee0f97207b",
+    "1017.png": "6bfda8c38ecda8def61922f1e7a66832ca13627157a3502ac93caebf931203ff",
+    "1270.png": "eb048266c38c8268d4fb5546170497f6817c5201963a95368b0d92b276eb9217",
+    "1032.png": "1cf38638257de6977fcd6eccc7a9babf1c42a799e56926e7912480d780e1cc8b",
+    "1065.png": "5ef898c917d7486d311b45afbf70a69d43b3d22ec199db1f97f9373b384b2189",
+    "1388.png": "e03ce51d8c8b264e33bbe1bbc9100f1bc83963a2f268ee7c3fbf57f640d5e127",
+    "1106.png": "93050e07242af54889170a7c5bb9cf09ecdaa73d4a2d5f648524cfb42c4baf25",
+    "255.png": "b5073849378bb0506243ed32d3c7a318ac0c7c58100b144a1d94421a246ebc74",
+    "1070.png": "ddc83f381d3fc770194f19a698c5873511cdb511eae6664fd5be9d29eee3d09b",
+    "1022.png": "40df42b47e19bf80e52ff4cb745d5577f574697cb63e4783922840587d20157b",
+    "1025.png": "c6cffc8fca58b5d09132201505613631438ca47adfd8a7fed8d44ad2ddd364f7",
+    "1036.png": "4382579f36e8835758dbc12a5ee588e20cd1664f95c0b0c6229fc79333e44455",
+    "1075.png": "dfc6453b86cf4b903b87bba734ffc484845c1130a66e21c0af94c0a9160e2c7e",
+    "1230.png": "f0142ebd261589ca18f3c7e126b3edf0096c7d5639caf9fbb4c613f5887f78c0",
+    "1231.png": "9512465a8cee3614692f13607220749b9bf49b1a10135b4dd3646928dd4d9d75",
+    "1267.png": "5a8570375184ba6e3aa93d9d25aceafd28332de0b88aa5e4579842e2d879f627",
+    "1268.png": "e10b95ada5d56a802d84ee21b4f361072302964098f2ad699c4c53f37935133e",
+    "1229.png": "3dbfa0e44c43a37adf856b60938384eedd5d04fdd62cecac8117763dd9f3516a",
+    "1401.png": "2bbabd6bc7157aae1dbe4e27269f1abddefe35e1f4119c5a60c0c3cf4f9c352c",
+    "1074.png": "65daf45cb6fcf724d6213f3f2ee03ea0fa2fa71e5c4d942e2e0a2a4bd429dffc",
+    "1180.png": "f5b6686a86715f9206d3868fff59a29f24961d39a3faa7ee3a429063ac8b48ae",
+    "1035.png": "32787071deb8dbe3cc9084ede563eda606d0bc2bb952168d6c7397c11c20638d",
+    "1228.png": "8b3cba58cfb0c7c3bc12fd61dbc2167c8f2e3c175468d0ea2207c66c5364fc31",
+    "1253.png": "a353c8182de9233f1024cde70452223cf1be3afc0d93c76c7af19024aea6e369",
+    "1390.png": "d23566eeb7f540a2fa68e4681995b9b935875547a70e29507fa89fac5651e125",
+    "1339.png": "d1285e8aae04289dea7131bc4e0bef698393a3a2e9f2879dbb3263448e47404b",
+    "1010.png": "e3f091b8b36bb2418e38b2a259222dc6031ce112bd37f15060fd3899450202d5",
+    "1170.png": "7b944c92dbd37dc23657db5698d7910e01e0d373d32851f24c075bec14deea38",
+    "1021.png": "f0645d99bef9c317756fa0cab1955712292ee1b91ac8643cad83e897dbda666d",
+    "1366.png": "bb845c4451796306c0f60669bf8bc43dd75771b9a737b78108872ce08c567484",
+    "1004.png": "3e162342129a5c7bef55b17b8868e3523ce01878bb23953275c1fe7b5e607981",
+    "1018.png": "ceb72cf97ed7794b6075d0a3beba70078ee6b3fb09d8ccdb74a01d7e49160317",
+    "1007.png": "49f04e9ff8e059a93f1cb53771c77c8c34d11f2224914ef0fe9904967b76a393",
+    "1446.png": "58b096db44755e0bb1df14751d63449ffa2af6c36c6ad1f72cfae5fd145561da",
+    "1385.png": "aca2c5c25e0ba07e57afebc90f0b10f24b64503054e0bc68b9a23d6760d6d90f",
+    "1386.png": "c3b09f98d24ba1e3a8b137f4ba4ad5d11720a6709f5f8c9912aeb429fd2b2a7f",
+    "1019.png": "5497d218e611019614225c221e4c1b00c29f4f3bae4fbb71c911e3c85172c1f1",
+    "1030.png": "c145f3b4be1e06638363c03449cd356fded34d50300f37c79d42653f8efeda50",
+    "1058.png": "535caba7b488e7e3356b91a4d732175cf2ec828e29f262c1de41798609365317",
+    "1062.png": "78cc5b49f7cacf095f791376a359e2a94993222a5c42c4714890fea9ab0132a2",
+    "1038.png": "b658738d24aa7645ac03c022094de3466cc392ed9b800a69d276026b4dcc30e7",
+    "1280.png": "ea7ac94af58686de0e03d06f1efd127af4083bd3a3045be8b6762573db2b8191",
+    "1034.png": "a0432d2169f6ac79cf5aea16f73f643e01b8f6a2edd6aa7e03b7aa6e060643d8",
+    "1105.png": "0c12ed5e925783fa7e602ebd0d5c866e2ac92f1a4481c8bc8b853a34ca9c27e1",
+    "1485.png": "aca343c39750c96128e25d47cf8d163fc5566c0568dbd7eaf781fe38058e2e11",
+    "1348.png": "dbb4bfc62b9a0c0555cdd6eab0b63ed295c57f858f76f2e6ba5a3f7ae286fc5a",
+    "1002.png": "c46dbdc20fc16ce16c6d07cec2373c26c560169a3a5bc6d95a6f86df6bc89eb5",
+    "1014.png": "61246d4e3bc2903611498b335a7eb1b13b63661b9154345382cb317c6cdd10e0",
+    "1308.png": "be03966b6a5f19e171a4a15afedf2672537cda9fa23de55aaa6ff7a45d5d407d",
+    "1009.png": "74577eeb5d3d1c51c3369479b7e3d35d43b134449d139046ae16df62ae86858a",
+    "1184.png": "e4462e79546b6429ffee3223b0859330743f28c180a9c52ea2d9a0d7f2157a39",
+    "1351.png": "8a30a85dc9aeea2b5f1f2686533652316f44b881fad52f284360e114bba336d3",
+    "1006.png": "557f6fc46e1fa726d35457fbc504e2328a5865120d6b8e17163b51cd7a7cc4de",
+    "1000.png": "76710cf3b7fe441d3759cd7064f709a0f7a6203674948494a27c965cd99c4819",
+    "1307.png": "c8a79feedd3130854c8b5a66a4d3e5c370170a1cb51a014a023bb28a06e5de17",
+    "1419.png": "80188ae0e7fd168859c0d8c0c068bca0eb578437a985c781021683143ad55b62",
+    "1043.png": "897aa54b0ce6862b3a3fefdc78207a3cfb5c3a2540a7a272c4c8d00637f321b0",
+    "1425.png": "ee96155061de97feca1eedb3eba33bb37831b62af72930be6b6098c578e3f03e",
+    "1049.png": "340fdc6d3e351baaaa016d801bc5355563fd618bb8d0dd6db304b696ffa12cad",
+    "1054.png": "7d2191df4f41837f9e2f4d78404d55e2ad9face85f50a40245f71fdb06fd1177",
+    "1048.png": "50c274fbc7481b5822febcaeabcd1f4b34cd5147702f0f81ed38aeb6ee20784c",
+    "1321.png": "fb347c9966d1318edf42008bf1369b6ad19a4c1681428292ed89f2a32cf241d7",
+    "1108.png": "43018e4b541c6c1924096e131347b7425b74b64b2d97c2c25e5d3961f62e71eb",
+    "1269.png": "7bfeadc99b3cb0d0d6cf8f1e604fc5c3562a70333b8215c25c57cf7ca6f78d53",
+    "1090.png": "8af6f3da69405b51272a1bc5f56402f5d59548be798a0ab31d34d429d6c4ab5e",
+    "1153.png": "ddea305c1ccdcbbf8c14f435e3540993309e296ea6781e605c777767c69e7160",
+    "1387.png": "b42792c5490dd5ac6a205a595564b4717845bf0ff83f177cd2797e6560b01e70",
+    "1107.png": "70d8edfdcecab3eacc24541cf5c5efe87e429c7daaa5975f3dd522964b9191db",
+    "1281.png": "7a74fe1e5d5efd759d66c43be03da88445ed0e3210bcd53b0514d40ee78a051a",
+    "1171.png": "02d8501abfb2679c4465a4421261baa15d2264fb23b856e4a580395b080b99be",
+    "1257.png": "d6a8a918233809765f9f8a444a6c06ab2aa1a1f69d4182c70f4ee237e3613eb6",
+    "1362.png": "95850070270c2aa85deb49932a64c018e6a54dd0560a15dd53b37dafcdba0973",
+    "1441.png": "4d40cb3b741ae954cbadacdc6ee9763f7ecca51c13a1382a6dfdc30c64fe87bd",
+    "1201.png": "399743da5742b0654e41b0104f557a1495df2303edd04ffee30f780bf1a0c343",
+    "1328.png": "e5ed0a89a08adcc8e0c0df52e6c2be565aa4fb8a19a13f9274982a20a6349f3a",
+    "1310.png": "0942595296dabb9b1e2a0beb941e7d736731e7afe1e191af696838764e68fe8b",
+    "1031.png": "d314cf94c31d911fc86d88eea7be365b4e807517401b2710bb6765c3817088ed",
+    "1325.png": "6cee1c13c1260319765ad196c3dbba227379a312c117a593346efb23772ca79e",
+    "1246.png": "c5258c522de45d40fa0935fd65dc3fa9d60018a8cc0b503233cca99e3c39f358",
+    "1077.png": "ff686d3a6ddca282042aae7a4f31809fed16ede2b2504bdf0837e7d817a83c78",
+    "1027.png": "0a1ddfb5089b20c5243ea46aeeb87a2becd73805e766c4da1dc952dd1189a19b",
+    "1256.png": "a5cf07fbe4bc5712ff3c8ed3833ee9c2fea5491e3d404360bed2ade82a62624e",
+    "1304.png": "0331a7f6843f36da4bef267d1bb55de847ee1d08a139d24d9cf74d58ab5cf478",
+    "1140.png": "58c6f448df3d871dcc226f7b0a8a690ee0ed049de975d32a3392249696f38a5f",
+    "905.png": "a68b9a8aeae9a24f9c26346058e2af0ab45122b348352493938eec7367fa0d10",
+    "1033.png": "b321756a4b1152d7b86f027f3a1af644ebc76a262b96435d3abcf6d064c6e0b3",
+    "1183.png": "0f8f065bfb35b596ddcbd499ff927bae23b0a690da7e889ce263a4d8a3ca0d0a",
+    "1301.png": "6e99e13a989582ce24722f620985679da89140fe28f4eef4c05ed919dd0cadae",
+    "1115.png": "c378269e6fa7a2373580467072e9dbc2395603c14766fb5cafbe27adb7dd15a8",
+    "1206.png": "491bc6a52fd3cfc67200b54c3a3ab871284e5d496a3a13408519ac2a2e9d15f6",
+    "catalog.json": "4680f52b890d93cc6e068b8ae0afee9bc6c9a0723d1f2ab1bb9879d6f59364ab",
+    "1067.png": "49fac03891dd6a55300cbf7b611abb77f331579bd49fe6b78eb3d03475cb3e87",
+    "1150.png": "7f74e9ca4f8d6f6fa07da9e0a02ab0663205a064d6cf41585d3460c9ea02a902",
+    "1060.png": "855b9784de8719de225b00cef1587bbedb1cffb7e8066493a5904bc9333a07f0",
+    "1116.png": "521a93a0557388c559d7a8ae17899cbc9ed93249e5207b23e703d2c235e9fcb5",
+    "1145.png": "87b7e5350e7b6a6cd12809dd6679ecb92a32ff296cd30228c46b170e0bc7b6df",
+    "1367.png": "d269ff7faf3e6c3ffa5d59e4b8fe1644114eb919ce17cc321e8c138d38b851ee",
+    "1187.png": "714f0fda7d2bc96111bf6b9b338cad60686ac26615073606b305d92adb209cc9",
+    "1284.png": "ddb036233f4c4020a8a3ad5068619afff71caf01a6563237e85168725f39e0c2",
+    "1134.png": "d25a25bae20b6af11325919e57aa34e1fcc3fd0a21217adb3b77d67af89d4c72",
+    "1251.png": "285cca419327debb76cafce33cf46b04da8f3688b6b418f0da8a4f0260a1a1bb",
+    "1449.png": "61e282954809de90b093ee585fa3efc3e4c71bef08fb69a3f2823698862c2a3a",
+    "1141.png": "6bb127e809e94394ff3fbbd03f0b3151894e590cb3cbcc5ce498039dc8372545",
+    "1195.png": "11223056d583a9242b37194685db1cd324480ac1ba1760137820a19044f4d45b",
+    "1138.png": "808c4d510c5b6d60d36dc5504e2f0e4d37c189f7fe36fab67c25f1b0d6a9cb13",
+    "1136.png": "56df839039bb3ff454bb4e08f8265ed056e0772e0ba25653e1fb62f68d77fa0c",
+    "1143.png": "5001ea10d51cd9081dd031a4567d5030507c724bdfdaf69a17661851edc3fcbe",
+    "1114.png": "b067fafb210bfb6f82f9cca138347f7678243fd76784b713434d97d3f1cfdbeb",
+    "1112.png": "af26e9d56556c1f30090561fa5fca627c59251811f6d747941fb6d52915bde09",
+    "1120.png": "325e2cb6a8e515311368c5915285512cc74b80ed66ef4e90f1b812e1df097849",
+    "1133.png": "b0353f5f6f5cd403bae95dbfe0050980c4d54173ebbfd8a7349b0514bd631c0e",
+    "1130.png": "da1135241985edf84b38f8bdb90034d3632e3dde4dcd5574b7dc46f732c547d7",
+    "1125.png": "afe9046e92602b38921d1bf209d934a26a0bb68e69d0721923e06c767eb3cf50",
+    "1311.png": "a72147fd015b2d7383680c5f3704491a811035826790d6f4c1bb7c4b6ee9ab92",
+    "1372.png": "63a6e758c311ccaf9aff740d11dbae424a7bbe4c7766db9e6ca6b2e42a95403f",
+    "1243.png": "57669be5f42ca1abe1153e854f175b18d1e99cc56fd586e65701e6b54133a017",
+    "1454.png": "02bfef554e9e03c4cda56b39bed2d6f6ab0cbf73f151f2e9beb43fc83fd75b06",
+    "1474.png": "5624f7a1b7276185a00da36bc5002e60da17dfb33bcc42f6be64aa43d56a33d0",
+    "1380.png": "de3a94b70f68c062eb5a866058bc927f254c5e877dedee719705eabca19dbd1f",
+    "1434.png": "1f2e9115f2d2760fa99fafd42e0c6275487691c0b393acabd0611410029d28bc",
+    "1433.png": "05f7742103800afc75fe3352c6ee60c1600d34c04b0bfe93eb65cde3b2941e97",
+    "1404.png": "c501a73048b016a445e44369cf331286219cb5d2d843e4560b153f5210c6dd54",
+    "1442.png": "a300d78708659bcff9827d831bb6c59a874933f8281737507863b70d5eabb7cb",
+    "1439.png": "261eb8db53deaf5666bc2ece8e145dbfa8362f36799b3e51c2613718a728bfef",
+    "1121.png": "85df1adc45b05be0b2d070754ccedbc27304d999b719870bd88459f34fd079a6",
+    "1124.png": "badad374faab22554bdc12453f3029add2bebbb42127dbeada67f6cfb23560fb",
+    "1113.png": "3ff81b2aaf6362f09f575187c48b3f89e4becb7ab5bcae81a2645c7961915168",
+    "1376.png": "7178b26b72de58863856b9b8fe889406044b8d3c28563d148811aa3bdcd3b9eb",
+    "1375.png": "682d2649f87a5a36e2682e77cc1a4fb59d750ba1a4df4710f332411504505c6b",
+    "1398.png": "6c1713f762bb19f07351016243d14ebe88c4e6a367be9e86047735754813a760",
+    "1126.png": "910f44631cb0ba7bac3653cfff3368b5576ecfe65e789b62571212b91e7b9ef7",
+    "1262.png": "993799b216aeab0f208d809e9ae2faf18477c31a22b42d38236396f8195d7712",
+    "1261.png": "afbd5e52e3cbd897bbbfd7afbefee6b3d8b9c8ceaa91551861843418838a32b1",
+    "1250.png": "c36795c70ef882b682843117f7304445371137cc6763ae058917a7a9f1eba901",
+    "1295.png": "0e346d729dd2d3f3f23240c1426f1dd580a88bd0a794981ddca79bb9880a91ed",
+    "1377.png": "b1a34b00019d685cf111f0ee6b5540a9a3b3594d1765093e78f567a0907085ae",
+    "1395.png": "43138245062653be0230646d6e6c72588017930bd089a7b27366bdf1ca60caaf",
+    "1313.png": "6e0ec1b413a0dc26f8231ab727891f0923d8eb6424dae8d8e3e69eda3df2de70",
+    "1237.png": "e37f971577c2ca162c4e8b05969530083fa4babb227d0001a01343404cc8dbfc",
+    "901001.png": "774b38e32bf8771245f1a21bab7985f188ce70e625d0764f9c2210b5c61b0749",
+    "1276.png": "b25fbe329b499b19638443935f83ead3fd35b1541b5adeb3bf725475b4c6fe02",
+    "1420.png": "61cd30d1a91e1c703f95b4113ceb18ca5145a5c8b51eb228266fd45923570fba",
+    "1181.png": "64ffa70f7458c8ccd7fdeb452892d7f460ee5226ac901930ee15ffcaf72f152c",
+    "1176.png": "fc8fc4f58220c1c58e38eeb36e39eace43a33c61518fd9e90101ba131050aef6",
+    "1389.png": "11887689158c721515a4102415ebff46add5fe47020e01b4f31630c0bce693fa",
+    "1298.png": "a974e3ab27adfd8002879493a7ca17f11502cf25f64200ae291a8b452a152f51",
+    "1438.png": "52a3212641a85002b69c236e251d642e115790e481bb81954be959081c4aaab5",
+    "1312.png": "3642ff2ce54938f1ce2589143eb3dc3796ce00aabedb5d26f5bbd3c675bc4968",
+    "1117.png": "7331fb69052b4c8aa0ce17c2297062fddbba8011f6d1c57e9b54044a3ee1af1f",
+    "1118.png": "312f35dc78fc31ce0c648a6622aba15902e06b47d4399ade9caa0c703b323261",
+    "1119.png": "5ac607436e534b1bcdb406a00da3efea2fd9cb341d09e455d495b416bc65d06d",
+    "1149.png": "68877ccfd1d383993cda661f76cee3bfd1b8ef37ef771ba746bcd41a5d9f5bc6",
+    "1198.png": "c08f4a14ccd5992afef2fea44ef92f7082f191d0c256b39494a156697b525a5c",
+    "1461.png": "8787395672f44f71073dff0f3101911cd85a47ad2538b9f62a22d94ee86749fc",
+    "1412.png": "f8429c137b2cf6bc3f28b3be64ee6eaddcc463341f9fe0b8d37abe8f5d439c35",
+    "1457.png": "422f34605528a1d82cad553429dcf2c8d92d92686d756a97a065c45290195fad",
+    "1069.png": "670bf0743ca10e67c6efced96df3227d6cab1f2c46449b9970f5043b0d9c3223",
+    "1068.png": "0ef4dbbc7970e9d9123c87326c95e1746798c719f9defedb7c8d68a4f72061ee",
+    "1286.png": "3bba5d800309036f43a0b91fb3b3020ccab346a9b81f271927a608d7129dc700",
+    "1336.png": "71e1301255cd9033a77eece2b7dc6432007529451ad500459b36899b0559c164",
+    "1302.png": "f0c29b9c0ea4d23855289dccfd46f8ecf8e906be4293a35387d277ba7ca46cb5",
+    "1083.png": "e11ba4bed55c36f798bfeb1602d5756e93b70328ecec067a95c7ecffe23f0450",
+    "1291.png": "1937be861e900ded0b509c8cfdbbbdfa001b81433f83f08f54233c0091f2d617",
+    "1076.png": "b8d7df34ffb9846a1fa4b592896d4f6daca4dc04e7526ee37976c5dfd4266cdd",
+    "1078.png": "27c0fac7ce432c00af6abb6c5bd7f1949f19953926e6c9f35d87a7e217fbdc0b",
+    "1294.png": "9ffc75869b67f31aee5645c24d0ce834b4958552062807cc8e925fd0b3397bf1",
+    "1305.png": "faa5032cdb627c5f33e3a08404c505877cc237ccd1cbbe297510ea92085ee9c5",
+    "1297.png": "c0793106a6863a45b87ed59607e63615636fc5a7bf4276b0bcbed30e832bebf7",
+    "1350.png": "9d58ba87caf97afb33d20bb085a2bf39ac799270ac7a7fbf31f7d961309b82a2",
+    "1349.png": "fe5fa433f433ff3d9cc99f95e21185c32e614ab8bcc42c55c7810d8b2e94cdac",
+    "1089.png": "1f8ed73463ab79340aec70dd09725ab808813b6c02e2a393813e3dd7a64de631",
+    "1088.png": "3f8a8598e3ae91412306534ce35a4c89aa2455db28d03beb9c43b6d18dea3621",
+    "1164.png": "bb7bef00e00958a78cca2856218eb4fe15406b7457f996b16541339739ed93f4",
+    "1299.png": "846345047b0aa9aa0d250541a99b9c66db5f6d438fe3995d622985a951596ae8",
+    "1200.png": "4fc2f42fb3d2434886511bb7772f543f469fd542c7eae9503cdb39207646c771",
+    "1323.png": "a27c0677a5b62913ccc937d03f2f797cbbcfccb5dc5eacd9f22e1887ddfa7931",
+    "1087.png": "f5c48508f8c53f4123386e139d4be1faf10281c55d19fd7bbf2da02f0dba1b9c",
+    "1334.png": "4da06902709a141cc3606bfdee97d763b4b90360673496d684ce83085b33f52b",
+    "1464.png": "cb80435b339d6898ad1b3db32330a3395675494d12c793bbaf3229d56852e25c",
+    "1091.png": "75eb12ef876ea6705054dabb3c42f844f92354008a97089556863ed00434182a",
+    "1363.png": "8494fcda54da208e7b92ecfbfe3a1fab5aa5e9340e44f9e63ebfa2b2b2254d3e",
+    "1343.png": "31af64b1175262dcfaad75ea99fcad12447df5358e7683074ca58039c239b0bb",
+    "1378.png": "566b1a768db1a3f690aef27ea0c9768045a64e9f2f3d4fb51005b79a04b8e70d",
+    "1196.png": "2400210313a5542a60ee4b9aa477625d8614f9e2bac863816d754c936e14721e",
+    "1213.png": "3a6631dc724646091fc0f2159942c0b111758ddf7fef514a1e3efccdcfca4897",
+    "1314.png": "ca478eafc6490a6b099e8e8bc8de10f80f35b34b8e59462dccb011c5f8ebdaf6",
+    "1158.png": "2170657011552295eff01affb7a275557cbb26e530f02060878a42e0538a0d82",
+    "1093.png": "072611d662e0d681274d8064c42231fb265d5fda454e86199233ab6cc1b5a0e8",
+    "1427.png": "46abaea72630b4e17495189f804181e22c4cf06ba5b32518ab633e4f624dd359",
+    "1309.png": "3778de4b35d98fb0633605d2895d0a2d3066425657547e4ad76127efe3c4b82d",
+    "1103.png": "48f4fe0d9434c1eea8d56bd6f50704e7a6a4fba8d270a9cd5fb7f130f0acce3e",
+    "1393.png": "88a8894eacf54a83b99b65367afee638139686d76508367e760d01f66b8b40dd",
+    "1364.png": "d34bd03aaf704630c6d5157a9ba8e377092de42d5ecc30d38621b871ed6cedf4",
+    "1355.png": "4294611c1a36b6146b961968fd2f5dabfe9abf43444d480e096adf549db0a39c",
+    "1236.png": "4b38ce1aebee57f4625bb8341b38e6029456d6e3d050cf4e59043db25b4016bd",
+    "1248.png": "db1361dd6c8cbfd69c58b40b6f8b6314a0af60f372da24fe9b2884d4a938a94f",
+    "1436.png": "b9ac7c8ee18aed2762b3f6a57e7ba8305c0c449c29e35d071e13fc14f867bdb0",
+    "1352.png": "079864cc643f246e2434c262eeb7d1742e61bdab9f6a0ed8171f72b75ab0e046",
+    "1318.png": "618673c44b95447f4be76d009605e53f7fa7229676943bad3ac06c41d0ef7c2a",
+    "1413.png": "8f3c35bffba06fd5eb4c81746b2df00f0f49c847494dffd6470bf6a9de4cdcac",
+    "1096.png": "7bf8e6c3b9cf0d0854e4ae2f6373db6fde7197120c4fefaa49952ab927d69fc9",
+    "1209.png": "d5faa276e25ac735c04a30aa1ef0ba41b0506c09f117d4ea2e1a15440eb49a54",
+    "1315.png": "924ba535d840ff888e6c7b67b6f15559772435f4ef867180fde2ed47bb3faeef",
+    "1159.png": "a784a956cd65e8deea084a344a983928d2e122330e9c8cb1cfe2c0c5c747517a",
+    "1277.png": "1e55f20e6262d33700203651a535d1edcc4c6b08dcb7b6d17c69d1345a10579a",
+    "1194.png": "5256d331b4dc2950e50bedd144b45969416e6b8b65579ce24438847f6476f3c7",
+    "1440.png": "7f777528aaa456d18fb0358517f77c276330ca59a9f87a6b6f53c825a73dea6d",
+    "907.png": "2fc43c778495e86096f508565d91ba86252361e7dbaa06ea997ae1fc9b2ca3c4",
+    "1399.png": "26db408b0c0fac4563a593686cdbb5279bbbb5ef145e4b05bc0944bbf9b35d4d",
+    "1356.png": "78085bdad2a1f9b014ba81e42922ad11672a1a6692670d7b2b9e631fdbd3f644",
+    "1127.png": "0d8f68f1f0ec18078b233d9ce86e7b8418ef83e17c198d82535c14c72890aa5f",
+    "1186.png": "9c84650727c7690eb8e1e7305891cd46f111deb845cf17c2988b32a3c2c35624",
+    "1346.png": "2ee6f0a355408b04590d73ec6b3d76b07a423ec68a2a472ff3bbdcabf0706e61",
+    "1453.png": "9fc072ba099d8086dfac99d37aac187e882851f7e1a05789972f10240db14a74",
+    "1358.png": "89fb2dacd2405bae952976dd2c88cd39aaacecbc8a6a349b932bd27b20817656",
+    "1245.png": "634b9a2598f27fb663712ae2f9727b489ae4c0329b6bfefcd34f9fb774151f39",
+    "1373.png": "53ccb99352890493bc9304cad573c8e14e67d43b3028428e5f496af6f6dc5540",
+    "1383.png": "dbf2ebd2259838894dac5688dc20a561dab9a620ac8e8c02ead8fa241d8a5874",
+    "1381.png": "1fd3f89790a7f49170c2e325e26d700e7dbd3c38569ee85d0c1dbc5ba83893fe",
+    "1382.png": "a4443e3783812e921502ed47c0834a981f906100b9d8b973683b5a967b294b30",
+    "1191.png": "3860ae9f036949e46c7bc8b56c699095489cdc325a4fd08d55eae7acec42930e",
+    "1079.png": "307f19dfa535653f5647bddaba4737249629880d9b8a43ab47dab4d7f35b62ae",
+    "1347.png": "0a67c0189a73b448796fafdcc1763efbcf8c5462abeeb921d48873232f4e639b",
+    "1085.png": "c5b8f9750b3a850b4a5e0fd4e98522e6c5f6bb648f5164e6fe08ced0f963ef81",
+    "1415.png": "91bf5c146a6f847e78b16e87d957cc3dcb23300f3f222f4bcef458c8fcf05c45",
+    "1337.png": "5766dcd75cd745c1044ebef323cf06bccdd1088ef0761f39bcf654249870dda7",
+    "1293.png": "b8e5f4899ac59552141886046fb8c519ae461940b6f0444597cef0ec7cd4479e",
+    "1392.png": "84a392bb0e8a251a9f47aa89c12af70db1db712fd89331280dc47c534d9b5cf8",
+    "1418.png": "377a4c61f62d99c60a14f6eb1675b702dd2d25ed9852b6361d2e7b07668d13e4",
+    "1051.png": "872704c24fbdb096fc755f7f3705c0c5552180bb85931c7c038ce958554719e9",
+    "1047.png": "dd8cbcd5bfd50bfa07765336e27002e328b723ea8c6e2bf6ac1b2a7416852641",
+    "1063.png": "8426ff7fc18dff114af07340d74885c687adf4d50de16e60368e8545ed62c642",
+    "1050.png": "c121ca77b21ba20cae4eb574a9f32a5d24925db6146f596fd31ba139248dbf8e",
+    "1188.png": "b6377610c85bce43a7472af932e9526a6cc459e120b3f0b847295e2a1ff5dd1b",
+    "1285.png": "b786cb8c325528d90f6804aacef33ddb018f49d4b8e2952862f8d0954a737e85",
+    "1233.png": "d77956c184c55bb7100cbfe35f492a85a784d4811d8434688b9eed915d301ec9",
+    "1353.png": "ffb07038b299b7c808770b9b72c3a49b096679885a890920a0822c8a63d070d4",
+    "1340.png": "a9ad3b668d3defd385ac91aea7a00af99008f938f498d4001122b67beb095d43",
+    "1232.png": "aa9fac949f1a380fb8a7f2bb5a7c4075129425ca5158f41fd362a6f7482c8377",
+    "1023.png": "fdb98c869cb3813a293b7913fa7463a1ea800cfeee6576eb440935a03b7c07ea",
+    "1238.png": "a2893de210f6725c46808b4efe616d35f5e692de5ad0c35a2f1932b7db66ce88",
+    "1042.png": "2a79cf749b88175d316ca9514ba6aeb71f9ed55b5833833dc6b6341a2ba46d2c",
+    "1080.png": "b8f5fe37943a90d672d5bf9eb086ce9d335a76304facb142a78cd1b5628b6aea",
+    "919.png": "f7dabc1ac8441ce590c2632388abef1836e9068c6ce87f4191e681700668cdd3",
+    "1111.png": "a7ff6cfe910e3fa3e069a36f4722c74124ce4897d4350c37f0da403d4f976265",
+    "1338.png": "6da5d489146584b79986a9c787d517a0ef7d7388d775108c13138fd2bc11b62f",
+    "1379.png": "6ec614c02ffc619680ac1d74a44432c755606883dd7c7200d01d51438daba110",
+    "1437.png": "9018e6ed1b6d3fb67725b18612493f5f4e515e9d32014947e243aefc888654ca",
+    "1357.png": "af81b05666fff69b48ebb8aeff53492dff1d97657f8d0121e271e0b326995456",
+    "1460.png": "8c825bc93368e3fd87cf5773fe738843b58a593179716a877aba6f87d1371ddc",
+    "1360.png": "ba0d2b50a65df663f3348baedd8188a9c67c0972c81b6d93c43285c7a3251b10",
+    "1359.png": "b61385b45662d4828776a09f499b58567fb1dd613f4f8bbd85516e1afc0c82ed",
+    "1488.png": "82614fcc20e8d03b9d979cd6be60f2dca960a0e8ff912f75eba928c69e2fd915",
+    "1451.png": "96830b3b7c218b6b13a3ccf456345bfedae6a2b80b7a72bd4bdd23a3c7c128bf",
+    "1458.png": "893210ba3f75f6c5308fbc7e2a287a8034c9547e481b017b4465bf74904dde93",
+    "1452.png": "48353f0100577c83bd4e17ab1ad5aaad6d709ea94ddfbec65390f0177355befb",
+    "1173.png": "4fe9bffe5e21343c3c58ce500503e15bbc0a3a8c4c36864ff034cbec00a8587a",
+    "1428.png": "4020cc0c07c78dc132caa548f4047f3f2e6edb7c6b0b869dc6a990482cd7dfe4",
+    "1327.png": "4491660e175652f85c61a25fd1a94bff7239e0094229cc03935910d835eed3ae",
+    "1046.png": "f684638de19f0a2d3986247024d85bc823011a8064420db352fc4693fab808b5",
+    "1190.png": "34609d98f8e7f13f1345e234f6cda48d73b0e24e2d7d261d537dac643d91faef",
+    "1324.png": "c1ece5cad852d5a137bbd81c4af5589937ab206c2b1ee5be0dee4ff19e33dd37",
+    "1296.png": "027a4f8ac714ca25e62f7f7fc37b2ad17c9a1ad4cd2826774465fc7da46c7969",
+    "1240.png": "5239fbff4c71c3c162fdf5f802efc763fe9e882c348ea6393b48402d81c6817c",
+    "1287.png": "f7456b81e469b1616c027150a962b77b9bddca3396df8d62e4a677c6891fa973",
+    "1185.png": "ac19d44914ae5a6ce60dd5f213119bb575dccb89e81af2c86d7e01d4601f1238",
+    "1422.png": "5b16c1e8e86d4ef326fd63ff099455bbd3792707f07639d130e4a08a8187284d",
+    "1289.png": "95923a20b83ee25d28e6c4b381fe9d37080d2b85a165e59e88e73526769f7d18",
+    "1057.png": "5458722de09408cdee888d702afeeb14b6b87f5276aa6528ab1d891d316f20b3",
+    "1283.png": "c5fa443fd380bf62fd446a7d64bfa2282cc649f0edda44dae2d95f51e2eb4644",
+    "1128.png": "26b8cc98e316f54a632c4feb2e0d4bc1c90c880219ce2f7844d886c20e61ae8e",
+    "1131.png": "50d42893d43730b619cad034e100c123a7337f810b811b92305c07e9d408168e",
+    "1341.png": "edd3e9911b4f61f1eaa8b84087af7e321083835118e4f03ecdcdb487ee6e1fc5",
+    "1053.png": "d1aba67e7c1133ed6532042aefe76feb5b802dca6072cab2496ddffa23258dfa",
+    "1391.png": "747be9b5f9f347e08a8ac7e84faba5e2e943f7f64299345ea1551f41ec886123",
+    "1086.png": "73732401b0d991bbd402400117211b7cbd2235dbacf06bd97bb6320911060694",
+    "1394.png": "190eabe5ea248e1b33745a1894007b67dff437c0db015843777935d60fb2cc2e",
+    "1282.png": "7e38983ae1ed143d2cd6e74f82383558e12843b878bc4ea4198bb3678f9ac0b8",
+    "1197.png": "b20bd5d9a5b05c18774830c1e9b1164ae43a86cc5ac4650ad61563f68dfdd939",
+    "1055.png": "a437f8d7391ccc462604c060349f43827a222fc146c9211501c5fa30e771c518",
+    "1178.png": "03a70f4426fd86d7b3779aea7ce312edb57f77021415bef8fa81f04aefa5e7d1",
+    "1421.png": "ae55576dbd02978d9e5ff22a2dc8a8645c481cbb90defd65d57d85ad36dec816",
+    "1155.png": "a67fff65f2b44d2998f5467e73faa64237ac51b486aef154a4159eb65494014c",
+    "1059.png": "b55cc9089946c7ac63eb0d9670be00585f5788fa92a5563764cde80f6d430020",
+    "1061.png": "660508a3ed7e7e2a78fef7b7999cd3f7ad1bad576b49bb3b372e0b1b843117e0"
+  }
+}

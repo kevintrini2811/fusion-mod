@@ -257,11 +257,9 @@ SP Twin Inferno-nut | Sunflower | SP Twin Solar-nut
 SP Twin Solar-nut | Jalapeno | SP Twin Inferno-nut
 Spicicle | Spicicle | Cryolina Reaper
 Spikeweed | Threepeater | Weed-spreader
-Spikeweed | Torchwood | Torchweed
 Split Pea-shroom | Snow Pea | Gatling Icicle-shroom
 Spruce Ballista | Aloe Aqua | Atlantis Ballista
 Spruce Sharpshooter | Spruce Ballista | Spruce Ballista
-Squash | Torchwood | Squashwood
 Starmorph | Jack-in-the-Box | Jokestar
 Starmorph | Pickaxe | Starpick
 Strangle Kelp | Threepeater | Hydra Kelp

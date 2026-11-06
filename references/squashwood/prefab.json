@@ -1,0 +1,39 @@
+{
+  "game_object": 40367,
+  "name": "SquashTorchPrefab",
+  "components": [
+    {
+      "path_id": 95276,
+      "type": "Transform"
+    },
+    {
+      "path_id": 124582,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 125409,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 121443,
+      "type": "Rigidbody2D"
+    },
+    {
+      "path_id": 195170,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 392
+      },
+      "script_name": "SquashTorch"
+    },
+    {
+      "path_id": 126356,
+      "type": "Animator",
+      "controller": 6519,
+      "clips": [
+        4746
+      ]
+    }
+  ]
+}

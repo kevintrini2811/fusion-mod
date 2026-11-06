@@ -1,0 +1,120 @@
+[
+  {
+    "component": 192892,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 49464
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 3042
+      },
+      "m_Name": ""
+    },
+    "game_object": {
+      "m_Component": [
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 99939
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 126990
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 124846
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 124722
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 192892
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 121829
+          }
+        }
+      ],
+      "m_Layer": 10,
+      "m_Name": "FireSpikePrefab",
+      "m_Tag": 20001,
+      "m_IsActive": true
+    }
+  },
+  {
+    "component": 195170,
+    "data": {
+      "m_GameObject": {
+        "m_FileID": 0,
+        "m_PathID": 40367
+      },
+      "m_Enabled": 1,
+      "m_Script": {
+        "m_FileID": 1,
+        "m_PathID": 392
+      },
+      "m_Name": ""
+    },
+    "game_object": {
+      "m_Component": [
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 95276
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 124582
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 125409
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 121443
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 195170
+          }
+        },
+        {
+          "component": {
+            "m_FileID": 0,
+            "m_PathID": 126356
+          }
+        }
+      ],
+      "m_Layer": 10,
+      "m_Name": "SquashTorchPrefab",
+      "m_Tag": 20001,
+      "m_IsActive": true
+    }
+  }
+]

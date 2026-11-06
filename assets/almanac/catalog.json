@@ -5487,6 +5487,27 @@
     "Portrait": "1289.png"
   },
   {
+    "SourceId": 1155,
+    "Identity": "FusionPlant.RoastedSpikeweed",
+    "CanonicalName": "Roasted Spikeweed",
+    "English": {
+      "Name": "Roasted Spikeweed",
+      "Info": "A hot Spikeweed? What's the difference between him and the cooler Spikeweed?\n\nToughness: 300\nDamage: 20/1s\nSpecial: Cannot be used in fusions.",
+      "Flavor": "After the test of fire, he's still the same old Spikeweed, just wiser, shinier, and ready to give the zombies a warmer welcome!",
+      "Notes": "",
+      "Recipes": []
+    },
+    "German": {
+      "Name": "Röststachel",
+      "Info": "Ein heißer Stachel? Was unterscheidet ihn von seinem kühleren Verwandten?\n\nWiderstandskraft: 300\nSchaden: 20 pro Sekunde\nBesonderheit: Kann nicht für Fusionen verwendet werden.",
+      "Flavor": "Nach der Feuerprobe ist er immer noch der alte Stachel: nur klüger, glänzender und bereit, den Zombies einen wärmeren Empfang zu bereiten.",
+      "Notes": "",
+      "Recipes": []
+    },
+    "Recipes": [],
+    "Portrait": "1155.png"
+  },
+  {
     "SourceId": 1057,
     "Identity": "FusionPlant.RoastedSquash",
     "CanonicalName": "Roasted Squash",
@@ -7470,6 +7491,33 @@
     "Portrait": "1063.png"
   },
   {
+    "SourceId": 1059,
+    "Identity": "FusionPlant.Squashwood",
+    "CanonicalName": "Squashwood",
+    "English": {
+      "Name": "Squashwood",
+      "Info": "Ignites ordinary peas and thaws snow peas. After more than 50 conversions, summons a non-fusible Roasted Squash on the first free tile ahead.",
+      "Flavor": "\"It's way too hot! Too hot!\" Squash yelled, trapped in the flames of Torchwood. \"Who put me here? I should be squashing zombies, not being the punchline at a barbecue party!\" The heat was overwhelming, and as he reached his breaking point, he ignited, bursting forth from the torch to rejoin the battle against the zombies.",
+      "Notes": "The executable uses a strict greater-than-50 threshold; the English source description says 60. A full row preserves the charge. Fertilizer heals without changing charge or evolving it.",
+      "Recipes": [
+        "Squash + Torchwood"
+      ]
+    },
+    "German": {
+      "Name": "Kürbisholz",
+      "Info": "Entzündet gewöhnliche Erbsen und taut Schnee-Erbsen auf. Nach mehr als 50 Umwandlungen beschwört es auf dem ersten freien Feld davor einen nicht fusionierbaren Röstkürbis.",
+      "Flavor": "„Es ist viel zu heiß! Zu heiß!“, schrie der Kürbis, gefangen in den Flammen des Zunderholzes. „Wer hat mich hier hineingesteckt? Ich sollte Zombies zerquetschen, statt die Pointe einer Grillparty zu sein!“ Die Hitze wurde unerträglich. Als er es nicht mehr aushielt, fing er Feuer und brach aus dem Stamm hervor, um sich erneut dem Kampf gegen die Zombies anzuschließen.",
+      "Notes": "Die Programmdatei prüft strikt auf mehr als 50 Umwandlungen; die englische Quellbeschreibung nennt 60. Eine volle Reihe erhält die Ladung. Dünger heilt, ohne die Ladung zu verändern oder eine Entwicklung auszulösen.",
+      "Recipes": [
+        "Matschkürbis + Zunderholz"
+      ]
+    },
+    "Recipes": [
+      "Squash + Torchwood"
+    ],
+    "Portrait": "1059.png"
+  },
+  {
     "SourceId": 1257,
     "Identity": "FusionPlant.StarNut",
     "CanonicalName": "Star-nut",
@@ -8467,6 +8515,33 @@
       "Threepeater + Torchwood"
     ],
     "Portrait": "1055.png"
+  },
+  {
+    "SourceId": 1061,
+    "Identity": "FusionPlant.Torchweed",
+    "CanonicalName": "Torchweed",
+    "English": {
+      "Name": "Torchweed",
+      "Info": "Burns nearby hostile zombies in its lane for 40 fire damage every second, including airborne Balloon Zombies. The first hit pops a normal flying Balloon without body damage; later grounded hits deal 40 damage. Punctures vehicles. Ignites small peas, adding 20 damage, and doubles rolling Wall-nut damage while allowing previous targets to be hit again. After more than 100 conversions, summons a non-fusible Roasted Spikeweed on the first free tile ahead.",
+      "Flavor": "\"I'm Torchweed, the zombies' passionate barbecue chef! Ignite that little pea, and I'll throw them an unforgettable barbecue party. Rest assured, I'm a professional—I guarantee it will be crispy on the outside and tender on the inside!\"",
+      "Notes": "Only small peas and rolling Wall-nuts count; ordinary peas and potato peas are unaffected. A full row consumes the summon charge. Fertilizer heals without accelerating the independent fire timer.",
+      "Recipes": [
+        "Spikeweed + Torchwood"
+      ]
+    },
+    "German": {
+      "Name": "Zunderstachel",
+      "Info": "Verbrennt nahe feindliche Zombies in seiner Reihe mit 40 Feuerschaden pro Sekunde, auch fliegende Ballon-Zombies. Der erste Treffer lässt den Ballon eines gewöhnlichen fliegenden Ballon-Zombies ohne Körperschaden platzen; spätere Treffer am Boden verursachen 40 Schaden. Zerstört Fahrzeuge. Entzündet kleine Erbsen mit 20 zusätzlichem Schaden und verdoppelt den Schaden rollender Wallnüsse; zuvor getroffene Ziele können erneut getroffen werden. Nach mehr als 100 Umwandlungen erscheint auf dem ersten freien Feld davor ein nicht fusionierbarer Röststachel.",
+      "Flavor": "„Ich bin der Zunderstachel, der leidenschaftliche Grillmeister der Zombies! Entzünde diese kleine Erbse, und ich bereite ihnen eine unvergessliche Grillparty. Keine Sorge, ich bin Profi: außen knusprig, innen zart!“",
+      "Notes": "Nur kleine Erbsen und rollende Wallnüsse zählen; gewöhnliche Erbsen und Kartoffelerbsen bleiben unverändert. Eine volle Reihe verbraucht die Beschwörungsladung. Dünger heilt, ohne den unabhängigen Feuertakt zu beschleunigen.",
+      "Recipes": [
+        "Stachelkraut + Zunderholz"
+      ]
+    },
+    "Recipes": [
+      "Spikeweed + Torchwood"
+    ],
+    "Portrait": "1061.png"
   },
   {
     "SourceId": 1442,

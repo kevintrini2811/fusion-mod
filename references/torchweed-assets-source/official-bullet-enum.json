@@ -1,0 +1,2047 @@
+{
+  "type": "BulletType",
+  "source": "/home/kevin/modding/pvzreplanted/pvzfusion/english-4.0.5.2/Game Files/PlantsVsZombiesRH_Data/il2cpp_data/Metadata/global-metadata.dat",
+  "sha256": "1c48fc2de9e53d4c3d00e3b3fcba0ab36f27dff9d7101d72609090d877feae00",
+  "fields": [
+    {
+      "name": "Bullet_pea",
+      "value": 0,
+      "field_index": 9477,
+      "type_index": 25955,
+      "data_index": 5207,
+      "compressed_bytes": "00"
+    },
+    {
+      "name": "Bullet_cherry",
+      "value": 1,
+      "field_index": 9478,
+      "type_index": 25955,
+      "data_index": 5208,
+      "compressed_bytes": "02"
+    },
+    {
+      "name": "Bullet_nut",
+      "value": 2,
+      "field_index": 9479,
+      "type_index": 25955,
+      "data_index": 5209,
+      "compressed_bytes": "04"
+    },
+    {
+      "name": "Bullet_superCherry",
+      "value": 3,
+      "field_index": 9480,
+      "type_index": 25955,
+      "data_index": 5210,
+      "compressed_bytes": "06"
+    },
+    {
+      "name": "Bullet_zombieBlock",
+      "value": 4,
+      "field_index": 9481,
+      "type_index": 25955,
+      "data_index": 5211,
+      "compressed_bytes": "08"
+    },
+    {
+      "name": "Bullet_zombieBlock2",
+      "value": 5,
+      "field_index": 9482,
+      "type_index": 25955,
+      "data_index": 5212,
+      "compressed_bytes": "0a"
+    },
+    {
+      "name": "Bullet_zombieBlock3",
+      "value": 6,
+      "field_index": 9483,
+      "type_index": 25955,
+      "data_index": 5213,
+      "compressed_bytes": "0c"
+    },
+    {
+      "name": "Bullet_potato",
+      "value": 7,
+      "field_index": 9484,
+      "type_index": 25955,
+      "data_index": 5214,
+      "compressed_bytes": "0e"
+    },
+    {
+      "name": "Bullet_smallSun",
+      "value": 8,
+      "field_index": 9485,
+      "type_index": 25955,
+      "data_index": 5215,
+      "compressed_bytes": "10"
+    },
+    {
+      "name": "Bullet_puff",
+      "value": 9,
+      "field_index": 9486,
+      "type_index": 25955,
+      "data_index": 5216,
+      "compressed_bytes": "12"
+    },
+    {
+      "name": "Bullet_puffPea",
+      "value": 10,
+      "field_index": 9487,
+      "type_index": 25955,
+      "data_index": 5217,
+      "compressed_bytes": "14"
+    },
+    {
+      "name": "Bullet_ironPea",
+      "value": 11,
+      "field_index": 9488,
+      "type_index": 25955,
+      "data_index": 5218,
+      "compressed_bytes": "16"
+    },
+    {
+      "name": "Bullet_threeSpike",
+      "value": 12,
+      "field_index": 9489,
+      "type_index": 25955,
+      "data_index": 5219,
+      "compressed_bytes": "18"
+    },
+    {
+      "name": "Bullet_puffRandomColor",
+      "value": 13,
+      "field_index": 9490,
+      "type_index": 25955,
+      "data_index": 5220,
+      "compressed_bytes": "1a"
+    },
+    {
+      "name": "Bullet_puffLove",
+      "value": 14,
+      "field_index": 9491,
+      "type_index": 25955,
+      "data_index": 5221,
+      "compressed_bytes": "1c"
+    },
+    {
+      "name": "Bullet_snowPea",
+      "value": 15,
+      "field_index": 9492,
+      "type_index": 25955,
+      "data_index": 5222,
+      "compressed_bytes": "1e"
+    },
+    {
+      "name": "Bullet_snowPuffPea",
+      "value": 16,
+      "field_index": 9493,
+      "type_index": 25955,
+      "data_index": 5223,
+      "compressed_bytes": "20"
+    },
+    {
+      "name": "Bullet_iceSpark",
+      "value": 17,
+      "field_index": 9494,
+      "type_index": 25955,
+      "data_index": 5224,
+      "compressed_bytes": "22"
+    },
+    {
+      "name": "Bullet_smallIceSpark",
+      "value": 18,
+      "field_index": 9495,
+      "type_index": 25955,
+      "data_index": 5225,
+      "compressed_bytes": "24"
+    },
+    {
+      "name": "Bullet_magicTrack",
+      "value": 20,
+      "field_index": 9496,
+      "type_index": 25955,
+      "data_index": 5226,
+      "compressed_bytes": "28"
+    },
+    {
+      "name": "Bullet_snowPuff",
+      "value": 21,
+      "field_index": 9497,
+      "type_index": 25955,
+      "data_index": 5227,
+      "compressed_bytes": "2a"
+    },
+    {
+      "name": "Bullet_blackPuff",
+      "value": 22,
+      "field_index": 9498,
+      "type_index": 25955,
+      "data_index": 5228,
+      "compressed_bytes": "2c"
+    },
+    {
+      "name": "Bullet_doom",
+      "value": 23,
+      "field_index": 9499,
+      "type_index": 25955,
+      "data_index": 5229,
+      "compressed_bytes": "2e"
+    },
+    {
+      "name": "Bullet_iceDoom",
+      "value": 24,
+      "field_index": 9500,
+      "type_index": 25955,
+      "data_index": 5230,
+      "compressed_bytes": "30"
+    },
+    {
+      "name": "Bullet_firePea_yellow",
+      "value": 25,
+      "field_index": 9501,
+      "type_index": 25955,
+      "data_index": 5231,
+      "compressed_bytes": "32"
+    },
+    {
+      "name": "Bullet_firePea_orange",
+      "value": 26,
+      "field_index": 9502,
+      "type_index": 25955,
+      "data_index": 5232,
+      "compressed_bytes": "34"
+    },
+    {
+      "name": "Bullet_firePea_red",
+      "value": 27,
+      "field_index": 9503,
+      "type_index": 25955,
+      "data_index": 5233,
+      "compressed_bytes": "36"
+    },
+    {
+      "name": "Bullet_squash",
+      "value": 28,
+      "field_index": 9504,
+      "type_index": 25955,
+      "data_index": 5234,
+      "compressed_bytes": "38"
+    },
+    {
+      "name": "Bullet_kelp",
+      "value": 29,
+      "field_index": 9505,
+      "type_index": 25955,
+      "data_index": 5235,
+      "compressed_bytes": "3a"
+    },
+    {
+      "name": "Bullet_fireKelp",
+      "value": 30,
+      "field_index": 9506,
+      "type_index": 25955,
+      "data_index": 5236,
+      "compressed_bytes": "3c"
+    },
+    {
+      "name": "Bullet_squashKelp",
+      "value": 32,
+      "field_index": 9507,
+      "type_index": 25955,
+      "data_index": 5237,
+      "compressed_bytes": "40"
+    },
+    {
+      "name": "Bullet_normalTrack",
+      "value": 33,
+      "field_index": 9508,
+      "type_index": 25955,
+      "data_index": 5238,
+      "compressed_bytes": "42"
+    },
+    {
+      "name": "Bullet_iceTrack",
+      "value": 34,
+      "field_index": 9509,
+      "type_index": 25955,
+      "data_index": 5239,
+      "compressed_bytes": "44"
+    },
+    {
+      "name": "Bullet_fireTrack",
+      "value": 35,
+      "field_index": 9510,
+      "type_index": 25955,
+      "data_index": 5240,
+      "compressed_bytes": "46"
+    },
+    {
+      "name": "Bullet_cherrySquash",
+      "value": 36,
+      "field_index": 9511,
+      "type_index": 25955,
+      "data_index": 5241,
+      "compressed_bytes": "48"
+    },
+    {
+      "name": "Bullet_cactus",
+      "value": 37,
+      "field_index": 9512,
+      "type_index": 25955,
+      "data_index": 5242,
+      "compressed_bytes": "4a"
+    },
+    {
+      "name": "Bullet_lanternCactus_glow",
+      "value": 38,
+      "field_index": 9513,
+      "type_index": 25955,
+      "data_index": 5243,
+      "compressed_bytes": "4c"
+    },
+    {
+      "name": "Bullet_star",
+      "value": 39,
+      "field_index": 9514,
+      "type_index": 25955,
+      "data_index": 5244,
+      "compressed_bytes": "4e"
+    },
+    {
+      "name": "Bullet_lanternStar",
+      "value": 40,
+      "field_index": 9515,
+      "type_index": 25955,
+      "data_index": 5245,
+      "compressed_bytes": "50"
+    },
+    {
+      "name": "Bullet_seaStar",
+      "value": 41,
+      "field_index": 9516,
+      "type_index": 25955,
+      "data_index": 5246,
+      "compressed_bytes": "52"
+    },
+    {
+      "name": "Bullet_cactusStar",
+      "value": 42,
+      "field_index": 9517,
+      "type_index": 25955,
+      "data_index": 5247,
+      "compressed_bytes": "54"
+    },
+    {
+      "name": "Bullet_jackboxStar",
+      "value": 43,
+      "field_index": 9518,
+      "type_index": 25955,
+      "data_index": 5248,
+      "compressed_bytes": "56"
+    },
+    {
+      "name": "Bullet_pickaxeStar",
+      "value": 44,
+      "field_index": 9519,
+      "type_index": 25955,
+      "data_index": 5249,
+      "compressed_bytes": "58"
+    },
+    {
+      "name": "Bullet_magnetStar",
+      "value": 45,
+      "field_index": 9520,
+      "type_index": 25955,
+      "data_index": 5250,
+      "compressed_bytes": "5a"
+    },
+    {
+      "name": "Bullet_ironStar",
+      "value": 46,
+      "field_index": 9521,
+      "type_index": 25955,
+      "data_index": 5251,
+      "compressed_bytes": "5c"
+    },
+    {
+      "name": "Bullet_magnetCactus",
+      "value": 47,
+      "field_index": 9522,
+      "type_index": 25955,
+      "data_index": 5252,
+      "compressed_bytes": "5e"
+    },
+    {
+      "name": "Bullet_superStar",
+      "value": 48,
+      "field_index": 9523,
+      "type_index": 25955,
+      "data_index": 5253,
+      "compressed_bytes": "60"
+    },
+    {
+      "name": "Bullet_ultimateStar",
+      "value": 49,
+      "field_index": 9524,
+      "type_index": 25955,
+      "data_index": 5254,
+      "compressed_bytes": "62"
+    },
+    {
+      "name": "Bullet_firePea_small",
+      "value": 50,
+      "field_index": 9525,
+      "type_index": 25955,
+      "data_index": 5255,
+      "compressed_bytes": "64"
+    },
+    {
+      "name": "Bullet_sword",
+      "value": 51,
+      "field_index": 9526,
+      "type_index": 25955,
+      "data_index": 5256,
+      "compressed_bytes": "66"
+    },
+    {
+      "name": "Bullet_cabbage",
+      "value": 52,
+      "field_index": 9527,
+      "type_index": 25955,
+      "data_index": 5257,
+      "compressed_bytes": "68"
+    },
+    {
+      "name": "Bullet_sunCabbage",
+      "value": 53,
+      "field_index": 9528,
+      "type_index": 25955,
+      "data_index": 5258,
+      "compressed_bytes": "6a"
+    },
+    {
+      "name": "Bullet_kernal",
+      "value": 54,
+      "field_index": 9529,
+      "type_index": 25955,
+      "data_index": 5259,
+      "compressed_bytes": "6c"
+    },
+    {
+      "name": "Bullet_butter",
+      "value": 55,
+      "field_index": 9530,
+      "type_index": 25955,
+      "data_index": 5260,
+      "compressed_bytes": "6e"
+    },
+    {
+      "name": "Bullet_bigKernal",
+      "value": 56,
+      "field_index": 9531,
+      "type_index": 25955,
+      "data_index": 5261,
+      "compressed_bytes": "70"
+    },
+    {
+      "name": "Bullet_bigButter",
+      "value": 57,
+      "field_index": 9532,
+      "type_index": 25955,
+      "data_index": 5262,
+      "compressed_bytes": "72"
+    },
+    {
+      "name": "Bullet_basketball",
+      "value": 58,
+      "field_index": 9533,
+      "type_index": 25955,
+      "data_index": 5263,
+      "compressed_bytes": "74"
+    },
+    {
+      "name": "Bullet_melon",
+      "value": 59,
+      "field_index": 9534,
+      "type_index": 25955,
+      "data_index": 5264,
+      "compressed_bytes": "76"
+    },
+    {
+      "name": "Bullet_winterMelon",
+      "value": 60,
+      "field_index": 9535,
+      "type_index": 25955,
+      "data_index": 5265,
+      "compressed_bytes": "78"
+    },
+    {
+      "name": "Bullet_garlicKernal",
+      "value": 61,
+      "field_index": 9536,
+      "type_index": 25955,
+      "data_index": 5266,
+      "compressed_bytes": "7a"
+    },
+    {
+      "name": "Bullet_garlicButter",
+      "value": 62,
+      "field_index": 9537,
+      "type_index": 25955,
+      "data_index": 5267,
+      "compressed_bytes": "7c"
+    },
+    {
+      "name": "Bullet_garlicCabbage",
+      "value": 63,
+      "field_index": 9538,
+      "type_index": 25955,
+      "data_index": 5268,
+      "compressed_bytes": "7e"
+    },
+    {
+      "name": "Bullet_garlicMelon",
+      "value": 64,
+      "field_index": 9539,
+      "type_index": 25955,
+      "data_index": 5269,
+      "compressed_bytes": "8080"
+    },
+    {
+      "name": "Bullet_cannon",
+      "value": 65,
+      "field_index": 9540,
+      "type_index": 25955,
+      "data_index": 5271,
+      "compressed_bytes": "8082"
+    },
+    {
+      "name": "Bullet_cornMelon",
+      "value": 66,
+      "field_index": 9541,
+      "type_index": 25955,
+      "data_index": 5273,
+      "compressed_bytes": "8084"
+    },
+    {
+      "name": "Bullet_butterMelon",
+      "value": 67,
+      "field_index": 9542,
+      "type_index": 25955,
+      "data_index": 5275,
+      "compressed_bytes": "8086"
+    },
+    {
+      "name": "Bullet_fireCannon",
+      "value": 68,
+      "field_index": 9543,
+      "type_index": 25955,
+      "data_index": 5277,
+      "compressed_bytes": "8088"
+    },
+    {
+      "name": "Bullet_iceCannon",
+      "value": 69,
+      "field_index": 9544,
+      "type_index": 25955,
+      "data_index": 5279,
+      "compressed_bytes": "808a"
+    },
+    {
+      "name": "Bullet_cabbageMelon",
+      "value": 70,
+      "field_index": 9545,
+      "type_index": 25955,
+      "data_index": 5281,
+      "compressed_bytes": "808c"
+    },
+    {
+      "name": "Bullet_superMelon",
+      "value": 71,
+      "field_index": 9546,
+      "type_index": 25955,
+      "data_index": 5283,
+      "compressed_bytes": "808e"
+    },
+    {
+      "name": "Bullet_ultimateMelon",
+      "value": 72,
+      "field_index": 9547,
+      "type_index": 25955,
+      "data_index": 5285,
+      "compressed_bytes": "8090"
+    },
+    {
+      "name": "Bullet_melonCannon",
+      "value": 73,
+      "field_index": 9548,
+      "type_index": 25955,
+      "data_index": 5287,
+      "compressed_bytes": "8092"
+    },
+    {
+      "name": "Bullet_silverCabbage",
+      "value": 74,
+      "field_index": 9549,
+      "type_index": 25955,
+      "data_index": 5289,
+      "compressed_bytes": "8094"
+    },
+    {
+      "name": "Bullet_goldCabbage",
+      "value": 75,
+      "field_index": 9550,
+      "type_index": 25955,
+      "data_index": 5291,
+      "compressed_bytes": "8096"
+    },
+    {
+      "name": "Bullet_silverKernal",
+      "value": 76,
+      "field_index": 9551,
+      "type_index": 25955,
+      "data_index": 5293,
+      "compressed_bytes": "8098"
+    },
+    {
+      "name": "Bullet_goldKernal",
+      "value": 77,
+      "field_index": 9552,
+      "type_index": 25955,
+      "data_index": 5295,
+      "compressed_bytes": "809a"
+    },
+    {
+      "name": "Bullet_silverButter",
+      "value": 78,
+      "field_index": 9553,
+      "type_index": 25955,
+      "data_index": 5297,
+      "compressed_bytes": "809c"
+    },
+    {
+      "name": "Bullet_goldButter",
+      "value": 79,
+      "field_index": 9554,
+      "type_index": 25955,
+      "data_index": 5299,
+      "compressed_bytes": "809e"
+    },
+    {
+      "name": "Bullet_smallGoldCannon",
+      "value": 80,
+      "field_index": 9555,
+      "type_index": 25955,
+      "data_index": 5301,
+      "compressed_bytes": "80a0"
+    },
+    {
+      "name": "Bullet_silverMelon",
+      "value": 81,
+      "field_index": 9556,
+      "type_index": 25955,
+      "data_index": 5303,
+      "compressed_bytes": "80a2"
+    },
+    {
+      "name": "Bullet_goldMelon",
+      "value": 82,
+      "field_index": 9557,
+      "type_index": 25955,
+      "data_index": 5305,
+      "compressed_bytes": "80a4"
+    },
+    {
+      "name": "Bullet_goldMelonCannon",
+      "value": 83,
+      "field_index": 9558,
+      "type_index": 25955,
+      "data_index": 5307,
+      "compressed_bytes": "80a6"
+    },
+    {
+      "name": "Bullet_ultimateCannon",
+      "value": 84,
+      "field_index": 9559,
+      "type_index": 25955,
+      "data_index": 5309,
+      "compressed_bytes": "80a8"
+    },
+    {
+      "name": "Bullet_ultimateKernal",
+      "value": 85,
+      "field_index": 9560,
+      "type_index": 25955,
+      "data_index": 5311,
+      "compressed_bytes": "80aa"
+    },
+    {
+      "name": "Bullet_fireMelon",
+      "value": 86,
+      "field_index": 9561,
+      "type_index": 25955,
+      "data_index": 5313,
+      "compressed_bytes": "80ac"
+    },
+    {
+      "name": "Bullet_firePea_super",
+      "value": 87,
+      "field_index": 9562,
+      "type_index": 25955,
+      "data_index": 5315,
+      "compressed_bytes": "80ae"
+    },
+    {
+      "name": "Bullet_garlicBomb",
+      "value": 89,
+      "field_index": 9563,
+      "type_index": 25955,
+      "data_index": 5317,
+      "compressed_bytes": "80b2"
+    },
+    {
+      "name": "Bullet_puffIronPea",
+      "value": 90,
+      "field_index": 9564,
+      "type_index": 25955,
+      "data_index": 5319,
+      "compressed_bytes": "80b4"
+    },
+    {
+      "name": "Bullet_lourCactus",
+      "value": 91,
+      "field_index": 9565,
+      "type_index": 25955,
+      "data_index": 5321,
+      "compressed_bytes": "80b6"
+    },
+    {
+      "name": "Bullet_puffPotato",
+      "value": 92,
+      "field_index": 9566,
+      "type_index": 25955,
+      "data_index": 5323,
+      "compressed_bytes": "80b8"
+    },
+    {
+      "name": "Bullet_steelPea",
+      "value": 93,
+      "field_index": 9567,
+      "type_index": 25955,
+      "data_index": 5325,
+      "compressed_bytes": "80ba"
+    },
+    {
+      "name": "Bullet_shulkLeaf",
+      "value": 94,
+      "field_index": 9568,
+      "type_index": 25955,
+      "data_index": 5327,
+      "compressed_bytes": "80bc"
+    },
+    {
+      "name": "Bullet_sunSpike",
+      "value": 95,
+      "field_index": 9569,
+      "type_index": 25955,
+      "data_index": 5329,
+      "compressed_bytes": "80be"
+    },
+    {
+      "name": "Bullet_endoSun",
+      "value": 96,
+      "field_index": 9570,
+      "type_index": 25955,
+      "data_index": 5331,
+      "compressed_bytes": "80c0"
+    },
+    {
+      "name": "Bullet_extremeSnowPea",
+      "value": 97,
+      "field_index": 9571,
+      "type_index": 25955,
+      "data_index": 5333,
+      "compressed_bytes": "80c2"
+    },
+    {
+      "name": "Bullet_silverCoin",
+      "value": 98,
+      "field_index": 9572,
+      "type_index": 25955,
+      "data_index": 5335,
+      "compressed_bytes": "80c4"
+    },
+    {
+      "name": "Bullet_goldCoin",
+      "value": 99,
+      "field_index": 9573,
+      "type_index": 25955,
+      "data_index": 5337,
+      "compressed_bytes": "80c6"
+    },
+    {
+      "name": "Bullet_ultimateCactus",
+      "value": 100,
+      "field_index": 9574,
+      "type_index": 25955,
+      "data_index": 5339,
+      "compressed_bytes": "80c8"
+    },
+    {
+      "name": "Bullet_snowBall",
+      "value": 101,
+      "field_index": 9575,
+      "type_index": 25955,
+      "data_index": 5341,
+      "compressed_bytes": "80ca"
+    },
+    {
+      "name": "Bullet_doomCactus",
+      "value": 102,
+      "field_index": 9576,
+      "type_index": 25955,
+      "data_index": 5343,
+      "compressed_bytes": "80cc"
+    },
+    {
+      "name": "Bullet_bigMelon",
+      "value": 103,
+      "field_index": 9577,
+      "type_index": 25955,
+      "data_index": 5345,
+      "compressed_bytes": "80ce"
+    },
+    {
+      "name": "Bullet_fireStar",
+      "value": 104,
+      "field_index": 9578,
+      "type_index": 25955,
+      "data_index": 5347,
+      "compressed_bytes": "80d0"
+    },
+    {
+      "name": "Bullet_fireCherry",
+      "value": 105,
+      "field_index": 9579,
+      "type_index": 25955,
+      "data_index": 5349,
+      "compressed_bytes": "80d2"
+    },
+    {
+      "name": "Bullet_lanternCactus_dark",
+      "value": 106,
+      "field_index": 9580,
+      "type_index": 25955,
+      "data_index": 5351,
+      "compressed_bytes": "80d4"
+    },
+    {
+      "name": "Bullet_firePea_ultimate",
+      "value": 107,
+      "field_index": 9581,
+      "type_index": 25955,
+      "data_index": 5353,
+      "compressed_bytes": "80d6"
+    },
+    {
+      "name": "Bullet_redIronPea",
+      "value": 108,
+      "field_index": 9582,
+      "type_index": 25955,
+      "data_index": 5355,
+      "compressed_bytes": "80d8"
+    },
+    {
+      "name": "Bullet_normalSun",
+      "value": 109,
+      "field_index": 9583,
+      "type_index": 25955,
+      "data_index": 5357,
+      "compressed_bytes": "80da"
+    },
+    {
+      "name": "Bullet_firePea_purple",
+      "value": 110,
+      "field_index": 9584,
+      "type_index": 25955,
+      "data_index": 5359,
+      "compressed_bytes": "80dc"
+    },
+    {
+      "name": "Bullet_springMelon",
+      "value": 111,
+      "field_index": 9585,
+      "type_index": 25955,
+      "data_index": 5361,
+      "compressed_bytes": "80de"
+    },
+    {
+      "name": "Bullet_smallKernal",
+      "value": 112,
+      "field_index": 9586,
+      "type_index": 25955,
+      "data_index": 5363,
+      "compressed_bytes": "80e0"
+    },
+    {
+      "name": "Bullet_smallButter",
+      "value": 113,
+      "field_index": 9587,
+      "type_index": 25955,
+      "data_index": 5365,
+      "compressed_bytes": "80e2"
+    },
+    {
+      "name": "Bullet_portalPea",
+      "value": 114,
+      "field_index": 9588,
+      "type_index": 25955,
+      "data_index": 5367,
+      "compressed_bytes": "80e4"
+    },
+    {
+      "name": "Bullet_goldSquashKelp",
+      "value": 115,
+      "field_index": 9589,
+      "type_index": 25955,
+      "data_index": 5369,
+      "compressed_bytes": "80e6"
+    },
+    {
+      "name": "Bullet_ironPea_air",
+      "value": 116,
+      "field_index": 9590,
+      "type_index": 25955,
+      "data_index": 5371,
+      "compressed_bytes": "80e8"
+    },
+    {
+      "name": "Bullet_kernal_magnet",
+      "value": 117,
+      "field_index": 9591,
+      "type_index": 25955,
+      "data_index": 5373,
+      "compressed_bytes": "80ea"
+    },
+    {
+      "name": "Bullet_butter_magnet",
+      "value": 118,
+      "field_index": 9592,
+      "type_index": 25955,
+      "data_index": 5375,
+      "compressed_bytes": "80ec"
+    },
+    {
+      "name": "Bullet_kernal_portal",
+      "value": 119,
+      "field_index": 9593,
+      "type_index": 25955,
+      "data_index": 5377,
+      "compressed_bytes": "80ee"
+    },
+    {
+      "name": "Bullet_butter_portal",
+      "value": 120,
+      "field_index": 9594,
+      "type_index": 25955,
+      "data_index": 5379,
+      "compressed_bytes": "80f0"
+    },
+    {
+      "name": "Bullet_kernal_iron",
+      "value": 121,
+      "field_index": 9595,
+      "type_index": 25955,
+      "data_index": 5381,
+      "compressed_bytes": "80f2"
+    },
+    {
+      "name": "Bullet_butter_iron",
+      "value": 122,
+      "field_index": 9596,
+      "type_index": 25955,
+      "data_index": 5383,
+      "compressed_bytes": "80f4"
+    },
+    {
+      "name": "Bullet_pea_doom",
+      "value": 123,
+      "field_index": 9597,
+      "type_index": 25955,
+      "data_index": 5385,
+      "compressed_bytes": "80f6"
+    },
+    {
+      "name": "Bullet_pea_doom_fire",
+      "value": 124,
+      "field_index": 9598,
+      "type_index": 25955,
+      "data_index": 5387,
+      "compressed_bytes": "80f8"
+    },
+    {
+      "name": "Bullet_doom_fire",
+      "value": 125,
+      "field_index": 9599,
+      "type_index": 25955,
+      "data_index": 5389,
+      "compressed_bytes": "80fa"
+    },
+    {
+      "name": "Bullet_doom_big",
+      "value": 126,
+      "field_index": 9600,
+      "type_index": 25955,
+      "data_index": 5391,
+      "compressed_bytes": "80fc"
+    },
+    {
+      "name": "Bullet_spruce",
+      "value": 127,
+      "field_index": 9601,
+      "type_index": 25955,
+      "data_index": 5393,
+      "compressed_bytes": "80fe"
+    },
+    {
+      "name": "Bullet_spruceShulk",
+      "value": 128,
+      "field_index": 9602,
+      "type_index": 25955,
+      "data_index": 5395,
+      "compressed_bytes": "8100"
+    },
+    {
+      "name": "Bullet_icePeach",
+      "value": 129,
+      "field_index": 9603,
+      "type_index": 25955,
+      "data_index": 5397,
+      "compressed_bytes": "8102"
+    },
+    {
+      "name": "Bullet_passionFruit",
+      "value": 130,
+      "field_index": 9604,
+      "type_index": 25955,
+      "data_index": 5399,
+      "compressed_bytes": "8104"
+    },
+    {
+      "name": "Bullet_passionFruit2",
+      "value": 131,
+      "field_index": 9605,
+      "type_index": 25955,
+      "data_index": 5401,
+      "compressed_bytes": "8106"
+    },
+    {
+      "name": "Bullet_water",
+      "value": 132,
+      "field_index": 9606,
+      "type_index": 25955,
+      "data_index": 5403,
+      "compressed_bytes": "8108"
+    },
+    {
+      "name": "Bullet_iceBlock",
+      "value": 133,
+      "field_index": 9607,
+      "type_index": 25955,
+      "data_index": 5405,
+      "compressed_bytes": "810a"
+    },
+    {
+      "name": "Bullet_water_big",
+      "value": 134,
+      "field_index": 9608,
+      "type_index": 25955,
+      "data_index": 5407,
+      "compressed_bytes": "810c"
+    },
+    {
+      "name": "Bullet_iceBlock_big",
+      "value": 135,
+      "field_index": 9609,
+      "type_index": 25955,
+      "data_index": 5409,
+      "compressed_bytes": "810e"
+    },
+    {
+      "name": "Bullet_shulkLeaf_water",
+      "value": 136,
+      "field_index": 9610,
+      "type_index": 25955,
+      "data_index": 5411,
+      "compressed_bytes": "8110"
+    },
+    {
+      "name": "Bullet_iceBlock_recover",
+      "value": 137,
+      "field_index": 9611,
+      "type_index": 25955,
+      "data_index": 5413,
+      "compressed_bytes": "8112"
+    },
+    {
+      "name": "Bullet_shulkLeaf_ice",
+      "value": 138,
+      "field_index": 9612,
+      "type_index": 25955,
+      "data_index": 5415,
+      "compressed_bytes": "8114"
+    },
+    {
+      "name": "Bullet_lotusSpruce",
+      "value": 139,
+      "field_index": 9613,
+      "type_index": 25955,
+      "data_index": 5417,
+      "compressed_bytes": "8116"
+    },
+    {
+      "name": "Bullet_kernal_ultimate",
+      "value": 140,
+      "field_index": 9614,
+      "type_index": 25955,
+      "data_index": 5419,
+      "compressed_bytes": "8118"
+    },
+    {
+      "name": "Bullet_BlackHole_gold",
+      "value": 141,
+      "field_index": 9615,
+      "type_index": 25955,
+      "data_index": 5421,
+      "compressed_bytes": "811a"
+    },
+    {
+      "name": "Bullet_shulkLeaf_ultimate",
+      "value": 142,
+      "field_index": 9616,
+      "type_index": 25955,
+      "data_index": 5423,
+      "compressed_bytes": "811c"
+    },
+    {
+      "name": "Bullet_iceSword",
+      "value": 143,
+      "field_index": 9617,
+      "type_index": 25955,
+      "data_index": 5425,
+      "compressed_bytes": "811e"
+    },
+    {
+      "name": "Bullet_fireStar_red",
+      "value": 144,
+      "field_index": 9618,
+      "type_index": 25955,
+      "data_index": 5427,
+      "compressed_bytes": "8120"
+    },
+    {
+      "name": "Bullet_cherryStar",
+      "value": 145,
+      "field_index": 9619,
+      "type_index": 25955,
+      "data_index": 5429,
+      "compressed_bytes": "8122"
+    },
+    {
+      "name": "Bullet_jalaStar",
+      "value": 146,
+      "field_index": 9620,
+      "type_index": 25955,
+      "data_index": 5431,
+      "compressed_bytes": "8124"
+    },
+    {
+      "name": "Bullet_ultimateStar_fire",
+      "value": 147,
+      "field_index": 9621,
+      "type_index": 25955,
+      "data_index": 5433,
+      "compressed_bytes": "8126"
+    },
+    {
+      "name": "Bullet_spruceBallista",
+      "value": 148,
+      "field_index": 9622,
+      "type_index": 25955,
+      "data_index": 5435,
+      "compressed_bytes": "8128"
+    },
+    {
+      "name": "Bullet_waterBallista",
+      "value": 149,
+      "field_index": 9623,
+      "type_index": 25955,
+      "data_index": 5437,
+      "compressed_bytes": "812a"
+    },
+    {
+      "name": "Bullet_waterBallista2",
+      "value": 150,
+      "field_index": 9624,
+      "type_index": 25955,
+      "data_index": 5439,
+      "compressed_bytes": "812c"
+    },
+    {
+      "name": "Bullet_spruce_bamboo",
+      "value": 151,
+      "field_index": 9625,
+      "type_index": 25955,
+      "data_index": 5441,
+      "compressed_bytes": "812e"
+    },
+    {
+      "name": "Bullet_doom_throw",
+      "value": 152,
+      "field_index": 9626,
+      "type_index": 25955,
+      "data_index": 5443,
+      "compressed_bytes": "8130"
+    },
+    {
+      "name": "Bullet_hypnoPea",
+      "value": 153,
+      "field_index": 9627,
+      "type_index": 25955,
+      "data_index": 5445,
+      "compressed_bytes": "8132"
+    },
+    {
+      "name": "Bullet_hypnoPea_fire",
+      "value": 154,
+      "field_index": 9628,
+      "type_index": 25955,
+      "data_index": 5447,
+      "compressed_bytes": "8134"
+    },
+    {
+      "name": "Bullet_puff_cherry",
+      "value": 155,
+      "field_index": 9629,
+      "type_index": 25955,
+      "data_index": 5449,
+      "compressed_bytes": "8136"
+    },
+    {
+      "name": "Bullet_melon_small",
+      "value": 156,
+      "field_index": 9630,
+      "type_index": 25955,
+      "data_index": 5451,
+      "compressed_bytes": "8138"
+    },
+    {
+      "name": "Bullet_cabbage_small",
+      "value": 157,
+      "field_index": 9631,
+      "type_index": 25955,
+      "data_index": 5453,
+      "compressed_bytes": "813a"
+    },
+    {
+      "name": "Bullet_melon_hypno",
+      "value": 158,
+      "field_index": 9632,
+      "type_index": 25955,
+      "data_index": 5455,
+      "compressed_bytes": "813c"
+    },
+    {
+      "name": "Bullet_ultimatePuff",
+      "value": 159,
+      "field_index": 9633,
+      "type_index": 25955,
+      "data_index": 5457,
+      "compressed_bytes": "813e"
+    },
+    {
+      "name": "Bullet_corn_ulti",
+      "value": 160,
+      "field_index": 9634,
+      "type_index": 25955,
+      "data_index": 5459,
+      "compressed_bytes": "8140"
+    },
+    {
+      "name": "Bullet_butter_ulti",
+      "value": 161,
+      "field_index": 9635,
+      "type_index": 25955,
+      "data_index": 5461,
+      "compressed_bytes": "8142"
+    },
+    {
+      "name": "Bullet_cabbage_ulti",
+      "value": 162,
+      "field_index": 9636,
+      "type_index": 25955,
+      "data_index": 5463,
+      "compressed_bytes": "8144"
+    },
+    {
+      "name": "Bullet_melon_ulti",
+      "value": 163,
+      "field_index": 9637,
+      "type_index": 25955,
+      "data_index": 5465,
+      "compressed_bytes": "8146"
+    },
+    {
+      "name": "Bullet_watercan",
+      "value": 164,
+      "field_index": 9638,
+      "type_index": 25955,
+      "data_index": 5467,
+      "compressed_bytes": "8148"
+    },
+    {
+      "name": "Bullet_ultimateSun",
+      "value": 165,
+      "field_index": 9639,
+      "type_index": 25955,
+      "data_index": 5469,
+      "compressed_bytes": "814a"
+    },
+    {
+      "name": "Bullet_ultimateExplodeCannon",
+      "value": 166,
+      "field_index": 9640,
+      "type_index": 25955,
+      "data_index": 5471,
+      "compressed_bytes": "814c"
+    },
+    {
+      "name": "Bullet_cherryJalapeno",
+      "value": 167,
+      "field_index": 9641,
+      "type_index": 25955,
+      "data_index": 5473,
+      "compressed_bytes": "814e"
+    },
+    {
+      "name": "Bullet_helmetPea",
+      "value": 168,
+      "field_index": 9642,
+      "type_index": 25955,
+      "data_index": 5475,
+      "compressed_bytes": "8150"
+    },
+    {
+      "name": "Bullet_lunarCabbage",
+      "value": 169,
+      "field_index": 9643,
+      "type_index": 25955,
+      "data_index": 5477,
+      "compressed_bytes": "8152"
+    },
+    {
+      "name": "Bullet_redLunarCabbage",
+      "value": 170,
+      "field_index": 9644,
+      "type_index": 25955,
+      "data_index": 5479,
+      "compressed_bytes": "8154"
+    },
+    {
+      "name": "Bullet_puffNut",
+      "value": 171,
+      "field_index": 9645,
+      "type_index": 25955,
+      "data_index": 5481,
+      "compressed_bytes": "8156"
+    },
+    {
+      "name": "Bullet_melon_magnet",
+      "value": 172,
+      "field_index": 9646,
+      "type_index": 25955,
+      "data_index": 5483,
+      "compressed_bytes": "8158"
+    },
+    {
+      "name": "Bullet_melon_iron",
+      "value": 173,
+      "field_index": 9647,
+      "type_index": 25955,
+      "data_index": 5485,
+      "compressed_bytes": "815a"
+    },
+    {
+      "name": "Bullet_melon_portal",
+      "value": 174,
+      "field_index": 9648,
+      "type_index": 25955,
+      "data_index": 5487,
+      "compressed_bytes": "815c"
+    },
+    {
+      "name": "Bullet_pea_jala",
+      "value": 175,
+      "field_index": 9649,
+      "type_index": 25955,
+      "data_index": 5489,
+      "compressed_bytes": "815e"
+    },
+    {
+      "name": "Bullet_winterMelon_ultimate",
+      "value": 176,
+      "field_index": 9650,
+      "type_index": 25955,
+      "data_index": 5491,
+      "compressed_bytes": "8160"
+    },
+    {
+      "name": "Bullet_pea_garlic",
+      "value": 177,
+      "field_index": 9651,
+      "type_index": 25955,
+      "data_index": 5493,
+      "compressed_bytes": "8162"
+    },
+    {
+      "name": "Bullet_pea_threeCherry",
+      "value": 178,
+      "field_index": 9652,
+      "type_index": 25955,
+      "data_index": 5495,
+      "compressed_bytes": "8164"
+    },
+    {
+      "name": "Bullet_pea_bombCherry",
+      "value": 179,
+      "field_index": 9653,
+      "type_index": 25955,
+      "data_index": 5497,
+      "compressed_bytes": "8166"
+    },
+    {
+      "name": "Bullet_ultimateCattail",
+      "value": 180,
+      "field_index": 9654,
+      "type_index": 25955,
+      "data_index": 5499,
+      "compressed_bytes": "8168"
+    },
+    {
+      "name": "Bullet_nuclear",
+      "value": 181,
+      "field_index": 9655,
+      "type_index": 25955,
+      "data_index": 5501,
+      "compressed_bytes": "816a"
+    },
+    {
+      "name": "Bullet_seaShroom",
+      "value": 182,
+      "field_index": 9656,
+      "type_index": 25955,
+      "data_index": 5503,
+      "compressed_bytes": "816c"
+    },
+    {
+      "name": "Bullet_smallIceSpark_skin2",
+      "value": 183,
+      "field_index": 9657,
+      "type_index": 25955,
+      "data_index": 5505,
+      "compressed_bytes": "816e"
+    },
+    {
+      "name": "Bullet_cannon_sun",
+      "value": 184,
+      "field_index": 9658,
+      "type_index": 25955,
+      "data_index": 5507,
+      "compressed_bytes": "8170"
+    },
+    {
+      "name": "Bullet_lourCactus1",
+      "value": 185,
+      "field_index": 9659,
+      "type_index": 25955,
+      "data_index": 5509,
+      "compressed_bytes": "8172"
+    },
+    {
+      "name": "Bullet_squashMelon",
+      "value": 186,
+      "field_index": 9660,
+      "type_index": 25955,
+      "data_index": 5511,
+      "compressed_bytes": "8174"
+    },
+    {
+      "name": "Bullet_melonCannon2",
+      "value": 187,
+      "field_index": 9661,
+      "type_index": 25955,
+      "data_index": 5513,
+      "compressed_bytes": "8176"
+    },
+    {
+      "name": "Bullet_cabbage_explode",
+      "value": 188,
+      "field_index": 9662,
+      "type_index": 25955,
+      "data_index": 5515,
+      "compressed_bytes": "8178"
+    },
+    {
+      "name": "Bullet_ultimateStar_magic",
+      "value": 189,
+      "field_index": 9663,
+      "type_index": 25955,
+      "data_index": 5517,
+      "compressed_bytes": "817a"
+    },
+    {
+      "name": "Bullet_ultimateStar_fire_magic",
+      "value": 190,
+      "field_index": 9664,
+      "type_index": 25955,
+      "data_index": 5519,
+      "compressed_bytes": "817c"
+    },
+    {
+      "name": "Bullet_fireStar_magic",
+      "value": 191,
+      "field_index": 9665,
+      "type_index": 25955,
+      "data_index": 5521,
+      "compressed_bytes": "817e"
+    },
+    {
+      "name": "Bullet_cannon_jalaNut",
+      "value": 192,
+      "field_index": 9666,
+      "type_index": 25955,
+      "data_index": 5523,
+      "compressed_bytes": "8180"
+    },
+    {
+      "name": "Bullet_starFume",
+      "value": 193,
+      "field_index": 9667,
+      "type_index": 25955,
+      "data_index": 5525,
+      "compressed_bytes": "8182"
+    },
+    {
+      "name": "Bullet_doom_ulti",
+      "value": 194,
+      "field_index": 9668,
+      "type_index": 25955,
+      "data_index": 5527,
+      "compressed_bytes": "8184"
+    },
+    {
+      "name": "Bullet_doom_big_ulti",
+      "value": 195,
+      "field_index": 9669,
+      "type_index": 25955,
+      "data_index": 5529,
+      "compressed_bytes": "8186"
+    },
+    {
+      "name": "Bullet_kernal_squash",
+      "value": 196,
+      "field_index": 9670,
+      "type_index": 25955,
+      "data_index": 5531,
+      "compressed_bytes": "8188"
+    },
+    {
+      "name": "Bullet_butter_squash",
+      "value": 197,
+      "field_index": 9671,
+      "type_index": 25955,
+      "data_index": 5533,
+      "compressed_bytes": "818a"
+    },
+    {
+      "name": "Bullet_iceTrack_big",
+      "value": 198,
+      "field_index": 9672,
+      "type_index": 25955,
+      "data_index": 5535,
+      "compressed_bytes": "818c"
+    },
+    {
+      "name": "Bullet_star_ifv",
+      "value": 199,
+      "field_index": 9673,
+      "type_index": 25955,
+      "data_index": 5537,
+      "compressed_bytes": "818e"
+    },
+    {
+      "name": "Bullet_cabbage_ice",
+      "value": 200,
+      "field_index": 9674,
+      "type_index": 25955,
+      "data_index": 5539,
+      "compressed_bytes": "8190"
+    },
+    {
+      "name": "Bullet_kernal_ice",
+      "value": 201,
+      "field_index": 9675,
+      "type_index": 25955,
+      "data_index": 5541,
+      "compressed_bytes": "8192"
+    },
+    {
+      "name": "Bullet_butter_ice",
+      "value": 202,
+      "field_index": 9676,
+      "type_index": 25955,
+      "data_index": 5543,
+      "compressed_bytes": "8194"
+    },
+    {
+      "name": "Bullet_squashCabbage",
+      "value": 203,
+      "field_index": 9677,
+      "type_index": 25955,
+      "data_index": 5545,
+      "compressed_bytes": "8196"
+    },
+    {
+      "name": "Bullet_helmetPea_black",
+      "value": 204,
+      "field_index": 9678,
+      "type_index": 25955,
+      "data_index": 5547,
+      "compressed_bytes": "8198"
+    },
+    {
+      "name": "Bullet_helmetPea_black_fire",
+      "value": 205,
+      "field_index": 9679,
+      "type_index": 25955,
+      "data_index": 5549,
+      "compressed_bytes": "819a"
+    },
+    {
+      "name": "Bullet_firePea_garlic",
+      "value": 206,
+      "field_index": 9680,
+      "type_index": 25955,
+      "data_index": 5551,
+      "compressed_bytes": "819c"
+    },
+    {
+      "name": "Bullet_poisonSpark",
+      "value": 207,
+      "field_index": 9681,
+      "type_index": 25955,
+      "data_index": 5553,
+      "compressed_bytes": "819e"
+    },
+    {
+      "name": "Bullet_smallIceSpark_sp",
+      "value": 208,
+      "field_index": 9682,
+      "type_index": 25955,
+      "data_index": 5555,
+      "compressed_bytes": "81a0"
+    },
+    {
+      "name": "Bullet_sunSpike_sp",
+      "value": 209,
+      "field_index": 9683,
+      "type_index": 25955,
+      "data_index": 5557,
+      "compressed_bytes": "81a2"
+    },
+    {
+      "name": "Bullet_shadow_poison",
+      "value": 210,
+      "field_index": 9684,
+      "type_index": 25955,
+      "data_index": 5559,
+      "compressed_bytes": "81a4"
+    },
+    {
+      "name": "Bullet_cabbage_fire",
+      "value": 211,
+      "field_index": 9685,
+      "type_index": 25955,
+      "data_index": 5561,
+      "compressed_bytes": "81a6"
+    },
+    {
+      "name": "Bullet_cabbage_ulti2",
+      "value": 212,
+      "field_index": 9686,
+      "type_index": 25955,
+      "data_index": 5563,
+      "compressed_bytes": "81a8"
+    },
+    {
+      "name": "Bullet_melon_ulti2",
+      "value": 213,
+      "field_index": 9687,
+      "type_index": 25955,
+      "data_index": 5565,
+      "compressed_bytes": "81aa"
+    },
+    {
+      "name": "Bullet_butter_ulti2",
+      "value": 214,
+      "field_index": 9688,
+      "type_index": 25955,
+      "data_index": 5567,
+      "compressed_bytes": "81ac"
+    },
+    {
+      "name": "Bullet_corn_ulti2",
+      "value": 215,
+      "field_index": 9689,
+      "type_index": 25955,
+      "data_index": 5569,
+      "compressed_bytes": "81ae"
+    },
+    {
+      "name": "Bullet_ultimatePuff2",
+      "value": 216,
+      "field_index": 9690,
+      "type_index": 25955,
+      "data_index": 5571,
+      "compressed_bytes": "81b0"
+    },
+    {
+      "name": "Bullet_smallIceSpark_sp2",
+      "value": 217,
+      "field_index": 9691,
+      "type_index": 25955,
+      "data_index": 5573,
+      "compressed_bytes": "81b2"
+    },
+    {
+      "name": "Bullet_smallIceSpark2",
+      "value": 218,
+      "field_index": 9692,
+      "type_index": 25955,
+      "data_index": 5575,
+      "compressed_bytes": "81b4"
+    },
+    {
+      "name": "Bullet_cabbage_doom",
+      "value": 219,
+      "field_index": 9693,
+      "type_index": 25955,
+      "data_index": 5577,
+      "compressed_bytes": "81b6"
+    },
+    {
+      "name": "Bullet_kernal_jala",
+      "value": 220,
+      "field_index": 9694,
+      "type_index": 25955,
+      "data_index": 5579,
+      "compressed_bytes": "81b8"
+    },
+    {
+      "name": "Bullet_butter_jala",
+      "value": 221,
+      "field_index": 9695,
+      "type_index": 25955,
+      "data_index": 5581,
+      "compressed_bytes": "81ba"
+    },
+    {
+      "name": "Bullet_springMelon_obsidian",
+      "value": 222,
+      "field_index": 9696,
+      "type_index": 25955,
+      "data_index": 5583,
+      "compressed_bytes": "81bc"
+    },
+    {
+      "name": "Bullet_doomMelon",
+      "value": 223,
+      "field_index": 9697,
+      "type_index": 25955,
+      "data_index": 5585,
+      "compressed_bytes": "81be"
+    },
+    {
+      "name": "Bullet_snowBall_black",
+      "value": 224,
+      "field_index": 9698,
+      "type_index": 25955,
+      "data_index": 5587,
+      "compressed_bytes": "81c0"
+    },
+    {
+      "name": "Bullet_kernal_doom",
+      "value": 225,
+      "field_index": 9699,
+      "type_index": 25955,
+      "data_index": 5589,
+      "compressed_bytes": "81c2"
+    },
+    {
+      "name": "Bullet_butter_doom",
+      "value": 226,
+      "field_index": 9700,
+      "type_index": 25955,
+      "data_index": 5591,
+      "compressed_bytes": "81c4"
+    },
+    {
+      "name": "Bullet_pea_star",
+      "value": 227,
+      "field_index": 9701,
+      "type_index": 25955,
+      "data_index": 5593,
+      "compressed_bytes": "81c6"
+    },
+    {
+      "name": "Bullet_magicTrack_hypno",
+      "value": 228,
+      "field_index": 9702,
+      "type_index": 25955,
+      "data_index": 5595,
+      "compressed_bytes": "81c8"
+    },
+    {
+      "name": "Bullet_ironPea_curse",
+      "value": 229,
+      "field_index": 9703,
+      "type_index": 25955,
+      "data_index": 5597,
+      "compressed_bytes": "81ca"
+    },
+    {
+      "name": "Bullet_petKirov",
+      "value": 230,
+      "field_index": 9704,
+      "type_index": 25955,
+      "data_index": 5599,
+      "compressed_bytes": "81cc"
+    },
+    {
+      "name": "Bullet_potato_explode",
+      "value": 231,
+      "field_index": 9705,
+      "type_index": 25955,
+      "data_index": 5601,
+      "compressed_bytes": "81ce"
+    },
+    {
+      "name": "Bullet_nut_fire",
+      "value": 232,
+      "field_index": 9706,
+      "type_index": 25955,
+      "data_index": 5603,
+      "compressed_bytes": "81d0"
+    },
+    {
+      "name": "Bullet_jackbox_black",
+      "value": 233,
+      "field_index": 9707,
+      "type_index": 25955,
+      "data_index": 5605,
+      "compressed_bytes": "81d2"
+    },
+    {
+      "name": "Bullet_cactus_ice",
+      "value": 234,
+      "field_index": 9708,
+      "type_index": 25955,
+      "data_index": 5607,
+      "compressed_bytes": "81d4"
+    },
+    {
+      "name": "Bullet_squash_doom",
+      "value": 235,
+      "field_index": 9709,
+      "type_index": 25955,
+      "data_index": 5609,
+      "compressed_bytes": "81d6"
+    },
+    {
+      "name": "Bullet_squash_bigDoom",
+      "value": 236,
+      "field_index": 9710,
+      "type_index": 25955,
+      "data_index": 5611,
+      "compressed_bytes": "81d8"
+    },
+    {
+      "name": "Bullet_squash_doom_ulti",
+      "value": 237,
+      "field_index": 9711,
+      "type_index": 25955,
+      "data_index": 5613,
+      "compressed_bytes": "81da"
+    },
+    {
+      "name": "Bullet_squash_bigDoom_ulti",
+      "value": 238,
+      "field_index": 9712,
+      "type_index": 25955,
+      "data_index": 5615,
+      "compressed_bytes": "81dc"
+    },
+    {
+      "name": "Bullet_steelPea_fire",
+      "value": 239,
+      "field_index": 9713,
+      "type_index": 25955,
+      "data_index": 5617,
+      "compressed_bytes": "81de"
+    },
+    {
+      "name": "Bullet_pea_chomper",
+      "value": 240,
+      "field_index": 9714,
+      "type_index": 25955,
+      "data_index": 5619,
+      "compressed_bytes": "81e0"
+    },
+    {
+      "name": "Bullet_helmetPea_black_big",
+      "value": 241,
+      "field_index": 9715,
+      "type_index": 25955,
+      "data_index": 5621,
+      "compressed_bytes": "81e2"
+    },
+    {
+      "name": "Bullet_cabbage_three",
+      "value": 242,
+      "field_index": 9716,
+      "type_index": 25955,
+      "data_index": 5623,
+      "compressed_bytes": "81e4"
+    },
+    {
+      "name": "Bullet_star_ice",
+      "value": 243,
+      "field_index": 9717,
+      "type_index": 25955,
+      "data_index": 5625,
+      "compressed_bytes": "81e6"
+    },
+    {
+      "name": "Bullet_sword_ulti",
+      "value": 244,
+      "field_index": 9718,
+      "type_index": 25955,
+      "data_index": 5627,
+      "compressed_bytes": "81e8"
+    },
+    {
+      "name": "Bullet_pea2",
+      "value": 245,
+      "field_index": 9719,
+      "type_index": 25955,
+      "data_index": 5629,
+      "compressed_bytes": "81ea"
+    },
+    {
+      "name": "Bullet_star_garlic",
+      "value": 246,
+      "field_index": 9720,
+      "type_index": 25955,
+      "data_index": 5631,
+      "compressed_bytes": "81ec"
+    },
+    {
+      "name": "Bullet_lunarEssence",
+      "value": 247,
+      "field_index": 9721,
+      "type_index": 25955,
+      "data_index": 5633,
+      "compressed_bytes": "81ee"
+    },
+    {
+      "name": "Bullet_pea_curse",
+      "value": 248,
+      "field_index": 9722,
+      "type_index": 25955,
+      "data_index": 5635,
+      "compressed_bytes": "81f0"
+    },
+    {
+      "name": "Bullet_star_holy",
+      "value": 249,
+      "field_index": 9723,
+      "type_index": 25955,
+      "data_index": 5637,
+      "compressed_bytes": "81f2"
+    },
+    {
+      "name": "Bullet_ultimateStar_solar",
+      "value": 250,
+      "field_index": 9724,
+      "type_index": 25955,
+      "data_index": 5639,
+      "compressed_bytes": "81f4"
+    },
+    {
+      "name": "Bullet_ultimateStar_lunar",
+      "value": 251,
+      "field_index": 9725,
+      "type_index": 25955,
+      "data_index": 5641,
+      "compressed_bytes": "81f6"
+    },
+    {
+      "name": "Bullet_ultimateMelon1",
+      "value": 252,
+      "field_index": 9726,
+      "type_index": 25955,
+      "data_index": 5643,
+      "compressed_bytes": "81f8"
+    },
+    {
+      "name": "Bullet_cactus_green",
+      "value": 253,
+      "field_index": 9727,
+      "type_index": 25955,
+      "data_index": 5645,
+      "compressed_bytes": "81fa"
+    },
+    {
+      "name": "Bullet_ultimateStar_lunar_fire",
+      "value": 254,
+      "field_index": 9728,
+      "type_index": 25955,
+      "data_index": 5647,
+      "compressed_bytes": "81fc"
+    },
+    {
+      "name": "Bullet_ultimateStar_solar_fire",
+      "value": 255,
+      "field_index": 9729,
+      "type_index": 25955,
+      "data_index": 5649,
+      "compressed_bytes": "81fe"
+    },
+    {
+      "name": "Bullet_lostMachine_red",
+      "value": 256,
+      "field_index": 9730,
+      "type_index": 25955,
+      "data_index": 5651,
+      "compressed_bytes": "8200"
+    },
+    {
+      "name": "Bullet_puff_green",
+      "value": 257,
+      "field_index": 9731,
+      "type_index": 25955,
+      "data_index": 5653,
+      "compressed_bytes": "8202"
+    }
+  ]
+}

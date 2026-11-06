@@ -2326,6 +2326,27 @@
       "Flavor": "Der Afro von Knallholz wippt zu einem Takt, den nur Knallholz hört. Manche sagen, dieser Rhythmus inspiriere seine feurigen Schöpfungen. Andere genießen einfach das Spektakel. Frisur und Explosionen hinterlassen bleibenden Eindruck.",
       "Notes": "Das Original prüft auf mehr als 30 Umwandlungen. Vollständig belegte drei Plätze erhalten vorhandene Explosivkirschen. Dünger heilt ohne Sonderentwicklung.",
       "EnglishSha256": "722cdf842323f6608f74dfa494503dbde333448a1999ae6f2ff21fb65541bff3"
+    },
+    "1059": {
+      "Name": "Kürbisholz",
+      "Info": "Entzündet gewöhnliche Erbsen und taut Schnee-Erbsen auf. Nach mehr als 50 Umwandlungen beschwört es auf dem ersten freien Feld davor einen nicht fusionierbaren Röstkürbis.",
+      "Flavor": "„Es ist viel zu heiß! Zu heiß!“, schrie der Kürbis, gefangen in den Flammen des Zunderholzes. „Wer hat mich hier hineingesteckt? Ich sollte Zombies zerquetschen, statt die Pointe einer Grillparty zu sein!“ Die Hitze wurde unerträglich. Als er es nicht mehr aushielt, fing er Feuer und brach aus dem Stamm hervor, um sich erneut dem Kampf gegen die Zombies anzuschließen.",
+      "Notes": "Die Programmdatei prüft strikt auf mehr als 50 Umwandlungen; die englische Quellbeschreibung nennt 60. Eine volle Reihe erhält die Ladung. Dünger heilt, ohne die Ladung zu verändern oder eine Entwicklung auszulösen.",
+      "EnglishSha256": "e4068e1d5350472e3b8bf6e0e073251348b5094ba2e42b01d42a226937461291"
+    },
+    "1061": {
+      "Name": "Zunderstachel",
+      "Info": "Verbrennt nahe feindliche Zombies in seiner Reihe mit 40 Feuerschaden pro Sekunde, auch fliegende Ballon-Zombies. Der erste Treffer lässt den Ballon eines gewöhnlichen fliegenden Ballon-Zombies ohne Körperschaden platzen; spätere Treffer am Boden verursachen 40 Schaden. Zerstört Fahrzeuge. Entzündet kleine Erbsen mit 20 zusätzlichem Schaden und verdoppelt den Schaden rollender Wallnüsse; zuvor getroffene Ziele können erneut getroffen werden. Nach mehr als 100 Umwandlungen erscheint auf dem ersten freien Feld davor ein nicht fusionierbarer Röststachel.",
+      "Flavor": "„Ich bin der Zunderstachel, der leidenschaftliche Grillmeister der Zombies! Entzünde diese kleine Erbse, und ich bereite ihnen eine unvergessliche Grillparty. Keine Sorge, ich bin Profi: außen knusprig, innen zart!“",
+      "Notes": "Nur kleine Erbsen und rollende Wallnüsse zählen; gewöhnliche Erbsen und Kartoffelerbsen bleiben unverändert. Eine volle Reihe verbraucht die Beschwörungsladung. Dünger heilt, ohne den unabhängigen Feuertakt zu beschleunigen.",
+      "EnglishSha256": "114816e1d44ad46452ac55ca8d48e779ca6cb9daf909aa5fac533371ea5062c8"
+    },
+    "1155": {
+      "Name": "Röststachel",
+      "Info": "Ein heißer Stachel? Was unterscheidet ihn von seinem kühleren Verwandten?\n\nWiderstandskraft: 300\nSchaden: 20 pro Sekunde\nBesonderheit: Kann nicht für Fusionen verwendet werden.",
+      "Flavor": "Nach der Feuerprobe ist er immer noch der alte Stachel: nur klüger, glänzender und bereit, den Zombies einen wärmeren Empfang zu bereiten.",
+      "Notes": "",
+      "EnglishSha256": "22711468c9192a86832e160e77593f65177bc5b403dc63c5135d3deeddcafdd3"
     }
   }
 }

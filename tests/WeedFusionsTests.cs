@@ -66,6 +66,10 @@ foreach(string mode in new[]{"pause","dead","carry","bungee","loading","garden",
 var plain=Make(SeedType.Spikeweed);target=Enemy(plain);SolarShooter.Suns.Clear();
 plain.DoRowAreaDamage(20,DamageFlags.Spike);
 Check(target.Damage==20 && SolarShooter.Suns.Count==0,"ordinary weed unchanged");
+var roasted=Make(FusionPlant.RoastedSpikeweed);target=Enemy(roasted);
+roasted.DoRowAreaDamage(20,DamageFlags.Spike);
+Check(target.Damage==20 && !Overheat.Has(target),"Roasted Spikeweed remains ordinary 20-damage contact, without heat");
+Check(!FusionRecipes.TryGet(FusionPlant.RoastedSpikeweed,SeedType.Torchwood,out _),"Roasted Spikeweed cannot replace a native fusion ingredient");
 var nut=Make(FusionPlant.SpikeNut);target=Enemy(nut);
 Check(nut.mPlantHealth==4000,"source nut health");
 // Source EatEffect returns 50 damage for a normal 50-HP source bite. Native

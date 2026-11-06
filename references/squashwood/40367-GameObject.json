@@ -1,0 +1,44 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 95276
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124582
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 125409
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 121443
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 195170
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 126356
+      }
+    }
+  ],
+  "m_Layer": 10,
+  "m_Name": "SquashTorchPrefab",
+  "m_Tag": 20001,
+  "m_IsActive": true
+}

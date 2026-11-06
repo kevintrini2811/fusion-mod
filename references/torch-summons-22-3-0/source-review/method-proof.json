@@ -1,0 +1,44 @@
+{
+  "methods": [
+    {
+      "type": "SquashTorch",
+      "method": "OnTriggerEnter2D",
+      "token": "0x60015d6",
+      "rva": "0x4eb450",
+      "slot": 71,
+      "parameterCount": 1
+    },
+    {
+      "type": "SquashTorch",
+      "method": "SummonPlant",
+      "token": "0x60015d7",
+      "rva": "0x4eb590",
+      "slot": 72,
+      "parameterCount": 1
+    },
+    {
+      "type": "SquashTorch",
+      "method": ".ctor",
+      "token": "0x60015d8",
+      "rva": "0x464260",
+      "slot": 65535,
+      "parameterCount": 0
+    },
+    {
+      "type": "Zombie",
+      "method": "Warm",
+      "token": "0x60028b2",
+      "rva": "0x65f210",
+      "slot": 65535,
+      "parameterCount": 0
+    }
+  ],
+  "warmEnd": "0x65f260",
+  "metadataSha256": "1c48fc2de9e53d4c3d00e3b3fcba0ab36f27dff9d7101d72609090d877feae00",
+  "vtableProof": {
+    "base": "0x138",
+    "SquashSummonSlot": 72,
+    "SquashSummonOffset": "0x5b8",
+    "crosscheck": "Plant.UpdateAttackCountDown slot45 maps to FireUpdate vtable+0x408"
+  }
+}

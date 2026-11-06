@@ -1,0 +1,79 @@
+{
+  "rawEvidence": {
+    "localPath": "/home/kevin/modding/pvzreplanted/.test-runs/task1-balloon-22-3-3/runtime.json",
+    "sha256": "cf397ea03cb5630d08afcdbd427f80c05f2e3390b2158be21c8cb573cc10f0eb"
+  },
+  "samples": [
+    {
+      "fps": null,
+      "native": {
+        "DataID": 11,
+        "mZombieType": "Balloon",
+        "mZombiePhase": "BalloonFlying",
+        "mFlyingHealth": 20,
+        "mBodyHealth": 1000,
+        "mRow": 0
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 964,
+        "tickSeconds": 0.008333333333333333,
+        "board": "882482963d27452dbec3a4f1b107c13e"
+      },
+      "native": {
+        "DataID": 11,
+        "mZombieType": "Balloon",
+        "mZombiePhase": "BalloonPopping",
+        "mFlyingHealth": 0,
+        "mBodyHealth": 1000,
+        "mRow": 0
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1098,
+        "tickSeconds": 0.008333333333333333,
+        "board": "882482963d27452dbec3a4f1b107c13e"
+      },
+      "native": {
+        "DataID": 11,
+        "mZombieType": "Balloon",
+        "mZombiePhase": "BalloonPopping",
+        "mFlyingHealth": 0,
+        "mBodyHealth": 960,
+        "mRow": 0
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1128,
+        "tickSeconds": 0.008333333333333333,
+        "board": "882482963d27452dbec3a4f1b107c13e"
+      },
+      "native": {
+        "DataID": 11,
+        "mZombieType": "Balloon",
+        "mZombiePhase": "BalloonWalking",
+        "mFlyingHealth": 0,
+        "mBodyHealth": 960,
+        "mRow": 0
+      }
+    },
+    {
+      "fps": {
+        "simulationTick": 1232,
+        "tickSeconds": 0.008333333333333333,
+        "board": "882482963d27452dbec3a4f1b107c13e"
+      },
+      "native": {
+        "DataID": 11,
+        "mZombieType": "Balloon",
+        "mZombiePhase": "BalloonWalking",
+        "mFlyingHealth": 0,
+        "mBodyHealth": 920,
+        "mRow": 0
+      }
+    }
+  ]
+}

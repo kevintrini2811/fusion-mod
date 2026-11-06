@@ -1,0 +1,218 @@
+[
+  {
+    "file": "resources.assets",
+    "type": "Sprite",
+    "path_id": 14696,
+    "name": "FireSpikeRock"
+  },
+  {
+    "file": "resources.assets",
+    "type": "Sprite",
+    "path_id": 16300,
+    "name": "FireSpike"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185765,
+    "name": "CaltropKelp Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185769,
+    "name": "SuperCaltropPot Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185814,
+    "name": "FireSpikeRock Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185844,
+    "name": "IceCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185882,
+    "name": "CabbageCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185908,
+    "name": "CornCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 185913,
+    "name": "CactusCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186055,
+    "name": "CaltropFume Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186082,
+    "name": "FireSpike Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186096,
+    "name": "Caltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186126,
+    "name": "CaltropPot Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186147,
+    "name": "SunCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186229,
+    "name": "CaltropPumpkin Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186562,
+    "name": "FireCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186566,
+    "name": "MelonCaltrop Skeleton"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186716,
+    "name": "CabbageCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186729,
+    "name": "CactusCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186736,
+    "name": "Caltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186737,
+    "name": "CaltropFume"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186738,
+    "name": "CaltropKelp_land"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186739,
+    "name": "CaltropKelp_water"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186740,
+    "name": "CaltropNut"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186741,
+    "name": "CaltropPot"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186742,
+    "name": "CaltropPumpkin"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186778,
+    "name": "CornCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186835,
+    "name": "FireCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186845,
+    "name": "FireSpikeRock"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186937,
+    "name": "IceCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 186980,
+    "name": "JalaCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 187040,
+    "name": "MelonCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 187213,
+    "name": "SunCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 187228,
+    "name": "SuperCaltrop"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 187229,
+    "name": "SuperCaltropPot"
+  },
+  {
+    "file": "resources.assets",
+    "type": "MonoBehaviour",
+    "path_id": 187313,
+    "name": "TorchSpike"
+  }
+]

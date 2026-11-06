@@ -1,0 +1,39 @@
+{
+  "game_object": 49464,
+  "name": "FireSpikePrefab",
+  "components": [
+    {
+      "path_id": 99939,
+      "type": "Transform"
+    },
+    {
+      "path_id": 126990,
+      "type": "Animator",
+      "controller": 6215,
+      "clips": [
+        3962
+      ]
+    },
+    {
+      "path_id": 124846,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 124722,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 192892,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 3042
+      },
+      "script_name": "CaltropTorch"
+    },
+    {
+      "path_id": 121829,
+      "type": "Rigidbody2D"
+    }
+  ]
+}

@@ -120,6 +120,7 @@ internal static class RollingProjectiles
     internal static void Move(Projectile projectile, Shot shot)
     {
         var board = projectile.mBoard;
+        TorchweedFusions.Convert(projectile);
         ChargeTorchFusions.Convert(projectile);
         if (shot.SolarBall && shot.ChargeTicks > 0) { --shot.ChargeTicks; return; }
         if (shot.SolarBall) shot.AnimationTime += .01f * shot.AnimationSpeed;

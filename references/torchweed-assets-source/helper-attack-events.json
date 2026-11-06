@@ -1,0 +1,31 @@
+{
+  "source": "pvzreplanted/pvzfusion/english-4.0.5.2/Game Files/PlantsVsZombiesRH_Data/data.unity3d",
+  "sha256": "30094749d8dfbcae49f53cba4844deb8f67ef30882953311dac27799bcb68d03",
+  "clips": [
+    {
+      "path_id": 3979,
+      "name": "attack",
+      "duration": 0.6666666865348816,
+      "events": [
+        {
+          "time": 0.3333333432674408,
+          "functionName": "AnimAttack",
+          "data": "",
+          "objectReferenceParameter": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "floatParameter": 0.0,
+          "intParameter": 0,
+          "messageOptions": 0
+        }
+      ]
+    },
+    {
+      "path_id": 3980,
+      "name": "idle",
+      "duration": 2.0,
+      "events": []
+    }
+  ]
+}
