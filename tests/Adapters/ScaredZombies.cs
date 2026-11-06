@@ -1,7 +1,8 @@
 // Library boundary double. The real registry has its own independent suite.
 namespace FusionMod
 {
-    internal static class FusionZombies { internal static readonly object Eyes = new(); }
+    internal static class PuffSpreading { internal static void Create(Il2CppReloaded.Gameplay.Board board, FusionService.Plan plan, System.Collections.Generic.List<Il2CppReloaded.Gameplay.Plant> created) {} }
+    internal static class FusionZombies { internal static readonly object Eyes = new(), EyesCone = new(), EyesBucket = new(); }
 }
 namespace ZombieLibrary
 {

@@ -10,11 +10,12 @@ internal static class ExplodeOShooter
 {
     internal static bool IsExplode(Plant plant) => FusionPlant.From(plant) == FusionPlant.ExplodeOShooter;
 
-    internal static void Detonate(Projectile projectile)
+    internal static void Detonate(Projectile projectile, int? damageOverride = null)
     {
         var board = projectile.mBoard;
         if (board == null || projectile.mDead) return;
-        int damage = CherryShooter.ExplosionDamage(projectile);
+        int damage = damageOverride ?? CherryShooter.ExplosionDamage(projectile);
+        var damageRange = damageOverride.HasValue ? projectile.mDamageRangeFlags : DamageRangeFlags.Ground;
         float x = projectile.mPosX, y = projectile.mPosY;
         int row = projectile.mRow, order = projectile.mRenderOrder;
         // Remove provenance before damage callbacks: a reentrant impact must
@@ -31,7 +32,7 @@ internal static class ExplodeOShooter
             var zombie = zombies[i];
             if (zombie == null || zombie.mDead || zombie.IsDeadOrDying() || zombie.mMindControlled
                 || Math.Abs(zombie.mRow - row) > 1
-                || !zombie.EffectedByDamage(DamageRangeFlags.Ground)) continue;
+                || !zombie.EffectedByDamage(damageRange)) continue;
             var rect = zombie.GetZombieRect();
             float dx = x - Math.Clamp(x, rect.xMin, rect.xMax);
             float dy = y - Math.Clamp(y, rect.yMin, rect.yMax);
@@ -40,7 +41,7 @@ internal static class ExplodeOShooter
         }
         foreach (var (zombie, id) in targets)
         {
-            if (zombie.DataID != id || !SquashFusions.Eligible(board, zombie, DamageRangeFlags.Ground)) continue;
+            if (zombie.DataID != id || !SquashFusions.Eligible(board, zombie, damageRange)) continue;
             // Explosion damage hits shield and body without distance falloff.
             // No extra native pea hit, no plant damage and no ladder deletion.
             zombie.TakeDamage(damage, DamageFlags.HitsShieldAndBody | DamageFlags.DoesntLeaveBody);

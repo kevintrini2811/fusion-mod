@@ -37,6 +37,19 @@ Plant Click(Board b, SeedType seed, int slot, bool potBottom = true)
 }
 List<Plant> Live(Board b) => b.m_plants.Where(p => !p.mDead && p.mIsOnBoard && !p.Support).ToList();
 
+// Native depth also subtracts mX. Front-left/right offsets must never
+// override the triangle's back-to-front order, including recomputation.
+{
+    var b = new Board();
+    var back = Add(b, FusionPlant.PeaShroom, 0);
+    var right = Add(b, FusionPlant.PeaShroom, 1);
+    var left = Add(b, FusionPlant.PeaShroom, 2);
+    Check(back.mRenderOrder < right.mRenderOrder && back.mRenderOrder < left.mRenderOrder,
+        "Upper mushroom renders behind both lower mushrooms");
+    Check(back.CalcRenderOrder() == back.mRenderOrder && right.CalcRenderOrder() == right.mRenderOrder
+        && left.CalcRenderOrder() == left.mRenderOrder, "Native recomputation preserves slot depth");
+}
+
 // Add an isolated Sun-shroom test fixture to exercise
 // the real placement/recipe/batch paths without publishing an invented recipe.
 var recipes = (Dictionary<(FusionPlant, FusionPlant), FusionPlant>)typeof(FusionRecipes)

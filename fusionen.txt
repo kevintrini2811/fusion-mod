@@ -1,0 +1,287 @@
+Pflanze1 | Pflanze2 | Fusionname
+Aegis Umbrella | Cabbage-pult | Midas Umbrella
+Alchemist Umbrella | Umbrella Kale | Midas Umbrella
+Aloe Aqua | Bamblock | Bambloe
+Aloe Aqua | Hoarfrost Lichen | Aloe Nivea
+Aloe Aqua | Lithops | Aqua Lithops
+Aloe Aqua | Saw-me-not | Soak-me-not
+Aloe Aqua | Shield-shroom | Aqua Shield-shroom
+Aloe Aqua | Snow Lotus | Aloe Alba
+Aloe Aqua | Spruce Sawshooter | Spruce Supershooter
+Aloe Aqua | Spruce Sharpshooter | Spruce Sprayshooter
+Aloe Aqua | Sword-shroom | Aqua Sword-shroom
+Aloe Aqua | Tundraweed | Aqua Tundraweed
+Apeacalypse Minigun | Snipea | Apeacalypse Railgun
+Apeacalypse Railgun | Peashooter | Apeacalypse Minigun
+Aristocattail | Amp-nion | Thunder Bunnyon
+Arteris Cabbage | Plantern | Selene Cabbage
+Astro-nut | Kernel-pult | Cosmo-pult
+Atomheart Plantern | Gloom-shroom | Shroomageddon
+Avalanche-shroom | Doom-shroom | Oblivion-shroom
+Avarice-shroom | Doom-shroom | Calamity-shroom
+Axion Orbiter | Plantern | Photon Splitter
+Baby Corn | Portal-pult | Cosmo-pult
+Bamblock | Hoarfrost Lichen | Bamblichen
+Bamblock | Saw-me-not | Bamblade
+Bamblock | Snow Lotus | Bamblotus
+Bamblock | Spruce Sharpshooter | Bamboo Shooter
+Bamboom | Pepper Popper | Dragonbreath Torcher
+Big Bang Cherry | Squash | Big Crunch Squash
+Big Crunch Squash | Cherry Bomb | Big Bang Cherry
+Black Cherry | Cherry Bomb | Big Bang Cherry
+Blast Pumpkin | Cactus | Laser Pumpkin
+Blover | Cactus | Cactus Drone
+Blover | Cherry Bomb | Cherry Drone
+Blover | Cyclover | Quetzalcoatl Blover
+Blover | Magnet-shroom | Magnet Blover
+Blover | Melon-pult | Fall Melon
+Blover | Pea-storm Commando | Drone Commando
+Blover | Peashooter | Pea Drone
+Blover | Potato Mine | Levitater
+Blover | SP Phoenix Threepeater | SP Phoenix Drone
+Blover | Squash | Squash Drone
+Blover | Starfruit | Starblover
+Blover | Umbrella Leaf | Hoverleaf
+Blover | Wall-nut | Drone-nut
+Boreas Umbrella | Plantern | Pharos Umbrella
+Buck-shroom | Magnet-shroom | Buck-shroom Squad
+Buck-shroom Squad | Blover | Buck-strike Squadron
+Buck-strike Squadron | Magnet-shroom | Buck-shroom Squad
+Buckshooter | Football Gatling | Buckshot Commando
+Buckshot Commando | Chrono Core | Synchronizer Snipea
+Butterweed | Squashweed | Cornveyor Weed
+Cabbage-pult | Fume-shroom | Rebound-shroom
+Cabbage-pult | Spikeweed | Bounceweed
+Cactus | Squash | Cactus Squash
+Calamity-shroom | Marigold | Avarice-shroom
+Cattail | Nyan Squash | Aristocattail
+Cattail | Snipea | Snipurr
+Cattail Girl | Hypno-shroom | Mesmer Cattail (Aquatic)
+Charm-shroom | Hypno Magnet | Charmatron
+Cherrizilla | Garlic | Garlizilla
+Cherry Bomb | Hypno-shroom | Catalyst-shroom
+Cherry Bomb | Jalapeno | Pepper Popper
+Cherry Bomb | Magnet-shroom | Grenadier Magnet
+Cherry Bomb | Pea-storm Commando | Dynamite Commando
+Cherry Bomb | Umbrella Leaf | Bombrella
+Cherry Chomper | Chompzilla | Cherrizilla
+Chomper | Hypno-shroom | Hypno Chomper
+Chomper | Plantern | Lumos Angler
+Chomper | Snipea | Snapper Snipea
+Chomper Maw | Lumos Angler | Tyrannoflora Lux
+Chrono Melon | Winter Melon | Maelonstorm
+Chrono Pea | Split Beam | Photon Splitter
+Chrono-nut | Pumpkin Chest | Ender Pumpkin Chest
+Cob Cannon | Ice-shroom | Cryo Cannon
+Cob Cannon | Jalapeno | Pyro Cannon
+Cob-literator | Melon-pult | Panmelonium
+Cosmo-pult | Wall-nut | Astro-nut
+Cryo Cannon | Demise-shroom | Cob-literator
+Cryonic-shroom | Glacier-shroom | Doominator
+Curse-shroom | Doom-shroom | Calamity-shroom
+Demise-shroom | Ice-shroom | Avalanche-shroom
+Deucalion-shroom | Cattail | Prometheus Liontail
+Doom Chomper | M.A.D. Pepper | Grim Arbiter
+Doom-shroom | Hypno-shroom | Curse-shroom
+Doom-shroom | Jalapeno | M.A.D. Pepper
+Doom-shroom | Kernel-pult | Debris-pult
+Doom-shroom | Melon-pult | Doom-pult
+Doom-shroom | Snipea | Berserker Snipea
+Doom-shroom | Torchwood | Doomwood
+Doom-shroom | Umbrella Leaf | Doombrella
+Doominator | Cactus | Thornminator
+Dormant-shroom | Bucket | Doomplate-shroom
+Dormant-shroom | Chrono Core | Doomwarp-shroom
+Dormant-shroom | Jack-in-the-Box | Doombox-shroom
+Dyson Magnet | Cherry Bomb | Tesla Magnet
+Empress-shroom | Cherry Bomb | Enchantress-shroom
+Enchantress-shroom | Hypno-shroom | Empress-shroom
+Explode-o-shooter | Gatling Cherry | Gatling Cherrybomber
+Flame Cattail | Pepper Popper | Prometheus Liontail
+Flame Tall-nut | Frost Tall-nut | Obsidian Tall-nut
+Flower Pot | Cornveyor Weed | Cornposter Pot
+Flower Pot | Dragonbreath Torcher | Pyroboros Pot
+Flower Pot | Snipea | Snipot
+Football-shroom | Summer Melon | Napalm-shroom
+Frost Gloom-shroom | Glacier-shroom | Shroomageddon
+Fume-shroom | Marigold | Loan-shroom
+Fume-shroom | Pea-storm Commando | Flurry Commando
+Fume-shroom | Trippy-shroom | Charm-shroom
+Fungularity | Melon-pult | Maelonstorm
+Garlic | Golden Umbrella | Alchemist Umbrella
+Garlic | Snipea | Plaguebringer Snipea
+Garlic-pult | Salad-pult | Wither-pult
+Garlizilla | Cherry Bomb | Cherrizilla
+Gatling Cherrybomber | Blover | Cherrybomber Drone
+Gatling Doom | Doom-shroom | SP Gatling Doom
+Gatling Doom | Scaredy-shroom | Gatling Frenzy-shroom
+Gatling Frenzy-shroom | Doom-shroom | SP Gatling Frenzy-shroom
+Gatling Frenzy-shroom | Peashooter | Gatling Doom
+Gatling Icicle-shroom | Peashooter | SP Gatling Icicle-shroom
+Gatling Icicle-shroom | Sunflower | Gatling Sunburst-shroom
+Gatling Pea-shroom | Ice-shroom | Gatling Icicle-shroom
+Gatling Sunburst-shroom | Ice-shroom | Gatling Icicle-shroom
+Gatling Sunburst-shroom | Peashooter | SP Gatling Sunburst-shroom
+Gloom-shroom | Pea-storm Commando | Melancholy Commando
+Gold Magnet | Torchthree | Tycoonwood
+Golden Cabbage | Solar-pult | Helios Cabbage
+Golden Garlic | Umbrella Leaf | Alchemist Umbrella
+Golden Pot | Sunflower | Radiant Pot
+Golden Sunflower | Torchflower | Princess Solarnova
+Grenadier Magnet | Lumos Magnet | Tesla Magnet
+Grim Arbiter | Potato Mine | Wicked Undertater
+Gutsy-shroom | Hypno-shroom | Charm-shroom
+Hail-shroom | Gatling Pea | Gatling Icicle-shroom
+Hearthrock | Icerock | Obsidian Spikerock
+Helios Cabbage | Plantern | Selene Cabbage
+Hoarfrost Lichen | Saw-me-not | Snow-me-not
+Hoarfrost Lichen | Snow Lotus | Hoarfrost Lotus
+Hoarfrost Lichen | Spruce Sharpshooter | Spruce Snowshooter
+Hydra Kelp | Twin Marigold | Kelptain Goldbeard
+Hypno-shroom | Cattail Girl | Mesmer Cattail (Land)
+Hypno-shroom | Hypno-shroom | Empress-shroom
+Hypno-shroom | Ice-shroom | Cryonic-shroom
+Hypno-shroom | Magnet-shroom | Hypno Magnet
+Hypno-shroom | Pea-storm Commando | Brainstorm Commando
+Hypno-shroom | Scaredy-shroom | Trippy-shroom
+Hypno-shroom | Starfruit | Zodiac-shroom
+Hypno-shroom | Sunflower | Comet-shroom
+Hypno-shroom | Wall-nut | Hypno-nut
+Ice-shroom | Pea-storm Commando | Blizzard Commando
+Ice-shroom | Torchwood | Frostburn-wood
+Icicle-shroom | Split Pea | Gatling Icicle-shroom
+Infernal Sparkwood | Squash | Infernal Squashwood
+Infernal Squashwood | Starfruit | Infernal Sparkwood
+Infernowood | Spicy Squash | Infernal Squashwood
+Jalapeno | Kernel-pult | Popcorn-pult
+Jalapeno | Scorchwood | Infernowood
+Jalapeno | Snipea | Blazer Snipea
+Jugger-nut | Spicicle | Obsidian Jugger-nut
+Kaledera Eruptor | Kernel-pult | Vulcannon
+Kelp-spreader | Squash | Hydra Kelp
+Kelptain Goldbeard | Zombie Giftbox | Sea-greed Zombox
+Kernel Morph | Bucket | Bolt-pult
+Kernel Morph | Chrono Core | Portal-pult
+Kraken-shroom | Minnow-shroom | Scylla Leviathan
+Laser Pumpkin | Cherry Bomb | Blast Pumpkin
+Lifereaver Spruce | Bamblock | Soulrender Bamboo
+Lithops | Shield-shroom | Shield Lithops
+Lithops | Sword-shroom | Sword Lithops
+Lithops | Tundraweed | Lithops Tundraweed
+Litter-pult | Melon-pult | Wither-pult
+Lumos Cactus | Lumos Umbrella | Pharos Umbrella
+Lumos Magnet | Starfruit | Stardrop
+Maelonstorm | Doom-shroom | Fungularity
+Magma-shroom | Melon-pult | Napalm-shroom
+Magnate Plantern | Torchwood | Tycoonwood
+Magnet Cactus | Stardrop | Magnetar
+Magnet-shroom | Plantern | Lumos Magnet
+Magnet-shroom | Starglow | Stardrop
+Magnet-shroom | Sunflower | Solar Magnet
+Magnet-shroom | Wall-nut | Mag-nut
+Magnetar | Blover | Pulsar
+Melon Morph | Chrono Core | Chrono Melon
+Midas Umbrella | Melon-pult | Aegis Umbrella
+Napalm-shroom | Kernel-pult | Magma-shroom
+Oblivion-shroom | Ice-shroom | Avalanche-shroom
+Obsidian Mine | Tall-nut | Obsidian Tall-nut
+Obsidian Spike-nut | Spikerock | Obsidian Spikerock
+Obsidian Spikerock | Wall-nut | Obsidian Spike-nut
+Obsidian Tall-nut | Potato Mine | Obsidian Mine
+Omni Pumpkin | Starfruit | Omni Pumpkin
+Panmelonium | Kernel-pult | Cob-literator
+Pea-shroom | Split Snow | Gatling Icicle-shroom
+Pea-storm Commando | Peashooter | Snipea
+Pea-storm Commando | Potato Mine | Peatato Commando
+Pea-storm Commando | Threepeater | Tri-phoon Commando
+Pea-storm Commando | Wall-nut | Pea-nut Commando
+Peashooter | Chrono Core | Chrono Pea
+Perfume-shroom | Scaredy-shroom | Charm-shroom
+Pharos Umbrella | Ice-shroom | Boreas Umbrella
+Phoenix Threepeater | Blover | Phoenix Drone
+Phoenix Threepeater | Jalapeno | SP Phoenix Threepeater
+Photon Splitter | Garlic | Axion Orbiter
+Plantern | Starfruit | Starglow
+Plantern | Starmorph | Stardrop
+Prometheus Liontail | Sea-shroom | Deucalion-shroom
+Puff-shroom | Chomper | Nibble-shroom
+Puff-shroom | Cryolina Reaper | Habanero Weeper
+Puff-shroom | Gatling Snow | Gatling Icicle-shroom
+Puff-shroom | Snipea | Snipea-shroom Squad
+Puff-shroom | Squash | Squish
+Puff-shroom | Wither-pult | Litter-pult
+Pulsar | Starfruit | Magnetar
+Pumpkarrier | Magnet Blover | Laser Pumpkin
+Pumpkin | Charmatron | Pumpkaptivator
+Pumpkin | Doom-shroom | Doom Pumpkin
+Pumpkin | Hypno-shroom | Hypno Pumpkin
+Pumpkin | Magnet-shroom | Pumpkin Morph
+Pumpkin | Pea-storm Commando | Pumpkommando
+Pumpkin | Pumpkin | Pumpkin Chest
+Pumpkin | Quasar | Omni Pumpkin
+Pumpkin | Squash | Squash Pumpkin
+Pumpkin | Threepeater | Three-pumpkin
+Pumpkin | Torchwood | Pumpkin Brazier
+Pumpkin Morph | Bucket | Steel Pumpkin
+Pumpkin Morph | Jack-in-the-Box | Joker Pumpkin
+Pumpkin Morph | Magnet-shroom | Omni Pumpkin
+Pumpkin Morph | Pickaxe | Miner Pumpkin
+Pyro Cannon | Pepper Popper | Vulcannon
+Repeat-shroom | Snow Repeater | Gatling Icicle-shroom
+Rust-shroom | Football Helmet | Football-shroom
+Saw-me-not | Saw-me-not | Twin Saw-me-not
+Saw-me-not | Snow Lotus | Shield Lotus
+Saw-me-not | Spruce Sharpshooter | Spruce Sawshooter
+Saw-me-not | Spruce Sprayshooter | Spruce Supershooter
+Scaredy-shroom | Snipea | Fearmonger Snipea
+Sea-greed Zombox | Plant Giftbox | Kelptain Goldbeard
+Sea-shroom | Chomper | Gulper-shroom
+Sea-shroom | Doom-shroom | Orca-shroom
+Sea-shroom | Magnet-shroom | Anchor-shroom
+Sea-shroom | Torchwood | Torch Driftwood
+Selene Cabbage | Sunflower | Helios Cabbage
+Shield-shroom | Sword-shroom | Clash-shroom
+Shield-shroom | Tundraweed | Shield Tundraweed
+Shroomageddon | Plantern | Atomheart Plantern
+Snipea | Peashooter | Pea-storm Commando
+Snipea | Starfruit | Starcaller Snipea
+Snow Lotus | Spruce Sharpshooter | Snowbloom Spruce
+Snowbloom Spruce | Spruce Supershooter | Lifereaver Spruce
+Soak-me-not | Spruce Sharpshooter | Spruce Supershooter
+Soulrender Bamboo | Spruce Sharpshooter | Lifereaver Spruce
+SP Gatling Doom | Scaredy-shroom | SP Gatling Frenzy-shroom
+SP Gatling Frenzy-shroom | Peashooter | SP Gatling Doom
+SP Gatling Icicle-shroom | Sunflower | SP Gatling Sunburst-shroom
+SP Gatling Sunburst-shroom | Ice-shroom | SP Gatling Icicle-shroom
+SP Twin Inferno-nut | Sunflower | SP Twin Solar-nut
+SP Twin Solar-nut | Jalapeno | SP Twin Inferno-nut
+Spicicle | Spicicle | Cryolina Reaper
+Spikeweed | Threepeater | Weed-spreader
+Spikeweed | Torchwood | Torchweed
+Split Pea-shroom | Snow Pea | Gatling Icicle-shroom
+Spruce Ballista | Aloe Aqua | Atlantis Ballista
+Spruce Sharpshooter | Spruce Ballista | Spruce Ballista
+Squash | Torchwood | Squashwood
+Starmorph | Jack-in-the-Box | Jokestar
+Starmorph | Pickaxe | Starpick
+Strangle Kelp | Threepeater | Hydra Kelp
+Sword-shroom | Tundraweed | Sword Tundraweed
+Synchronizer Snipea | Football Helmet | Buckshot Commando
+Tangle Kelp | Squash-spreader | Hydra Kelp
+Tangle Kelp | Torchwood | Torch-kelp
+Tesla Magnet | Sunflower | Dyson Magnet
+Thornminator | Fume-shroom | Doominator
+Thorny Pumpkin | Blover | Pumpkarrier
+Thunder Bunnyon | Cattail | Aristocattail
+Titan Pea Turret | Spicicle | Apeacalypse Minigun
+Twin Inferno-nut | Sunflower | Twin Solar-nut
+Twin Inferno-nut | Wall-nut | SP Twin Inferno-nut
+Twin Solar-nut | Jalapeno | Twin Inferno-nut
+Twin Solar-nut | Wall-nut | SP Twin Solar-nut
+Tycoonwood | Plantern | Magnate Plantern
+Vulcannon | Cabbage-pult | Kaledera Eruptor
+Wall-nut | Chrono Core | Chrono-nut
+Wall-nut | Giga Mecha Fragment | Giga Mecha-nut
+Wall-nut | Mecha Fragment | Mecha-nut
+Wicked Undertater | Chomper | Grim Arbiter
+Windy Pumpkin | Cactus | Pumpkarrier

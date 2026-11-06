@@ -16,6 +16,34 @@ internal static partial class ImportedPeaVisuals
 {
     private static readonly Assets EyesZombieAssets = new(FusionPlant.EyesZombieHead, "EyesZombie");
     private static readonly Dictionary<IntPtr, EyesView> EyesViews = new();
+    private static readonly Dictionary<string, Sprite> EyesArmor = new();
+    private static Dictionary<string, float[]>? eyesArmorFits;
+    private static float[] ArmorFit(string name)
+    {
+        if (eyesArmorFits == null)
+        {
+            using var stream = typeof(ImportedPeaVisuals).Assembly.GetManifestResourceStream("FusionMod.EyesArmor.placement.json")
+                ?? throw new InvalidDataException("Missing Eyes armor placement.");
+            eyesArmorFits = System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, float[]>>(stream)
+                ?? throw new InvalidDataException("Invalid Eyes armor placement.");
+        }
+        return eyesArmorFits[name];
+    }
+    private static Sprite ArmorSprite(string name)
+    {
+        if (EyesArmor.TryGetValue(name, out var sprite)) return sprite;
+        using var stream = typeof(ImportedPeaVisuals).Assembly.GetManifestResourceStream("FusionMod.EyesArmor." + name + ".png")
+            ?? throw new InvalidDataException(name);
+        using var bytes = new MemoryStream(); stream.CopyTo(bytes);
+        var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+        if (!ImageConversion.LoadImage(texture, bytes.ToArray(), true))
+        { Object.Destroy(texture); throw new InvalidDataException(name); }
+        texture.hideFlags |= HideFlags.DontUnloadUnusedAsset;
+        sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(.5f, 0), 100);
+        sprite.hideFlags |= HideFlags.DontUnloadUnusedAsset;
+        sprite.name = "EyesArmor." + name;
+        EyesArmor.Add(name, sprite); return sprite;
+    }
 
     internal static void EnsureEyesZombie(Zombie zombie)
     {
@@ -66,7 +94,12 @@ internal static partial class ImportedPeaVisuals
         foreach (var (pointer, view) in EyesViews.ToArray())
             if (board == null || view.Board == board.Pointer)
             { view.Dispose(); EyesViews.Remove(pointer); }
-        if (board == null) EyesZombieAssets.ReleaseAssets();
+        if (board == null)
+        {
+            EyesZombieAssets.ReleaseAssets();
+            foreach (var sprite in EyesArmor.Values) { Object.Destroy(sprite.texture); Object.Destroy(sprite); }
+            EyesArmor.Clear();
+        }
     }
 
     private sealed class EyesHeadEffect : IDisposable
@@ -119,7 +152,7 @@ internal static partial class ImportedPeaVisuals
         private IntPtr controller;
         internal bool Failed;
         private GameObject? root;
-        private SpriteRenderer? nativeShadow;
+        private SpriteRenderer? nativeShadow, armor;
         private bool facingRight;
         private float nativeFootprint;
         private readonly MaterialPropertyBlock colorEffects = new();
@@ -128,6 +161,15 @@ internal static partial class ImportedPeaVisuals
         private SpriteRenderer?[] renderers = Array.Empty<SpriteRenderer?>();
         private readonly List<(Renderer Renderer, bool Enabled)> native = new();
         internal EyesView(Zombie zombie) { this.zombie = zombie; id = zombie.DataID; Board = zombie.mBoard.Pointer; }
+        private Vector3 GroundPosition(ReloadedController owner)
+        {
+            // Swimming selects ShadowType.None. Its pooled shadow can have no
+            // sprite and retains another actor's offset and position. Anchor to
+            // the live controller with the Browncoat's native (23, 92) footprint.
+            if (zombie.mInPool || nativeShadow == null || nativeShadow.sprite == null)
+                return owner.m_transform.TransformPoint(new Vector3(23 * 2.82f, -92 * 2.82f, 0));
+            return nativeShadow.transform.TransformPoint(nativeShadow.sprite.bounds.center);
+        }
         internal bool Valid => zombie.DataID == id && zombie.mBoard?.Pointer == Board && !zombie.mDead
             && zombie.mZombiePhase is not (ZombiePhase.ZombieBurned or ZombiePhase.ZombieMowered)
             && ScaredContent.Eyes(zombie) && (controller == IntPtr.Zero || zombie.mController?.Pointer == controller);
@@ -163,6 +205,35 @@ internal static partial class ImportedPeaVisuals
             return true;
         }
 
+        private void UpdateArmor()
+        {
+            bool visible = zombie.mHasHead && zombie.mHelmHealth > 0 && zombie.mZombieType is ZombieType.TrafficCone or ZombieType.Pail;
+            if (!visible) { if (armor != null) armor.enabled = false; return; }
+            var head = renderers.FirstOrDefault(renderer => renderer != null && renderer.name == "anim_head1-sprite" && renderer.sprite != null);
+            if (head == null) return;
+            if (armor == null)
+            {
+                var go = new GameObject("EyesArmor") { layer = head.gameObject.layer };
+                go.transform.SetParent(head.transform, false);
+                armor = go.AddComponent<SpriteRenderer>();
+                armor.sharedMaterial = head.sharedMaterial;
+                armor.sortingOrder = EyesZombieAssets.model!.Nodes.Max(node => node.Order) + 10;
+            }
+            string kind = zombie.mZombieType == ZombieType.TrafficCone ? "cone" : "bucket";
+            int stage = zombie.mHelmHealth * 3L > zombie.mHelmMaxHealth * 2L ? 1
+                : zombie.mHelmHealth * 3L > zombie.mHelmMaxHealth ? 2 : 3;
+            string name = kind + (stage == 1 ? "" : stage.ToString());
+            armor.sprite = ArmorSprite(name);
+            var fit = ArmorFit(name);
+            var bounds = head.sprite.bounds;
+            float width = bounds.size.x * fit[0];
+            armor.transform.localScale = Vector3.one * (width / armor.sprite.bounds.size.x);
+            armor.transform.localPosition = new Vector3(bounds.center.x + bounds.size.x * fit[1],
+                bounds.min.y + bounds.size.y * fit[2], 0);
+            armor.color = head.color;
+            armor.enabled = head.enabled && head.gameObject.activeInHierarchy;
+        }
+
         private void HideMissingParts(Model model)
         {
             for (int i = 0; i < model.Nodes.Length; ++i)
@@ -190,7 +261,7 @@ internal static partial class ImportedPeaVisuals
                 for (int index = 0; index < slots.Count; ++index)
                 {
                     var slot = slots.Items[index];
-                    if (slot == null || !slot.Bone.Active) continue;
+                    if (slot == null || !slot.Bone.Active || slot.Data.Name is "anim_cone" or "anim_bucket") continue;
                     // The first native pose can still have only the body skin.
                     // Measure the ordinary head from the same loaded SkeletonData,
                     // on its current bones, without changing the live attachments.
@@ -271,7 +342,7 @@ internal static partial class ImportedPeaVisuals
                 var body = owner.GetComponentInChildren<MeshRenderer>(true);
                 if (body == null || !body) return;
                 nativeShadow = owner.m_shadowController?.m_spriteRenderer;
-                if (nativeShadow == null || !nativeShadow || nativeShadow.sprite == null) return;
+                if (nativeShadow == null || !nativeShadow) return;
                 assets.Load(zombie.mBoard, null);
                 var model = assets.model!;
                 // Capture before adding imported renderers. Never hide native art
@@ -312,9 +383,10 @@ internal static partial class ImportedPeaVisuals
                 HideMissingParts(model);
                 var shadow = renderers[model.GroundNode]!;
                 float width = shadow.transform.TransformVector(new Vector3(shadow.sprite.bounds.size.x, 0, 0)).magnitude;
-                float targetWidth = nativeShadow.transform.TransformVector(new Vector3(nativeShadow.sprite.bounds.size.x, 0, 0)).magnitude;
-                if (!float.IsFinite(width) || width <= 0 || !float.IsFinite(targetWidth) || targetWidth <= 0)
-                    throw new InvalidDataException("Eyes zombie has no source or native footprint.");
+                float targetWidth = nativeShadow.sprite == null ? 0
+                    : nativeShadow.transform.TransformVector(new Vector3(nativeShadow.sprite.bounds.size.x, 0, 0)).magnitude;
+                if (!float.IsFinite(width) || width <= 0)
+                    throw new InvalidDataException("Eyes zombie has no source footprint.");
                 // Measure the actual normal zombie renderer in this scene.
                 // Compare complete bodies in the same world coordinate space.
                 float min = float.MaxValue, max = float.MinValue;
@@ -378,6 +450,7 @@ internal static partial class ImportedPeaVisuals
                         current * target / nativeFootprint, current * target / nativeFootprint);
                     nativeFootprint = target;
                 }
+                else if (target > 0) nativeFootprint = target;
             }
             var order = root.GetComponent<SortingGroup>();
             var bodyRenderer = zombie.mController.GetComponentInChildren<MeshRenderer>(true);
@@ -385,16 +458,15 @@ internal static partial class ImportedPeaVisuals
             time = visualClock.Sample(clip, time);
             Pose(data, transforms, time, null, renderers, assets.Sprites, clip);
             HideMissingParts(data);
-            if (nativeShadow != null && nativeShadow && nativeShadow.sprite != null)
+            UpdateArmor();
+            if (nativeShadow != null && nativeShadow)
             {
                 var ground = renderers[data.GroundNode]!;
-                root.transform.position += nativeShadow.transform.TransformPoint(nativeShadow.sprite.bounds.center)
+                root.transform.position += GroundPosition(owner)
                     - ground.transform.TransformPoint(ground.sprite.bounds.center);
                 // Imported artwork anchors to the ground shadow. Native pool
                 // entry lowers only the actor, so transfer that saved height.
-                if (zombie.mInPool || zombie.mZombieHeight == ZombieHeight.OutOfPool)
-                    root.transform.position -= root.transform.TransformVector(Vector3.up).normalized
-                        * (zombie.GetDrawPos().BodyY * 2.82f);
+                Zombies.ApplyBodyDisplacement(zombie, root.transform);
             }
             var effects = owner.m_materialEffectController;
             bool cold = zombie.mIceTrapCounter > 0 || zombie.mChilledCounter > 0;
@@ -425,7 +497,8 @@ internal static partial class ImportedPeaVisuals
                     renderer.SetPropertyBlock(colorEffects);
                 }
             }
-            bool inWater = PoolDuckVisuals.Waterline(zombie, root.transform, out var water, out var up);
+            var groundPosition = GroundPosition(owner);
+            bool inWater = Zombies.BodyClipPlane(zombie, root.transform, groundPosition, out var water, out var up);
             for (int i = 0; i < renderers.Length; ++i)
             {
                 if (renderers[i] is not { } renderer) continue;
@@ -433,6 +506,11 @@ internal static partial class ImportedPeaVisuals
                 if (i == data.GroundNode && zombie.mInPool) { renderer.enabled = false; continue; }
                 if (!poolClips.TryGetValue(i, out var poolClip)) poolClips[i] = poolClip = new PoolSpriteClip();
                 poolClip.Apply(renderer, water, up, inWater);
+            }
+            if (armor != null && armor.enabled)
+            {
+                if (!poolClips.TryGetValue(-1, out var armorClip)) poolClips[-1] = armorClip = new PoolSpriteClip();
+                armorClip.Apply(armor, water, up, inWater);
             }
             var butterController = zombie.mButterReanim?.mController;
             foreach (var (renderer, _) in native)

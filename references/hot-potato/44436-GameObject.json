@@ -1,0 +1,44 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 105740
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124491
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124052
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 121522
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 126042
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 195893
+      }
+    }
+  ],
+  "m_Layer": 10,
+  "m_Name": "TorchMinePrefab",
+  "m_Tag": 20001,
+  "m_IsActive": true
+}

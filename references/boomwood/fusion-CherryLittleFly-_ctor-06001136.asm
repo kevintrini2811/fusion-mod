@@ -1,0 +1,11 @@
+004990e0: xor edx, edx
+004990e2: jmp 0x180530bf0
+004990e7: int3 
+004990e8: int3 
+004990e9: int3 
+004990ea: int3 
+004990eb: int3 
+004990ec: int3 
+004990ed: int3 
+004990ee: int3 
+004990ef: int3 

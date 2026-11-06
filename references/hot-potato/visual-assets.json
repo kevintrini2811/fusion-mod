@@ -1,0 +1,239 @@
+{
+  "bundle": "pvzfusion/english-4.0.5.2/Game Files/PlantsVsZombiesRH_Data/data.unity3d",
+  "bundle_sha256": "30094749d8dfbcae49f53cba4844deb8f67ef30882953311dac27799bcb68d03",
+  "prefab_path_id": 44436,
+  "animator_controller_path_id": 6391,
+  "ignored_bindings": [],
+  "shoot_layer": null,
+  "animator_layers": [
+    {
+      "data": {
+        "m_StateMachineIndex": 0,
+        "m_StateMachineSynchronizedLayerIndex": 0,
+        "m_BodyMask": {
+          "word0": 4294967295,
+          "word1": 4294967295,
+          "word2": 524287
+        },
+        "m_SkeletonMask": {
+          "data": {
+            "m_Data": []
+          }
+        },
+        "m_Binding": 756556552,
+        "(int&)m_LayerBlendingMode": 0,
+        "m_DefaultWeight": 0.0,
+        "m_IKPass": false,
+        "m_SyncedLayerAffectsTiming": false
+      }
+    },
+    {
+      "data": {
+        "m_StateMachineIndex": 1,
+        "m_StateMachineSynchronizedLayerIndex": 0,
+        "m_BodyMask": {
+          "word0": 4294967295,
+          "word1": 4294967295,
+          "word2": 524287
+        },
+        "m_SkeletonMask": {
+          "data": {
+            "m_Data": []
+          }
+        },
+        "m_Binding": 1490946511,
+        "(int&)m_LayerBlendingMode": 1,
+        "m_DefaultWeight": 1.0,
+        "m_IKPass": false,
+        "m_SyncedLayerAffectsTiming": false
+      }
+    }
+  ],
+  "additive_reference": null,
+  "static_prefab": false,
+  "ground_node": {
+    "Name": "Shadow",
+    "Path": "Shadow",
+    "Parent": 0,
+    "Active": true,
+    "Position": [
+      0.10000000149011612,
+      1.0499999523162842,
+      0.0
+    ],
+    "Rotation": [
+      -0.0,
+      -0.0,
+      -0.0,
+      1.0
+    ],
+    "Scale": [
+      6.838352203369141,
+      6.838352203369141,
+      0.9769074320793152
+    ],
+    "Sprite": 15757,
+    "Order": 0,
+    "FlipX": false,
+    "FlipY": false,
+    "Color": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "Enabled": true
+  },
+  "serialized_file": "resources.assets",
+  "objects": [
+    {
+      "path_id": 23137,
+      "name": "PotatoMine_rock5a",
+      "type": "Sprite",
+      "file": "sprite-23137.png",
+      "sha256": "1c690d793f523a7615980be091ad21a65154a1eaef1f8f3c59e5f6394db9acea"
+    },
+    {
+      "path_id": 18423,
+      "name": "PotatoMine_rock3a",
+      "type": "Sprite",
+      "file": "sprite-18423.png",
+      "sha256": "ad1c78889fe593b857148dbb3aa1ebf38de5cebee5873ec580fb037dc132f232"
+    },
+    {
+      "path_id": 20022,
+      "name": "PotatoMine_rock1a",
+      "type": "Sprite",
+      "file": "sprite-20022.png",
+      "sha256": "3b76b78efaaf10cd4a87b2b4d17694b6ddbd2283c4f66e81592cc0ff5f7a9783"
+    },
+    {
+      "path_id": 8069,
+      "name": "PotatoMine_rock6a",
+      "type": "Sprite",
+      "file": "sprite-8069.png",
+      "sha256": "d2236610b1b91a1b3326ae504d50703b0d8d950ce876b6dd8fe67bcfecbfec86"
+    },
+    {
+      "path_id": 8646,
+      "name": "PotatoMine_rock5b",
+      "type": "Sprite",
+      "file": "sprite-8646.png",
+      "sha256": "cd4dca05e808a844adb04d9e60eb839012b4288752de154824b6fa6b00dd0eec"
+    },
+    {
+      "path_id": 7160,
+      "name": "PotatoMine_rock6b",
+      "type": "Sprite",
+      "file": "sprite-7160.png",
+      "sha256": "7c87b042a5dfe29d2f3b49dadd6504de32b5c29edcb9fbad9e3a1bd75e4b48da"
+    },
+    {
+      "path_id": 18902,
+      "name": "PotatoMine_rock1b",
+      "type": "Sprite",
+      "file": "sprite-18902.png",
+      "sha256": "f6fa675f97ff28ab1746a513701b947e4c3fdeb8c54bfe955d30b36d8aedb7e9"
+    },
+    {
+      "path_id": 18221,
+      "name": "PotatoMine_rock3b",
+      "type": "Sprite",
+      "file": "sprite-18221.png",
+      "sha256": "60fd740379315c6595fdca3c416df3a155456b5a2796037efb3dbf03b3240808"
+    },
+    {
+      "path_id": 18189,
+      "name": "PotatoMine_rock4b",
+      "type": "Sprite",
+      "file": "sprite-18189.png",
+      "sha256": "99bee444a944dfbab923bcdeaa25ecdd1bbd575fdaeb59117a8eaf398f26cfe5"
+    },
+    {
+      "path_id": 13685,
+      "name": "PotatoMine_body",
+      "type": "Sprite",
+      "file": "sprite-13685.png",
+      "sha256": "df617c3896c0f9a5d95e1d1c27fcdd37a53bbb2e292872256e29fb3ff9bd9a3a"
+    },
+    {
+      "path_id": 20239,
+      "name": "Torchwood_fire1a",
+      "type": "Sprite",
+      "file": "sprite-20239.png",
+      "sha256": "c4d325a1a1df2f73098e01db2f3c06fb10be208a8f8fcf91b774cd67de02f5c7"
+    },
+    {
+      "path_id": 10981,
+      "name": "PotatoMine_rock2c",
+      "type": "Sprite",
+      "file": "sprite-10981.png",
+      "sha256": "dd5f33b2a4f11c13094f839fa4b64261cce5e600db11401318992c7e14ed6c96"
+    },
+    {
+      "path_id": 21709,
+      "name": "PotatoMine_rock4c",
+      "type": "Sprite",
+      "file": "sprite-21709.png",
+      "sha256": "d8fcd08209df0b5e0365cde56d04ac783dad987d72f3571c5733ea63e0ace6a9"
+    },
+    {
+      "path_id": 15757,
+      "name": "plantshadow",
+      "type": "Sprite",
+      "file": "sprite-15757.png",
+      "sha256": "a1a1834818bd10c372bb83eb2314d952ca72aa4401e33d8fecdd0aa699774404"
+    },
+    {
+      "path_id": 4390,
+      "name": "idle",
+      "type": "AnimationClip",
+      "sample_rate": 60.0,
+      "duration": 2.0,
+      "channels": 6,
+      "events": []
+    },
+    {
+      "path_id": 23543,
+      "name": "Torchwood_fire1b",
+      "type": "Sprite",
+      "file": "sprite-23543.png",
+      "sha256": "1a2fc088cb72f792d2a58f83d2416f3e7fd5b7d696e018731ac0dd517a52fa7a"
+    },
+    {
+      "path_id": 19228,
+      "name": "Torchwood_fire1c",
+      "type": "Sprite",
+      "file": "sprite-19228.png",
+      "sha256": "5e9912cf6d59ff65a23eabd31e50a7ea20c00dee62d9842f8412413881b6f15e"
+    },
+    {
+      "path_id": 4388,
+      "name": "fire",
+      "type": "AnimationClip",
+      "sample_rate": 60.0,
+      "duration": 0.21666666865348816,
+      "channels": 1,
+      "events": []
+    }
+  ],
+  "files": {
+    "model.json": "4f1d4a3f7057ded7550b4ebf3bf6746572a3d2d72934ee3325580e7146d1c08d",
+    "sprite-10981.png": "dd5f33b2a4f11c13094f839fa4b64261cce5e600db11401318992c7e14ed6c96",
+    "sprite-13685.png": "df617c3896c0f9a5d95e1d1c27fcdd37a53bbb2e292872256e29fb3ff9bd9a3a",
+    "sprite-15757.png": "a1a1834818bd10c372bb83eb2314d952ca72aa4401e33d8fecdd0aa699774404",
+    "sprite-18189.png": "99bee444a944dfbab923bcdeaa25ecdd1bbd575fdaeb59117a8eaf398f26cfe5",
+    "sprite-18221.png": "60fd740379315c6595fdca3c416df3a155456b5a2796037efb3dbf03b3240808",
+    "sprite-18423.png": "ad1c78889fe593b857148dbb3aa1ebf38de5cebee5873ec580fb037dc132f232",
+    "sprite-18902.png": "f6fa675f97ff28ab1746a513701b947e4c3fdeb8c54bfe955d30b36d8aedb7e9",
+    "sprite-19228.png": "5e9912cf6d59ff65a23eabd31e50a7ea20c00dee62d9842f8412413881b6f15e",
+    "sprite-20022.png": "3b76b78efaaf10cd4a87b2b4d17694b6ddbd2283c4f66e81592cc0ff5f7a9783",
+    "sprite-20239.png": "c4d325a1a1df2f73098e01db2f3c06fb10be208a8f8fcf91b774cd67de02f5c7",
+    "sprite-21709.png": "d8fcd08209df0b5e0365cde56d04ac783dad987d72f3571c5733ea63e0ace6a9",
+    "sprite-23137.png": "1c690d793f523a7615980be091ad21a65154a1eaef1f8f3c59e5f6394db9acea",
+    "sprite-23543.png": "1a2fc088cb72f792d2a58f83d2416f3e7fd5b7d696e018731ac0dd517a52fa7a",
+    "sprite-7160.png": "7c87b042a5dfe29d2f3b49dadd6504de32b5c29edcb9fbad9e3a1bd75e4b48da",
+    "sprite-8069.png": "d2236610b1b91a1b3326ae504d50703b0d8d950ce876b6dd8fe67bcfecbfec86",
+    "sprite-8646.png": "cd4dca05e808a844adb04d9e60eb839012b4288752de154824b6fa6b00dd0eec"
+  }
+}

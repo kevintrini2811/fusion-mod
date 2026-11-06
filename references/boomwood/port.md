@@ -1,0 +1,7 @@
+# Boomwood port contract
+
+Source: local Fusion 4.0.5.2. `research-inputs.json` pins the DLL and metadata. `CherryTorch.OnTriggerEnter2D` at 0x49ae40 accepts ordinary peas, explosive cherries and snow peas. The ordinary conversion increments charge and compares strictly greater than 30. `SummonPlant` at 0x49afc0 scans three saved drone slots, preserves explosive-cherry damage and resets charge only after successful creation. `DieEvent` at 0x49ada0 requests 1800 explosion damage.
+
+The port uses Torchwood + Cherrybomb as a saved native identity, native Homing motion and serialized projectile fields for drone damage, parent DataID, slot and stored/flying state. A full rack preserves incoming explosive cherries. Stored drones orbit until an eligible enemy appears; source artwork, rather than native fireball art, renders the released projectile. The existing explosive-cherry effect owns the impact blast and related cherry reactions. Plant death uses the native cherry-bomb damage categories and adjacent lanes. Fertilizer heals; no source growth or ultimate is attached to this plant.
+
+Only one source recipe exists: Torchwood + Cherry Bomb. Both ingredient orders use the existing fusion transaction. The result is absent from native Replanted and has a distinct library identity. Source ID: 1178. Model: CherryTorchPrefab 66712. Projectile: Bullet_fireCherry 61267, original `ireCherryIdle` animation.

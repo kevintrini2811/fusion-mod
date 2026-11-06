@@ -6,10 +6,18 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>22.1.0</Version>
+    <Version>22.2.0</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="assets/fire-nut-projectile/*" LogicalName="FusionMod.FireNutProjectile.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/cherry-drone-projectile/*" LogicalName="FusionMod.CherryDroneProjectile.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/eyes-armor/*.png;assets/eyes-armor/placement.json" LogicalName="FusionMod.EyesArmor.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/hot-potato/*" LogicalName="FusionMod.HotPotato.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/boomwood/*" LogicalName="FusionMod.Boomwood.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/fire-cherry-projectile/*" LogicalName="FusionMod.FireCherryProjectile.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/small-fire-projectile/*" LogicalName="FusionMod.SmallFireProjectile.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/potato-fire-projectile/*" LogicalName="FusionMod.PotatoFireProjectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/tide-shroom/*" LogicalName="FusionMod.TideShroom.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/blacklight-plantern/*" LogicalName="FusionMod.BlacklightPlantern.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/scorchwood/*" LogicalName="FusionMod.Scorchwood.%(Filename)%(Extension)" />

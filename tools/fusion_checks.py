@@ -4,6 +4,7 @@ from collections import Counter
 import difflib
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -435,10 +436,26 @@ def check():
         if prefix == "FusionMod.Almanac":
             require(pattern == "assets/almanac/*", "Unexpected almanac resource path")
             continue
+        if prefix == "FusionMod.EyesArmor":
+            from PIL import Image
+            require(set(resources[prefix]) == {kind + stage + ".png" for kind in ("cone", "bucket") for stage in ("", "2", "3")} | {"eyes-cone.png", "eyes-bucket.png", "placement.json"},
+                    "Incomplete Eyes Zombie armor stages")
+            for path in resources[prefix].values():
+                if path.name == "placement.json":
+                    fits = json.loads(path.read_text())
+                    require(set(fits) == {kind + stage for kind in ("cone", "bucket") for stage in ("", "2", "3")},
+                            "Incomplete native armor placement geometry")
+                    require(all(len(fit) == 3 and all(isinstance(value, (int, float)) and math.isfinite(value) for value in fit)
+                                and fit[0] > 0 for fit in fits.values()), "Invalid native armor placement geometry")
+                    continue
+                with Image.open(path) as armor:
+                    require(armor.mode == "RGBA", "Armor must preserve transparency")
+                    armor.verify()
+            continue
         if prefix == "FusionMod.ZombieAlmanac":
             from PIL import Image
             require(pattern == "assets/zombie-almanac/*", "Unexpected zombie almanac resource path")
-            expected = {key + suffix + ".png" for key in ("eyes", "hypno", "7", "8", "9", "15", "19", "23", "30", "32", "5", "6", "13", "16", "18", "21", "24", "34", "35")
+            expected = {key + suffix + ".png" for key in ("eyes", "eyes-cone", "eyes-bucket", "hypno")
                         for suffix in ("", "-duck")}
             require(set(resources[prefix]) == expected, "Incomplete zombie almanac thumbnails")
             proof = json.loads((PROJECT.parent / "zombie-library/assets/almanac-sources.json").read_text())

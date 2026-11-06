@@ -63,7 +63,11 @@ namespace Il2CppReloaded.Gameplay {
   public App mApp=>mBoard.mApp; public PlantState mState; public bool mIsAsleep; public int mWakeUpCounter; public void DoSpecial(){}
   public bool mDead,mIsOnBoard=true,mSquished,OffGround,Support,mHighlighted; public PlantOnBungeeState mOnBungeeState;
   public bool NotOnGround()=>OffGround; public static bool IsUpgrade(SeedType t)=>false; public bool IsUpgradableTo(SeedType t)=>false;
-  public int CalcRenderOrder()=>mRow*100; public void UpdateReanim(){} public void UpdateReanimColor(){}
+  public int CalcRenderOrder() {
+   object?[] args={this,mRow*5000+805-(int)mX};
+   Board.Invoke(typeof(FusionMod.ShroomSlotRenderOrderPatch),"Postfix",args);
+   return (int)args[1]!;
+  } public void UpdateReanim(){} public void UpdateReanimColor(){}
   public void Die()=>mDead=true;
  }
 }

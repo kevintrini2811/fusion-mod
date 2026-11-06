@@ -5,6 +5,7 @@ namespace HarmonyLib {
  public static class Priority { public const int First=800; }
 }
 namespace Il2CppReloaded.Gameplay {
+ public enum DamageRangeFlags { Ground=1 }
  public enum ProjectileType { Pea,PeashooterPea,Snowpea,Star,Fireball }
  public enum ProjectileMotion { Straight,Threepeater }
  public enum PlantingReason { Ok,NotHere }
@@ -21,7 +22,7 @@ namespace Il2CppReloaded.Gameplay {
   public void PlantInitialize(){} public void Fire(){} public void UpdateAbilities(){} public void UpdateTorchwood(){}
  }
  public sealed class Projectile {
-  public Board mBoard=null!;public bool mDead;public int mRow,mHitTorchwoodGridX=-1,mRenderOrder;public float mCobTargetX,mCobTargetRow,mPosX,mPosY,mPosZ,mVelX=4,mVelY,mShadowY;
+  public Board mBoard=null!;public bool mDead;public DamageRangeFlags mDamageRangeFlags;public int mRow,mHitTorchwoodGridX=-1,mRenderOrder;public float mCobTargetX,mCobTargetRow,mPosX,mPosY,mPosZ,mVelX=4,mVelY,mShadowY;
   public ProjectileType mProjectileType;public ProjectileMotion mMotionType;
   public void Die()=>mDead=true;public void ConvertToPea(int col){mProjectileType=ProjectileType.Pea;mHitTorchwoodGridX=col;}public void ConvertToFireball(int col){mProjectileType=ProjectileType.Fireball;mHitTorchwoodGridX=col;}
   public void CheckForCollision(){}

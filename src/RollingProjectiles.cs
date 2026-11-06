@@ -30,13 +30,22 @@ internal static class RollingProjectiles
         if (Shots.TryGetValue(projectile.Pointer, out shot!) && shot.Id == projectile.DataID
             && shot.Board == projectile.mBoard?.Pointer) return true;
         int chunk = Chunk(projectile);
-        if (chunk == 0 || projectile.mBoard == null) return false;
+        bool ignitedNut = projectile.mCobTargetX == IgnitedNut;
+        if (chunk == 0 && !ignitedNut || projectile.mBoard == null) return false;
         // Saved markers reconstruct original chunk graphics and knockback on load.
         shot = new Shot { Board = projectile.mBoard.Pointer, Id = projectile.DataID,
-            Chunk = chunk, Knockback = chunk == 3 && !Hungry(projectile) };
+            Nut = ignitedNut, Chunk = chunk, Knockback = chunk == 3 && !Hungry(projectile) };
         Shots[projectile.Pointer] = shot;
         ImportedPeaVisuals.RegisterRollingProjectile(projectile, false);
         return true;
+    }
+    internal const int IgnitedNut = -624013;
+    internal static void Ignite(Projectile projectile, Shot shot)
+    {
+        int damage = projectile.mCobTargetX == IgnitedNut ? projectile.mCobTargetRow : 20;
+        projectile.mCobTargetX = IgnitedNut;
+        projectile.mCobTargetRow = (int)Math.Min(int.MaxValue, (long)damage * 2);
+        shot.Hit.Clear();
     }
     internal static bool Hungry(Projectile projectile) => projectile.mCobTargetX is >= -31203 and <= -31201;
     internal static int Chunk(Projectile projectile) => projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
@@ -111,6 +120,7 @@ internal static class RollingProjectiles
     internal static void Move(Projectile projectile, Shot shot)
     {
         var board = projectile.mBoard;
+        ChargeTorchFusions.Convert(projectile);
         if (shot.SolarBall && shot.ChargeTicks > 0) { --shot.ChargeTicks; return; }
         if (shot.SolarBall) shot.AnimationTime += .01f * shot.AnimationSpeed;
         float oldX = projectile.mPosX, x = oldX + projectile.mVelX;
@@ -148,7 +158,7 @@ internal static class RollingProjectiles
                 if (!NutProjectiles.Remember(projectile, zombie)) continue;
             }
             else shot.Hit.Add(zombie.DataID);
-            zombie.TakeDamage(shot.SolarBall ? shot.Damage : shot.Nut ? 20 : Hungry(projectile) ? 40 : 80, DamageFlags.BypassesShield);
+            zombie.TakeDamage(shot.SolarBall ? shot.Damage : shot.Nut ? (projectile.mCobTargetX == IgnitedNut ? projectile.mCobTargetRow : 20) : Hungry(projectile) ? 40 : 80, DamageFlags.BypassesShield);
             // Move only a living ground target. Preserve its native state,
             // row, armour and movement controller; never move bosses/vehicles.
             if (shot.Knockback && !zombie.mDead && !zombie.IsDeadOrDying()

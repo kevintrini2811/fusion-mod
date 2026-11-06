@@ -1828,6 +1828,16 @@
       "available": true,
       "identity": "FusionPlant.Hypnowood",
       "evidence": "Original 4.0.5.2 port: src/TorchFusions.cs; references/hypnowood/; original model and saved ignition counters."
+    },
+    "Hot Potato": {
+      "available": true,
+      "identity": "FusionPlant.HotPotato",
+      "evidence": "references/hot-potato/port.md"
+    },
+    "Boomwood": {
+      "available": true,
+      "identity": "FusionPlant.Boomwood",
+      "evidence": "references/boomwood/port.md"
     }
   }
 }

@@ -12,11 +12,12 @@ static class ScaredContentTests
     static void Main()
     {
         var board=new Board();
+        foreach (var native in new[] { ZombieType.Normal, ZombieType.TrafficCone, ZombieType.Pail })
         for (uint roll=0;roll<100;roll++)
         {
-            var zombie=new Zombie{mBoard=board,mZombieType=ZombieType.Normal,mHelmType=HelmType.None};
+            var zombie=new Zombie{mBoard=board,mZombieType=native,mHelmType=HelmType.None,mHelmHealth=200,mHelmMaxHealth=200};
             board.RandomValues.Enqueue(roll);ScaredContent.Spawn(zombie);
-            Check(ScaredContent.Eyes(zombie)==(roll==0),"Exactly one of 100 spawn outcomes replaces a Browncoat.");
+            Check(ScaredContent.Eyes(zombie)==(roll==0),"Exactly one of 100 outcomes replaces each eligible base zombie.");
         }
         var manualZombie=new Zombie{mBoard=board,mZombieType=ZombieType.Normal,mHelmType=HelmType.None};
         int randomCalls=board.RandomCalls;

@@ -13,7 +13,7 @@ internal static class ScaredContent
     [ThreadStatic] internal static bool SuppressReplacement;
     private const int Awake = 1, DropAttempted = 2, Instant = 4, OrdinaryDeath = 8;
     private const int Death = 16, Eating = 32, Bitten = 64, Rage = 128;
-    internal static bool Eyes(Zombie zombie) => zombie.mZombieType == ZombieType.Normal && zombie.mGraveX == ZombieMarker;
+    internal static bool Eyes(Zombie zombie) => zombie.mZombieType is (ZombieType.Normal or ZombieType.TrafficCone or ZombieType.Pail) && zombie.mGraveX == ZombieMarker;
     internal static bool Awakened(Zombie zombie) => Eyes(zombie) && (zombie.mGraveY & Awake) != 0;
     internal static bool Raging(Zombie zombie) => (zombie.mGraveY & Rage) != 0;
     internal const int EatAnimationRate = 6;
@@ -28,11 +28,12 @@ internal static class ScaredContent
     internal static void Spawn(Zombie zombie)
     {
         var board = zombie.mBoard;
-        if (SuppressReplacement || ZombieLibrary.Zombies.IsExplicitSpawn || !Playing(board) || zombie.mDead || zombie.mZombieType != ZombieType.Normal || zombie.mMindControlled
+        if (SuppressReplacement || ZombieLibrary.Zombies.IsExplicitSpawn || !Playing(board) || zombie.mDead || zombie.mZombieType is not (ZombieType.Normal or ZombieType.TrafficCone or ZombieType.Pail) || zombie.mMindControlled
             || zombie.mGraveX != 0
-            || zombie.mHelmType != HelmType.None || zombie.mShieldHealth > 0
+            || zombie.mShieldHealth > 0
             || zombie.mZombiePhase != ZombiePhase.ZombieNormal || board!.Rand(100) >= OptionalDifficulty.EyesChance(board)) return;
-        ZombieLibrary.Zombies.Apply(FusionZombies.Eyes, zombie);
+        ZombieLibrary.Zombies.Apply(zombie.mZombieType == ZombieType.TrafficCone ? FusionZombies.EyesCone
+            : zombie.mZombieType == ZombieType.Pail ? FusionZombies.EyesBucket : FusionZombies.Eyes, zombie);
     }
 
     internal static void ZombieTick(Zombie zombie)
@@ -45,6 +46,7 @@ internal static class ScaredContent
             return;
         }
         ImportedPeaVisuals.EnsureEyesZombie(zombie);
+        if (zombie.mZombiePhase == ZombiePhase.RisingFromGrave) return;
         if (zombie.mButteredCounter > 0 || zombie.mIceTrapCounter > 0) return;
         if (zombie.mChilledCounter > 0 && (zombie.mZombieAge & 1) != 0) return;
         if (zombie.mZombiePhase == ZombiePhase.ZombieDying && (zombie.mGraveY & Death) == 0)

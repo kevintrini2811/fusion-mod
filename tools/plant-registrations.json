@@ -1589,6 +1589,16 @@
       "name": "Hypnowood",
       "native": "Torchwood",
       "marker": "Hypnoshroom"
+    },
+    {
+      "name": "HotPotato",
+      "native": "Potatomine",
+      "marker": "Torchwood"
+    },
+    {
+      "name": "Boomwood",
+      "native": "Torchwood",
+      "marker": "Cherrybomb"
     }
   ],
   "reserved": [],

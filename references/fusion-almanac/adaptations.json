@@ -1,0 +1,774 @@
+{
+  "255": {
+    "info": "Giant Wall-nut rolls down its lane and hits ground zombies in its path.\n\nDamage: 1800 per zombie contacted. Surviving targets cannot be hit again by the same nut.",
+    "notes": "Both Wall-nuts must retain at least two thirds of their maximum health to fuse."
+  },
+  "905": {
+    "info": "Twin Solar-nut produces Sun when injured and can summon reinforcements with a click.\n\nToughness: 4000\nEach actual hit costs 50 Toughness and produces 15 Sun.\nClicking costs 500 Sun, restores 1500 Toughness and summons a rolling Giant Solar-nut. Repeated clicks strengthen the nut while it is still waiting.",
+    "notes": "No Odyssey unlock is required."
+  },
+  "918": {
+    "info": "Charred Threepeater awaits his rebirth.\n\nHe can no longer attack after being completely burnt.",
+    "notes": "Fertilizer restores a regular Threepeater. No Odyssey unlock is required."
+  },
+  "1008": {
+    "replace": {
+      "\nSpecial: Tap to auto-fuse with a free Peashooter 15s after planting.": ""
+    },
+    "notes": "Use the listed fusion recipes to evolve this plant. The additional click upgrade from PvZ Fusion is not implemented."
+  },
+  "1027": {
+    "info": "Tall-nuts withstand heavy damage and block vaulting zombies.\n\nToughness: 8000\nReplanted uses its native Tall-nut behavior."
+  },
+  "1031": {
+    "info": "Sun-shrooms produce small Sun at first and normal Sun later.\n\nBehavior, Sun production and growth use Replanted's native Sun-shroom.",
+    "notes": "Up to three small mushrooms share one tile. Coffee and Fertilizer use the existing Replanted rules."
+  },
+  "1033": {
+    "info": "Twin Sunflowers produce twice as much Sun as regular Sunflowers.\n\nThe fusion uses Replanted's native Twin Sunflower and its Sun production."
+  },
+  "1105": {
+    "replace": {
+      "\nSpecial: Tap to auto-fuse with a free Peashooter 15s after planting.": ""
+    },
+    "notes": "Use the listed fusion recipes to evolve this plant. The additional click upgrade from PvZ Fusion is not implemented."
+  },
+  "1107": {
+    "replace": {
+      "\nSpecial: Tap to auto-fuse with a free Peashooter 15s after planting.": ""
+    },
+    "notes": "Use the listed fusion recipes to evolve this plant. The additional click upgrade from PvZ Fusion is not implemented."
+  },
+  "1108": {
+    "replace": {
+      "\nSpecial: Tap to auto-fuse with a free Peashooter 15s after planting.": ""
+    },
+    "notes": "Use the listed fusion recipes to evolve this plant. The additional click upgrade from PvZ Fusion is not implemented."
+  },
+  "1170": {
+    "replace": {
+      "Each Nugget-shroom can only reproduce once.": "After successful reproduction, the parent starts another 20-second cycle. If its tile has no free mushroom slot, its reproduction stops."
+    },
+    "notes": "Reproduction follows the actual PvZ Fusion method rather than the conflicting original almanac. Consuming this plant as a fusion ingredient does not trigger a death explosion."
+  },
+  "1307": {
+    "replace": {
+      "\n• Uses Sun and shoots automatically every 0.35s if placed in a Starry Pumpkin.": ""
+    },
+    "notes": "Starry Pumpkin is not yet available as a fusion plant."
+  },
+  "1330": {
+    "replace": {
+      "a 1-tile splash radius": "a 1.5-tile splash radius"
+    },
+    "notes": "The blast radius follows the actual PvZ Fusion implementation. Further half-ripe cherries deal 20 damage and add 5 damage to the attached bomb."
+  },
+  "1348": {
+    "replace": {
+      " and can be buffed by Infernowood to deal 40 damage and drop 15 Sun instead": ""
+    }
+  },
+  "1060": {
+    "info": "Spikerocks damage ground zombies stepping on them and puncture tires.\n\nThis recipe creates Replanted's native Spikerock. Damage, durability and resistance to crushing use the native rules.",
+    "notes": "Uses the existing native plant, as required for plants already present in Replanted. Fertilizer restores health; it does not evolve this result. Card costs and recharge follow the incoming ingredient; glove costs follow the existing glove rules."
+  },
+  "1067": {
+    "info": "Cattails fire homing spikes at zombies in any lane and can shoot down Balloon Zombies.\n\nThis recipe creates Replanted's native Cattail on water. Target selection, spikes and damage use the native rules.",
+    "notes": "Uses the existing native plant, as required for plants already present in Replanted. Fertilizer restores health; it does not evolve this result. Card costs and recharge follow the incoming ingredient; glove costs follow the existing glove rules."
+  },
+  "1116": {
+    "info": "Winter Melons launch icy melons that damage and slow groups of zombies.\n\nThis recipe creates Replanted's native Winter Melon with its native projectile, splash damage and chill. PvZ Fusion's Cryo points and fourfold Frozen damage are not added.",
+    "notes": "Uses the existing native plant, as required for plants already present in Replanted. Fertilizer restores health; it does not evolve this result. Card costs and recharge follow the incoming ingredient; glove costs follow the existing glove rules."
+  },
+  "1150": {
+    "info": "Gold Magnets collect coins and diamonds automatically.\n\nThis recipe creates Replanted's native Gold Magnet. PvZ Fusion's forced plant shots, projectile attraction and rewards for attracted projectiles are not added.",
+    "notes": "Uses the existing native plant, as required for plants already present in Replanted. Fertilizer restores health; it does not evolve this result. Card costs and recharge follow the incoming ingredient; glove costs follow the existing glove rules."
+  },
+  "1284": {
+    "notes": "Use the Golden Bean beside the money counter to buy the golden upgrade with combat money. The first costs 1000 for Silver-nut, or 3000 for Silver Sunflower; each living Golden Sunflower doubles its upgrade price. Fertilizer heals this silver plant; it does not turn it into a golden plant."
+  },
+  "1145": {
+    "info": "Silver Garlic withstands more bites and redirects biting zombies like ordinary Garlic.\n\nToughness: 600",
+    "notes": "The separate coin-purchased golden plant upgrade from PvZ Fusion is not available. Fertilizer heals this silver plant; it does not turn it into a golden plant."
+  },
+  "1367": {
+    "info": "Silver Ice-shroom is covered in silver frost.\n\nFreezes eligible zombies across the lawn for 5 seconds and deals 20 damage. Activates after 1.5 seconds awake. Also releases frost when crushed.",
+    "notes": "The separate coin-purchased golden plant upgrade from PvZ Fusion is not available. Fertilizer heals this silver plant; it does not turn it into a golden plant. Fertilizer shortens a remaining activation delay above 0.5 seconds to 0.5 seconds. Native freeze immunities remain in effect."
+  },
+  "1187": {
+    "notes": "Use the Golden Bean beside the money counter to buy the golden upgrade with combat money. The first costs 1000 for Silver-nut, or 3000 for Silver Sunflower; each living Golden Sunflower doubles its upgrade price. Fertilizer heals this silver plant; it does not turn it into a golden plant. Production intervals vary by ±5%. The first production starts immediately and releases Sun after the half-second brightness phase."
+  },
+  "1251": {
+    "info": "Silver Doom-shroom is completely stable and never explodes.\n\nToughness: 300\nIt does not attack or produce coins.",
+    "notes": "Fertilizer restores health. The separate paid golden-plant upgrade from PvZ Fusion is not available."
+  },
+  "1449": {
+    "info": "Silver Hypno-shroom hypnotizes the zombie that eats it and drops 100 Coins.\n\nToughness: 300\nThe reward appears only after successful hypnosis.",
+    "notes": "Fertilizer restores health. The separate paid golden-plant upgrade from PvZ Fusion is not available. Replanted uses two native gold coins worth 50 each so the full reward survives saving and loading. Sleeping mushrooms use native Coffee rules."
+  },
+  "1134": {
+    "info": "Silver Cabbage lobs silver cabbages over handheld shields.\n\nToughness: 300\nDamage: 60 per hit\nAttack interval: 3 seconds, with the original slight variation.\nEach shot has a 1.5-second ballistic flight.",
+    "notes": "Fertilizer restores health. The separate paid golden-plant upgrade from PvZ Fusion is not available."
+  },
+  "1141": {
+    "info": "Silver Melon lobs silver melons over handheld shields.\n\nToughness: 300\nDirect damage: 100\nSplash damage: up to 33 per nearby ground zombie, in adjacent lanes within 1.5 source world units. Splash damage decreases in very large crowds, with a minimum of 1.\nAttack interval: 3 seconds, with the original slight variation.\nMelons also splash when they hit the ground.",
+    "notes": "Fertilizer restores health. The separate paid golden-plant upgrade from PvZ Fusion is not available."
+  },
+  "1136": {
+    "info": "Silver Pot supports another plant and produces money.\n\nToughness: 300\nMoney output: 25 Coins every 25 seconds, with 10% interval variation. Can be planted on bare ground. New pots ignore combat damage for their first 0.5 seconds.",
+    "notes": "Replanted stores money in tens. Payouts alternate between 20 and 30 Coins; the saved plant retains the 5-Coin remainder. Fertilizer heals; it does not produce money or evolve the plant. The separate paid Golden Pot upgrade is not available."
+  },
+  "1143": {
+    "info": "Silver Umbrella protects nearby plants from basketballs and bungees.\n\nToughness: 1000\nEach reflected basketball earns 25 Coins. Contact with a ground zombie triggers a radius-two knockback pulse once per second, dealing 40 damage. This variant does not spend Toughness on contact.",
+    "notes": "Native protection covers the surrounding 3 by 3 tiles. Contact pulses and bungee protection do not earn money. Payouts alternate between 20 and 30 Coins; the saved plant retains the 5-Coin remainder. Fertilizer only heals. The separate paid Golden Umbrella upgrade and super ability are not available."
+  },
+  "1138": {
+    "info": "Silver Kernel throws silver kernels and silver butter approximately every 3 seconds.\n\nToughness: 300\nKernel damage: 40\nButter chance: 25%; damage: 60; immobilization: 4 seconds; reward: 25 Coins. Prefers its own row, then selects a target in another row. Butter also pays on a ground impact.",
+    "notes": "Native money is stored in tens. Butter payouts alternate between 20 and 30 Coins; the saved plant retains the 5-Coin remainder. Projectile identity and reward are saved during flight. Fertilizer only heals. The separate paid Golden Kernel upgrade and super ability are not available."
+  },
+  "1195": {
+    "info": "Lumos Pot supports another plant and lights its own tile.\n\nToughness: 300\nLight coverage: 1 by 1 tile, level 1. Can be planted on bare ground. Clears fog on its own tile while present. New pots ignore combat damage for their first 0.5 seconds.",
+    "notes": "Replanted represents light through its native fog grid. No separate Fusion Lumos-level system is introduced. Fertilizer only heals."
+  },
+  "1112": {
+    "info": "Cabbage Pot supports another plant and shortens the attack interval of Cabbage-type plants above it by one third (approximately 50% faster attacks).\n\nToughness: 300\nAvailable beneficiaries: Cabbage-pult, Sprout-pult, Silver Cabbage, Taco-pult, Overripe Melon and Cabbage Tri-pult. Can be planted on bare ground. New pots ignore combat damage for their first 0.5 seconds.",
+    "notes": "Only the next newly scheduled attack interval receives the bonus. Moving or removing the pot does not permanently change the plant. Wither-pult, Helios Cabbage and Selene Cabbage are not available. Fertilizer only heals."
+  },
+  "1114": {
+    "info": "Butter Pot supports another plant and raises the butter chance of Kernel-type plants above it from 25% to 50%.\n\nToughness: 300\nAvailable beneficiaries: Kernel-pult, Baby Corn, Silver Kernel, Kernel Tri-pult, Taco-pult and Cob-pult. Projectile damage, shrinking, stun duration and money rewards retain their existing rules. Can be planted on bare ground. New pots ignore combat damage for their first 0.5 seconds.",
+    "notes": "The butter choice and matching animation are selected once per attack and saved. Moving or removing the pot affects later choices. Fertilizer only heals."
+  },
+  "1133": {
+    "info": "Umbrella Pot supports another plant and enhances umbrella plants above it.\n\nToughness: 300\nUmbrella Shell, Umbrella Husk and Silver Umbrella gain 50% more contact knockback (2 to 3 tile widths). Umbrella Husk also gains 2 seconds of butter immobilization (2 to 4 seconds). Umbrella Cap gains 50% more knockback using its existing small-plant distance scale. Can be planted on bare ground. New pots ignore combat damage for their first 0.5 seconds.",
+    "notes": "The pot itself does not block basketballs or bungees. Native Umbrella protection, contact damage, health costs and Silver Umbrella rewards remain unchanged. Umbrella Clove, Umbrella Kale, Midas, Umbrella Rind, Aegis and umbrella super abilities are not available. Fertilizer only heals."
+  },
+  "1120": {
+    "info": "Click Cob Cannon to aim and fire a devastating corn cob.\n\nThis recipe uses the existing native Replanted Cob Cannon, including its graphics, projectile, explosion, reload state and two-tile footprint. A cannon card requires two adjacent Kernel-pults. Feeding a Kernel-pult to an existing cannon replaces it at its original position.",
+    "notes": "No second cannon implementation is added. Both recipe orders use native terrain rules across the complete footprint. Card costs come from the incoming ingredient; the glove uses its existing costs. Fertilizer heals the native cannon; it does not reload or fire it. No additional fertilizer upgrade for Kernel-pults is introduced."
+  },
+  "1311": {
+    "info": "Nut Pot reduces numeric combat damage to plants on its tile by 20%.\n\nToughness: 300\nWorks against bites, enemy peas and basketballs. Fractional damage is retained by the pot. Native instant removal and crushing remain lethal.",
+    "notes": "No lava terrain exists in Replanted. Fertilizer heals this pot; it does not evolve."
+  },
+  "1130": {
+    "info": "Garlic Pot reduces each successful bite on itself or a garlic-family plant in its tile to 10 damage. The eater changes lanes towards the middle whenever the native adjacent-row and water rules allow it.\n\nToughness: 300\nSupports Garlic, Silver Garlic, Foul-nut, Foul-shroom, Stench-spreader and the four Poison Pea variants. Hypno Garlic keeps its transformation and hypnosis, with the same lane preference.",
+    "notes": "Fertilizer heals this pot; it does not evolve. Native disgust, movement, pause and row restrictions remain active."
+  },
+  "1372": {
+    "info": "Spike Pot damages nearby ground zombies in its row and pops vehicle tires.\n\nToughness: 300\nDamage: 20 per attack, about once per second.\nBiting zombies ignore this short support. Spike-nut on this pot receives 50% less numeric combat damage, including vehicle contact damage. Popping a tire consumes the pot.",
+    "notes": "Obsidian Spike-nut is not implemented; its extra anti-crush synergy is unavailable. Fertilizer heals the pot without evolving it."
+  },
+  "1125": {
+    "info": "Melon Pot returns 150 extra Sun after a successful fusion. Melon-pult, Winter Melon, Silver Melon, Melon Tri-pult, Cob-pult and Overripe Melon above it launch enhanced projectiles.\n\nToughness: 300\nSecondary splash damage becomes two thirds of direct damage, without crowd falloff: 53 for native melons and 66 for Silver Melon. Direct damage and winter chill remain unchanged. An airborne shot keeps its bonus after the pot moves or dies. Cob-pult and Overripe Melon use their original 67% factor (93/107 and 53 secondary damage). Slice-pult has no splash to enhance.",
+    "notes": "Chrono Melon, Maelonstorm, Doom-pult and Melon Shell are not implemented; their extra synergies are unavailable. Fertilizer heals the pot without evolving it."
+  },
+  "1243": {
+    "info": "Cherry Pot heals every plant on its tile by 20 HP when a cherry explosion reaches it. Cherry shooters on that tile gain 50% attack speed for five seconds. Further explosions refresh the duration without stacking the bonus.\n\nToughness: 300\nSupports Cherryshooter, Cherrypeater, Split Cherry, Gatling Cherry, Explode-o-shooter, Cherry-spreader and Blasty-shroom. Immune to friendly cherry explosions.",
+    "notes": "Fertilizer heals this pot without evolving it. Uses native Flower Pot terrain and support placement, with 0.5 seconds of protection after creation. No new projectiles. Attack bonuses retain the existing projectile abilities and animation events."
+  },
+  "1474": {
+    "info": "When a Jalapeno row effect reaches Hot Pot, it heals fire shooters above it by 20 HP and grants 50% attack speed for five seconds. Each trigger has a 0.2-second cooldown. Each bonus expires independently and bonuses stack additively.\n\nToughness: 300\nSupports the four Blaze shooters, Scorched Threepeater, Flame-shroom, Flame Gloom-shroom, Phoenix Threepeater and Flame Cattail.",
+    "notes": "Fertilizer heals this pot without evolving it. Uses native Flower Pot terrain and support placement, with 0.5 seconds of protection after creation. No new projectiles. Attack bonuses retain the existing projectile abilities and animation events. Foul-shroom, Squash Spreader and other non-fire plants receive neither the healing nor the attack-speed bonus."
+  },
+  "1380": {
+    "info": "Hypno Pot grants passing hypnotized zombies permanent damage reduction of one third. It heals one body HP every 0.04 seconds while they remain within one source world unit in the same lane. The protection does not stack. When bitten, it hypnotizes the attacker and becomes a fresh ordinary Flower Pot.\n\nToughness: 300\nProtection and fractional damage remain saved after the zombie leaves the pot.",
+    "notes": "Fertilizer heals this pot without evolving it. Uses native Flower Pot terrain and support placement, with 0.5 seconds of protection after creation. No new projectiles. Attack bonuses retain the existing projectile abilities and animation events."
+  },
+  "1454": {
+    "info": "Doom Pot prevents a Doom crater on its tile by losing 75 maximum and current HP, then HP equal to 20% of its reduced maximum. The crater is prevented even if this sacrifice kills the pot. Other plants on the tile survive crater creation.\n\nToughness: 300\nWhile any Doom Pot is present, craters recover twice as fast (90 seconds instead of 180). Each crater heals the Doom Pot with the lowest HP in its lane by 2% maximum HP every second.",
+    "notes": "Fertilizer heals this pot without evolving it. Uses native Flower Pot terrain and support placement, with 0.5 seconds of protection after creation. No new projectiles. Attack bonuses retain the existing projectile abilities and animation events. Fertilizer does not restore sacrificed maximum HP."
+  },
+  "1404": {
+    "info": "Pea Pot supports the eligible Peashooter family on its tile.\n\nEvery 30 primary attack events trigger five additional attacks with the same projectile and its abilities. Those five attacks count towards the next trigger. Rear-head attacks do not increase the counter. Extra projectiles receive the original random muzzle offsets.",
+    "notes": "Eligible: ordinary Peashooter, Repeater, Split Pea, Gatling Pea and Snow Pea; their implemented cherry, snow, blaze, poison and hypno variants; Buckshooter and Football Gatling. Solar-shooter, mushroom shooters and Threepeaters are not on the original whitelist. The pot retains its count when its occupant changes. Fertilizer heals; it does not reset or trigger the count."
+  },
+  "1442": {
+    "info": "Tri-pot supports Peashooter and Threepeater families on its tile.\n\nFusion returns 100 extra Sun. Threepeater descendants gain 20% attack damage: ordinary Threepeater, the implemented snow, stench, cherry and scorched variants, Fume-spreader, Kernel Tri-pult, Melon Tri-pult and Cabbage Tri-pult.\n\nEvery six primary attacks by an eligible Peashooter-family plant trigger one extra attack into each adjacent lane, at half attack damage (minimum 1). A missing edge lane becomes an extra shot in the plant’s own lane. Extra lane attacks do not increase the counter.",
+    "notes": "The Peashooter whitelist is the same as Pea Pot. Existing projectile abilities remain active. Torchwood’s fixed damage addition and iron projectiles’ shield bonus apply after the attack modifier. Airborne shots retain the modifier after moving or removing the support. Fertilizer heals without awarding Sun or extra shots. Explode-o-shooter’s fixed 300-damage explosion ignores the projectile’s attack modifier in the original and remains unchanged. For ordinary Threepeater, the bonus pair fires 0.2 seconds (20 simulation ticks) after the sixth main pea, so it does not overlap the regular volley. Pause stops the delay. Removing the shooter from the pot or losing the shooter cancels its pending pair. Pending pairs and their delay are saved."
+  },
+  "1434": {
+    "info": "Kernel Tri-pult throws kernels or butter across three lanes.\n\nDamage: 20 per kernel; 40 per butter.\nAttack interval: 1.5s, with the original ±5% variation.\n\nEach attack covers its own lane and both adjacent lanes. Missing edge lanes become additional shots in its own lane. Each cycle has a 25% butter chance, increased to 50% by Butter Pot.\n\nThe source increments its non-butter series before a kernel volley; that volley gains max(0, series − 1) extra projectiles. A butter volley uses max(0, previous series − 1) extras and then resets the series. Extras target random eligible zombies in those three lanes. Butter immobilizes surviving targets.",
+    "notes": "Original projectile flight: 1.5s. Both original attack clips emit at 0.25s. Tri-pot increases attack damage by 20%. Fertilizer heals without resetting the series or changing the butter selection. The explicit series rule follows the shipped code, which is more precise than the original almanac’s simplified wording."
+  },
+  "1433": {
+    "info": "Melon Tri-pult rapidly throws watermelons across three lanes.\n\nDamage: 80 per direct hit.\nAttack interval: 1.5s, with the original ±5% variation.\n\nEach cycle covers its own lane and both adjacent lanes. Missing edge lanes become additional shots in its own lane. Melons deal the original shared splash damage in a 1.5-unit radius, limited by the number of targets.",
+    "notes": "Original projectile flight: 1.5s. The attack clip emits at 0.25s. Tri-pot increases attack damage by 20%; Melon Pot strengthens secondary splash damage. Fertilizer heals without awarding extra shots. All damage uses Replanted’s integer health and the existing Thrower damage rules."
+  },
+  "1113": {
+    "info": "Taco-pult launches bouncing tacos and butter tacos.\n\nDamage: 40 per taco; 60 per butter taco.\nAttack interval: 3s, with ±5% variation.\n\nEach cycle has a 25% butter chance, increased to 50% by Butter Pot. Both projectiles can hit three different zombies in total. Each bounce halves horizontal speed and reflects and halves vertical speed. Landing ends the projectile. Butter immobilizes each surviving target for 4s.",
+    "notes": "Cabbage Pot shortens newly scheduled attack intervals by one third. Fertilizer heals without evolving the plant, resetting its attack phase or changing its saved butter choice. Original attack event: 0.316667s; the port emits on the next 0.01s simulation tick. The shipped code and Chinese almanac specify two bounces; the English translation incorrectly says one."
+  },
+  "1121": {
+    "info": "Cob-pult throws large corn melons with splash damage.\n\nDamage: 140 per corn melon; 160 per butter melon.\nAttack interval: 3s, with ±5% variation.\n\nEach cycle has a 25% butter chance, increased to 50% by Butter Pot. Butter immobilizes the direct target for 4s. Nearby targets receive max(0.5, floor(4 / N)) seconds of butter, where N counts the direct and splash targets.\n\nSplash reaches eligible ground zombies in adjacent lanes within 1.5 source units (about 88.9 board pixels). Secondary damage is the lower of 33% attack damage and an eightfold damage budget shared across N targets, with integer health. Melon Pot changes secondary damage to 67%, without target-count dilution.",
+    "notes": "Original PlantData and the Chinese almanac specify 140/160 damage; the English translation has obsolete 120/140 values. Original emission: 0.333333s, rounded up to the next simulation tick. Butter dilution follows the shipped integer division. In Replanted, N uses eligible target snapshots instead of Unity collider counts. Airborne shots retain their damage and Melon Pot bonus after support removal. Fertilizer heals without evolving, rerolling butter or emitting an extra shot."
+  },
+  "1124": {
+    "info": "Overripe Melon throws melons that bounce once.\n\nDamage: 80 per direct hit.\nAttack interval: 3s, with ±5% variation.\n\nA projectile can hit two different zombies in total. The first hit halves horizontal speed and reflects and halves vertical speed. Every hit and the final landing deal melon splash within 1.5 source units (about 88.9 board pixels), over the current and adjacent lanes. Secondary damage is the lower of 33% attack damage and an eightfold damage budget shared across current targets, with integer health. Melon Pot changes secondary damage to 67%, without target-count dilution.",
+    "notes": "Cabbage Pot shortens newly scheduled attack intervals by one third. Airborne shots retain the Melon Pot bonus after support removal. Original emission: 0.333333s, rounded up to the next simulation tick. Landing ends the projectile; repeated collisions with an already directly hit zombie do not cause another direct hit. Fertilizer heals without evolving or resetting attack or airborne states."
+  },
+  "1439": {
+    "info": "Cabbage Tri-pult throws layered cabbages across three lanes.\n\nDamage: 40 per hit.\nAttack interval: 1.5s, with ±5% variation.\n\nEach cycle attacks its own lane and both adjacent lanes. Missing edge lanes become extra shots in its own lane. After a hit, a cabbage ricochets toward the nearest eligible ground zombie in either adjacent lane. A projectile originally fired in the plant’s own lane can ricochet twice; each side projectile can ricochet once. Each ricochet creates exactly one projectile, retaining attack damage.",
+    "notes": "Initial flight: 1.5s; ricochet flight: 0.75s. Original emission: 0.25s. Cabbage Pot shortens newly scheduled intervals by one third. Tri-pot increases attack damage by 20%, including ricochets. Fertilizer heals without evolving or granting extra attacks. The executable source chooses one nearest adjacent-lane target; the English translation incorrectly suggests splitting into both lanes. Ricochets can travel backward when the nearest target is behind the impact."
+  },
+  "1375": {
+    "info": "Lobs frozen cabbages.\n\nHealth: 300. Damage: 40. Attack interval: 3s, with ±5% variation.\n\nAdds 10 freeze points before checking whether the target is frozen, then deals fourfold damage to frozen targets and applies chill. A hit on a frozen target preserves the projectile; a normal hit or landing ends it. The first frozen rebound multiplies horizontal speed by 0.4 and reflects and halves downward speed. Later frozen rebounds reflect downward speed without further horizontal reduction.\n\nA frozen hit gives its living source 3s of triple animation speed and 0.2s attack intervals, followed by 1.5s recovery before another trigger. Hits during either period do not refresh the effect.",
+    "notes": "Cabbage Pot shortens normal intervals by one third; the active 0.2s interval takes precedence. The executable preserves penetration on each frozen hit, despite the English almanac's claim of only one bounce. Original attack event: 0.316667s. Fertilizer heals all layers without evolving, resetting attack phases or adding shots. Original animations and projectiles are included. Existing freeze-point thresholds and Overheat use the shared mod systems; these two transient effects do not survive restarting the game. Native chill, freeze, attack clocks and airborne projectile states are saved."
+  },
+  "1398": {
+    "info": "Hurls fiery cabbages.\n\nHealth: 300. Damage: 60. Attack interval: 3s, with ±5% variation.\n\nApplies Overheat before direct damage. A direct hit releases one small cabbage toward each valid tile in the surrounding 3×3 area. Each fragment has one third of the original damage (20), half the original visual size and a 0.8s flight. Fragments apply Overheat before damage and never split again. Landing causes no extra split.\n\nOverheat removes cold, increases incoming damage by 50% and causes the shared 100-damage death burst, which can heat surviving nearby enemies.",
+    "notes": "Cabbage Pot shortens newly scheduled intervals by one third. Original attack event: 0.316667s. Fertilizer heals all layers without evolving, resetting attack phases or adding shots. Original animations and projectiles are included. Existing freeze-point thresholds and Overheat use the shared mod systems; these two transient effects do not survive restarting the game. Native chill, freeze, attack clocks and airborne projectile states are saved."
+  },
+  "1376": {
+    "info": "Lobs frozen kernels or frozen butter.\n\nHealth: 300. Damage: 20 per kernel; 40 per frozen butter. Attack interval: 3s, with ±5% variation.\n\nEach attack has a 25% butter chance, increased to 50% by Butter Pot. Both projectiles deal fourfold damage to an already frozen target. Kernels then apply chill and add 10 freeze points. Butter applies a 4s freeze after damage, respecting native freeze immunity; its own new freeze does not multiply that same hit.\n\nButter choice is made once per attack cycle and is preserved while saving.",
+    "notes": "The source Thrower adds 20 to kernel attack damage for butter. The English entry omits that value. Original attack event: 0.333333s. Fertilizer heals all layers without evolving, resetting attack phases or adding shots. Original animations and projectiles are included. Existing freeze-point thresholds and Overheat use the shared mod systems; these two transient effects do not survive restarting the game. Native chill, freeze, attack clocks and airborne projectile states are saved."
+  },
+  "1126": {
+    "info": "Catapults vegetable rolls that split on direct impact.\n\nHealth: 300. Damage: 140 plus melon splash. Attack interval: 5s, with ±5% variation.\n\nEach emitted shot has a 42% chance to schedule another attack as soon as its current 1.166667s clip finishes. Additional shots can trigger further shots.\n\nA direct hit releases one Overripe Melon (80 damage, one bounce) and one Cob-pult melon (140 damage, or 160 with butter). Butter chance is 25%, increased to 50% by Butter Pot; this choice uses the support state saved at launch. Both children inherit half horizontal speed and an upward reflection of half downward speed. They retain their complete existing splash, bounce and butter abilities. Landing deals splash without splitting.",
+    "notes": "Cabbage Pot shortens normal intervals by one third. Melon Pot strengthens secondary splash to 67% for the roll and both descendants; its state is saved at launch. Without it, secondary splash uses the existing 33% and target-count budget. Original emission: 0.45s. All three source recipes are included. Fertilizer heals all layers without evolving, resetting attack phases or adding shots. Original animations and projectiles are included. Existing freeze-point thresholds and Overheat use the shared mod systems; these two transient effects do not survive restarting the game. Native chill, freeze, attack clocks and airborne projectile states are saved."
+  },
+  "1262": {
+    "info": "Stores energy after actual health loss. Health: 4000. Each injury stores its damage, multiplied by 2 above 100, 3 above 500 or 4 above 1000. Energy cap: 4000. Above 1000 energy, with a ground target in its row, starts a 0.75 s retaliation clip and gains an equal shield. At 0.416667 s, throws a cabbage dealing all stored energy and consumes that energy. Shield absorbs numeric injuries and decays in steps of 10% of its initial value every 0.5 s after the first simulation step. The closest ground target in the row can be behind the plant.",
+    "notes": "Original models, animations and projectiles are included. Numeric injury and shield state, attack phases and rolling target history serialize with the board. Shoveling and ingredient consumption never trigger retaliation. Native direct removal without a numeric injury remains lethal. Fertilizer heals all layers without evolution, charge, shield refill, timer reset or extra shots."
+  },
+  "1261": {
+    "info": "Stores energy after actual health loss. Health: 8000. Each injury stores 1.5 times its damage, multiplied by 2 above 100, 3 above 500 or 4 above 1000. Energy cap: 32000. Above 1000 energy, with a ground target in its row, starts a 0.75 s retaliation clip and gains an equal shield. At 0.416667 s, throws a melon dealing all stored energy, including the original melon splash, and consumes that energy. Shield absorbs numeric injuries and decays in steps of 10% of its initial value every 0.5 s after the first simulation step. The closest ground target in the row can be behind the plant.",
+    "notes": "Original models, animations and projectiles are included. Numeric injury and shield state, attack phases and rolling target history serialize with the board. Shoveling and ingredient consumption never trigger retaliation. Native direct removal without a numeric injury remains lethal. Fertilizer heals all layers without evolution, charge, shield refill, timer reset or extra shots."
+  },
+  "1295": {
+    "info": "A tall stack of three nuts. Initial health: 12000. Fires every 1.5 s with the original interval variation. Below 8000 health, permanently loses the first head; below 4000, the second. Healing can restore at most 8000 or 4000 health after those losses. Depending on the remaining heads, rolling nuts deal 80/60/40 damage and hit up to 3/5/7 distinct ground targets in their row. A roll cannot damage the same zombie twice. The original firing event occurs at 0.25 s in the additive 0.5 s clip.",
+    "notes": "Original models, animations and projectiles are included. Numeric injury and shield state, attack phases and rolling target history serialize with the board. Shoveling and ingredient consumption never trigger retaliation. Native direct removal without a numeric injury remains lethal. Fertilizer heals all layers without evolution, charge, shield refill, timer reset or extra shots. Fertilizer respects the permanent head-loss health cap and never rebuilds a head."
+  },
+  "1250": {
+    "info": "Bounces in place when a ground zombie enters a one-source-unit radius in the same row. Health: 4000. Each landing deals 160 crushing damage in that radius. The original jump clip lasts 1.666667 s; takeoff occurs at 0.5 s and landing at 1.166667 s. While airborne, stops blocking and cannot be bitten. The next jump begins only after the clip ends, so the actual sustained cadence is approximately 1.67 s rather than the translated almanac’s 1.5 s.",
+    "notes": "Original models, animations and projectiles are included. Numeric injury and shield state, attack phases and rolling target history serialize with the board. Shoveling and ingredient consumption never trigger retaliation. Native direct removal without a numeric injury remains lethal. Fertilizer heals all layers without evolution, charge, shield refill, timer reset or extra shots."
+  },
+  "1377": {
+    "info": "Aquatic, low-profile Tingle Kelp bursts when a ground zombie approaches within 0.7 source units. Its original 0.667-second explosion releases 30 ballistic Kelp projectiles, each dealing 20 normal damage. Crushing triggers the burst immediately.\n\nA projectile hit on a zombie in water applies one Kelp stack and two seconds of Kelp slow. Kelp halves movement speed; durations add. Stacks remain after the slow expires. From the seventh application, Kelp additionally deals 1% of the target's maximum body and helmet health. From the thirty-first application, a separate hit deals that entire maximum as well. These extra hits bypass shields. Bosses cannot receive Kelp.\n\nA zombie killed by an attack that applies Kelp can sprout one Tingle Kelp in its tile when native aquatic placement permits it. Existing plants and supports remain protected.",
+    "notes": "Fertilizer heals without resetting the explosion or changing airborne projectiles. Kelptain Goldbeard and Sea-greed Zombox are not implemented, so their Greed Kelp transformation is unavailable. Kelp stacks and remaining slow duration use native saved state."
+  },
+  "1395": {
+    "info": "Aquatic Grapple Kelp lashes every three seconds, with the original ±5% interval variation. Three penetrating attacks deal 30 damage each in its row, up to seven source units ahead (about 5.19 Replanted tiles). The English source description rounds this range differently.\n\nEach attack first applies one Kelp stack and ten seconds of Kelp slow, then deals its normal damage. The first attack applies another stack and ten more seconds. The second deals an additional five damage per current Kelp stack. The third knocks surviving nonboss targets back by 0.2 source units, except when they have already reached native bite range. Bite contact is preserved so zombies can eat Grapple Kelp. The original controller runs its attack clip at 1.5 speed: hits occur approximately 0.50, 0.83 and 1.17 seconds after starting an attack.\n\nKelp halves movement speed. Durations add; stacks remain after the slow expires. From the seventh application, Kelp deals 1% of maximum body and helmet health. From the thirty-first, a separate hit deals the entire maximum as well. Bosses are immune to Kelp. A lethal Kelp application can sprout Tingle Kelp where native aquatic placement permits it.",
+    "notes": "Fertilizer heals without resetting attacks, stacks or slow duration. The original tentacle mesh, bone weights, all animation clips and SpriteMasks are imported. These melee attacks do not create travelling projectiles."
+  },
+  "1313": {
+    "info": "Aquatic Tangle-nut blocks zombies with 4000 Toughness. Each actual bite applies one Kelp stack and five seconds of Kelp slow to the eater.\n\nImmune to instant death by crushing. A crushing zombie in water instead costs Tangle-nut 50 Toughness every 0.02 seconds and receives one Kelp stack plus one second of Kelp slow. Dry crushing has no water counter-effect.\n\nKelp halves movement speed. Durations add; stacks persist after the slow expires. From the seventh application, Kelp additionally deals 1% of maximum body and helmet health. From the thirty-first, another hit deals the entire maximum as well. These hits bypass shields. Bosses are immune to Kelp. A lethal Kelp application can sprout Tingle Kelp where native aquatic placement permits it.",
+    "notes": "Fertilizer heals all layers without changing Kelp stacks, remaining slow duration or crush cadence. Original damage stages and falling arms follow current health."
+  },
+  "1237": {
+    "info": "Aquatic, low-profile Spike-kelp deals 20 piercing spike damage each second to eligible enemies touching its tile. The original attack interval varies by ±5%; the contact event occurs 0.333 seconds into the 0.667-second attack clip.\n\nEach hit applies one Kelp stack and two seconds of Kelp slow. Hitting a vehicle costs Spike-kelp 10 Toughness, including a lethal vehicle hit. Vehicles do not instantly consume it or get destroyed merely by touching it. Flying balloons, tunnelling diggers and airborne thrown Imps are excluded.\n\nKelp halves movement speed. Durations add; stacks persist after the slow expires. From the seventh application, Kelp deals 1% of maximum body and helmet health. From the thirty-first, another hit deals the entire maximum as well. These hits bypass shields. Bosses are immune to Kelp. A lethal Kelp application can sprout Tingle Kelp where native aquatic placement permits it.",
+    "notes": "Toughness: 300. Fertilizer heals without resetting the attack or Kelp state. All original clips are retained; the inherited grab clip has nine stale active-state tracks whose targets do not exist in this shipped prefab. It does not add a native drowning attack or a travelling projectile."
+  },
+  "1420": {
+    "info": "Cyclover repeatedly pushes up to three nearest enemies in front in the same lane.\n\nSpecial:\n• Starts an attack about every 3 seconds while a target is available. Its original blow clip pushes from 0.5 to 1.0 seconds.\n• Push speed is 1 source unit per second, doubled for flying enemies and tripled for enemies knocked into the air. Giants and vehicles receive 33% of the push.\n• Only the first attack clears fog and blows away hostile balloons. Cyclover remains on the lawn.",
+    "notes": "Replanted: 300 HP. Fertilizer heals without evolution or restarting wind, cooldown or pulse counters. Fog clearing and hostile balloon removal occur at the original blowing event. Wind particles use native FumeCloud effects; the original plant artwork and both animation clips are retained."
+  },
+  "1181": {
+    "info": "Disguster poisons enemies across the lawn and forces eligible ground zombies to change lanes.\n\nPoison:\n• Raises each enemy to at least 5 Poison Points, then adds one point (maximum 30) and 5 seconds of Toxic Effect. Existing higher poison levels remain.\n• Poison deals 20 damage per point each second. Freezing pauses poison duration, not poison damage.\n• Vehicles keep their lane; flying balloons are blown away and also poisoned.\n• Biting Disguster also triggers the garlic lane-change response. It disappears 2 seconds after blowing.",
+    "notes": "Replanted: 300 HP. Fertilizer heals without evolution or restarting wind, cooldown or pulse counters. Fog clearing and hostile balloon removal occur at the original blowing event. Poison shares the existing poison system. Its saved backing records preserve the level, remaining duration and next damage tick after Disguster disappears."
+  },
+  "1276": {
+    "info": "Breeze Blover chills the lawn and converts Snow Peas in flight into Polar Peas.\n\nSpecial:\n• The original animation starts blowing after 0.483333 seconds. Ten cold pulses follow, about one second apart, including the last pulse before disappearance.\n• Each pulse deals 1 damage and adds 20 Cryo points to eligible enemies, including flying enemies. Underground diggers, bungees and bosses are excluded.\n• All Snow Peas on the board, including new shots while the wind continues, become Polar Peas. Damage and flight are preserved.\n• Polar Peas add 20 Cryo points and deal quadruple damage to frozen or chill-immune targets. Ordinary Torchwood cannot thaw or ignite them.",
+    "notes": "Replanted: 300 HP. Fertilizer heals without evolution or restarting wind, cooldown or pulse counters. Fog clearing and hostile balloon removal occur at the original blowing event. Cryo points and their increasing freeze threshold persist in native saved records. Polar Peas use the original projectile artwork. Unported Fusion challenge talents, piercing upgrades and source-only zombie types are not introduced."
+  },
+  "1176": {
+    "info": "Mind-blover pulls hypnotized zombies left for 5 seconds.\n\nSpecial:\n• At the blowing event, each eligible hypnotized zombie loses 10% of its maximum body plus helmet HP once. Zombies already in the leftmost column pay nothing and are not pulled.\n• Pull speed is 2 source units per second. Flying enemies receive 20%, vehicles 30%, Gargantuars and Redeye Gargantuars 40% of this speed.\n• Newly hypnotized zombies during the wind are also pulled, without another entry payment. Mind-blover disappears after the 5-second wind.",
+    "notes": "Replanted: 300 HP. Fertilizer heals without evolution or restarting wind, cooldown or pulse counters. Fog clearing and hostile balloon removal occur at the original blowing event. Source SuperGargantuar variants use a separate 10% factor. Those source-only zombies are not present in Replanted; both native Gargantuar types use the ordinary giant factor."
+  },
+  "1298": {
+    "notes": "The original attack animation controls the boost window. Damage and speed bonuses stack and remain saved on the projectile. Native smoke particles replace the source particle emission. Fertilizer heals without restarting attacks or removing bonuses."
+  },
+  "1389": {
+    "replace": {
+      "4 tiles forward": "7 source units forward (about 5.19 lawn tiles)"
+    },
+    "notes": "The range follows the source coroutine. The flame hits 0.15 seconds after its animation event. Snow peas pass through after thawing; this plant does not absorb the same thawed pea again. Native smoke particles replace the source flame particles. Fertilizer heals without resetting stored energy."
+  },
+  "1312": {
+    "notes": "Uses the current health of a nearby Nut-shroom. The consumed ammunition and pending shot remain saved through an interrupted attack. Native vehicle and ground-target rules apply. Fertilizer heals without creating ammunition or restarting the attack."
+  },
+  "1438": {
+    "notes": "The native Spikeweed base supplies low targeting and terrain rules. Ordinary Zambonis and Catapult Zombies are the supported source vehicle counterparts. Additional vehicle damage uses maximum body and armour health. Native smoke replaces the source particles. Fertilizer heals without upgrading this marked variant to Spikerock."
+  },
+  "1118": {
+    "info": "Throws bouncing garlic cabbages.\n\nDamage: 40 every 3 seconds, plus 20 per existing Poison point. Adds one Poison point after damage. Each cabbage bounces once; hitting a target with existing Poison points does not consume a bounce. At five points, subsequent applications start poison; further applications extend poison and raise the level, up to 30. Poison deals 20 damage per point each second.",
+    "notes": "Fertilizer heals without evolution or extra attacks. Original models and animation are used. Poison values and timers from these attacks survive saving and loading. Cabbage Pot accelerates Garbage-pult; Butter Pot increases Clove-pult butter chance; Melon Pot strengthens melon splash."
+  },
+  "1117": {
+    "info": "Throws garlic kernels.\n\nDamage: 40 every 3 seconds, plus 20 per existing Poison point. Adds one Poison point after damage. A 25% chance replaces the kernel with garlic butter: 60 damage plus the same Poison bonus, immobilization for 4 seconds and 10 seconds of poison. Applying poison adds one point, up to 30. Poison deals 20 damage per point each second.",
+    "notes": "Fertilizer heals without evolution or extra attacks. Original models and animation are used. Poison values and timers from these attacks survive saving and loading. Cabbage Pot accelerates Garbage-pult; Butter Pot increases Clove-pult butter chance; Melon Pot strengthens melon splash."
+  },
+  "1119": {
+    "info": "Throws garlic melons.\n\nDirect damage: 100 every 3 seconds, plus 20 per existing Poison point. Splash adds 5 damage per existing Poison point. Each affected survivor gains one Poison point after damage. At five points, subsequent applications start poison; further applications extend poison and raise its level, up to 30. Poison deals 20 damage per point each second.",
+    "notes": "Fertilizer heals without evolution or extra attacks. Original models and animation are used. Poison values and timers from these attacks survive saving and loading. Cabbage Pot accelerates Garbage-pult; Butter Pot increases Clove-pult butter chance; Melon Pot strengthens melon splash."
+  },
+  "1149": {
+    "info": "Throws hot melons.\n\nDamage: 120 every 3 seconds, with melon splash. Direct and splash hits apply Overheat after damage. Overheat removes cold, increases later incoming damage by 50% and creates a 100-damage death explosion that heats nearby survivors.",
+    "notes": "Fertilizer heals without evolution or extra attacks. Original models and animation are used. Overheat from direct and splash hits survives saving and loading. Melon Pot strengthens splash."
+  },
+  "1461": {
+    "notes": "Bites trigger a lane change after one second and cost 15 HP (10 with Garlic Pot). Fertilizer heals without changing attack progress. Adventure-only garlic upgrades are not imported."
+  },
+  "1457": {
+    "notes": "Spiral radius grows by two source units per second with one revolution per second. The fixed launch origin survives saving. Destruction of the source stops the spiral. Fertilizer heals without resetting attacks or Cryo points."
+  },
+  "1198": {
+    "notes": "Death also triggers the explosion. The fire row deals 1800 damage; each of five fans releases five 100-damage stars. Fusion alone does not trigger fire. Fertilizer heals and caps the remaining fuse at 0.5 seconds without extending an already shorter fuse."
+  },
+  "1412": {
+    "notes": "Each pea emits five non-emitting stars at 0.2, 0.7, 1.2, 1.7 and 2.2 seconds while still flying. Peas and stars deal 20 damage. Torchwood does not transform these original projectile types. Fertilizer heals without resetting attacks or airborne emissions."
+  },
+  "1068": {
+    "notes": "Fertilizer heals without evolution or resetting attack progress. Original artwork and projectiles are included. Attack phases and projectile identities survive saving and loading. Adventure-only upgrades are not imported. Hits use existing cold states; these projectiles do not add Cryo points or chill by themselves."
+  },
+  "1069": {
+    "notes": "Fertilizer heals without evolution or resetting attack progress. Original artwork and projectiles are included. Attack phases and projectile identities survive saving and loading. Adventure-only upgrades are not imported. The original threefold Enflamed multiplier applies before the existing 50% incoming-damage modifier. These projectiles do not apply Overheat by themselves."
+  },
+  "1286": {
+    "notes": "Fertilizer heals without evolution or resetting attack progress. Original artwork and projectiles are included. Attack phases and projectile identities survive saving and loading. Adventure-only upgrades are not imported. Melon Pot strengthens splash. Held shields do not count towards the hypnosis threshold; bosses resist hypnosis."
+  },
+  "1336": {
+    "notes": "The original explosion clip plays at 0.8 speed. Crushing also triggers the ability. Fertilizer heals without changing this animation fuse; no special evolution exists. Body plus helmet health determines the strict 900 threshold. Bosses resist hypnosis and still take damage."
+  },
+  "1302": {
+    "notes": "Native aquatic terrain, sleep/coffee and save/load apply. The first 15-second interval grows the school; later intervals apply a Sea-shroom to the plant one tile ahead or drop a usable card. Fertilizer caps the current growth/reproduction timer at 0.5 seconds without resetting attacks. No fusion sun refund."
+  },
+  "1076": {
+    "notes": "Also fires homing spores at ground targets in its own lane, as implemented by SeaCactus in source 4.0.5.2. Flying targets take priority and receive air-only spikes. Fertilizer caps remaining growth time at 0.5 seconds. Native aquatic terrain and sleep/coffee apply. Airships are not available in Replanted.",
+    "info": "Urchin-shroom fires homing spores at ground targets in its lane or air-only spikes at flying targets. Flying targets take priority.\n\nDamage: 20, grown 20 × 4 / 1.5 s\nGrowth time: 120 s\nSpecial: Aquatic, short plant; straight-firing enemy peas pass overhead."
+  },
+  "1083": {
+    "notes": "Native aquatic terrain, sleep/coffee and save/load apply. Growth retains the original grow clip and then enables a second full five-star volley. Fertilizer caps remaining growth time at 0.5 seconds without resetting an attack."
+  },
+  "1291": {
+    "notes": "Native aquatic terrain, sleep/coffee and save/load apply. Feeding works with a Sea-shroom card, a carried Sea-shroom or a Minnow-shroom directly behind it. Fertilizer caps an active range timer at 0.5 seconds; it does not grant a new buff. Kraken-shroom is not available, so its prerequisite knockback marker and the dependent synergy cannot occur. The ordinary attack remains 20 shield-piercing damage."
+  },
+  "1078": {
+    "notes": "Source 4.0.5.2 grows after 30 seconds, as confirmed by SeaLantern.Start; the older English description says 60 seconds. The original level-one light covers 3×3 cells, then 5×5. Replanted displays this light through fog clearance. Native aquatic terrain and sleep/coffee apply. Fertilizer caps remaining growth at 0.5 seconds. Growth and its original clip survive saving and loading.",
+    "replace": {
+      "60s": "30s"
+    }
+  },
+  "1305": {
+    "notes": "A Sea-shroom card, carried Sea-shroom or Minnow-shroom behind it triggers the original eat animation. At its 0.833333-second event, one native hypnotized Ducky Tube Zombie appears at the plant. The plant survives feeding. An awake plant hypnotizes its attacker and disappears when bitten. Fertilizer heals without resetting feeding. Saved native action and zombie records prevent duplicate summons on load."
+  },
+  "1297": {
+    "notes": "The current Chinese description and IceSeaShroom.AnimEat confirm 20 shield-piercing damage and four seconds of freezing. The original 1.4-second animation event owns the ice pulse. Native freeze immunity and longer existing freeze times remain. Feeding uses a card, carried Sea-shroom or Minnow-shroom behind it. Fertilizer heals without changing the action. Aquatic terrain and sleep/coffee apply.",
+    "info": "Swell-shroom inflates after consuming a Sea-shroom and emits a cold pulse at the original animation event.\n\nDamage: 20, bypasses shields\nFreeze: 4 seconds\nRange: nearby ground zombies in its own and adjacent lanes (3×3 area)\nSpecial: Aquatic, short plant; straight-firing enemy peas pass overhead."
+  },
+  "1294": {
+    "notes": "A Sea-shroom card, carried Sea-shroom or Minnow-shroom behind it starts the original ten-second courage timer, including feeding/emergence animation time. Shoots normal spores; no homing, cold or extra projectile ability is inherited. Fertilizer caps current courage at 0.5 seconds and does not activate a hidden plant. Aquatic terrain, sleep/coffee and saved action phases apply."
+  },
+  "1089": {
+    "notes": "Solarfruit inside fires automatically using its existing sun payment. Starblover and Pulsar are not yet implemented, so their attraction-limit synergy is unavailable."
+  },
+  "1349": {
+    "info": "Toughness: 4000. Low plant: avoids straight enemy projectiles. Starts with 1000 HP. Restores 50 HP every 3 seconds. Above one third HP, incoming numerical damage is halved. Above two thirds HP, also absorbs numerical damage for the enclosed plant. Native crushing and explicit removal remain unchanged. Fertilizer heals and caps the remaining regeneration timer at 0.5 seconds."
+  },
+  "1013": {
+    "info": "Toughness: 4000; maximum health: 16000. Excess health drains by 200 per second. Bites every 1.75 seconds. Unarmored targets at or below 500 body HP receive a 500-damage bite; Chompzilla heals 400 and spits an 80-damage original zombie chunk with knockback. This branch does not spend the special bite. Other targets receive a 1000000-damage bite when digestion is ready, healing up to 16000 and starting 40 seconds of digestion. During digestion, ordinary bites deal 200 damage and heal up to 200. Ordinary chunks use either original zombie-part graphic and pierce ground targets once each. Fertilizer heals and caps remaining digestion at 0.5 seconds. Crushing and supported explosions cost at most 1333 HP per hit."
+  },
+  "1164": {
+    "notes": "Explosive cherries are absorbed before splash; implemented cherry explosions heal 200 HP. Replanted cherry effects do not damage friendly plants. Fertilizer heals without a special evolution."
+  },
+  "1200": {
+    "replace": {
+      " (Frenzy-shroom and Gatling Frenzy-shroom will not self-destruct).": "."
+    },
+    "notes": "Protects native Scaredy-shroom and all implemented Scaredy variants on the same tile. Frenzy-shroom, Gatling Frenzy-shroom and Scaredy Pot are not implemented. Fertilizer heals without a special evolution."
+  },
+  "1299": {
+    "info": "Nut Shell grows Mini-nuts, healing other Pumpkin plants or producing usable Wall-nut cards.\n\nToughness: 8000\nSpecial: A kernel ripens approximately every 50 seconds. It heals other damaged Pumpkin plants within 3x3 tiles for a total of up to 1000 HP. If no other Pumpkin needs healing, it produces one Wall-nut seed packet, up to three packets per Nut Shell.",
+    "notes": "The source Update grows the kernel from 0.01 to 1 at 0.02 per second (about 49.5 seconds). A total of 1000 HP is shared among other damaged Pumpkin plants in the surrounding 3x3 area. Healing continues after the three-card limit. Fertilizer heals without accelerating kernel growth or restoring spent cards."
+  },
+  "1323": {
+    "notes": "Uses native delayed Garlic lane changes and the existing poison system: one poison point and ten seconds of poison per actual bite. Fertilizer heals without a special evolution."
+  },
+  "1091": {
+    "notes": "Fertilizer heals and caps the active 30-second timer at 0.5 seconds. A native Blover spawns in the first legal empty interior from this tile to the right, respecting terrain and supports."
+  },
+  "1464": {
+    "notes": "This low shell does not block zombies. It absorbs crushing for itself and implemented Spikeweed/Spikerock variants or Spike-nut in its tile. Tire protection costs 500 HP, at most once per simulation tick. Fertilizer heals without a special evolution."
+  },
+  "1087": {
+    "notes": "Implemented Planterns, Lumos Pots, Beacon-shrooms and Jack O' Planterns contribute their original additive light levels. Every 15 seconds, heal 150 × max(0, tile light level − 1) HP. Fertilizer heals and caps that timer at 0.5 seconds.",
+    "info": "Jack O' Plantern clears fog, protects its interior and provides 1 Lumos Level in a 3×3 area.\n\nToughness: 4000\nEvery 15 seconds, restore 150 × (tile Lumos Level − 1) HP, with a minimum of zero."
+  },
+  "1334": {
+    "notes": "Requested Replanted adaptation: Sea-shell floats on water. Sea-shroom packets, carried Sea-shrooms and Minnow-shrooms immediately to its left heal one third of maximum health. Inner plants and supports remain intact. Fertilizer heals without a special evolution.",
+    "info": "Sea-shell can repair itself when fed a Sea-shroom.\n\nToughness: 4000. It occupies the pumpkin layer on land and water. Water placement does not require a Lily Pad."
+  },
+  "1196": {
+    "info": "Spring Melon charges continuously while awake, up to 30 seconds. It attacks ground zombies ahead within seven source units (about 5.19 tiles). Base interval: 3 seconds with 5% variation. Requires charge greater than 1.5 seconds and its one-second attribute countdown to finish. Each shot deals 120 + floor(60 × charge seconds) direct damage, then resets charge. Maximum direct damage: 1920. Melon splash follows the original shared damage budget.",
+    "notes": "The shipped PlantData, CheckRange and PlantShootUpdate take precedence over conflicting English almanac values. Fertilizer heals and caps the positive attribute countdown at 0.5 seconds; it does not grant or clear charge."
+  },
+  "1363": {
+    "notes": "The shipped AttackZombies comparison permits four butter recipients, despite the English description of three. Butter lasts four seconds. Crushing and delayed squash visuals use the original projectiles. Fertilizer heals without a special evolution."
+  },
+  "1343": {
+    "notes": "Landing deals 120 area crush damage in its row. One second later, normal melon splash follows at the same position, without a direct-hit recipient. Water suppresses the delayed splash. Fertilizer heals without a special evolution."
+  },
+  "1378": {
+    "notes": "The original additive squash animation emits children at 0.483333 and 1.466667 seconds, with saved random speed from 0.95 to 1.05. Successive generations deal 60, 30 and 15 crush damage. The last generation ends immediately after landing. Lettuce projectiles sink in water. Fertilizer heals without a special evolution."
+  },
+  "1213": {
+    "notes": "Fertilizer heals without enabling an explosion. Bucket, Chrono Core and Jack-in-the-Box evolutions are not implemented."
+  },
+  "1158": {
+    "notes": "Penetrates shields over seven source units. Doubles damage against live Bucket/Football armor, metal Door/Ladder shields and Zamboni bodies. Rust-shroom is not implemented. Fertilizer heals without a special evolution."
+  },
+  "1314": {
+    "notes": "Doubles each direct or splash hit only while its recipient has live Type 1 armor, including nonmetal Cone and nut armor. Held shields alone do not qualify. Metal-pult and Chrono Melon are not implemented. Fertilizer heals without a special evolution."
+  },
+  "1093": {
+    "notes": "The source star checks metal armor and shields, not metal bodies alone. Five original star directions; no Torchwood ignition. Iron Star, Starpick and Jokestar are not implemented. Fertilizer heals without a special evolution."
+  },
+  "1393": {
+    "notes": "The original range is rounded to 4.5 tiles in the source description. Native FumeCloud particles present the fumes. Fertilizer heals without changing mode or attack cooldown.",
+    "info": "Saguaro-shroom fires shield-piercing fumes every 1.5 seconds.\n\nDamage: 40. Range: six source units (about 4.44 tiles).\nClick to switch modes: low altitude hits ground and air; high altitude hits air only for 160 damage."
+  },
+  "1427": {
+    "notes": "Prioritizes flying targets. A projectile can hit at most three distinct airborne targets; a ground hit ends it. Frozen and airborne damage multipliers stack. Fertilizer heals without a special evolution."
+  },
+  "1103": {
+    "notes": "Prioritizes flying targets. Native buckets, football helmets, doors and ladders grant the metal bonus while present. Iron/portal balloons and airships are absent in Replanted, so their source crash and armor effects have no matching target. Fertilizer heals without evolution."
+  },
+  "1309": {
+    "notes": "The source code subtracts its own light level before healing. Fertilizer heals and caps the positive healing timer at 0.5 seconds; no special evolution.",
+    "info": "Illumi-nut blocks zombies and provides one light level in a 3×3 area.\n\nToughness: 4000. Every 15 seconds, restores 150 × max(0, the light level on its tile − 1) health."
+  },
+  "1236": {
+    "notes": "The source code heals Doom-nut for 100 HP within four source world units when an Irradiated zombie dies. Native jack-in-the-box explosions and plant Doom blasts are covered. Replanted has no Doom-shroom Zombie, so its separate 3×3 suppression has no target."
+  },
+  "1248": {
+    "replace": {
+      "25/25s": "25/50s"
+    },
+    "notes": "Doomflower produces 25 Sun and attempts one free 3×3 spore placement every 50 seconds, matching the original Chinese description and the shared production event. Spores mature after 30 seconds and detect enemies within four source world units before releasing the five-unit Doom blast. Fertilizer heals and caps their positive ability timers at 0.5 seconds."
+  },
+  "1355": {
+    "notes": "Irradiated and the death-explosion curse persist through saves. Poison uses the existing poison system and does not expire while Irradiated remains active. The source death burst has radius two world units and deals 300 damage; it does not spread the curse."
+  },
+  "1364": {
+    "notes": "The source PotatoSeed coroutine flies for 1.5 seconds, then creates a native Potato Mine with 0.5 seconds remaining before rising. This source value takes precedence over the English claim that it is armed on landing. Newly occupied or invalid destinations retain their occupants. Fertilizer heals and immediately arms Crater-tot."
+  },
+  "1318": {
+    "info": "Copies an eligible Pea-family plant inside the shell.\n\nToughness: 4000\nCopies its projectile count, type and damage, including the native split-head pattern and available family effects. The internal plant owns the shots and their counters. Attack interval: twice the internal plant’s base interval, at least 3 seconds. Losing or replacing the internal plant cancels an ongoing copied volley.",
+    "notes": "The source code enforces a 3-second minimum; it has no 6-second maximum despite the English source description. Fertilizer heals and caps a positive attack timer at 0.5 seconds. Only already implemented Pea-family plants can be copied."
+  },
+  "1352": {
+    "info": "Adds one watermelon whenever an enclosed catapult-type plant completes a real firing event.\n\nToughness: 4000\nWatermelon damage: 80 direct, with normal melon splash. Works with native and already implemented catapult families. Failed shots produce no additional melon; bonus melons never trigger further bonus melons.",
+    "notes": "Uses the existing complete original watermelon model, flight and splash owner. Fertilizer heals without an evolution or charge bonus."
+  },
+  "1436": {
+    "info": "Stores Ice-shroom effects for later release.\n\nToughness: 4000\nBites apply 4 seconds of Chill and 5 Cryo points. Stores up to 3 ice effects originating on the tile immediately ahead, suppressing the stored effect. Click to spend one charge on a 4-second Ice-shroom freeze. Every 5 seconds, automatically releases a charge if more than one remains.",
+    "notes": "The actual StoragedCool code checks a 0.5-unit radius around a point 1.5 source units ahead; the shell’s own tile is outside this range despite the English and Chinese descriptions. A release cannot be stored again. Existing cold/freeze immunity rules remain. Fertilizer heals, preserves charge and caps a positive automatic-release timer at 0.5 seconds."
+  },
+  "1413": {
+    "info": "Stores heat and releases it as a fire line.\n\nToughness: 4000\nBite retaliation: 20 + heat/30 damage before rounding, then applies Enflamed. Retaliation falls to two thirds or one third at the two shell damage stages. Gains 10% of a fire line’s damage and 60 heat when an Enflamed zombie in its lane dies. Ordinary heat absorption caps at 1,000,000; the source death bonus adds 60 directly. At 1800 heat or more, clicking or death spends all heat on a fire line with equal damage.",
+    "notes": "Heat and Enflamed status survive saving. Cold removes Enflamed. The releasing shell retains no energy gained during its own fire-line callbacks. Ingredient consumption and board teardown do not release fire. Fertilizer heals and preserves heat; no evolution."
+  },
+  "1209": {
+    "notes": "Bucket and Chrono Core upgrades remain unavailable. Fertilizer heals without a special evolution."
+  },
+  "1159": {
+    "info": "Rust-shroom fires shield-piercing fumes every 1.5 seconds.\n\nToughness: 2000\nDamage: 50; 150 against a target with remaining Type 1 armor.\nRange: 7 source units forward in this lane.\nAn additional Bucket restores 500 Toughness, up to maximum.",
+    "notes": "Football Helmet evolution is not implemented. Fertilizer heals without evolving this plant."
+  },
+  "1315": {
+    "notes": "Melon splash checks the remaining Type 1 armor of each recipient separately. An additional Bucket restores 500 Toughness, up to maximum. Fertilizer heals without a special evolution."
+  },
+  "1096": {
+    "notes": "Type 2 armor health is added to the star damage before native damage processing. An additional Bucket restores 500 Toughness, up to maximum. Fertilizer heals without a special evolution."
+  },
+  "1194": {
+    "info": "Doom Pea fires shield-piercing peas every 1.5 seconds. Each shot increases its damage by 1, up to a +60 bonus on the base damage of 40. The first pea therefore deals 41 damage, and the maximum is 100.",
+    "notes": "A Frenzy-shroom immediately to the left shares its current attack interval, down to 0.2 seconds. Each Doom Pea shot synchronizes its growing damage with that neighbour. Without that neighbour the interval returns to 1.5 seconds. Fertilizer heals without resetting damage growth."
+  },
+  "907": {
+    "info": "Gatling Doom fires four shield-piercing Doom Shells per attack, with 300 damage per shell and a base attack interval of 1.5 seconds. Every sixteenth shell is enlarged: 1800 direct damage plus a radius-three-world-unit explosion, followed by a 4.5-second attack cooldown.",
+    "notes": "The source HitZombie runs the area damage before the direct hit. Radius three world units corresponds to about 2.22 lawn tiles. Replanted has no Odyssey mode or its two modifiers. Fertilizer heals without changing the shell counter or rest."
+  },
+  "1440": {
+    "info": "Doom-spreader fires shield-piercing Doom peas across its own and adjacent lanes: 40 damage per pea every 1.5 seconds. Every seventh volley fires large Doom Shells with 120 direct damage plus the same damage in a radius of three world units. At a lawn edge the missing lane is replaced by a delayed extra shell in its own lane.",
+    "notes": "The source radius is about 2.22 lawn tiles. Area damage occurs before the direct hit. Fertilizer heals and preserves volley progress. This is a separate plant from Charred Threepeater."
+  },
+  "1277": {
+    "info": "Death Star disappears after three seconds and summons a Doom Meteor. The meteor flies from the upper left towards the middle of the lawn and deals 1800 area damage on landing, then releases 180 spore stars with 20 damage each.",
+    "notes": "The source meteor releases five rings of 36 Bullet_seaStar projectiles, rather than ordinary stars. It creates no crater. Fertilizer heals and caps a positive activation timer at 0.5 seconds. The meteor and its stars remain active after the plant disappears."
+  },
+  "1127": {
+    "info": "1000 health. Knocks back nearby ground zombies, deals 40 shield-piercing damage and forces a legal lane change. Cooldown: 1 second. Each pulse costs 100 health for one target, 150 for two to four, or 250 for five or more. Knockback is 2 source units, or 4 with Umbrella Pot.",
+    "notes": "Native Umbrella protection against bungees and catapult shots remains active. Fertilizer heals without resetting the cooldown. Legal lane selection follows native terrain rules."
+  },
+  "1186": {
+    "info": "1000 health. Only knocks back flying zombies in its own lane within 1 source unit of its elevated center. Pops balloons without direct damage. Cooldown: 1 second. Each pulse costs 100 health for one target, 150 for two to four, or 250 for five or more. Knockback is 2 source units, or 3 with Umbrella Pot. Source airships receive only one quarter of the knockback.",
+    "notes": "Replanted has no source airship zombie types. Ground zombies do not trigger its contact ability. Native Umbrella bungee/catapult protection remains active. Fertilizer heals without resetting the cooldown."
+  },
+  "1399": {
+    "info": "Launches a cabbage dealing 1800 shield-piercing damage every 15 seconds, with the source interval variation of 14.25–15.75 seconds. An Irradiated direct target triggers 600 splash damage without falloff in a radius of 1.5 source units. The direct target is excluded from this additional splash.",
+    "notes": "Irradiation uses the existing Doom fusion status. The cabbage does not apply irradiation itself and leaves no crater. Fertilizer heals without shortening its attack cooldown."
+  },
+  "1356": {
+    "info": "Fires a harmless star cap every 1.5 seconds. The cap can contact three different ground zombies. Each contact releases five normal stars in directions 30°, -30°, 90°, -90° and 180°, each dealing 20 damage. The cap disappears after its third contact and cannot burst repeatedly against the same zombie.",
+    "notes": "The cap and all child stars use original artwork. Contact count and previous targets survive saving/loading. Fertilizer heals without restarting the attack phase."
+  },
+  "1358": {
+    "info": "Fires one laser across the entire forward lane every 1.5 seconds. Unlimited pierce; shields do not stop its damage.\n\nBase damage: 10. Adds up to 80 damage at short range, falling linearly to zero bonus at five columns. At light level 3 or higher, the falloff extends to ten columns. Each light level adds another 5 damage.",
+    "notes": "Follows the actual clamped source formula. Nearby light providers stack. Fertilizer heals; it does not change the firing cycle."
+  },
+  "1346": {
+    "info": "Does not attack automatically. A click or an actual hit triggers its attack if ground zombies are nearby.\n\nRange: three source units (about 2.22 tiles), at most one adjacent lane. Throws one pat of butter at every target: 40 damage and four seconds immobilization. Each nonempty attack costs 30 current and maximum HP; maximum HP cannot fall below 1.",
+    "notes": "Butter uses the original full projectile model. Fertilizer heals only to the reduced maximum and does not restore lost maximum HP. No automatic upgraded form."
+  },
+  "1245": {
+    "info": "Produces 25 Sun every 20 seconds, with the original randomized production cycle. Newly dropped Sun within a 5×5 area flies into its bank. Each deposit stores 1.3 times its value, rounded down.\n\nProduction also pays out stored Sun in units of 25. The source starts extra payouts only when savings exceed 25, then pays all complete units. Its own payouts cannot be deposited again.",
+    "notes": "Savings and incoming deposits survive saves. Fertilizer heals and caps the positive production timer at 0.5 seconds; savings remain. No additional growth stage or evolution."
+  },
+  "1453": {
+    "info": "Toughness: 1000. Fumes deal 40 damage every 1.5 seconds, plus all stored Energy; the wave then spends that Energy.\n\nIncoming damage grants half its amount as Energy, capped at maximum toughness per hit, then loses 90% of its damage (at least 1 HP). Knockback self-damage grants no Energy. Each knocked-back zombie takes 40 damage and grants 40 Energy. Contact pulses have a one-second cooldown and cost 100/150/250 HP for 1/2–4/5+ targets. Deflected basketballs grant their 75 damage as Energy. Retains native bungee and basketball protection.",
+    "notes": "Energy survives saves, moves and fertilizer. Fertilizer heals without resetting energy or attack counters. Replanted has no Fusion airships or additional enemy projectile species.",
+    "flavor": "\"This is the hottest hairstyle around. Not only does it bring out my handsome, dignified side, it's also incredibly safe—it keeps out dust, basketballs, and Zombies falling from the sky.\" Bush-shroom is more than happy to praise his new hairstyle. Of course, all his friends know the real reason he's so pleased: the hairstyle hides his crooked nozzle."
+  },
+  "1373": {
+    "info": "Beamshooter locks onto up to 1 distinct ground zombie ahead in its own lane. Each laser deals 10 damage every 0.2 seconds and bypasses shields.\n\nEvery 0.5 seconds, gains energy equal to the current light level, up to 1000. With energy above 1, each damaging beam spends 1 + floor(energy / 10) and deals 10 × (1 + energy spent). Energy 0 or 1 is not consumed.\n\nWhen acquiring targets, a Split Beam at least two columns ahead in the same lane takes priority. The laser transfers 1 × (1 + energy spent) energy every 0.1 seconds, consuming energy once per transfer and capping the recipient at 1000. Existing valid targets remain locked. Click to acquire targets again.",
+    "notes": "Uses the original source code rules where the description differs: energy 1 is retained, and transfers consume once before multiplying by the number of beams. Fertilizer heals without evolving or clearing energy/targets. Odyssey and Rogue upgrades are not available in Replanted."
+  },
+  "1381": {
+    "info": "Rebeamer locks onto up to 2 distinct ground zombies ahead in its own lane. Each laser deals 10 damage every 0.2 seconds and bypasses shields.\n\nEvery 0.5 seconds, gains energy equal to the current light level, up to 1000. With energy above 1, each damaging beam spends 1 + floor(energy / 10) and deals 10 × (1 + energy spent). Energy 0 or 1 is not consumed.\n\nWhen acquiring targets, a Split Beam at least two columns ahead in the same lane takes priority. The laser transfers 2 × (1 + energy spent) energy every 0.1 seconds, consuming energy once per transfer and capping the recipient at 1000. Existing valid targets remain locked. Click to acquire targets again.",
+    "notes": "Uses the original source code rules where the description differs: energy 1 is retained, and transfers consume once before multiplying by the number of beams. Fertilizer heals without evolving or clearing energy/targets. Odyssey and Rogue upgrades are not available in Replanted."
+  },
+  "1382": {
+    "info": "Split Beam locks onto up to 1 distinct ground zombie ahead in its own lane. Each laser deals 10 damage every 0.2 seconds and bypasses shields.\n\nEvery 0.5 seconds, gains energy equal to the current light level, up to 1000. With energy above 1, each damaging beam spends 1 + floor(energy / 10) and deals 10 × (1 + energy spent). Energy 0 or 1 is not consumed.\n\nWhen acquiring targets, a Split Beam at least two columns ahead in the same lane takes priority. The laser transfers 1 × (1 + energy spent) energy every 0.1 seconds, consuming energy once per transfer and capping the recipient at 1000. Existing valid targets remain locked. Click to acquire targets again. The left head receives energy; only the right head attacks. It does not fire backward.",
+    "notes": "Uses the original source code rules where the description differs: energy 1 is retained, and transfers consume once before multiplying by the number of beams. Fertilizer heals without evolving or clearing energy/targets. Odyssey and Rogue upgrades are not available in Replanted."
+  },
+  "1383": {
+    "info": "Gatling Beam locks onto up to 4 distinct ground zombies ahead in its own lane. Each laser deals 10 damage every 0.2 seconds and bypasses shields.\n\nEvery 0.5 seconds, gains energy equal to the current light level, up to 1000. With energy above 1, each damaging beam spends 1 + floor(energy / 10) and deals 10 × (1 + energy spent). Energy 0 or 1 is not consumed.\n\nWhen acquiring targets, a Split Beam at least two columns ahead in the same lane takes priority. The laser transfers 4 × (1 + energy spent) energy every 0.1 seconds, consuming energy once per transfer and capping the recipient at 1000. Existing valid targets remain locked. Click to acquire targets again.",
+    "notes": "Uses the original source code rules where the description differs: energy 1 is retained, and transfers consume once before multiplying by the number of beams. Fertilizer heals without evolving or clearing energy/targets. Odyssey and Rogue upgrades are not available in Replanted."
+  },
+  "1085": {
+    "info": "Starthorn fires five homing cactus stars at airborne zombies anywhere on the board.\n\nDamage: 20 per star, five stars every 1.5 seconds.\nStars retarget when their airborne target lands or disappears. Ground zombies cannot trigger attacks or receive star damage.",
+    "notes": "Fertilizer heals without evolution and preserves the attack phase. The original cactus-star model is included. No unavailable Odyssey or Rogue upgrade is assumed."
+  },
+  "1191": {
+    "info": "Doom Cactus fires irradiating thorns with two pierces.\n\nDamage: 40 every 1.5 seconds; each thorn can hit three different zombies. After damage, surviving targets become Irradiated and explode for 300 area damage when they die.\nThe first ultimate chance is 1/21. Each failed attack removes one losing draw, up to a guaranteed success; success resets the bag.\nUltimate: a forward fan of 90 original thorns within 45 degrees above and below the firing direction. These hit ground and airborne zombies. Doom Cactus resists damage and crushing during the ultimate animation.",
+    "notes": "The original code initializes twenty losing draws and one winning draw, rather than the conflicting 0%/5% English description or 1/20 Chinese description. The port distributes the advertised ninety thorns over the original 0.4167–1.5 second firing interval. Fertilizer heals and retains the draw count, ultimate and cooldown. No unavailable Rogue or Odyssey upgrade is assumed."
+  },
+  "1079": {
+    "info": "Lumos Cactus favors airborne zombies in his own lane and fires twice at airborne targets.\n\nDamage: 30 every 1.5 seconds.\nLight level 0: one-hit light spike.\nLevel 1: light spikes pierce twice, hitting up to three different zombies.\nLevel 2: an infinitely piercing laser; 30 damage to ground targets or 90 to airborne targets.\nLevel 3 and above: laser damage doubles to 60 against ground targets or 180 against airborne targets.\nAir attacks have separate events at about 0.27 and 0.5 seconds.",
+    "notes": "Level 3 follows the actual code and Chinese description, rather than the conflicting English value of 40. Uses existing Plantern, Beacon-shroom, Lumos Pot, Jack-o-Plantern and Illumi-nut light providers. Unimplemented Aurora/Blacklight/Triplantern and CattailLour synergies remain unavailable. Fertilizer heals without changing light, attack phase or mode."
+  },
+  "1415": {
+    "info": "Thornweed damages nearby ground and airborne zombies in his own lane and launches three cactus spikes upward with every attack.\n\nDamage: 20 contact damage every second, bypassing shields; each spike deals 20 normal projectile damage.\nSpikes leave at 60, 90 and 120 degrees, can hit ground or airborne zombies along their path, and disappear after one hit.\nRetains native Spikeweed terrain, low profile and vehicle interaction.",
+    "notes": "The contact and three-projectile volley share one original animation event at one third of a second. Fertilizer heals without evolving into Spikerock and preserves attack progress. No unavailable Rogue or Odyssey upgrade is assumed."
+  },
+  "1337": {
+    "info": "Butterweed halves the movement speed of non-flying zombies walking over him, without dealing damage. Every 3 seconds, butters touching zombies for 1 second. Multiple Butterweeds do not stack. Does not puncture tires; vehicles ignore him. Toughness: 300.",
+    "notes": "The independent butter timer runs every three seconds. Fertilizer heals and caps a positive butter timer at 0.5 seconds. Movement slowing follows live contact, ends immediately on leaving, and does not stack with another Butterweed. No damaging projectile is created."
+  },
+  "1418": {
+    "info": "Springweed attacks nearby ground zombies for 80 shield-bypassing damage every 1.5 seconds, then launches surviving targets upward. Launched zombies cannot move or act until landing. Giants receive a weaker launch. Imps die immediately when launched. Bosses and vehicles cannot be launched. Ordinary vehicle contact destroys the vehicle and consumes Springweed. Toughness: 300.",
+    "notes": "The original attack event occurs at 0.416667 seconds. The port retains the source Launch values: vertical speed 3.5, or 1.5 for giants; vehicles and bosses cannot be launched. Contact destroys ordinary vehicles and consumes Springweed, as inherited from Caltrop. Fertilizer heals without evolving into Spikerock or resetting the attack. No projectile is created."
+  },
+  "1392": {
+    "info": "Splash is an aquatic Squash. Detects zombies within half a tile behind and one tile ahead, then jumps and deals 1800 crushing damage on landing. Can attack submerged zombies. Disappears after smashing. Toughness: 300.",
+    "notes": "Aquatic result: fusion and glove placement use native aquatic terrain rules in both ingredient directions. Native Squash owns movement, one landing hit and removal. Submerged targets are included. Fertilizer heals without restarting a jump. No projectile is created."
+  },
+  "1293": {
+    "info": "Sea-nut is an aquatic blocker. Toughness: 2000 initially, 4000 after 10 seconds, 6000 after 20 seconds. At 30 seconds, starts rolling forward and deals 600 shield-bypassing damage every 0.02 seconds on contact. Becomes invulnerable while rolling and disappears after leaving the lawn. His size grows with age and remaining health.",
+    "notes": "After 10 and 20 seconds, gains 2000 current and maximum HP, preserving existing damage. At 30 seconds, starts rolling with 600 shield-bypassing contact damage every 0.02 seconds, without consuming itself on contact. Rolling prevents damage and crushing. Fertilizer heals and caps the next positive growth timer at 0.5 seconds; it does not restart rolling. Position, size, growth and rolling phase persist in native save fields. The original root travel is replaced by one native movement owner. No separate projectile is created."
+  },
+  "1051": {
+    "info": "Kelp-spreader fires kelp bullets across three lanes and can drown one zombie like Tangle Kelp.\n\nDamage: 30 per bullet, three bullets every 1.5 seconds.\nEach aquatic hit adds one Tangle value. Tangled slows targets and stacks with Chill. Further kelp applications deal increasing percentage damage as Tangle builds, eventually killing the target when full.\nAt a lawn edge, the missing lane shot is redirected into the plant’s own lane.",
+    "notes": "PlantData and the original damage handoff specify 30 damage; the original English description still says 20. Fertilizer heals without evolving the plant and preserves its shooting state. A completed grab consumes the plant together with its victim, matching the original Tangle Kelp ability. Side-lane shots curve from the plant into their destination lane."
+  },
+  "1050": {
+    "notes": "Fertilizer heals without restoring spent grabs. An attack already in progress is preserved."
+  },
+  "1047": {
+    "notes": "Mini-squashes also deal 40 damage on direct contact, can hit surviving targets again after a short contact timeout, and sink in water. At a lawn edge, the missing shot follows in the plant’s own lane after 0.2 seconds. Fertilizer heals without evolving the plant and preserves an active volley."
+  },
+  "1063": {
+    "notes": "Contact damage bypasses shields. Mini-squashes deal 40 on direct contact and in a very small area on landing. The plant retains Spikeweed’s low profile and vehicle destruction. Fertilizer heals without evolving the plant or resetting its attack. Rogue upgrades are not required."
+  },
+  "1285": {
+    "notes": "Golden Bean upgrade of Silver-nut: 1000 combat coins, including one free ultimate (9000 initial Toughness after upgrading). Subsequent ultimates cost 1000; 5s cooldown. Fertilizer restores the current maximum health without buying another ultimate. Native shop money is never spent. Debug has free upgrades and ultimates. Spending returns one 25-Sun pickup per 500 combat coins, capped at 40 pickups. Free debug actions give no spending reward."
+  },
+  "1188": {
+    "notes": "Golden Bean upgrade of Silver Sunflower: 3000 combat coins, doubled per living Golden Sunflower. The first 50 Sun is stored after 5s, then every 10s, up to 10000 per plant. An ultimate costs 1000 and releases the banks of all Golden Sunflowers in 50-Sun pickups every 0.1s. Concurrent payout is blocked. The selected bank determines its cooldown (0.1s per pickup). With a Golden Sunflower present, collected Sun can reach 50000; overflow is stored in available banks, newest first. Fertilizer heals and reduces the next production countdown to at most 0.5s; it does not trigger an ultimate. Debug has free upgrades and ultimates. Spending returns one 25-Sun pickup per 500 combat coins, capped at 40 pickups. Free debug actions give no spending reward. Replanted overflow below 50 Sun is credited exactly rather than rounded up. Existing Sun above the native limit is preserved if the last Golden Sunflower is lost. Carried Golden Sunflowers still count toward upgrade prices."
+  },
+  "1232": {
+    "info": "Tangle Mine is a land mine that arms after 14–16 seconds. When an eligible ground zombie touches it, drags that zombie under, then explodes for 1800 damage in its own lane within one source unit. Toughness: 300.",
+    "notes": "Direction matters: put Tangle Kelp onto Potato Mine. The original AnimKill passes 1800 to SmallBombPotato (the source almanac says 600). Native grab state and victim ID survive saves. Interrupted grabbing still finishes the reserved victim without the detonation. Fertilizer heals and reduces positive burial time to at most 0.5 seconds before the original rise, preserving a grab already in progress. No projectile is created."
+  },
+  "1233": {
+    "info": "Kelp Mine is an aquatic Tangle Kelp that drags an approaching zombie under and explodes for 600 damage in a 1.5-source-unit radius across three lanes. Toughness: 300.",
+    "notes": "Direction matters: put Potato Mine onto Tangle Kelp. Native kelp owns grabbing, drowning and the victim ID. Death also releases the mine explosion. Fertilizer heals without resetting a grab. Straight zombie peas pass above this low plant. No projectile is created."
+  },
+  "1340": {
+    "info": "Sea-mine is an aquatic mine that starts armed. Deals 900 damage initially, 1800 after its first growth at 29–31 seconds. After another 29–31 seconds, grows again and explodes across three lanes with increased range. Toughness: 300.",
+    "notes": "Direction matters: put Potato Mine onto Sea-shroom. Sea-shroom onto Potato Mine retains the existing Land Mine. Uses the original aquatic model and the existing SeaMine growth implementation. Fertilizer heals and reduces a positive growth countdown to at most 0.5 seconds. Does not sleep by day. No projectile is created."
+  },
+  "1353": {
+    "info": "Potato Masher starts armed. When a ground zombie approaches within half a tile behind or one tile ahead, creates a Potato Mash at its position and burrows for 15 seconds before rising again. Potato Mash uses Squash movement and deals 1800 crushing damage, with extended acquisition range. Toughness: 300.",
+    "notes": "Both ingredient orders work. The original PotatoSquashBody and PotatoSquash graphics are separate: one stationary producer and one native Squash attacker. A failed allocation retains the armed producer. Fertilizer heals and reduces positive burial time to at most 0.5 seconds before the original 0.5-second rise without deleting an existing attacker. Terrain, underlays and pumpkins are retained. No projectile is created."
+  },
+  "1023": {
+    "info": "Perfume-shroom sprays piercing perfume every 1.5 seconds.\n\nDamage: 40.\nAgainst zombies below 50% combined body and helmet health, perfume can hypnotize instead of damaging them. The chance rises as health falls, up to 25%.\nWhen bitten, it hypnotizes the attacker and becomes a normal Fume-shroom.",
+    "notes": "Trippy-shroom and its colored-spore bonus are not available. Fertilizer heals without evolving or resetting the attack. Native control immunities remain."
+  },
+  "1238": {
+    "info": "Tangle Weed attacks ground zombies in its tile every second.\n\nDamage: 20.\nEach hit adds one permanent land Tangle Value and two seconds of kelp slowing. Land Tangle Value shares the aquatic stack count, but its bonus damage is one third as strong and never creates kelp seedlings. After more than five previous stacks, each hit adds 1% of one third of maximum body and helmet health; at thirty previous stacks it also deals one third of that maximum.",
+    "notes": "Fertilizer heals without evolving or removing zombie stacks. Native Spikeweed handles vehicles and terrain."
+  },
+  "1042": {
+    "info": "Frenzy-shroom fires dark spores at ground zombies in its lane. Each attack reduces its attack interval by 0.1 seconds, from 1.5 seconds to a minimum of 0.2 seconds.\n\nDamage: 20 per shot. A Doom Pea immediately to its right synchronizes its base and accumulated attack damage with Frenzy-shroom on each shot. The last synchronized damage remains if Doom Pea leaves.\n\nFrenzy-shroom hides when ground zombies enter its fear area. The fear event resets its interval to 1.5 seconds. If it had reached 0.2 seconds, it explodes for 1800 damage and leaves a Doom-shroom crater instead.",
+    "notes": "The delivered source code uses a 0.2-second minimum; the English source description says 0.25 seconds. Travel-mode upgrades are not imported. Fertilizer heals; it does not reset attack acceleration or synchronized damage."
+  },
+  "1080": {
+    "info": "Glowver blows away hostile flying Balloon Zombies and clears fog, like Blover. It also adds one Lumos level across the lawn for 30 seconds. Independent applications stack and expire independently.",
+    "notes": "The temporary light applies through the existing Lumos system. It survives save/load and stops during pause. Glowver has no projectiles. Fertilizer heals; it does not extend an existing light effect."
+  },
+  "919": {
+    "info": "Phoenix Threepeater fires three 160-damage phoenix peas every 1.5 seconds. Each pea hits three distinct zombies and applies Enflamed after damage.\n\nOn fusion and combat death, releases a 1800-damage Jalapeno effect in every lane. A Charred Threepeater also revives when affected by a Jalapeno fire lane.",
+    "notes": "Travel unlocks, Odyssey/Rogue upgrades, infinite penetration and SP evolution are not imported. Fertilizer heals without evolution and preserves attack progress."
+  },
+  "1111": {
+    "info": "Solar-pult fires a 50-damage solar cabbage every 5 seconds. Fusing refunds 100 Sun.\n\nThe original code permits max(2, min(6, floor(current Sun / 200) + 1)) total hits. Each hit or landing drops 5 Sun. A cabbage bounces after a nonfinal hit.",
+    "notes": "Uses the original source hit-count formula, including its minimum of two hits. Fertilizer heals without evolution and preserves attack progress."
+  },
+  "1338": {
+    "info": "Aurora Plantern chills nearby zombies and grants chilling properties to passing ground lasers.\n\nLight: level 1 in a 3×3 area.\nEvery second: 20 damage within 1.5 source units, at most one lane above or below; 1.5 seconds of Chill. For each already frozen target, refresh Freeze to at least 5 seconds once per Aurora Plantern.\nGround lasers from Ray-shroom and Lumos Cactus turn cyan after passing through and apply Chill.",
+    "notes": "Uses the actual Fusion 4.0.5.2 radius and freeze call; the original almanac lists older values. Fertilizer heals and reduces the next pulse delay to at most 0.5 seconds; no evolution."
+  },
+  "1379": {
+    "notes": "Fertilizer heals this plant; no special fertilizer evolution. Additional beams do not split again."
+  },
+  "1088": {
+    "info": "Thorny Pumpkin counterattacks the zombies that bite it.\n\nToughness: 4000\nSpecial: Reflects the actual Toughness lost to each bite as damage to the attacker (1:1)."
+  },
+  "1048": {
+    "info": "Spike-nut punctures the tires of approaching Zombonis, and will still be standing afterwards!\n\nToughness: 4000\nSpecial: \n• Reflects the actual Toughness lost to each bite as damage to the attacker (1:1).\n• Punctures incoming tires in exchange for 500 Toughness. It cannot protect against submarines or being stomped by Gargantuars."
+  },
+  "1256": {
+    "info": "Thorn-nut can grow taller to block the flight of airborne zombies.\n\nToughness: 4000\nSpecial: \n• Reflects the actual Toughness lost to each bite as damage to the attacker (1:1).\n• Can pop Balloons."
+  },
+  "1263": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1235": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1073": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1189": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1039": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1257": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1278": {
+    "notes": "Bite effects trigger per 50 Toughness lost to the same attacker. Replanted partial bites accumulate; saved remainders persist. Other damage reactions are unchanged."
+  },
+  "1357": {
+    "replace": {
+      "After leaving the frightened state, the attack bonus gradually recovers over 3s.": "Bonus efficiency starts at 0%, stays at 0% while frightened, and recovers by 30 percentage points per second otherwise."
+    },
+    "notes": "Plant value follows the same minimum available recipe cost as the fusion cards. Scaredy-type bonus is 2 × (base bonus + 10%). Recovery and projectile bonuses persist in native saves. Recipient bonuses refresh once per second, as in the source."
+  },
+  "1437": {
+    "notes": "Currently implemented flying plant: Camo-shroom. Removing a flyer never triggers a fusion reward. The recipient keeps the five-second bonus after the pot is moved or removed; repeated pulses refresh it."
+  },
+  "1347": {
+    "notes": "Click with an empty cursor to cycle modes. An attack already in progress keeps its selected mode. Standard mode returns missing edge-row peas to its own lane. Uses native peas, Torchwood conversion and impact effects. Fertilizer heals; no special evolution."
+  },
+  "1460": {
+    "notes": "Available terrestrial kelp recipients: Tingle Kelp, Grapple Kelp, Tangle-nut, Spike Kelp and Tangle Weed. Odyssey plants are not implemented. Moisture follows live water tiles and live pots; bonuses do not stack. Fertilizer heals; no special evolution."
+  },
+  "1451": {
+    "notes": "The half-ripe cherry is attached before the initial blast and gains one quarter of cherry damage. No extra fertilizer evolution."
+  },
+  "1488": {
+    "flavor": "",
+    "notes": "Source 4.0.5.2 shrinks ground and flying targets after damage, including the source Imp exception. This port preserves that actual behavior. No extra fertilizer evolution."
+  },
+  "1173": {
+    "replace": {
+      "every 3 seconds": "every second"
+    },
+    "notes": "The source code decays health every second, despite the English description saying three seconds. Fertilizer heals and caps the next decay timer at 0.5 seconds. Replanted damage difficulty remains active."
+  },
+  "1428": {
+    "notes": "The actual source conversion reach is seven world units (about 5.19 tiles). Ordinary pink cherries become 80-damage explosive cherries. Replanted currently has no separate ignited pink-cherry producer."
+  },
+  "1458": {
+    "notes": "Fertilizer heals and caps remaining digestion at 0.5 seconds. Native giant/boss swallow restrictions remain."
+  },
+  "1452": {
+    "notes": "The 40-second cooldown starts even if no edible target is found. Fertilizer heals and caps remaining digestion at 0.5 seconds."
+  },
+  "1046": {
+    "info": "Glacier-shroom fires four chilling doomspikes every 3 seconds.\n\nDamage: 20 per spike. Each spike hits up to three distinct ground zombies and adds 5 Cryo points per direct hit. Direct damage is multiplied by four against frozen zombies. Each contact also deals half damage without falloff in a radius of 1.5 source units, including the direct target. Splash applies chill.",
+    "notes": "The executable uses a 1.5-unit splash radius; the source almanac says one tile. Native sleep and Coffee Bean remain active. Fertilizer heals without accelerating its attack clock."
+  },
+  "1190": {
+    "info": "Pumpkin Mine protects its occupant while staying below straight zombie projectiles.\n\nToughness: 4000\nThe first transition into each damaged band (below two thirds and below one third health) causes a 500-damage Potato Mine explosion in its lane. Skipping the middle band triggers only the lower explosion. Death causes an 1800-damage explosion. Healing does not reset spent bands. Tall occupants can still be hit.",
+    "notes": "Fertilizer heals without restoring spent explosions. Native support, pumpkin priority and basketball collision remain active."
+  },
+  "1327": {
+    "info": "Chompkin supplies digestive sacs to the Chomper inside it.\n\nToughness: 4000\nFirst sac after 7.5 seconds, then one every 40 seconds, up to three. Production pauses while full. Once per second it checks the occupant. A sac is spent at the original chomp event and reduces digestion or Chompzilla devour recharge to 0.5 seconds.",
+    "notes": "Native digestion completion still grants each variant's reward. Fertilizer heals and caps the next occupant check at 0.5 seconds; it does not accelerate sac production."
+  },
+  "1324": {
+    "info": "Sunny Pumpkin produces Sun and shields every plant on its tile.\n\nToughness: 4000\nSun output: 25 every 25 seconds, with the original 0.95–1.05 interval variation and a 0.5-second production flash. Each production adds 50 shield points to every plant on the tile, including supports and the shell. Shields accumulate independently of health and remain with their recipient.",
+    "notes": "Fertilizer heals. It does not accelerate Sun production or replace shield points. Shields persist through moves and native saves; a dead or recycled recipient loses its shield."
+  },
+  "1240": {
+    "notes": "Fertilizer heals and reduces burial to 0.5 seconds; rising remains animated. No source-only adventure modifiers."
+  },
+  "1296": {
+    "notes": "Seed packets use available native Replanted plants. Money uses the saved Fusion combat wallet. Replanted has no Beach maps; marked treasure tiles use the original accelerated rate and odds. Fertilizer heals and reduces the production timer to 0.5 seconds."
+  },
+  "1128": {
+    "notes": "Uses the original 75% damage increase. Native and imported lobbed projectiles keep their own graphics, damage and impact rules. Fertilizer heals without changing relay state."
+  },
+  "1131": {
+    "notes": "Replanted currently supplies enemy peas and basketballs. The original explosive cherry, doom shell, snowball and trident enemies are not ported. Fertilizer heals without clearing stored energy."
+  },
+  "1185": {
+    "notes": "Uses native umbrella defense for bungees and basketballs. Moving, carrying or removing the plant updates light and interception immediately. Fertilizer heals without refilling energy."
+  },
+  "1287": {
+    "notes": "Includes the four original non-fusible Roasted forms in the debug catalog. Their summoning Torchwood fusions are not part of this port. Fertilizer heals the pot and occupants without accelerating its separate conversion timer."
+  },
+  "1086": {
+    "info": "Blows away airborne balloons and fog on activation. Pushes hostile swimming zombies in its lane slowly toward the right boundary. Aquatic and low.",
+    "notes": "Fertilizer heals. Native sleep and coffee rules apply."
+  },
+  "1053": {
+    "info": "Transforms peas, yellow fire peas and potato peas into orange fire peas, adding 30 damage. Thaws snow peas into ordinary peas. Releases a Jalapeno fire line when removed.",
+    "notes": "Fertilizer heals without triggering the fire line. Fusion ingredient consumption and board disposal do not trigger death attacks."
+  },
+  "1391": {
+    "info": "Turns peas into garlic peas and adds 10 damage. Turns garlic peas into toxic fire peas and doubles their damage. Direct toxic hits add garlic, apply poison and create miasma; nearby enemies take splash damage.",
+    "notes": "Fertilizer heals. Uses the existing garlic, poison and miasma systems."
+  },
+  "1341": {
+    "info": "Provides level-one light in a 3 by 3 area. Lasers passing through turn purple and explode on impact for 10 damage within one source unit. Supplies three ember energy to nearby Doomwood every three seconds.",
+    "notes": "Doomwood is not implemented, so there is currently no recipient for ember energy. Fertilizer heals; no special evolution."
+  },
+  "1394": {
+    "notes": "Original OnFirePea triggers strictly above 60 ignition credits. The native Gatling Pea zombie owns movement and burst timing; its imported Hypno Gatling head and fire-hypno projectiles preserve the fusion identity."
+  },
+  "1421": {
+    "info": "Ignites small peas and potato peas, adding 20 damage. Rolling Wall-nuts deal double damage and can hit previous targets again. After more than 100 ignition credits, summons a non-fusible Roasted Potato on the next free tile ahead. Potato peas count as eight credits. Explodes for 1800 damage in its lane on death.",
+    "notes": "No buried growth phase or contact fuse. Fertilizer heals it. Summons reuse the existing Roasted Potato. Charge is consumed even when its row is full."
+  },
+  "1178": {
+    "info": "Ignites ordinary peas and thaws snow peas. After more than 30 conversions, creates a homing fire cherry with 300 explosion damage. Converts explosive cherries into fire cherries with the same damage. Up to three fire cherries per stump exist at once; they orbit their stump while no enemies are present. Triggers a 1800-damage Cherry Bomb explosion on death.",
+    "notes": "The original checks strictly more than 30 conversions. A full rack preserves incoming explosive cherries. Fertilizer heals without special development."
+  }
+}

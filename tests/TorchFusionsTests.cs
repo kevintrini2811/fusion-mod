@@ -6,6 +6,7 @@ Plant Make(FusionPlant id,int row=2) {var b=new Board();var p=new Plant {mBoard=
 Projectile Shot(Plant p,ProjectileType type=ProjectileType.Pea,float tag=0) => new() {mBoard=p.mBoard,mRow=p.mRow,mPosX=p.mX+32,mPosY=p.mY+40,mProjectileType=type,mCobTargetX=tag};
 var tree=Make(FusionPlant.Torchthree);
 for(int phase=0;phase<3;++phase) {var shot=Shot(tree);int before=tree.mBoard.Shots.Count;TorchFusions.Convert(shot);Check(shot.mDead,"input consumed once");Check(tree.mBoard.Shots.Count-before==phase+1,"1/2/3 ignition cycle");Check(tree.mTargetX==(phase+1)%3,"saved next phase");}
+Check(tree.mBoard.Shots.All(s=>s.mDamageRangeFlags==DamageRangeFlags.Ground),"every split fireball can collide with ground zombies");
 Check(tree.mBoard.Shots.Any(s=>s.mRow==1)&&tree.mBoard.Shots.Any(s=>s.mRow==3),"neighbor lanes");
 tree=Make(FusionPlant.Torchthree,0);tree.mTargetX=2;TorchFusions.Convert(Shot(tree));Check(tree.mBoard.Shots.Count==3&&tree.mBoard.Shots.Count(s=>s.mRow==0)==2,"edge keeps all three peas");
 var nut=Make(FusionPlant.Nutwood);Check(nut.mPlantMaxHealth==4000,"nut toughness");nut.mTargetY=49;nut.mBoard.Full=true;TorchFusions.Convert(Shot(nut));Check(nut.mTargetY==50,"full row retains summon credit");nut.mBoard.Full=false;TorchFusions.Convert(Shot(nut));Check(nut.mTargetY==0&&nut.mBoard.m_plants.Any(p=>p.mSeedType==SeedType.Wallnut),"free row creates roasted nut");

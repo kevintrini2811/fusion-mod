@@ -1,0 +1,15 @@
+[
+  {
+    "plant1": "Potato Mine",
+    "plant2": "Torchwood",
+    "fusion": "Hot Potato",
+    "plant1_id": 4,
+    "plant2_id": 18,
+    "fusion_id": 1421,
+    "both_orders": true,
+    "registration_rvas": [
+      "0x478c84",
+      "0x478c9c"
+    ]
+  }
+]

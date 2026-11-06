@@ -10,7 +10,7 @@ internal static class SupportTorchFusions
     internal const int Scorch = -622001, Garlic = PoisonShooters.GarlicTorchMarker, Stench = PoisonShooters.ToxicTorchMarker;
     internal static bool Owns(FusionPlant identity) => identity == FusionPlant.TideShroom
         || identity == FusionPlant.BlacklightPlantern || identity == FusionPlant.Scorchwood || identity == FusionPlant.Stenchwood;
-    internal static bool Tagged(Projectile shot) => shot.mCobTargetX is Scorch or Garlic or Stench;
+    internal static bool Tagged(Projectile shot) => shot.mCobTargetX is Scorch or Garlic or Stench || ChargeTorchFusions.IsLowFire(shot);
     internal static int Damage(Projectile shot) => Tagged(shot) ? shot.mCobTargetRow : 20;
     internal static void Initialize(Plant plant)
     {

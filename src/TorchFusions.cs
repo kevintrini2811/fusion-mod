@@ -90,6 +90,7 @@ internal static class TorchFusions
     {
         var child = board.AddProjectile(x, y, order, row, ProjectileType.Fireball);
         if (child == null || child.mDead) return;
+        child.mDamageRangeFlags = DamageRangeFlags.Ground;
         child.mHitTorchwoodGridX = col;
         child.mMotionType = origin == row ? ProjectileMotion.Straight : ProjectileMotion.Threepeater;
         child.mVelX = 3.33f;

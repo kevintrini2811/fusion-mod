@@ -1,0 +1,34 @@
+[
+  {
+    "type": "TorchMine",
+    "namespace": "",
+    "method": "OnTriggerEnter2D",
+    "token": "0x6000fe8",
+    "rva": "0x489f90",
+    "end": "0x48a1c0"
+  },
+  {
+    "type": "TorchMine",
+    "namespace": "",
+    "method": "SummonMine",
+    "token": "0x6000fe9",
+    "rva": "0x48a1c0",
+    "end": "0x48a3d0"
+  },
+  {
+    "type": "TorchMine",
+    "namespace": "",
+    "method": "DieEvent",
+    "token": "0x6000fea",
+    "rva": "0x489de0",
+    "end": "0x489f90"
+  },
+  {
+    "type": "TorchMine",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6000feb",
+    "rva": "0x464260",
+    "end": "0x464270"
+  }
+]

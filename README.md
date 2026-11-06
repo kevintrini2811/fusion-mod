@@ -1,4 +1,4 @@
-# Fusion Mod 22.1.0
+# Fusion Mod 22.2.0
 
 ## Dependencies
 
@@ -6,6 +6,14 @@
 - Required mods: `BloomEngine.dll`, `LawnGlove.dll (Glove Mod)`, `PlantLibrary.dll`, `ZombieLibrary.dll`, `SpeedMod.dll`.
 - Optional integrations: `DebugMod`.
 - Building: .NET SDK with `net6.0` support and the game/MelonLoader reference assemblies declared in `FusionMod.csproj`.
+
+## Hot Potato, Boomwood and zombie fixes (22.2.0)
+
+Hot Potato and Boomwood include both source recipe orders, original models and projectile graphics, charge-based summons, death explosions and fertilizer behavior. Hot Potato reuses the existing non-fusible Roasted Potato. Boomwood preserves explosive-cherry damage and limits each stump to three drones. See [Hot Potato source contract](references/hot-potato/port.md), [Boomwood source contract](references/boomwood/port.md) and [runtime validation](references/charge-torches-22-2-0/validation.md).
+
+Zombie Library 1.3.0 owns all additional native duck variants and their cards. Plant Fusion retains its fusion-specific zombies and adds Conehead and Buckethead Eyes Zombies, including automatic duck rendering and the same difficulty-dependent replacement chance as ordinary Eyes Zombies. Imported bodies use the library's native displacement and clipping during grave rises. Debug Mod 1.3.5 hides duck-only selections and spawns the base zombie's water appearance automatically.
+
+The upper mushroom in each three-slot tile renders behind both lower slots, including after native depth recalculation. Torchthree fireballs now carry ground damage categories and hit zombies in all three lanes. Speed Mod 1.0.5 removes VersusBot's unrelated 1.5× cap outside Bot vs Bot while retaining its own mode's behavior.
 
 ## Four new Torch Fusions (22.1.0)
 
@@ -2412,7 +2420,7 @@ Installation: `Mods/FusionMod.dll`, version 0.1.30. Dismantling when the game is
 
 ## List
 
-`fusionen.txt` contains **288 open recipes** with **230 result plants** in the format:
+`fusionen.txt` contains **286 open recipes** with **228 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2439,6 +2447,8 @@ The included translation mod loads the English names from the `Teyliu/PVZF-Trans
 The basic framework is implemented. Active recipes:
 
 ```text
+Potato Mine | Torchwood | Hot Potato
+Torchwood | Cherry Bomb | Boomwood
 Blover | Sunflower | Solar Blover
 Flower Pot | Sunflower | Solar Pot
 Jalapeno | Sunflower | Solar Flare

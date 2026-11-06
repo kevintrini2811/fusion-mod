@@ -46,6 +46,7 @@ internal static class PotatoProjectiles
         if (projectile.mDead || board.mPaused) return;
         // Potato motion replaces native collision, so its owner must offer
         // the swept crossing before moving or checking for a zombie hit.
+        ChargeTorchFusions.Convert(projectile);
         SupportTorchFusions.Convert(projectile);
         if (!Contains(projectile)) return;
         ImportedPeaVisuals.EnsurePotatoProjectile(projectile);

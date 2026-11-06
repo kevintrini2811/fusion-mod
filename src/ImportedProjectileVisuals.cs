@@ -110,6 +110,16 @@ internal static partial class ImportedPeaVisuals
     private static readonly Assets PlainStarProjectileAssets = new(FusionPlant.StarNut, "PlainStarProjectile");
     private static readonly Assets HypnoFireProjectileAssets = new(FusionPlant.Hypnowood, "HypnoFireProjectile");
     private static readonly Assets HypnoProjectileAssets = new(FusionPlant.HypnoPea, "HypnoProjectile");
+    private static readonly Assets CherryDroneProjectileAssets = new(FusionPlant.Boomwood, "CherryDroneProjectile");
+    private static readonly Assets FireCherryProjectileAssets = new(FusionPlant.Boomwood, "FireCherryProjectile");
+    private static readonly Assets SmallFireProjectileAssets = new(FusionPlant.HotPotato, "SmallFireProjectile");
+    private static readonly Assets PotatoFireProjectileAssets = new(FusionPlant.HotPotato, "PotatoFireProjectile");
+    internal static void EnsureChargeTorchProjectile(Projectile shot)
+    {
+        if (ChargeTorchFusions.IsFireCherry(shot)) RegisterProjectile(shot, shot.mMotionType == ProjectileMotion.Puff ? CherryDroneProjectileAssets : FireCherryProjectileAssets);
+        else if (shot.mCobTargetX == ChargeTorchFusions.SmallFire) RegisterProjectile(shot, SmallFireProjectileAssets);
+        else if (shot.mCobTargetX == ChargeTorchFusions.PotatoFire) RegisterProjectile(shot, PotatoFireProjectileAssets);
+    }
     private static readonly Assets ScorchProjectileAssets = new(FusionPlant.Scorchwood, "ScorchProjectile");
     private static readonly Assets StenchFireProjectileAssets = new(FusionPlant.Stenchwood, "StenchFireProjectile");
     internal static void EnsureTorchProjectile(Projectile shot)
@@ -124,6 +134,7 @@ internal static partial class ImportedPeaVisuals
     private static readonly Assets HelmetProjectileAssets = new(FusionPlant.FootballGatling, "HelmetProjectile");
     private static readonly Assets IronProjectileAssets = new(FusionPlant.Buckshooter, "IronProjectile");
     private static readonly Assets SolarNutBallAssets = new(FusionPlant.TwinSolarNut, "SolarNutBall");
+    private static readonly Assets FireNutProjectileAssets = new(FusionPlant.HotPotato, "FireNutProjectile");
     private static readonly Assets NutProjectileAssets = new(FusionPlant.PeaNut, "NutProjectile");
     private static readonly Assets ZombieBlockAssets = new(FusionPlant.Chompzilla, "ZombieBlockProjectile");
     private static readonly Assets ZombieBlock2Assets = new(FusionPlant.Chompzilla, "ZombieBlock2Projectile");
@@ -337,7 +348,7 @@ internal static partial class ImportedPeaVisuals
     {
         RegisterIronProjectile(projectile);
     }
-    private static Assets RollingAssets(Projectile projectile, bool nut) =>
+    private static Assets RollingAssets(Projectile projectile, bool nut) => projectile.mCobTargetX == RollingProjectiles.IgnitedNut ? FireNutProjectileAssets :
         RollingProjectiles.Chunk(projectile) switch
         { 1 => ZombieBlockAssets, 2 => ZombieBlock2Assets, 3 => ZombieBlock3Assets,
             _ => RollingProjectiles.TryShot(projectile, out var shot) && shot.SolarBall ? SolarNutBallAssets
@@ -495,9 +506,14 @@ internal static partial class ImportedPeaVisuals
                 && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea) : assets == PlainStarProjectileAssets ? RetaliationProjectiles.IsStar(projectile) || StarProjectiles.Family(projectile) == 5 : assets == HypnoFireProjectileAssets ? HypnoShooters.IsFire(projectile)
                 : assets == HypnoProjectileAssets ? HypnoShooters.Contains(projectile) && !HypnoShooters.IsFire(projectile)
                 : assets == PotatoProjectileAssets ? PotatoProjectiles.Contains(projectile)
+                : assets == CherryDroneProjectileAssets ? ChargeTorchFusions.IsFireCherry(projectile) && projectile.mMotionType == ProjectileMotion.Puff
+                : assets == FireCherryProjectileAssets ? ChargeTorchFusions.IsFireCherry(projectile) && projectile.mMotionType != ProjectileMotion.Puff
+                : assets == SmallFireProjectileAssets ? projectile.mCobTargetX == ChargeTorchFusions.SmallFire
+                : assets == PotatoFireProjectileAssets ? projectile.mCobTargetX == ChargeTorchFusions.PotatoFire
                 : assets == ScorchProjectileAssets ? projectile.mCobTargetX == SupportTorchFusions.Scorch
                 : assets == StenchFireProjectileAssets ? projectile.mCobTargetX == SupportTorchFusions.Stench
                 : assets == PoisonProjectileAssets ? PoisonShooters.Contains(projectile) : assets == BlazeProjectileAssets ? BlazeShooters.Contains(projectile) : assets == HelmetProjectileAssets ? IronProjectiles.IsRed(projectile) && IronProjectiles.Contains(projectile) : assets == IronProjectileAssets ? !IronProjectiles.IsRed(projectile) && IronProjectiles.Contains(projectile) : assets == SolarNutBallAssets ? RollingProjectiles.TryShot(projectile, out var solar) && solar.SolarBall
+                : assets == FireNutProjectileAssets ? projectile.mCobTargetX == RollingProjectiles.IgnitedNut
                 : assets == NutProjectileAssets ? NutProjectiles.Family(projectile) == 3 || RollingProjectiles.TryShot(projectile, out var nut) && nut.Nut && !nut.SolarBall
                 : assets == ChompProjectileAssets ? RollingProjectiles.Chunk(projectile) == 0 && RollingProjectiles.TryShot(projectile, out var chomp) && !chomp.Nut : assets == SolarProjectileAssets ? SolarShooter.TryShot(projectile, out _)
                 : assets == SeaSporeProjectileAssets ? SeaProjectiles.Family(projectile) is 1 or 2
@@ -535,7 +551,7 @@ internal static partial class ImportedPeaVisuals
                 // Explode-o-shooter: .88 * 6.70833397 * .24 = 1.4168.
                 root.transform.localScale = Vector3.one * (80f * 2.82f * (assets == PuffPeaProjectileAssets
                     ? projectile.mCobTargetX == PuffShooters.ReboundedShot ? .5f : .3f : assets == IcicleProjectileAssets || PuffSpecials.IsNugget(projectile) ? .3f : 1) / (assets == PuffPeaProjectileAssets || assets == IcicleProjectileAssets || PuffSpecials.IsNugget(projectile) || assets == GutsyProjectileAssets || assets == SpeedyProjectileAssets || assets == ThawedShiveryProjectileAssets || assets == CherrySporeAssets || assets == PotatoSporeAssets || assets == ShiveryProjectileAssets ? 1.35f : assets == StarCapProjectileAssets ? 1.35f : assets == PlainPeaProjectileAssets ? 1.566913f : assets == PlainStarProjectileAssets ? 1.50443746f : assets == SolarNutBallAssets ? 1.517076f
-                    : assets == NutProjectileAssets ? 1.50443746f
+                    : assets == NutProjectileAssets || assets == FireNutProjectileAssets ? 1.50443746f
                     : assets == ChompProjectileAssets ? 1.53014407f : assets == SolarProjectileAssets ? .88f * 7.4329915f * .23f
                     : assets == PolarProjectileAssets ? 1.566913f : assets == BloverSunProjectileAssets ? 1.16160005f
                     : assets == CherrySpreaderProjectileAssets || assets == CherrySpreaderBombProjectileAssets ? 1.566913f
@@ -631,7 +647,7 @@ internal static partial class ImportedPeaVisuals
                 root.transform.localPosition = new Vector3(-offset.x,
                     (projectile.mPosY - projectile.mShadowY) * 2.82f - offset.y, 0);
             }
-            if (assets == MiniSquashProjectileAssets || DoomProjectiles.Family(projectile) != 0 || CactusProjectiles.Family(projectile) != 0 || assets == ZombieBlockAssets || assets == ZombieBlock2Assets || assets == ZombieBlock3Assets || SeaProjectiles.Family(projectile) != 0 || CattailFusions.Family(projectile) != 0 || StarProjectiles.Family(projectile) != 0 || assets == BloverSunProjectileAssets || assets == HypnoProjectileAssets || PuffLobbers.Family(projectile) != 0 || SilverLobbers.Family(projectile) != 0 || TriLobbers.Family(projectile) != 0 || SquashLobbers.Family(projectile) != 0 || LobberProjectiles.Family(projectile) != 0 || ElementalLobbers.Family(projectile) >= 6 || IronProjectiles.IsSmall(projectile))
+            if (assets == FireNutProjectileAssets || ChargeTorchFusions.IsLowFire(projectile) || ChargeTorchFusions.IsFireCherry(projectile) || assets == MiniSquashProjectileAssets || DoomProjectiles.Family(projectile) != 0 || CactusProjectiles.Family(projectile) != 0 || assets == ZombieBlockAssets || assets == ZombieBlock2Assets || assets == ZombieBlock3Assets || SeaProjectiles.Family(projectile) != 0 || CattailFusions.Family(projectile) != 0 || StarProjectiles.Family(projectile) != 0 || assets == BloverSunProjectileAssets || assets == HypnoProjectileAssets || PuffLobbers.Family(projectile) != 0 || SilverLobbers.Family(projectile) != 0 || TriLobbers.Family(projectile) != 0 || SquashLobbers.Family(projectile) != 0 || LobberProjectiles.Family(projectile) != 0 || ElementalLobbers.Family(projectile) >= 6 || IronProjectiles.IsSmall(projectile))
                 // The prefab's +0.4185 X is its scene position, not a muzzle
                 // offset. Native simulation owns the projectile's world anchor.
                 transforms[0].localPosition = Vector3.zero;
@@ -670,7 +686,7 @@ internal static partial class ImportedPeaVisuals
                         if (assets.model!.Nodes[i].Name == "Sprite")
                             transforms[i].localRotation *= Quaternion.Euler(0, 0,
                                 (projectile.mVelX > 0 ? -300 : 300) * projectile.mProjectileAge * .01f);
-                if (assets == NutProjectileAssets || assets == ChompProjectileAssets || assets == ZombieBlockAssets || assets == ZombieBlock2Assets || assets == ZombieBlock3Assets)
+                if (assets == FireNutProjectileAssets || assets == NutProjectileAssets || assets == ChompProjectileAssets || assets == ZombieBlockAssets || assets == ZombieBlock2Assets || assets == ZombieBlock3Assets)
                     foreach (var transform in transforms.Where((_, i) => assets.model!.Nodes[i].Sprite >= 0
                         && assets.model.Nodes[i].Name != "Shadow"))
                         transform.localRotation *= Quaternion.Euler(0, 0, -projectile.mRotation * Mathf.Rad2Deg);

@@ -1,0 +1,44 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 111467
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 121507
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 123690
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 122357
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 126064
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 192946
+      }
+    }
+  ],
+  "m_Layer": 10,
+  "m_Name": "CherryTorchPrefab",
+  "m_Tag": 20001,
+  "m_IsActive": true
+}

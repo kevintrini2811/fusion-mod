@@ -462,6 +462,33 @@
     "Portrait": "1044.png"
   },
   {
+    "SourceId": 1178,
+    "Identity": "FusionPlant.Boomwood",
+    "CanonicalName": "Boomwood",
+    "English": {
+      "Name": "Boomwood",
+      "Info": "Ignites ordinary peas and thaws snow peas. After more than 30 conversions, creates a homing fire cherry with 300 explosion damage. Converts explosive cherries into fire cherries with the same damage. Up to three fire cherries per stump exist at once; they orbit their stump while no enemies are present. Triggers a 1800-damage Cherry Bomb explosion on death.",
+      "Flavor": "Boomwood's Afro bounces rhythmically, as if dancing to a beat only it can hear. Some say his groove inspires his fiery creations, while others just appreciate the spectacle — both the style and the explosions leave a lasting impact.",
+      "Notes": "The original checks strictly more than 30 conversions. A full rack preserves incoming explosive cherries. Fertilizer heals without special development.",
+      "Recipes": [
+        "Cherry Bomb + Torchwood"
+      ]
+    },
+    "German": {
+      "Name": "Knallholz",
+      "Info": "Entzündet normale Erbsen und taut Schneeerbsen auf. Nach mehr als 30 umgewandelten Projektilen entsteht eine zielsuchende Feuerkirsche mit 300 Explosionsschaden. Explosive Kirschen werden unter Beibehaltung ihres Schadens in Feuerkirschen umgewandelt. Höchstens drei Feuerkirschen pro Knallholz sind gleichzeitig vorhanden. Ohne Gegner kreisen sie am Stamm. Beim Tod löst Knallholz eine Kirschbombenexplosion mit 1800 Schaden aus.",
+      "Flavor": "Der Afro von Knallholz wippt zu einem Takt, den nur Knallholz hört. Manche sagen, dieser Rhythmus inspiriere seine feurigen Schöpfungen. Andere genießen einfach das Spektakel. Frisur und Explosionen hinterlassen bleibenden Eindruck.",
+      "Notes": "Das Original prüft auf mehr als 30 Umwandlungen. Vollständig belegte drei Plätze erhalten vorhandene Explosivkirschen. Dünger heilt ohne Sonderentwicklung.",
+      "Recipes": [
+        "Kirschbombe + Zunderholz"
+      ]
+    },
+    "Recipes": [
+      "Cherry Bomb + Torchwood"
+    ],
+    "Portrait": "1178.png"
+  },
+  {
     "SourceId": 1298,
     "Identity": "FusionPlant.BoostShroom",
     "CanonicalName": "Boost-shroom",
@@ -3451,6 +3478,33 @@
       "Flower Pot + Jalapeno"
     ],
     "Portrait": "1474.png"
+  },
+  {
+    "SourceId": 1421,
+    "Identity": "FusionPlant.HotPotato",
+    "CanonicalName": "Hot Potato",
+    "English": {
+      "Name": "Hot Potato",
+      "Info": "Ignites small peas and potato peas, adding 20 damage. Rolling Wall-nuts deal double damage and can hit previous targets again. After more than 100 ignition credits, summons a non-fusible Roasted Potato on the next free tile ahead. Potato peas count as eight credits. Explodes for 1800 damage in its lane on death.",
+      "Flavor": "Hot Potato only wanted to be an ordinary landmine, until an incendiary shell landed on his fuse. Though he's unhappy about no longer being able to stay hidden, becoming the darling of the mess hall has turned out to be a blessing in disguise.",
+      "Notes": "No buried growth phase or contact fuse. Fertilizer heals it. Summons reuse the existing Roasted Potato. Charge is consumed even when its row is full.",
+      "Recipes": [
+        "Potato Mine + Torchwood"
+      ]
+    },
+    "German": {
+      "Name": "Heiße Kartoffel",
+      "Info": "Entzündet kleine Erbsen und Kartoffelerbsen: jeweils 20 zusätzlicher Schaden. Rollende Wallnüsse verursachen doppelten Schaden und können zuvor getroffene Ziele erneut treffen. Nach mehr als 100 Entzündungspunkten erscheint auf dem nächsten freien Feld davor eine nicht fusionierbare Röstkartoffel. Kartoffelerbsen zählen als acht Punkte. Beim Tod explodiert sie mit 1800 Schaden in ihrer Reihe.",
+      "Flavor": "Die heiße Kartoffel wollte nur eine gewöhnliche Mine sein, bis eine Brandgranate auf ihrer Zündschnur landete. Dass sie sich nicht mehr verstecken kann, stört sie. Als Liebling der Feldküche sieht sie darin trotzdem einen Glücksfall.",
+      "Notes": "Keine vergrabene Wachstumsphase und keine Kontaktzündung. Dünger heilt sie. Beschwörungen verwenden die vorhandene Röstkartoffel. Der Ladungszähler wird auch bei vollständig belegter Reihe verbraucht.",
+      "Recipes": [
+        "Kartoffelmine + Zunderholz"
+      ]
+    },
+    "Recipes": [
+      "Potato Mine + Torchwood"
+    ],
+    "Portrait": "1421.png"
   },
   {
     "SourceId": 1452,

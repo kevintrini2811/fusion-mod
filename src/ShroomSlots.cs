@@ -71,7 +71,7 @@ internal static class ShroomSlots
         plant.mRow = row;
         plant.mX = plant.mBoard.GridToPixelX(col, row) + offset.X;
         plant.mY = plant.mBoard.GridToPixelY(col, row) + offset.Y;
-        int order = plant.CalcRenderOrder() + (slot == 0 ? 0 : 1);
+        int order = plant.CalcRenderOrder();
         plant.mShadowRenderOrder += order - plant.mRenderOrder;
         plant.mRenderOrder = order;
         plant.UpdateReanim();
@@ -126,5 +126,19 @@ internal static class ShroomSlots
         {
             foreach (var state in states) { state.Plant.mIsOnBoard = state.OnBoard; state.Plant.mSquished = state.Squished; }
         }
+    }
+}
+
+// CalcRenderOrder sorts native plants by horizontal position. All three small
+// slots share one tile depth; the two lower slots must sort in front, including
+// after loading, carrying and native render-order recalculation.
+[HarmonyLib.HarmonyPatch(typeof(Plant), nameof(Plant.CalcRenderOrder))]
+internal static class ShroomSlotRenderOrderPatch
+{
+    private static void Postfix(Plant __instance, ref int __result)
+    {
+        if (__instance.mBoard == null || !ShroomSlots.IsSmall(FusionPlant.From(__instance))) return;
+        __result += (int)(__instance.mX - __instance.mBoard.GridToPixelX(__instance.mPlantCol, __instance.mRow))
+            + (ShroomSlots.Slot(__instance) == 0 ? 0 : 1);
     }
 }

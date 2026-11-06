@@ -20,7 +20,7 @@ namespace Il2CppReloaded.Gameplay
     public enum GameMode { Adventure, ChallengeZenGarden }
     public enum PlantingReason { Ok, NotHere }
     public enum ProjectileType { Pea, PeashooterPea, Cabbage, ZombiePea, Basketball }
-    public enum ZombiePhase { ZombieNormal, ZombieDying }
+    public enum ZombiePhase { ZombieNormal, ZombieDying, RisingFromGrave }
     public enum CoinType { Sun }
     public enum CoinMotion { FromPlant }
     public enum GridItemType { ZenTool }
@@ -28,7 +28,7 @@ namespace Il2CppReloaded.Gameplay
     public enum DamageRangeFlags { Ground }
     [Flags] public enum DamageFlags { None=0, DoesntLeaveBody=16 }
     public enum HelmType { None, Pail, Football }
-    public enum ZombieType { Normal, Boss, Zamboni, Catapult, Gargantuar, RedeyeGargantuar, Football }
+    public enum ZombieType { Normal, TrafficCone, Pail, Boss, Zamboni, Catapult, Gargantuar, RedeyeGargantuar, Football }
     public class WidgetManager { public int[] LastMouseX=[0], LastMouseY=[0]; }
     public class App { public Il2CppReloaded.Services.SoundSystem SoundSystem=new(); public WidgetManager WidgetManager=new(); public GameScenes GameScene; public GameMode GameMode; }
     public class Cursor { public CursorType CursorType; }
@@ -106,7 +106,7 @@ namespace Il2CppReloaded.Gameplay
         public uint DataID=7;
         public Board mBoard=new();
         public HelmType mHelmType=HelmType.Pail;
-        public int mHelmHealth=1100,mBodyHealth=200,mHeight=115,mRow=1;
+        public int mHelmMaxHealth,mHelmHealth=1100,mBodyHealth=200,mHeight=115,mRow=1;
         public int mSummonCounter,mButteredCounter,mIceTrapCounter,mChilledCounter; public float mVelX=1,mScaleZombie=1;
         public void StartEating()=>mIsEating=true; public void StopEating()=>mIsEating=false; public void StartWalkAnim(int blend){} public void DieNoLoot()=>mDead=true;
         public void UpdateZombieWalking(){} public void FindPlantTarget(){} public bool IsWalkingBackwards()=>false;

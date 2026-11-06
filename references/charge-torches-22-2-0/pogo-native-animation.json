@@ -1,0 +1,1693 @@
+{
+  "name": "Zombie_pogo",
+  "skins": [
+    "default",
+    "Zombie_Injured",
+    "Zombie_Pogo_Damage1",
+    "Zombie_Pogo_Damage2",
+    "Zombie_Pogo_Head",
+    "Zombie_Pogo_Injured_PogoHand",
+    "Zombie_Pogo_Undamaged",
+    "Zombie_Pogo_Uninjured",
+    "Zombie_Pogo_Uninjured_PogoHand"
+  ],
+  "animations": [
+    "death",
+    "eat",
+    "idle",
+    "mowered",
+    "pogo",
+    "walk"
+  ],
+  "skinAttachments": [
+    {
+      "name": "default",
+      "bones": [],
+      "entries": [
+        {
+          "slot": 1,
+          "name": "Locator"
+        },
+        {
+          "slot": 2,
+          "name": "Locator"
+        },
+        {
+          "slot": 3,
+          "name": "Locator"
+        },
+        {
+          "slot": 4,
+          "name": "Locator"
+        },
+        {
+          "slot": 5,
+          "name": "Locator"
+        },
+        {
+          "slot": 6,
+          "name": "Zombie_innerarm_hand"
+        },
+        {
+          "slot": 7,
+          "name": "Zombie_innerarm_lower"
+        },
+        {
+          "slot": 8,
+          "name": "Zombie_innerarm_upper"
+        },
+        {
+          "slot": 9,
+          "name": "Zombie_innerleg_lower"
+        },
+        {
+          "slot": 9,
+          "name": "Zombie_innerleg_lower2"
+        },
+        {
+          "slot": 9,
+          "name": "Zombie_outerleg_lower"
+        },
+        {
+          "slot": 10,
+          "name": "Zombie_innerleg_upper"
+        },
+        {
+          "slot": 11,
+          "name": "Zombie_innerleg_foot"
+        },
+        {
+          "slot": 11,
+          "name": "Zombie_outerleg_foot"
+        },
+        {
+          "slot": 12,
+          "name": "Zombie_pogo_stick3"
+        },
+        {
+          "slot": 13,
+          "name": "Zombie_pogo_stick2"
+        },
+        {
+          "slot": 14,
+          "name": "Zombie_pogo_stick2damage1"
+        },
+        {
+          "slot": 15,
+          "name": "Zombie_pogo_stick2damage2"
+        },
+        {
+          "slot": 16,
+          "name": "Zombie_outerleg_lower"
+        },
+        {
+          "slot": 16,
+          "name": "Zombie_outerleg_lower2"
+        },
+        {
+          "slot": 17,
+          "name": "Zombie_outerleg_upper"
+        },
+        {
+          "slot": 18,
+          "name": "Zombie_outerleg_foot"
+        },
+        {
+          "slot": 19,
+          "name": "Zombie_body"
+        },
+        {
+          "slot": 21,
+          "name": "Zombie_jaw"
+        },
+        {
+          "slot": 22,
+          "name": "Zombie_paper_glasses"
+        },
+        {
+          "slot": 24,
+          "name": "Zombie_outerarm_hand"
+        },
+        {
+          "slot": 24,
+          "name": "Zombie_outerarm_hand2"
+        },
+        {
+          "slot": 25,
+          "name": "Zombie_outerarm_upper"
+        },
+        {
+          "slot": 25,
+          "name": "Zombie_outerarm_upper_round"
+        },
+        {
+          "slot": 26,
+          "name": "Zombie_pogo_outerarm_upper2"
+        },
+        {
+          "slot": 27,
+          "name": "Zombie_outerarm_lower"
+        },
+        {
+          "slot": 28,
+          "name": "Zombie_pogo_stick"
+        },
+        {
+          "slot": 29,
+          "name": "Zombie_pogo_stickdamage1"
+        },
+        {
+          "slot": 30,
+          "name": "Zombie_pogo_stickdamage2"
+        },
+        {
+          "slot": 31,
+          "name": "Zombie_pogo_stickhands"
+        },
+        {
+          "slot": 32,
+          "name": "Zombie_pogo_stickhands2"
+        }
+      ]
+    },
+    {
+      "name": "Zombie_Injured",
+      "bones": [
+        "Zombie_outerarm_upper2"
+      ],
+      "entries": []
+    },
+    {
+      "name": "Zombie_Pogo_Damage1",
+      "bones": [
+        "Zombie_pogo_stick2_damage1",
+        "Zombie_pogo_stick_damage1"
+      ],
+      "entries": []
+    },
+    {
+      "name": "Zombie_Pogo_Damage2",
+      "bones": [
+        "Zombie_pogo_stick2_damage2",
+        "Zombie_pogo_stick_damage2"
+      ],
+      "entries": []
+    },
+    {
+      "name": "Zombie_Pogo_Head",
+      "bones": [
+        "anim_head1",
+        "anim_head2",
+        "anim_head_glasses"
+      ],
+      "entries": [
+        {
+          "slot": 20,
+          "name": "Zombie_head"
+        },
+        {
+          "slot": 23,
+          "name": "Zombie_hair"
+        }
+      ]
+    },
+    {
+      "name": "Zombie_Pogo_Injured_PogoHand",
+      "bones": [
+        "Zombie_pogo_stickhands2"
+      ],
+      "entries": []
+    },
+    {
+      "name": "Zombie_Pogo_Undamaged",
+      "bones": [
+        "Zombie_pogo_stick",
+        "Zombie_pogo_stick2"
+      ],
+      "entries": []
+    },
+    {
+      "name": "Zombie_Pogo_Uninjured",
+      "bones": [
+        "Zombie_outerarm_hand",
+        "Zombie_outerarm_lower",
+        "Zombie_outerarm_upper"
+      ],
+      "entries": []
+    },
+    {
+      "name": "Zombie_Pogo_Uninjured_PogoHand",
+      "bones": [
+        "Zombie_pogo_stickhands"
+      ],
+      "entries": []
+    }
+  ],
+  "debugSlots": [
+    {
+      "name": "_ground",
+      "active": true
+    },
+    {
+      "name": "anim_pogo",
+      "active": true,
+      "attachment": "Locator",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_death",
+      "active": true,
+      "attachment": "Locator",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_walk",
+      "active": true,
+      "attachment": "Locator",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_idle",
+      "active": true,
+      "attachment": "Locator",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_eat",
+      "active": true,
+      "attachment": "Locator",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_innerarm3",
+      "active": true,
+      "attachment": "Zombie_innerarm_hand",
+      "type": "MeshAttachment"
+    },
+    {
+      "name": "anim_innerarm2",
+      "active": true,
+      "attachment": "Zombie_innerarm_lower",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_innerarm1",
+      "active": true,
+      "attachment": "Zombie_innerarm_upper",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_innerleg_lower",
+      "active": true,
+      "attachment": "Zombie_innerleg_lower",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_innerleg_upper",
+      "active": true,
+      "attachment": "Zombie_innerleg_upper",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_innerleg_foot",
+      "active": true,
+      "attachment": "Zombie_innerleg_foot",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick3",
+      "active": true,
+      "attachment": "Zombie_pogo_stick3",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick2",
+      "active": false,
+      "attachment": "Zombie_pogo_stick2",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick2_damage1",
+      "active": false,
+      "attachment": "Zombie_pogo_stick2damage1",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick2_damage2",
+      "active": false,
+      "attachment": "Zombie_pogo_stick2damage2",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_outerleg_lower",
+      "active": true,
+      "attachment": "Zombie_outerleg_lower",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_outerleg_upper",
+      "active": true,
+      "attachment": "Zombie_outerleg_upper",
+      "type": "MeshAttachment"
+    },
+    {
+      "name": "Zombie_outerleg_foot",
+      "active": true,
+      "attachment": "Zombie_outerleg_foot",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_body",
+      "active": true,
+      "attachment": "Zombie_body",
+      "type": "MeshAttachment"
+    },
+    {
+      "name": "anim_head1",
+      "active": false
+    },
+    {
+      "name": "anim_head2",
+      "active": false,
+      "attachment": "Zombie_jaw",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_head_glasses",
+      "active": false,
+      "attachment": "Zombie_paper_glasses",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "anim_hair",
+      "active": true
+    },
+    {
+      "name": "Zombie_outerarm_hand",
+      "active": false,
+      "attachment": "Zombie_outerarm_hand",
+      "type": "MeshAttachment"
+    },
+    {
+      "name": "Zombie_outerarm_upper",
+      "active": false,
+      "attachment": "Zombie_outerarm_upper",
+      "type": "MeshAttachment"
+    },
+    {
+      "name": "Zombie_outerarm_upper2",
+      "active": false,
+      "attachment": "Zombie_pogo_outerarm_upper2",
+      "type": "MeshAttachment"
+    },
+    {
+      "name": "Zombie_outerarm_lower",
+      "active": false,
+      "attachment": "Zombie_outerarm_lower",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick",
+      "active": false,
+      "attachment": "Zombie_pogo_stick",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick_damage1",
+      "active": false,
+      "attachment": "Zombie_pogo_stickdamage1",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stick_damage2",
+      "active": false,
+      "attachment": "Zombie_pogo_stickdamage2",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stickhands",
+      "active": false,
+      "attachment": "Zombie_pogo_stickhands",
+      "type": "RegionAttachment"
+    },
+    {
+      "name": "Zombie_pogo_stickhands2",
+      "active": false,
+      "attachment": "Zombie_pogo_stickhands2",
+      "type": "RegionAttachment"
+    }
+  ],
+  "slots": [
+    {
+      "name": "_ground",
+      "attachment": null
+    },
+    {
+      "name": "anim_pogo",
+      "attachment": "Locator"
+    },
+    {
+      "name": "anim_death",
+      "attachment": "Locator"
+    },
+    {
+      "name": "anim_walk",
+      "attachment": "Locator"
+    },
+    {
+      "name": "anim_idle",
+      "attachment": "Locator"
+    },
+    {
+      "name": "anim_eat",
+      "attachment": "Locator"
+    },
+    {
+      "name": "anim_innerarm3",
+      "attachment": "Zombie_innerarm_hand"
+    },
+    {
+      "name": "anim_innerarm2",
+      "attachment": "Zombie_innerarm_lower"
+    },
+    {
+      "name": "anim_innerarm1",
+      "attachment": "Zombie_innerarm_upper"
+    },
+    {
+      "name": "Zombie_innerleg_lower",
+      "attachment": "Zombie_innerleg_lower"
+    },
+    {
+      "name": "Zombie_innerleg_upper",
+      "attachment": "Zombie_innerleg_upper"
+    },
+    {
+      "name": "Zombie_innerleg_foot",
+      "attachment": "Zombie_innerleg_foot"
+    },
+    {
+      "name": "Zombie_pogo_stick3",
+      "attachment": "Zombie_pogo_stick3"
+    },
+    {
+      "name": "Zombie_pogo_stick2",
+      "attachment": "Zombie_pogo_stick2"
+    },
+    {
+      "name": "Zombie_pogo_stick2_damage1",
+      "attachment": "Zombie_pogo_stick2damage1"
+    },
+    {
+      "name": "Zombie_pogo_stick2_damage2",
+      "attachment": "Zombie_pogo_stick2damage2"
+    },
+    {
+      "name": "Zombie_outerleg_lower",
+      "attachment": "Zombie_outerleg_lower"
+    },
+    {
+      "name": "Zombie_outerleg_upper",
+      "attachment": "Zombie_outerleg_upper"
+    },
+    {
+      "name": "Zombie_outerleg_foot",
+      "attachment": "Zombie_outerleg_foot"
+    },
+    {
+      "name": "Zombie_body",
+      "attachment": "Zombie_body"
+    },
+    {
+      "name": "anim_head1",
+      "attachment": "Zombie_head"
+    },
+    {
+      "name": "anim_head2",
+      "attachment": "Zombie_jaw"
+    },
+    {
+      "name": "anim_head_glasses",
+      "attachment": "Zombie_paper_glasses"
+    },
+    {
+      "name": "anim_hair",
+      "attachment": "Zombie_hair"
+    },
+    {
+      "name": "Zombie_outerarm_hand",
+      "attachment": "Zombie_outerarm_hand"
+    },
+    {
+      "name": "Zombie_outerarm_upper",
+      "attachment": "Zombie_outerarm_upper"
+    },
+    {
+      "name": "Zombie_outerarm_upper2",
+      "attachment": "Zombie_pogo_outerarm_upper2"
+    },
+    {
+      "name": "Zombie_outerarm_lower",
+      "attachment": "Zombie_outerarm_lower"
+    },
+    {
+      "name": "Zombie_pogo_stick",
+      "attachment": "Zombie_pogo_stick"
+    },
+    {
+      "name": "Zombie_pogo_stick_damage1",
+      "attachment": "Zombie_pogo_stickdamage1"
+    },
+    {
+      "name": "Zombie_pogo_stick_damage2",
+      "attachment": "Zombie_pogo_stickdamage2"
+    },
+    {
+      "name": "Zombie_pogo_stickhands",
+      "attachment": "Zombie_pogo_stickhands"
+    },
+    {
+      "name": "Zombie_pogo_stickhands2",
+      "attachment": "Zombie_pogo_stickhands2"
+    }
+  ],
+  "bones": [
+    {
+      "name": "root",
+      "x": 0,
+      "y": 0,
+      "a": 1,
+      "b": -2.3205103333142417e-8,
+      "c": 0,
+      "d": 0.9999999999999998
+    },
+    {
+      "name": "Zombie_pogo_stickhands",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_pogo_stick",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_outerarm_lower",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_outerarm_upper",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_outerarm_hand",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "anim_hair",
+      "parent": "root",
+      "x": -140.41911030373507,
+      "y": 534.5093383789061,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "anim_head_glasses",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "anim_head2",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "anim_head1",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_body",
+      "parent": "root",
+      "x": -30.919097981108376,
+      "y": 332.2593383789062,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "Zombie_outerleg_foot",
+      "parent": "root",
+      "x": 25.830916464788093,
+      "y": 38.50921630859374,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "Zombie_outerleg_upper",
+      "parent": "root",
+      "x": 34.58091248511004,
+      "y": 210.0093383789062,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "Zombie_outerleg_lower",
+      "parent": "root",
+      "x": 68.58091504927395,
+      "y": 99.50933837890622,
+      "a": 1,
+      "b": -0.03080195587132749,
+      "c": 0,
+      "d": 0.999525507900297
+    },
+    {
+      "name": "Zombie_pogo_stick2",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_pogo_stick3",
+      "parent": "root",
+      "x": -94.9190974655088,
+      "y": -18.740783691406246,
+      "a": 0.9951141436101858,
+      "b": -0.0913483961634945,
+      "c": 0.09134834998004138,
+      "d": 0.9951141436101854
+    },
+    {
+      "name": "Zombie_innerleg_foot",
+      "parent": "root",
+      "x": -50.91909176214068,
+      "y": 64.25933837890624,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "Zombie_innerleg_upper",
+      "parent": "root",
+      "x": -30.66909471499008,
+      "y": 191.50933837890622,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "Zombie_innerleg_lower",
+      "parent": "root",
+      "x": -59.669092684543536,
+      "y": 104.00933837890622,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "anim_innerarm1",
+      "parent": "root",
+      "x": -118.16910564531057,
+      "y": 333.7593383789062,
+      "a": 0.9945281402983649,
+      "b": -0.10135588966889429,
+      "c": 0.10135584351263753,
+      "d": 0.9945281402983644
+    },
+    {
+      "name": "anim_innerarm2",
+      "parent": "root",
+      "x": -119.91910365547295,
+      "y": 248.0093383789062,
+      "a": 0.9945281402983649,
+      "b": -0.10135588966889429,
+      "c": 0.10135584351263753,
+      "d": 0.9945281402983644
+    },
+    {
+      "name": "anim_innerarm3",
+      "parent": "root",
+      "x": -113.41910206592337,
+      "y": 179.50933837890622,
+      "a": 0.9945281402983649,
+      "b": -0.10135588966889429,
+      "c": 0.10135584351263753,
+      "d": 0.9945281402983644
+    },
+    {
+      "name": "anim_eat",
+      "parent": "root",
+      "x": -281.4191124560084,
+      "y": 627.2593383789061,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "anim_idle",
+      "parent": "root",
+      "x": -281.4191124560084,
+      "y": 627.2593383789061,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "anim_walk",
+      "parent": "root",
+      "x": -281.4191124560084,
+      "y": 627.2593383789061,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "anim_death",
+      "parent": "root",
+      "x": -281.4191124560084,
+      "y": 627.2593383789061,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "anim_pogo",
+      "parent": "root",
+      "x": -281.4191124560084,
+      "y": 627.2593383789061,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "_ground",
+      "parent": "root",
+      "x": -31.41909322406219,
+      "y": 127.25933837890622,
+      "a": 1,
+      "b": -4.641020666628483e-8,
+      "c": 0,
+      "d": 0.9999999999999996
+    },
+    {
+      "name": "Zombie_body2",
+      "parent": "Zombie_body",
+      "x": 58.62801689619626,
+      "y": 259.7305908203125,
+      "a": 1,
+      "b": -6.961530999942724e-8,
+      "c": 0,
+      "d": 0.9999999999999993
+    },
+    {
+      "name": "Zombie_pogo_stick_damage1",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_pogo_stick_damage2",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_pogo_stick2_damage1",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_pogo_stick2_damage2",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_pogo_stickhands2",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    },
+    {
+      "name": "Zombie_outerarm_upper2",
+      "parent": "root",
+      "x": 0,
+      "y": 0,
+      "a": 0,
+      "b": 0,
+      "c": 0,
+      "d": 0
+    }
+  ],
+  "attachments": [
+    {
+      "slot": "anim_pogo",
+      "bone": "anim_pogo",
+      "name": "Locator",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.0625,
+        0.0859375,
+        0.0625,
+        0.06640625,
+        0.0673828125,
+        0.06640625,
+        0.0673828125,
+        0.0859375
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_death",
+      "bone": "anim_death",
+      "name": "Locator",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.0625,
+        0.0859375,
+        0.0625,
+        0.06640625,
+        0.0673828125,
+        0.06640625,
+        0.0673828125,
+        0.0859375
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_walk",
+      "bone": "anim_walk",
+      "name": "Locator",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.0625,
+        0.0859375,
+        0.0625,
+        0.06640625,
+        0.0673828125,
+        0.06640625,
+        0.0673828125,
+        0.0859375
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_idle",
+      "bone": "anim_idle",
+      "name": "Locator",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.0625,
+        0.0859375,
+        0.0625,
+        0.06640625,
+        0.0673828125,
+        0.06640625,
+        0.0673828125,
+        0.0859375
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_eat",
+      "bone": "anim_eat",
+      "name": "Locator",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381,
+        -536871218.3354024,
+        536871539.2593381
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.0625,
+        0.0859375,
+        0.0625,
+        0.06640625,
+        0.0673828125,
+        0.06640625,
+        0.0673828125,
+        0.0859375
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_innerarm3",
+      "bone": "anim_innerarm3",
+      "name": "Zombie_innerarm_hand",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -94.11394141790483,
+        220.05468705975244,
+        -92.8197511618303,
+        214.12979688403777,
+        -80.50593924143854,
+        204.6100394891938,
+        -70.0511043490784,
+        140.97242322992574,
+        -149.70575603775768,
+        133.7714009900585,
+        -155.24293463277934,
+        196.12600925836682,
+        -129.27206072224305,
+        214.1488417169247,
+        -130.0444970248555,
+        219.66916503569263
+      ],
+      "triangles": [
+        6,
+        7,
+        0,
+        6,
+        0,
+        1,
+        2,
+        6,
+        1,
+        4,
+        5,
+        6,
+        6,
+        2,
+        4,
+        3,
+        4,
+        2
+      ],
+      "uvs": [
+        0.8265911340713501,
+        0.5701679587364197,
+        0.8295342326164246,
+        0.5688261389732361,
+        0.8347699046134949,
+        0.5467777252197266,
+        0.8662104606628418,
+        0.5390626788139343,
+        0.8657649755477905,
+        0.6953125,
+        0.8351913094520569,
+        0.6937233805656433,
+        0.8276085257530212,
+        0.6440416574478149,
+        0.8248878717422485,
+        0.6444495320320129
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_innerarm2",
+      "bone": "anim_innerarm2",
+      "name": "Zombie_innerarm_lower",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -137.35643771775656,
+        184.93592053728082,
+        -152.05304171974623,
+        329.14250088054365,
+        -87.40871260035252,
+        335.7306307088651,
+        -72.71210859836285,
+        191.52405036560225
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.2626953125,
+        0.5625,
+        0.2626953125,
+        0.279296875,
+        0.29443359375,
+        0.279296875,
+        0.29443359375,
+        0.5625
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "anim_innerarm1",
+      "bone": "anim_innerarm1",
+      "name": "Zombie_innerarm_upper",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -150.43252130059605,
+        273.19437336754106,
+        -163.10200750920785,
+        397.5103909048366,
+        -83.53975628533864,
+        405.6188583858476,
+        -70.87027007672685,
+        281.302840848552
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.7119140625,
+        0.7265625,
+        0.65087890625,
+        0.7265625,
+        0.65087890625,
+        0.5703125,
+        0.7119140625,
+        0.5703125
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_innerleg_lower",
+      "bone": "Zombie_innerleg_lower",
+      "name": "Zombie_innerleg_lower",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -135.41237521979207,
+        26.49268341064453,
+        -135.412381717221,
+        166.49268341064447,
+        -5.412381717220988,
+        166.49268341064447,
+        -5.412375219792061,
+        26.49268341064453
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.26171875,
+        0.5625,
+        0.193359375,
+        0.5625,
+        0.193359375,
+        0.30859375,
+        0.26171875,
+        0.30859375
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_innerleg_upper",
+      "bone": "Zombie_innerleg_upper",
+      "name": "Zombie_innerleg_upper",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -65.66909225524913,
+        138.50933837890625,
+        -65.6690975924229,
+        253.5093383789062,
+        4.330902407577106,
+        253.5093383789062,
+        4.330907744750874,
+        138.50933837890625
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.22705078125,
+        0.3046875,
+        0.22705078125,
+        0.080078125,
+        0.26123046875,
+        0.080078125,
+        0.26123046875,
+        0.3046875
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_innerleg_foot",
+      "bone": "Zombie_innerleg_foot",
+      "name": "Zombie_innerleg_foot",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -98.57549202226707,
+        14.103038787841804,
+        -98.5754957350836,
+        94.10303878784177,
+        11.424504264916393,
+        94.10303878784177,
+        11.424507977732922,
+        14.103038787841804
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.712890625,
+        0.7265625,
+        0.712890625,
+        0.5703125,
+        0.7666015625,
+        0.5703125,
+        0.7666015625,
+        0.7265625
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_pogo_stick3",
+      "bone": "Zombie_pogo_stick3",
+      "name": "Zombie_pogo_stick3",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -115.4472129066919,
+        -54.74418788617852,
+        -122.0242974304635,
+        16.904030453754817,
+        -74.25881853717459,
+        21.288751252796803,
+        -67.68173401340297,
+        -50.359467087136544
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.8671875,
+        0.6953125,
+        0.8671875,
+        0.5546875,
+        0.890625,
+        0.5546875,
+        0.890625,
+        0.6953125
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_outerleg_lower",
+      "bone": "Zombie_outerleg_lower",
+      "name": "Zombie_outerleg_lower",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        0.11069183789165038,
+        30.542078333785724,
+        -4.447997631064823,
+        178.4718535030297,
+        109.55200236893518,
+        178.4718535030297,
+        114.11069183789164,
+        30.542078333785724
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.36767578125,
+        0.7265625,
+        0.29541015625,
+        0.7265625,
+        0.29541015625,
+        0.50390625,
+        0.36767578125,
+        0.50390625
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_outerleg_upper",
+      "bone": "Zombie_outerleg_upper",
+      "name": "Zombie_outerleg_upper",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        58.251132867423706,
+        250.42926025390625,
+        65.67765298010909,
+        251.53056467317012,
+        64.2445092006665,
+        248.6196419927904,
+        62.608049123735135,
+        249.0109185137289,
+        65.7526404596212,
+        254.5467987060546,
+        60.79457417684267,
+        158.18380737304685,
+        30.651287287916958,
+        105.63726806640624,
+        -13.885391213065652,
+        104.52447509765624,
+        -8.666569209034506,
+        279.15441131591786
+      ],
+      "triangles": [
+        3,
+        0,
+        2,
+        2,
+        0,
+        1,
+        4,
+        8,
+        0,
+        4,
+        0,
+        3,
+        8,
+        5,
+        7,
+        4,
+        5,
+        8,
+        5,
+        6,
+        7
+      ],
+      "uvs": [
+        0.20922188460826874,
+        0.5883344411849976,
+        0.20929081737995148,
+        0.571988582611084,
+        0.2121676504611969,
+        0.5701717734336853,
+        0.21649068593978882,
+        0.5701497793197632,
+        0.2209998220205307,
+        0.5697556138038635,
+        0.26805204153060913,
+        0.5794394016265869,
+        0.29370954632759094,
+        0.6383130550384521,
+        0.2942529022693634,
+        0.7252987027168274,
+        0.208984375,
+        0.7151057720184326
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_outerleg_foot",
+      "bone": "Zombie_outerleg_foot",
+      "name": "Zombie_outerleg_foot",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -64.66908123790668,
+        -10.990783691406236,
+        -64.66908578610693,
+        87.00921630859372,
+        118.33091421389307,
+        87.00921630859372,
+        118.33091876209332,
+        -10.990783691406236
+      ],
+      "triangles": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "uvs": [
+        0.99609375,
+        0.99609375,
+        0.9482421875,
+        0.99609375,
+        0.9482421875,
+        0.638671875,
+        0.99609375,
+        0.638671875
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "slot": "Zombie_body",
+      "bone": "Zombie_body",
+      "name": "Zombie_body",
+      "page": "Zombie_pogo.png",
+      "vertices": [
+        -66.91728398868574,
+        453.31402587890614,
+        -30.93734264262022,
+        432.7183151245116,
+        43.28163704942256,
+        374.68493652343744,
+        73.08075276175728,
+        257.3930004289716,
+        73.08083652956716,
+        242.48490591027573,
+        43.75203419323264,
+        226.43101114541565,
+        -6.771421685676298,
+        212.6825714111328,
+        -73.73128337139102,
+        211.1816864013672,
+        -104.33075201261286,
+        220.01639556884766,
+        -136.9191371739253,
+        354.7941284179687,
+        -136.91913853917663,
+        384.2111778259277,
+        -128.99232905139806,
+        421.49787139892567,
+        -90.14439198859598,
+        453.2752685546874
+      ],
+      "triangles": [
+        5,
+        3,
+        4,
+        5,
+        6,
+        2,
+        12,
+        9,
+        10,
+        11,
+        12,
+        10,
+        7,
+        8,
+        9,
+        12,
+        0,
+        1,
+        1,
+        9,
+        12,
+        2,
+        9,
+        1,
+        2,
+        6,
+        9,
+        6,
+        7,
+        9,
+        5,
+        2,
+        3
+      ],
+      "uvs": [
+        0.03515716642141342,
+        0.517471432685852,
+        0.05272549018263817,
+        0.5576974153518677,
+        0.08896522969007492,
+        0.671043872833252,
+        0.10351557284593582,
+        0.9001296162605286,
+        0.103515625,
+        0.9292470216751099,
+        0.08919492363929749,
+        0.960602343082428,
+        0.06452526152133942,
+        0.9874547719955444,
+        0.03183000907301903,
+        0.9903861284255981,
+        0.01688886433839798,
+        0.9731308817863464,
+        0.0009765625,
+        0.7098930478096008,
+        0.0009765625,
+        0.6524379849433899,
+        0.004847078118473291,
+        0.5796123743057251,
+        0.023815803229808807,
+        0.5175471901893616
+      ],
+      "color": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

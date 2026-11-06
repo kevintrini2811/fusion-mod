@@ -472,6 +472,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Torchthree, "Torchthree"),
         new(FusionPlant.Sparkwood, "Sparkwood"),
         new(FusionPlant.Hypnowood, "Hypnowood"),
+        new(FusionPlant.HotPotato, "HotPotato"),
+        new(FusionPlant.Boomwood, "Boomwood"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -638,6 +640,11 @@ internal static partial class ImportedPeaVisuals
         PoisonProjectileAssets.ReleaseAssets();
         StenchFireProjectileAssets.ReleaseAssets();
         ScorchProjectileAssets.ReleaseAssets();
+        FireCherryProjectileAssets.ReleaseAssets();
+        CherryDroneProjectileAssets.ReleaseAssets();
+        SmallFireProjectileAssets.ReleaseAssets();
+        PotatoFireProjectileAssets.ReleaseAssets();
+        FireNutProjectileAssets.ReleaseAssets();
         PotatoProjectileAssets.ReleaseAssets();
         IronProjectileAssets.ReleaseAssets();
         SmallCabbageProjectileAssets.ReleaseAssets();

@@ -1,0 +1,28 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 44436
+  },
+  "m_BodyType": 1,
+  "m_Simulated": true,
+  "m_UseFullKinematicContacts": false,
+  "m_UseAutoMass": false,
+  "m_Mass": 1.0,
+  "m_LinearDrag": 0.0,
+  "m_AngularDrag": 0.05000000074505806,
+  "m_GravityScale": 1.0,
+  "m_Material": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_IncludeLayers": {
+    "m_Bits": 0
+  },
+  "m_ExcludeLayers": {
+    "m_Bits": 0
+  },
+  "m_Interpolate": 0,
+  "m_SleepingMode": 1,
+  "m_CollisionDetection": 0,
+  "m_Constraints": 0
+}

@@ -1,0 +1,40 @@
+{
+  "game_object": 44436,
+  "name": "TorchMinePrefab",
+  "components": [
+    {
+      "path_id": 105740,
+      "type": "Transform"
+    },
+    {
+      "path_id": 124491,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 124052,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 121522,
+      "type": "Rigidbody2D"
+    },
+    {
+      "path_id": 126042,
+      "type": "Animator",
+      "controller": 6391,
+      "clips": [
+        4390,
+        4388
+      ]
+    },
+    {
+      "path_id": 195893,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 3923
+      },
+      "script_name": "TorchMine"
+    }
+  ]
+}

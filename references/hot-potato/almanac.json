@@ -1,0 +1,7 @@
+{
+  "seedType": 1421,
+  "name": "火炬土豆雷",
+  "introduce": "<color=#3D1400>他原本只想做一个普普通通的地雷，直到一枚燃烧弹被扔到了它的引信上。现在的他虽然对无法隐蔽颇为不满，但是作为炊事班的掌上明珠，也算是因祸得福了。</color>",
+  "info": "能点燃小豌豆和土豆豌豆，并从中生成焰光土豆雷。\n\n<color=#3D1400>伤害：</color><color=red>1800</color>\n<color=#3D1400>特性：</color><color=red>低矮</color>\n<color=#3D1400>特点：①</color><color=red>影响经过的特定子弹</color>\n<color=#A86A44>·小豌豆：</color><color=red>点燃，伤害+20</color>\n<color=#A86A44>·滚地坚果：</color><color=red>伤害×2，重置穿透次数</color>\n<color=#3D1400>②</color><color=red>每影响超过100个子弹，在前方生成一个不能用于融合的焰光土豆雷\n*影响土豆豌豆会计为8发</color>\n<color=#3D1400>③</color><color=red>死亡时产生土豆雷爆炸</color>\n<color=#3D1400>融合配方：</color><color=red>土豆雷+火炬树桩</color>",
+  "cost": ""
+}

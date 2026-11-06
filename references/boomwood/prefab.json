@@ -1,0 +1,39 @@
+{
+  "game_object": 66712,
+  "name": "CherryTorchPrefab",
+  "components": [
+    {
+      "path_id": 111467,
+      "type": "Transform"
+    },
+    {
+      "path_id": 121507,
+      "type": "Rigidbody2D"
+    },
+    {
+      "path_id": 123690,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 122357,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 126064,
+      "type": "Animator",
+      "controller": 6513,
+      "clips": [
+        4738
+      ]
+    },
+    {
+      "path_id": 192946,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 3055
+      },
+      "script_name": "CherryTorch"
+    }
+  ]
+}

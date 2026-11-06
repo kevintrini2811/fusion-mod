@@ -1,0 +1,74 @@
+[
+  {
+    "type": "Bullet_fireCherry",
+    "namespace": "",
+    "method": "HitZombie",
+    "token": "0x600067f",
+    "rva": "0x705fe0",
+    "end": "0x706090"
+  },
+  {
+    "type": "Bullet_fireCherry",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6000680",
+    "rva": "0x6fa0b0",
+    "end": "0x6fa0c0"
+  },
+  {
+    "type": "CherryLittleFly",
+    "namespace": "",
+    "method": "Update",
+    "token": "0x6001134",
+    "rva": "0x4988e0",
+    "end": "0x4990e0"
+  },
+  {
+    "type": "CherryLittleFly",
+    "namespace": "",
+    "method": "Die",
+    "token": "0x6001135",
+    "rva": "0x4987a0",
+    "end": "0x4988e0"
+  },
+  {
+    "type": "CherryLittleFly",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6001136",
+    "rva": "0x4990e0",
+    "end": "0x4990f0"
+  },
+  {
+    "type": "CherryTorch",
+    "namespace": "",
+    "method": "OnTriggerEnter2D",
+    "token": "0x6001154",
+    "rva": "0x49ae40",
+    "end": "0x49afc0"
+  },
+  {
+    "type": "CherryTorch",
+    "namespace": "",
+    "method": "SummonPlant",
+    "token": "0x6001155",
+    "rva": "0x49afc0",
+    "end": "0x49b260"
+  },
+  {
+    "type": "CherryTorch",
+    "namespace": "",
+    "method": "DieEvent",
+    "token": "0x6001156",
+    "rva": "0x49ada0",
+    "end": "0x49ae40"
+  },
+  {
+    "type": "CherryTorch",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6001157",
+    "rva": "0x49b260",
+    "end": "0x49b2c0"
+  }
+]
