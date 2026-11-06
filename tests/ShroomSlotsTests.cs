@@ -48,6 +48,13 @@ List<Plant> Live(Board b) => b.m_plants.Where(p => !p.mDead && p.mIsOnBoard && !
         "Upper mushroom renders behind both lower mushrooms");
     Check(back.CalcRenderOrder() == back.mRenderOrder && right.CalcRenderOrder() == right.mRenderOrder
         && left.CalcRenderOrder() == left.mRenderOrder, "Native recomputation preserves slot depth");
+    // Native SortingUtils.RemapSortingLayers truncates after compression.
+    // Exercise every possible rounding phase, rather than logical order alone.
+    int UnityOrder(int order) => (int)((order - 100000) * 65525f / 800000f) - 32763;
+    for (int baseline = 300000; baseline < 350000; ++baseline)
+        Check(UnityOrder(baseline + right.mRenderOrder - back.mRenderOrder) > UnityOrder(baseline)
+            && UnityOrder(baseline + left.mRenderOrder - back.mRenderOrder) > UnityOrder(baseline),
+            "Both front slots retain distinct Unity depth after native compression");
 }
 
 // Add an isolated Sun-shroom test fixture to exercise

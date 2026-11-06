@@ -1,0 +1,19 @@
+{
+  "formula": "truncate(float32(float32((order - 100000) * 65525) / 800000)) - 32763",
+  "observedLogicalOrders": [
+    302685,
+    302686
+  ],
+  "observedUnityOrders": [
+    -16162,
+    -16162
+  ],
+  "fixedLogicalOrders": [
+    302685,
+    302701
+  ],
+  "fixedUnityOrders": [
+    -16162,
+    -16161
+  ]
+}

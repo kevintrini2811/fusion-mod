@@ -131,7 +131,8 @@ internal static class ShroomSlots
 
 // CalcRenderOrder sorts native plants by horizontal position. All three small
 // slots share one tile depth; the two lower slots must sort in front, including
-// after loading, carrying and native render-order recalculation.
+// after loading, carrying and native render-order recalculation. Native sorting
+// remaps 800000 logical steps into 65525 Unity steps: +1 can become a tie.
 [HarmonyLib.HarmonyPatch(typeof(Plant), nameof(Plant.CalcRenderOrder))]
 internal static class ShroomSlotRenderOrderPatch
 {
@@ -139,6 +140,6 @@ internal static class ShroomSlotRenderOrderPatch
     {
         if (__instance.mBoard == null || !ShroomSlots.IsSmall(FusionPlant.From(__instance))) return;
         __result += (int)(__instance.mX - __instance.mBoard.GridToPixelX(__instance.mPlantCol, __instance.mRow))
-            + (ShroomSlots.Slot(__instance) == 0 ? 0 : 1);
+            + (ShroomSlots.Slot(__instance) == 0 ? 0 : 16);
     }
 }

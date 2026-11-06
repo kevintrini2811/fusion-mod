@@ -1,4 +1,6 @@
-# Fusion Mod 22.2.0
+# Fusion Mod 22.2.1
+
+Version 22.2.1 fixes intermittent three-mushroom overlap after native render-order compression. Both lower slots receive a logical depth gap that remains distinct in Unity, including native Sun-shrooms and imported mini fusions. Position, growth and gameplay remain unchanged. [Native evidence and live rendering checks](references/shroom-depth-22-2-1/validation.md).
 
 ## Dependencies
 
