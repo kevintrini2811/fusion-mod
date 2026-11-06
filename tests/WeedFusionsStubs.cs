@@ -138,10 +138,11 @@ namespace Il2CppReloaded.Gameplay
             FusionMod.OverheatColdPatch.Postfix(this);
         }
         public bool SkipBite;
+        public int BiteDamage = 4;
         public void EatPlant(Plant p) {
             FusionMod.ElementalNutBitePatch.Prefix(this, p, out var before);
             // Native path: skipped bites (ladder, odd chilled tick, etc.) have no HP write.
-            if (!SkipBite) { p.mPlantHealth -= 4; if (p.mPlantHealth <= 0) p.mDead = true; }
+            if (!SkipBite) { p.mPlantHealth -= BiteDamage; if (p.mPlantHealth <= 0) p.mDead = true; }
             FusionMod.ElementalNutBitePatch.Postfix(this, p, before);
         }
         public void DieWithLoot() {

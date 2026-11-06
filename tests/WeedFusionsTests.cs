@@ -68,10 +68,25 @@ plain.DoRowAreaDamage(20,DamageFlags.Spike);
 Check(target.Damage==20 && SolarShooter.Suns.Count==0,"ordinary weed unchanged");
 var nut=Make(FusionPlant.SpikeNut);target=Enemy(nut);
 Check(nut.mPlantHealth==4000,"source nut health");
-target.EatPlant(nut);Check(target.Damage==50,"successful bite retaliates");
-target.SkipBite=true;target.EatPlant(nut);Check(target.Damage==50,"skipped bite no retaliation");
+// Source EatEffect returns 50 damage for a normal 50-HP source bite. Native
+// Replanted splits eating into 4-HP writes, so each successful write reflects 4;
+// awarding 50 per native write would amplify the source rate by 12.5 times.
+target.EatPlant(nut);Check(target.Damage==4,"native four-HP bite reflects four damage");
+target.SkipBite=true;target.EatPlant(nut);Check(target.Damage==4,"skipped bite no retaliation");
 target.SkipBite=false;nut.mPlantHealth=4;target.EatPlant(nut);
-Check(nut.mDead && target.Damage==100,"lethal bite retaliates");
+Check(nut.mDead && target.Damage==8,"lethal four-HP bite still reflects four damage");
+// Pin the source quantum and native doubled writer independently of the
+// adapter default, so the contract cannot regress to a fixed 4 or 50 per call.
+foreach (int biteDamage in new[] { 8, 50 }) {
+    var reflectingNut=Make(FusionPlant.SpikeNut);var eater=Enemy(reflectingNut);eater.BiteDamage=biteDamage;
+    eater.EatPlant(reflectingNut);
+    Check(reflectingNut.mPlantHealth==4000-biteDamage && eater.Damage==biteDamage,
+        "source fifty-HP quantum and native doubled bite retain equal reflected HP");
+}
+var sustainedNut=Make(FusionPlant.SpikeNut);var sustainedEater=Enemy(sustainedNut);
+for(int i=0;i<25;i++)sustainedEater.EatPlant(sustainedNut);
+Check(sustainedNut.mPlantHealth==3900 && sustainedEater.Damage==100,
+    "twenty-five native four-HP writes equal two source fifty-HP bites");
 foreach(var type in new[]{ZombieType.Zamboni,ZombieType.Catapult}) {
     Overheat.Clear();nut=Make(FusionPlant.SpikeNut);target=Enemy(nut);target.mZombieType=type;target.Health=1350;
     target.SquishAllInSquare(nut.mPlantCol,nut.mRow,1);
@@ -164,10 +179,11 @@ float rollX=seaNut.mX;SeaNut.Tick(seaNut);Check(seaNut.mX>rollX,"rolling moves s
 SeaNut.Fertilize(seaNut);Check(seaNut.mStartRow==3,"fertilizer does not restart rolling");
 bool canTarget=true;GroundFusionTargetPatch.Postfix(Enemy(seaNut),seaNut,ref canTarget);
 Check(!canTarget,"rolling nut cannot become native bite/crush target");
-Console.WriteLine($"Weed fusions: {checks} assertions passed; offline doubles only.");
 
 var landKelpWeed = Make(FusionPlant.TangleWeed); var landKelpTarget = Enemy(landKelpWeed);
 KelpEffects.Calls = 0;
 landKelpWeed.DoRowAreaDamage(20, DamageFlags.Spike);
 Check(landKelpTarget.Damage == 20 && KelpEffects.Calls == 1 && KelpEffects.Ticks == 200 && KelpEffects.Land,
     "Tangle Weed applies 20 damage and exactly one two-second land kelp hit");
+
+Console.WriteLine($"Weed fusions: {checks} assertions passed; offline doubles only.");
