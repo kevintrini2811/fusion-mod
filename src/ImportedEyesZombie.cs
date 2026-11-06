@@ -17,6 +17,7 @@ internal static partial class ImportedPeaVisuals
     private static readonly Assets EyesZombieAssets = new(FusionPlant.EyesZombieHead, "EyesZombie");
     private static readonly Dictionary<IntPtr, EyesView> EyesViews = new();
     private static readonly Dictionary<string, Sprite> EyesArmor = new();
+    private static Material? eyesZombieMaterial;
     private static Dictionary<string, float[]>? eyesArmorFits;
     private static float[] ArmorFit(string name)
     {
@@ -97,6 +98,8 @@ internal static partial class ImportedPeaVisuals
         if (board == null)
         {
             EyesZombieAssets.ReleaseAssets();
+            if (eyesZombieMaterial != null) Object.Destroy(eyesZombieMaterial);
+            eyesZombieMaterial = null;
             foreach (var sprite in EyesArmor.Values) { Object.Destroy(sprite.texture); Object.Destroy(sprite); }
             EyesArmor.Clear();
         }
@@ -230,7 +233,6 @@ internal static partial class ImportedPeaVisuals
             armor.transform.localScale = Vector3.one * (width / armor.sprite.bounds.size.x);
             armor.transform.localPosition = new Vector3(bounds.center.x + bounds.size.x * fit[1],
                 bounds.min.y + bounds.size.y * fit[2], 0);
-            armor.color = head.color;
             armor.enabled = head.enabled && head.gameObject.activeInHierarchy;
         }
 
@@ -345,6 +347,8 @@ internal static partial class ImportedPeaVisuals
                 if (nativeShadow == null || !nativeShadow) return;
                 assets.Load(zombie.mBoard, null);
                 var model = assets.model!;
+                if (eyesZombieMaterial == null || !eyesZombieMaterial)
+                    eyesZombieMaterial = ZombieSpriteColor.CreateMaterial(zombie);
                 // Capture before adding imported renderers. Never hide native art
                 // until every source sprite, curve and footprint is available.
                 var butter = zombie.mButterReanim?.mController;
@@ -376,7 +380,7 @@ internal static partial class ImportedPeaVisuals
                     go.transform.SetParent(node.Parent < 0 ? root.transform : transforms[node.Parent], false);
                     if (node.Sprite < 0) continue;
                     var renderer = go.AddComponent<SpriteRenderer>(); renderers[i] = renderer;
-                    renderer.sprite = assets.Sprites[node.Sprite]; renderer.sharedMaterial = assets.spriteMaterial;
+                    renderer.sprite = assets.Sprites[node.Sprite]; renderer.sharedMaterial = eyesZombieMaterial;
                     renderer.sortingOrder = node.Order; renderer.flipX = node.FlipX; renderer.flipY = node.FlipY;
                 }
                 Pose(model, transforms, 0, null, renderers, assets.Sprites, "walk");
@@ -468,33 +472,19 @@ internal static partial class ImportedPeaVisuals
                 // entry lowers only the actor, so transfer that saved height.
                 Zombies.ApplyBodyDisplacement(zombie, root.transform);
             }
-            var effects = owner.m_materialEffectController;
-            bool cold = zombie.mIceTrapCounter > 0 || zombie.mChilledCounter > 0;
-            // Native cold uses a solid additive blue material. Multiplying the
-            // source texture preserves eyes, clothes, outlines and shading.
-            Color tint = cold ? new Color(.65f, .8f, 1f, 1f)
-                : effects != null && effects ? effects.m_overrideColor : Color.white;
-            if (!cold && effects != null && effects && effects.m_enableOverlayColor)
-            {
-                var overlay = effects.m_overlayColor;
-                tint = Color.Lerp(tint, overlay, overlay.a);
-            }
-            if (!cold && zombie.mMindControlled && effects != null && effects && effects.m_enableAdditiveColor)
-                tint *= Color.Lerp(Color.white, effects.m_additiveColor, effects.m_additiveColor.a);
-            Color additive = !cold && !zombie.mMindControlled && effects != null && effects && effects.m_enableAdditiveColor
-                ? effects.m_additiveColor : Color.clear;
+            var colors = ZombieSpriteColor.From(zombie);
             for (int i = 0; i < data.Nodes.Length; ++i)
             {
                 var node = data.Nodes[i];
                 if (renderers[i] is { } renderer)
                 {
-                    Color color = i == data.GroundNode ? Color.white : tint;
-                    renderer.color = new Color(node.Color[0] * color.r, node.Color[1] * color.g,
-                        node.Color[2] * color.b, AnimatedAlpha(data, i, clip, time, "", null) * color.a);
-                    renderer.GetPropertyBlock(colorEffects);
-                    colorEffects.SetColor("_BlendColor", additive);
-                    colorEffects.SetFloat("_BlendStrength", i == data.GroundNode ? 0 : additive.a);
-                    renderer.SetPropertyBlock(colorEffects);
+                    float alpha = AnimatedAlpha(data, i, clip, time, "", null);
+                    colors.Apply(renderer, new Color(node.Color[0], node.Color[1], node.Color[2],
+                        alpha), colorEffects, i == data.GroundNode);
+                    // Armour follows the current head animation's source alpha.
+                    // Never feed a previous frame's already tinted colour back in.
+                    if (armor != null && armor.enabled && renderer.name == "anim_head1-sprite")
+                        colors.Apply(armor, new Color(1, 1, 1, alpha), colorEffects);
                 }
             }
             var groundPosition = GroundPosition(owner);

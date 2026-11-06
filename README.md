@@ -1,4 +1,6 @@
-# Fusion Mod 22.2.2
+# Fusion Mod 22.2.3
+
+Version 22.2.3 uses native character colour state for imported zombie sprites, including cold blue, armour and pool ducks. Zombie Library owns the shared colour adapter; source alpha and pool clipping remain intact.
 
 Version 22.2.2 makes Speed Mod and Difficulty Mod optional. Imported animations use Speed Mod when installed; the golden bean remains available beside the native speed controls without it. Fusion releases leave optional mods untouched. [Review and live dependency matrix](references/optional-dependencies-22-2-2/validation.md).
 
