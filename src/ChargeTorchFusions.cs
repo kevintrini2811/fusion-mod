@@ -24,7 +24,10 @@ internal static class ChargeTorchFusions
 
     internal static void Convert(Projectile shot)
     {
-        if (shot.mDead || shot.mBoard == null || shot.mBoard.mPaused || shot.mPosZ != 0) return;
+        var board = shot.mBoard;
+        if (shot.mDead || board == null || board.mPaused || shot.mPosZ != 0) return;
+        var indexed = TorchPlantIndex.For(board);
+        if (indexed.Length == 0) return;
         bool potato = PotatoProjectiles.Contains(shot), small = PuffShooters.Contains(shot);
         bool rolling = RollingProjectiles.TryShot(shot, out var roll) && roll.Nut && !roll.SolarBall;
         bool explosive = CherryShooter.IsExplosive(shot);
@@ -32,10 +35,10 @@ internal static class ChargeTorchFusions
         bool plain = shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea && shot.mCobTargetX >= 0 && !rolling;
         if (!potato && !small && !rolling && !explosive && !snow && !plain) return;
         var stumps = new List<Plant>();
-        for (int i = 0; i < shot.mBoard.m_plants.Count; ++i)
+        foreach (var entry in indexed)
         {
-            var plant = shot.mBoard.m_plants[i];
-            if (plant == null || !Owns(FusionPlant.From(plant)) || !BeamShooters.Active(plant)
+            var plant = entry.Plant;
+            if (!entry.IsCurrent(board) || !Owns(FusionPlant.From(plant)) || !BeamShooters.Active(plant)
                 || plant.NotOnGround() || plant.mRow != shot.mRow || shot.mHitTorchwoodGridX == plant.mPlantCol) continue;
             float x = plant.mX + plant.mWidth / 2f;
             if (Math.Min(shot.mPosX, shot.mPosX + shot.mVelX) <= x + 16

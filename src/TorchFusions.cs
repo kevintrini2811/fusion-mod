@@ -19,7 +19,10 @@ internal static class TorchFusions
 
     internal static void Convert(Projectile shot)
     {
-        if (shot.mDead || shot.mBoard == null || shot.mBoard.mPaused || shot.mPosZ != 0) return;
+        var board = shot.mBoard;
+        if (shot.mDead || board == null || board.mPaused || shot.mPosZ != 0) return;
+        var indexed = TorchPlantIndex.For(board);
+        if (indexed.Length == 0) return;
         bool snow = shot.mProjectileType == ProjectileType.Snowpea && shot.mCobTargetX >= 0;
         bool hypno = HypnoShooters.Contains(shot) && !HypnoShooters.IsFire(shot);
         bool plain = shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea && shot.mCobTargetX >= 0;
@@ -27,10 +30,10 @@ internal static class TorchFusions
             && StarProjectiles.Family(shot) != 9 && CactusProjectiles.Family(shot) == 0;
         if (!snow && !hypno && !plain && !star) return;
         var candidates = new List<Plant>();
-        for (int i = 0; i < shot.mBoard.m_plants.Count; ++i)
+        foreach (var entry in indexed)
         {
-            var plant = shot.mBoard.m_plants[i];
-            if (plant == null || !Owns(FusionPlant.From(plant)) || !BeamShooters.Active(plant) || plant.NotOnGround()
+            var plant = entry.Plant;
+            if (!entry.IsCurrent(board) || !Owns(FusionPlant.From(plant)) || !BeamShooters.Active(plant) || plant.NotOnGround()
                 || plant.mRow != shot.mRow || shot.mHitTorchwoodGridX == plant.mPlantCol) continue;
             float x = plant.mX + plant.mWidth / 2f;
             float y = plant.mY + plant.mHeight / 2f;
@@ -65,7 +68,6 @@ internal static class TorchFusions
                 int cycle = Math.Clamp(plant.mTargetX, 0, 2);
                 plant.mTargetX = (cycle + 1) % 3;
                 // Capture all input fields before Die can return the pool slot.
-                var board = shot.mBoard;
                 float x = shot.mPosX, y = shot.mPosY;
                 int row = shot.mRow, order = shot.mRenderOrder;
                 shot.Die();

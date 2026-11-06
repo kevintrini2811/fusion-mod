@@ -1,0 +1,4307 @@
+{
+  "baseline": {
+    "family": "native",
+    "settings": [
+      {
+        "name": "WindowMode",
+        "writable": true,
+        "type": "ReloadedWindowMode",
+        "value": "Windowed",
+        "values": [
+          "Fullscreen",
+          "Windowed",
+          "Borderless"
+        ]
+      },
+      {
+        "name": "GameplaySpeed",
+        "writable": true,
+        "type": "GameplaySpeed",
+        "value": "_Normal",
+        "values": [
+          "_Normal",
+          "_Half",
+          "_2X",
+          "_4x",
+          "_8X"
+        ]
+      },
+      {
+        "name": "Resolution",
+        "writable": true,
+        "type": "ReloadedResolution",
+        "value": "1920x1026",
+        "values": null
+      },
+      {
+        "name": "VSync",
+        "writable": true,
+        "type": "Boolean",
+        "value": "True",
+        "values": null
+      }
+    ],
+    "stages": [
+      {
+        "plants": 0,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.137276163000934,
+        "framesPerSecond": 59.938592996885646,
+        "ticksPerSecond": 119.7778676955163,
+        "simulationSecondsPerSecond": 0.9981488974626359,
+        "instantaneousFPSMedian": 60.06006,
+        "projectiles": [
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          }
+        ],
+        "samples": [
+          {
+            "at": 32456.4753435255,
+            "instantaneous": 60.06006,
+            "frame": 4711,
+            "simulationTick": 4382,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32456.986681627997,
+            "instantaneous": 60.06006,
+            "frame": 4741,
+            "simulationTick": 4442,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32457.518131342,
+            "instantaneous": 60.06006,
+            "frame": 4773,
+            "simulationTick": 4506,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32458.0295787385,
+            "instantaneous": 60.06006,
+            "frame": 4803,
+            "simulationTick": 4566,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32458.5209918135,
+            "instantaneous": 60.06006,
+            "frame": 4833,
+            "simulationTick": 4626,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32459.0123692685,
+            "instantaneous": 60.06006,
+            "frame": 4862,
+            "simulationTick": 4684,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32459.5038046235,
+            "instantaneous": 60.06006,
+            "frame": 4892,
+            "simulationTick": 4744,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32459.995215903502,
+            "instantaneous": 60.06006,
+            "frame": 4922,
+            "simulationTick": 4804,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32460.4865013285,
+            "instantaneous": 60.06006,
+            "frame": 4952,
+            "simulationTick": 4864,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32460.9977007065,
+            "instantaneous": 60.06006,
+            "frame": 4982,
+            "simulationTick": 4924,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32461.549665155,
+            "instantaneous": 60.06006,
+            "frame": 5015,
+            "simulationTick": 4990,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32462.040929235,
+            "instantaneous": 60.06006,
+            "frame": 5045,
+            "simulationTick": 5050,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32462.532355864998,
+            "instantaneous": 60.06006,
+            "frame": 5075,
+            "simulationTick": 5110,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32463.043804772,
+            "instantaneous": 60.06006,
+            "frame": 5105,
+            "simulationTick": 5170,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32463.5554529625,
+            "instantaneous": 60.06006,
+            "frame": 5135,
+            "simulationTick": 5230,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32464.046698753,
+            "instantaneous": 60.06006,
+            "frame": 5165,
+            "simulationTick": 5290,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32464.537932633502,
+            "instantaneous": 60.06006,
+            "frame": 5194,
+            "simulationTick": 5347,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32465.0494429995,
+            "instantaneous": 60.06006,
+            "frame": 5225,
+            "simulationTick": 5409,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32465.560969816,
+            "instantaneous": 60.06006,
+            "frame": 5255,
+            "simulationTick": 5469,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32466.052387556,
+            "instantaneous": 60.06006,
+            "frame": 5285,
+            "simulationTick": 5529,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32466.5849951145,
+            "instantaneous": 60.06006,
+            "frame": 5317,
+            "simulationTick": 5593,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32467.0763380395,
+            "instantaneous": 60.06006,
+            "frame": 5347,
+            "simulationTick": 5653,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32467.567636125,
+            "instantaneous": 60.06006,
+            "frame": 5376,
+            "simulationTick": 5711,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32468.0589444445,
+            "instantaneous": 60.06006,
+            "frame": 5406,
+            "simulationTick": 5771,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32468.550266935003,
+            "instantaneous": 60.06006,
+            "frame": 5435,
+            "simulationTick": 5829,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32469.041619980002,
+            "instantaneous": 60.06006,
+            "frame": 5465,
+            "simulationTick": 5889,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32469.5329870895,
+            "instantaneous": 60.06006,
+            "frame": 5494,
+            "simulationTick": 5947,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32470.024248595,
+            "instantaneous": 60.06006,
+            "frame": 5524,
+            "simulationTick": 6007,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32470.535539432,
+            "instantaneous": 60.06006,
+            "frame": 5554,
+            "simulationTick": 6067,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32471.0469488035,
+            "instantaneous": 60.06006,
+            "frame": 5584,
+            "simulationTick": 6127,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32471.5792723335,
+            "instantaneous": 60.06006,
+            "frame": 5617,
+            "simulationTick": 6193,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32472.070629793,
+            "instantaneous": 60.06006,
+            "frame": 5646,
+            "simulationTick": 6251,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32472.562089717503,
+            "instantaneous": 60.06006,
+            "frame": 5676,
+            "simulationTick": 6311,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32473.053445917503,
+            "instantaneous": 60.06006,
+            "frame": 5705,
+            "simulationTick": 6368,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32473.5447935025,
+            "instantaneous": 60.06006,
+            "frame": 5735,
+            "simulationTick": 6428,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32474.035946333002,
+            "instantaneous": 60.06006,
+            "frame": 5765,
+            "simulationTick": 6488,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32474.5470702905,
+            "instantaneous": 60.06006,
+            "frame": 5795,
+            "simulationTick": 6548,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32475.058257528,
+            "instantaneous": 60.06006,
+            "frame": 5825,
+            "simulationTick": 6608,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32475.549357313503,
+            "instantaneous": 60.06006,
+            "frame": 5855,
+            "simulationTick": 6668,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32476.0404782845,
+            "instantaneous": 60.06006,
+            "frame": 5885,
+            "simulationTick": 6728,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32476.6126196885,
+            "instantaneous": 60.06006,
+            "frame": 5918,
+            "simulationTick": 6794,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          }
+        ]
+      },
+      {
+        "plants": 7,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.12120857750051,
+        "framesPerSecond": 59.042179073100954,
+        "ticksPerSecond": 120.12200910747896,
+        "simulationSecondsPerSecond": 1.0010167425623246,
+        "instantaneousFPSMedian": 60.06006,
+        "projectiles": [
+          {
+            "count": 24,
+            "types": {
+              "Pea": 24
+            }
+          },
+          {
+            "count": 24,
+            "types": {
+              "Pea": 24
+            }
+          },
+          {
+            "count": 12,
+            "types": {
+              "Pea": 12
+            }
+          },
+          {
+            "count": 16,
+            "types": {
+              "Pea": 16
+            }
+          },
+          {
+            "count": 23,
+            "types": {
+              "Pea": 23
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 32485.2806874255,
+            "instantaneous": 60.06006,
+            "frame": 6438,
+            "simulationTick": 7787,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32485.7719509295,
+            "instantaneous": 60.06006,
+            "frame": 6468,
+            "simulationTick": 7847,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32486.263102894998,
+            "instantaneous": 60.06006,
+            "frame": 6498,
+            "simulationTick": 7907,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32486.7542047955,
+            "instantaneous": 60.06006,
+            "frame": 6527,
+            "simulationTick": 7964,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32487.24555499,
+            "instantaneous": 60.06006,
+            "frame": 6557,
+            "simulationTick": 8024,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32487.7370606135,
+            "instantaneous": 60.06006,
+            "frame": 6587,
+            "simulationTick": 8084,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32488.24847684,
+            "instantaneous": 60.06006,
+            "frame": 6617,
+            "simulationTick": 8144,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32488.759863476,
+            "instantaneous": 60.06006,
+            "frame": 6647,
+            "simulationTick": 8204,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32489.251257085,
+            "instantaneous": 60.06006,
+            "frame": 6677,
+            "simulationTick": 8264,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32489.7428119335,
+            "instantaneous": 60.06006,
+            "frame": 6707,
+            "simulationTick": 8324,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32490.316278757,
+            "instantaneous": 60.06006,
+            "frame": 6740,
+            "simulationTick": 8390,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32490.807671656497,
+            "instantaneous": 60.06006,
+            "frame": 6770,
+            "simulationTick": 8450,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32491.29913967,
+            "instantaneous": 60.06006,
+            "frame": 6800,
+            "simulationTick": 8510,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32491.790619739,
+            "instantaneous": 60.06006,
+            "frame": 6809,
+            "simulationTick": 8528,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32492.282069938,
+            "instantaneous": 60.06006,
+            "frame": 6839,
+            "simulationTick": 8632,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32492.773403972,
+            "instantaneous": 60.06006,
+            "frame": 6869,
+            "simulationTick": 8692,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32493.284734833498,
+            "instantaneous": 60.06006,
+            "frame": 6899,
+            "simulationTick": 8752,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32493.7961430895,
+            "instantaneous": 60.06006,
+            "frame": 6929,
+            "simulationTick": 8812,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32494.2875274635,
+            "instantaneous": 60.06006,
+            "frame": 6959,
+            "simulationTick": 8872,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32494.7788185685,
+            "instantaneous": 60.06006,
+            "frame": 6989,
+            "simulationTick": 8932,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32495.351800503,
+            "instantaneous": 60.06006,
+            "frame": 7022,
+            "simulationTick": 8997,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32495.8431631025,
+            "instantaneous": 60.06006,
+            "frame": 7052,
+            "simulationTick": 9057,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32496.3345861715,
+            "instantaneous": 60.06006,
+            "frame": 7082,
+            "simulationTick": 9117,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32496.826025889997,
+            "instantaneous": 60.06006,
+            "frame": 7112,
+            "simulationTick": 9177,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32497.337350421498,
+            "instantaneous": 60.06006,
+            "frame": 7142,
+            "simulationTick": 9237,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32497.848555137498,
+            "instantaneous": 60.06006,
+            "frame": 7172,
+            "simulationTick": 9297,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32498.339668923,
+            "instantaneous": 60.06006,
+            "frame": 7202,
+            "simulationTick": 9357,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32498.830831967498,
+            "instantaneous": 60.06006,
+            "frame": 7232,
+            "simulationTick": 9417,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32499.3220066325,
+            "instantaneous": 60.06006,
+            "frame": 7262,
+            "simulationTick": 9477,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32499.8332964785,
+            "instantaneous": 60.06006,
+            "frame": 7292,
+            "simulationTick": 9537,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32500.3860672875,
+            "instantaneous": 60.06006,
+            "frame": 7325,
+            "simulationTick": 9603,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32500.877371822,
+            "instantaneous": 60.06006,
+            "frame": 7355,
+            "simulationTick": 9663,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32501.388806461997,
+            "instantaneous": 60.06006,
+            "frame": 7385,
+            "simulationTick": 9723,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32501.900214453002,
+            "instantaneous": 60.06006,
+            "frame": 7415,
+            "simulationTick": 9783,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32502.3918094565,
+            "instantaneous": 60.06006,
+            "frame": 7445,
+            "simulationTick": 9843,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32502.8834043395,
+            "instantaneous": 60.06006,
+            "frame": 7475,
+            "simulationTick": 9903,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32503.3747416985,
+            "instantaneous": 60.06006,
+            "frame": 7505,
+            "simulationTick": 9963,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32503.866105437497,
+            "instantaneous": 60.06006,
+            "frame": 7534,
+            "simulationTick": 10020,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32504.357515596,
+            "instantaneous": 60.06006,
+            "frame": 7564,
+            "simulationTick": 10080,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32504.848892014998,
+            "instantaneous": 60.06006,
+            "frame": 7593,
+            "simulationTick": 10138,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32505.401896003,
+            "instantaneous": 60.06006,
+            "frame": 7626,
+            "simulationTick": 10204,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          }
+        ]
+      },
+      {
+        "plants": 21,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.207048061496607,
+        "framesPerSecond": 2.771310278946921,
+        "ticksPerSecond": 110.60497274011372,
+        "simulationSecondsPerSecond": 0.9217081061676143,
+        "instantaneousFPSMedian": 2.8157977,
+        "projectiles": [
+          {
+            "count": 65,
+            "types": {
+              "Pea": 65
+            }
+          },
+          {
+            "count": 59,
+            "types": {
+              "Pea": 59
+            }
+          },
+          {
+            "count": 53,
+            "types": {
+              "Pea": 53
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 32514.588377379,
+            "instantaneous": 3.2428734,
+            "frame": 7791,
+            "simulationTick": 11141,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32515.340251408998,
+            "instantaneous": 3.3817303,
+            "frame": 7793,
+            "simulationTick": 11217,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32516.0521851005,
+            "instantaneous": 2.7650142,
+            "frame": 7795,
+            "simulationTick": 11297,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32516.763967507002,
+            "instantaneous": 2.935997,
+            "frame": 7797,
+            "simulationTick": 11377,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32517.495649106502,
+            "instantaneous": 2.6813462,
+            "frame": 7799,
+            "simulationTick": 11457,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32518.2275462545,
+            "instantaneous": 2.8291895,
+            "frame": 7801,
+            "simulationTick": 11537,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32518.9394369055,
+            "instantaneous": 2.8933544,
+            "frame": 7803,
+            "simulationTick": 11617,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32519.6513043215,
+            "instantaneous": 2.7493768,
+            "frame": 7805,
+            "simulationTick": 11697,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32520.383346179,
+            "instantaneous": 3.0088065,
+            "frame": 7807,
+            "simulationTick": 11776,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32521.075300708,
+            "instantaneous": 2.7510166,
+            "frame": 7809,
+            "simulationTick": 11856,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32522.1506005485,
+            "instantaneous": 2.7243629,
+            "frame": 7812,
+            "simulationTick": 11976,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32522.862422764498,
+            "instantaneous": 2.8877997,
+            "frame": 7814,
+            "simulationTick": 12056,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32523.5741627615,
+            "instantaneous": 2.5680692,
+            "frame": 7816,
+            "simulationTick": 12136,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32524.306015624003,
+            "instantaneous": 2.983038,
+            "frame": 7818,
+            "simulationTick": 12216,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32525.038024676498,
+            "instantaneous": 2.5710728,
+            "frame": 7820,
+            "simulationTick": 12296,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32525.7498501475,
+            "instantaneous": 2.8526716,
+            "frame": 7822,
+            "simulationTick": 12376,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32526.461627219498,
+            "instantaneous": 2.6949217,
+            "frame": 7824,
+            "simulationTick": 12456,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32527.1733550105,
+            "instantaneous": 2.8222294,
+            "frame": 7826,
+            "simulationTick": 12536,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32527.8850790675,
+            "instantaneous": 2.7922416,
+            "frame": 7828,
+            "simulationTick": 12616,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32528.6170740395,
+            "instantaneous": 2.7303395,
+            "frame": 7830,
+            "simulationTick": 12696,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32529.7318719695,
+            "instantaneous": 2.912021,
+            "frame": 7833,
+            "simulationTick": 12816,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32530.4437435355,
+            "instantaneous": 2.7751784,
+            "frame": 7835,
+            "simulationTick": 12896,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32531.1556559315,
+            "instantaneous": 2.809366,
+            "frame": 7837,
+            "simulationTick": 12976,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32531.8877156135,
+            "instantaneous": 2.8833458,
+            "frame": 7839,
+            "simulationTick": 13056,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32532.61966468,
+            "instantaneous": 2.5737243,
+            "frame": 7841,
+            "simulationTick": 13136,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32533.3515896075,
+            "instantaneous": 3.0163355,
+            "frame": 7843,
+            "simulationTick": 13216,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32534.063510288,
+            "instantaneous": 2.5840883,
+            "frame": 7845,
+            "simulationTick": 13296,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32534.795425440498,
+            "instantaneous": 2.9582963,
+            "frame": 7847,
+            "simulationTick": 13376,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          }
+        ]
+      },
+      {
+        "plants": 35,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 19.607768199999555,
+        "framesPerSecond": 1.2750048728136518,
+        "ticksPerSecond": 51.00019491254608,
+        "simulationSecondsPerSecond": 0.4250016242712173,
+        "instantaneousFPSMedian": 1.2887070500000002,
+        "projectiles": [
+          {
+            "count": 91,
+            "types": {
+              "Pea": 91
+            }
+          },
+          {
+            "count": 97,
+            "types": {
+              "Pea": 97
+            }
+          },
+          {
+            "count": 102,
+            "types": {
+              "Pea": 102
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 32545.3329241885,
+            "instantaneous": 1.2891973,
+            "frame": 7924,
+            "simulationTick": 14008,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32546.325553986,
+            "instantaneous": 1.3473842,
+            "frame": 7925,
+            "simulationTick": 14048,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32547.09765734,
+            "instantaneous": 1.3354497,
+            "frame": 7926,
+            "simulationTick": 14088,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32547.869750325,
+            "instantaneous": 1.274097,
+            "frame": 7927,
+            "simulationTick": 14128,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32548.6418611795,
+            "instantaneous": 1.3036464,
+            "frame": 7928,
+            "simulationTick": 14168,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32549.413944554,
+            "instantaneous": 1.3338208,
+            "frame": 7929,
+            "simulationTick": 14208,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32550.185964029,
+            "instantaneous": 1.2687367,
+            "frame": 7930,
+            "simulationTick": 14248,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32550.957970509,
+            "instantaneous": 1.2732286,
+            "frame": 7931,
+            "simulationTick": 14288,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32551.7500787805,
+            "instantaneous": 1.347546,
+            "frame": 7932,
+            "simulationTick": 14328,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32552.542227940998,
+            "instantaneous": 1.2598774,
+            "frame": 7933,
+            "simulationTick": 14368,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32554.038936806,
+            "instantaneous": 1.2907488,
+            "frame": 7935,
+            "simulationTick": 14448,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32554.8109288455,
+            "instantaneous": 1.3841426,
+            "frame": 7936,
+            "simulationTick": 14488,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32555.582864575998,
+            "instantaneous": 1.2710527,
+            "frame": 7937,
+            "simulationTick": 14528,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32556.354830496,
+            "instantaneous": 1.2882168,
+            "frame": 7938,
+            "simulationTick": 14568,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32557.146874097,
+            "instantaneous": 1.2855426,
+            "frame": 7939,
+            "simulationTick": 14608,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32557.938926292998,
+            "instantaneous": 1.3092618,
+            "frame": 7940,
+            "simulationTick": 14648,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32558.711026842502,
+            "instantaneous": 1.2379785,
+            "frame": 7941,
+            "simulationTick": 14688,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32559.503198708502,
+            "instantaneous": 1.3002938,
+            "frame": 7942,
+            "simulationTick": 14728,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32560.315259516,
+            "instantaneous": 1.2876033,
+            "frame": 7943,
+            "simulationTick": 14768,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32561.087264510497,
+            "instantaneous": 1.2478954,
+            "frame": 7944,
+            "simulationTick": 14808,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32562.6246295155,
+            "instantaneous": 1.3404934,
+            "frame": 7946,
+            "simulationTick": 14888,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32563.4167678565,
+            "instantaneous": 1.34151,
+            "frame": 7947,
+            "simulationTick": 14928,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32564.168801499,
+            "instantaneous": 1.2548211,
+            "frame": 7948,
+            "simulationTick": 14968,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          },
+          {
+            "at": 32564.9406923885,
+            "instantaneous": 1.2818375,
+            "frame": 7949,
+            "simulationTick": 15008,
+            "tickSeconds": 0.008333333333333333,
+            "board": "1a01ea43f2e248089f299bddb0f2f7c9"
+          }
+        ]
+      }
+    ]
+  },
+  "after": {
+    "family": "native",
+    "settings": [
+      {
+        "name": "WindowMode",
+        "writable": true,
+        "type": "ReloadedWindowMode",
+        "value": "Windowed",
+        "values": [
+          "Fullscreen",
+          "Windowed",
+          "Borderless"
+        ]
+      },
+      {
+        "name": "GameplaySpeed",
+        "writable": true,
+        "type": "GameplaySpeed",
+        "value": "_Normal",
+        "values": [
+          "_Normal",
+          "_Half",
+          "_2X",
+          "_4x",
+          "_8X"
+        ]
+      },
+      {
+        "name": "Resolution",
+        "writable": true,
+        "type": "ReloadedResolution",
+        "value": "1920x1026",
+        "values": null
+      },
+      {
+        "name": "VSync",
+        "writable": true,
+        "type": "Boolean",
+        "value": "True",
+        "values": null
+      }
+    ],
+    "stages": [
+      {
+        "plants": 0,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.13228061699192,
+        "framesPerSecond": 59.95346592681981,
+        "ticksPerSecond": 119.95660332499573,
+        "simulationSecondsPerSecond": 0.9996383610416311,
+        "instantaneousFPSMedian": 59.92329,
+        "projectiles": [
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          }
+        ],
+        "samples": [
+          {
+            "at": 33466.6728200255,
+            "instantaneous": 60.27583,
+            "frame": 1472,
+            "simulationTick": 995,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33467.1639460095,
+            "instantaneous": 59.420525,
+            "frame": 1501,
+            "simulationTick": 1053,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33467.6551873985,
+            "instantaneous": 62.411827,
+            "frame": 1531,
+            "simulationTick": 1113,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33468.146301739,
+            "instantaneous": 60.276913,
+            "frame": 1561,
+            "simulationTick": 1173,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33468.6574448765,
+            "instantaneous": 59.17125,
+            "frame": 1591,
+            "simulationTick": 1233,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33469.1686387385,
+            "instantaneous": 59.412067,
+            "frame": 1621,
+            "simulationTick": 1293,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33469.659730491505,
+            "instantaneous": 60.441597,
+            "frame": 1651,
+            "simulationTick": 1353,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33470.150850141,
+            "instantaneous": 59.30952,
+            "frame": 1681,
+            "simulationTick": 1413,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33470.66214138,
+            "instantaneous": 60.329273,
+            "frame": 1711,
+            "simulationTick": 1473,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33471.1733404205,
+            "instantaneous": 60.738937,
+            "frame": 1741,
+            "simulationTick": 1533,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33471.7057363855,
+            "instantaneous": 60.327103,
+            "frame": 1774,
+            "simulationTick": 1599,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33472.197117626,
+            "instantaneous": 60.789513,
+            "frame": 1804,
+            "simulationTick": 1659,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33472.688369773,
+            "instantaneous": 59.92329,
+            "frame": 1833,
+            "simulationTick": 1717,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33473.179531172005,
+            "instantaneous": 61.232113,
+            "frame": 1863,
+            "simulationTick": 1777,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33473.6906918225,
+            "instantaneous": 58.4532,
+            "frame": 1893,
+            "simulationTick": 1837,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33474.2018220685,
+            "instantaneous": 60.094,
+            "frame": 1923,
+            "simulationTick": 1897,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33474.692990835,
+            "instantaneous": 58.962242,
+            "frame": 1953,
+            "simulationTick": 1957,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33475.184235216,
+            "instantaneous": 58.506226,
+            "frame": 1983,
+            "simulationTick": 2017,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33475.695508259494,
+            "instantaneous": 60.931774,
+            "frame": 2013,
+            "simulationTick": 2077,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33476.206740067995,
+            "instantaneous": 58.804485,
+            "frame": 2043,
+            "simulationTick": 2138,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33476.7388427635,
+            "instantaneous": 63.861877,
+            "frame": 2076,
+            "simulationTick": 2204,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33477.2500256695,
+            "instantaneous": 59.30882,
+            "frame": 2106,
+            "simulationTick": 2264,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33477.761268712,
+            "instantaneous": 63.555832,
+            "frame": 2136,
+            "simulationTick": 2324,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33478.252542328,
+            "instantaneous": 54.640915,
+            "frame": 2165,
+            "simulationTick": 2382,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33478.7437410205,
+            "instantaneous": 60.93585,
+            "frame": 2195,
+            "simulationTick": 2442,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33479.234844179504,
+            "instantaneous": 59.097828,
+            "frame": 2225,
+            "simulationTick": 2502,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33479.725884269996,
+            "instantaneous": 57.11545,
+            "frame": 2255,
+            "simulationTick": 2562,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33480.216925486,
+            "instantaneous": 59.960663,
+            "frame": 2285,
+            "simulationTick": 2622,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33480.708146517,
+            "instantaneous": 59.446304,
+            "frame": 2312,
+            "simulationTick": 2676,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33481.199457737,
+            "instantaneous": 60.169918,
+            "frame": 2342,
+            "simulationTick": 2736,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33481.732058948,
+            "instantaneous": 59.58906,
+            "frame": 2375,
+            "simulationTick": 2801,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33482.243480485995,
+            "instantaneous": 58.922657,
+            "frame": 2406,
+            "simulationTick": 2864,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33482.7548747055,
+            "instantaneous": 57.51722,
+            "frame": 2436,
+            "simulationTick": 2924,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33483.2460146205,
+            "instantaneous": 60.804314,
+            "frame": 2466,
+            "simulationTick": 2984,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33483.737077197,
+            "instantaneous": 57.50232,
+            "frame": 2496,
+            "simulationTick": 3044,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33484.248275395,
+            "instantaneous": 60.913235,
+            "frame": 2526,
+            "simulationTick": 3104,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33484.7595353985,
+            "instantaneous": 59.055588,
+            "frame": 2556,
+            "simulationTick": 3164,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33485.250794695996,
+            "instantaneous": 60.53343,
+            "frame": 2586,
+            "simulationTick": 3224,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33485.7419295355,
+            "instantaneous": 59.597942,
+            "frame": 2616,
+            "simulationTick": 3284,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33486.2530017725,
+            "instantaneous": 59.246624,
+            "frame": 2646,
+            "simulationTick": 3344,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33486.805100642494,
+            "instantaneous": 59.976845,
+            "frame": 2679,
+            "simulationTick": 3410,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          }
+        ]
+      },
+      {
+        "plants": 7,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.1168549790018,
+        "framesPerSecond": 59.99943834460606,
+        "ticksPerSecond": 119.94916712968883,
+        "simulationSecondsPerSecond": 0.999576392747407,
+        "instantaneousFPSMedian": 59.911816,
+        "projectiles": [
+          {
+            "count": 19,
+            "types": {
+              "Pea": 19
+            }
+          },
+          {
+            "count": 19,
+            "types": {
+              "Pea": 19
+            }
+          },
+          {
+            "count": 20,
+            "types": {
+              "Pea": 20
+            }
+          },
+          {
+            "count": 16,
+            "types": {
+              "Pea": 16
+            }
+          },
+          {
+            "count": 20,
+            "types": {
+              "Pea": 20
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 33495.5200630465,
+            "instantaneous": 59.911816,
+            "frame": 3202,
+            "simulationTick": 4398,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33496.0312334145,
+            "instantaneous": 59.866264,
+            "frame": 3232,
+            "simulationTick": 4458,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33496.522569723995,
+            "instantaneous": 60.013554,
+            "frame": 3262,
+            "simulationTick": 4518,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33497.013962995,
+            "instantaneous": 61.5074,
+            "frame": 3292,
+            "simulationTick": 4578,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33497.505359866,
+            "instantaneous": 63.36133,
+            "frame": 3320,
+            "simulationTick": 4634,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33497.996739578,
+            "instantaneous": 60.004562,
+            "frame": 3350,
+            "simulationTick": 4694,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33498.487936567,
+            "instantaneous": 57.28491,
+            "frame": 3380,
+            "simulationTick": 4754,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33498.979123777,
+            "instantaneous": 58.55349,
+            "frame": 3410,
+            "simulationTick": 4813,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33499.4704305665,
+            "instantaneous": 58.497665,
+            "frame": 3440,
+            "simulationTick": 4873,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33499.9818572995,
+            "instantaneous": 57.69009,
+            "frame": 3470,
+            "simulationTick": 4933,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33500.5346939985,
+            "instantaneous": 61.084747,
+            "frame": 3503,
+            "simulationTick": 4999,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33501.02611676,
+            "instantaneous": 61.820362,
+            "frame": 3533,
+            "simulationTick": 5059,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33501.517529787496,
+            "instantaneous": 60.259483,
+            "frame": 3563,
+            "simulationTick": 5119,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33502.02898053751,
+            "instantaneous": 59.758575,
+            "frame": 3593,
+            "simulationTick": 5179,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33502.5605242015,
+            "instantaneous": 60.301613,
+            "frame": 3625,
+            "simulationTick": 5243,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33503.0719857485,
+            "instantaneous": 59.576984,
+            "frame": 3655,
+            "simulationTick": 5303,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33503.5633452245,
+            "instantaneous": 59.651295,
+            "frame": 3684,
+            "simulationTick": 5362,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33504.054704290495,
+            "instantaneous": 59.788933,
+            "frame": 3714,
+            "simulationTick": 5422,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33504.545961149,
+            "instantaneous": 62.579407,
+            "frame": 3743,
+            "simulationTick": 5480,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33505.037059379,
+            "instantaneous": 61.484734,
+            "frame": 3773,
+            "simulationTick": 5539,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33505.5693574075,
+            "instantaneous": 60.61929,
+            "frame": 3805,
+            "simulationTick": 5603,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33506.060423584,
+            "instantaneous": 59.85588,
+            "frame": 3835,
+            "simulationTick": 5663,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33506.551561021,
+            "instantaneous": 59.65662,
+            "frame": 3865,
+            "simulationTick": 5723,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33507.0628889905,
+            "instantaneous": 60.306355,
+            "frame": 3895,
+            "simulationTick": 5783,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33507.574186781,
+            "instantaneous": 59.49548,
+            "frame": 3925,
+            "simulationTick": 5844,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33508.0654621595,
+            "instantaneous": 60.28636,
+            "frame": 3955,
+            "simulationTick": 5904,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33508.556830573,
+            "instantaneous": 59.08662,
+            "frame": 3985,
+            "simulationTick": 5964,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33509.048178102,
+            "instantaneous": 60.952957,
+            "frame": 4014,
+            "simulationTick": 6022,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33509.559468336,
+            "instantaneous": 60.283092,
+            "frame": 4044,
+            "simulationTick": 6082,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33510.0707335655,
+            "instantaneous": 62.900204,
+            "frame": 4074,
+            "simulationTick": 6142,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33510.6030902825,
+            "instantaneous": 58.40678,
+            "frame": 4106,
+            "simulationTick": 6206,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33511.09440473,
+            "instantaneous": 58.344765,
+            "frame": 4136,
+            "simulationTick": 6265,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33511.585717809,
+            "instantaneous": 58.96609,
+            "frame": 4166,
+            "simulationTick": 6325,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33512.076879504,
+            "instantaneous": 60.30455,
+            "frame": 4196,
+            "simulationTick": 6385,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33512.587937404,
+            "instantaneous": 58.187916,
+            "frame": 4226,
+            "simulationTick": 6445,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33513.0991680935,
+            "instantaneous": 60.58514,
+            "frame": 4256,
+            "simulationTick": 6505,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33513.5904100405,
+            "instantaneous": 60.45327,
+            "frame": 4286,
+            "simulationTick": 6566,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33514.081526654,
+            "instantaneous": 59.126453,
+            "frame": 4316,
+            "simulationTick": 6626,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33514.572773403,
+            "instantaneous": 59.567776,
+            "frame": 4346,
+            "simulationTick": 6686,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33515.08410749,
+            "instantaneous": 58.492184,
+            "frame": 4376,
+            "simulationTick": 6746,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33515.6369180255,
+            "instantaneous": 60.352955,
+            "frame": 4409,
+            "simulationTick": 6811,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          }
+        ]
+      },
+      {
+        "plants": 21,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.143264792997797,
+        "framesPerSecond": 60.02006191271797,
+        "ticksPerSecond": 120.04012382543594,
+        "simulationSecondsPerSecond": 1.000334365211966,
+        "instantaneousFPSMedian": 60.16197,
+        "projectiles": [
+          {
+            "count": 60,
+            "types": {
+              "Pea": 60
+            }
+          },
+          {
+            "count": 60,
+            "types": {
+              "Pea": 60
+            }
+          },
+          {
+            "count": 58,
+            "types": {
+              "Pea": 58
+            }
+          },
+          {
+            "count": 62,
+            "types": {
+              "Pea": 62
+            }
+          },
+          {
+            "count": 58,
+            "types": {
+              "Pea": 58
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 33524.619844834,
+            "instantaneous": 58.773064,
+            "frame": 4947,
+            "simulationTick": 7800,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33525.111003709,
+            "instantaneous": 60.882797,
+            "frame": 4977,
+            "simulationTick": 7860,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33525.6023104235,
+            "instantaneous": 59.173336,
+            "frame": 5006,
+            "simulationTick": 7917,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33526.093494784494,
+            "instantaneous": 58.839104,
+            "frame": 5036,
+            "simulationTick": 7977,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33526.584594532,
+            "instantaneous": 60.681816,
+            "frame": 5066,
+            "simulationTick": 8037,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33527.07569775,
+            "instantaneous": 63.09947,
+            "frame": 5096,
+            "simulationTick": 8097,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33527.586898207504,
+            "instantaneous": 59.60683,
+            "frame": 5126,
+            "simulationTick": 8157,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33528.09819543,
+            "instantaneous": 56.220512,
+            "frame": 5156,
+            "simulationTick": 8218,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33528.5894939095,
+            "instantaneous": 61.0359,
+            "frame": 5186,
+            "simulationTick": 8278,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33529.0806376755,
+            "instantaneous": 57.22723,
+            "frame": 5216,
+            "simulationTick": 8338,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33529.653457528504,
+            "instantaneous": 63.815815,
+            "frame": 5249,
+            "simulationTick": 8404,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33530.144587731,
+            "instantaneous": 59.989082,
+            "frame": 5279,
+            "simulationTick": 8464,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33530.635734814,
+            "instantaneous": 60.106617,
+            "frame": 5308,
+            "simulationTick": 8522,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33531.1269326475,
+            "instantaneous": 60.899117,
+            "frame": 5338,
+            "simulationTick": 8582,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33531.618194172,
+            "instantaneous": 67.1186,
+            "frame": 5368,
+            "simulationTick": 8642,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33532.109433670994,
+            "instantaneous": 60.232998,
+            "frame": 5398,
+            "simulationTick": 8702,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33532.62087847,
+            "instantaneous": 59.39194,
+            "frame": 5428,
+            "simulationTick": 8762,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33533.132328384,
+            "instantaneous": 58.295788,
+            "frame": 5458,
+            "simulationTick": 8822,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33533.6235471065,
+            "instantaneous": 59.38699,
+            "frame": 5488,
+            "simulationTick": 8882,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33534.1147716485,
+            "instantaneous": 62.635067,
+            "frame": 5518,
+            "simulationTick": 8942,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33534.6888178175,
+            "instantaneous": 59.459755,
+            "frame": 5551,
+            "simulationTick": 9008,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33535.180117661,
+            "instantaneous": 60.72344,
+            "frame": 5581,
+            "simulationTick": 9068,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33535.671417271,
+            "instantaneous": 60.52242,
+            "frame": 5611,
+            "simulationTick": 9128,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33536.162686981,
+            "instantaneous": 60.46679,
+            "frame": 5641,
+            "simulationTick": 9188,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33536.653984387,
+            "instantaneous": 56.867935,
+            "frame": 5671,
+            "simulationTick": 9247,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33537.165520352,
+            "instantaneous": 60.665253,
+            "frame": 5701,
+            "simulationTick": 9307,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33537.6771287475,
+            "instantaneous": 57.634228,
+            "frame": 5731,
+            "simulationTick": 9367,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33538.16858492899,
+            "instantaneous": 58.651028,
+            "frame": 5761,
+            "simulationTick": 9427,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33538.6599944525,
+            "instantaneous": 59.642376,
+            "frame": 5791,
+            "simulationTick": 9487,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33539.171460906,
+            "instantaneous": 60.41603,
+            "frame": 5821,
+            "simulationTick": 9548,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33539.7255973875,
+            "instantaneous": 59.707203,
+            "frame": 5854,
+            "simulationTick": 9614,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33540.2170101275,
+            "instantaneous": 60.04779,
+            "frame": 5884,
+            "simulationTick": 9674,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33540.708425813995,
+            "instantaneous": 60.16197,
+            "frame": 5914,
+            "simulationTick": 9734,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33541.2199177445,
+            "instantaneous": 60.781055,
+            "frame": 5944,
+            "simulationTick": 9794,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33541.7314849915,
+            "instantaneous": 61.003525,
+            "frame": 5974,
+            "simulationTick": 9854,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33542.222804375,
+            "instantaneous": 61.12171,
+            "frame": 6004,
+            "simulationTick": 9914,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33542.714271489,
+            "instantaneous": 59.304607,
+            "frame": 6034,
+            "simulationTick": 9974,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33543.205904877,
+            "instantaneous": 65.30954,
+            "frame": 6063,
+            "simulationTick": 10032,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33543.6973779675,
+            "instantaneous": 65.37101,
+            "frame": 6093,
+            "simulationTick": 10092,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33544.2088856875,
+            "instantaneous": 61.286892,
+            "frame": 6123,
+            "simulationTick": 10152,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33544.763109627,
+            "instantaneous": 59.753212,
+            "frame": 6156,
+            "simulationTick": 10218,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          }
+        ]
+      },
+      {
+        "plants": 35,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.374972897508997,
+        "framesPerSecond": 54.67491935344834,
+        "ticksPerSecond": 119.95107980235883,
+        "simulationSecondsPerSecond": 0.9995923316863236,
+        "instantaneousFPSMedian": 54.94114,
+        "projectiles": [
+          {
+            "count": 96,
+            "types": {
+              "Pea": 96
+            }
+          },
+          {
+            "count": 100,
+            "types": {
+              "Pea": 100
+            }
+          },
+          {
+            "count": 102,
+            "types": {
+              "Pea": 102
+            }
+          },
+          {
+            "count": 102,
+            "types": {
+              "Pea": 102
+            }
+          },
+          {
+            "count": 96,
+            "types": {
+              "Pea": 96
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 33553.79279445449,
+            "instantaneous": 47.595024,
+            "frame": 6664,
+            "simulationTick": 11213,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33554.3041548655,
+            "instantaneous": 58.63626,
+            "frame": 6690,
+            "simulationTick": 11273,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33554.8155943975,
+            "instantaneous": 54.94114,
+            "frame": 6716,
+            "simulationTick": 11333,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33555.306856265495,
+            "instantaneous": 72.11262,
+            "frame": 6742,
+            "simulationTick": 11391,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33555.818235414,
+            "instantaneous": 56.213566,
+            "frame": 6773,
+            "simulationTick": 11456,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33556.349793588495,
+            "instantaneous": 55.19494,
+            "frame": 6802,
+            "simulationTick": 11518,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33556.861227872505,
+            "instantaneous": 48.338367,
+            "frame": 6830,
+            "simulationTick": 11580,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33557.3526100025,
+            "instantaneous": 58.119255,
+            "frame": 6857,
+            "simulationTick": 11638,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33557.844018748,
+            "instantaneous": 74.84808,
+            "frame": 6887,
+            "simulationTick": 11699,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33558.355589384,
+            "instantaneous": 57.821514,
+            "frame": 6914,
+            "simulationTick": 11760,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33558.910602421,
+            "instantaneous": 59.5841,
+            "frame": 6945,
+            "simulationTick": 11827,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33559.4221073785,
+            "instantaneous": 65.23882,
+            "frame": 6975,
+            "simulationTick": 11888,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33559.9537174325,
+            "instantaneous": 50.91572,
+            "frame": 7004,
+            "simulationTick": 11952,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33560.4653647865,
+            "instantaneous": 46.141426,
+            "frame": 7034,
+            "simulationTick": 12014,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33560.976874776505,
+            "instantaneous": 44.74873,
+            "frame": 7062,
+            "simulationTick": 12075,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33561.488342768,
+            "instantaneous": 46.33941,
+            "frame": 7090,
+            "simulationTick": 12137,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33561.979771793995,
+            "instantaneous": 64.66089,
+            "frame": 7115,
+            "simulationTick": 12191,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33562.471200080996,
+            "instantaneous": 45.882923,
+            "frame": 7145,
+            "simulationTick": 12255,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33562.9826961835,
+            "instantaneous": 44.933517,
+            "frame": 7171,
+            "simulationTick": 12316,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33563.5141656445,
+            "instantaneous": 52.0817,
+            "frame": 7201,
+            "simulationTick": 12379,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33564.069338628,
+            "instantaneous": 54.73603,
+            "frame": 7233,
+            "simulationTick": 12444,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33564.5605827435,
+            "instantaneous": 42.506344,
+            "frame": 7259,
+            "simulationTick": 12505,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33565.0518199,
+            "instantaneous": 63.838596,
+            "frame": 7285,
+            "simulationTick": 12563,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33565.563128733,
+            "instantaneous": 61.03368,
+            "frame": 7315,
+            "simulationTick": 12624,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33566.074481781005,
+            "instantaneous": 50.372494,
+            "frame": 7344,
+            "simulationTick": 12687,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33566.567307839505,
+            "instantaneous": 49.394432,
+            "frame": 7372,
+            "simulationTick": 12747,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33567.080181319994,
+            "instantaneous": 55.248615,
+            "frame": 7399,
+            "simulationTick": 12806,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33567.591842144,
+            "instantaneous": 66.07509,
+            "frame": 7425,
+            "simulationTick": 12867,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33568.083424262004,
+            "instantaneous": 49.369312,
+            "frame": 7452,
+            "simulationTick": 12928,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33568.574812997496,
+            "instantaneous": 53.552097,
+            "frame": 7479,
+            "simulationTick": 12984,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33569.109698184504,
+            "instantaneous": 48.46205,
+            "frame": 7506,
+            "simulationTick": 13047,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33569.601079761,
+            "instantaneous": 57.39406,
+            "frame": 7531,
+            "simulationTick": 13109,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33570.0926089025,
+            "instantaneous": 42.784225,
+            "frame": 7557,
+            "simulationTick": 13166,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33570.5841616595,
+            "instantaneous": 67.12718,
+            "frame": 7583,
+            "simulationTick": 13225,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33571.075585283004,
+            "instantaneous": 58.58093,
+            "frame": 7612,
+            "simulationTick": 13287,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33571.566892167495,
+            "instantaneous": 52.861954,
+            "frame": 7636,
+            "simulationTick": 13342,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33572.0782336595,
+            "instantaneous": 60.149662,
+            "frame": 7666,
+            "simulationTick": 13406,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33572.589688607,
+            "instantaneous": 56.20882,
+            "frame": 7692,
+            "simulationTick": 13466,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33573.081079027994,
+            "instantaneous": 46.581837,
+            "frame": 7721,
+            "simulationTick": 13529,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33573.572481025505,
+            "instantaneous": 59.354916,
+            "frame": 7746,
+            "simulationTick": 13586,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          },
+          {
+            "at": 33574.167767352,
+            "instantaneous": 53.91359,
+            "frame": 7778,
+            "simulationTick": 13657,
+            "tickSeconds": 0.008333333333333333,
+            "board": "b7e5eb98292b4f4cacbf324b8a2aa695"
+          }
+        ]
+      }
+    ]
+  },
+  "nofusion": {
+    "family": "native",
+    "settings": [
+      {
+        "name": "WindowMode",
+        "writable": true,
+        "type": "ReloadedWindowMode",
+        "value": "Windowed",
+        "values": [
+          "Fullscreen",
+          "Windowed",
+          "Borderless"
+        ]
+      },
+      {
+        "name": "GameplaySpeed",
+        "writable": true,
+        "type": "GameplaySpeed",
+        "value": "_Normal",
+        "values": [
+          "_Normal",
+          "_Half",
+          "_2X",
+          "_4x",
+          "_8X"
+        ]
+      },
+      {
+        "name": "Resolution",
+        "writable": true,
+        "type": "ReloadedResolution",
+        "value": "1920x1026",
+        "values": null
+      },
+      {
+        "name": "VSync",
+        "writable": true,
+        "type": "Boolean",
+        "value": "True",
+        "values": null
+      }
+    ],
+    "stages": [
+      {
+        "plants": 0,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.262237805996847,
+        "framesPerSecond": 60.0131146244918,
+        "ticksPerSecond": 119.92752346835121,
+        "simulationSecondsPerSecond": 0.9993960289029268,
+        "instantaneousFPSMedian": 60.06006,
+        "projectiles": [
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          },
+          {
+            "count": 0,
+            "types": {}
+          }
+        ],
+        "samples": [
+          {
+            "at": 32870.7333302595,
+            "instantaneous": 60.06006,
+            "frame": 1487,
+            "simulationTick": 1011,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32871.224705553,
+            "instantaneous": 60.06006,
+            "frame": 1518,
+            "simulationTick": 1073,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32871.736190126,
+            "instantaneous": 60.06006,
+            "frame": 1548,
+            "simulationTick": 1133,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32872.2476640735,
+            "instantaneous": 60.06006,
+            "frame": 1578,
+            "simulationTick": 1193,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32872.7390133085,
+            "instantaneous": 60.06006,
+            "frame": 1608,
+            "simulationTick": 1253,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32873.230328879,
+            "instantaneous": 60.06006,
+            "frame": 1638,
+            "simulationTick": 1313,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32873.7418040375,
+            "instantaneous": 60.06006,
+            "frame": 1668,
+            "simulationTick": 1373,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32874.253328770996,
+            "instantaneous": 60.06006,
+            "frame": 1698,
+            "simulationTick": 1433,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32874.744754471,
+            "instantaneous": 60.06006,
+            "frame": 1729,
+            "simulationTick": 1494,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32875.2562221955,
+            "instantaneous": 60.06006,
+            "frame": 1759,
+            "simulationTick": 1554,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32875.808870967,
+            "instantaneous": 60.06006,
+            "frame": 1792,
+            "simulationTick": 1620,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32876.3002750185,
+            "instantaneous": 60.06006,
+            "frame": 1822,
+            "simulationTick": 1680,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32876.811619285,
+            "instantaneous": 60.06006,
+            "frame": 1852,
+            "simulationTick": 1740,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32877.322905288,
+            "instantaneous": 60.06006,
+            "frame": 1882,
+            "simulationTick": 1800,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32877.8342464905,
+            "instantaneous": 60.06006,
+            "frame": 1914,
+            "simulationTick": 1864,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32878.345571148,
+            "instantaneous": 60.06006,
+            "frame": 1944,
+            "simulationTick": 1924,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32878.8368145915,
+            "instantaneous": 60.06006,
+            "frame": 1973,
+            "simulationTick": 1982,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32879.328278283,
+            "instantaneous": 60.06006,
+            "frame": 2003,
+            "simulationTick": 2042,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32879.819788993496,
+            "instantaneous": 60.06006,
+            "frame": 2033,
+            "simulationTick": 2102,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32880.311235065004,
+            "instantaneous": 60.06006,
+            "frame": 2063,
+            "simulationTick": 2162,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32880.883930168,
+            "instantaneous": 60.06006,
+            "frame": 2096,
+            "simulationTick": 2228,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32881.3753765,
+            "instantaneous": 60.06006,
+            "frame": 2126,
+            "simulationTick": 2288,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32881.8868601925,
+            "instantaneous": 60.06006,
+            "frame": 2157,
+            "simulationTick": 2350,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32882.398270742,
+            "instantaneous": 60.06006,
+            "frame": 2187,
+            "simulationTick": 2410,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32882.8896487245,
+            "instantaneous": 60.06006,
+            "frame": 2217,
+            "simulationTick": 2470,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32883.3810654385,
+            "instantaneous": 60.06006,
+            "frame": 2247,
+            "simulationTick": 2529,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32883.8925468515,
+            "instantaneous": 60.06006,
+            "frame": 2277,
+            "simulationTick": 2589,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32884.404032742,
+            "instantaneous": 60.06006,
+            "frame": 2307,
+            "simulationTick": 2649,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32884.895453809004,
+            "instantaneous": 60.06006,
+            "frame": 2337,
+            "simulationTick": 2709,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32885.3868596635,
+            "instantaneous": 60.06006,
+            "frame": 2366,
+            "simulationTick": 2767,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32885.919538442,
+            "instantaneous": 60.06006,
+            "frame": 2399,
+            "simulationTick": 2833,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32886.4109367365,
+            "instantaneous": 60.06006,
+            "frame": 2428,
+            "simulationTick": 2891,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32886.902385094,
+            "instantaneous": 60.06006,
+            "frame": 2458,
+            "simulationTick": 2951,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32887.3938786675,
+            "instantaneous": 60.06006,
+            "frame": 2488,
+            "simulationTick": 3011,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32887.905415232,
+            "instantaneous": 60.06006,
+            "frame": 2518,
+            "simulationTick": 3071,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32888.416908403495,
+            "instantaneous": 60.06006,
+            "frame": 2548,
+            "simulationTick": 3131,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32888.908266382496,
+            "instantaneous": 60.06006,
+            "frame": 2578,
+            "simulationTick": 3191,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32889.399680447,
+            "instantaneous": 60.06006,
+            "frame": 2608,
+            "simulationTick": 3251,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32889.911329921,
+            "instantaneous": 60.06006,
+            "frame": 2638,
+            "simulationTick": 3311,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32890.4429947495,
+            "instantaneous": 60.06006,
+            "frame": 2670,
+            "simulationTick": 3375,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32890.9955680655,
+            "instantaneous": 60.06006,
+            "frame": 2703,
+            "simulationTick": 3441,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          }
+        ]
+      },
+      {
+        "plants": 7,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.065397966493038,
+        "framesPerSecond": 60.10346777142844,
+        "ticksPerSecond": 120.0574244289976,
+        "simulationSecondsPerSecond": 1.0004785369083133,
+        "instantaneousFPSMedian": 60.06006,
+        "projectiles": [
+          {
+            "count": 31,
+            "types": {
+              "Pea": 31
+            }
+          },
+          {
+            "count": 29,
+            "types": {
+              "Pea": 29
+            }
+          },
+          {
+            "count": 32,
+            "types": {
+              "Pea": 32
+            }
+          },
+          {
+            "count": 32,
+            "types": {
+              "Pea": 32
+            }
+          },
+          {
+            "count": 25,
+            "types": {
+              "Pea": 25
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 32900.062041147,
+            "instantaneous": 60.06006,
+            "frame": 3246,
+            "simulationTick": 4436,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32900.5533819005,
+            "instantaneous": 60.06006,
+            "frame": 3276,
+            "simulationTick": 4495,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32901.044806169506,
+            "instantaneous": 60.06006,
+            "frame": 3305,
+            "simulationTick": 4553,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32901.536225561504,
+            "instantaneous": 60.06006,
+            "frame": 3335,
+            "simulationTick": 4613,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32902.0276104415,
+            "instantaneous": 60.06006,
+            "frame": 3365,
+            "simulationTick": 4673,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32902.518995859005,
+            "instantaneous": 60.06006,
+            "frame": 3395,
+            "simulationTick": 4733,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32903.0304538735,
+            "instantaneous": 60.06006,
+            "frame": 3425,
+            "simulationTick": 4793,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32903.541910326,
+            "instantaneous": 60.06006,
+            "frame": 3454,
+            "simulationTick": 4851,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32904.0333042705,
+            "instantaneous": 60.06006,
+            "frame": 3485,
+            "simulationTick": 4913,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32904.5246713535,
+            "instantaneous": 60.06006,
+            "frame": 3514,
+            "simulationTick": 4971,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32905.057962315506,
+            "instantaneous": 60.06006,
+            "frame": 3546,
+            "simulationTick": 5035,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32905.5493559275,
+            "instantaneous": 60.06006,
+            "frame": 3576,
+            "simulationTick": 5095,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32906.040761722004,
+            "instantaneous": 60.06006,
+            "frame": 3606,
+            "simulationTick": 5155,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32906.532196874,
+            "instantaneous": 60.06006,
+            "frame": 3636,
+            "simulationTick": 5215,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32907.043770517994,
+            "instantaneous": 60.06006,
+            "frame": 3666,
+            "simulationTick": 5275,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32907.555318696,
+            "instantaneous": 60.06006,
+            "frame": 3696,
+            "simulationTick": 5335,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32908.0467282,
+            "instantaneous": 60.06006,
+            "frame": 3726,
+            "simulationTick": 5395,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32908.538177587,
+            "instantaneous": 60.06006,
+            "frame": 3756,
+            "simulationTick": 5455,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32909.029611776,
+            "instantaneous": 60.06006,
+            "frame": 3785,
+            "simulationTick": 5512,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32909.5210104335,
+            "instantaneous": 60.06006,
+            "frame": 3815,
+            "simulationTick": 5572,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32910.094388451,
+            "instantaneous": 60.06006,
+            "frame": 3848,
+            "simulationTick": 5638,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32910.585808022995,
+            "instantaneous": 60.06006,
+            "frame": 3878,
+            "simulationTick": 5698,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32911.077218607505,
+            "instantaneous": 60.06006,
+            "frame": 3908,
+            "simulationTick": 5758,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32911.568628914494,
+            "instantaneous": 60.06006,
+            "frame": 3938,
+            "simulationTick": 5818,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32912.060048454005,
+            "instantaneous": 60.06006,
+            "frame": 3968,
+            "simulationTick": 5878,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32912.5514718555,
+            "instantaneous": 60.06006,
+            "frame": 3997,
+            "simulationTick": 5936,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32913.042881659494,
+            "instantaneous": 60.06006,
+            "frame": 4027,
+            "simulationTick": 5996,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32913.5543512585,
+            "instantaneous": 60.06006,
+            "frame": 4057,
+            "simulationTick": 6056,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32914.0658436445,
+            "instantaneous": 60.06006,
+            "frame": 4087,
+            "simulationTick": 6116,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32914.5572615515,
+            "instantaneous": 60.06006,
+            "frame": 4117,
+            "simulationTick": 6176,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32915.11062958,
+            "instantaneous": 60.06006,
+            "frame": 4150,
+            "simulationTick": 6242,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32915.6221033045,
+            "instantaneous": 60.06006,
+            "frame": 4180,
+            "simulationTick": 6302,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32916.1135269985,
+            "instantaneous": 60.06006,
+            "frame": 4210,
+            "simulationTick": 6362,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32916.605174293,
+            "instantaneous": 60.06006,
+            "frame": 4240,
+            "simulationTick": 6422,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32917.0967967195,
+            "instantaneous": 60.06006,
+            "frame": 4270,
+            "simulationTick": 6482,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32917.608250295,
+            "instantaneous": 60.06006,
+            "frame": 4300,
+            "simulationTick": 6541,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32918.1196995315,
+            "instantaneous": 60.06006,
+            "frame": 4330,
+            "simulationTick": 6601,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32918.6111045085,
+            "instantaneous": 60.06006,
+            "frame": 4359,
+            "simulationTick": 6659,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32919.102497927,
+            "instantaneous": 60.06006,
+            "frame": 4389,
+            "simulationTick": 6719,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32919.593890364005,
+            "instantaneous": 60.06006,
+            "frame": 4419,
+            "simulationTick": 6779,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32920.127439113494,
+            "instantaneous": 60.06006,
+            "frame": 4452,
+            "simulationTick": 6845,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          }
+        ]
+      },
+      {
+        "plants": 21,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.150975052500144,
+        "framesPerSecond": 59.997096758352576,
+        "ticksPerSecond": 119.99419351670515,
+        "simulationSecondsPerSecond": 0.9999516126392096,
+        "instantaneousFPSMedian": 60.06006,
+        "projectiles": [
+          {
+            "count": 78,
+            "types": {
+              "Pea": 78
+            }
+          },
+          {
+            "count": 84,
+            "types": {
+              "Pea": 84
+            }
+          },
+          {
+            "count": 96,
+            "types": {
+              "Pea": 96
+            }
+          },
+          {
+            "count": 88,
+            "types": {
+              "Pea": 88
+            }
+          },
+          {
+            "count": 86,
+            "types": {
+              "Pea": 86
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 32929.8924033065,
+            "instantaneous": 60.06006,
+            "frame": 5036,
+            "simulationTick": 7834,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32930.383860533,
+            "instantaneous": 60.06006,
+            "frame": 5066,
+            "simulationTick": 7894,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32930.8753571485,
+            "instantaneous": 60.06006,
+            "frame": 5096,
+            "simulationTick": 7954,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32931.366796445,
+            "instantaneous": 60.06006,
+            "frame": 5126,
+            "simulationTick": 8014,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32931.878307826,
+            "instantaneous": 60.06006,
+            "frame": 5156,
+            "simulationTick": 8074,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32932.3898395535,
+            "instantaneous": 60.06006,
+            "frame": 5186,
+            "simulationTick": 8134,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32932.881271149,
+            "instantaneous": 60.06006,
+            "frame": 5216,
+            "simulationTick": 8194,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32933.37256847099,
+            "instantaneous": 60.06006,
+            "frame": 5246,
+            "simulationTick": 8254,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32933.8839127835,
+            "instantaneous": 60.06006,
+            "frame": 5276,
+            "simulationTick": 8314,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32934.3954010315,
+            "instantaneous": 60.06006,
+            "frame": 5306,
+            "simulationTick": 8374,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32934.929866214996,
+            "instantaneous": 60.06006,
+            "frame": 5339,
+            "simulationTick": 8440,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32935.421306006,
+            "instantaneous": 60.06006,
+            "frame": 5369,
+            "simulationTick": 8500,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32935.932763202,
+            "instantaneous": 60.06006,
+            "frame": 5399,
+            "simulationTick": 8560,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32936.444235004994,
+            "instantaneous": 60.06006,
+            "frame": 5429,
+            "simulationTick": 8620,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32936.935927132,
+            "instantaneous": 60.06006,
+            "frame": 5459,
+            "simulationTick": 8680,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32937.427604255005,
+            "instantaneous": 60.06006,
+            "frame": 5489,
+            "simulationTick": 8740,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32937.918997129,
+            "instantaneous": 60.06006,
+            "frame": 5519,
+            "simulationTick": 8800,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32938.43045069699,
+            "instantaneous": 60.06006,
+            "frame": 5549,
+            "simulationTick": 8860,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32938.941897258,
+            "instantaneous": 60.06006,
+            "frame": 5579,
+            "simulationTick": 8920,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32939.4332984685,
+            "instantaneous": 60.06006,
+            "frame": 5609,
+            "simulationTick": 8980,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32939.9678538515,
+            "instantaneous": 60.06006,
+            "frame": 5642,
+            "simulationTick": 9046,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32940.4793243945,
+            "instantaneous": 60.06006,
+            "frame": 5672,
+            "simulationTick": 9106,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32940.990820195,
+            "instantaneous": 60.06006,
+            "frame": 5702,
+            "simulationTick": 9166,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32941.482242194994,
+            "instantaneous": 60.06006,
+            "frame": 5732,
+            "simulationTick": 9226,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32941.9736621325,
+            "instantaneous": 60.06006,
+            "frame": 5762,
+            "simulationTick": 9286,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32942.48513686,
+            "instantaneous": 60.06006,
+            "frame": 5792,
+            "simulationTick": 9346,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32942.99659402,
+            "instantaneous": 60.06006,
+            "frame": 5822,
+            "simulationTick": 9406,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32943.4879903295,
+            "instantaneous": 60.06006,
+            "frame": 5852,
+            "simulationTick": 9466,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32943.9793638515,
+            "instantaneous": 60.06006,
+            "frame": 5881,
+            "simulationTick": 9524,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32944.4707616105,
+            "instantaneous": 60.06006,
+            "frame": 5911,
+            "simulationTick": 9584,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32945.0056002365,
+            "instantaneous": 60.06006,
+            "frame": 5944,
+            "simulationTick": 9650,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32945.517030139,
+            "instantaneous": 60.06006,
+            "frame": 5974,
+            "simulationTick": 9710,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32946.0284916935,
+            "instantaneous": 60.06006,
+            "frame": 6004,
+            "simulationTick": 9770,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32946.519906117,
+            "instantaneous": 60.06006,
+            "frame": 6034,
+            "simulationTick": 9830,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32947.0111375945,
+            "instantaneous": 60.06006,
+            "frame": 6064,
+            "simulationTick": 9890,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32947.502416314004,
+            "instantaneous": 60.06006,
+            "frame": 6093,
+            "simulationTick": 9948,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32947.993821299,
+            "instantaneous": 58.758896,
+            "frame": 6123,
+            "simulationTick": 10008,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32948.485192317,
+            "instantaneous": 60.06006,
+            "frame": 6153,
+            "simulationTick": 10068,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32948.996630351496,
+            "instantaneous": 60.06006,
+            "frame": 6183,
+            "simulationTick": 10128,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32949.5082361965,
+            "instantaneous": 60.06006,
+            "frame": 6213,
+            "simulationTick": 10188,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32950.043378359,
+            "instantaneous": 60.06006,
+            "frame": 6245,
+            "simulationTick": 10252,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          }
+        ]
+      },
+      {
+        "plants": 35,
+        "zombies": 5,
+        "scale": 1,
+        "elapsed": 20.152871435500856,
+        "framesPerSecond": 59.99145103810131,
+        "ticksPerSecond": 119.98290207620262,
+        "simulationSecondsPerSecond": 0.9998575173016885,
+        "instantaneousFPSMedian": 60.06006,
+        "projectiles": [
+          {
+            "count": 149,
+            "types": {
+              "Pea": 149
+            }
+          },
+          {
+            "count": 149,
+            "types": {
+              "Pea": 149
+            }
+          },
+          {
+            "count": 139,
+            "types": {
+              "Pea": 139
+            }
+          },
+          {
+            "count": 148,
+            "types": {
+              "Pea": 148
+            }
+          },
+          {
+            "count": 148,
+            "types": {
+              "Pea": 148
+            }
+          }
+        ],
+        "samples": [
+          {
+            "at": 32959.714538224,
+            "instantaneous": 60.06006,
+            "frame": 6826,
+            "simulationTick": 11240,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32960.2259977645,
+            "instantaneous": 60.06006,
+            "frame": 6856,
+            "simulationTick": 11300,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32960.717491547504,
+            "instantaneous": 60.06006,
+            "frame": 6886,
+            "simulationTick": 11360,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32961.2088779125,
+            "instantaneous": 60.06006,
+            "frame": 6916,
+            "simulationTick": 11420,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32961.700252446,
+            "instantaneous": 60.06006,
+            "frame": 6946,
+            "simulationTick": 11480,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32962.2115655675,
+            "instantaneous": 60.06006,
+            "frame": 6976,
+            "simulationTick": 11540,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32962.7228655935,
+            "instantaneous": 60.06006,
+            "frame": 7006,
+            "simulationTick": 11600,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32963.214245752,
+            "instantaneous": 60.06006,
+            "frame": 7035,
+            "simulationTick": 11658,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32963.705634039,
+            "instantaneous": 60.06006,
+            "frame": 7065,
+            "simulationTick": 11718,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32964.196953252496,
+            "instantaneous": 60.06006,
+            "frame": 7095,
+            "simulationTick": 11778,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32964.7538061045,
+            "instantaneous": 60.06006,
+            "frame": 7128,
+            "simulationTick": 11844,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32965.264972357,
+            "instantaneous": 60.06006,
+            "frame": 7158,
+            "simulationTick": 11904,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32965.756301734,
+            "instantaneous": 60.06006,
+            "frame": 7188,
+            "simulationTick": 11964,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32966.247874679,
+            "instantaneous": 60.06006,
+            "frame": 7218,
+            "simulationTick": 12024,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32966.739254305,
+            "instantaneous": 60.06006,
+            "frame": 7248,
+            "simulationTick": 12084,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32967.2505856495,
+            "instantaneous": 58.66927,
+            "frame": 7278,
+            "simulationTick": 12144,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32967.761912443995,
+            "instantaneous": 60.06006,
+            "frame": 7308,
+            "simulationTick": 12204,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32968.253299844,
+            "instantaneous": 60.06006,
+            "frame": 7338,
+            "simulationTick": 12264,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32968.7446658495,
+            "instantaneous": 60.06006,
+            "frame": 7368,
+            "simulationTick": 12324,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32969.2560851225,
+            "instantaneous": 57.8205,
+            "frame": 7398,
+            "simulationTick": 12384,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32969.8106354115,
+            "instantaneous": 60.06006,
+            "frame": 7431,
+            "simulationTick": 12450,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32970.301880123,
+            "instantaneous": 60.06006,
+            "frame": 7461,
+            "simulationTick": 12510,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32970.7931949775,
+            "instantaneous": 60.06006,
+            "frame": 7491,
+            "simulationTick": 12570,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32971.304436762,
+            "instantaneous": 60.06006,
+            "frame": 7521,
+            "simulationTick": 12630,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32971.8156697255,
+            "instantaneous": 60.06006,
+            "frame": 7551,
+            "simulationTick": 12690,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32972.3067901465,
+            "instantaneous": 60.06006,
+            "frame": 7581,
+            "simulationTick": 12750,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32972.7979258365,
+            "instantaneous": 60.06006,
+            "frame": 7610,
+            "simulationTick": 12808,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32973.289161680004,
+            "instantaneous": 59.793243,
+            "frame": 7639,
+            "simulationTick": 12866,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32973.780468643,
+            "instantaneous": 60.06006,
+            "frame": 7669,
+            "simulationTick": 12926,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32974.2718188855,
+            "instantaneous": 58.36892,
+            "frame": 7699,
+            "simulationTick": 12986,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32974.807827896,
+            "instantaneous": 60.06006,
+            "frame": 7732,
+            "simulationTick": 13052,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32975.3191816775,
+            "instantaneous": 60.06006,
+            "frame": 7762,
+            "simulationTick": 13112,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32975.8305945525,
+            "instantaneous": 60.06006,
+            "frame": 7792,
+            "simulationTick": 13172,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32976.321892904496,
+            "instantaneous": 60.06006,
+            "frame": 7822,
+            "simulationTick": 13232,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32976.8135552815,
+            "instantaneous": 60.06006,
+            "frame": 7852,
+            "simulationTick": 13292,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32977.3053109685,
+            "instantaneous": 60.06006,
+            "frame": 7882,
+            "simulationTick": 13352,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32977.796820686504,
+            "instantaneous": 60.06006,
+            "frame": 7909,
+            "simulationTick": 13406,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32978.288213756,
+            "instantaneous": 60.06006,
+            "frame": 7939,
+            "simulationTick": 13466,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32978.779600775,
+            "instantaneous": 60.06006,
+            "frame": 7969,
+            "simulationTick": 13526,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32979.2710256085,
+            "instantaneous": 60.06006,
+            "frame": 7999,
+            "simulationTick": 13586,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          },
+          {
+            "at": 32979.8674096595,
+            "instantaneous": 60.06006,
+            "frame": 8035,
+            "simulationTick": 13658,
+            "tickSeconds": 0.008333333333333333,
+            "board": "bbf6a30f667b48d3a67ed441acc404bf"
+          }
+        ]
+      }
+    ]
+  }
+}

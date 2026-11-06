@@ -40,9 +40,11 @@ internal static class SupportTorchFusions
     }
     internal static void Convert(Projectile shot)
     {
-        if (shot.mDead || shot.mBoard == null || shot.mBoard.mPaused || shot.mMotionType is not (ProjectileMotion.Straight or ProjectileMotion.Threepeater)
+        var board = shot.mBoard;
+        if (shot.mDead || board == null || board.mPaused || shot.mMotionType is not (ProjectileMotion.Straight or ProjectileMotion.Threepeater)
             || shot.mProjectileType is not (ProjectileType.Pea or ProjectileType.PeashooterPea or ProjectileType.Snowpea or ProjectileType.Fireball or ProjectileType.PeashooterFireball)
             || shot.mPosZ != 0) return;
+        if (TorchPlantIndex.For(board).Length == 0) return;
         // Preserve custom projectile ownership. Only the original plain, yellow
         // flame, potato and garlic families are accepted by the original stumps.
         bool potato = PotatoProjectiles.Contains(shot);
@@ -83,12 +85,14 @@ internal static class SupportTorchFusions
     private static IEnumerable<Plant> Stumps(Projectile shot)
     {
         var list = new List<Plant>();
-        for (int i = 0; i < shot.mBoard.m_plants.Count; ++i)
+        var board = shot.mBoard;
+        foreach (var entry in TorchPlantIndex.For(board))
         {
-            var plant = shot.mBoard.m_plants[i];
-            if (plant == null || plant.mRow != shot.mRow || !BeamShooters.Active(plant) || plant.NotOnGround()) continue;
+            var plant = entry.Plant;
+            if (!entry.IsCurrent(board) || plant.mRow != shot.mRow) continue;
             var identity = FusionPlant.From(plant);
             if (identity != FusionPlant.Scorchwood && identity != FusionPlant.Stenchwood) continue;
+            if (!BeamShooters.Active(plant) || plant.NotOnGround()) continue;
             float x = plant.mX + plant.mWidth / 2f;
             if (Math.Min(shot.mPosX, shot.mPosX + shot.mVelX) <= x + 16
                 && Math.Max(shot.mPosX, shot.mPosX + shot.mVelX) >= x - 16) list.Add(plant);

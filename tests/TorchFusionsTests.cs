@@ -14,4 +14,44 @@ var hypno=Make(FusionPlant.Hypnowood);hypno.mTargetY=59;TorchFusions.Convert(Sho
 hypno.mTargetY=10;var colored=Shot(hypno,tag:-30);TorchFusions.Convert(colored);Check(hypno.mTargetY==14&&HypnoShooters.IsFire(colored),"hypno pea credits four");TorchFusions.Convert(Shot(hypno,tag:-20));Check(hypno.mTargetY==14,"ally cannot farm credit");
 var snow=Shot(hypno,ProjectileType.Snowpea);TorchFusions.Convert(snow);Check(snow.mProjectileType==ProjectileType.Pea&&hypno.mTargetY==14,"thaw gives no credit");hypno.mBoard.mPaused=true;TorchFusions.Convert(Shot(hypno));Check(hypno.mTargetY==14,"pause");hypno.mBoard.mPaused=false;
 var attacker=new Zombie {mBoard=hypno.mBoard};hypno.mBoard.FailPlant=true;Check(!TorchFusions.Bite(hypno,attacker)&&!hypno.mDead&&!attacker.mMindControlled,"failed replacement retains plant and enemy");hypno.mBoard.FailPlant=false;Check(TorchFusions.Bite(hypno,attacker)&&hypno.mDead&&attacker.mMindControlled,"bite atomically restores native torchwood");
-Console.WriteLine($"Torch fusion contracts: {checks} checks passed.");
+// A projectile-heavy board without converter hosts must scan its population
+// once per tick, independent of projectile count or the three converter queries.
+var crowded = new Board();
+for(int i=0;i<35;++i) crowded.m_plants.Add(new Plant {mBoard=crowded,mSeedType=SeedType.Gatlingpea});
+for(int shot=0;shot<1000;++shot)
+    for(int converter=0;converter<3;++converter) Check(TorchPlantIndex.For(crowded).Length==0,"ordinary plants excluded");
+Check(crowded.m_plants.Reads==35,"three thousand queries perform only one population scan");
+++crowded.mMainCounter;TorchPlantIndex.For(crowded);
+Check(crowded.m_plants.Reads==70,"next simulation tick refreshes population exactly once");
+
+var late = new Plant {mBoard=crowded,mSeedType=SeedType.Torchwood,mImitaterType=SeedType.None,mPlantCol=3,mRow=2,mX=240,mY=160};
+crowded.m_plants.Add(late);
+var oldSnapshot=TorchPlantIndex.For(crowded);
+Check(oldSnapshot.Length==1,"same-tick population growth invalidates an empty index");
+late.mImitaterType=FusionPlant.Nutwood.Marker;
+var crossing=Shot(late);TorchFusions.Convert(crossing);
+Check(crossing.mProjectileType==ProjectileType.Fireball,"identity assigned after indexing is read live");
+
+crossing=Shot(late);late.mRow=3;TorchFusions.Convert(crossing);
+Check(crossing.mProjectileType==ProjectileType.Pea,"same-tick row movement cannot use stale coordinates");
+late.mRow=2;crossing=Shot(late);late.mX=600;TorchFusions.Convert(crossing);
+Check(crossing.mProjectileType==ProjectileType.Pea,"same-tick horizontal movement is read live");
+late.mX=240;late.mDead=true;crossing=Shot(late);TorchFusions.Convert(crossing);
+Check(crossing.mProjectileType==ProjectileType.Pea,"dead converter is rejected without waiting for index refresh");
+late.mDead=false;++late.DataID;crossing=Shot(late);TorchFusions.Convert(crossing);
+Check(crossing.mProjectileType==ProjectileType.Pea&&!oldSnapshot[0].IsCurrent(crowded),"pooled generation cannot inherit cached membership");
+TorchPlantIndex.Invalidate();crossing=Shot(late);TorchFusions.Convert(crossing);
+Check(crossing.mProjectileType==ProjectileType.Fireball,"lifecycle invalidation refreshes current generation in the same tick");
+Check(oldSnapshot.Length==1,"invalidating and rebuilding never mutate an in-flight snapshot");
+
+var replacement=new Plant {mBoard=crowded,mSeedType=SeedType.Potatomine,mImitaterType=SeedType.Torchwood};
+crowded.m_plants[^1]=replacement;
+var postfix=typeof(TorchIndexInitializePatch).GetMethod("Postfix",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic)!;
+postfix.Invoke(null,null);
+Check(TorchPlantIndex.For(crowded).Single().Plant==replacement,"initialize postfix catches same-count replacement in the same tick");
+var otherBoard=new Board();otherBoard.m_plants.Add(late);
+Check(!TorchPlantIndex.For(otherBoard)[0].IsCurrent(otherBoard),"foreign board candidate is rejected");
+var disposal=typeof(TorchIndexDisposePatch).GetMethod("Prefix",System.Reflection.BindingFlags.Static|System.Reflection.BindingFlags.NonPublic)!;
+disposal.Invoke(null,null);
+Check(TorchPlantIndex.For(crowded).Single().Plant==replacement,"board disposal releases the prior board snapshot");
+Console.WriteLine($"Torch fusion and index contracts: {checks} checks passed.");

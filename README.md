@@ -1,4 +1,6 @@
-# Fusion Mod 22.2.4
+# Fusion Mod 22.2.5
+
+Version 22.2.5 indexes potential torch-conversion hosts once per board tick instead of scanning every plant for every projectile. Plant lifecycle and board changes invalidate the index; conversion rules, live positions, damage, visuals and simulation timing are preserved.
 
 Version 22.2.4 forwards custom zombie bite events through native Hypno-shroom consumption and hypnosis. Zombie Library validates registered actors and the actual native bite target; Eyes calls the shared helper at its own bite event. Native AI and saved identities remain unchanged.
 

@@ -9,13 +9,19 @@ namespace Il2CppReloaded.Gameplay {
  public enum ProjectileType { Pea,PeashooterPea,Snowpea,Star,Fireball }
  public enum ProjectileMotion { Straight,Threepeater }
  public enum PlantingReason { Ok,NotHere }
+ public sealed class CountingPlants : List<Plant> {
+  public int Reads;
+  public new Plant this[int index] { get { ++Reads; return base[index]; } set => base[index]=value; }
+ }
  public sealed class Board {
-  public IntPtr Pointer=(IntPtr)1;public bool mPaused,Full,FailPlant; public readonly List<Plant> m_plants=new(); public readonly List<Projectile> Shots=new();
+  private static long next;public IntPtr Pointer=(IntPtr)(++next);public int mMainCounter;public bool mPaused,Full,FailPlant; public readonly CountingPlants m_plants=new(); public readonly List<Projectile> Shots=new();
+  public void DisposeBoard(){}
   public int GetNumRows()=>6;
   public Projectile AddProjectile(float x,float y,int order,int row,ProjectileType type) { var p=new Projectile {mBoard=this,mPosX=x,mPosY=y,mRow=row,mProjectileType=type};Shots.Add(p);return p; }
   public Plant? AddPlant(int col,int row,SeedType seed,SeedType marker) { if(FailPlant)return null;var p=new Plant {mBoard=this,mPlantCol=col,mRow=row,mSeedType=seed,mImitaterType=marker};m_plants.Add(p);return p; }
  }
  public sealed class Plant {
+  private static uint next;public uint DataID=++next;public void Die()=>mDead=true;
   public Board mBoard=null!;public SeedType mSeedType,mImitaterType;public bool mDead,mIsOnBoard=true;
   public int mPlantHealth,mPlantMaxHealth,mTargetX,mTargetY,mShootingCounter,mPlantCol,mRow,mRenderOrder;
   public float mX,mY,mWidth=80,mHeight=80;public bool NotOnGround()=>false;
