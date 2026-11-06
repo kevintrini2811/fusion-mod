@@ -1,4 +1,6 @@
-# Fusion Mod 22.2.5
+# Fusion Mod 22.2.6
+
+Version 22.2.6 renders armored Eyes portraits from the imported walk pose and the same native helmet fit used on the live zombie. Placement previews and generated cards no longer use manually positioned portrait helmets.
 
 Version 22.2.5 indexes potential torch-conversion hosts once per board tick instead of scanning every plant for every projectile. Plant lifecycle and board changes invalidate the index; conversion rules, live positions, damage, visuals and simulation timing are preserved.
 

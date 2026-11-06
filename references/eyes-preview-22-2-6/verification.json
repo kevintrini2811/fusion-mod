@@ -1,0 +1,3921 @@
+{
+  "rawDirectory": "/home/kevin/modding/pvzreplanted/.test-runs/eyes-preview-review-20261106",
+  "runs": {
+    "before": [
+      {
+        "entry": {
+          "index": 0,
+          "name": "Zombie",
+          "type": "Normal"
+        },
+        "row": 0,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 0,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 128,
+              "y": 0
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "width": 248.15997,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 11,
+          "mZombieType": "Normal",
+          "mPosX": 278.02295,
+          "mPosY": 50,
+          "mGraveX": 0,
+          "mGraveY": 0,
+          "mInPool": false,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "Offset",
+            "enabled": true,
+            "active": true,
+            "order": -24573,
+            "layer": 0,
+            "sprite": "plantshadow",
+            "x": 1838.8848,
+            "y": -765.44,
+            "width": 242,
+            "height": 101
+          },
+          {
+            "name": "0",
+            "enabled": true,
+            "active": true,
+            "order": -16128,
+            "layer": 0,
+            "sprite": null,
+            "x": 1938.3247,
+            "y": -825.44,
+            "width": 302795460,
+            "height": 302795550
+          },
+          {
+            "name": "1",
+            "enabled": true,
+            "active": true,
+            "order": -16126,
+            "layer": 0,
+            "sprite": null,
+            "x": 1938.3247,
+            "y": -825.44,
+            "width": 0,
+            "height": 0
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 36,
+          "name": "Augenzombie",
+          "type": "Normal"
+        },
+        "row": 0,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 36,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 111,
+              "y": 168
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "width": 204.95357,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -985.39996,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 12,
+          "mZombieType": "Normal",
+          "mPosX": 279.85004,
+          "mPosY": 50,
+          "mGraveX": -521012,
+          "mGraveY": 512,
+          "mInPool": false,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1898.9465,
+            "y": -736.9311,
+            "width": 48.959625,
+            "height": 55.224945
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1896.8896,
+            "y": -698.16724,
+            "width": 48.13697,
+            "height": 58.271427
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1898.456,
+            "y": -649.8652,
+            "width": 48.421112,
+            "height": 74.11984
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1912.9857,
+            "y": -603.46277,
+            "width": 47.86377,
+            "height": 47.857494
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1885.3809,
+            "y": -564.79834,
+            "width": 120.767784,
+            "height": 109.73297
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1947.6642,
+            "y": -729.85657,
+            "width": 35.495625,
+            "height": 61.018734
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1932.8181,
+            "y": -779.83374,
+            "width": 74.52518,
+            "height": 83.33338
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1938.5311,
+            "y": -802.5099,
+            "width": 61.088505,
+            "height": 38.46313
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1983.8699,
+            "y": -719.8312,
+            "width": 48.493633,
+            "height": 88.74404
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1979.2592,
+            "y": -817.0477,
+            "width": 95.38209,
+            "height": 48.228397
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 2003.3835,
+            "y": -782.42944,
+            "width": 55.225643,
+            "height": 68.609924
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1947.3873,
+            "y": -658.402,
+            "width": 121.21463,
+            "height": 153.47119
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1897.3267,
+            "y": -658.1202,
+            "width": 47.806004,
+            "height": 72.683266
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1880.6165,
+            "y": -609.3497,
+            "width": 72.77242,
+            "height": 34.77444
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1886.9458,
+            "y": -536.1343,
+            "width": 145.6723,
+            "height": 71.9527
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 47,
+            "layer": 0,
+            "sprite": "",
+            "x": 1928.8123,
+            "y": -747.0756,
+            "width": 60.805016,
+            "height": 64.99199
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 48,
+            "layer": 0,
+            "sprite": "",
+            "x": 1947.7798,
+            "y": -641.8274,
+            "width": 42.154278,
+            "height": 80.89575
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 49,
+            "layer": 0,
+            "sprite": "",
+            "x": 1931.3975,
+            "y": -700.2448,
+            "width": 46.465218,
+            "height": 65.64978
+          },
+          {
+            "name": "Shadow-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 0,
+            "layer": 0,
+            "sprite": "",
+            "x": 1961.9937,
+            "y": -816.08514,
+            "width": 192.31566,
+            "height": 90.50148
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 37,
+          "name": "Pylonen-Augenzombie",
+          "type": "TrafficCone"
+        },
+        "row": 0,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 37,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-cone.png",
+            "pivot": {
+              "x": 111,
+              "y": 203
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "width": 169.61674,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -985.39996,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 13,
+          "mZombieType": "TrafficCone",
+          "mPosX": 277.12067,
+          "mPosY": 50,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": false,
+          "mHelmType": "TrafficCone",
+          "mBodyHealth": 270,
+          "mHelmHealth": 370,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1875.8279,
+            "y": -733.9334,
+            "width": 52.105305,
+            "height": 57.835033
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1878.9812,
+            "y": -695.0438,
+            "width": 47.205906,
+            "height": 57.51997
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1886.148,
+            "y": -646.0827,
+            "width": 43.97797,
+            "height": 71.53136
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1901.1965,
+            "y": -599.4592,
+            "width": 50.853405,
+            "height": 50.847317
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1879.3007,
+            "y": -557.82166,
+            "width": 133.85455,
+            "height": 124.474174
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "EyesArmor.cone",
+            "x": 1895.7222,
+            "y": -570.42633,
+            "width": 169.00613,
+            "height": 166.82619
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1933.8634,
+            "y": -722.9341,
+            "width": 46.51021,
+            "height": 77.23221
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1929.3105,
+            "y": -777.77026,
+            "width": 89.55391,
+            "height": 96.19086
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1942.2363,
+            "y": -802.5087,
+            "width": 61.093918,
+            "height": 38.466537
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1963.046,
+            "y": -718.6792,
+            "width": 56.31269,
+            "height": 92.56921
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1962.5676,
+            "y": -817.2125,
+            "width": 98.120964,
+            "height": 54.037415
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1984.9202,
+            "y": -780.1873,
+            "width": 62.446648,
+            "height": 74.15928
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1931.4397,
+            "y": -656.0244,
+            "width": 131.40575,
+            "height": 161.27486
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1883.2513,
+            "y": -653.14624,
+            "width": 45.517235,
+            "height": 71.52342
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1868.6909,
+            "y": -602.48724,
+            "width": 75.47891,
+            "height": 41.310326
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1882.9576,
+            "y": -531.3822,
+            "width": 151.5663,
+            "height": 85.71965
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 47,
+            "layer": 0,
+            "sprite": "",
+            "x": 1914.6865,
+            "y": -738.42816,
+            "width": 68.88564,
+            "height": 72.25781
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 48,
+            "layer": 0,
+            "sprite": "",
+            "x": 1932.1061,
+            "y": -634.12054,
+            "width": 38.821095,
+            "height": 79.29161
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 49,
+            "layer": 0,
+            "sprite": "",
+            "x": 1915.5963,
+            "y": -691.8977,
+            "width": 48.101753,
+            "height": 66.64057
+          },
+          {
+            "name": "Shadow-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 0,
+            "layer": 0,
+            "sprite": "",
+            "x": 1954.2966,
+            "y": -816.08514,
+            "width": 192.33269,
+            "height": 90.5095
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 38,
+          "name": "Eimer-Augenzombie",
+          "type": "Pail"
+        },
+        "row": 0,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 38,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-bucket.png",
+            "pivot": {
+              "x": 111,
+              "y": 203
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "width": 169.61674,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -985.39996,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 14,
+          "mZombieType": "Pail",
+          "mPosX": 276.30988,
+          "mPosY": 50,
+          "mGraveX": -521012,
+          "mGraveY": 5632,
+          "mInPool": false,
+          "mHelmType": "Pail",
+          "mBodyHealth": 270,
+          "mHelmHealth": 1100,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1869.5071,
+            "y": -733.0111,
+            "width": 54.553894,
+            "height": 59.86566
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1873.9724,
+            "y": -693.91534,
+            "width": 47.121727,
+            "height": 57.495262
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1882.5098,
+            "y": -644.7228,
+            "width": 46.015614,
+            "height": 72.778915
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1897.8163,
+            "y": -597.85864,
+            "width": 51.683987,
+            "height": 51.67872
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1877.3733,
+            "y": -555.53455,
+            "width": 137.02802,
+            "height": 128.06247
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "EyesArmor.bucket",
+            "x": 1863.5476,
+            "y": -604.28754,
+            "width": 173.21886,
+            "height": 182.24747
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1929.809,
+            "y": -721.09265,
+            "width": 48.92797,
+            "height": 80.91439
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1928.096,
+            "y": -777.1285,
+            "width": 92.937,
+            "height": 98.99162
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1942.7749,
+            "y": -802.48035,
+            "width": 61.222866,
+            "height": 38.54773
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1957.6748,
+            "y": -718.03925,
+            "width": 58.29289,
+            "height": 93.6043
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1957.8873,
+            "y": -817.2171,
+            "width": 98.96584,
+            "height": 55.603836
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1979.9531,
+            "y": -779.625,
+            "width": 64.235306,
+            "height": 75.52791
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1927.0317,
+            "y": -655.0947,
+            "width": 134.05235,
+            "height": 163.36412
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1879.0779,
+            "y": -651.43384,
+            "width": 45.009724,
+            "height": 71.358086
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1865.3284,
+            "y": -600.08276,
+            "width": 76.210686,
+            "height": 42.936195
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1881.4448,
+            "y": -529.889,
+            "width": 153.1259,
+            "height": 89.26243
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 47,
+            "layer": 0,
+            "sprite": "",
+            "x": 1910.7,
+            "y": -736.1715,
+            "width": 70.77137,
+            "height": 73.932
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 48,
+            "layer": 0,
+            "sprite": "",
+            "x": 1927.5654,
+            "y": -631.8098,
+            "width": 38.95816,
+            "height": 79.48551
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 49,
+            "layer": 0,
+            "sprite": "",
+            "x": 1910.9751,
+            "y": -689.4652,
+            "width": 48.631172,
+            "height": 67.0352
+          },
+          {
+            "name": "Shadow-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 0,
+            "layer": 0,
+            "sprite": "",
+            "x": 1952.0037,
+            "y": -816.08545,
+            "width": 192.73865,
+            "height": 90.70054
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 0,
+          "name": "Zombie",
+          "type": "Normal"
+        },
+        "row": 2,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 0,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 128,
+              "y": 0
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "width": 248.15997,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 15,
+          "mZombieType": "Normal",
+          "mPosX": 276.456,
+          "mPosY": 220,
+          "mGraveX": 0,
+          "mGraveY": 0,
+          "mInPool": true,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "0",
+            "enabled": true,
+            "active": true,
+            "order": -14487,
+            "layer": 0,
+            "sprite": null,
+            "x": 1933.9059,
+            "y": -1366.88,
+            "width": 302795460,
+            "height": 302795550
+          },
+          {
+            "name": "1",
+            "enabled": true,
+            "active": true,
+            "order": -14485,
+            "layer": 0,
+            "sprite": null,
+            "x": 1933.9059,
+            "y": -1366.88,
+            "width": 132.53809,
+            "height": 277.68073
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 36,
+          "name": "Augenzombie",
+          "type": "Normal"
+        },
+        "row": 2,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 36,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 111,
+              "y": 168
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "width": 204.95357,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1464.7999,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 16,
+          "mZombieType": "Normal",
+          "mPosX": 277.75983,
+          "mPosY": 220,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": true,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1756.6443,
+            "y": -1213.6074,
+            "width": 52.096363,
+            "height": 57.825115
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1759.7971,
+            "y": -1174.7246,
+            "width": 47.197807,
+            "height": 57.5101
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1766.9626,
+            "y": -1125.7719,
+            "width": 43.970425,
+            "height": 71.51908
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1782.0085,
+            "y": -1079.1564,
+            "width": 50.844677,
+            "height": 50.838593
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1760.1163,
+            "y": -1037.5259,
+            "width": 133.83159,
+            "height": 124.45282
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1814.6697,
+            "y": -1202.61,
+            "width": 46.50223,
+            "height": 77.21896
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1810.1177,
+            "y": -1257.4368,
+            "width": 89.53854,
+            "height": 96.174355
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1823.0413,
+            "y": -1282.171,
+            "width": 61.083435,
+            "height": 38.45994
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1843.8474,
+            "y": -1198.356,
+            "width": 56.303032,
+            "height": 92.553314
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1843.3691,
+            "y": -1296.8723,
+            "width": 98.104126,
+            "height": 54.028145
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1865.7178,
+            "y": -1259.8535,
+            "width": 62.435936,
+            "height": 74.14655
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1812.2466,
+            "y": -1135.7119,
+            "width": 131.3832,
+            "height": 161.24718
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1764.0664,
+            "y": -1132.8342,
+            "width": 45.509426,
+            "height": 71.511154
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1749.5083,
+            "y": -1082.1838,
+            "width": 75.46596,
+            "height": 41.303238
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1763.7727,
+            "y": -1011.091,
+            "width": 151.5403,
+            "height": 85.70495
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 98,
+            "layer": 0,
+            "sprite": "",
+            "x": 1795.4961,
+            "y": -1218.1014,
+            "width": 68.873825,
+            "height": 72.245415
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 99,
+            "layer": 0,
+            "sprite": "",
+            "x": 1812.9128,
+            "y": -1113.8118,
+            "width": 38.814434,
+            "height": 79.278
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 100,
+            "layer": 0,
+            "sprite": "",
+            "x": 1796.4058,
+            "y": -1171.5791,
+            "width": 48.093502,
+            "height": 66.629135
+          },
+          {
+            "name": "Fusion-NativeDuckTube",
+            "enabled": true,
+            "active": true,
+            "order": 50,
+            "layer": 0,
+            "sprite": "",
+            "x": 1778.8401,
+            "y": -1275.367,
+            "width": 239.84305,
+            "height": 156.04785
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 37,
+          "name": "Pylonen-Augenzombie",
+          "type": "TrafficCone"
+        },
+        "row": 2,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 37,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-cone.png",
+            "pivot": {
+              "x": 111,
+              "y": 203
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "width": 169.61674,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1464.7999,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 17,
+          "mZombieType": "TrafficCone",
+          "mPosX": 278.1178,
+          "mPosY": 220,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": true,
+          "mHelmType": "TrafficCone",
+          "mBodyHealth": 270,
+          "mHelmHealth": 370,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1757.6614,
+            "y": -1213.6154,
+            "width": 52.091354,
+            "height": 57.819557
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1760.8138,
+            "y": -1174.7362,
+            "width": 47.193268,
+            "height": 57.504574
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1767.9788,
+            "y": -1125.7882,
+            "width": 43.966198,
+            "height": 71.51221
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1783.0232,
+            "y": -1079.1772,
+            "width": 50.83979,
+            "height": 50.833706
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1761.133,
+            "y": -1037.5508,
+            "width": 133.81873,
+            "height": 124.44086
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "",
+            "x": 1777.5503,
+            "y": -1050.1521,
+            "width": 168.96088,
+            "height": 166.78152
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1815.6813,
+            "y": -1202.619,
+            "width": 46.497757,
+            "height": 77.21153
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1811.1296,
+            "y": -1257.4404,
+            "width": 89.52994,
+            "height": 96.16511
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1824.052,
+            "y": -1282.1724,
+            "width": 61.07756,
+            "height": 38.45624
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1844.8562,
+            "y": -1198.3652,
+            "width": 56.297615,
+            "height": 92.544426
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1844.3779,
+            "y": -1296.8722,
+            "width": 98.094696,
+            "height": 54.02295
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1866.7244,
+            "y": -1259.8569,
+            "width": 62.42993,
+            "height": 74.13943
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1813.2583,
+            "y": -1135.7273,
+            "width": 131.37056,
+            "height": 161.23167
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1765.0828,
+            "y": -1132.8499,
+            "width": 45.50505,
+            "height": 71.50428
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1750.5261,
+            "y": -1082.2043,
+            "width": 75.4587,
+            "height": 41.299267
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1764.7892,
+            "y": -1011.1184,
+            "width": 151.52573,
+            "height": 85.6967
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 98,
+            "layer": 0,
+            "sprite": "",
+            "x": 1796.5095,
+            "y": -1218.1089,
+            "width": 68.8672,
+            "height": 72.238464
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 99,
+            "layer": 0,
+            "sprite": "",
+            "x": 1813.9246,
+            "y": -1113.8292,
+            "width": 38.810703,
+            "height": 79.27038
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 100,
+            "layer": 0,
+            "sprite": "",
+            "x": 1797.4192,
+            "y": -1171.591,
+            "width": 48.088875,
+            "height": 66.62273
+          },
+          {
+            "name": "Fusion-NativeDuckTube",
+            "enabled": true,
+            "active": true,
+            "order": 50,
+            "layer": 0,
+            "sprite": "",
+            "x": 1779.855,
+            "y": -1275.3716,
+            "width": 239.81993,
+            "height": 156.03282
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 38,
+          "name": "Eimer-Augenzombie",
+          "type": "Pail"
+        },
+        "row": 2,
+        "preview": {
+          "board": "0de9ae6a9d05412c9386aa800933d1f1",
+          "index": 38,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-bucket.png",
+            "pivot": {
+              "x": 111,
+              "y": 203
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "width": 169.61674,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1464.7999,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 18,
+          "mZombieType": "Pail",
+          "mPosX": 277.87228,
+          "mPosY": 220,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": true,
+          "mHelmType": "Pail",
+          "mBodyHealth": 270,
+          "mHelmHealth": 1100,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1756.8428,
+            "y": -1213.4883,
+            "width": 52.17216,
+            "height": 57.909245
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1760.0001,
+            "y": -1174.5487,
+            "width": 47.266476,
+            "height": 57.593773
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1767.176,
+            "y": -1125.5248,
+            "width": 44.0344,
+            "height": 71.62314
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1782.2439,
+            "y": -1078.8414,
+            "width": 50.91865,
+            "height": 50.912556
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1760.3198,
+            "y": -1037.1505,
+            "width": 134.0263,
+            "height": 124.63389
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "",
+            "x": 1748.1454,
+            "y": -1086.2986,
+            "width": 168.69266,
+            "height": 178.15115
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1814.9526,
+            "y": -1202.4747,
+            "width": 46.569885,
+            "height": 77.331314
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1810.394,
+            "y": -1257.3813,
+            "width": 89.668816,
+            "height": 96.31428
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1823.3363,
+            "y": -1282.1515,
+            "width": 61.172306,
+            "height": 38.515896
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1844.1727,
+            "y": -1198.2145,
+            "width": 56.384945,
+            "height": 92.68798
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1843.6938,
+            "y": -1296.8741,
+            "width": 98.246864,
+            "height": 54.10675
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1866.075,
+            "y": -1259.8015,
+            "width": 62.526775,
+            "height": 74.25443
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1812.5259,
+            "y": -1135.4792,
+            "width": 131.57436,
+            "height": 161.48178
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1764.2756,
+            "y": -1132.5974,
+            "width": 45.575638,
+            "height": 71.6152
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1749.6965,
+            "y": -1081.8734,
+            "width": 75.57575,
+            "height": 41.363327
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1763.9816,
+            "y": -1010.6771,
+            "width": 151.76079,
+            "height": 85.829636
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 98,
+            "layer": 0,
+            "sprite": "",
+            "x": 1795.7512,
+            "y": -1217.9888,
+            "width": 68.97403,
+            "height": 72.350525
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 99,
+            "layer": 0,
+            "sprite": "",
+            "x": 1813.1931,
+            "y": -1113.5472,
+            "width": 38.870907,
+            "height": 79.39335
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 100,
+            "layer": 0,
+            "sprite": "",
+            "x": 1796.6621,
+            "y": -1171.3987,
+            "width": 48.16347,
+            "height": 66.726074
+          },
+          {
+            "name": "Fusion-NativeDuckTube",
+            "enabled": true,
+            "active": true,
+            "order": 50,
+            "layer": 0,
+            "sprite": "",
+            "x": 1779.0708,
+            "y": -1275.2965,
+            "width": 240.192,
+            "height": 156.27487
+          }
+        ]
+      }
+    ],
+    "after": [
+      {
+        "entry": {
+          "index": 0,
+          "name": "Zombie",
+          "type": "Normal"
+        },
+        "row": 0,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 0,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 128,
+              "y": 0
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "width": 248.15997,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 11,
+          "mZombieType": "Normal",
+          "mPosX": 277.86774,
+          "mPosY": 50,
+          "mGraveX": 0,
+          "mGraveY": 0,
+          "mInPool": false,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "Offset",
+            "enabled": true,
+            "active": true,
+            "order": -24573,
+            "layer": 0,
+            "sprite": "plantshadow",
+            "x": 1838.447,
+            "y": -765.44,
+            "width": 242,
+            "height": 101
+          },
+          {
+            "name": "0",
+            "enabled": true,
+            "active": true,
+            "order": -16128,
+            "layer": 0,
+            "sprite": null,
+            "x": 1937.887,
+            "y": -825.44,
+            "width": 302795460,
+            "height": 302795550
+          },
+          {
+            "name": "1",
+            "enabled": true,
+            "active": true,
+            "order": -16126,
+            "layer": 0,
+            "sprite": null,
+            "x": 1937.887,
+            "y": -825.44,
+            "width": 0,
+            "height": 0
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 36,
+          "name": "Augenzombie",
+          "type": "Normal"
+        },
+        "row": 0,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 36,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 111,
+              "y": 168
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "width": 204.95357,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 12,
+          "mZombieType": "Normal",
+          "mPosX": 279.84735,
+          "mPosY": 50,
+          "mGraveX": -521012,
+          "mGraveY": 512,
+          "mInPool": false,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1898.8186,
+            "y": -736.7871,
+            "width": 49.048813,
+            "height": 55.325542
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1896.758,
+            "y": -697.95264,
+            "width": 48.224663,
+            "height": 58.377583
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1898.3273,
+            "y": -649.5626,
+            "width": 48.509315,
+            "height": 74.25486
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1912.8833,
+            "y": -603.0757,
+            "width": 47.950962,
+            "height": 47.94467
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1885.2283,
+            "y": -564.3408,
+            "width": 120.98777,
+            "height": 109.93286
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1947.625,
+            "y": -729.6997,
+            "width": 35.560284,
+            "height": 61.129894
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1932.752,
+            "y": -779.76794,
+            "width": 74.66094,
+            "height": 83.48519
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1938.4753,
+            "y": -802.4855,
+            "width": 61.19979,
+            "height": 38.5332
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1983.8966,
+            "y": -719.6561,
+            "width": 48.58197,
+            "height": 88.9057
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1979.2776,
+            "y": -817.0497,
+            "width": 95.55584,
+            "height": 48.316254
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 2003.4459,
+            "y": -782.3684,
+            "width": 55.32625,
+            "height": 68.73491
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1947.3477,
+            "y": -658.115,
+            "width": 121.43544,
+            "height": 153.75076
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1897.1958,
+            "y": -657.83264,
+            "width": 47.89309,
+            "height": 72.81567
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1880.4552,
+            "y": -608.9733,
+            "width": 72.90498,
+            "height": 34.837788
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1886.796,
+            "y": -535.6245,
+            "width": 145.93765,
+            "height": 72.08378
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 47,
+            "layer": 0,
+            "sprite": "",
+            "x": 1928.7388,
+            "y": -746.9502,
+            "width": 60.91578,
+            "height": 65.11038
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 48,
+            "layer": 0,
+            "sprite": "",
+            "x": 1947.7407,
+            "y": -641.5102,
+            "width": 42.231068,
+            "height": 81.04311
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 49,
+            "layer": 0,
+            "sprite": "",
+            "x": 1931.3286,
+            "y": -700.03406,
+            "width": 46.549862,
+            "height": 65.76938
+          },
+          {
+            "name": "Shadow-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 0,
+            "layer": 0,
+            "sprite": "",
+            "x": 1961.9805,
+            "y": -816.0854,
+            "width": 192.66599,
+            "height": 90.66634
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 37,
+          "name": "Pylonen-Augenzombie",
+          "type": "TrafficCone"
+        },
+        "row": 0,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 37,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-cone.png",
+            "pivot": {
+              "x": 92.5,
+              "y": 165
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "width": 173.9,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 13,
+          "mZombieType": "TrafficCone",
+          "mPosX": 277.56787,
+          "mPosY": 50,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": false,
+          "mHelmType": "TrafficCone",
+          "mBodyHealth": 270,
+          "mHelmHealth": 370,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1877.0986,
+            "y": -733.9433,
+            "width": 52.099045,
+            "height": 57.82809
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1880.2516,
+            "y": -695.05835,
+            "width": 47.200237,
+            "height": 57.513065
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1887.4175,
+            "y": -646.10315,
+            "width": 43.972687,
+            "height": 71.522766
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1902.4642,
+            "y": -599.4852,
+            "width": 50.847294,
+            "height": 50.84121
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1880.5709,
+            "y": -557.85266,
+            "width": 133.83849,
+            "height": 124.45923
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "EyesArmor.cone",
+            "x": 1896.9905,
+            "y": -570.4559,
+            "width": 168.98582,
+            "height": 166.80615
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1935.1271,
+            "y": -722.94525,
+            "width": 46.50462,
+            "height": 77.22294
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1930.5748,
+            "y": -777.77484,
+            "width": 89.54315,
+            "height": 96.17931
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1943.499,
+            "y": -802.5104,
+            "width": 61.08658,
+            "height": 38.461918
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1964.3063,
+            "y": -718.6909,
+            "width": 56.305923,
+            "height": 92.55808
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1963.8279,
+            "y": -817.21234,
+            "width": 98.109184,
+            "height": 54.030926
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1986.1777,
+            "y": -780.19165,
+            "width": 62.43915,
+            "height": 74.150375
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1932.7037,
+            "y": -656.04364,
+            "width": 131.38995,
+            "height": 161.25548
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1884.5211,
+            "y": -653.16583,
+            "width": 45.51177,
+            "height": 71.51484
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1869.9624,
+            "y": -602.51294,
+            "width": 75.46985,
+            "height": 41.305363
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1884.2275,
+            "y": -531.4164,
+            "width": 151.5481,
+            "height": 85.709366
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 47,
+            "layer": 0,
+            "sprite": "",
+            "x": 1915.9525,
+            "y": -738.4375,
+            "width": 68.877365,
+            "height": 72.24913
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 48,
+            "layer": 0,
+            "sprite": "",
+            "x": 1933.3701,
+            "y": -634.1424,
+            "width": 38.81643,
+            "height": 79.28209
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 49,
+            "layer": 0,
+            "sprite": "",
+            "x": 1916.8623,
+            "y": -691.91266,
+            "width": 48.095978,
+            "height": 66.63257
+          },
+          {
+            "name": "Shadow-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 0,
+            "layer": 0,
+            "sprite": "",
+            "x": 1955.5579,
+            "y": -816.08514,
+            "width": 192.3096,
+            "height": 90.498634
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 38,
+          "name": "Eimer-Augenzombie",
+          "type": "Pail"
+        },
+        "row": 0,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 38,
+          "target": {
+            "x": 320,
+            "y": 120
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 165
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-bucket.png",
+            "pivot": {
+              "x": 103.5,
+              "y": 167
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -675.2,
+              "width": 192.24968,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -830.3,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 14,
+          "mZombieType": "Pail",
+          "mPosX": 277.28714,
+          "mPosY": 50,
+          "mGraveX": -521012,
+          "mGraveY": 6144,
+          "mInPool": false,
+          "mHelmType": "Pail",
+          "mBodyHealth": 270,
+          "mHelmHealth": 1100,
+          "mRow": 0
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1870.4146,
+            "y": -732.7151,
+            "width": 55.609394,
+            "height": 60.695534
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1875.5277,
+            "y": -693.5943,
+            "width": 46.98527,
+            "height": 57.367805
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1884.7341,
+            "y": -644.38416,
+            "width": 46.929085,
+            "height": 73.235535
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1900.1392,
+            "y": -597.49316,
+            "width": 51.991085,
+            "height": 51.986217
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1880.4644,
+            "y": -554.91003,
+            "width": 138.28537,
+            "height": 129.54921
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "EyesArmor.bucket",
+            "x": 1865.8376,
+            "y": -603.3787,
+            "width": 175.17418,
+            "height": 183.97179
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1931.7305,
+            "y": -720.36035,
+            "width": 49.96565,
+            "height": 82.484695
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1931.4423,
+            "y": -776.88477,
+            "width": 94.34531,
+            "height": 100.0897
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1946.9695,
+            "y": -802.4931,
+            "width": 61.16509,
+            "height": 38.51135
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1958.8816,
+            "y": -717.91455,
+            "width": 59.15655,
+            "height": 93.9175
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1959.4393,
+            "y": -817.2169,
+            "width": 99.18165,
+            "height": 56.271603
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1981.3176,
+            "y": -779.41614,
+            "width": 64.98213,
+            "height": 76.03866
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1928.7819,
+            "y": -654.9508,
+            "width": 135.09491,
+            "height": 164.06647
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1881.0413,
+            "y": -650.90533,
+            "width": 44.66448,
+            "height": 71.13055
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1867.7251,
+            "y": -599.3104,
+            "width": 76.41014,
+            "height": 43.656113
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1884.7352,
+            "y": -529.71313,
+            "width": 153.56404,
+            "height": 90.83549
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 47,
+            "layer": 0,
+            "sprite": "",
+            "x": 1912.6936,
+            "y": -735.2013,
+            "width": 71.532196,
+            "height": 74.57885
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 48,
+            "layer": 0,
+            "sprite": "",
+            "x": 1929.2479,
+            "y": -631.02106,
+            "width": 39.35081,
+            "height": 79.61626
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 49,
+            "layer": 0,
+            "sprite": "",
+            "x": 1912.6504,
+            "y": -688.5003,
+            "width": 48.797844,
+            "height": 67.09728
+          },
+          {
+            "name": "Shadow-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 0,
+            "layer": 0,
+            "sprite": "",
+            "x": 1954.7625,
+            "y": -816.0853,
+            "width": 192.55675,
+            "height": 90.61494
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 0,
+          "name": "Zombie",
+          "type": "Normal"
+        },
+        "row": 2,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 0,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 128,
+              "y": 0
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "width": 248.15997,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 15,
+          "mZombieType": "Normal",
+          "mPosX": 277.06827,
+          "mPosY": 220,
+          "mGraveX": 0,
+          "mGraveY": 0,
+          "mInPool": true,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "0",
+            "enabled": true,
+            "active": true,
+            "order": -14487,
+            "layer": 0,
+            "sprite": null,
+            "x": 1935.6326,
+            "y": -1355.6,
+            "width": 302795460,
+            "height": 302795550
+          },
+          {
+            "name": "1",
+            "enabled": true,
+            "active": true,
+            "order": -14485,
+            "layer": 0,
+            "sprite": null,
+            "x": 1935.6326,
+            "y": -1355.6,
+            "width": 133.65549,
+            "height": 277.92773
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 36,
+          "name": "Augenzombie",
+          "type": "Normal"
+        },
+        "row": 2,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 36,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "",
+            "pivot": {
+              "x": 111,
+              "y": 168
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "width": 204.95357,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 16,
+          "mZombieType": "Normal",
+          "mPosX": 277.49628,
+          "mPosY": 220,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": true,
+          "mHelmType": "None",
+          "mBodyHealth": 270,
+          "mHelmHealth": 0,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1755.8951,
+            "y": -1213.6017,
+            "width": 52.100037,
+            "height": 57.82919
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1759.0481,
+            "y": -1174.7161,
+            "width": 47.201134,
+            "height": 57.51415
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1766.2141,
+            "y": -1125.7599,
+            "width": 43.973526,
+            "height": 71.524124
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1781.2612,
+            "y": -1079.1411,
+            "width": 50.84826,
+            "height": 50.842175
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1759.3674,
+            "y": -1037.5078,
+            "width": 133.84103,
+            "height": 124.46159
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1813.9248,
+            "y": -1202.6035,
+            "width": 46.505505,
+            "height": 77.2244
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1809.3723,
+            "y": -1257.4341,
+            "width": 89.54486,
+            "height": 96.18114
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1822.2968,
+            "y": -1282.17,
+            "width": 61.08774,
+            "height": 38.46265
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1843.1045,
+            "y": -1198.349,
+            "width": 56.307,
+            "height": 92.559845
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1842.6261,
+            "y": -1296.8723,
+            "width": 98.11104,
+            "height": 54.031948
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1864.9763,
+            "y": -1259.851,
+            "width": 62.44034,
+            "height": 74.15178
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1811.5013,
+            "y": -1135.7006,
+            "width": 131.39246,
+            "height": 161.25854
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1763.3177,
+            "y": -1132.8228,
+            "width": 45.512634,
+            "height": 71.5162
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1748.7588,
+            "y": -1082.1688,
+            "width": 75.47128,
+            "height": 41.30615
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1763.0242,
+            "y": -1011.0709,
+            "width": 151.55098,
+            "height": 85.71098
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 98,
+            "layer": 0,
+            "sprite": "",
+            "x": 1794.7498,
+            "y": -1218.096,
+            "width": 68.87868,
+            "height": 72.2505
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 99,
+            "layer": 0,
+            "sprite": "",
+            "x": 1812.1676,
+            "y": -1113.7988,
+            "width": 38.817165,
+            "height": 79.283585
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 100,
+            "layer": 0,
+            "sprite": "",
+            "x": 1795.6595,
+            "y": -1171.5703,
+            "width": 48.096893,
+            "height": 66.633835
+          },
+          {
+            "name": "Fusion-NativeDuckTube",
+            "enabled": true,
+            "active": true,
+            "order": 50,
+            "layer": 0,
+            "sprite": "",
+            "x": 1778.0925,
+            "y": -1275.3635,
+            "width": 239.85992,
+            "height": 156.05884
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 37,
+          "name": "Pylonen-Augenzombie",
+          "type": "TrafficCone"
+        },
+        "row": 2,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 37,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-cone.png",
+            "pivot": {
+              "x": 92.5,
+              "y": 165
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "width": 173.9,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 17,
+          "mZombieType": "TrafficCone",
+          "mPosX": 277.28253,
+          "mPosY": 220,
+          "mGraveX": -521012,
+          "mGraveY": 4608,
+          "mInPool": true,
+          "mHelmType": "TrafficCone",
+          "mBodyHealth": 270,
+          "mHelmHealth": 370,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1755.2876,
+            "y": -1213.5969,
+            "width": 52.10304,
+            "height": 57.832523
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1758.4408,
+            "y": -1174.709,
+            "width": 47.203854,
+            "height": 57.517467
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1765.6072,
+            "y": -1125.7501,
+            "width": 43.976063,
+            "height": 71.528244
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1780.6552,
+            "y": -1079.1287,
+            "width": 50.85119,
+            "height": 50.8451
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1758.7601,
+            "y": -1037.4929,
+            "width": 133.84874,
+            "height": 124.468765
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "",
+            "x": 1775.1809,
+            "y": -1050.0969,
+            "width": 168.99878,
+            "height": 166.81894
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1813.3206,
+            "y": -1202.5981,
+            "width": 46.508186,
+            "height": 77.22885
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1808.768,
+            "y": -1257.4319,
+            "width": 89.55002,
+            "height": 96.186676
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1821.6931,
+            "y": -1282.1693,
+            "width": 61.09126,
+            "height": 38.464867
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1842.502,
+            "y": -1198.3435,
+            "width": 56.31024,
+            "height": 92.56518
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1842.0236,
+            "y": -1296.8724,
+            "width": 98.1167,
+            "height": 54.03507
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1864.375,
+            "y": -1259.8489,
+            "width": 62.443935,
+            "height": 74.15605
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1810.897,
+            "y": -1135.6914,
+            "width": 131.40002,
+            "height": 161.26784
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1762.7107,
+            "y": -1132.8132,
+            "width": 45.51526,
+            "height": 71.52031
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1748.1509,
+            "y": -1082.1565,
+            "width": 75.47563,
+            "height": 41.308533
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1762.417,
+            "y": -1011.05457,
+            "width": 151.55972,
+            "height": 85.71593
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 98,
+            "layer": 0,
+            "sprite": "",
+            "x": 1794.1445,
+            "y": -1218.0916,
+            "width": 68.882645,
+            "height": 72.25467
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 99,
+            "layer": 0,
+            "sprite": "",
+            "x": 1811.5632,
+            "y": -1113.7883,
+            "width": 38.819405,
+            "height": 79.28816
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 100,
+            "layer": 0,
+            "sprite": "",
+            "x": 1795.0542,
+            "y": -1171.5631,
+            "width": 48.099663,
+            "height": 66.63767
+          },
+          {
+            "name": "Fusion-NativeDuckTube",
+            "enabled": true,
+            "active": true,
+            "order": 50,
+            "layer": 0,
+            "sprite": "",
+            "x": 1777.4862,
+            "y": -1275.3607,
+            "width": 239.87372,
+            "height": 156.06781
+          }
+        ]
+      },
+      {
+        "entry": {
+          "index": 38,
+          "name": "Eimer-Augenzombie",
+          "type": "Pail"
+        },
+        "row": 2,
+        "preview": {
+          "board": "10998dad4abe48e2b24d4f3dc4476281",
+          "index": 38,
+          "target": {
+            "x": 320,
+            "y": 290
+          },
+          "rendering": {
+            "anchor": {
+              "x": 320,
+              "y": 335
+            },
+            "enabled": true,
+            "active": true,
+            "sprite": "FusionMod.EyesArmor.eyes-bucket.png",
+            "pivot": {
+              "x": 103.5,
+              "y": 167
+            },
+            "position": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "z": -10
+            },
+            "bounds": {
+              "x": 1892.3999,
+              "y": -1154.6,
+              "width": 192.24968,
+              "height": 310.19998
+            },
+            "foot": {
+              "x": 1892.3999,
+              "y": -1309.7,
+              "z": -10
+            }
+          }
+        },
+        "placed": {
+          "DataID": 18,
+          "mZombieType": "Pail",
+          "mPosX": 278.38455,
+          "mPosY": 220,
+          "mGraveX": -521012,
+          "mGraveY": 4096,
+          "mInPool": true,
+          "mHelmType": "Pail",
+          "mBodyHealth": 270,
+          "mHelmHealth": 1100,
+          "mRow": 2
+        },
+        "visibleRenderers": [
+          {
+            "name": "anim_innerarm3-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 20,
+            "layer": 0,
+            "sprite": "",
+            "x": 1760.3413,
+            "y": -1208.3502,
+            "width": 50.864655,
+            "height": 56.801193
+          },
+          {
+            "name": "anim_innerarm2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 21,
+            "layer": 0,
+            "sprite": "",
+            "x": 1762.8428,
+            "y": -1169.4873,
+            "width": 47.293533,
+            "height": 57.584633
+          },
+          {
+            "name": "anim_innerarm1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 22,
+            "layer": 0,
+            "sprite": "",
+            "x": 1769.3313,
+            "y": -1120.6501,
+            "width": 42.991108,
+            "height": 70.94782
+          },
+          {
+            "name": "Zombie_neck-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 25,
+            "layer": 0,
+            "sprite": "",
+            "x": 1784.2628,
+            "y": -1074.0842,
+            "width": 50.47294,
+            "height": 50.46644
+          },
+          {
+            "name": "anim_head1-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 26,
+            "layer": 0,
+            "sprite": "",
+            "x": 1761.6465,
+            "y": -1032.7834,
+            "width": 132.30563,
+            "height": 122.713234
+          },
+          {
+            "name": "EyesArmor",
+            "enabled": true,
+            "active": true,
+            "order": 59,
+            "layer": 0,
+            "sprite": "",
+            "x": 1750.3218,
+            "y": -1082.0532,
+            "width": 166.15059,
+            "height": 175.81046
+          },
+          {
+            "name": "Zombie_innerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 28,
+            "layer": 0,
+            "sprite": "",
+            "x": 1817.2567,
+            "y": -1197.8295,
+            "width": 45.270256,
+            "height": 75.354385
+          },
+          {
+            "name": "Zombie_innerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 29,
+            "layer": 0,
+            "sprite": "",
+            "x": 1811.333,
+            "y": -1252.053,
+            "width": 87.84715,
+            "height": 94.77334
+          },
+          {
+            "name": "Zombie_innerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 30,
+            "layer": 0,
+            "sprite": "",
+            "x": 1823.3794,
+            "y": -1276.5325,
+            "width": 61.076706,
+            "height": 38.4557
+          },
+          {
+            "name": "Zombie_outerleg_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 31,
+            "layer": 0,
+            "sprite": "",
+            "x": 1847.2012,
+            "y": -1192.9268,
+            "width": 55.345886,
+            "height": 92.10104
+          },
+          {
+            "name": "Zombie_outerleg_foot-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 32,
+            "layer": 0,
+            "sprite": "",
+            "x": 1846.3022,
+            "y": -1291.2473,
+            "width": 97.76586,
+            "height": 53.292587
+          },
+          {
+            "name": "Zombie_outerleg_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 33,
+            "layer": 0,
+            "sprite": "",
+            "x": 1868.8423,
+            "y": -1254.4736,
+            "width": 61.571133,
+            "height": 73.50046
+          },
+          {
+            "name": "Zombie_body-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 34,
+            "layer": 0,
+            "sprite": "",
+            "x": 1815.042,
+            "y": -1130.3849,
+            "width": 130.1526,
+            "height": 160.32486
+          },
+          {
+            "name": "Zombie_tie-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 37,
+            "layer": 0,
+            "sprite": "",
+            "x": 1766.6859,
+            "y": -1127.872,
+            "width": 45.804207,
+            "height": 71.65885
+          },
+          {
+            "name": "anim_head2-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 38,
+            "layer": 0,
+            "sprite": "",
+            "x": 1751.7649,
+            "y": -1077.4987,
+            "width": 75.15382,
+            "height": 40.513596
+          },
+          {
+            "name": "anim_hair-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 44,
+            "layer": 0,
+            "sprite": "",
+            "x": 1765.0784,
+            "y": -1005.9999,
+            "width": 150.87668,
+            "height": 84.0163
+          },
+          {
+            "name": "Zombie_outerarm_hand-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 98,
+            "layer": 0,
+            "sprite": "",
+            "x": 1798.0656,
+            "y": -1213.5417,
+            "width": 67.95373,
+            "height": 71.432
+          },
+          {
+            "name": "Zombie_outerarm_upper-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 99,
+            "layer": 0,
+            "sprite": "",
+            "x": 1815.7383,
+            "y": -1109.1528,
+            "width": 39.2391,
+            "height": 79.475044
+          },
+          {
+            "name": "Zombie_outerarm_lower-sprite",
+            "enabled": true,
+            "active": true,
+            "order": 100,
+            "layer": 0,
+            "sprite": "",
+            "x": 1799.2251,
+            "y": -1167.0354,
+            "width": 47.88193,
+            "height": 66.49887
+          },
+          {
+            "name": "Fusion-NativeDuckTube",
+            "enabled": true,
+            "active": true,
+            "order": 50,
+            "layer": 0,
+            "sprite": "",
+            "x": 1781.97,
+            "y": -1275.3723,
+            "width": 238.78722,
+            "height": 154.16818
+          }
+        ]
+      }
+    ]
+  }
+}
