@@ -329,7 +329,7 @@ internal static partial class ImportedPeaVisuals
             return max > min ? reference.transform.TransformVector(new Vector3(0, max - min, 0)).magnitude : 0;
         }
 
-        private readonly SpeedMod.VisualClock visualClock = new();
+        private readonly FusionVisualClock visualClock = new();
 
         internal void Update()
         {

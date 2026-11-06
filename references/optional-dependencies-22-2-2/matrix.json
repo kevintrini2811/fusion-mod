@@ -1,0 +1,2533 @@
+{
+  "date": "2026-11-06",
+  "version": "22.2.2",
+  "cases": [
+    {
+      "case": "both",
+      "passed": true,
+      "status": {
+        "ready": true,
+        "code": "READY",
+        "board": "476fc32390de4481842fc914a728dd2c",
+        "scene": "Playing",
+        "debug": true,
+        "paused": false,
+        "fps": 64.32812
+      },
+      "speed": [
+        {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        }
+      ],
+      "difficulty": [
+        {
+          "value": 5,
+          "name": "Extreme"
+        }
+      ],
+      "golden_bean_images": [
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/Icon",
+          "sprite": "",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 68.600006,
+          "height": 63.699997
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Speed_01",
+          "sprite": "SPR_MainHud_Acceleration_01",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 69.4848,
+          "height": 70.3991
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Image",
+          "sprite": "SPR_BasicButtonSmallBackground",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 98,
+          "height": 91
+        }
+      ],
+      "plant": {
+        "DataID": 2,
+        "mSeedType": "Peashooter",
+        "mPlantCol": 2,
+        "mAnimCounter": 28,
+        "mFrame": 1,
+        "mFrameLength": 15,
+        "mNumFrames": 5,
+        "mState": "Notready",
+        "mPlantHealth": 300,
+        "mPlantMaxHealth": 300,
+        "mSubclass": "Shooter",
+        "mDisappearCountdown": 200,
+        "mDoSpecialCountdown": 0,
+        "mStateCountdown": 0,
+        "mLaunchCounter": 99,
+        "mLaunchRate": 150,
+        "mTargetX": -1,
+        "mTargetY": -1,
+        "mStartRow": 0,
+        "mShootingCounter": 1,
+        "mBlinkCountdown": 383,
+        "mRecentlyEatenCountdown": 0,
+        "mEatenFlashCountdown": 0,
+        "mBeghouledFlashCountdown": 0,
+        "mShakeOffsetX": 0,
+        "mShakeOffsetY": 0,
+        "mWakeUpCounter": 0,
+        "mOnBungeeState": "NotOnBungee",
+        "mImitaterType": "Jalapeno",
+        "mPottedPlantIndex": -1,
+        "mAnimPing": false,
+        "mDead": false,
+        "mIsAsleep": false,
+        "mIsOnBoard": true,
+        "mHighlighted": false,
+        "mIsImitation": false,
+        "mX": 200,
+        "mY": 280,
+        "mWidth": 80,
+        "mHeight": 80,
+        "mVisible": true,
+        "mRow": 2,
+        "mRenderOrder": 322605,
+        "mSquished": false,
+        "mImageOffsetX": 0,
+        "mImageOffsetY": 0,
+        "mShadowOffsetX": -3,
+        "mShadowOffsetY": 51,
+        "mShadowScaleX": 1,
+        "mShadowScaleY": 1,
+        "mShadowRenderOrder": 220003,
+        "mShadowType": "Plant2",
+        "mShadowImageIndex": 0,
+        "mBungeeOffsetX": 0,
+        "mBungeeOffsetY": 0,
+        "visuals": {
+          "renderers": [
+            {
+              "name": "PeaShooter_Render",
+              "enabled": false,
+              "active": true,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "0",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "1",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "2",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "Shoot",
+              "enabled": true,
+              "active": true,
+              "order": 11,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_Head",
+              "enabled": true,
+              "active": true,
+              "order": 10,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink1",
+              "enabled": true,
+              "active": false,
+              "order": 12,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink2",
+              "enabled": true,
+              "active": false,
+              "order": 13,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_sprout",
+              "enabled": true,
+              "active": true,
+              "order": 9,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 8,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 7,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf",
+              "enabled": true,
+              "active": true,
+              "order": 6,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_top",
+              "enabled": true,
+              "active": true,
+              "order": 5,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_bottom",
+              "enabled": true,
+              "active": true,
+              "order": 4,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 3,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 2,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf",
+              "enabled": true,
+              "active": true,
+              "order": 1,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Shadow",
+              "enabled": true,
+              "active": true,
+              "order": 0,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Offset",
+              "enabled": true,
+              "active": true,
+              "order": -22935,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            }
+          ],
+          "groups": [
+            {
+              "name": "0",
+              "enabled": true,
+              "active": false,
+              "order": 4,
+              "layer": 0
+            },
+            {
+              "name": "1",
+              "enabled": true,
+              "active": false,
+              "order": 3,
+              "layer": 0
+            },
+            {
+              "name": "2",
+              "enabled": true,
+              "active": false,
+              "order": 2,
+              "layer": 0
+            },
+            {
+              "name": "Fusion-BlazePeaPrefab",
+              "enabled": true,
+              "active": true,
+              "order": -14531,
+              "layer": 0
+            }
+          ]
+        }
+      },
+      "projectiles": [
+        {
+          "board": "476fc32390de4481842fc914a728dd2c",
+          "items": [
+            {
+              "DataID": 2,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 374.88956,
+              "mPosY": 292,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 33,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 374.88956,
+              "mY": 292,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 58,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            }
+          ]
+        },
+        {
+          "board": "476fc32390de4481842fc914a728dd2c",
+          "items": [
+            {
+              "DataID": 2,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 391.5395,
+              "mPosY": 292,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 38,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 391.5395,
+              "mY": 292,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 58,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0,
+              "visuals": [
+                {
+                  "path": "Projectile-Pea(Clone)/Pea_Render/Sprite",
+                  "enabled": false,
+                  "active": true,
+                  "sprite": "SPR_Projectile_Pea",
+                  "texture": "sactx-0-4096x4096-DXT5|BC3-Atlas_VFXSprites-95bf28ad",
+                  "renderer": "SpriteRenderer",
+                  "x": 2090.1414,
+                  "y": -1183.44
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Shadow/Offset",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "pea_shadows_1",
+                  "texture": "sactx-0-4096x4096-BC7-GameplayItems_Atlas-437fd689",
+                  "renderer": "SpriteRenderer",
+                  "x": 2090.1414,
+                  "y": -1347
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Sprite",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-19842",
+                  "renderer": "SpriteRenderer",
+                  "x": 2090.1414,
+                  "y": -1183.44
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Shadow",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-15757",
+                  "renderer": "SpriteRenderer",
+                  "x": 2090.1414,
+                  "y": -1263.056
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zombies": {
+        "board": "476fc32390de4481842fc914a728dd2c",
+        "items": [
+          {
+            "native": {
+              "DataID": 11,
+              "mZombieType": "Normal",
+              "mZombiePhase": "ZombieNormal",
+              "mPosX": 595.0971,
+              "mPosY": 250,
+              "mGraveX": 0,
+              "mGraveY": 0,
+              "mVelX": 0.37100708,
+              "mAnimCounter": 92,
+              "mGroanCounter": 164,
+              "mAnimTicksPerFrame": 12,
+              "mAnimFrames": 12,
+              "mFrame": 7,
+              "mPrevFrame": 7,
+              "mVariant": true,
+              "mIsEating": false,
+              "mJustGotShotCounter": -61,
+              "mShieldJustGotShotCounter": 0,
+              "mShieldRecoilCounter": 0,
+              "mZombieAge": 274,
+              "mZombieHeight": "ZombieNormal",
+              "mPhaseCounter": 0,
+              "mBrainRate": 0,
+              "mFromWave": -1,
+              "mDroppedLoot": false,
+              "mZombieFade": -1,
+              "mFlatTires": false,
+              "mUseLadderCol": -1,
+              "mTargetCol": -1,
+              "mAltitude": 0,
+              "mHitUmbrella": false,
+              "mChilledCounter": 0,
+              "mButteredCounter": 0,
+              "mIceTrapCounter": 0,
+              "mMindControlled": false,
+              "mBlowingAway": false,
+              "mHasHead": true,
+              "mHasArm": true,
+              "mHasObject": false,
+              "mInPool": false,
+              "mOnHighGround": false,
+              "mYuckyFace": false,
+              "mYuckyFaceCounter": 0,
+              "mHelmType": "None",
+              "mBodyHealth": 99978,
+              "mBodyMaxHealth": 100000,
+              "mHelmHealth": 0,
+              "mHelmMaxHealth": 0,
+              "mShieldType": "None",
+              "mShieldHealth": 0,
+              "mShieldMaxHealth": 0,
+              "mFlyingHealth": 0,
+              "mFlyingMaxHealth": 0,
+              "mDead": false,
+              "mPlayingSong": false,
+              "mParticleOffsetX": 0,
+              "mParticleOffsetY": 0,
+              "mSummonCounter": 0,
+              "mScaleZombie": 1,
+              "mVelZ": 0,
+              "mOrginalAnimRate": 12,
+              "mBossMode": 0,
+              "mTargetRow": -1,
+              "mBossBungeeCounter": -1,
+              "mBossStompCounter": -1,
+              "mBossHeadCounter": -1,
+              "mFireballRow": -1,
+              "mIsFireBall": false,
+              "mLastPortalX": -1,
+              "mIsRetro": false,
+              "mIsBobsledLeader": false,
+              "mIsPushingBobsled": false,
+              "mBobsledAlpha": 0,
+              "mBobsledImageIndex": 0,
+              "mBungeeTargetRenderOrder": 0,
+              "mMustacheType": "None",
+              "mSunglassesType": "None",
+              "mX": 595.0971,
+              "mY": 250,
+              "mWidth": 120,
+              "mHeight": 120,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 323004,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 23,
+              "mShadowOffsetY": 92,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Plant2",
+              "mShadowImageIndex": 0,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            },
+            "eyes": null
+          }
+        ]
+      },
+      "screenshot": {
+        "accepted": true,
+        "file": "658906e3994846378945692eba191649.png",
+        "note": "Capture completes after rendering. Client waits for PNG.",
+        "completed": true,
+        "path": "/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted/UserData/DebugModApi/screenshots/658906e3994846378945692eba191649.png"
+      },
+      "teardown_errors": 106,
+      "fusion_loaded": true,
+      "speed_loaded": true,
+      "difficulty_loaded": true
+    },
+    {
+      "case": "neither",
+      "passed": true,
+      "status": {
+        "ready": true,
+        "code": "READY",
+        "board": "48a7331927a04fc3801d3e1c53f3af47",
+        "scene": "Playing",
+        "debug": true,
+        "paused": false,
+        "fps": 60.06006
+      },
+      "speed": [
+        {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            }
+          ]
+        }
+      ],
+      "difficulty": [
+        {
+          "value": 3,
+          "name": "Normal"
+        }
+      ],
+      "golden_bean_images": [
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/Icon",
+          "sprite": "",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 68.600006,
+          "height": 63.699997
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Speed_01",
+          "sprite": "SPR_MainHud_Acceleration_01",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 69.4848,
+          "height": 70.3991
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Image",
+          "sprite": "SPR_BasicButtonSmallBackground",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 98,
+          "height": 91
+        }
+      ],
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Peashooter",
+        "mPlantCol": 2,
+        "mAnimCounter": 21,
+        "mFrame": 1,
+        "mFrameLength": 14,
+        "mNumFrames": 5,
+        "mState": "Notready",
+        "mPlantHealth": 300,
+        "mPlantMaxHealth": 300,
+        "mSubclass": "Shooter",
+        "mDisappearCountdown": 200,
+        "mDoSpecialCountdown": 0,
+        "mStateCountdown": 0,
+        "mLaunchCounter": 82,
+        "mLaunchRate": 150,
+        "mTargetX": -1,
+        "mTargetY": -1,
+        "mStartRow": 0,
+        "mShootingCounter": 1,
+        "mBlinkCountdown": 569,
+        "mRecentlyEatenCountdown": 0,
+        "mEatenFlashCountdown": 0,
+        "mBeghouledFlashCountdown": 0,
+        "mShakeOffsetX": 0,
+        "mShakeOffsetY": 0,
+        "mWakeUpCounter": 0,
+        "mOnBungeeState": "NotOnBungee",
+        "mImitaterType": "Jalapeno",
+        "mPottedPlantIndex": -1,
+        "mAnimPing": false,
+        "mDead": false,
+        "mIsAsleep": false,
+        "mIsOnBoard": true,
+        "mHighlighted": false,
+        "mIsImitation": false,
+        "mX": 200,
+        "mY": 280,
+        "mWidth": 80,
+        "mHeight": 80,
+        "mVisible": true,
+        "mRow": 2,
+        "mRenderOrder": 322605,
+        "mSquished": false,
+        "mImageOffsetX": 0,
+        "mImageOffsetY": 0,
+        "mShadowOffsetX": -3,
+        "mShadowOffsetY": 51,
+        "mShadowScaleX": 1,
+        "mShadowScaleY": 1,
+        "mShadowRenderOrder": 220003,
+        "mShadowType": "Plant2",
+        "mShadowImageIndex": 0,
+        "mBungeeOffsetX": 0,
+        "mBungeeOffsetY": 0,
+        "visuals": {
+          "renderers": [
+            {
+              "name": "PeaShooter_Render",
+              "enabled": false,
+              "active": true,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "0",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "1",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "2",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "Shoot",
+              "enabled": true,
+              "active": true,
+              "order": 11,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_Head",
+              "enabled": true,
+              "active": true,
+              "order": 10,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink1",
+              "enabled": true,
+              "active": true,
+              "order": 12,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink2",
+              "enabled": true,
+              "active": true,
+              "order": 13,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_sprout",
+              "enabled": true,
+              "active": true,
+              "order": 9,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 8,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 7,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf",
+              "enabled": true,
+              "active": true,
+              "order": 6,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_top",
+              "enabled": true,
+              "active": true,
+              "order": 5,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_bottom",
+              "enabled": true,
+              "active": true,
+              "order": 4,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 3,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 2,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf",
+              "enabled": true,
+              "active": true,
+              "order": 1,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Shadow",
+              "enabled": true,
+              "active": true,
+              "order": 0,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Offset",
+              "enabled": true,
+              "active": true,
+              "order": -22935,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            }
+          ],
+          "groups": [
+            {
+              "name": "0",
+              "enabled": true,
+              "active": false,
+              "order": 4,
+              "layer": 0
+            },
+            {
+              "name": "1",
+              "enabled": true,
+              "active": false,
+              "order": 3,
+              "layer": 0
+            },
+            {
+              "name": "2",
+              "enabled": true,
+              "active": false,
+              "order": 2,
+              "layer": 0
+            },
+            {
+              "name": "Fusion-BlazePeaPrefab",
+              "enabled": true,
+              "active": true,
+              "order": -14531,
+              "layer": 0
+            }
+          ]
+        }
+      },
+      "projectiles": [
+        {
+          "board": "48a7331927a04fc3801d3e1c53f3af47",
+          "items": [
+            {
+              "DataID": 2,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 422.16934,
+              "mPosY": 294,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 49,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 422.16934,
+              "mY": 294,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 56,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            }
+          ]
+        },
+        {
+          "board": "48a7331927a04fc3801d3e1c53f3af47",
+          "items": [
+            {
+              "DataID": 2,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 442.14926,
+              "mPosY": 294,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 55,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 442.14926,
+              "mY": 294,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 56,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0,
+              "visuals": [
+                {
+                  "path": "Projectile-Pea(Clone)/Pea_Render/Sprite",
+                  "enabled": false,
+                  "active": true,
+                  "sprite": "SPR_Projectile_Pea",
+                  "texture": "sactx-0-4096x4096-DXT5|BC3-Atlas_VFXSprites-95bf28ad",
+                  "renderer": "SpriteRenderer",
+                  "x": 2232.8608,
+                  "y": -1189.08
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Shadow/Offset",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "pea_shadows_1",
+                  "texture": "sactx-0-4096x4096-BC7-GameplayItems_Atlas-437fd689",
+                  "renderer": "SpriteRenderer",
+                  "x": 2232.8608,
+                  "y": -1347
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Sprite",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-19842",
+                  "renderer": "SpriteRenderer",
+                  "x": 2232.8608,
+                  "y": -1189.08
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Shadow",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-15757",
+                  "renderer": "SpriteRenderer",
+                  "x": 2232.8608,
+                  "y": -1268.696
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zombies": {
+        "board": "48a7331927a04fc3801d3e1c53f3af47",
+        "items": [
+          {
+            "native": {
+              "DataID": 10,
+              "mZombieType": "Normal",
+              "mZombiePhase": "ZombieNormal",
+              "mPosX": 588.19165,
+              "mPosY": 250,
+              "mGraveX": 0,
+              "mGraveY": 0,
+              "mVelX": 0.35159102,
+              "mAnimCounter": 119,
+              "mGroanCounter": 179,
+              "mAnimTicksPerFrame": 15,
+              "mAnimFrames": 12,
+              "mFrame": 7,
+              "mPrevFrame": 7,
+              "mVariant": false,
+              "mIsEating": false,
+              "mJustGotShotCounter": -82,
+              "mShieldJustGotShotCounter": 0,
+              "mShieldRecoilCounter": 0,
+              "mZombieAge": 286,
+              "mZombieHeight": "ZombieNormal",
+              "mPhaseCounter": 0,
+              "mBrainRate": 0,
+              "mFromWave": -1,
+              "mDroppedLoot": false,
+              "mZombieFade": -1,
+              "mFlatTires": false,
+              "mUseLadderCol": -1,
+              "mTargetCol": -1,
+              "mAltitude": 0,
+              "mHitUmbrella": false,
+              "mChilledCounter": 0,
+              "mButteredCounter": 0,
+              "mIceTrapCounter": 0,
+              "mMindControlled": false,
+              "mBlowingAway": false,
+              "mHasHead": true,
+              "mHasArm": true,
+              "mHasObject": false,
+              "mInPool": false,
+              "mOnHighGround": false,
+              "mYuckyFace": false,
+              "mYuckyFaceCounter": 0,
+              "mHelmType": "None",
+              "mBodyHealth": 99955,
+              "mBodyMaxHealth": 100000,
+              "mHelmHealth": 0,
+              "mHelmMaxHealth": 0,
+              "mShieldType": "None",
+              "mShieldHealth": 0,
+              "mShieldMaxHealth": 0,
+              "mFlyingHealth": 0,
+              "mFlyingMaxHealth": 0,
+              "mDead": false,
+              "mPlayingSong": false,
+              "mParticleOffsetX": 0,
+              "mParticleOffsetY": 0,
+              "mSummonCounter": 0,
+              "mScaleZombie": 1,
+              "mVelZ": 0,
+              "mOrginalAnimRate": 12,
+              "mBossMode": 0,
+              "mTargetRow": -1,
+              "mBossBungeeCounter": -1,
+              "mBossStompCounter": -1,
+              "mBossHeadCounter": -1,
+              "mFireballRow": -1,
+              "mIsFireBall": false,
+              "mLastPortalX": -1,
+              "mIsRetro": false,
+              "mIsBobsledLeader": false,
+              "mIsPushingBobsled": false,
+              "mBobsledAlpha": 0,
+              "mBobsledImageIndex": 0,
+              "mBungeeTargetRenderOrder": 0,
+              "mMustacheType": "None",
+              "mSunglassesType": "None",
+              "mX": 588.19165,
+              "mY": 250,
+              "mWidth": 120,
+              "mHeight": 120,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 323004,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 23,
+              "mShadowOffsetY": 92,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Plant2",
+              "mShadowImageIndex": 0,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            },
+            "eyes": null
+          }
+        ]
+      },
+      "screenshot": {
+        "accepted": true,
+        "file": "d7ca6ab712694dd68982f45d88f964c8.png",
+        "note": "Capture completes after rendering. Client waits for PNG.",
+        "completed": true,
+        "path": "/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted/UserData/DebugModApi/screenshots/d7ca6ab712694dd68982f45d88f964c8.png"
+      },
+      "teardown_errors": 3,
+      "fusion_loaded": true,
+      "speed_loaded": false,
+      "difficulty_loaded": false
+    },
+    {
+      "case": "speed-only",
+      "passed": true,
+      "status": {
+        "ready": true,
+        "code": "READY",
+        "board": "ffb60baf3fb54d448ac562e736a6042f",
+        "scene": "Playing",
+        "debug": true,
+        "paused": false,
+        "fps": 60.06006
+      },
+      "speed": [
+        {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        },
+        {
+          "selected": 6,
+          "effective": 20,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        },
+        {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        }
+      ],
+      "difficulty": [
+        {
+          "value": 3,
+          "name": "Normal"
+        }
+      ],
+      "golden_bean_images": [
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/Icon",
+          "sprite": "",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 68.600006,
+          "height": 63.699997
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Speed_01",
+          "sprite": "SPR_MainHud_Acceleration_01",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 69.4848,
+          "height": 70.3991
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Image",
+          "sprite": "SPR_BasicButtonSmallBackground",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 98,
+          "height": 91
+        }
+      ],
+      "plant": {
+        "DataID": 1,
+        "mSeedType": "Peashooter",
+        "mPlantCol": 2,
+        "mAnimCounter": 55,
+        "mFrame": 3,
+        "mFrameLength": 17,
+        "mNumFrames": 5,
+        "mState": "Notready",
+        "mPlantHealth": 300,
+        "mPlantMaxHealth": 300,
+        "mSubclass": "Shooter",
+        "mDisappearCountdown": 200,
+        "mDoSpecialCountdown": 0,
+        "mStateCountdown": 0,
+        "mLaunchCounter": 136,
+        "mLaunchRate": 150,
+        "mTargetX": -1,
+        "mTargetY": -1,
+        "mStartRow": 0,
+        "mShootingCounter": 34,
+        "mBlinkCountdown": 277,
+        "mRecentlyEatenCountdown": 0,
+        "mEatenFlashCountdown": 0,
+        "mBeghouledFlashCountdown": 0,
+        "mShakeOffsetX": 0,
+        "mShakeOffsetY": 0,
+        "mWakeUpCounter": 0,
+        "mOnBungeeState": "NotOnBungee",
+        "mImitaterType": "Jalapeno",
+        "mPottedPlantIndex": -1,
+        "mAnimPing": false,
+        "mDead": false,
+        "mIsAsleep": false,
+        "mIsOnBoard": true,
+        "mHighlighted": false,
+        "mIsImitation": false,
+        "mX": 200,
+        "mY": 280,
+        "mWidth": 80,
+        "mHeight": 80,
+        "mVisible": true,
+        "mRow": 2,
+        "mRenderOrder": 322605,
+        "mSquished": false,
+        "mImageOffsetX": 0,
+        "mImageOffsetY": 0,
+        "mShadowOffsetX": -3,
+        "mShadowOffsetY": 51,
+        "mShadowScaleX": 1,
+        "mShadowScaleY": 1,
+        "mShadowRenderOrder": 220003,
+        "mShadowType": "Plant2",
+        "mShadowImageIndex": 0,
+        "mBungeeOffsetX": 0,
+        "mBungeeOffsetY": 0,
+        "visuals": {
+          "renderers": [
+            {
+              "name": "PeaShooter_Render",
+              "enabled": false,
+              "active": true,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "0",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "1",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "2",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "Shoot",
+              "enabled": true,
+              "active": true,
+              "order": 11,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_Head",
+              "enabled": true,
+              "active": true,
+              "order": 10,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink1",
+              "enabled": true,
+              "active": false,
+              "order": 12,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink2",
+              "enabled": true,
+              "active": false,
+              "order": 13,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_sprout",
+              "enabled": true,
+              "active": true,
+              "order": 9,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 8,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 7,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf",
+              "enabled": true,
+              "active": true,
+              "order": 6,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_top",
+              "enabled": true,
+              "active": true,
+              "order": 5,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_bottom",
+              "enabled": true,
+              "active": true,
+              "order": 4,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 3,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 2,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf",
+              "enabled": true,
+              "active": true,
+              "order": 1,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Shadow",
+              "enabled": true,
+              "active": true,
+              "order": 0,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Offset",
+              "enabled": true,
+              "active": true,
+              "order": -22935,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            }
+          ],
+          "groups": [
+            {
+              "name": "0",
+              "enabled": true,
+              "active": false,
+              "order": 4,
+              "layer": 0
+            },
+            {
+              "name": "1",
+              "enabled": true,
+              "active": false,
+              "order": 3,
+              "layer": 0
+            },
+            {
+              "name": "2",
+              "enabled": true,
+              "active": false,
+              "order": 2,
+              "layer": 0
+            },
+            {
+              "name": "Fusion-BlazePeaPrefab",
+              "enabled": true,
+              "active": true,
+              "order": -14531,
+              "layer": 0
+            }
+          ]
+        }
+      },
+      "projectiles": [
+        {
+          "board": "ffb60baf3fb54d448ac562e736a6042f",
+          "items": [
+            {
+              "DataID": 2,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 339.2597,
+              "mPosY": 292,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 22,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 339.2597,
+              "mY": 292,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 58,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            }
+          ]
+        },
+        {
+          "board": "ffb60baf3fb54d448ac562e736a6042f",
+          "items": [
+            {
+              "DataID": 2,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 359.23962,
+              "mPosY": 292,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 28,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 359.23962,
+              "mY": 292,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 58,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0,
+              "visuals": [
+                {
+                  "path": "Projectile-Pea(Clone)/Pea_Render/Sprite",
+                  "enabled": false,
+                  "active": true,
+                  "sprite": "SPR_Projectile_Pea",
+                  "texture": "sactx-0-4096x4096-DXT5|BC3-Atlas_VFXSprites-95bf28ad",
+                  "renderer": "SpriteRenderer",
+                  "x": 1999.0557,
+                  "y": -1183.44
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Shadow/Offset",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "pea_shadows_1",
+                  "texture": "sactx-0-4096x4096-BC7-GameplayItems_Atlas-437fd689",
+                  "renderer": "SpriteRenderer",
+                  "x": 1999.0557,
+                  "y": -1347
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Sprite",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-19842",
+                  "renderer": "SpriteRenderer",
+                  "x": 1999.0557,
+                  "y": -1183.44
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Shadow",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-15757",
+                  "renderer": "SpriteRenderer",
+                  "x": 1999.0557,
+                  "y": -1263.056
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "board": "ffb60baf3fb54d448ac562e736a6042f",
+          "items": [
+            {
+              "DataID": 9,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 346.91968,
+              "mPosY": 293,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 24,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 346.91968,
+              "mY": 293,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 57,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0,
+              "visuals": [
+                {
+                  "path": "Projectile-Pea(Clone)/Pea_Render/Sprite",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "SPR_Projectile_Pea",
+                  "texture": "sactx-0-4096x4096-DXT5|BC3-Atlas_VFXSprites-95bf28ad",
+                  "renderer": "SpriteRenderer",
+                  "x": -50000,
+                  "y": 0
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Shadow/Offset",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "pea_shadows_1",
+                  "texture": "sactx-0-4096x4096-BC7-GameplayItems_Atlas-437fd689",
+                  "renderer": "SpriteRenderer",
+                  "x": -50000,
+                  "y": -166.37999
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zombies": {
+        "board": "ffb60baf3fb54d448ac562e736a6042f",
+        "items": [
+          {
+            "native": {
+              "DataID": 10,
+              "mZombieType": "Normal",
+              "mZombiePhase": "ZombieNormal",
+              "mPosX": 592.40753,
+              "mPosY": 250,
+              "mGraveX": 0,
+              "mGraveY": 0,
+              "mVelX": 0.34629306,
+              "mAnimCounter": 92,
+              "mGroanCounter": 153,
+              "mAnimTicksPerFrame": 15,
+              "mAnimFrames": 12,
+              "mFrame": 6,
+              "mPrevFrame": 6,
+              "mVariant": false,
+              "mIsEating": false,
+              "mJustGotShotCounter": -52,
+              "mShieldJustGotShotCounter": 0,
+              "mShieldRecoilCounter": 0,
+              "mZombieAge": 323,
+              "mZombieHeight": "ZombieNormal",
+              "mPhaseCounter": 0,
+              "mBrainRate": 0,
+              "mFromWave": -1,
+              "mDroppedLoot": false,
+              "mZombieFade": -1,
+              "mFlatTires": false,
+              "mUseLadderCol": -1,
+              "mTargetCol": -1,
+              "mAltitude": 0,
+              "mHitUmbrella": false,
+              "mChilledCounter": 0,
+              "mButteredCounter": 0,
+              "mIceTrapCounter": 0,
+              "mMindControlled": false,
+              "mBlowingAway": false,
+              "mHasHead": true,
+              "mHasArm": true,
+              "mHasObject": false,
+              "mInPool": false,
+              "mOnHighGround": false,
+              "mYuckyFace": false,
+              "mYuckyFaceCounter": 0,
+              "mHelmType": "None",
+              "mBodyHealth": 99955,
+              "mBodyMaxHealth": 100000,
+              "mHelmHealth": 0,
+              "mHelmMaxHealth": 0,
+              "mShieldType": "None",
+              "mShieldHealth": 0,
+              "mShieldMaxHealth": 0,
+              "mFlyingHealth": 0,
+              "mFlyingMaxHealth": 0,
+              "mDead": false,
+              "mPlayingSong": false,
+              "mParticleOffsetX": 0,
+              "mParticleOffsetY": 0,
+              "mSummonCounter": 0,
+              "mScaleZombie": 1,
+              "mVelZ": 0,
+              "mOrginalAnimRate": 12,
+              "mBossMode": 0,
+              "mTargetRow": -1,
+              "mBossBungeeCounter": -1,
+              "mBossStompCounter": -1,
+              "mBossHeadCounter": -1,
+              "mFireballRow": -1,
+              "mIsFireBall": false,
+              "mLastPortalX": -1,
+              "mIsRetro": false,
+              "mIsBobsledLeader": false,
+              "mIsPushingBobsled": false,
+              "mBobsledAlpha": 0,
+              "mBobsledImageIndex": 0,
+              "mBungeeTargetRenderOrder": 0,
+              "mMustacheType": "None",
+              "mSunglassesType": "None",
+              "mX": 592.40753,
+              "mY": 250,
+              "mWidth": 120,
+              "mHeight": 120,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 323004,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 23,
+              "mShadowOffsetY": 92,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Plant2",
+              "mShadowImageIndex": 0,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            },
+            "eyes": null
+          }
+        ]
+      },
+      "screenshot": {
+        "accepted": true,
+        "file": "8fdde231909547eb83fa2c85cfe8902f.png",
+        "note": "Capture completes after rendering. Client waits for PNG.",
+        "completed": true,
+        "path": "/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted/UserData/DebugModApi/screenshots/8fdde231909547eb83fa2c85cfe8902f.png"
+      },
+      "teardown_errors": 3,
+      "fusion_loaded": true,
+      "speed_loaded": true,
+      "difficulty_loaded": false
+    },
+    {
+      "case": "difficulty-only",
+      "passed": true,
+      "status": {
+        "ready": true,
+        "code": "READY",
+        "board": "b97fd297b7ed4b00ac98dade5f19bfa2",
+        "scene": "Playing",
+        "debug": true,
+        "paused": false,
+        "fps": 60.06006
+      },
+      "speed": [
+        {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            }
+          ]
+        }
+      ],
+      "difficulty": [
+        {
+          "value": 5,
+          "name": "Extreme"
+        }
+      ],
+      "golden_bean_images": [
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/Icon",
+          "sprite": "",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 68.600006,
+          "height": 63.699997
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Speed_01",
+          "sprite": "SPR_MainHud_Acceleration_01",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 69.4848,
+          "height": 70.3991
+        },
+        {
+          "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/BottomRight/AccelerationVisibilityContainer/P_Acceleration/TWVisiblityContainer/FusionGoldenBean/GoldenBeanButton/Background/Image",
+          "sprite": "SPR_BasicButtonSmallBackground",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1,
+            "a": 1
+          },
+          "width": 98,
+          "height": 91
+        }
+      ],
+      "plant": {
+        "DataID": 2,
+        "mSeedType": "Peashooter",
+        "mPlantCol": 2,
+        "mAnimCounter": 58,
+        "mFrame": 3,
+        "mFrameLength": 17,
+        "mNumFrames": 5,
+        "mState": "Notready",
+        "mPlantHealth": 300,
+        "mPlantMaxHealth": 300,
+        "mSubclass": "Shooter",
+        "mDisappearCountdown": 200,
+        "mDoSpecialCountdown": 0,
+        "mStateCountdown": 0,
+        "mLaunchCounter": 141,
+        "mLaunchRate": 150,
+        "mTargetX": -1,
+        "mTargetY": -1,
+        "mStartRow": 0,
+        "mShootingCounter": 29,
+        "mBlinkCountdown": 185,
+        "mRecentlyEatenCountdown": 0,
+        "mEatenFlashCountdown": 0,
+        "mBeghouledFlashCountdown": 0,
+        "mShakeOffsetX": 0,
+        "mShakeOffsetY": 0,
+        "mWakeUpCounter": 0,
+        "mOnBungeeState": "NotOnBungee",
+        "mImitaterType": "Jalapeno",
+        "mPottedPlantIndex": -1,
+        "mAnimPing": false,
+        "mDead": false,
+        "mIsAsleep": false,
+        "mIsOnBoard": true,
+        "mHighlighted": false,
+        "mIsImitation": false,
+        "mX": 200,
+        "mY": 280,
+        "mWidth": 80,
+        "mHeight": 80,
+        "mVisible": true,
+        "mRow": 2,
+        "mRenderOrder": 322605,
+        "mSquished": false,
+        "mImageOffsetX": 0,
+        "mImageOffsetY": 0,
+        "mShadowOffsetX": -3,
+        "mShadowOffsetY": 51,
+        "mShadowScaleX": 1,
+        "mShadowScaleY": 1,
+        "mShadowRenderOrder": 220003,
+        "mShadowType": "Plant2",
+        "mShadowImageIndex": 0,
+        "mBungeeOffsetX": 0,
+        "mBungeeOffsetY": 0,
+        "visuals": {
+          "renderers": [
+            {
+              "name": "PeaShooter_Render",
+              "enabled": false,
+              "active": true,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "0",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "1",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "2",
+              "enabled": false,
+              "active": false,
+              "order": -14531,
+              "layer": 0,
+              "renderer": "MeshRenderer"
+            },
+            {
+              "name": "Shoot",
+              "enabled": true,
+              "active": true,
+              "order": 11,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_Head",
+              "enabled": true,
+              "active": true,
+              "order": 10,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink1",
+              "enabled": true,
+              "active": false,
+              "order": 12,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_blink2",
+              "enabled": true,
+              "active": false,
+              "order": 13,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_sprout",
+              "enabled": true,
+              "active": true,
+              "order": 9,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 8,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 7,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_frontleaf",
+              "enabled": true,
+              "active": true,
+              "order": 6,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_top",
+              "enabled": true,
+              "active": true,
+              "order": 5,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_stalk_bottom",
+              "enabled": true,
+              "active": true,
+              "order": 4,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_righttip",
+              "enabled": true,
+              "active": true,
+              "order": 3,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf_lefttip",
+              "enabled": true,
+              "active": true,
+              "order": 2,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "PeaShooter_backleaf",
+              "enabled": true,
+              "active": true,
+              "order": 1,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Shadow",
+              "enabled": true,
+              "active": true,
+              "order": 0,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            },
+            {
+              "name": "Offset",
+              "enabled": true,
+              "active": true,
+              "order": -22935,
+              "layer": 0,
+              "renderer": "SpriteRenderer"
+            }
+          ],
+          "groups": [
+            {
+              "name": "0",
+              "enabled": true,
+              "active": false,
+              "order": 4,
+              "layer": 0
+            },
+            {
+              "name": "1",
+              "enabled": true,
+              "active": false,
+              "order": 3,
+              "layer": 0
+            },
+            {
+              "name": "2",
+              "enabled": true,
+              "active": false,
+              "order": 2,
+              "layer": 0
+            },
+            {
+              "name": "Fusion-BlazePeaPrefab",
+              "enabled": true,
+              "active": true,
+              "order": -14531,
+              "layer": 0
+            }
+          ]
+        }
+      },
+      "projectiles": [
+        {
+          "board": "b97fd297b7ed4b00ac98dade5f19bfa2",
+          "items": [
+            {
+              "DataID": 20,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 354.90964,
+              "mPosY": 291,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 27,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 354.90964,
+              "mY": 291,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 59,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            }
+          ]
+        },
+        {
+          "board": "b97fd297b7ed4b00ac98dade5f19bfa2",
+          "items": [
+            {
+              "DataID": 20,
+              "mFrame": 0,
+              "mNumFrames": 1,
+              "mAnimCounter": 0,
+              "mPosX": 374.88956,
+              "mPosY": 291,
+              "mPosZ": 0,
+              "mVelX": 0,
+              "mVelY": 0,
+              "mVelZ": 0,
+              "mAccZ": 0,
+              "mShadowY": 347,
+              "mDead": false,
+              "mAnimTicksPerFrame": 0,
+              "mMotionType": "Straight",
+              "mProjectileType": "PeashooterPea",
+              "mProjectileAge": 33,
+              "mClickBackoffCounter": 0,
+              "mRotation": 0,
+              "mRotationSpeed": 0,
+              "mOnHighGround": false,
+              "mDamageRangeFlags": "Ground",
+              "mHitTorchwoodGridX": -1,
+              "mCobTargetX": 0,
+              "mCobTargetRow": 0,
+              "mLastPortalX": -1,
+              "mX": 374.88956,
+              "mY": 291,
+              "mWidth": 40,
+              "mHeight": 40,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 325000,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 59,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Pea",
+              "mShadowImageIndex": 1,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0,
+              "visuals": [
+                {
+                  "path": "Projectile-Pea(Clone)/Pea_Render/Sprite",
+                  "enabled": false,
+                  "active": true,
+                  "sprite": "SPR_Projectile_Pea",
+                  "texture": "sactx-0-4096x4096-DXT5|BC3-Atlas_VFXSprites-95bf28ad",
+                  "renderer": "SpriteRenderer",
+                  "x": 2043.1885,
+                  "y": -1180.62
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Shadow/Offset",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "pea_shadows_1",
+                  "texture": "sactx-0-4096x4096-BC7-GameplayItems_Atlas-437fd689",
+                  "renderer": "SpriteRenderer",
+                  "x": 2043.1885,
+                  "y": -1347
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Sprite",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-19842",
+                  "renderer": "SpriteRenderer",
+                  "x": 2043.1885,
+                  "y": -1180.62
+                },
+                {
+                  "path": "Projectile-Pea(Clone)/Fusion-BlazeProjectile/Bullet_pea_jala/Shadow",
+                  "enabled": true,
+                  "active": true,
+                  "sprite": "",
+                  "texture": "FusionBlazeProjectile-15757",
+                  "renderer": "SpriteRenderer",
+                  "x": 2043.1885,
+                  "y": -1260.2361
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "zombies": {
+        "board": "b97fd297b7ed4b00ac98dade5f19bfa2",
+        "items": [
+          {
+            "native": {
+              "DataID": 11,
+              "mZombieType": "Normal",
+              "mZombiePhase": "ZombieNormal",
+              "mPosX": 588.72687,
+              "mPosY": 250,
+              "mGraveX": 0,
+              "mGraveY": 0,
+              "mVelX": 0.3976964,
+              "mAnimCounter": 87,
+              "mGroanCounter": 141,
+              "mAnimTicksPerFrame": 12,
+              "mAnimFrames": 12,
+              "mFrame": 7,
+              "mPrevFrame": 7,
+              "mVariant": false,
+              "mIsEating": false,
+              "mJustGotShotCounter": -56,
+              "mShieldJustGotShotCounter": 0,
+              "mShieldRecoilCounter": 0,
+              "mZombieAge": 308,
+              "mZombieHeight": "ZombieNormal",
+              "mPhaseCounter": 0,
+              "mBrainRate": 0,
+              "mFromWave": -1,
+              "mDroppedLoot": false,
+              "mZombieFade": -1,
+              "mFlatTires": false,
+              "mUseLadderCol": -1,
+              "mTargetCol": -1,
+              "mAltitude": 0,
+              "mHitUmbrella": false,
+              "mChilledCounter": 0,
+              "mButteredCounter": 0,
+              "mIceTrapCounter": 0,
+              "mMindControlled": false,
+              "mBlowingAway": false,
+              "mHasHead": true,
+              "mHasArm": true,
+              "mHasObject": false,
+              "mInPool": false,
+              "mOnHighGround": false,
+              "mYuckyFace": false,
+              "mYuckyFaceCounter": 0,
+              "mHelmType": "None",
+              "mBodyHealth": 99978,
+              "mBodyMaxHealth": 100000,
+              "mHelmHealth": 0,
+              "mHelmMaxHealth": 0,
+              "mShieldType": "None",
+              "mShieldHealth": 0,
+              "mShieldMaxHealth": 0,
+              "mFlyingHealth": 0,
+              "mFlyingMaxHealth": 0,
+              "mDead": false,
+              "mPlayingSong": false,
+              "mParticleOffsetX": 0,
+              "mParticleOffsetY": 0,
+              "mSummonCounter": 0,
+              "mScaleZombie": 1,
+              "mVelZ": 0,
+              "mOrginalAnimRate": 12,
+              "mBossMode": 0,
+              "mTargetRow": -1,
+              "mBossBungeeCounter": -1,
+              "mBossStompCounter": -1,
+              "mBossHeadCounter": -1,
+              "mFireballRow": -1,
+              "mIsFireBall": false,
+              "mLastPortalX": -1,
+              "mIsRetro": false,
+              "mIsBobsledLeader": false,
+              "mIsPushingBobsled": false,
+              "mBobsledAlpha": 0,
+              "mBobsledImageIndex": 0,
+              "mBungeeTargetRenderOrder": 0,
+              "mMustacheType": "None",
+              "mSunglassesType": "None",
+              "mX": 588.72687,
+              "mY": 250,
+              "mWidth": 120,
+              "mHeight": 120,
+              "mVisible": true,
+              "mRow": 2,
+              "mRenderOrder": 323004,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 23,
+              "mShadowOffsetY": 92,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 220003,
+              "mShadowType": "Plant2",
+              "mShadowImageIndex": 0,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            },
+            "eyes": null
+          }
+        ]
+      },
+      "screenshot": {
+        "accepted": true,
+        "file": "0605a82ddedb40e78b35efee3f4e3588.png",
+        "note": "Capture completes after rendering. Client waits for PNG.",
+        "completed": true,
+        "path": "/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted/UserData/DebugModApi/screenshots/0605a82ddedb40e78b35efee3f4e3588.png"
+      },
+      "teardown_errors": 3,
+      "fusion_loaded": true,
+      "speed_loaded": false,
+      "difficulty_loaded": true
+    }
+  ],
+  "installed_sha256": {
+    "FusionMod.dll": "22c81c08749a7e6eaff09ab06744bd6538c47490fd00068053092935aa670d9a",
+    "SpeedMod.dll": "17b5e09e20b103120e06234e81f4e5ae89612452b546cdad02dd8ed439acba01",
+    "DifficultyMod.dll": "3d7442ce832d455469f75eea75e53f5e88b5bd441cc373e97e6e67232dfa1599"
+  }
+}

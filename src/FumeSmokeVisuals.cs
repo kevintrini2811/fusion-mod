@@ -29,7 +29,7 @@ internal static partial class ImportedPeaVisuals
         internal readonly SmokeParticle[] Particles;
         internal readonly SmokeProfile Profile;
         internal int Tick, Age;
-        internal readonly SpeedMod.VisualClock Clock = new();
+        internal readonly FusionVisualClock Clock = new();
         internal SmokeView(Board board, GameObject root, SmokeParticle[] particles, SmokeProfile profile)
         { Board = board; Root = root; Particles = particles; Profile = profile; Tick = board.mMainCounter; }
     }

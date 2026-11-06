@@ -1,12 +1,12 @@
-# Fusion Mod 22.2.1
+# Fusion Mod 22.2.2
 
-Version 22.2.1 fixes intermittent three-mushroom overlap after native render-order compression. Both lower slots receive a logical depth gap that remains distinct in Unity, including native Sun-shrooms and imported mini fusions. Position, growth and gameplay remain unchanged. [Native evidence and live rendering checks](references/shroom-depth-22-2-1/validation.md).
+Version 22.2.2 makes Speed Mod and Difficulty Mod optional. Imported animations use Speed Mod when installed; the golden bean remains available beside the native speed controls without it. Fusion releases leave optional mods untouched. [Review and live dependency matrix](references/optional-dependencies-22-2-2/validation.md).
 
 ## Dependencies
 
 - Game/runtime: PvZ Replanted (Windows/IL2CPP), MelonLoader 0.7.3, and .NET 6.
-- Required mods: `BloomEngine.dll`, `LawnGlove.dll (Glove Mod)`, `PlantLibrary.dll`, `ZombieLibrary.dll`, `SpeedMod.dll`.
-- Optional integrations: `DebugMod`.
+- Required mods: `BloomEngine.dll`, `LawnGlove.dll (Glove Mod)`, `PlantLibrary.dll`, `ZombieLibrary.dll`.
+- Optional integrations: `DebugMod`, `SpeedMod`, `DifficultyMod`.
 - Building: .NET SDK with `net6.0` support and the game/MelonLoader reference assemblies declared in `FusionMod.csproj`.
 
 ## Hot Potato, Boomwood and zombie fixes (22.2.0)
@@ -94,7 +94,7 @@ In almanacs, cards and duck cards, the hypnopea zombie only gets the head includ
 
 ## Standalone speed control (20.0.2)
 
-Fast forward and slow motion are now part of the standalone [Speed ​​Mod](../speed-mod/README.md). Fusion requires `SpeedMod.dll`, uses its UI anchors and limits visible imported animations to 2× from game speed 10×. Imported projectiles then skip pose calculation and visual rotations. Simulation, hits and projectile flight remain unchanged. Build and static native analysis do not replace playtesting; The user is responsible for manual acceptance.
+Fast forward and slow motion are now part of the standalone [Speed ​​Mod](../speed-mod/README.md). Speed Mod and Difficulty Mod are optional. When Speed Mod is installed, Fusion uses its UI anchors and limits visible imported animations to 2× from game speed 10×. At those speeds, imported projectiles skip pose calculation and visual rotations. Without Speed Mod, the golden bean uses the native speed button as its anchor and animations retain native timing. Simulation, hits and projectile flight remain unchanged. Build and static native analysis do not replace playtesting; The user is responsible for manual acceptance.
 
 ## Debug level transition (20.0.1)
 

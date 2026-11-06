@@ -1,10 +1,10 @@
 using LawnGlove;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(FusionMod.FusionMod), "Plant Fusion", "22.2.1", "Kevin / Codex")]
+[assembly: MelonInfo(typeof(FusionMod.FusionMod), "Plant Fusion", "22.2.2", "Kevin / Codex")]
 [assembly: MelonGame("PopCap Games", "PvZ Replanted")]
-[assembly: MelonOptionalDependencies("DebugMod")]
-[assembly: MelonAdditionalDependencies("LawnGlove", "PlantLibrary", "ZombieLibrary", "SpeedMod")]
+[assembly: MelonOptionalDependencies("DebugMod", "SpeedMod", "DifficultyMod")]
+[assembly: MelonAdditionalDependencies("LawnGlove", "PlantLibrary", "ZombieLibrary")]
 
 namespace FusionMod;
 

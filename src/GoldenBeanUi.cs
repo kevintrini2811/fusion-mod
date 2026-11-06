@@ -1,4 +1,4 @@
-using SpeedMod;
+using Il2Cpp;
 using Il2CppTMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,14 +10,17 @@ namespace FusionMod;
 internal sealed class GoldenBeanUi : IDisposable
 {
     private readonly GameObject root;
+    private readonly TimeCycler speed;
+    private RectTransform Anchor => OptionalSpeed.SlowdownAnchor ?? speed.m_button.GetComponent<RectTransform>();
     private readonly TMP_Text nativeBalance, balance;
     private readonly Image image;
     private readonly Texture2D texture;
     private readonly Sprite sprite;
 
-    private GoldenBeanUi(TMP_Text nativeLabel, RectTransform anchor)
+    private GoldenBeanUi(TMP_Text nativeLabel, TimeCycler cycler, RectTransform anchor)
     {
         nativeBalance = nativeLabel;
+        speed = cycler;
         var staging = new GameObject("FusionGoldenBeanStaging");
         staging.SetActive(false);
         root = new GameObject("FusionGoldenBean");
@@ -36,7 +39,7 @@ internal sealed class GoldenBeanUi : IDisposable
             sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(.5f, .5f), 100);
             // The slowdown anchor is a layout wrapper, not a Button. Borrow
             // the native speed button as artwork; anchor only owns position.
-            var plate = NativeUi.Clone(BoardSpeed.Cycler!.m_button.gameObject, staging.transform, rect, "GoldenBeanButton");
+            var plate = NativeUi.Clone(speed.m_button.gameObject, staging.transform, rect, "GoldenBeanButton");
             var button = plate.GetComponent<Button>();
             var background = button.targetGraphic
                 ?? throw new InvalidOperationException("Native speed button background is unavailable.");
@@ -63,7 +66,7 @@ internal sealed class GoldenBeanUi : IDisposable
             icon.offsetMin = icon.offsetMax = Vector2.zero;
             image = icon.gameObject.AddComponent<Image>(); image.sprite = sprite; image.preserveAspect = true;
             image.raycastTarget = false;
-            balance = NativeUi.CloneCaption(BoardSpeed.Cycler!.m_textMeshProUGUI, rect, "LevelMoney");
+            balance = NativeUi.CloneCaption(speed.m_textMeshProUGUI, rect, "LevelMoney");
             rect.SetParent(anchor.parent, false);
             Position(anchor);
         }
@@ -75,11 +78,12 @@ internal sealed class GoldenBeanUi : IDisposable
     {
         var label = Object.FindObjectsOfType<TMP_Text>()
             .FirstOrDefault(text => text.name == "CoinBank_Label" && text.gameObject.activeInHierarchy);
-        var speed = BoardSpeed.Cycler;
+        var speed = Object.FindObjectsOfType<TimeCycler>()
+            .FirstOrDefault(value => value && value.gameObject.activeInHierarchy && value.m_button != null);
         if (label == null || speed == null) return null;
-        var anchor = BoardSpeed.SlowdownAnchor;
+        var anchor = OptionalSpeed.SlowdownAnchor ?? speed.m_button.GetComponent<RectTransform>();
         if (anchor == null) return null;
-        return anchor.rect.width > 0 && anchor.rect.height > 0 ? new GoldenBeanUi(label, anchor) : null;
+        return anchor.rect.width > 0 && anchor.rect.height > 0 ? new GoldenBeanUi(label, speed, anchor) : null;
     }
 
     private void Position(RectTransform anchor)
@@ -96,12 +100,12 @@ internal sealed class GoldenBeanUi : IDisposable
     internal void Update(bool visible, bool selected, bool debug, string money)
     {
         if (!root) return;
-        var speed = BoardSpeed.Cycler;
-        root.SetActive(visible && speed != null);
-        if (speed != null)
+        bool ready = speed != null && speed && speed.gameObject.activeInHierarchy;
+        root.SetActive(visible && ready);
+        if (ready)
         {
-            if (BoardSpeed.SlowdownAnchor is { } anchor) Position(anchor);
-            NativeUi.MatchCaption(balance, speed.m_textMeshProUGUI);
+            Position(Anchor);
+            NativeUi.MatchCaption(balance, speed!.m_textMeshProUGUI);
         }
         if (debug && nativeBalance != null) nativeBalance.text = "∞";
         image.color = selected ? new Color(1, .8f, .25f) : Color.white;

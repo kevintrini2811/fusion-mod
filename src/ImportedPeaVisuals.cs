@@ -1071,7 +1071,7 @@ internal static partial class ImportedPeaVisuals
                     renderer.sprite = assets.Sprites[(int)Evaluate(binding.Channels[0], time % clip.Duration)];
         }
 
-        private readonly SpeedMod.VisualClock visualClock = new();
+        private readonly FusionVisualClock visualClock = new();
 
         internal void Update()
         {

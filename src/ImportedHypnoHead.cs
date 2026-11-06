@@ -34,7 +34,7 @@ internal static partial class ImportedPeaVisuals
 
     private sealed class HypnoHeadView : IDisposable
     {
-        private readonly SpeedMod.VisualClock visualClock = new();
+        private readonly FusionVisualClock visualClock = new();
         private readonly Zombie zombie;
         private readonly uint id;
         private readonly Reanimation head;

@@ -6,7 +6,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>22.2.1</Version>
+    <Version>22.2.2</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>
@@ -59,7 +59,6 @@
     <EmbeddedResource Include="assets/zombie-block-projectile/*" LogicalName="FusionMod.ZombieBlockProjectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/zombie-block2-projectile/*" LogicalName="FusionMod.ZombieBlock2Projectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/zombie-block3-projectile/*" LogicalName="FusionMod.ZombieBlock3Projectile.%(Filename)%(Extension)" />
-    <ProjectReference Include="../speed-mod/SpeedMod.csproj" Private="false" />
     <ProjectReference Include="../plant-library/PlantLibrary.csproj" Private="false" />
     <ProjectReference Include="../zombie-library/ZombieLibrary.csproj" Private="false" />
     <ProjectReference Include="../glove-mod/LawnGlove.csproj" Private="false" />

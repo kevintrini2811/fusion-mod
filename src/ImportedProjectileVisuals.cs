@@ -605,7 +605,7 @@ internal static partial class ImportedPeaVisuals
                 if (SquashLobbers.Family(projectile) is 6 or 8 or 9)
                     root.transform.localScale = Vector3.Scale(root.transform.localScale, new Vector3(1, .5f, 1));
             }
-            bool animatePose = !SpeedMod.VisualClock.Reduced || !poseReady;
+            bool animatePose = !OptionalSpeed.Reduced || !poseReady;
             if (animatePose && assets == DoomMeteorProjectileAssets)
                 root!.transform.localRotation = Quaternion.Euler(0, 0, -projectile.mProjectileAge * 1.8f);
             sorting!.sortingLayerID = anchor!.sortingLayerID;

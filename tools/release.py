@@ -66,8 +66,6 @@ def release(game, requested):
     old_library = library_installed.read_bytes() if library_installed.exists() else None
     zombie_installed = game/'Mods/ZombieLibrary.dll'
     old_zombie = zombie_installed.read_bytes() if zombie_installed.exists() else None
-    speed_installed = game/'Mods/SpeedMod.dll'
-    old_speed = speed_installed.read_bytes() if speed_installed.exists() else None
     old_hash = sha256(installed)
     old_version = dll_version(installed)
     if old_version != previous:
@@ -116,40 +114,25 @@ def release(game, requested):
             if zombie_backup.exists() and zombie_backup.read_bytes() != old_zombie:
                 raise ValueError('ZombieLibrary backup exists with different content')
             atomic_bytes(zombie_backup, old_zombie)
-        speed_built = PROJECT.parent/'speed-mod/bin/Release/net6.0/SpeedMod.dll'
-        speed_payload = speed_built.read_bytes()
-        if (speed_installed.read_bytes() if speed_installed.exists() else None) != old_speed:
-            raise ValueError('Installed SpeedMod changed during release; refusing to overwrite')
-        if old_speed is not None:
-            speed_backup = PROJECT/f'backup/SpeedMod-before-FusionMod-{old_version}.dll'
-            if speed_backup.exists() and speed_backup.read_bytes() != old_speed:
-                raise ValueError('SpeedMod backup exists with different content')
-            atomic_bytes(speed_backup, old_speed)
         deployed = True
-        atomic_bytes(speed_installed, speed_payload)
         atomic_bytes(zombie_installed, zombie_payload)
         atomic_bytes(library_installed, library_payload)
         atomic_bytes(installed, built.read_bytes())
         if built.read_bytes() != installed.read_bytes() or dll_version(installed) != target:
             raise ValueError('Installation binary/version mismatch')
-        checksums = ''.join(f'{sha256(game/"Mods"/name)}  {name}\n' for name in ('LawnGlove.dll', 'PlantLibrary.dll', 'ZombieLibrary.dll', 'SpeedMod.dll', 'FusionMod.dll'))
+        checksums = ''.join(f'{sha256(game/"Mods"/name)}  {name}\n' for name in ('LawnGlove.dll', 'PlantLibrary.dll', 'ZombieLibrary.dll', 'FusionMod.dll'))
         atomic_bytes(checksum_path, checksums.encode())
         proof = dict(version=target, previous_version=old_version, backup=str(backup),
                      installed=str(installed), built_sha256=sha256(built), installed_sha256=sha256(installed),
                      backup_sha256=sha256(backup), game_started=False, runtime_tests=False,
                      library_built_sha256=sha256(library_built), library_installed_sha256=sha256(library_installed),
                      zombie_built_sha256=sha256(zombie_built), zombie_installed_sha256=sha256(zombie_installed),
-                     speed_built_sha256=sha256(speed_built), speed_installed_sha256=sha256(speed_installed),
                      static_checks=True, assets={str(p.relative_to(PROJECT)):sha256(p)
                      for p in sorted((PROJECT/'assets').glob('*/*')) if p.is_file()})
         atomic_json(PROJECT/f'references/release-{target}.json', proof)
         print(f'Released {target}; backup {backup.name}; DLL binary/version verified; SHA256SUMS updated')
     except BaseException:
         if deployed:
-            if old_speed is None:
-                speed_installed.unlink(missing_ok=True)
-            else:
-                atomic_bytes(speed_installed, old_speed)
             if old_zombie is None:
                 zombie_installed.unlink(missing_ok=True)
             else:
