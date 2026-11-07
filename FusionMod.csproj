@@ -6,10 +6,14 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>22.3.4</Version>
+    <Version>22.4.0</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="assets/iron-kernel-projectile/*" LogicalName="FusionMod.IronKernelProjectile.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/iron-butter-projectile/*" LogicalName="FusionMod.IronButterProjectile.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/hypno-chomper/*" LogicalName="FusionMod.HypnoChomper.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/bolt-pult/*" LogicalName="FusionMod.BoltPult.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/fire-nut-projectile/*" LogicalName="FusionMod.FireNutProjectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/cherry-drone-projectile/*" LogicalName="FusionMod.CherryDroneProjectile.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/eyes-armor/*.png;assets/eyes-armor/placement.json" LogicalName="FusionMod.EyesArmor.%(Filename)%(Extension)" />

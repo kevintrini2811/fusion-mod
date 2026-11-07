@@ -28,7 +28,7 @@ internal static class BucketPlants
         return SeaFusions.CanFeed(plant, incoming) || ChomperFusions.Active(plant)
             && (incoming == FusionPlant.FootballHelmet && identity == FusionPlant.FootballNut
                 || incoming == FusionPlant.Bucket && (IsIron(identity) || identity == FusionPlant.IronSquash
-                    || identity == FusionPlant.RustShroom || identity == FusionPlant.MetalPult || identity == FusionPlant.IronStar));
+                    || identity == FusionPlant.RustShroom || identity == FusionPlant.MetalPult || identity == FusionPlant.BoltPult || identity == FusionPlant.IronStar));
     }
     internal static void Feed(Plant plant)
     {

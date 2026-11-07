@@ -10,7 +10,7 @@
     "references/golden-bean-10-0-0/upgrades.json": "7331599ac457e7c7a0fd9dd31addc232d2ce95759a78e6359ab6a3395f1c441f",
     "references/fusion-almanac/LawnStringsTranslate.en.json": "2b37fd12ccd7083f322bdd5df9702db289ec28c02d95de48e32b20d177d55d67",
     "references/fusion-almanac/LawnStringsTranslate.de.json": "5f3068dd5f7f41891de58c85601962c58aa3fe46ef138cb504b2876af5c5d1cc",
-    "references/fusion-almanac/translations.de.json": "ddcc8666828fbeb59f47088faf0e93e27563795691b52f10595cf934d8657c26",
+    "references/fusion-almanac/translations.de.json": "579d5961b21836b85bb613b98c679fd7a2c693122b2d91f779d734cea242b49e",
     "references/fusion-almanac/PlantType.cs": "b5befa63bcfa46ace0bb46675d3b2a4bb27933850940e4955cc1d33376bafb2d",
     "references/fusion-almanac/adaptations.json": "87b5ac315bd602c340d103049edb6079b9ede57521531798e1bca0ce921f9e5a",
     "references/fusion-almanac/portrait-aliases.json": "37712e7bc87937df1a9ce535720d0dc4c5fc83478cba6a062d32de85968fc9eb",
@@ -148,6 +148,14 @@
       "serialized_file": "resources.assets",
       "sprite_path_id": 15644,
       "texture_path_id": 2529
+    },
+    {
+      "source_id": 1211,
+      "source_enum": "IronCorn",
+      "sprite_name": "IronCorn",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 15798,
+      "texture_path_id": 2688
     },
     {
       "source_id": 1044,
@@ -1036,6 +1044,14 @@
       "serialized_file": "resources.assets",
       "sprite_path_id": 15686,
       "texture_path_id": 2573
+    },
+    {
+      "source_id": 1335,
+      "source_enum": "HypnoChomper",
+      "sprite_name": "HypnoChomper",
+      "serialized_file": "resources.assets",
+      "sprite_path_id": 16263,
+      "texture_path_id": 3181
     },
     {
       "source_id": 1230,
@@ -2808,7 +2824,7 @@
     "1301.png": "6e99e13a989582ce24722f620985679da89140fe28f4eef4c05ed919dd0cadae",
     "1115.png": "c378269e6fa7a2373580467072e9dbc2395603c14766fb5cafbe27adb7dd15a8",
     "1206.png": "491bc6a52fd3cfc67200b54c3a3ab871284e5d496a3a13408519ac2a2e9d15f6",
-    "catalog.json": "4680f52b890d93cc6e068b8ae0afee9bc6c9a0723d1f2ab1bb9879d6f59364ab",
+    "catalog.json": "82c67d045cddb0818caaa7e3d4053c46cda97bcc6fd26b57f52768547f640624",
     "1067.png": "49fac03891dd6a55300cbf7b611abb77f331579bd49fe6b78eb3d03475cb3e87",
     "1150.png": "7f74e9ca4f8d6f6fa07da9e0a02ab0663205a064d6cf41585d3460c9ea02a902",
     "1060.png": "855b9784de8719de225b00cef1587bbedb1cffb7e8066493a5904bc9333a07f0",
@@ -3002,6 +3018,8 @@
     "1421.png": "ae55576dbd02978d9e5ff22a2dc8a8645c481cbb90defd65d57d85ad36dec816",
     "1155.png": "a67fff65f2b44d2998f5467e73faa64237ac51b486aef154a4159eb65494014c",
     "1059.png": "b55cc9089946c7ac63eb0d9670be00585f5788fa92a5563764cde80f6d430020",
-    "1061.png": "660508a3ed7e7e2a78fef7b7999cd3f7ad1bad576b49bb3b372e0b1b843117e0"
+    "1061.png": "660508a3ed7e7e2a78fef7b7999cd3f7ad1bad576b49bb3b372e0b1b843117e0",
+    "1211.png": "17278f1d18ea3f05d5205cab8e6e3c7a6bc8f8670b70e64c45bc3735a04a6c76",
+    "1335.png": "ac22534a85e213ac828a1c1922f1de32c2af6a298238c393d8ea9234a3e330f0"
   }
 }

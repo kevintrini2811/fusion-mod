@@ -1,6 +1,7 @@
 <Project>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)SourceUnit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TorchConverters.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PlantLibraryImpact.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)../../src/ThreetatoMine.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)../MineFusionsStubs.cs" />

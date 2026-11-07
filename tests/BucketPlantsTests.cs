@@ -184,7 +184,7 @@ BucketPlants.Feed(ironSquash);
 Check(ironSquash.mPlantHealth == 1000, "Iron Squash feeding respects maximum health");
 Console.WriteLine($"{assertions} offline assertions passed. No game loaded or started.");
 
-foreach(var type in new[]{FusionPlant.RustShroom,FusionPlant.MetalPult,FusionPlant.IronStar}) {
+foreach(var type in new[]{FusionPlant.RustShroom,FusionPlant.MetalPult,FusionPlant.BoltPult,FusionPlant.IronStar}) {
  var upgrade=Make(type);upgrade.mPlantMaxHealth=2000;upgrade.mPlantHealth=1200;upgrade.mStartRow=42;
  Check(BucketPlants.CanFeed(upgrade,FusionPlant.Bucket),"metal upgrades accept repair buckets");
  Check(!BucketPlants.CanFeed(upgrade,FusionPlant.FootballHelmet),"unimplemented helmet upgrade not treated as repair");

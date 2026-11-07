@@ -1,0 +1,2 @@
+/tmp/hypno-splash-review.Ey4DW2/tests/MineFusionsStubs.cs(232,69): warning CS0649: Field 'SupportTorchFusions.OnConvert' is never assigned to, and will always have its default value null [/tmp/hypno-splash-review.Ey4DW2/tests/SolarChomperTests.csproj]
+Solar/chomper offline checks: 55 assertions passed; no game code loaded.

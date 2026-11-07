@@ -1,0 +1,44 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 115631
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 125439
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 125269
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 121896
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 126222
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 192926
+      }
+    }
+  ],
+  "m_Layer": 9,
+  "m_Name": "IronCornPrefab",
+  "m_Tag": 20001,
+  "m_IsActive": true
+}

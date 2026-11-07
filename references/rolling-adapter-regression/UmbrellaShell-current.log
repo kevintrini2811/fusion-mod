@@ -1,0 +1,2 @@
+/home/kevin/modding/pvzreplanted/fusion-mod/tests/MineFusionsStubs.cs(232,69): warning CS0649: Field 'SupportTorchFusions.OnConvert' is never assigned to, and will always have its default value null [/home/kevin/modding/pvzreplanted/fusion-mod/tests/UmbrellaShellTests.csproj]
+Umbrella Shell: 62 offline assertions passed.

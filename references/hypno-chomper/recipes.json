@@ -1,0 +1,15 @@
+[
+  {
+    "plant1": "Chomper",
+    "plant2": "Hypno-shroom",
+    "fusion": "Hypno Chomper",
+    "plant1_id": 5,
+    "plant2_id": 8,
+    "fusion_id": 1335,
+    "both_orders": true,
+    "registration_rvas": [
+      "0x47a25d",
+      "0x47a275"
+    ]
+  }
+]

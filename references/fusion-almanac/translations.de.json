@@ -2347,6 +2347,20 @@
       "Flavor": "Nach der Feuerprobe ist er immer noch der alte Stachel: nur klüger, glänzender und bereit, den Zombies einen wärmeren Empfang zu bereiten.",
       "Notes": "",
       "EnglishSha256": "22711468c9192a86832e160e77593f65177bc5b403dc63c5135d3deeddcafdd3"
+    },
+    "1335": {
+      "Name": "Hypnoschnapper",
+      "Info": "Der Hypnoschnapper verschlingt hypnotisierte Zombies und wandelt sie in Hypnopilze um.\n\nSchaden: Sofortiger Tod (Verschlingen)\nVerdauungszeit: 40 s\nBesonderheiten:\n• Er greift auch hypnotisierte Zombies an. Nach erfolgreichem Verschlingen eines hypnotisierten Zombies hinterlässt er ein Hypnopilz-Saatpäckchen und verdaut 10 s.\n• Wird er gebissen, hypnotisiert er den Angreifer und verwandelt sich in einen gewöhnlichen Schnapper zurück.",
+      "Flavor": "Der Hypnoschnapper blickt auf seine Schnapperkollegen herab. Er hält sie für grobe, wählerische und faule Schmarotzer, die nichts zum Garten beitragen – ganz anders als er mit seiner strahlend schönen Haut.",
+      "Notes": "",
+      "EnglishSha256": "073b74abdeadddae7085cc01c1c1a0a9265f30ec1e5098c26ddcd51f9a22536b"
+    },
+    "1211": {
+      "Name": "Bolzenapult",
+      "Info": "Das Bolzenapult wirft eiserne Maiskörner oder eiserne Butter, die besonders wirksam gegen Rüstung vom Typ 1 ist.\n\nWiderstandskraft: 2000\nSchaden: 80/3 s\nBesonderheiten: Metallpflanze. Wirft mit 25 % Wahrscheinlichkeit eiserne Butter für 100 Schaden. Diese betäubt das Ziel 4 s und entfernt seine Rüstung vom Typ 1 sofort.",
+      "Flavor": "Das Bolzenapult denkt seit einiger Zeit über Rostschutzfarbe nach. Seine Butter schmeckt stets etwas rostig, was seine Pläne für Butterkuchen für seine Brüder erheblich erschwert. „Butter mit Rostgeschmack taugt wohl nur noch zum Kampf gegen Zombies.“",
+      "Notes": "",
+      "EnglishSha256": "d1c8b9bcac6bd4fe26c9daee60daf96865878fb55809b673492a79eb701d02e7"
     }
   }
 }

@@ -1,0 +1,341 @@
+[12:02:47.844] [MelonLoader.Bootstrap] Using HostFXR Path: C:\Program Files\dotnet\host\fxr\6.0.36\hostfxr.dll
+[12:02:47.845] [MelonLoader.Bootstrap] Using .NET runtime: 'C:\Program Files\dotnet\host\fxr\6.0.36\hostfxr.dll'
+
+[12:02:48.697] ------------------------------
+[12:02:48.699] MelonLoader v0.7.3 Open-Beta
+[12:02:48.700] OS: Wine/Proton 11.0
+[12:02:48.701] Hash Code: BDD43DC0F3893C208C95389B863AB61C967AE14204DA0DD8051647E754C8709B
+[12:02:48.702] ------------------------------
+[12:02:48.703] Game Type: Il2cpp
+[12:02:48.704] Game Arch: x64
+[12:02:48.705] ------------------------------
+[12:02:48.706] Command-Line:
+[12:02:48.707] ------------------------------
+[12:02:48.708] Core::BasePath = S:\steamapps\common\PVZ Replanted
+[12:02:48.712] Game::BasePath = S:\steamapps\common\PVZ Replanted
+[12:02:48.713] Game::DataPath = S:\steamapps\common\PVZ Replanted\Replanted_Data
+[12:02:48.714] Game::ApplicationPath = S:\steamapps\common\PVZ Replanted\Replanted.exe
+[12:02:48.715] Runtime Type: net6
+[12:02:48.805] ------------------------------
+[12:02:48.806] Game Name: PvZ Replanted
+[12:02:48.807] Game Developer: PopCap Games
+[12:02:48.810] Unity Version: 6000.0.52f1
+[12:02:48.811] Game Version: 1.5.1469_Steam
+[12:02:48.811] ------------------------------
+
+[12:02:49.349] Preferences Loaded!
+
+[12:02:49.377] Loading UserLibs...
+[12:02:49.387] 0 UserLibs loaded.
+
+[12:02:49.388] Loading Plugins...
+[12:02:49.395] 0 Plugins loaded.
+
+[12:02:50.235] Loading Il2CppAssemblyGenerator...
+[12:02:50.295] [Il2CppAssemblyGenerator] Contacting RemoteAPI...
+[12:02:50.680] [Il2CppAssemblyGenerator] Game Not Found on RemoteAPI Host (https://api.melonloader.com/api/v1/game/pvz-replanted)
+[12:02:50.681] [Il2CppAssemblyGenerator] RemoteAPI.DumperVersion = null
+[12:02:50.683] [Il2CppAssemblyGenerator] RemoteAPI.ObfuscationRegex = null
+[12:02:50.684] [Il2CppAssemblyGenerator] RemoteAPI.MappingURL = null
+[12:02:50.685] [Il2CppAssemblyGenerator] RemoteAPI.MappingFileSHA512 = null
+[12:02:50.694] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[12:02:50.696] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1-ci.845+f03c8f4ae507d47ea814f3d11d1ec6b0391c1576
+[12:02:50.697] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 6000.0.52
+[12:02:50.699] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[12:02:50.704] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[12:02:50.706] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[12:02:50.708] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[12:02:50.709] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[12:02:50.913] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[12:02:50.914] Loading Mods...
+[12:02:50.980] ------------------------------
+[12:02:50.987] Melon Assembly loaded: '.\Mods\BloomEngine.dll'
+[12:02:50.988] SHA256 Hash: '5181092DB5DE3746CBCF64B4EC6B0B0923D86A547EB21B9B3244E403D65F2C93'
+[12:02:51.048] Melon Assembly loaded: '.\Mods\DebugMod.dll'
+[12:02:51.049] SHA256 Hash: '8ACE0191F89CFD3930DADEA2249B51E6A9E063E2525E28BE246EEDAC1AE671C6'
+[12:02:51.054] Melon Assembly loaded: '.\Mods\DifficultyMod.dll'
+[12:02:51.055] SHA256 Hash: '3D7442CE832D455469F75EEA75E53F5E88B5BD441CC373E97E6E67232DFA1599'
+[12:02:51.645] Melon Assembly loaded: '.\Mods\FusionMod.dll'
+[12:02:51.646] SHA256 Hash: '66C55225F5E0690108071186BB3F00057AC91ED557175204E11D600A7B18C7D5'
+[12:02:51.667] Melon Assembly loaded: '.\Mods\LawnGlove.dll'
+[12:02:51.668] SHA256 Hash: 'CAAED0F338EC7F3F8F0AEA1434EB327AD2598F5BAE3A0E7B07FCD925ADB61D2A'
+[12:02:51.682] Melon Assembly loaded: '.\Mods\PlantLibrary.dll'
+[12:02:51.683] SHA256 Hash: '173844A99BED815DD43ED8A389BABE595F63079C0AA7822F6913EB63E166AC2F'
+[12:02:51.685] Melon Assembly loaded: '.\Mods\PvZRepatched.dll'
+[12:02:51.686] SHA256 Hash: '59BA9DF80FB3BECC978709873A89EEC8489A3AC27F6A2319DD2F5297091217FC'
+[12:02:51.688] Melon Assembly loaded: '.\Mods\RegaloDorado.dll'
+[12:02:51.689] SHA256 Hash: '3B61F0708BB956C69A922A1C9DBEDEFC539105CBAFC857D09701EB6EC6068590'
+[12:02:51.692] Melon Assembly loaded: '.\Mods\ReplantAPI.dll'
+[12:02:51.692] SHA256 Hash: '306A227C8AE92ECC8D721D97F07EE3F75F1EB4D3F2BBE42DEA6740574F99FCC0'
+[12:02:51.696] Melon Assembly loaded: '.\Mods\SpeedMod.dll'
+[12:02:51.698] SHA256 Hash: 'E9721BBC0A0DAFB8BD4676BD1AD7470419DF42B69B3714E33A388A3A8471261E'
+[12:02:51.703] Melon Assembly loaded: '.\Mods\SunCollector.dll'
+[12:02:51.704] SHA256 Hash: 'D8157339A063EE3F0E19B2FC86B535BE7E4408D7AFCDDDFDA077FE0534DCA89F'
+[12:02:51.707] Melon Assembly loaded: '.\Mods\VersusBot.dll'
+[12:02:51.708] SHA256 Hash: 'DAD6340DEB1029FF874B4F9C07FC03B121A188B9515A6F02F6E4766C071B0B50'
+[12:02:51.776] Melon Assembly loaded: '.\Mods\ZombieLibrary.dll'
+[12:02:51.777] SHA256 Hash: 'ECEC6DC11A5EEF2FDAFD4403830876445AEA638D007BEAB3A81DACC74FB85738'
+
+[12:02:52.101] ------------------------------
+[12:02:52.102] Plant Library v1.0.4
+[12:02:52.103] by Kevin / Codex
+[12:02:52.104] Assembly: PlantLibrary.dll
+[12:02:52.105] ------------------------------
+[12:02:52.108] ------------------------------
+[12:02:52.109] Zombie Library v1.4.5
+[12:02:52.110] by Kevin / Codex
+[12:02:52.111] Assembly: ZombieLibrary.dll
+[12:02:52.112] ------------------------------
+[12:02:52.115] ------------------------------
+[12:02:52.116] Speed Mod v1.0.6
+[12:02:52.117] by Kevin / Codex
+[12:02:52.118] Assembly: SpeedMod.dll
+[12:02:52.119] ------------------------------
+[12:02:52.122] ------------------------------
+[12:02:52.122] BloomEngine v0.4.1-beta
+[12:02:52.124] by PalmForest
+[12:02:52.124] Assembly: BloomEngine.dll
+[12:02:52.125] ------------------------------
+[12:02:52.128] ------------------------------
+[12:02:52.129] Debug Mod v1.3.14
+[12:02:52.130] by Kevin / Codex
+[12:02:52.131] Assembly: DebugMod.dll
+[12:02:52.132] ------------------------------
+[12:02:52.136] ------------------------------
+[12:02:52.136] Difficulty Mod v1.0.6
+[12:02:52.137] by Kevin / Codex
+[12:02:52.138] Assembly: DifficultyMod.dll
+[12:02:52.139] ------------------------------
+[12:02:52.141] ------------------------------
+[12:02:52.142] Glove Mod v1.4.3
+[12:02:52.143] by Kevin / Codex
+[12:02:52.144] Assembly: LawnGlove.dll
+[12:02:52.145] ------------------------------
+[12:02:52.147] ------------------------------
+[12:02:52.148] PvZRepatched v1.2.0
+[12:02:52.149] by RaptorRush
+[12:02:52.150] Assembly: PvZRepatched.dll
+[12:02:52.150] ------------------------------
+[12:02:52.153] ------------------------------
+[12:02:52.154] Regalo Dorado v1.2.1
+[12:02:52.155] by Angel
+[12:02:52.156] Assembly: RegaloDorado.dll
+[12:02:52.156] ------------------------------
+[12:02:52.160] ------------------------------
+[12:02:52.161] ReplantAPI v2.0.1
+[12:02:52.162] by HenHen
+[12:02:52.162] Assembly: ReplantAPI.dll
+[12:02:52.163] ------------------------------
+[12:02:52.166] ------------------------------
+[12:02:52.167] Sun Collector v1.2.2
+[12:02:52.167] by Kevin / Codex
+[12:02:52.168] Assembly: SunCollector.dll
+[12:02:52.169] ------------------------------
+[12:02:52.171] ------------------------------
+[12:02:52.172] Versus Bot v1.0.0
+[12:02:52.173] by Angel
+[12:02:52.174] Assembly: VersusBot.dll
+[12:02:52.174] ------------------------------
+[12:02:52.177] ------------------------------
+[12:02:52.177] Plant Fusion v22.4.0
+[12:02:52.178] by Kevin / Codex
+[12:02:52.179] Assembly: FusionMod.dll
+[12:02:52.180] ------------------------------
+[12:02:52.181] ------------------------------
+[12:02:52.181] 13 Mods loaded.
+
+[12:02:55.967] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[12:02:56.028] Support Module Loaded: S:\steamapps\common\PVZ Replanted\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[12:03:03.554] [Il2CppInterop] Registered mono type BloomEngine.UI.CustomPopup in il2cpp domain
+[12:03:03.556] [BloomEngine] Successfully loaded BloomEngine v0.4.1-beta by PalmForest.
+[12:03:03.566] [BloomEngine] [ModMenuService] Successfully added BloomEngine to the mod menu.
+[12:03:03.576] [Il2CppInterop] Registered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain
+[12:03:03.616] [Debug_Mod] Debug API 1: S:\steamapps\common\PVZ Replanted\UserData\DebugModApi
+[12:03:03.624] [Difficulty Mod] MelonPreferences Loaded from S:\steamapps\common\PVZ Replanted\UserData\DifficultyMod.cfg
+[12:03:03.652] [BloomEngine] [ModMenuService] Successfully added Difficulty Mod to the mod menu.
+[12:03:03.654] [Difficulty_Mod] Difficulty Mod ready. Right-click a level for Fusion difficulty; default is Normal (3).
+[12:03:03.665] [BloomEngine] [ModMenuService] Successfully added Glove Mod to the mod menu.
+[12:03:03.666] [Glove_Mod] Glove Mod ready: right-click shovel or hold controller tool button 1.5s to switch; tap to use.
+[12:03:03.678] [BloomEngine] [ModMenuService] Successfully added PvZRepatched to the mod menu.
+[12:03:03.686] [Regalo_Dorado] Regalo Dorado cargado: página 4 de la tienda, $50.000, uno al día.
+[12:03:03.688] [ReplantAPI] ReplantAPI v2.0.1 initialized.
+[12:03:03.689] [ReplantAPI] HenHen — github.com/HenHenV2
+[12:03:03.695] [Sun Collector] MelonPreferences Loaded from S:\steamapps\common\PVZ Replanted\UserData\SunCollector.cfg
+[12:03:03.704] [BloomEngine] [ModMenuService] Successfully added Sun Collector to the mod menu.
+[12:03:03.705] [Sun_Collector] Sun Collector ready: ON. Press Space or right stick (R3) during gameplay to toggle.
+[12:03:03.708] [Versus_Bot] Versión del juego: 1.5.1469_Steam (el mod se probó con la 1.5.1469)
+[12:03:03.718] [BloomEngine] [ModMenuService] Successfully added Plant Fusion to the mod menu.
+[12:03:03.770] [Plant_Fusion] Plant Fusion ready: 387 recipe(s); seed planting and Lawn Glove supported.
+[12:03:03.973] [ReplantAPI] Version check — Current: 2.0.1, Latest: 2.0.1
+[12:03:09.879] [WARNING] [PvZRepatched] [Unity] (Warning) Cannot find matching control scheme for Player2 (all control schemes are already paired to matching devices)
+UnityEngine.InputSystem.PlayerInput:OnEnable()
+
+[12:03:10.458] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[12:03:10.469] Registered mono icall UnityEngine.Transform::SetAsLastSibling in il2cpp domain
+[12:03:11.234] [BloomEngine] [BloomLoader] Loading global panel container...
+[12:03:11.913] [Debug_Mod] Debug ready. Type DEBUG in the main menu. No progress or board saves during debug sessions.
+[12:03:11.961] [Versus_Bot] Mandos virtuales creados.
+[12:03:12.110] [ReplantAPI] [ReplantAPI] Showing splash screen.
+[12:03:16.901] [ReplantAPI] [ReplantAPI] Splash finished.
+[12:03:29.537] [BloomEngine] [BloomLoader] Loading achievements UI...
+[12:03:29.577] [BloomEngine] [BloomLoader] Loading main menu...
+[12:03:29.590] [BloomEngine] [UIHelper] Created UI button template.
+[12:03:29.595] [BloomEngine] [UIHelper] Created UI textbox template.
+[12:03:29.597] [BloomEngine] [UIHelper] Created UI checkbox template.
+[12:03:29.599] [BloomEngine] [UIHelper] Created UI dropdown template.
+[12:03:29.600] [BloomEngine] [UIHelper] Created UI slider template.
+[12:03:29.604] [BloomEngine] [UIHelper] Successfully loaded all UI elements.
+[12:03:29.652] [BloomEngine] Successfully created PvZRepatched config panel with 3 fields across 1 page.
+[12:03:29.753] [BloomEngine] [ModMenuService] All UI templates loaded, creating mod menu.
+[12:03:29.827] [Difficulty_Mod] Using loaded native minigames panel for difficulty selection.
+[12:03:29.833] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level10 (levels.fogLevels.all.9).
+[12:03:29.835] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level9 (levels.fogLevels.all.8).
+[12:03:29.837] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level8 (levels.fogLevels.all.7).
+[12:03:29.838] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level7 (levels.fogLevels.all.6).
+[12:03:29.839] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level6 (levels.fogLevels.all.5).
+[12:03:29.841] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level5 (levels.fogLevels.all.4).
+[12:03:29.842] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level4 (levels.fogLevels.all.3).
+[12:03:29.844] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level3 (levels.fogLevels.all.2).
+[12:03:29.845] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level2 (levels.fogLevels.all.1).
+[12:03:29.846] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level1 (levels.fogLevels.all.0).
+[12:03:29.848] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayEndless (levels.cloudyDay.all.12).
+[12:03:29.849] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel12 (levels.cloudyDay.all.11).
+[12:03:29.850] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel11 (levels.cloudyDay.all.10).
+[12:03:29.851] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel10 (levels.cloudyDay.all.9).
+[12:03:29.853] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel9 (levels.cloudyDay.all.8).
+[12:03:29.854] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel8 (levels.cloudyDay.all.7).
+[12:03:29.855] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel7 (levels.cloudyDay.all.6).
+[12:03:29.856] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel6 (levels.cloudyDay.all.5).
+[12:03:29.857] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel5 (levels.cloudyDay.all.4).
+[12:03:29.858] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel4 (levels.cloudyDay.all.3).
+[12:03:29.859] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel3 (levels.cloudyDay.all.2).
+[12:03:29.860] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel2 (levels.cloudyDay.all.1).
+[12:03:29.861] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel1 (levels.cloudyDay.all.0).
+[12:03:29.862] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level10 (levels.nightLevels.all.9).
+[12:03:29.863] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level9 (levels.nightLevels.all.8).
+[12:03:29.864] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level8 (levels.nightLevels.all.7).
+[12:03:29.865] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level7 (levels.nightLevels.all.6).
+[12:03:29.866] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level6 (levels.nightLevels.all.5).
+[12:03:29.867] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level5 (levels.nightLevels.all.4).
+[12:03:29.867] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level4 (levels.nightLevels.all.3).
+[12:03:29.868] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level3 (levels.nightLevels.all.2).
+[12:03:29.869] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level2 (levels.nightLevels.all.1).
+[12:03:29.870] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level1 (levels.nightLevels.all.0).
+[12:03:29.871] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level10 (levels.poolLevels.all.9).
+[12:03:29.872] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level9 (levels.poolLevels.all.8).
+[12:03:29.873] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level8 (levels.poolLevels.all.7).
+[12:03:29.874] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level7 (levels.poolLevels.all.6).
+[12:03:29.875] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level6 (levels.poolLevels.all.5).
+[12:03:29.876] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level5 (levels.poolLevels.all.4).
+[12:03:29.877] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level4 (levels.poolLevels.all.3).
+[12:03:29.878] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level3 (levels.poolLevels.all.2).
+[12:03:29.882] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level2 (levels.poolLevels.all.1).
+[12:03:29.883] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level1 (levels.poolLevels.all.0).
+[12:03:29.884] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level10 (levels.dayLevels.all.9).
+[12:03:29.885] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level9 (levels.dayLevels.all.8).
+[12:03:29.886] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level8 (levels.dayLevels.all.7).
+[12:03:29.887] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level7 (levels.dayLevels.all.6).
+[12:03:29.888] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level6 (levels.dayLevels.all.5).
+[12:03:29.889] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level5 (levels.dayLevels.all.4).
+[12:03:29.890] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level4 (levels.dayLevels.all.3).
+[12:03:29.891] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level3 (levels.dayLevels.all.2).
+[12:03:29.892] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level2 (levels.dayLevels.all.1).
+[12:03:29.893] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level1 (levels.dayLevels.all.0).
+[12:03:29.894] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level10 (levels.roofLevels.all.9).
+[12:03:29.895] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level9 (levels.roofLevels.all.8).
+[12:03:29.896] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level8 (levels.roofLevels.all.7).
+[12:03:29.897] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level7 (levels.roofLevels.all.6).
+[12:03:29.898] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level6 (levels.roofLevels.all.5).
+[12:03:29.899] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level5 (levels.roofLevels.all.4).
+[12:03:29.900] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level4 (levels.roofLevels.all.3).
+[12:03:29.901] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level3 (levels.roofLevels.all.2).
+[12:03:29.902] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level2 (levels.roofLevels.all.1).
+[12:03:29.903] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level1 (levels.roofLevels.all.0).
+[12:03:29.904] [Difficulty_Mod] Bound difficulty card: Level-Minigame-DarkStormyNight (levels.limboContent.all.9).
+[12:03:29.905] [Difficulty_Mod] Bound difficulty card: Level-Minigame-CanYouDigIt (levels.limboContent.all.8).
+[12:03:29.906] [Difficulty_Mod] Bound difficulty card: Level-Minigame-GraveDanger (levels.limboContent.all.7).
+[12:03:29.907] [Difficulty_Mod] Bound difficulty card: Level-Minigame-HighGravity (levels.limboContent.all.6).
+[12:03:29.908] [Difficulty_Mod] Bound difficulty card: Level-Minigame-AirRaid (levels.limboContent.all.5).
+[12:03:29.909] [Difficulty_Mod] Bound difficulty card: Level-Minigame-ArtChallengeSunflower (levels.limboContent.all.4).
+[12:03:29.910] [Difficulty_Mod] Bound difficulty card: Level-Minigame-BigTime (levels.limboContent.all.3).
+[12:03:29.911] [Difficulty_Mod] Bound difficulty card: Level-Minigame-Unsodded (levels.limboContent.all.2).
+[12:03:29.912] [Difficulty_Mod] Bound difficulty card: Level-Minigame-SunnyDay (levels.limboContent.all.1).
+[12:03:29.913] [Difficulty_Mod] Bound difficulty card: Level-Minigame-ArtChallengeWallnut (levels.limboContent.all.0).
+[12:03:45.738] [Debug_Mod] Debug: Start Night · 11; native card selection.
+[12:03:46.265] [Difficulty_Mod] Level 66ac7fd2-a235-4553-940e-227ec79fe79a/2:-1:2:0:DebugSession: Extreme
+[12:03:46.268] [ReplantAPI] GameplayActivity instance cleared.
+[12:03:46.345] [ReplantAPI] Board captured — Level: 0, Background: Night, Rows: 5
+[12:03:46.346] [ReplantAPI] Stage — Night: True, Pool: False, Fog: False, Roof: False, 6Rows: False
+[12:03:46.348] [ReplantAPI] Conveyor: False, ChooseSeeds: True, GraveStones: True
+[12:03:46.350] [ReplantAPI] Sun: True, Waves: 10, Challenge: True
+[12:03:46.353] [ReplantAPI] Zombies: True, Plants: True, Coins: True
+[12:03:46.355] [ReplantAPI] Projectiles: True, LawnMowers: True, GridItems: True
+[12:03:46.358] [ReplantAPI] Reanimations: True, CursorObject: True, Advice: True
+[12:03:46.359] [ReplantAPI] SeedBank: True, Paused: False, LevelComplete: False
+[12:03:46.361] [ReplantAPI] App captured — GameMode: SurvivalNormalStage2, GameScene: Loading
+[12:03:46.362] [ReplantAPI] GameplayActivity instance captured.
+[12:03:46.400] [Debug_Mod] Debug: Board ready; native selection and intro remain active.
+[12:03:50.029] [Debug_Mod] Debug: Native card arrows ready; 8 tabs.
+[12:03:58.246] [Debug_Mod] Debug: Plants confirmed; native panel seedChooser, state Shown.
+[12:03:58.331] [Debug_Mod] Debug: Zombie selection opened.
+[12:03:59.211] [Debug_Mod] Debug: Seed bank ready; 1 plants, 1 card slots.
+[12:04:03.499] [Glove_Mod] Shovel UI image: Shovel / SPR_MainHud_Shovel
+[12:04:03.511] [Glove_Mod] Bound active Shovel button.
+[12:04:03.520] [Glove_Mod] Loading native Zen Garden glove icon.
+[12:04:44.776] [Plant_Fusion] HypnoChomper uses native preview material: Sprites/DefaultColourblend.
+[12:04:44.837] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:45.464] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:46.115] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:46.782] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:47.423] [Plant_Fusion] KernelMorph uses native preview material: Sprites/DefaultColourblend.
+[12:04:47.441] [Plant_Fusion] KernelMorph original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:47.463] [Plant_Fusion] BoltPult uses native preview material: Sprites/DefaultColourblend.
+[12:04:47.480] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:48.072] [Plant_Fusion] Bucket uses native preview material: Sprites/DefaultColourblend.
+[12:04:48.075] [Plant_Fusion] Bucket original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=4, layer=0, scale=142.25024, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=PotatoMine_Render, localPosition=(0.00, 46.09, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:48.125] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:48.679] [Plant_Fusion] KernelMorph original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:48.721] [Plant_Fusion] Bucket original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=4, layer=0, scale=142.25024, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=PotatoMine_Render, localPosition=(0.00, 46.09, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:48.757] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:49.342] [Plant_Fusion] Bucket original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=4, layer=0, scale=142.25024, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=PotatoMine_Render, localPosition=(0.00, 46.09, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:49.385] [Plant_Fusion] KernelMorph original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:49.427] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:50.011] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:51.318] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:52.715] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:53.488] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:54.006] [Plant_Fusion] IronKernelProjectile uses native preview material: Sprites/DefaultColourblend.
+[12:04:54.010] [Plant_Fusion] IronKernelProjectile original art ready: shader=Sprites/DefaultColourblend, sprites=2, parent=Projectile-Kernel(Clone), scale=(167.11, 167.11, 167.11).
+[12:04:56.303] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:04:58.979] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:01.540] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:04.156] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:04.700] [Plant_Fusion] IronButterProjectile uses native preview material: Sprites/DefaultColourblend.
+[12:05:04.704] [Plant_Fusion] IronButterProjectile original art ready: shader=Sprites/DefaultColourblend, sprites=2, parent=Projectile-Butter(Clone), scale=(167.11, 167.11, 167.11).
+[12:05:07.135] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:38.869] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:39.534] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:40.182] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:40.840] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:41.466] [Plant_Fusion] KernelMorph original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:41.511] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:42.130] [Plant_Fusion] Bucket original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=4, layer=0, scale=142.25024, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=PotatoMine_Render, localPosition=(0.00, 46.09, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:42.231] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:42.793] [Plant_Fusion] KernelMorph original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:42.844] [Plant_Fusion] Bucket original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=4, layer=0, scale=142.25024, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=PotatoMine_Render, localPosition=(0.00, 46.09, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:42.885] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:43.460] [Plant_Fusion] Bucket original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=4, layer=0, scale=142.25024, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=PotatoMine_Render, localPosition=(0.00, 46.09, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:43.515] [Plant_Fusion] KernelMorph original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:43.552] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:44.131] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:45.591] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:46.903] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:47.653] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:50.480] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:53.147] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:55.746] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:05:58.527] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:06:01.133] [Plant_Fusion] BoltPult original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=23, layer=0, scale=194.45656, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Kernelpult_Render, localPosition=(-2.66, 33.37, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:06:03.882] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:06:07.194] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.

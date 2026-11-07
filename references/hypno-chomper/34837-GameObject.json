@@ -1,0 +1,44 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 93307
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124385
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 123308
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 121736
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 126023
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 191547
+      }
+    }
+  ],
+  "m_Layer": 9,
+  "m_Name": "HypnoChomperPrefab",
+  "m_Tag": 20001,
+  "m_IsActive": true
+}

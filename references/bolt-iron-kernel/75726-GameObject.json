@@ -1,0 +1,26 @@
+{
+  "m_Component": [
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 97535
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 124306
+      }
+    },
+    {
+      "component": {
+        "m_FileID": 0,
+        "m_PathID": 187959
+      }
+    }
+  ],
+  "m_Layer": 6,
+  "m_Name": "Bullet_kernal_iron",
+  "m_Tag": 0,
+  "m_IsActive": true
+}

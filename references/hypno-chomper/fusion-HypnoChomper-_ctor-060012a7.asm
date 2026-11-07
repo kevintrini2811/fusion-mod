@@ -1,0 +1,11 @@
+004760c0: xor edx, edx
+004760c2: jmp 0x18048e710
+004760c7: int3
+004760c8: int3
+004760c9: int3
+004760ca: int3
+004760cb: int3
+004760cc: int3
+004760cd: int3
+004760ce: int3
+004760cf: int3

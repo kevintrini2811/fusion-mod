@@ -1,0 +1,309 @@
+{
+  "bundle": "pvzfusion/english-4.0.5.2/Game Files/PlantsVsZombiesRH_Data/data.unity3d",
+  "bundle_sha256": "30094749d8dfbcae49f53cba4844deb8f67ef30882953311dac27799bcb68d03",
+  "prefab_path_id": 46066,
+  "animator_controller_path_id": 6254,
+  "ignored_bindings": [],
+  "shoot_layer": null,
+  "animator_layers": [
+    {
+      "data": {
+        "m_StateMachineIndex": 0,
+        "m_StateMachineSynchronizedLayerIndex": 0,
+        "m_BodyMask": {
+          "word0": 4294967295,
+          "word1": 4294967295,
+          "word2": 524287
+        },
+        "m_SkeletonMask": {
+          "data": {
+            "m_Data": []
+          }
+        },
+        "m_Binding": 756556552,
+        "(int&)m_LayerBlendingMode": 0,
+        "m_DefaultWeight": 0.0,
+        "m_IKPass": false,
+        "m_SyncedLayerAffectsTiming": false
+      }
+    }
+  ],
+  "additive_reference": null,
+  "static_prefab": false,
+  "ground_node": {
+    "Name": "Shadow",
+    "Path": "Shadow",
+    "Parent": 0,
+    "Active": true,
+    "Position": [
+      0.03999999910593033,
+      0.20000000298023224,
+      0.0
+    ],
+    "Rotation": [
+      -0.0,
+      -0.0,
+      -0.0,
+      1.0
+    ],
+    "Scale": [
+      4.0,
+      4.0,
+      4.0
+    ],
+    "Sprite": 15757,
+    "Order": 0,
+    "FlipX": false,
+    "FlipY": false,
+    "Color": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "Enabled": true
+  },
+  "serialized_file": "resources.assets",
+  "objects": [
+    {
+      "path_id": 18681,
+      "name": "Cornpult_stalk3",
+      "type": "Sprite",
+      "file": "sprite-18681.png",
+      "sha256": "23e6ff43123d88d4757621abf6ac831dc7644ebe2cb36bee03dcb08edc252f52"
+    },
+    {
+      "path_id": 12397,
+      "name": "Cornpult_stalk4",
+      "type": "Sprite",
+      "file": "sprite-12397.png",
+      "sha256": "c9dcb90ffeca681147ae5ad793b07ca9272fed7238ebf3201f528805d261c6bb"
+    },
+    {
+      "path_id": 21410,
+      "name": "Cornpult_stalk2",
+      "type": "Sprite",
+      "file": "sprite-21410.png",
+      "sha256": "8df736c32c75d261e3486024ef52618d87006a2f787dcbb575242a50892e7955"
+    },
+    {
+      "path_id": 9105,
+      "name": "Cornpult_stalk1",
+      "type": "Sprite",
+      "file": "sprite-9105.png",
+      "sha256": "d26673b3c1a774f8abf851520ed5e72d85da2d9dec2da7caedca0dd075ca60c0"
+    },
+    {
+      "path_id": 8978,
+      "name": "Cornpult_husk1",
+      "type": "Sprite",
+      "file": "sprite-8978.png",
+      "sha256": "c870a836b8ec363b4b1b2c733df71459468a5a6a93d8112fb783bd3ac212bd64"
+    },
+    {
+      "path_id": 23067,
+      "name": "Cornpult_husktip1",
+      "type": "Sprite",
+      "file": "sprite-23067.png",
+      "sha256": "998cbc087f369436d4d85fa25e2664ea190063e94b71a9605eef3300f6b3dad5"
+    },
+    {
+      "path_id": 22562,
+      "name": "Cornpult_husk2",
+      "type": "Sprite",
+      "file": "sprite-22562.png",
+      "sha256": "9cb317e8f509c1394fc3d5d2ebbc93915a773c3298d0fd394a83a4f3152dcf15"
+    },
+    {
+      "path_id": 22527,
+      "name": "Cornpult_husktip2",
+      "type": "Sprite",
+      "file": "sprite-22527.png",
+      "sha256": "5dab894639be13e5755119b6f6b9c599a1baaceed253ec96a496dc312623a778"
+    },
+    {
+      "path_id": 21863,
+      "name": "Cornpult_husk3",
+      "type": "Sprite",
+      "file": "sprite-21863.png",
+      "sha256": "791dea1163d0c1cb8072016f4cc91bd8ae857c0f0bec137c9877a8b1ca317332"
+    },
+    {
+      "path_id": 10463,
+      "name": "Cornpult_husktip3",
+      "type": "Sprite",
+      "file": "sprite-10463.png",
+      "sha256": "5c0d12e3e7bb68df4ea97562701d72a7bb1cc0101661a4aafd24047cefb4d29a"
+    },
+    {
+      "path_id": 23144,
+      "name": "Cornpult_husk4",
+      "type": "Sprite",
+      "file": "sprite-23144.png",
+      "sha256": "ed90646ed221a26700a098e1b1016b2ee010b8b462ad31865accc87d15316adc"
+    },
+    {
+      "path_id": 18048,
+      "name": "Cornpult_husk5",
+      "type": "Sprite",
+      "file": "sprite-18048.png",
+      "sha256": "2707e2a40b862158883e76e49d6b2b41695a7621aa7c25e1df3b7b91d4c8ce2e"
+    },
+    {
+      "path_id": 8962,
+      "name": "Cornpult_husk6",
+      "type": "Sprite",
+      "file": "sprite-8962.png",
+      "sha256": "03090a98b52b4f66debdae6e20092e69c658a7a52248ef0a3381ad9800a9faa2"
+    },
+    {
+      "path_id": 13613,
+      "name": "Cabbagepult_basket",
+      "type": "Sprite",
+      "file": "sprite-13613.png",
+      "sha256": "7e734601a3cb39f355ce6fe7dc16a078fe985ab6acf4cc909ecb070c38b5592b"
+    },
+    {
+      "path_id": 23513,
+      "name": "Cabbagepult_basket_overlay",
+      "type": "Sprite",
+      "file": "sprite-23513.png",
+      "sha256": "63ab2639eeede04bb6af39ee0087897bf6ed43b5158c283b1b769ac69bdef69a"
+    },
+    {
+      "path_id": 8608,
+      "name": "Cornpult_butter",
+      "type": "Sprite",
+      "file": "sprite-8608.png",
+      "sha256": "aefb3984f81cd07d0719bd811005b379856416c89ac2dcbc9475cf5912f6a100"
+    },
+    {
+      "path_id": 11346,
+      "name": "Cornpult_kernal",
+      "type": "Sprite",
+      "file": "sprite-11346.png",
+      "sha256": "9b73348f24911b5f339cdb6fa4fd2bde533c42b4fcb846bd83cb74f48a84a0d9"
+    },
+    {
+      "path_id": 22349,
+      "name": "Cornpult_body",
+      "type": "Sprite",
+      "file": "sprite-22349.png",
+      "sha256": "f6d70018d5a4c7a0ccf687364ccc8d0149fbe673df69b620d4b04a80c30ad80d"
+    },
+    {
+      "path_id": 12470,
+      "name": "Cornpult_blink1",
+      "type": "Sprite",
+      "file": "sprite-12470.png",
+      "sha256": "72dc54c28f11c4fdc53d84e1a129b412b7ce6c6210cbd57adca3356b8439aa6a"
+    },
+    {
+      "path_id": 17178,
+      "name": "Cornpult_blink2",
+      "type": "Sprite",
+      "file": "sprite-17178.png",
+      "sha256": "95ad10d4b3cabbabaec78402174404abaf46e78cb8f3d045b17b77c2fd20ac86"
+    },
+    {
+      "path_id": 8843,
+      "name": "Cornpult_eyebrow2",
+      "type": "Sprite",
+      "file": "sprite-8843.png",
+      "sha256": "c59008ec722f584bc68181eab07ad5f5cfee43783dae56815c4ec674eafab2c8"
+    },
+    {
+      "path_id": 9419,
+      "name": "Cornpult_eyebrow1",
+      "type": "Sprite",
+      "file": "sprite-9419.png",
+      "sha256": "b22ec2ca635c6c632a9696c137fba45d1788462fe0ced2b8084d68848a5aa111"
+    },
+    {
+      "path_id": 15757,
+      "name": "plantshadow",
+      "type": "Sprite",
+      "file": "sprite-15757.png",
+      "sha256": "a1a1834818bd10c372bb83eb2314d952ca72aa4401e33d8fecdd0aa699774404"
+    },
+    {
+      "path_id": 4081,
+      "name": "idle",
+      "type": "AnimationClip",
+      "sample_rate": 60.0,
+      "duration": 2.0,
+      "channels": 105,
+      "events": []
+    },
+    {
+      "path_id": 4082,
+      "name": "shoot",
+      "type": "AnimationClip",
+      "sample_rate": 60.0,
+      "duration": 1.0,
+      "channels": 123,
+      "events": [
+        {
+          "time": 0.3333333432674408,
+          "functionName": "AnimShoot",
+          "data": "",
+          "objectReferenceParameter": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "floatParameter": 0.0,
+          "intParameter": 0,
+          "messageOptions": 0
+        }
+      ]
+    },
+    {
+      "path_id": 4083,
+      "name": "shoot2",
+      "type": "AnimationClip",
+      "sample_rate": 60.0,
+      "duration": 1.0,
+      "channels": 124,
+      "events": [
+        {
+          "time": 0.3333333432674408,
+          "functionName": "AnimShoot2",
+          "data": "",
+          "objectReferenceParameter": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "floatParameter": 0.0,
+          "intParameter": 0,
+          "messageOptions": 0
+        }
+      ]
+    }
+  ],
+  "files": {
+    "model.json": "140f58ab6c1504dd96ade96b919ccd0a6f3017788f6fdd89e2f8f0d4d36ee224",
+    "sprite-10463.png": "5c0d12e3e7bb68df4ea97562701d72a7bb1cc0101661a4aafd24047cefb4d29a",
+    "sprite-11346.png": "9b73348f24911b5f339cdb6fa4fd2bde533c42b4fcb846bd83cb74f48a84a0d9",
+    "sprite-12397.png": "c9dcb90ffeca681147ae5ad793b07ca9272fed7238ebf3201f528805d261c6bb",
+    "sprite-12470.png": "72dc54c28f11c4fdc53d84e1a129b412b7ce6c6210cbd57adca3356b8439aa6a",
+    "sprite-13613.png": "7e734601a3cb39f355ce6fe7dc16a078fe985ab6acf4cc909ecb070c38b5592b",
+    "sprite-15757.png": "a1a1834818bd10c372bb83eb2314d952ca72aa4401e33d8fecdd0aa699774404",
+    "sprite-17178.png": "95ad10d4b3cabbabaec78402174404abaf46e78cb8f3d045b17b77c2fd20ac86",
+    "sprite-18048.png": "2707e2a40b862158883e76e49d6b2b41695a7621aa7c25e1df3b7b91d4c8ce2e",
+    "sprite-18681.png": "23e6ff43123d88d4757621abf6ac831dc7644ebe2cb36bee03dcb08edc252f52",
+    "sprite-21410.png": "8df736c32c75d261e3486024ef52618d87006a2f787dcbb575242a50892e7955",
+    "sprite-21863.png": "791dea1163d0c1cb8072016f4cc91bd8ae857c0f0bec137c9877a8b1ca317332",
+    "sprite-22349.png": "f6d70018d5a4c7a0ccf687364ccc8d0149fbe673df69b620d4b04a80c30ad80d",
+    "sprite-22527.png": "5dab894639be13e5755119b6f6b9c599a1baaceed253ec96a496dc312623a778",
+    "sprite-22562.png": "9cb317e8f509c1394fc3d5d2ebbc93915a773c3298d0fd394a83a4f3152dcf15",
+    "sprite-23067.png": "998cbc087f369436d4d85fa25e2664ea190063e94b71a9605eef3300f6b3dad5",
+    "sprite-23144.png": "ed90646ed221a26700a098e1b1016b2ee010b8b462ad31865accc87d15316adc",
+    "sprite-23513.png": "63ab2639eeede04bb6af39ee0087897bf6ed43b5158c283b1b769ac69bdef69a",
+    "sprite-8608.png": "aefb3984f81cd07d0719bd811005b379856416c89ac2dcbc9475cf5912f6a100",
+    "sprite-8843.png": "c59008ec722f584bc68181eab07ad5f5cfee43783dae56815c4ec674eafab2c8",
+    "sprite-8962.png": "03090a98b52b4f66debdae6e20092e69c658a7a52248ef0a3381ad9800a9faa2",
+    "sprite-8978.png": "c870a836b8ec363b4b1b2c733df71459468a5a6a93d8112fb783bd3ac212bd64",
+    "sprite-9105.png": "d26673b3c1a774f8abf851520ed5e72d85da2d9dec2da7caedca0dd075ca60c0",
+    "sprite-9419.png": "b22ec2ca635c6c632a9696c137fba45d1788462fe0ced2b8084d68848a5aa111"
+  }
+}

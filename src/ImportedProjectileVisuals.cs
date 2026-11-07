@@ -184,6 +184,8 @@ internal static partial class ImportedPeaVisuals
 
     private static readonly Assets IronStarProjectileAssets = new(FusionPlant.IronStar, "IronStarProjectile");
     private static readonly Assets IronMelonProjectileAssets = new(FusionPlant.MetalPult, "IronMelonProjectile");
+    private static readonly Assets IronKernelProjectileAssets = new(FusionPlant.BoltPult, "IronKernelProjectile");
+    private static readonly Assets IronButterProjectileAssets = new(FusionPlant.BoltPult, "IronButterProjectile");
     private static readonly Assets MagnetKernelProjectileAssets = new(FusionPlant.KernelMorph, "MagnetKernelProjectile");
     private static readonly Assets MagnetButterProjectileAssets = new(FusionPlant.KernelMorph, "MagnetButterProjectile");
     private static readonly Assets MetalStarProjectileAssets = new(FusionPlant.Starmorph, "MetalStarProjectile");
@@ -250,6 +252,7 @@ internal static partial class ImportedPeaVisuals
             7 => SaladProjectileAssets, 8 => MetalMelonProjectileAssets, 9 => MelonProjectileAssets,
             10 => MagnetKernelProjectileAssets, 11 => MagnetButterProjectileAssets, 12 => IronMelonProjectileAssets, 13 => DoomCabbageProjectileAssets,
             14 => ButterProjectileAssets, 15 => SolarCabbageProjectileAssets,
+            16 => IronKernelProjectileAssets, 17 => IronButterProjectileAssets,
             6 => LobberProjectiles.Remaining(projectile) == 0 ? CabbageProjectileAssets : TriCabbageProjectileAssets,
             _ => null
         };
@@ -450,6 +453,8 @@ internal static partial class ImportedPeaVisuals
                 : assets == FireStarProjectileAssets ? StarProjectiles.Family(projectile) is 3 or 9
                 : assets == IronStarProjectileAssets ? StarProjectiles.Family(projectile) == 8
                 : assets == IronMelonProjectileAssets ? LobberProjectiles.Family(projectile) == 12
+                : assets == IronKernelProjectileAssets ? LobberProjectiles.Family(projectile) == 16
+                : assets == IronButterProjectileAssets ? LobberProjectiles.Family(projectile) == 17
                 : assets == MagnetKernelProjectileAssets ? LobberProjectiles.Family(projectile) == 10
                 : assets == MagnetButterProjectileAssets ? LobberProjectiles.Family(projectile) == 11
                 : assets == MetalStarProjectileAssets ? StarProjectiles.Family(projectile) == 7

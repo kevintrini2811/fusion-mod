@@ -8,10 +8,12 @@ namespace FusionMod;
 internal static class LobberProjectiles
 {
     private const int Taco = -520100, ButterTaco = -520110, Cob = -520140,
-        ButterCob = -520160, Overripe = -520180, Cabbage = -520200, Salad = -520220, MetalMelon = -520240, ShellMelon = -520260, MagnetKernel = -520280, MagnetButter = -520300, IronMelon = -520320, DoomCabbage = -520340, BlubberButter = -520360, Solar = -520380;
+        ButterCob = -520160, Overripe = -520180, Cabbage = -520200, Salad = -520220, MetalMelon = -520240, ShellMelon = -520260, MagnetKernel = -520280, MagnetButter = -520300, IronMelon = -520320, DoomCabbage = -520340, BlubberButter = -520360, Solar = -520380, IronKernel = -520400, IronButter = -520420;
 
     internal static int Family(Projectile shot) => shot.mProjectileType switch
     {
+        ProjectileType.Kernel when shot.mCobTargetX == IronKernel => 16,
+        ProjectileType.Butter when shot.mCobTargetX == IronButter => 17,
         ProjectileType.Cabbage when shot.mCobTargetX is <= Solar - 1 and >= Solar - 6 => 15,
         ProjectileType.Cabbage when shot.mCobTargetX is <= Taco and >= Taco - 2 => 1,
         ProjectileType.Butter when shot.mCobTargetX is <= ButterTaco and >= ButterTaco - 2 => 2,
@@ -41,18 +43,18 @@ internal static class LobberProjectiles
         var identity = FusionPlant.From(plant);
         bool butter = plant.mShootingCounter == 1;
         if (identity == FusionPlant.SolarPult) { FireSolar(plant, target); return; }
-        int family = identity == FusionPlant.DamagePult ? 13 : identity == FusionPlant.KernelMorph ? butter ? 11 : 10
+        int family = identity == FusionPlant.BoltPult ? butter ? 17 : 16 : identity == FusionPlant.DamagePult ? 13 : identity == FusionPlant.KernelMorph ? butter ? 11 : 10
             : identity == FusionPlant.MetalPult ? 12 : identity == FusionPlant.MelonMorph ? 8 : identity == FusionPlant.TacoPult ? butter ? 2 : 1
             : identity == FusionPlant.CobPult ? butter ? 4 : 3
             : identity == FusionPlant.OverripeMelon ? 5 : identity == FusionPlant.SaladPult ? 7 : 6;
         var shot = plant.mBoard.AddProjectile(plant.mX + plant.mWidth / 2f
             + (edge ? .5f * ScaredyFusions.SourceUnit : 0), plant.mY + plant.mHeight / 2f - 10,
             plant.mRenderOrder + 1, row, family is 3 or 4 or 5 or 7 or 8 or 12 ? ProjectileType.Melon
-                : family is 2 or 11 ? ProjectileType.Butter : family == 10 ? ProjectileType.Kernel : ProjectileType.Cabbage);
+                : family is 2 or 11 or 17 ? ProjectileType.Butter : family is 10 or 16 ? ProjectileType.Kernel : ProjectileType.Cabbage);
         if (shot == null || shot.mDead) return;
         shot.mCobTargetX = family switch
-        { 1 => Taco, 2 => ButterTaco, 3 => Cob, 4 => ButterCob, 5 => Overripe, 7 => Salad, 8 => MetalMelon, 10 => MagnetKernel, 11 => MagnetButter, 12 => IronMelon, 13 => DoomCabbage, _ => Cabbage - ricochets };
-        int damage = family switch { 1 or 6 => 40, 2 => 60, 3 or 7 => 140, 8 => 120, 4 => 160, 10 => 60, 11 => 80, 12 => 200, 13 => 1800, _ => 80 };
+        { 1 => Taco, 2 => ButterTaco, 3 => Cob, 4 => ButterCob, 5 => Overripe, 7 => Salad, 8 => MetalMelon, 10 => MagnetKernel, 11 => MagnetButter, 12 => IronMelon, 13 => DoomCabbage, 16 => IronKernel, 17 => IronButter, _ => Cabbage - ricochets };
+        int damage = family switch { 1 or 6 => 40, 2 => 60, 3 or 7 => 140, 8 => 120, 4 => 160, 10 => 60, 11 => 80, 12 => 200, 13 => 1800, 17 => 100, _ => 80 };
         if (family == 6) damage = ShootingPots.ThreeDamage(plant, damage);
         shot.mCobTargetRow = family is 3 or 4 or 5 or 7 or 8 or 12 && PotBoosts.HasSupport(plant, FusionPlant.MelonPot)
             ? -damage : damage;
@@ -192,9 +194,11 @@ internal static class LobberProjectiles
         {
             if (zombie.DataID != targetId || !SquashFusions.Eligible(board, zombie, DamageRangeFlags.Ground)) continue;
             int hitDamage = primary ? damage : splash;
+            // Iron butter adds remaining type-1 armor before the native armor/body hit.
+            if (family == 17) hitDamage = (int)Math.Min(int.MaxValue, (long)hitDamage + Math.Max(0, zombie.mHelmHealth));
             if (family is 8 or 12) hitDamage = MetalArmor.MelonDamage(zombie, hitDamage);
             zombie.TakeDamage(hitDamage, DamageFlags.BypassesShield);
-            if (family is 2 or 4 or 11 or 14 && zombie.DataID == targetId
+            if (family is 2 or 4 or 11 or 14 or 17 && zombie.DataID == targetId
                 && SquashFusions.Eligible(board, zombie, DamageRangeFlags.Ground))
             {
                 int previous = zombie.mButteredCounter;

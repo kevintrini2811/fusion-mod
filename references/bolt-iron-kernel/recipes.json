@@ -1,0 +1,14 @@
+[
+  {
+    "plant1": "Kernel Morph",
+    "plant2": "Bucket",
+    "fusion": "Bolt-pult",
+    "plant1_id": 1209,
+    "plant2_id": 224,
+    "fusion_id": 1211,
+    "both_orders": false,
+    "registration_rvas": [
+      "0x9d5b79"
+    ]
+  }
+]

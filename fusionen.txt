@@ -65,7 +65,6 @@ Cherry Bomb | Magnet-shroom | Grenadier Magnet
 Cherry Bomb | Pea-storm Commando | Dynamite Commando
 Cherry Bomb | Umbrella Leaf | Bombrella
 Cherry Chomper | Chompzilla | Cherrizilla
-Chomper | Hypno-shroom | Hypno Chomper
 Chomper | Plantern | Lumos Angler
 Chomper | Snipea | Snapper Snipea
 Chomper Maw | Lumos Angler | Tyrannoflora Lux
@@ -160,7 +159,6 @@ Jugger-nut | Spicicle | Obsidian Jugger-nut
 Kaledera Eruptor | Kernel-pult | Vulcannon
 Kelp-spreader | Squash | Hydra Kelp
 Kelptain Goldbeard | Zombie Giftbox | Sea-greed Zombox
-Kernel Morph | Bucket | Bolt-pult
 Kernel Morph | Chrono Core | Portal-pult
 Kraken-shroom | Minnow-shroom | Scylla Leviathan
 Laser Pumpkin | Cherry Bomb | Blast Pumpkin

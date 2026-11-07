@@ -1,0 +1,34 @@
+{
+  "bundle": "pvzfusion/english-4.0.5.2/Game Files/PlantsVsZombiesRH_Data/data.unity3d",
+  "bundle_sha256": "30094749d8dfbcae49f53cba4844deb8f67ef30882953311dac27799bcb68d03",
+  "prefab_path_id": 42994,
+  "animator_controller_path_id": null,
+  "ignored_bindings": [],
+  "shoot_layer": null,
+  "animator_layers": [],
+  "additive_reference": null,
+  "static_prefab": true,
+  "ground_node": null,
+  "serialized_file": "resources.assets",
+  "objects": [
+    {
+      "path_id": 8608,
+      "name": "Cornpult_butter",
+      "type": "Sprite",
+      "file": "sprite-8608.png",
+      "sha256": "aefb3984f81cd07d0719bd811005b379856416c89ac2dcbc9475cf5912f6a100"
+    },
+    {
+      "path_id": 15757,
+      "name": "plantshadow",
+      "type": "Sprite",
+      "file": "sprite-15757.png",
+      "sha256": "a1a1834818bd10c372bb83eb2314d952ca72aa4401e33d8fecdd0aa699774404"
+    }
+  ],
+  "files": {
+    "model.json": "462e32d7488aceca784aa7bf579c679d10c9f02053f2916d76bc2e808cea4173",
+    "sprite-15757.png": "a1a1834818bd10c372bb83eb2314d952ca72aa4401e33d8fecdd0aa699774404",
+    "sprite-8608.png": "aefb3984f81cd07d0719bd811005b379856416c89ac2dcbc9475cf5912f6a100"
+  }
+}

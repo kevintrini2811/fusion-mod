@@ -376,6 +376,30 @@
     }
   },
   {
+    "source_id": 1211,
+    "original": {
+      "seedType": 1211,
+      "name": "铁桶玉米投手",
+      "introduce": "<color=#3D1400>铁桶玉米投手最近正在琢磨买点防锈油漆，他的黄油总是会多出一点铁锈味，这严重妨碍了他为兄弟们制作黄油蛋糕。“沾了铁锈的黄油也许只能用来打僵尸了。”</color>",
+      "info": "坚硬如铁的玉米投手，投出铁玉米粒或对一类防具有奇效的铁黄油。\n\n<color=#3D1400>韧性：</color><color=red>2000</color>\n<color=#3D1400>伤害：</color><color=red>80/3秒</color>\n<color=#3D1400>特点：</color><color=red>铁植物。有25%概率投出伤害100的铁黄油，使目标定身4秒，附加目标一类防具当前血量的伤害</color>\n<color=#3D1400>融合配方：</color><color=red>磁性玉米投手（底座）+铁桶</color>",
+      "cost": ""
+    },
+    "english": {
+      "seedType": 1211,
+      "name": "Bolt-pult",
+      "introduce": "<align=left><size=36><color=black>Bolt-pult has been considering buying some anti-rust paint lately, as his butter always ends up with a bit of a rusty taste, which seriously hinders his ability to make butter cakes for his brothers. \"Butter with a rusty taste might only be good for fighting zombies.\"</color>",
+      "info": "<size=36>Bolt-pult throws Iron kernels or Iron butter that is miraculously effective against Type 1 armor.\n\n<color=black>Toughness: </color><color=#8B0000>2000</color>\n<color=black>Damage: </color><color=#8B0000>80/3s</color>\n<color=black>Special: </color><color=#8B0000>Metal plant. Has a 25% chance to throw an Iron butter with 100 damage, which stuns the target for 4 seconds and removes their Type 1 armor instantly.</color>",
+      "cost": "\n<size=36>Fusion Recipe: <color=#8B0000>Bucket > Kernel Morph</color>"
+    },
+    "german": {
+      "seedType": 1211,
+      "name": "Bolzenpult",
+      "introduce": "<align=left><size=36><color=black>Bolt-pult has been considering buying some anti-rust paint lately, as his butter always ends up with a bit of a rusty taste, which seriously hinders his ability to make butter cakes for his brothers. \"Butter with a rusty taste might only be good for fighting zombies.\"</color>",
+      "info": "<size=36>Bolt-pult throws Iron kernels or Iron butter that is miraculously effective against Type 1 armor.\n\n<color=black>Robustheit: </color><color=#8B0000>2000</color>\n<color=black>Schaden: </color><color=#8B0000>80/3s</color>\n<color=black>Besonderheit: </color><color=#8B0000>Metal plant. Has a 25% chance to throw an Iron butter with 100 damage, which stuns the target for 4 seconds and removes their Type 1 armor instantly.</color>",
+      "cost": "\n<size=36>Fusionsformel: <color=#8B0000>Bucket > Kernel Morph</color>"
+    }
+  },
+  {
     "source_id": 1044,
     "original": {
       "seedType": 1044,
@@ -3037,6 +3061,30 @@
       "introduce": "<align=left><size=36><color=black>Hungry-shroom is very concerned about her oral hygiene because she's afraid she'll be tormented by her own bad breath whenever she hides. She's also been agonizing over one question: when cleaning her head, should she use shampoo or mouthwash?</color>",
       "info": "<size=36>When scared, Hungry-shroom swallows nearby Zombies and spits out chunks of corpses to attack once the threat has passed.\n\n<color=black>Damage: </color><color=#8B0000>40/1.5s</color>\n<color=black>Special: </color><color=#8B0000>When scared, swallows up to 3 Zombies within a 3×3 area. This effect then enters a 40s CD, during which it fires ground-rolling chunks of corpses with infinite pierce.</color>",
       "cost": "\n<size=36>Fusion Recipe: <color=#8B0000>Chomper + Scaredy-shroom</color>"
+    }
+  },
+  {
+    "source_id": 1335,
+    "original": {
+      "seedType": 1335,
+      "name": "魅惑大嘴花",
+      "introduce": "<color=#3D1400>魅惑大嘴花很看不起其他大嘴花，他认为那些粗鲁的家伙吃僵尸还挑食、并且只是一昧地吃却不从事生产、对花园没有贡献，最重要的是，他们没有像自己这样炫彩的皮肤。</color>",
+      "info": "可以吞食魅惑僵尸，吃下僵尸部分，吐出魅惑成分。\n\n<color=#3D1400>伤害：</color><color=red>秒杀（吞食）</color>\n<color=#3D1400>消化时间：</color><color=red>40秒</color>\n<color=#3D1400>特点：①</color><color=red>可以吞食魅惑僵尸，并生成1张魅惑菇卡牌。吞食魅惑僵尸后，只需10秒即可完成消化</color>\n<color=#3D1400>②</color><color=red>被啃咬时魅惑该僵尸并变回大嘴花</color>\n<color=#3D1400>融合配方：</color><color=red>大嘴花+魅惑菇</color>",
+      "cost": ""
+    },
+    "english": {
+      "seedType": 1335,
+      "name": "Hypno Chomper",
+      "introduce": "<align=left><size=36><color=black>Hypno Chomper looks down on his fellow Chompers. He thinks they're rude, picky eaters, and lazy freeloaders who produce nothing for the garden, unlike him, with his dazzling, radiant skin.</color>",
+      "info": "<size=36>Hypno Chomper devours hypnotized zombies and converts them into Hypno-shrooms.\n\n<color=black>Damage: </color><color=#8B0000>Insta-kill (Devour)</color>\n<color=black>Digestion Time: </color><color=#8B0000>40s</color>\n<color=black>Special: </color><color=#8B0000>\n<color=black>•</color> Also targets Hypnotized zombies and drops a Hypno-shroom seed packet on a successful devour of a Hypnotized zombie, then digests for 10s.\n<color=black>•</color> When bitten, hypnotizes the attacker, then reverts to a Chomper.</color>",
+      "cost": "\n<size=36>Fusion Recipe: <color=#8B0000>Chomper + Hypno-shroom</color>"
+    },
+    "german": {
+      "seedType": 1335,
+      "name": "Hypnomaul",
+      "introduce": "<align=left><size=36><color=black>Hypno Chomper looks down on his fellow Chompers. He thinks they're rude, picky eaters, and lazy freeloaders who produce nothing for the garden, unlike him, with his dazzling, radiant skin.</color>",
+      "info": "<size=36>Devours hypnotized zombies and converts them into Hypno-shrooms.\n\n<color=black>Schaden: </color><color=#8B0000>Insta-kill (Devour)</color>\n<color=black>Digestion Time: </color><color=#8B0000>40s</color>\n<color=black>Besonderheit: </color><color=#8B0000>\n<color=black>•</color> Also targets Hypnotized zombies and drops a Hypno-shroom seed packet on a successful devour of a Hypnotized zombie, then digests for 10s.\n<color=black>•</color> When bitten, hypnotizes the attacker, then reverts to a Chomper.</color>",
+      "cost": "\n<size=36>Fusionsformel: <color=#8B0000>Chomper + Hypno-shroom</color>"
     }
   },
   {

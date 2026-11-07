@@ -1,4 +1,6 @@
-# Fusion Mod 22.3.4
+# Fusion Mod 22.4.0
+
+Version 22.4.0 adds [Hypno Chomper](references/hypno-chomper/port-notes.md) and [Bolt-pult](references/bolt-pult/port-notes.md). Hypno Chomper devours allied zombies for Hypno-shroom seed packets and shorter digestion; bites hypnotize the attacker and restore a regular Chomper. Bolt-pult throws original iron kernels and iron butter, removes type-1 armor with butter, and accepts buckets for repairs. Both use saved native identities, original animated models, bilingual almanac entries and the existing fertilizer system. [Review and runtime evidence](references/hypno-bolt-22-4-0/validation.md).
 
 Version 22.3.4 adds Squashwood and Torchweed with their original models, complete source recipes, charge-based Roasted summons, small fire peas, fire-nut conversions and fertilizer behavior. Roasted Spikeweed is a non-fusible source summon. See [source and port contracts](references/torch-summons-22-3-0/port-notes.md).
 
@@ -2432,7 +2434,7 @@ Installation: `Mods/FusionMod.dll`, version 0.1.30. Dismantling when the game is
 
 ## List
 
-`fusionen.txt` contains **284 open recipes** with **226 result plants** in the format:
+`fusionen.txt` contains **282 open recipes** with **224 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2844,6 +2846,8 @@ Threepeater | Torchwood | Torchthree
 Torchwood | Wall-nut | Nutwood
 Spikeweed | Torchwood | Torchweed
 Squash | Torchwood | Squashwood
+Chomper | Hypno-shroom | Hypno Chomper
+Kernel Morph | Bucket | Bolt-pult
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

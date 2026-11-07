@@ -435,6 +435,33 @@
     "Portrait": "1346.png"
   },
   {
+    "SourceId": 1211,
+    "Identity": "FusionPlant.BoltPult",
+    "CanonicalName": "Bolt-pult",
+    "English": {
+      "Name": "Bolt-pult",
+      "Info": "Bolt-pult throws Iron kernels or Iron butter that is miraculously effective against Type 1 armor.\n\nToughness: 2000\nDamage: 80/3s\nSpecial: Metal plant. Has a 25% chance to throw an Iron butter with 100 damage, which stuns the target for 4 seconds and removes their Type 1 armor instantly.",
+      "Flavor": "Bolt-pult has been considering buying some anti-rust paint lately, as his butter always ends up with a bit of a rusty taste, which seriously hinders his ability to make butter cakes for his brothers. \"Butter with a rusty taste might only be good for fighting zombies.\"",
+      "Notes": "",
+      "Recipes": [
+        "Bucket + Kernel Morph"
+      ]
+    },
+    "German": {
+      "Name": "Bolzenapult",
+      "Info": "Das Bolzenapult wirft eiserne Maiskörner oder eiserne Butter, die besonders wirksam gegen Rüstung vom Typ 1 ist.\n\nWiderstandskraft: 2000\nSchaden: 80/3 s\nBesonderheiten: Metallpflanze. Wirft mit 25 % Wahrscheinlichkeit eiserne Butter für 100 Schaden. Diese betäubt das Ziel 4 s und entfernt seine Rüstung vom Typ 1 sofort.",
+      "Flavor": "Das Bolzenapult denkt seit einiger Zeit über Rostschutzfarbe nach. Seine Butter schmeckt stets etwas rostig, was seine Pläne für Butterkuchen für seine Brüder erheblich erschwert. „Butter mit Rostgeschmack taugt wohl nur noch zum Kampf gegen Zombies.“",
+      "Notes": "",
+      "Recipes": [
+        "Eimer + Magnetkornapult"
+      ]
+    },
+    "Recipes": [
+      "Bucket + Kernel Morph"
+    ],
+    "Portrait": "1211.png"
+  },
+  {
     "SourceId": 1044,
     "Identity": "FusionPlant.BoomShroom",
     "CanonicalName": "Boom-shroom",
@@ -3532,6 +3559,33 @@
       "Chomper + Scaredy-shroom"
     ],
     "Portrait": "1452.png"
+  },
+  {
+    "SourceId": 1335,
+    "Identity": "FusionPlant.HypnoChomper",
+    "CanonicalName": "Hypno Chomper",
+    "English": {
+      "Name": "Hypno Chomper",
+      "Info": "Hypno Chomper devours hypnotized zombies and converts them into Hypno-shrooms.\n\nDamage: Insta-kill (Devour)\nDigestion Time: 40s\nSpecial: \n• Also targets Hypnotized zombies and drops a Hypno-shroom seed packet on a successful devour of a Hypnotized zombie, then digests for 10s.\n• When bitten, hypnotizes the attacker, then reverts to a Chomper.",
+      "Flavor": "Hypno Chomper looks down on his fellow Chompers. He thinks they're rude, picky eaters, and lazy freeloaders who produce nothing for the garden, unlike him, with his dazzling, radiant skin.",
+      "Notes": "",
+      "Recipes": [
+        "Chomper + Hypno-shroom"
+      ]
+    },
+    "German": {
+      "Name": "Hypnoschnapper",
+      "Info": "Der Hypnoschnapper verschlingt hypnotisierte Zombies und wandelt sie in Hypnopilze um.\n\nSchaden: Sofortiger Tod (Verschlingen)\nVerdauungszeit: 40 s\nBesonderheiten:\n• Er greift auch hypnotisierte Zombies an. Nach erfolgreichem Verschlingen eines hypnotisierten Zombies hinterlässt er ein Hypnopilz-Saatpäckchen und verdaut 10 s.\n• Wird er gebissen, hypnotisiert er den Angreifer und verwandelt sich in einen gewöhnlichen Schnapper zurück.",
+      "Flavor": "Der Hypnoschnapper blickt auf seine Schnapperkollegen herab. Er hält sie für grobe, wählerische und faule Schmarotzer, die nichts zum Garten beitragen – ganz anders als er mit seiner strahlend schönen Haut.",
+      "Notes": "",
+      "Recipes": [
+        "Schnapper + Hypnopilz"
+      ]
+    },
+    "Recipes": [
+      "Chomper + Hypno-shroom"
+    ],
+    "Portrait": "1335.png"
   },
   {
     "SourceId": 1230,

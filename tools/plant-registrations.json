@@ -1614,6 +1614,16 @@
       "name": "RoastedSpikeweed",
       "native": "Spikeweed",
       "marker": "Cobcannon"
+    },
+    {
+      "name": "HypnoChomper",
+      "native": "Chomper",
+      "marker": "Hypnoshroom"
+    },
+    {
+      "name": "BoltPult",
+      "native": "Kernelpult",
+      "marker": "Wallnut"
     }
   ],
   "reserved": [],
@@ -1898,7 +1908,8 @@
       "KernelMorph",
       "MetalPult",
       "DamagePult",
-      "SolarPult"
+      "SolarPult",
+      "BoltPult"
     ],
     "IsEnergyNut": [
       "CabbageNut",

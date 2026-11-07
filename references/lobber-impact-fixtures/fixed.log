@@ -1,0 +1,4 @@
+Unhandled exception. System.Exception: melon splash five per garlic point: expected 48, got 0
+   at Program.Equal[T](T expected, T actual, String message) in /tmp/hypno-splash-review.Ey4DW2/tests/ShootingPotsTests.cs:line 7
+   at Program.GarlicAndSummer() in /tmp/hypno-splash-review.Ey4DW2/tests/ShootingPotsTests.cs:line 425
+   at Program.Main() in /tmp/hypno-splash-review.Ey4DW2/tests/ShootingPotsTests.cs:line 530

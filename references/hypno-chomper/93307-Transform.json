@@ -1,0 +1,128 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 34837
+  },
+  "m_LocalRotation": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0,
+    "w": 1.0
+  },
+  "m_LocalPosition": {
+    "x": -2.6689999103546143,
+    "y": -0.03999999910593033,
+    "z": 0.0
+  },
+  "m_LocalScale": {
+    "x": 0.4000000059604645,
+    "y": 0.4000000059604645,
+    "z": 0.4000000059604645
+  },
+  "m_Children": [
+    {
+      "m_FileID": 0,
+      "m_PathID": 112061
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 103845
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 92578
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 93565
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 91465
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 111121
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 88760
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 100703
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 109710
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 110977
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 95886
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 95062
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 118278
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 91118
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 116610
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 109086
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 109906
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 96530
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 92556
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 96402
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 120669
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 102649
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 116856
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 89987
+    },
+    {
+      "m_FileID": 0,
+      "m_PathID": 94661
+    }
+  ],
+  "m_Father": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  }
+}

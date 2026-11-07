@@ -1,0 +1,12 @@
+00548c90: mov eax, 0x37
+00548c95: ret
+00548c96: int3
+00548c97: int3
+00548c98: int3
+00548c99: int3
+00548c9a: int3
+00548c9b: int3
+00548c9c: int3
+00548c9d: int3
+00548c9e: int3
+00548c9f: int3

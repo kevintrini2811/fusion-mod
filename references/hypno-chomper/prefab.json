@@ -1,0 +1,42 @@
+{
+  "game_object": 34837,
+  "name": "HypnoChomperPrefab",
+  "components": [
+    {
+      "path_id": 93307,
+      "type": "Transform"
+    },
+    {
+      "path_id": 124385,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 123308,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 121736,
+      "type": "Rigidbody2D"
+    },
+    {
+      "path_id": 126023,
+      "type": "Animator",
+      "controller": 6239,
+      "clips": [
+        4028,
+        4026,
+        4027,
+        4029
+      ]
+    },
+    {
+      "path_id": 191547,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 1877
+      },
+      "script_name": "HypnoChomper"
+    }
+  ]
+}

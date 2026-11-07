@@ -1,0 +1,67 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 34837
+  },
+  "m_Enabled": 1,
+  "m_Density": 1.0,
+  "m_Material": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_IncludeLayers": {
+    "m_Bits": 0
+  },
+  "m_ExcludeLayers": {
+    "m_Bits": 0
+  },
+  "m_LayerOverridePriority": 91,
+  "m_ForceSendLayers": {
+    "m_Bits": 4294967295
+  },
+  "m_ForceReceiveLayers": {
+    "m_Bits": 4294967295
+  },
+  "m_ContactCaptureLayers": {
+    "m_Bits": 0
+  },
+  "m_CallbackLayers": {
+    "m_Bits": 0
+  },
+  "m_IsTrigger": true,
+  "m_UsedByEffector": false,
+  "m_UsedByComposite": false,
+  "m_Offset": {
+    "x": -0.13865214586257935,
+    "y": 1.6451348066329956
+  },
+  "m_SpriteTilingProperty": {
+    "border": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 0.0
+    },
+    "pivot": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "oldSize": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "newSize": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "adaptiveTilingThreshold": 0.0,
+    "drawMode": 0,
+    "adaptiveTiling": false
+  },
+  "m_AutoTiling": false,
+  "m_Size": {
+    "x": 2.787309169769287,
+    "y": 2.78072190284729
+  },
+  "m_EdgeRadius": 0.0
+}

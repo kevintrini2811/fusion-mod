@@ -1,0 +1,294 @@
+[12:11:59.129] [MelonLoader.Bootstrap] Using HostFXR Path: C:\Program Files\dotnet\host\fxr\6.0.36\hostfxr.dll
+[12:11:59.130] [MelonLoader.Bootstrap] Using .NET runtime: 'C:\Program Files\dotnet\host\fxr\6.0.36\hostfxr.dll'
+
+[12:11:59.594] ------------------------------
+[12:11:59.596] MelonLoader v0.7.3 Open-Beta
+[12:11:59.597] OS: Wine/Proton 11.0
+[12:11:59.598] Hash Code: BDD43DC0F3893C208C95389B863AB61C967AE14204DA0DD8051647E754C8709B
+[12:11:59.599] ------------------------------
+[12:11:59.600] Game Type: Il2cpp
+[12:11:59.601] Game Arch: x64
+[12:11:59.602] ------------------------------
+[12:11:59.603] Command-Line:
+[12:11:59.605] ------------------------------
+[12:11:59.607] Core::BasePath = S:\steamapps\common\PVZ Replanted
+[12:11:59.611] Game::BasePath = S:\steamapps\common\PVZ Replanted
+[12:11:59.612] Game::DataPath = S:\steamapps\common\PVZ Replanted\Replanted_Data
+[12:11:59.612] Game::ApplicationPath = S:\steamapps\common\PVZ Replanted\Replanted.exe
+[12:11:59.613] Runtime Type: net6
+[12:11:59.695] ------------------------------
+[12:11:59.696] Game Name: PvZ Replanted
+[12:11:59.697] Game Developer: PopCap Games
+[12:11:59.699] Unity Version: 6000.0.52f1
+[12:11:59.700] Game Version: 1.5.1469_Steam
+[12:11:59.701] ------------------------------
+
+[12:12:00.202] Preferences Loaded!
+
+[12:12:00.220] Loading UserLibs...
+[12:12:00.223] 0 UserLibs loaded.
+
+[12:12:00.224] Loading Plugins...
+[12:12:00.230] 0 Plugins loaded.
+
+[12:12:00.962] Loading Il2CppAssemblyGenerator...
+[12:12:01.004] [Il2CppAssemblyGenerator] Contacting RemoteAPI...
+[12:12:01.262] [Il2CppAssemblyGenerator] Game Not Found on RemoteAPI Host (https://api.melonloader.com/api/v1/game/pvz-replanted)
+[12:12:01.263] [Il2CppAssemblyGenerator] RemoteAPI.DumperVersion = null
+[12:12:01.264] [Il2CppAssemblyGenerator] RemoteAPI.ObfuscationRegex = null
+[12:12:01.266] [Il2CppAssemblyGenerator] RemoteAPI.MappingURL = null
+[12:12:01.267] [Il2CppAssemblyGenerator] RemoteAPI.MappingFileSHA512 = null
+[12:12:01.276] [Il2CppAssemblyGenerator] Using Cpp2IL Version: 2022.1.0-pre-release.21
+[12:12:01.277] [Il2CppAssemblyGenerator] Using Il2CppInterop Version = 1.5.1-ci.845+f03c8f4ae507d47ea814f3d11d1ec6b0391c1576
+[12:12:01.278] [Il2CppAssemblyGenerator] Using Unity Dependencies Version = 6000.0.52
+[12:12:01.280] [Il2CppAssemblyGenerator] Using Deobfuscation Regex = null
+[12:12:01.281] [Il2CppAssemblyGenerator] Cpp2IL is up to date.
+[12:12:01.283] [Il2CppAssemblyGenerator] Cpp2IL.Plugin.StrippedCodeRegSupport is up to date.
+[12:12:01.285] [Il2CppAssemblyGenerator] UnityDependencies is up to date.
+[12:12:01.287] [Il2CppAssemblyGenerator] Checking GameAssembly...
+[12:12:01.480] [Il2CppAssemblyGenerator] Assembly is up to date. No Generation Needed.
+
+[12:12:01.482] Loading Mods...
+[12:12:01.525] ------------------------------
+[12:12:01.532] Melon Assembly loaded: '.\Mods\BloomEngine.dll'
+[12:12:01.533] SHA256 Hash: '5181092DB5DE3746CBCF64B4EC6B0B0923D86A547EB21B9B3244E403D65F2C93'
+[12:12:01.592] Melon Assembly loaded: '.\Mods\DebugMod.dll'
+[12:12:01.593] SHA256 Hash: '8ACE0191F89CFD3930DADEA2249B51E6A9E063E2525E28BE246EEDAC1AE671C6'
+[12:12:01.598] Melon Assembly loaded: '.\Mods\DifficultyMod.dll'
+[12:12:01.599] SHA256 Hash: '3D7442CE832D455469F75EEA75E53F5E88B5BD441CC373E97E6E67232DFA1599'
+[12:12:02.185] Melon Assembly loaded: '.\Mods\FusionMod.dll'
+[12:12:02.186] SHA256 Hash: '9E2C5CEBC320F1214A95C4C6CC09F6912CA308BE0801D5ACF1D8BAFB8C22148B'
+[12:12:02.207] Melon Assembly loaded: '.\Mods\LawnGlove.dll'
+[12:12:02.208] SHA256 Hash: 'CAAED0F338EC7F3F8F0AEA1434EB327AD2598F5BAE3A0E7B07FCD925ADB61D2A'
+[12:12:02.222] Melon Assembly loaded: '.\Mods\PlantLibrary.dll'
+[12:12:02.222] SHA256 Hash: '173844A99BED815DD43ED8A389BABE595F63079C0AA7822F6913EB63E166AC2F'
+[12:12:02.227] Melon Assembly loaded: '.\Mods\PvZRepatched.dll'
+[12:12:02.228] SHA256 Hash: '59BA9DF80FB3BECC978709873A89EEC8489A3AC27F6A2319DD2F5297091217FC'
+[12:12:02.230] Melon Assembly loaded: '.\Mods\RegaloDorado.dll'
+[12:12:02.231] SHA256 Hash: '3B61F0708BB956C69A922A1C9DBEDEFC539105CBAFC857D09701EB6EC6068590'
+[12:12:02.234] Melon Assembly loaded: '.\Mods\ReplantAPI.dll'
+[12:12:02.235] SHA256 Hash: '306A227C8AE92ECC8D721D97F07EE3F75F1EB4D3F2BBE42DEA6740574F99FCC0'
+[12:12:02.240] Melon Assembly loaded: '.\Mods\SpeedMod.dll'
+[12:12:02.241] SHA256 Hash: 'E9721BBC0A0DAFB8BD4676BD1AD7470419DF42B69B3714E33A388A3A8471261E'
+[12:12:02.245] Melon Assembly loaded: '.\Mods\SunCollector.dll'
+[12:12:02.246] SHA256 Hash: 'D8157339A063EE3F0E19B2FC86B535BE7E4408D7AFCDDDFDA077FE0534DCA89F'
+[12:12:02.249] Melon Assembly loaded: '.\Mods\VersusBot.dll'
+[12:12:02.250] SHA256 Hash: 'DAD6340DEB1029FF874B4F9C07FC03B121A188B9515A6F02F6E4766C071B0B50'
+[12:12:02.318] Melon Assembly loaded: '.\Mods\ZombieLibrary.dll'
+[12:12:02.318] SHA256 Hash: 'ECEC6DC11A5EEF2FDAFD4403830876445AEA638D007BEAB3A81DACC74FB85738'
+
+[12:12:02.642] ------------------------------
+[12:12:02.643] Plant Library v1.0.4
+[12:12:02.645] by Kevin / Codex
+[12:12:02.645] Assembly: PlantLibrary.dll
+[12:12:02.646] ------------------------------
+[12:12:02.650] ------------------------------
+[12:12:02.650] Zombie Library v1.4.5
+[12:12:02.652] by Kevin / Codex
+[12:12:02.653] Assembly: ZombieLibrary.dll
+[12:12:02.653] ------------------------------
+[12:12:02.656] ------------------------------
+[12:12:02.657] Speed Mod v1.0.6
+[12:12:02.658] by Kevin / Codex
+[12:12:02.659] Assembly: SpeedMod.dll
+[12:12:02.660] ------------------------------
+[12:12:02.662] ------------------------------
+[12:12:02.663] BloomEngine v0.4.1-beta
+[12:12:02.663] by PalmForest
+[12:12:02.664] Assembly: BloomEngine.dll
+[12:12:02.665] ------------------------------
+[12:12:02.667] ------------------------------
+[12:12:02.668] Debug Mod v1.3.14
+[12:12:02.669] by Kevin / Codex
+[12:12:02.669] Assembly: DebugMod.dll
+[12:12:02.670] ------------------------------
+[12:12:02.673] ------------------------------
+[12:12:02.673] Difficulty Mod v1.0.6
+[12:12:02.674] by Kevin / Codex
+[12:12:02.675] Assembly: DifficultyMod.dll
+[12:12:02.675] ------------------------------
+[12:12:02.678] ------------------------------
+[12:12:02.679] Glove Mod v1.4.3
+[12:12:02.679] by Kevin / Codex
+[12:12:02.680] Assembly: LawnGlove.dll
+[12:12:02.681] ------------------------------
+[12:12:02.683] ------------------------------
+[12:12:02.684] PvZRepatched v1.2.0
+[12:12:02.685] by RaptorRush
+[12:12:02.685] Assembly: PvZRepatched.dll
+[12:12:02.686] ------------------------------
+[12:12:02.689] ------------------------------
+[12:12:02.689] Regalo Dorado v1.2.1
+[12:12:02.690] by Angel
+[12:12:02.691] Assembly: RegaloDorado.dll
+[12:12:02.692] ------------------------------
+[12:12:02.694] ------------------------------
+[12:12:02.696] ReplantAPI v2.0.1
+[12:12:02.697] by HenHen
+[12:12:02.698] Assembly: ReplantAPI.dll
+[12:12:02.699] ------------------------------
+[12:12:02.702] ------------------------------
+[12:12:02.703] Sun Collector v1.2.2
+[12:12:02.704] by Kevin / Codex
+[12:12:02.705] Assembly: SunCollector.dll
+[12:12:02.706] ------------------------------
+[12:12:02.709] ------------------------------
+[12:12:02.710] Versus Bot v1.0.0
+[12:12:02.711] by Angel
+[12:12:02.712] Assembly: VersusBot.dll
+[12:12:02.713] ------------------------------
+[12:12:02.716] ------------------------------
+[12:12:02.717] Plant Fusion v22.4.0
+[12:12:02.718] by Kevin / Codex
+[12:12:02.719] Assembly: FusionMod.dll
+[12:12:02.719] ------------------------------
+[12:12:02.720] ------------------------------
+[12:12:02.721] 13 Mods loaded.
+
+[12:12:06.058] [Il2CppInterop] Registered mono type MelonLoader.Support.MonoEnumeratorWrapper in il2cpp domain
+[12:12:06.121] Support Module Loaded: S:\steamapps\common\PVZ Replanted\MelonLoader\Dependencies\SupportModules\Il2Cpp.dll
+[12:12:13.313] [Il2CppInterop] Registered mono type BloomEngine.UI.CustomPopup in il2cpp domain
+[12:12:13.315] [BloomEngine] Successfully loaded BloomEngine v0.4.1-beta by PalmForest.
+[12:12:13.325] [BloomEngine] [ModMenuService] Successfully added BloomEngine to the mod menu.
+[12:12:13.335] [Il2CppInterop] Registered mono type Il2CppInterop.Runtime.DelegateSupport+Il2CppToMonoDelegateReference in il2cpp domain
+[12:12:13.375] [Debug_Mod] Debug API 1: S:\steamapps\common\PVZ Replanted\UserData\DebugModApi
+[12:12:13.382] [Difficulty Mod] MelonPreferences Loaded from S:\steamapps\common\PVZ Replanted\UserData\DifficultyMod.cfg
+[12:12:13.408] [BloomEngine] [ModMenuService] Successfully added Difficulty Mod to the mod menu.
+[12:12:13.410] [Difficulty_Mod] Difficulty Mod ready. Right-click a level for Fusion difficulty; default is Normal (3).
+[12:12:13.421] [BloomEngine] [ModMenuService] Successfully added Glove Mod to the mod menu.
+[12:12:13.422] [Glove_Mod] Glove Mod ready: right-click shovel or hold controller tool button 1.5s to switch; tap to use.
+[12:12:13.435] [BloomEngine] [ModMenuService] Successfully added PvZRepatched to the mod menu.
+[12:12:13.444] [Regalo_Dorado] Regalo Dorado cargado: página 4 de la tienda, $50.000, uno al día.
+[12:12:13.445] [ReplantAPI] ReplantAPI v2.0.1 initialized.
+[12:12:13.447] [ReplantAPI] HenHen — github.com/HenHenV2
+[12:12:13.455] [Sun Collector] MelonPreferences Loaded from S:\steamapps\common\PVZ Replanted\UserData\SunCollector.cfg
+[12:12:13.465] [BloomEngine] [ModMenuService] Successfully added Sun Collector to the mod menu.
+[12:12:13.466] [Sun_Collector] Sun Collector ready: ON. Press Space or right stick (R3) during gameplay to toggle.
+[12:12:13.468] [Versus_Bot] Versión del juego: 1.5.1469_Steam (el mod se probó con la 1.5.1469)
+[12:12:13.478] [BloomEngine] [ModMenuService] Successfully added Plant Fusion to the mod menu.
+[12:12:13.529] [Plant_Fusion] Plant Fusion ready: 387 recipe(s); seed planting and Lawn Glove supported.
+[12:12:13.705] [ReplantAPI] Version check — Current: 2.0.1, Latest: 2.0.1
+[12:12:19.625] [WARNING] [PvZRepatched] [Unity] (Warning) Cannot find matching control scheme for Player2 (all control schemes are already paired to matching devices)
+UnityEngine.InputSystem.PlayerInput:OnEnable()
+
+[12:12:20.028] [Il2CppInterop] Registered mono type MelonLoader.Support.SM_Component in il2cpp domain
+[12:12:20.039] Registered mono icall UnityEngine.Transform::SetAsLastSibling in il2cpp domain
+[12:12:20.389] [BloomEngine] [BloomLoader] Loading global panel container...
+[12:12:21.005] [Debug_Mod] Debug ready. Type DEBUG in the main menu. No progress or board saves during debug sessions.
+[12:12:21.041] [Versus_Bot] Mandos virtuales creados.
+[12:12:21.201] [ReplantAPI] [ReplantAPI] Showing splash screen.
+[12:12:25.994] [ReplantAPI] [ReplantAPI] Splash finished.
+[12:12:34.736] [BloomEngine] [BloomLoader] Loading achievements UI...
+[12:12:34.777] [BloomEngine] [BloomLoader] Loading main menu...
+[12:12:34.790] [BloomEngine] [UIHelper] Created UI button template.
+[12:12:34.794] [BloomEngine] [UIHelper] Created UI textbox template.
+[12:12:34.796] [BloomEngine] [UIHelper] Created UI checkbox template.
+[12:12:34.798] [BloomEngine] [UIHelper] Created UI dropdown template.
+[12:12:34.799] [BloomEngine] [UIHelper] Created UI slider template.
+[12:12:34.803] [BloomEngine] [UIHelper] Successfully loaded all UI elements.
+[12:12:34.848] [BloomEngine] Successfully created PvZRepatched config panel with 3 fields across 1 page.
+[12:12:34.956] [BloomEngine] [ModMenuService] All UI templates loaded, creating mod menu.
+[12:12:35.022] [Difficulty_Mod] Using loaded native minigames panel for difficulty selection.
+[12:12:35.027] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level10 (levels.fogLevels.all.9).
+[12:12:35.030] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level9 (levels.fogLevels.all.8).
+[12:12:35.031] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level8 (levels.fogLevels.all.7).
+[12:12:35.033] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level7 (levels.fogLevels.all.6).
+[12:12:35.034] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level6 (levels.fogLevels.all.5).
+[12:12:35.035] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level5 (levels.fogLevels.all.4).
+[12:12:35.037] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level4 (levels.fogLevels.all.3).
+[12:12:35.038] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level3 (levels.fogLevels.all.2).
+[12:12:35.040] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level2 (levels.fogLevels.all.1).
+[12:12:35.041] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea4Level1 (levels.fogLevels.all.0).
+[12:12:35.042] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayEndless (levels.cloudyDay.all.12).
+[12:12:35.044] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel12 (levels.cloudyDay.all.11).
+[12:12:35.045] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel11 (levels.cloudyDay.all.10).
+[12:12:35.047] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel10 (levels.cloudyDay.all.9).
+[12:12:35.048] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel9 (levels.cloudyDay.all.8).
+[12:12:35.050] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel8 (levels.cloudyDay.all.7).
+[12:12:35.051] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel7 (levels.cloudyDay.all.6).
+[12:12:35.052] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel6 (levels.cloudyDay.all.5).
+[12:12:35.054] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel5 (levels.cloudyDay.all.4).
+[12:12:35.055] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel4 (levels.cloudyDay.all.3).
+[12:12:35.056] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel3 (levels.cloudyDay.all.2).
+[12:12:35.058] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel2 (levels.cloudyDay.all.1).
+[12:12:35.059] [Difficulty_Mod] Bound difficulty card: Level-CloudyDayLevel1 (levels.cloudyDay.all.0).
+[12:12:35.061] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level10 (levels.nightLevels.all.9).
+[12:12:35.062] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level9 (levels.nightLevels.all.8).
+[12:12:35.063] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level8 (levels.nightLevels.all.7).
+[12:12:35.065] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level7 (levels.nightLevels.all.6).
+[12:12:35.066] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level6 (levels.nightLevels.all.5).
+[12:12:35.068] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level5 (levels.nightLevels.all.4).
+[12:12:35.069] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level4 (levels.nightLevels.all.3).
+[12:12:35.071] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level3 (levels.nightLevels.all.2).
+[12:12:35.072] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level2 (levels.nightLevels.all.1).
+[12:12:35.076] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea2Level1 (levels.nightLevels.all.0).
+[12:12:35.078] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level10 (levels.poolLevels.all.9).
+[12:12:35.079] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level9 (levels.poolLevels.all.8).
+[12:12:35.080] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level8 (levels.poolLevels.all.7).
+[12:12:35.082] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level7 (levels.poolLevels.all.6).
+[12:12:35.083] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level6 (levels.poolLevels.all.5).
+[12:12:35.084] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level5 (levels.poolLevels.all.4).
+[12:12:35.086] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level4 (levels.poolLevels.all.3).
+[12:12:35.087] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level3 (levels.poolLevels.all.2).
+[12:12:35.088] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level2 (levels.poolLevels.all.1).
+[12:12:35.089] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea3Level1 (levels.poolLevels.all.0).
+[12:12:35.091] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level10 (levels.dayLevels.all.9).
+[12:12:35.092] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level9 (levels.dayLevels.all.8).
+[12:12:35.093] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level8 (levels.dayLevels.all.7).
+[12:12:35.095] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level7 (levels.dayLevels.all.6).
+[12:12:35.096] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level6 (levels.dayLevels.all.5).
+[12:12:35.097] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level5 (levels.dayLevels.all.4).
+[12:12:35.098] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level4 (levels.dayLevels.all.3).
+[12:12:35.100] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level3 (levels.dayLevels.all.2).
+[12:12:35.101] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level2 (levels.dayLevels.all.1).
+[12:12:35.103] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea1Level1 (levels.dayLevels.all.0).
+[12:12:35.104] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level10 (levels.roofLevels.all.9).
+[12:12:35.106] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level9 (levels.roofLevels.all.8).
+[12:12:35.107] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level8 (levels.roofLevels.all.7).
+[12:12:35.108] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level7 (levels.roofLevels.all.6).
+[12:12:35.110] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level6 (levels.roofLevels.all.5).
+[12:12:35.111] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level5 (levels.roofLevels.all.4).
+[12:12:35.112] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level4 (levels.roofLevels.all.3).
+[12:12:35.114] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level3 (levels.roofLevels.all.2).
+[12:12:35.115] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level2 (levels.roofLevels.all.1).
+[12:12:35.116] [Difficulty_Mod] Bound difficulty card: Level-AdventureArea5Level1 (levels.roofLevels.all.0).
+[12:12:35.118] [Difficulty_Mod] Bound difficulty card: Level-Minigame-DarkStormyNight (levels.limboContent.all.9).
+[12:12:35.119] [Difficulty_Mod] Bound difficulty card: Level-Minigame-CanYouDigIt (levels.limboContent.all.8).
+[12:12:35.121] [Difficulty_Mod] Bound difficulty card: Level-Minigame-GraveDanger (levels.limboContent.all.7).
+[12:12:35.122] [Difficulty_Mod] Bound difficulty card: Level-Minigame-HighGravity (levels.limboContent.all.6).
+[12:12:35.123] [Difficulty_Mod] Bound difficulty card: Level-Minigame-AirRaid (levels.limboContent.all.5).
+[12:12:35.125] [Difficulty_Mod] Bound difficulty card: Level-Minigame-ArtChallengeSunflower (levels.limboContent.all.4).
+[12:12:35.132] [Difficulty_Mod] Bound difficulty card: Level-Minigame-BigTime (levels.limboContent.all.3).
+[12:12:35.134] [Difficulty_Mod] Bound difficulty card: Level-Minigame-Unsodded (levels.limboContent.all.2).
+[12:12:35.136] [Difficulty_Mod] Bound difficulty card: Level-Minigame-SunnyDay (levels.limboContent.all.1).
+[12:12:35.137] [Difficulty_Mod] Bound difficulty card: Level-Minigame-ArtChallengeWallnut (levels.limboContent.all.0).
+[12:12:35.631] [Debug_Mod] Debug: Start Night · 11; native card selection.
+[12:12:36.126] [Difficulty_Mod] Level 66ac7fd2-a235-4553-940e-227ec79fe79a/2:-1:2:0:DebugSession: Extreme
+[12:12:36.129] [ReplantAPI] GameplayActivity instance cleared.
+[12:12:36.184] [ReplantAPI] Board captured — Level: 0, Background: Night, Rows: 5
+[12:12:36.185] [ReplantAPI] Stage — Night: True, Pool: False, Fog: False, Roof: False, 6Rows: False
+[12:12:36.186] [ReplantAPI] Conveyor: False, ChooseSeeds: True, GraveStones: True
+[12:12:36.188] [ReplantAPI] Sun: True, Waves: 10, Challenge: True
+[12:12:36.190] [ReplantAPI] Zombies: True, Plants: True, Coins: True
+[12:12:36.191] [ReplantAPI] Projectiles: True, LawnMowers: True, GridItems: True
+[12:12:36.194] [ReplantAPI] Reanimations: True, CursorObject: True, Advice: True
+[12:12:36.195] [ReplantAPI] SeedBank: True, Paused: False, LevelComplete: False
+[12:12:36.197] [ReplantAPI] App captured — GameMode: SurvivalNormalStage2, GameScene: Loading
+[12:12:36.198] [ReplantAPI] GameplayActivity instance captured.
+[12:12:36.233] [Debug_Mod] Debug: Board ready; native selection and intro remain active.
+[12:12:39.899] [Debug_Mod] Debug: Native card arrows ready; 8 tabs.
+[12:12:40.037] [Debug_Mod] Debug: Plants confirmed; native panel seedChooser, state Shown.
+[12:12:40.127] [Debug_Mod] Debug: Zombie selection opened.
+[12:12:41.075] [Debug_Mod] Debug: Seed bank ready; 1 plants, 1 card slots.
+[12:12:45.359] [Glove_Mod] Shovel UI image: Shovel / SPR_MainHud_Shovel
+[12:12:45.366] [Glove_Mod] Bound active Shovel button.
+[12:12:45.373] [Glove_Mod] Loading native Zen Garden glove icon.
+[12:13:06.327] [Plant_Fusion] HypnoChomper uses native preview material: Sprites/DefaultColourblend.
+[12:13:06.384] [Plant_Fusion] HypnoChomper original art ready: preview=False, shader=Sprites/DefaultColourblend, sprites=26, layer=0, scale=159.10081, artworkBox=(225.60, 225.60, 0.00), sizeReference=preview-or-footprint, parent=Chomper_Render, localPosition=(437.22, 27.02, 0.00), onBoard=True, visible=True, parentActive=True.
+[12:13:46.338] [ERROR] [PvZRepatched] [Unity] (Error) Releasing render texture that is set as Camera.targetTexture!
+
+[12:13:46.339] [ERROR] [PvZRepatched] [Unity] (Error) Releasing render texture that is set as Camera.targetTexture!
+
+[12:13:46.340] [ERROR] [PvZRepatched] [Unity] (Error) Releasing render texture that is set as Camera.targetTexture!
+
+[12:13:54.714] Preferences Saved!

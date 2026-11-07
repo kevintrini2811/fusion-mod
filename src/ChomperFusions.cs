@@ -42,7 +42,9 @@ internal static class ChomperFusions
     internal const int ChompzillaDigestionTicks = 4000;
     internal static void Fertilize(Plant plant)
     {
-        if (FusionPlant.From(plant) == FusionPlant.Chompzilla && plant.mStateCountdown > 50)
+        var identity = FusionPlant.From(plant);
+        if ((identity == FusionPlant.Chompzilla || identity == FusionPlant.HypnoChomper
+                && plant.mState == PlantState.ChomperDigesting) && plant.mStateCountdown > 50)
             plant.mStateCountdown = 50;
     }
 

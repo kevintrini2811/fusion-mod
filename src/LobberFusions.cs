@@ -14,7 +14,7 @@ internal static class LobberFusions
     internal static void Initialize(Plant plant)
     {
         if (!FusionPlant.IsMixedLobber(FusionPlant.From(plant))) return;
-        plant.mPlantHealth = plant.mPlantMaxHealth = FusionPlant.From(plant) == FusionPlant.MetalPult ? 2000 : 300;
+        plant.mPlantHealth = plant.mPlantMaxHealth = (FusionPlant.From(plant) == FusionPlant.MetalPult || FusionPlant.From(plant) == FusionPlant.BoltPult) ? 2000 : 300;
         plant.mLaunchRate = FusionPlant.From(plant) == FusionPlant.DamagePult ? 1500
             : FusionPlant.From(plant) == FusionPlant.SaladPult || FusionPlant.From(plant) == FusionPlant.SolarPult ? 500 : 300;
         plant.mTargetX = 0;

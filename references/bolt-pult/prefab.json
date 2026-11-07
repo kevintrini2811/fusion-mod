@@ -1,0 +1,41 @@
+{
+  "game_object": 46066,
+  "name": "IronCornPrefab",
+  "components": [
+    {
+      "path_id": 115631,
+      "type": "Transform"
+    },
+    {
+      "path_id": 125439,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 125269,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 121896,
+      "type": "Rigidbody2D"
+    },
+    {
+      "path_id": 126222,
+      "type": "Animator",
+      "controller": 6254,
+      "clips": [
+        4081,
+        4082,
+        4083
+      ]
+    },
+    {
+      "path_id": 192926,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 805
+      },
+      "script_name": "IronCorn"
+    }
+  ]
+}

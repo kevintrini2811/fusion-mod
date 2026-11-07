@@ -1,0 +1,35 @@
+00682410: push rbx
+00682412: sub rsp, 0x20
+00682416: cmp byte ptr [rip + 0x2f17bf0], 0
+0068241d: mov rbx, rcx
+00682420: jne 0x180682435
+00682422: lea rcx, [rip + 0x2d0c367]
+00682429: call 0x1803633b0
+0068242e: mov byte ptr [rip + 0x2f17bd8], 1
+00682435: xor edx, edx
+00682437: mov rcx, rbx
+0068243a: call 0x1809d4920
+0068243f: mov rcx, qword ptr [rbx + 0x78]
+00682443: test rcx, rcx
+00682446: je 0x18068245c
+00682448: mov rdx, qword ptr [rip + 0x2d0c341]
+0068244f: xor r8d, r8d
+00682452: add rsp, 0x20
+00682456: pop rbx
+00682457: jmp 0x182678fd0
+0068245c: call 0x180363610
+00682461: int3
+00682462: int3
+00682463: int3
+00682464: int3
+00682465: int3
+00682466: int3
+00682467: int3
+00682468: int3
+00682469: int3
+0068246a: int3
+0068246b: int3
+0068246c: int3
+0068246d: int3
+0068246e: int3
+0068246f: int3

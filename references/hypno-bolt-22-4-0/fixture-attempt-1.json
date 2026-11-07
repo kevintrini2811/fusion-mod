@@ -1,0 +1,2834 @@
+{
+  "checks": [],
+  "events": [
+    {
+      "command": "status",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "ffffe3e830b64e909a1e00dec4c3550a",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "ready": true,
+          "code": "READY",
+          "board": "680a4fe094f94e119d8c8ca12f52b995",
+          "scene": "Playing",
+          "debug": true,
+          "paused": false,
+          "fps": 57.258366
+        }
+      }
+    },
+    {
+      "command": "speed",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "b5d31b4503e2486fb044590681a2479a",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "status",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "6e599ca4c2cc4252b66174652752d265",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "ready": true,
+          "code": "READY",
+          "board": "680a4fe094f94e119d8c8ca12f52b995",
+          "scene": "Playing",
+          "debug": true,
+          "paused": false,
+          "fps": 57.466984
+        }
+      }
+    },
+    {
+      "command": "difficulty",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "61c3eb5d3adf414fbfccdf4769b241bf",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "value": 5,
+          "name": "Extreme",
+          "scope": "current level",
+          "trophyEligible": true
+        }
+      }
+    },
+    {
+      "command": "suncollector",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "323a0351ea2d4df3bae13428cdb4ba6d",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "enabled": true,
+          "scope": "session"
+        }
+      }
+    },
+    {
+      "command": "catalog.plants",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "5710bded375647c99fb51ca8973f280b",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "native": [
+            {
+              "type": "Peashooter",
+              "value": 0
+            },
+            {
+              "type": "Sunflower",
+              "value": 1
+            },
+            {
+              "type": "Cherrybomb",
+              "value": 2
+            },
+            {
+              "type": "Wallnut",
+              "value": 3
+            },
+            {
+              "type": "Potatomine",
+              "value": 4
+            },
+            {
+              "type": "Snowpea",
+              "value": 5
+            },
+            {
+              "type": "Chomper",
+              "value": 6
+            },
+            {
+              "type": "Repeater",
+              "value": 7
+            },
+            {
+              "type": "Puffshroom",
+              "value": 8
+            },
+            {
+              "type": "Sunshroom",
+              "value": 9
+            },
+            {
+              "type": "Fumeshroom",
+              "value": 10
+            },
+            {
+              "type": "Gravebuster",
+              "value": 11
+            },
+            {
+              "type": "Hypnoshroom",
+              "value": 12
+            },
+            {
+              "type": "Scaredyshroom",
+              "value": 13
+            },
+            {
+              "type": "Iceshroom",
+              "value": 14
+            },
+            {
+              "type": "Doomshroom",
+              "value": 15
+            },
+            {
+              "type": "Lilypad",
+              "value": 16
+            },
+            {
+              "type": "Squash",
+              "value": 17
+            },
+            {
+              "type": "Threepeater",
+              "value": 18
+            },
+            {
+              "type": "Tanglekelp",
+              "value": 19
+            },
+            {
+              "type": "Jalapeno",
+              "value": 20
+            },
+            {
+              "type": "Spikeweed",
+              "value": 21
+            },
+            {
+              "type": "Torchwood",
+              "value": 22
+            },
+            {
+              "type": "Tallnut",
+              "value": 23
+            },
+            {
+              "type": "Seashroom",
+              "value": 24
+            },
+            {
+              "type": "Plantern",
+              "value": 25
+            },
+            {
+              "type": "Cactus",
+              "value": 26
+            },
+            {
+              "type": "Blover",
+              "value": 27
+            },
+            {
+              "type": "Splitpea",
+              "value": 28
+            },
+            {
+              "type": "Starfruit",
+              "value": 29
+            },
+            {
+              "type": "Pumpkinshell",
+              "value": 30
+            },
+            {
+              "type": "Magnetshroom",
+              "value": 31
+            },
+            {
+              "type": "Cabbagepult",
+              "value": 32
+            },
+            {
+              "type": "Flowerpot",
+              "value": 33
+            },
+            {
+              "type": "Kernelpult",
+              "value": 34
+            },
+            {
+              "type": "InstantCoffee",
+              "value": 35
+            },
+            {
+              "type": "Garlic",
+              "value": 36
+            },
+            {
+              "type": "Umbrella",
+              "value": 37
+            },
+            {
+              "type": "Marigold",
+              "value": 38
+            },
+            {
+              "type": "Melonpult",
+              "value": 39
+            },
+            {
+              "type": "Gatlingpea",
+              "value": 40
+            },
+            {
+              "type": "Twinsunflower",
+              "value": 41
+            },
+            {
+              "type": "Gloomshroom",
+              "value": 42
+            },
+            {
+              "type": "Cattail",
+              "value": 43
+            },
+            {
+              "type": "Wintermelon",
+              "value": 44
+            },
+            {
+              "type": "GoldMagnet",
+              "value": 45
+            },
+            {
+              "type": "Spikerock",
+              "value": 46
+            },
+            {
+              "type": "Cobcannon",
+              "value": 47
+            },
+            {
+              "type": "Imitater",
+              "value": 48
+            },
+            {
+              "type": "ExplodeONut",
+              "value": 49
+            },
+            {
+              "type": "ExplodeONut",
+              "value": 49
+            },
+            {
+              "type": "GiantWallnut",
+              "value": 50
+            },
+            {
+              "type": "Sprout",
+              "value": 51
+            },
+            {
+              "type": "Leftpeater",
+              "value": 52
+            }
+          ],
+          "registered": [
+            {
+              "index": 0,
+              "Name": "Eimer",
+              "type": "Potatomine",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 1,
+              "Name": "Football-Helm",
+              "type": "Potatomine",
+              "marker": "GoldMagnet"
+            },
+            {
+              "index": 2,
+              "Name": "Augen-Zombie-Kopf",
+              "type": "Potatomine",
+              "marker": "Gravebuster"
+            },
+            {
+              "index": 3,
+              "Name": "Algennuss",
+              "type": "Tanglekelp",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 4,
+              "Name": "Angstbombenpilz",
+              "type": "Scaredyshroom",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 5,
+              "Name": "Angstdrohne",
+              "type": "Scaredyshroom",
+              "marker": "Blover"
+            },
+            {
+              "index": 6,
+              "Name": "Angsthaselnuss",
+              "type": "Scaredyshroom",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 7,
+              "Name": "Angsthasenmine",
+              "type": "Scaredyshroom",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 8,
+              "Name": "Angsthasensonne",
+              "type": "Scaredyshroom",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 9,
+              "Name": "Angsttopf",
+              "type": "Flowerpot",
+              "marker": "Scaredyshroom"
+            },
+            {
+              "index": 10,
+              "Name": "Apokalyptoblatt",
+              "type": "Blover",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 11,
+              "Name": "Aschfahler Triplinator",
+              "type": "Threepeater",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 12,
+              "Name": "Blutsonnenblume",
+              "type": "Sunflower",
+              "marker": "Gravebuster"
+            },
+            {
+              "index": 13,
+              "Name": "Bolzenapult",
+              "type": "Kernelpult",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 14,
+              "Name": "Brandholz",
+              "type": "Torchwood",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 15,
+              "Name": "Brandkraut",
+              "type": "Spikeweed",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 16,
+              "Name": "Brennerpilz",
+              "type": "Fumeshroom",
+              "marker": "Torchwood"
+            },
+            {
+              "index": 17,
+              "Name": "Butterdr\u00fcckpilz",
+              "type": "Fumeshroom",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 18,
+              "Name": "Butterflieger",
+              "type": "Blover",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 19,
+              "Name": "Buttergras",
+              "type": "Spikeweed",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 20,
+              "Name": "Butternuss",
+              "type": "Wallnut",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 21,
+              "Name": "Butterquetschapult",
+              "type": "Kernelpult",
+              "marker": "Squash"
+            },
+            {
+              "index": 22,
+              "Name": "Buttertopf",
+              "type": "Flowerpot",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 23,
+              "Name": "Chilimine",
+              "type": "Potatomine",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 24,
+              "Name": "Chilistern",
+              "type": "Starfruit",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 25,
+              "Name": "Chompzilla",
+              "type": "Chomper",
+              "marker": "Tallnut"
+            },
+            {
+              "index": 26,
+              "Name": "Doppel-Erbspilz",
+              "type": "Puffshroom",
+              "marker": "Repeater"
+            },
+            {
+              "index": 27,
+              "Name": "Doppellichterbse",
+              "type": "Repeater",
+              "marker": "Plantern"
+            },
+            {
+              "index": 28,
+              "Name": "Doppelringelblume",
+              "type": "Marigold",
+              "marker": "Marigold"
+            },
+            {
+              "index": 29,
+              "Name": "Doppelsolar-Nuss",
+              "type": "Wallnut",
+              "marker": "Twinsunflower"
+            },
+            {
+              "index": 30,
+              "Name": "Doppelsonnenblume",
+              "type": "Twinsunflower",
+              "marker": "None"
+            },
+            {
+              "index": 31,
+              "Name": "Dornenk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Cactus"
+            },
+            {
+              "index": 32,
+              "Name": "Dornenschirm",
+              "type": "Umbrella",
+              "marker": "Cactus"
+            },
+            {
+              "index": 33,
+              "Name": "Dreifach-Kartoffelmine",
+              "type": "Potatomine",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 34,
+              "Name": "Dreifach-Kohlapult",
+              "type": "Cabbagepult",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 35,
+              "Name": "Dreifach-Kornapult",
+              "type": "Kernelpult",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 36,
+              "Name": "Dreifach-Laternenblatt",
+              "type": "Plantern",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 37,
+              "Name": "Dreifach-Melonapult",
+              "type": "Melonpult",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 38,
+              "Name": "Dreifachfackel",
+              "type": "Torchwood",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 39,
+              "Name": "Dreifachmatschk\u00fcrbis",
+              "type": "Threepeater",
+              "marker": "Squash"
+            },
+            {
+              "index": 40,
+              "Name": "Dreifachtang",
+              "type": "Tanglekelp",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 41,
+              "Name": "Dreifachtopf",
+              "type": "Flowerpot",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 42,
+              "Name": "Duplinator",
+              "type": "Repeater",
+              "marker": "None"
+            },
+            {
+              "index": 43,
+              "Name": "Einsiedlermeerpilz",
+              "type": "Seashroom",
+              "marker": "Scaredyshroom"
+            },
+            {
+              "index": 44,
+              "Name": "Eiscremepilz",
+              "type": "Sunshroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 45,
+              "Name": "Eisen-Nuss",
+              "type": "Wallnut",
+              "marker": "GoldMagnet"
+            },
+            {
+              "index": 46,
+              "Name": "Eisenerbsenpilz",
+              "type": "Puffshroom",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 47,
+              "Name": "Eisenkanone",
+              "type": "Peashooter",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 48,
+              "Name": "Eisenmelonapult",
+              "type": "Melonpult",
+              "marker": "Tallnut"
+            },
+            {
+              "index": 49,
+              "Name": "Eisenstern",
+              "type": "Starfruit",
+              "marker": "Tallnut"
+            },
+            {
+              "index": 50,
+              "Name": "Eiskaktee",
+              "type": "Cactus",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 51,
+              "Name": "Eismais",
+              "type": "Kernelpult",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 52,
+              "Name": "Eismine",
+              "type": "Potatomine",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 53,
+              "Name": "Eisnuss",
+              "type": "Wallnut",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 54,
+              "Name": "Eistopf",
+              "type": "Flowerpot",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 55,
+              "Name": "Eiszapfenpilz",
+              "type": "Puffshroom",
+              "marker": "Snowpea"
+            },
+            {
+              "index": 56,
+              "Name": "Erbsen-Mine",
+              "type": "Potatomine",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 57,
+              "Name": "Erbsen-Nuss",
+              "type": "Peashooter",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 58,
+              "Name": "Erbsen-Sonnenblume",
+              "type": "Peashooter",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 59,
+              "Name": "Erbsenk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 60,
+              "Name": "Erbsenpilz",
+              "type": "Puffshroom",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 61,
+              "Name": "Erbsentopf",
+              "type": "Flowerpot",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 62,
+              "Name": "Erdnuss",
+              "type": "Potatomine",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 63,
+              "Name": "Explod-o-Kanone",
+              "type": "Peashooter",
+              "marker": "ExplodeONut"
+            },
+            {
+              "index": 64,
+              "Name": "Faulpilz",
+              "type": "Fumeshroom",
+              "marker": "Garlic"
+            },
+            {
+              "index": 65,
+              "Name": "Federmelone",
+              "type": "Melonpult",
+              "marker": "Fumeshroom"
+            },
+            {
+              "index": 66,
+              "Name": "Feuertopf",
+              "type": "Flowerpot",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 67,
+              "Name": "Fingerhut-Schirm",
+              "type": "Puffshroom",
+              "marker": "Umbrella"
+            },
+            {
+              "index": 68,
+              "Name": "Flammen-Erbse",
+              "type": "Peashooter",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 69,
+              "Name": "Flammenkatzenschwanz",
+              "type": "Cattail",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 70,
+              "Name": "Flamminator",
+              "type": "Repeater",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 71,
+              "Name": "Fliegenschnapper",
+              "type": "Chomper",
+              "marker": "Blover"
+            },
+            {
+              "index": 72,
+              "Name": "Frost-Nuss",
+              "type": "Tallnut",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 73,
+              "Name": "Frostfeuerpilz",
+              "type": "Iceshroom",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 74,
+              "Name": "Frostkatzenschwanz",
+              "type": "Cattail",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 75,
+              "Name": "Frostkohl",
+              "type": "Cabbagepult",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 76,
+              "Name": "Frostkraut",
+              "type": "Spikeweed",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 77,
+              "Name": "Frostkugelfischpilz",
+              "type": "Seashroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 78,
+              "Name": "Frostk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 79,
+              "Name": "Frostpilz",
+              "type": "Fumeshroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 80,
+              "Name": "Frostschnapper",
+              "type": "Chomper",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 81,
+              "Name": "Frostweher",
+              "type": "Blover",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 82,
+              "Name": "Funkelholz",
+              "type": "Torchwood",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 83,
+              "Name": "Funkelpilz",
+              "type": "Puffshroom",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 84,
+              "Name": "Ger\u00f6stete Kartoffel",
+              "type": "Potatomine",
+              "marker": "Cobcannon"
+            },
+            {
+              "index": 85,
+              "Name": "Ger\u00f6stete Wallnuss",
+              "type": "Wallnut",
+              "marker": "Cobcannon"
+            },
+            {
+              "index": 86,
+              "Name": "Ger\u00f6steter K\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Cobcannon"
+            },
+            {
+              "index": 87,
+              "Name": "Ger\u00f6steter K\u00fcrbisstampfer",
+              "type": "Squash",
+              "marker": "Cobcannon"
+            },
+            {
+              "index": 88,
+              "Name": "Gezeitenpilz",
+              "type": "Seashroom",
+              "marker": "Blover"
+            },
+            {
+              "index": 89,
+              "Name": "Gletscherpilz",
+              "type": "Fumeshroom",
+              "marker": "Wintermelon"
+            },
+            {
+              "index": 90,
+              "Name": "Glut-Stinkmorchel",
+              "type": "Gloomshroom",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 91,
+              "Name": "Glutk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 92,
+              "Name": "Goldmagnet",
+              "type": "GoldMagnet",
+              "marker": "None"
+            },
+            {
+              "index": 93,
+              "Name": "Goldnuss",
+              "type": "Wallnut",
+              "marker": "InstantCoffee"
+            },
+            {
+              "index": 94,
+              "Name": "Goldsonnenblume",
+              "type": "Sunflower",
+              "marker": "GoldMagnet"
+            },
+            {
+              "index": 95,
+              "Name": "Greifalge",
+              "type": "Tanglekelp",
+              "marker": "Fumeshroom"
+            },
+            {
+              "index": 96,
+              "Name": "Hagelzuckererbse",
+              "type": "Snowpea",
+              "marker": "None"
+            },
+            {
+              "index": 97,
+              "Name": "Haipilz",
+              "type": "Seashroom",
+              "marker": "Fumeshroom"
+            },
+            {
+              "index": 98,
+              "Name": "Hei\u00dfe Kartoffel",
+              "type": "Potatomine",
+              "marker": "Torchwood"
+            },
+            {
+              "index": 99,
+              "Name": "Herb-senkanone",
+              "type": "Peashooter",
+              "marker": "Garlic"
+            },
+            {
+              "index": 100,
+              "Name": "Hochwall-Nuss",
+              "type": "Tallnut",
+              "marker": "None"
+            },
+            {
+              "index": 101,
+              "Name": "Hungerpilz",
+              "type": "Scaredyshroom",
+              "marker": "Chomper"
+            },
+            {
+              "index": 102,
+              "Name": "Hyplauch",
+              "type": "Garlic",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 103,
+              "Name": "Hyplinator",
+              "type": "Repeater",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 104,
+              "Name": "Hypno-Erbse",
+              "type": "Peashooter",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 105,
+              "Name": "Hypnochili",
+              "type": "Jalapeno",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 106,
+              "Name": "Hypnofeuer",
+              "type": "Torchwood",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 107,
+              "Name": "Hypnomelone",
+              "type": "Melonpult",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 108,
+              "Name": "Hypnomine",
+              "type": "Potatomine",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 109,
+              "Name": "Hypnoquetscher",
+              "type": "Squash",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 110,
+              "Name": "Hypnoschnapper",
+              "type": "Chomper",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 111,
+              "Name": "Hypnotopf",
+              "type": "Flowerpot",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 112,
+              "Name": "Hypnoweher",
+              "type": "Blover",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 113,
+              "Name": "Jalape\u00f1ito",
+              "type": "Puffshroom",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 114,
+              "Name": "Kaktnuss",
+              "type": "Wallnut",
+              "marker": "Cactus"
+            },
+            {
+              "index": 115,
+              "Name": "Kaktusstachelgras",
+              "type": "Spikeweed",
+              "marker": "Cactus"
+            },
+            {
+              "index": 116,
+              "Name": "Kar-TnT-offel-Mine",
+              "type": "Potatomine",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 117,
+              "Name": "Kartoffelminen-K\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 118,
+              "Name": "Kartoffelstampfer",
+              "type": "Potatomine",
+              "marker": "Squash"
+            },
+            {
+              "index": 119,
+              "Name": "Katzenschwanz",
+              "type": "Cattail",
+              "marker": "None"
+            },
+            {
+              "index": 120,
+              "Name": "Kau-Mine",
+              "type": "Chomper",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 121,
+              "Name": "Kieferbrecher",
+              "type": "Squash",
+              "marker": "Chomper"
+            },
+            {
+              "index": 122,
+              "Name": "Kimchi-Werfer",
+              "type": "Cabbagepult",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 123,
+              "Name": "Kirsch-Duplinator",
+              "type": "Repeater",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 124,
+              "Name": "Kirschkanone",
+              "type": "Peashooter",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 125,
+              "Name": "Kirschknallpilz",
+              "type": "Puffshroom",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 126,
+              "Name": "Kirschk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 127,
+              "Name": "Kirschmus",
+              "type": "Squash",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 128,
+              "Name": "Kirschnapper",
+              "type": "Chomper",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 129,
+              "Name": "Kirschtopf",
+              "type": "Flowerpot",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 130,
+              "Name": "Knallerbse",
+              "type": "Splitpea",
+              "marker": "None"
+            },
+            {
+              "index": 131,
+              "Name": "Knallerbsenpilz",
+              "type": "Puffshroom",
+              "marker": "Splitpea"
+            },
+            {
+              "index": 132,
+              "Name": "Knallflamme",
+              "type": "Splitpea",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 133,
+              "Name": "Knallholz",
+              "type": "Torchwood",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 134,
+              "Name": "Knallhypno",
+              "type": "Splitpea",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 135,
+              "Name": "Knallkirsche",
+              "type": "Splitpea",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 136,
+              "Name": "Knallknoblauch",
+              "type": "Splitpea",
+              "marker": "Garlic"
+            },
+            {
+              "index": 137,
+              "Name": "Knallschnee",
+              "type": "Splitpea",
+              "marker": "Snowpea"
+            },
+            {
+              "index": 138,
+              "Name": "Knobinator",
+              "type": "Repeater",
+              "marker": "Garlic"
+            },
+            {
+              "index": 139,
+              "Name": "Knoblauchkohlapult",
+              "type": "Cabbagepult",
+              "marker": "Garlic"
+            },
+            {
+              "index": 140,
+              "Name": "Knoblauchkornapult",
+              "type": "Kernelpult",
+              "marker": "Garlic"
+            },
+            {
+              "index": 141,
+              "Name": "Knoblauchmelonapult",
+              "type": "Melonpult",
+              "marker": "Garlic"
+            },
+            {
+              "index": 142,
+              "Name": "Knoblauchschirm",
+              "type": "Umbrella",
+              "marker": "Garlic"
+            },
+            {
+              "index": 143,
+              "Name": "Knoblauchstern",
+              "type": "Starfruit",
+              "marker": "Garlic"
+            },
+            {
+              "index": 144,
+              "Name": "Knoblauchtopf",
+              "type": "Flowerpot",
+              "marker": "Garlic"
+            },
+            {
+              "index": 145,
+              "Name": "Knoblauchweher",
+              "type": "Blover",
+              "marker": "Garlic"
+            },
+            {
+              "index": 146,
+              "Name": "Kohlabwerfer",
+              "type": "Blover",
+              "marker": "Cabbagepult"
+            },
+            {
+              "index": 147,
+              "Name": "Kohltopf",
+              "type": "Flowerpot",
+              "marker": "Cabbagepult"
+            },
+            {
+              "index": 148,
+              "Name": "Kraterkartoffel",
+              "type": "Potatomine",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 149,
+              "Name": "Kribbelalge",
+              "type": "Tanglekelp",
+              "marker": "Puffshroom"
+            },
+            {
+              "index": 150,
+              "Name": "Kryo-Unheilpilz",
+              "type": "Doomshroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 151,
+              "Name": "Kugelkaktus",
+              "type": "Puffshroom",
+              "marker": "Cactus"
+            },
+            {
+              "index": 152,
+              "Name": "K\u00fcrbisholz",
+              "type": "Torchwood",
+              "marker": "Squash"
+            },
+            {
+              "index": 153,
+              "Name": "Landmine",
+              "type": "Potatomine",
+              "marker": "Seashroom"
+            },
+            {
+              "index": 154,
+              "Name": "Laserpilz",
+              "type": "Fumeshroom",
+              "marker": "Plantern"
+            },
+            {
+              "index": 155,
+              "Name": "Laternenk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Plantern"
+            },
+            {
+              "index": 156,
+              "Name": "Leuchtklee",
+              "type": "Blover",
+              "marker": "Plantern"
+            },
+            {
+              "index": 157,
+              "Name": "Leuchtmeerpilz",
+              "type": "Seashroom",
+              "marker": "Plantern"
+            },
+            {
+              "index": 158,
+              "Name": "Leuchtnuss",
+              "type": "Wallnut",
+              "marker": "Plantern"
+            },
+            {
+              "index": 159,
+              "Name": "Lichterbse",
+              "type": "Peashooter",
+              "marker": "Plantern"
+            },
+            {
+              "index": 160,
+              "Name": "Lichtkaktus",
+              "type": "Cactus",
+              "marker": "Plantern"
+            },
+            {
+              "index": 161,
+              "Name": "Lichtschirm",
+              "type": "Umbrella",
+              "marker": "Plantern"
+            },
+            {
+              "index": 162,
+              "Name": "Lichttopf",
+              "type": "Flowerpot",
+              "marker": "Plantern"
+            },
+            {
+              "index": 163,
+              "Name": "Loderpilz",
+              "type": "Fumeshroom",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 164,
+              "Name": "MG-Erbse",
+              "type": "Gatlingpea",
+              "marker": "None"
+            },
+            {
+              "index": 165,
+              "Name": "MG-Erbsenpilz",
+              "type": "Puffshroom",
+              "marker": "Gatlingpea"
+            },
+            {
+              "index": 166,
+              "Name": "MG-Flamme",
+              "type": "Gatlingpea",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 167,
+              "Name": "MG-Football",
+              "type": "Gatlingpea",
+              "marker": "GoldMagnet"
+            },
+            {
+              "index": 168,
+              "Name": "MG-Hypno",
+              "type": "Gatlingpea",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 169,
+              "Name": "MG-Kirsche",
+              "type": "Gatlingpea",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 170,
+              "Name": "MG-Knoblauch",
+              "type": "Gatlingpea",
+              "marker": "Garlic"
+            },
+            {
+              "index": 171,
+              "Name": "MG-Lichterbse",
+              "type": "Gatlingpea",
+              "marker": "Plantern"
+            },
+            {
+              "index": 172,
+              "Name": "MG-Schnee",
+              "type": "Gatlingpea",
+              "marker": "Snowpea"
+            },
+            {
+              "index": 173,
+              "Name": "MG-Unheil",
+              "type": "Gatlingpea",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 174,
+              "Name": "Magnetkaktee",
+              "type": "Cactus",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 175,
+              "Name": "Magnetkornapult",
+              "type": "Kernelpult",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 176,
+              "Name": "Mais-Zwille",
+              "type": "Puffshroom",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 177,
+              "Name": "Maiskanone",
+              "type": "Cobcannon",
+              "marker": "None"
+            },
+            {
+              "index": 178,
+              "Name": "Maismelonenwerfer",
+              "type": "Melonpult",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 179,
+              "Name": "Matsch des Grauens",
+              "type": "Squash",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 180,
+              "Name": "Matsch-Erbse",
+              "type": "Squash",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 181,
+              "Name": "Matscheis",
+              "type": "Squash",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 182,
+              "Name": "Matschk\u00fcrbisgras",
+              "type": "Spikeweed",
+              "marker": "Squash"
+            },
+            {
+              "index": 183,
+              "Name": "Matschnuss",
+              "type": "Wallnut",
+              "marker": "Squash"
+            },
+            {
+              "index": 184,
+              "Name": "Meeresblumentopf",
+              "type": "Flowerpot",
+              "marker": "Seashroom"
+            },
+            {
+              "index": 185,
+              "Name": "Meeresnuss",
+              "type": "Wallnut",
+              "marker": "Seashroom"
+            },
+            {
+              "index": 186,
+              "Name": "Meerk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Seashroom"
+            },
+            {
+              "index": 187,
+              "Name": "Meersonnenpilz",
+              "type": "Seashroom",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 188,
+              "Name": "Meersternpilz",
+              "type": "Seashroom",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 189,
+              "Name": "Mehrfacherbsenwerfer",
+              "type": "Threepeater",
+              "marker": "Repeater"
+            },
+            {
+              "index": 190,
+              "Name": "Melonen-Zwille",
+              "type": "Puffshroom",
+              "marker": "Melonpult"
+            },
+            {
+              "index": 191,
+              "Name": "Melonenh\u00fclle",
+              "type": "Pumpkinshell",
+              "marker": "Melonpult"
+            },
+            {
+              "index": 192,
+              "Name": "Melonenquetschapult",
+              "type": "Melonpult",
+              "marker": "Squash"
+            },
+            {
+              "index": 193,
+              "Name": "Melonentopf",
+              "type": "Flowerpot",
+              "marker": "Melonpult"
+            },
+            {
+              "index": 194,
+              "Name": "Melonuss",
+              "type": "Wallnut",
+              "marker": "Melonpult"
+            },
+            {
+              "index": 195,
+              "Name": "Metallmatsch",
+              "type": "Squash",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 196,
+              "Name": "Metallmelone",
+              "type": "Melonpult",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 197,
+              "Name": "Metallrauchpilz",
+              "type": "Fumeshroom",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 198,
+              "Name": "Metallstern",
+              "type": "Starfruit",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 199,
+              "Name": "Mini-Eispilz",
+              "type": "Puffshroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 200,
+              "Name": "Mini-Hypnopilz",
+              "type": "Puffshroom",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 201,
+              "Name": "Mini-Unheilpilz",
+              "type": "Puffshroom",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 202,
+              "Name": "Mutk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Scaredyshroom"
+            },
+            {
+              "index": 203,
+              "Name": "Mutpilz",
+              "type": "Fumeshroom",
+              "marker": "Scaredyshroom"
+            },
+            {
+              "index": 204,
+              "Name": "Nagelpilz",
+              "type": "Spikeweed",
+              "marker": "Fumeshroom"
+            },
+            {
+              "index": 205,
+              "Name": "Nuggetpilz",
+              "type": "Puffshroom",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 206,
+              "Name": "Nussholz",
+              "type": "Torchwood",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 207,
+              "Name": "Nusslauch",
+              "type": "Wallnut",
+              "marker": "Garlic"
+            },
+            {
+              "index": 208,
+              "Name": "Nusspilz",
+              "type": "Puffshroom",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 209,
+              "Name": "Nusssalat",
+              "type": "Wallnut",
+              "marker": "Cabbagepult"
+            },
+            {
+              "index": 210,
+              "Name": "Nussschale",
+              "type": "Pumpkinshell",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 211,
+              "Name": "Nusstopf",
+              "type": "Flowerpot",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 212,
+              "Name": "Parf\u00fcmpilz",
+              "type": "Fumeshroom",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 213,
+              "Name": "Pfennigpilz",
+              "type": "Puffshroom",
+              "marker": "Marigold"
+            },
+            {
+              "index": 214,
+              "Name": "Ph\u00f6nix-Triplinator",
+              "type": "Threepeater",
+              "marker": "Torchwood"
+            },
+            {
+              "index": 215,
+              "Name": "Polarlicht-Laternenblatt",
+              "type": "Plantern",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 216,
+              "Name": "Quallenhypnopilz",
+              "type": "Seashroom",
+              "marker": "Hypnoshroom"
+            },
+            {
+              "index": 217,
+              "Name": "Rasereipilz",
+              "type": "Scaredyshroom",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 218,
+              "Name": "Rauchk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Fumeshroom"
+            },
+            {
+              "index": 219,
+              "Name": "Relaislichterbse",
+              "type": "Splitpea",
+              "marker": "Plantern"
+            },
+            {
+              "index": 220,
+              "Name": "Riesen-Nuss",
+              "type": "GiantWallnut",
+              "marker": "None"
+            },
+            {
+              "index": 221,
+              "Name": "Rostpilz",
+              "type": "Fumeshroom",
+              "marker": "Tallnut"
+            },
+            {
+              "index": 222,
+              "Name": "Rugby-Nuss",
+              "type": "Tallnut",
+              "marker": "GoldMagnet"
+            },
+            {
+              "index": 223,
+              "Name": "Ru\u00dfpilz",
+              "type": "Fumeshroom",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 224,
+              "Name": "R\u00f6ststachel",
+              "type": "Spikeweed",
+              "marker": "Cobcannon"
+            },
+            {
+              "index": 225,
+              "Name": "R\u00fclpspilz",
+              "type": "Fumeshroom",
+              "marker": "Chomper"
+            },
+            {
+              "index": 226,
+              "Name": "Salat-Zwille",
+              "type": "Puffshroom",
+              "marker": "Cabbagepult"
+            },
+            {
+              "index": 227,
+              "Name": "Salatquetschapult",
+              "type": "Cabbagepult",
+              "marker": "Squash"
+            },
+            {
+              "index": 228,
+              "Name": "Salatwerfer",
+              "type": "Melonpult",
+              "marker": "Repeater"
+            },
+            {
+              "index": 229,
+              "Name": "Scharf-Nuss",
+              "type": "Tallnut",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 230,
+              "Name": "Scharfertang",
+              "type": "Tanglekelp",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 231,
+              "Name": "Scharfmatschk\u00fcrbis",
+              "type": "Squash",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 232,
+              "Name": "Schatz-Kartoffelmine",
+              "type": "Potatomine",
+              "marker": "Marigold"
+            },
+            {
+              "index": 233,
+              "Name": "Schirmh\u00fclle",
+              "type": "Umbrella",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 234,
+              "Name": "Schirmkohl",
+              "type": "Umbrella",
+              "marker": "Cabbagepult"
+            },
+            {
+              "index": 235,
+              "Name": "Schirmnuss",
+              "type": "Umbrella",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 236,
+              "Name": "Schirmrauchpilz",
+              "type": "Umbrella",
+              "marker": "Fumeshroom"
+            },
+            {
+              "index": 237,
+              "Name": "Schirmrinde",
+              "type": "Umbrella",
+              "marker": "Melonpult"
+            },
+            {
+              "index": 238,
+              "Name": "Schirmtopf",
+              "type": "Flowerpot",
+              "marker": "Umbrella"
+            },
+            {
+              "index": 239,
+              "Name": "Schlagpilz",
+              "type": "Fumeshroom",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 240,
+              "Name": "Schlingmine",
+              "type": "Tanglekelp",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 241,
+              "Name": "Schlummerpilz",
+              "type": "Doomshroom",
+              "marker": "Magnetshroom"
+            },
+            {
+              "index": 242,
+              "Name": "Schnapp-Kanone",
+              "type": "Chomper",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 243,
+              "Name": "Schnapp-Nuss",
+              "type": "Chomper",
+              "marker": "Wallnut"
+            },
+            {
+              "index": 244,
+              "Name": "Schnappk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Chomper"
+            },
+            {
+              "index": 245,
+              "Name": "Schnee-Stinkmorchel",
+              "type": "Gloomshroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 246,
+              "Name": "Schnee-Triplinator",
+              "type": "Threepeater",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 247,
+              "Name": "Schneiduplinator",
+              "type": "Repeater",
+              "marker": "Snowpea"
+            },
+            {
+              "index": 248,
+              "Name": "Schubpilz",
+              "type": "Fumeshroom",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 249,
+              "Name": "Schwarmmeerpilz",
+              "type": "Seashroom",
+              "marker": "Puffshroom"
+            },
+            {
+              "index": 250,
+              "Name": "Schwarzlicht-Laterne",
+              "type": "Plantern",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 251,
+              "Name": "Seeigelpilz",
+              "type": "Seashroom",
+              "marker": "Cactus"
+            },
+            {
+              "index": 252,
+              "Name": "Seemine",
+              "type": "Seashroom",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 253,
+              "Name": "Silbereispilz",
+              "type": "Iceshroom",
+              "marker": "Marigold"
+            },
+            {
+              "index": 254,
+              "Name": "Silberhypnopilz",
+              "type": "Hypnoshroom",
+              "marker": "Marigold"
+            },
+            {
+              "index": 255,
+              "Name": "Silberknoblauch",
+              "type": "Garlic",
+              "marker": "Marigold"
+            },
+            {
+              "index": 256,
+              "Name": "Silberkohl",
+              "type": "Cabbagepult",
+              "marker": "Marigold"
+            },
+            {
+              "index": 257,
+              "Name": "Silberkornapult",
+              "type": "Kernelpult",
+              "marker": "Marigold"
+            },
+            {
+              "index": 258,
+              "Name": "Silbermelone",
+              "type": "Melonpult",
+              "marker": "Marigold"
+            },
+            {
+              "index": 259,
+              "Name": "Silbernuss",
+              "type": "Wallnut",
+              "marker": "Marigold"
+            },
+            {
+              "index": 260,
+              "Name": "Silberschirm",
+              "type": "Umbrella",
+              "marker": "Marigold"
+            },
+            {
+              "index": 261,
+              "Name": "Silbersonnenblume",
+              "type": "Sunflower",
+              "marker": "Marigold"
+            },
+            {
+              "index": 262,
+              "Name": "Silbertopf",
+              "type": "Flowerpot",
+              "marker": "Marigold"
+            },
+            {
+              "index": 263,
+              "Name": "Silberverderbnis",
+              "type": "Doomshroom",
+              "marker": "Marigold"
+            },
+            {
+              "index": 264,
+              "Name": "Solar-Katapult",
+              "type": "Cabbagepult",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 265,
+              "Name": "Solar-Mine",
+              "type": "Potatomine",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 266,
+              "Name": "Solar-Nuss",
+              "type": "Wallnut",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 267,
+              "Name": "Solar-Schnapper",
+              "type": "Chomper",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 268,
+              "Name": "Solar-Topf",
+              "type": "Flowerpot",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 269,
+              "Name": "Solarbombe",
+              "type": "Cherrybomb",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 270,
+              "Name": "Sommermelone",
+              "type": "Melonpult",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 271,
+              "Name": "Sonnenbrand",
+              "type": "Jalapeno",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 272,
+              "Name": "Sonnenkraut",
+              "type": "Spikeweed",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 273,
+              "Name": "Sonnenk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 274,
+              "Name": "Sonnenmatsch",
+              "type": "Squash",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 275,
+              "Name": "Sonnenpilz",
+              "type": "Sunshroom",
+              "marker": "None"
+            },
+            {
+              "index": 276,
+              "Name": "Sonnenspeicherpilz",
+              "type": "Fumeshroom",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 277,
+              "Name": "Sonnenstern",
+              "type": "Starfruit",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 278,
+              "Name": "Sonnenwind",
+              "type": "Blover",
+              "marker": "Sunflower"
+            },
+            {
+              "index": 279,
+              "Name": "Sprunggras",
+              "type": "Spikeweed",
+              "marker": "Melonpult"
+            },
+            {
+              "index": 280,
+              "Name": "Spr\u00f6sselk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Puffshroom"
+            },
+            {
+              "index": 281,
+              "Name": "Stachelalge",
+              "type": "Tanglekelp",
+              "marker": "Spikeweed"
+            },
+            {
+              "index": 282,
+              "Name": "Stachelinferno",
+              "type": "Spikerock",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 283,
+              "Name": "Stachelkristall",
+              "type": "Spikerock",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 284,
+              "Name": "Stachelk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Spikeweed"
+            },
+            {
+              "index": 285,
+              "Name": "Stachelnuss",
+              "type": "Wallnut",
+              "marker": "Spikeweed"
+            },
+            {
+              "index": 286,
+              "Name": "Stachelstein",
+              "type": "Spikerock",
+              "marker": "None"
+            },
+            {
+              "index": 287,
+              "Name": "Stacheltopf",
+              "type": "Flowerpot",
+              "marker": "Spikeweed"
+            },
+            {
+              "index": 288,
+              "Name": "Starrpilz",
+              "type": "Scaredyshroom",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 289,
+              "Name": "Sternenkaktus",
+              "type": "Starfruit",
+              "marker": "Cactus"
+            },
+            {
+              "index": 290,
+              "Name": "Sternenk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 291,
+              "Name": "Sternenmatsch",
+              "type": "Squash",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 292,
+              "Name": "Sternerbsenkanone",
+              "type": "Peashooter",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 293,
+              "Name": "Sternkappenpilz",
+              "type": "Fumeshroom",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 294,
+              "Name": "Sternnuss",
+              "type": "Wallnut",
+              "marker": "Starfruit"
+            },
+            {
+              "index": 295,
+              "Name": "Stink-Triplinator",
+              "type": "Fumeshroom",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 296,
+              "Name": "Stinkholz",
+              "type": "Torchwood",
+              "marker": "Garlic"
+            },
+            {
+              "index": 297,
+              "Name": "Stinkk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Garlic"
+            },
+            {
+              "index": 298,
+              "Name": "Stinkmine",
+              "type": "Fumeshroom",
+              "marker": "Potatomine"
+            },
+            {
+              "index": 299,
+              "Name": "Stinkmorchel",
+              "type": "Gloomshroom",
+              "marker": "None"
+            },
+            {
+              "index": 300,
+              "Name": "S\u00e4ulenkakteenpilz",
+              "type": "Fumeshroom",
+              "marker": "Cactus"
+            },
+            {
+              "index": 301,
+              "Name": "Taco-Werfer",
+              "type": "Cabbagepult",
+              "marker": "Kernelpult"
+            },
+            {
+              "index": 302,
+              "Name": "Tangmine",
+              "type": "Potatomine",
+              "marker": "Tanglekelp"
+            },
+            {
+              "index": 303,
+              "Name": "Tangstachel",
+              "type": "Spikeweed",
+              "marker": "Tanglekelp"
+            },
+            {
+              "index": 304,
+              "Name": "Tempo-Pilz",
+              "type": "Scaredyshroom",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 305,
+              "Name": "Terroris-Nuss",
+              "type": "Wallnut",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 306,
+              "Name": "Teufelskirsche",
+              "type": "Cherrybomb",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 307,
+              "Name": "Tiefk\u00fchl-Kirsche",
+              "type": "Peashooter",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 308,
+              "Name": "Todesstern",
+              "type": "Starfruit",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 309,
+              "Name": "Triple-Nuss",
+              "type": "Tallnut",
+              "marker": "Threepeater"
+            },
+            {
+              "index": 310,
+              "Name": "Tripli-Bomber",
+              "type": "Threepeater",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 311,
+              "Name": "Tripli-Stinker",
+              "type": "Threepeater",
+              "marker": "Garlic"
+            },
+            {
+              "index": 312,
+              "Name": "Unheildreifacherbse",
+              "type": "Threepeater",
+              "marker": "Peashooter"
+            },
+            {
+              "index": 313,
+              "Name": "Unheilknoblauch",
+              "type": "Garlic",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 314,
+              "Name": "Unheilkohlapult",
+              "type": "Cabbagepult",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 315,
+              "Name": "Unheilnuss",
+              "type": "Wallnut",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 316,
+              "Name": "Unheilskaktus",
+              "type": "Cactus",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 317,
+              "Name": "Unheilsonnenblume",
+              "type": "Sunflower",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 318,
+              "Name": "Unheilsschnapper",
+              "type": "Chomper",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 319,
+              "Name": "Unheilstang",
+              "type": "Tanglekelp",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 320,
+              "Name": "Untergangstopf",
+              "type": "Flowerpot",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 321,
+              "Name": "Venuss",
+              "type": "Wallnut",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 322,
+              "Name": "Verderbse",
+              "type": "Peashooter",
+              "marker": "Doomshroom"
+            },
+            {
+              "index": 323,
+              "Name": "Verkohlter Triplinator",
+              "type": "Threepeater",
+              "marker": "Jalapeno"
+            },
+            {
+              "index": 324,
+              "Name": "Wasserk\u00fcrbis",
+              "type": "Squash",
+              "marker": "Seashroom"
+            },
+            {
+              "index": 325,
+              "Name": "Wegblastopf",
+              "type": "Flowerpot",
+              "marker": "Blover"
+            },
+            {
+              "index": 326,
+              "Name": "Windk\u00fcrbis",
+              "type": "Pumpkinshell",
+              "marker": "Blover"
+            },
+            {
+              "index": 327,
+              "Name": "Wintermelone",
+              "type": "Wintermelon",
+              "marker": "None"
+            },
+            {
+              "index": 328,
+              "Name": "Winterstern",
+              "type": "Starfruit",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 329,
+              "Name": "Wirbelblatt",
+              "type": "Blover",
+              "marker": "Blover"
+            },
+            {
+              "index": 330,
+              "Name": "W\u00fcrgetang",
+              "type": "Tanglekelp",
+              "marker": "Squash"
+            },
+            {
+              "index": 331,
+              "Name": "Zitterpilz",
+              "type": "Scaredyshroom",
+              "marker": "Iceshroom"
+            },
+            {
+              "index": 332,
+              "Name": "Zundersonne",
+              "type": "Sunflower",
+              "marker": "Torchwood"
+            },
+            {
+              "index": 333,
+              "Name": "Zunderstachel",
+              "type": "Spikeweed",
+              "marker": "Torchwood"
+            },
+            {
+              "index": 334,
+              "Name": "Z\u00fcndpilz",
+              "type": "Fumeshroom",
+              "marker": "Cherrybomb"
+            },
+            {
+              "index": 335,
+              "Name": "\u00dcberreife Melone",
+              "type": "Melonpult",
+              "marker": "Cabbagepult"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "difficulty",
+      "args": {
+        "board": "680a4fe094f94e119d8c8ca12f52b995",
+        "value": 3
+      },
+      "response": {
+        "protocol": 1,
+        "id": "e4137161ab554a8f9db0afb3f54665b3",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "value": 3,
+          "name": "Normal",
+          "scope": "current level",
+          "trophyEligible": false
+        }
+      }
+    },
+    {
+      "command": "suncollector",
+      "args": {
+        "enabled": false
+      },
+      "response": {
+        "protocol": 1,
+        "id": "b211cf8196c74a708b63083f06dfbefc",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "enabled": false,
+          "scope": "session"
+        }
+      }
+    },
+    {
+      "command": "pause",
+      "args": {
+        "paused": true
+      },
+      "response": {
+        "protocol": 1,
+        "id": "eedcba1fd8cb44d0b3a218b46376af77",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "paused": true,
+          "controlPaused": true
+        }
+      }
+    },
+    {
+      "command": "zombies",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "b187aee8b2ce429f955893afc3acf282",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "board": "680a4fe094f94e119d8c8ca12f52b995",
+          "items": []
+        }
+      }
+    },
+    {
+      "command": "plants",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "29ee000650da4c4aa759e9e5c5cbfa1b",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "board": "680a4fe094f94e119d8c8ca12f52b995",
+          "items": [],
+          "bank": [
+            {
+              "index": 0,
+              "state": {
+                "mRefreshCounter": 0,
+                "mRefreshTime": 0,
+                "mIndex": 0,
+                "mOffsetX": 0,
+                "mPacketType": "Peashooter",
+                "mImitaterType": "None",
+                "mSlotMachineCountDown": 0,
+                "mSlotMachiningNextSeed": "None",
+                "mSlotMachiningPosition": 0,
+                "mActive": true,
+                "mRefreshing": false,
+                "mTimesUsed": 0,
+                "mInTutorial": false,
+                "mFlashReady": false,
+                "mFlying": false,
+                "mBackgroundVisible": true,
+                "m_lastUpdateCounter": 1731,
+                "m_lastCooldownScale": 1,
+                "mX": 254.24481,
+                "mY": 869.25,
+                "mWidth": 50,
+                "mHeight": 70,
+                "mVisible": true,
+                "mRow": -1,
+                "mRenderOrder": 400000,
+                "mSquished": false,
+                "mImageOffsetX": 0,
+                "mImageOffsetY": 0,
+                "mShadowOffsetX": 0,
+                "mShadowOffsetY": 0,
+                "mShadowScaleX": 1,
+                "mShadowScaleY": 1,
+                "mShadowRenderOrder": 0,
+                "mShadowType": "None",
+                "mShadowImageIndex": 0,
+                "mBungeeOffsetX": 0,
+                "mBungeeOffsetY": 0
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "speed",
+      "args": {
+        "index": 6
+      },
+      "response": {
+        "protocol": 1,
+        "id": "9a2eaf5ab7094ef284624d1be1af509c",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "selected": 6,
+          "effective": 20,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "pause",
+      "args": {
+        "paused": false
+      },
+      "response": {
+        "protocol": 1,
+        "id": "150a758846f84360852d70d95fef011c",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "paused": false,
+          "controlPaused": false
+        }
+      }
+    },
+    {
+      "command": "projectiles",
+      "args": {},
+      "response": {
+        "protocol": 1,
+        "id": "e8de6477ee364569807605253c662002",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "board": "680a4fe094f94e119d8c8ca12f52b995",
+          "items": []
+        }
+      }
+    },
+    {
+      "command": "pause",
+      "args": {
+        "paused": true
+      },
+      "response": {
+        "protocol": 1,
+        "id": "88b71252c9724c09a2019d9e119533c4",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "paused": true,
+          "controlPaused": true
+        }
+      }
+    },
+    {
+      "command": "speed",
+      "args": {
+        "index": 0
+      },
+      "response": {
+        "protocol": 1,
+        "id": "d276859d0f8b4da986e106c4b6152450",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "plant.place",
+      "args": {
+        "col": 2,
+        "row": 1,
+        "type": "Chomper"
+      },
+      "response": {
+        "protocol": 1,
+        "id": "036eca711c8b4a5088fcd6e9f733cb1f",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "col": 2,
+          "row": 1,
+          "plants": [
+            {
+              "DataID": 1,
+              "mSeedType": "Chomper",
+              "mPlantCol": 2,
+              "mAnimCounter": 0,
+              "mFrame": 0,
+              "mFrameLength": 18,
+              "mNumFrames": 5,
+              "mState": "Ready",
+              "mPlantHealth": 300,
+              "mPlantMaxHealth": 300,
+              "mSubclass": "Normal",
+              "mDisappearCountdown": 200,
+              "mDoSpecialCountdown": 0,
+              "mStateCountdown": 0,
+              "mLaunchCounter": 0,
+              "mLaunchRate": 0,
+              "mTargetX": -1,
+              "mTargetY": -1,
+              "mStartRow": 1,
+              "mShootingCounter": 0,
+              "mBlinkCountdown": 785,
+              "mRecentlyEatenCountdown": 0,
+              "mEatenFlashCountdown": 0,
+              "mBeghouledFlashCountdown": 0,
+              "mShakeOffsetX": 0,
+              "mShakeOffsetY": 0,
+              "mWakeUpCounter": 0,
+              "mOnBungeeState": "NotOnBungee",
+              "mImitaterType": "None",
+              "mPottedPlantIndex": -1,
+              "mAnimPing": true,
+              "mDead": false,
+              "mIsAsleep": false,
+              "mIsOnBoard": true,
+              "mHighlighted": false,
+              "mIsImitation": false,
+              "mX": 200,
+              "mY": 180,
+              "mWidth": 80,
+              "mHeight": 80,
+              "mVisible": true,
+              "mRow": 1,
+              "mRenderOrder": 312605,
+              "mSquished": false,
+              "mImageOffsetX": 0,
+              "mImageOffsetY": 0,
+              "mShadowOffsetX": 0,
+              "mShadowOffsetY": 0,
+              "mShadowScaleX": 1,
+              "mShadowScaleY": 1,
+              "mShadowRenderOrder": 0,
+              "mShadowType": "None",
+              "mShadowImageIndex": 0,
+              "mBungeeOffsetX": 0,
+              "mBungeeOffsetY": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "plant.place",
+      "args": {
+        "col": 2,
+        "row": 1,
+        "type": "Flowerpot"
+      },
+      "response": {
+        "protocol": 1,
+        "id": "ddc5c289086e4a599a2d38c7f61e94db",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": false,
+        "error": {
+          "code": "INVALID_PLACEMENT",
+          "message": "Native or Fusion placement rules rejected this cell."
+        }
+      }
+    },
+    {
+      "command": "pause",
+      "args": {
+        "paused": false
+      },
+      "response": {
+        "protocol": 1,
+        "id": "3acc4102192041edad98228e67207dad",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "paused": false,
+          "controlPaused": false
+        }
+      }
+    },
+    {
+      "command": "speed",
+      "args": {
+        "index": 0
+      },
+      "response": {
+        "protocol": 1,
+        "id": "fc9c6370813f4272ba892a2a9ef62a02",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "selected": 0,
+          "effective": 1,
+          "cycles": [
+            {
+              "index": 0,
+              "scale": 1
+            },
+            {
+              "index": 1,
+              "scale": 1.5
+            },
+            {
+              "index": 2,
+              "scale": 2
+            },
+            {
+              "index": 3,
+              "scale": 2.5
+            },
+            {
+              "index": 4,
+              "scale": 5
+            },
+            {
+              "index": 5,
+              "scale": 10
+            },
+            {
+              "index": 6,
+              "scale": 20
+            }
+          ]
+        }
+      }
+    },
+    {
+      "command": "suncollector",
+      "args": {
+        "enabled": true
+      },
+      "response": {
+        "protocol": 1,
+        "id": "b4ea2baa62fa40479a04ac0e31a6f9fd",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "enabled": true,
+          "scope": "session"
+        }
+      }
+    },
+    {
+      "command": "difficulty",
+      "args": {
+        "board": "680a4fe094f94e119d8c8ca12f52b995",
+        "value": 5
+      },
+      "response": {
+        "protocol": 1,
+        "id": "eb90e37a565147c794e4f6eb0e7fa8c5",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "value": 5,
+          "name": "Extreme",
+          "scope": "current level",
+          "trophyEligible": false
+        }
+      }
+    },
+    {
+      "command": "pause",
+      "args": {
+        "paused": false
+      },
+      "response": {
+        "protocol": 1,
+        "id": "75687b8ae02e49c6ba3fa894b8ca28c7",
+        "session": "d670beb430974cf182bd3478e195fe04",
+        "ok": true,
+        "result": {
+          "paused": false,
+          "controlPaused": false
+        }
+      }
+    }
+  ]
+}

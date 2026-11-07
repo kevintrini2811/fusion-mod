@@ -120,7 +120,7 @@ namespace Il2CppReloaded.Gameplay
         public uint DataID;
         public Board mBoard=null!;
         public bool mDead;
-        public int mRow,mProjectileAge,mRenderOrder;
+        public int mRow,mProjectileAge,mRenderOrder,mCobTargetRow;
         public float mCobTargetX,mPosX,mPosY,mPosZ,mVelX,mVelY,mVelZ,mAccZ,mShadowY,mRotation;
         public ProjectileType mProjectileType;
         public ProjectileMotion mMotionType;

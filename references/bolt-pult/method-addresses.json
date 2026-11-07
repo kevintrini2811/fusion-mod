@@ -1,0 +1,98 @@
+[
+  {
+    "type": "Bullet_butter_iron",
+    "namespace": "",
+    "method": "HitZombie",
+    "token": "0x60005f5",
+    "rva": "0x6fb5a0",
+    "end": "0x6fb720"
+  },
+  {
+    "type": "Bullet_butter_iron",
+    "namespace": "",
+    "method": "HitLand",
+    "token": "0x60005f6",
+    "rva": "0x6fb490",
+    "end": "0x6fb5a0"
+  },
+  {
+    "type": "Bullet_butter_iron",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x60005f7",
+    "rva": "0x6fa0b0",
+    "end": "0x6fa0c0"
+  },
+  {
+    "type": "Cornpult",
+    "namespace": "",
+    "method": "OnCreate",
+    "token": "0x6001a19",
+    "rva": "0x548cb0",
+    "end": "0x548ce0"
+  },
+  {
+    "type": "Cornpult",
+    "namespace": "",
+    "method": "OnMove",
+    "token": "0x6001a1a",
+    "rva": "0x548ce0",
+    "end": "0x548d10"
+  },
+  {
+    "type": "Cornpult",
+    "namespace": "",
+    "method": "GetBulletType",
+    "token": "0x6001a1b",
+    "rva": "0x548ca0",
+    "end": "0x548cb0"
+  },
+  {
+    "type": "Cornpult",
+    "namespace": "",
+    "method": "GetBulletType2",
+    "token": "0x6001a1c",
+    "rva": "0x548c90",
+    "end": "0x548ca0"
+  },
+  {
+    "type": "Cornpult",
+    "namespace": "",
+    "method": "PlantShootUpdate",
+    "token": "0x6001a1d",
+    "rva": "0x548d10",
+    "end": "0x548e10"
+  },
+  {
+    "type": "Cornpult",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6001a1e",
+    "rva": "0x493080",
+    "end": "0x493090"
+  },
+  {
+    "type": "IronCorn",
+    "namespace": "",
+    "method": "GetBulletType",
+    "token": "0x6001b3b",
+    "rva": "0x55f040",
+    "end": "0x55f050"
+  },
+  {
+    "type": "IronCorn",
+    "namespace": "",
+    "method": "GetBulletType2",
+    "token": "0x6001b3c",
+    "rva": "0x55f030",
+    "end": "0x55f040"
+  },
+  {
+    "type": "IronCorn",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x6001b3d",
+    "rva": "0x51c8a0",
+    "end": "0x51c8b0"
+  }
+]

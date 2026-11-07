@@ -1,0 +1,23 @@
+{
+  "game_object": 75726,
+  "name": "Bullet_kernal_iron",
+  "components": [
+    {
+      "path_id": 97535,
+      "type": "Transform"
+    },
+    {
+      "path_id": 124306,
+      "type": "BoxCollider2D"
+    },
+    {
+      "path_id": 187959,
+      "type": "MonoBehaviour",
+      "script": {
+        "m_FileID": 1,
+        "m_PathID": 2248
+      },
+      "script_name": "Bullet_kernal"
+    }
+  ]
+}

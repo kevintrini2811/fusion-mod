@@ -1,0 +1,26 @@
+[
+  {
+    "type": "Bullet_kernal",
+    "namespace": "",
+    "method": "HitZombie",
+    "token": "0x60006f6",
+    "rva": "0x70d8e0",
+    "end": "0x70d9c0"
+  },
+  {
+    "type": "Bullet_kernal",
+    "namespace": "",
+    "method": "HitLand",
+    "token": "0x60006f7",
+    "rva": "0x70d860",
+    "end": "0x70d8e0"
+  },
+  {
+    "type": "Bullet_kernal",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x60006f8",
+    "rva": "0x6fa0b0",
+    "end": "0x6fa0c0"
+  }
+]

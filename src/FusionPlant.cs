@@ -331,6 +331,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant Squashwood = new(SeedType.Torchwood, SeedType.Squash);
     internal static readonly FusionPlant Torchweed = new(SeedType.Spikeweed, SeedType.Torchwood);
     internal static readonly FusionPlant RoastedSpikeweed = new(SeedType.Spikeweed, SeedType.Cobcannon);
+    internal static readonly FusionPlant HypnoChomper = new(SeedType.Chomper, SeedType.Hypnoshroom);
+    internal static readonly FusionPlant BoltPult = new(SeedType.Kernelpult, SeedType.Wallnut);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -483,7 +485,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == GarlicPult || plant == SummerMelon || plant == HypnoMelon ||
         plant == LettucePult || plant == ButternutPult || plant == GourdPult ||
         plant == SpringMelon || plant == MelonMorph || plant == KernelMorph ||
-        plant == MetalPult || plant == DamagePult || plant == SolarPult;
+        plant == MetalPult || plant == DamagePult || plant == SolarPult ||
+        plant == BoltPult;
 
     internal static bool IsEnergyNut(FusionPlant plant) =>
         plant == CabbageNut || plant == MelonNut;
@@ -648,7 +651,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == Scorchwood || plant == Stenchwood || plant == Nutwood ||
         plant == Torchthree || plant == Sparkwood || plant == Hypnowood ||
         plant == HotPotato || plant == Boomwood || plant == Squashwood ||
-        plant == Torchweed || plant == RoastedSpikeweed;
+        plant == Torchweed || plant == RoastedSpikeweed || plant == HypnoChomper ||
+        plant == BoltPult;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -975,6 +979,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Torchwood, SeedType.Squash) => Squashwood,
             (SeedType.Spikeweed, SeedType.Torchwood) => Torchweed,
             (SeedType.Spikeweed, SeedType.Cobcannon) => RoastedSpikeweed,
+            (SeedType.Chomper, SeedType.Hypnoshroom) => HypnoChomper,
+            (SeedType.Kernelpult, SeedType.Wallnut) => BoltPult,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

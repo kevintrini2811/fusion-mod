@@ -385,6 +385,13 @@ static class Program
         board.FailAllocation = true; ElementalLobbers.Fire(Add(board, FusionPlant.Coldslaw));
         Equal(2, board.Shots.Count, "failed allocation creates no phantom shot");
     }
+    static void MoveToImpact(Projectile shot, Zombie target)
+    {
+        // These adapters invoke Impact directly instead of advancing native flight.
+        var rect = target.GetZombieRect();
+        shot.mPosX = (rect.xMin + rect.xMax) / 2;
+        shot.mPosY = (rect.yMin + rect.yMax) / 2;
+    }
     static void GarlicAndSummer()
     {
         foreach (var (a, b, result) in new (FusionPlant, FusionPlant, FusionPlant)[] {
@@ -421,11 +428,11 @@ static class Program
         Equal(3, PoisonShooters.Level(zombie), "butter adds one point only");
         board = new Board(); plant = Add(board, FusionPlant.GarlicPult); zombie = Enemy(board); var splash = Enemy(board, 1);
         PoisonShooters.Levels[zombie.DataID] = 2; PoisonShooters.Levels[splash.DataID] = 3;
-        ElementalLobbers.Fire(plant); shot = board.Shots[^1]; ElementalLobbers.Impact(shot, zombie);
+        ElementalLobbers.Fire(plant); shot = board.Shots[^1]; MoveToImpact(shot, zombie); ElementalLobbers.Impact(shot, zombie);
         Equal(140, zombie.Damage, "melon direct garlic bonus"); Equal(48, splash.Damage, "melon splash five per garlic point");
         Equal(4, PoisonShooters.Level(splash), "splash adds garlic");
         board = new Board(); plant = Add(board, FusionPlant.SummerMelon); zombie = Enemy(board); splash = Enemy(board, 1);
-        ElementalLobbers.Fire(plant); shot = board.Shots[^1]; ElementalLobbers.Impact(shot, zombie);
+        ElementalLobbers.Fire(plant); shot = board.Shots[^1]; MoveToImpact(shot, zombie); ElementalLobbers.Impact(shot, zombie);
         Equal(120, zombie.Damage, "summer direct base"); Equal(39, splash.Damage, "summer splash");
         Equal(true, Overheat.Heated.Contains(zombie.DataID), "direct heated"); Equal(true, Overheat.Heated.Contains(splash.DataID), "splash heated");
         board.FailAllocation = true; int count = board.Shots.Count; ElementalLobbers.Fire(plant);
@@ -465,7 +472,9 @@ static class Program
         hot=17;CattailFusions.Damage(zombie,ref hot);Equal(17,hot,"recycled shot rejected");CattailFusions.Current=null;
         board=new Board();plant=Add(board,FusionPlant.HypnoMelon);zombie=Enemy(board);var splash=Enemy(board,1);
         zombie.mBodyHealth=1499;splash.mBodyHealth=1499;board.Rolls.Enqueue(0);board.Rolls.Enqueue(0);
-        ElementalLobbers.Fire(plant);shot=board.Shots[^1];ElementalLobbers.Impact(shot,zombie);
+        ElementalLobbers.Fire(plant);shot=board.Shots[^1];
+        MoveToImpact(shot,zombie);
+        ElementalLobbers.Impact(shot,zombie);
         Equal(120,zombie.Damage,"hypno direct damage");Equal(39,splash.Damage,"hypno splash damage");
         Equal(true,zombie.mMindControlled,"direct hypnosis");Equal(true,splash.mMindControlled,"splash hypnosis");
         zombie=Enemy(board);zombie.mBodyHealth=1500;board.Rolls.Enqueue(0);HypnoPlants.MelonHit(zombie);
@@ -486,6 +495,7 @@ static class Program
     }
     public static void Main()
     {
+        BoltPultCases.Run();
         SolarLobberCases();
         var blubberBoard=new Board();var blubber=Add(blubberBoard,FusionPlant.BlubberShroom);
         var butterTarget=Enemy(blubberBoard);

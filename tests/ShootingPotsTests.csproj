@@ -14,6 +14,7 @@
     <Compile Include="../src/LobberFusions.cs" />
     <Compile Include="../src/SquashLobbers.cs" />
     <Compile Include="SquashLobberCases.cs" />
+    <Compile Include="BoltPultCases.cs" />
     <Compile Include="../src/ElementalLobbers.cs" />
     <Compile Include="../src/CattailFusions.cs" />
     <Compile Include="../src/HypnoPlants.cs" />

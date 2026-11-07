@@ -477,6 +477,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Squashwood, "Squashwood"),
         new(FusionPlant.Torchweed, "Torchweed"),
         new(FusionPlant.RoastedSpikeweed, "RoastedSpikeweed"),
+        new(FusionPlant.HypnoChomper, "HypnoChomper"),
+        new(FusionPlant.BoltPult, "BoltPult"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -1175,7 +1177,7 @@ internal static partial class ImportedPeaVisuals
             if (FusionPlant.IsMixedLobber(assets.Identity))
                 shoot = !preview && Plant.mStartRow > 0
                     ? (LobberFusions.Duration(assets.Identity) - Plant.mStartRow) * .01f : null;
-            if ((assets.Identity == FusionPlant.TacoPult || assets.Identity == FusionPlant.CobPult || assets.Identity == FusionPlant.Cobsicle || assets.Identity == FusionPlant.ClovePult || assets.Identity == FusionPlant.ButternutPult || assets.Identity == FusionPlant.KernelMorph)
+            if ((assets.Identity == FusionPlant.TacoPult || assets.Identity == FusionPlant.CobPult || assets.Identity == FusionPlant.Cobsicle || assets.Identity == FusionPlant.ClovePult || assets.Identity == FusionPlant.ButternutPult || assets.Identity == FusionPlant.KernelMorph || assets.Identity == FusionPlant.BoltPult)
                 && !preview && Plant.mShootingCounter == 1) shootClip = "shoot2";
             if (assets.Identity == FusionPlant.KernelTriPult && !preview && Plant.mShootingCounter == 1)
                 shootClip = "shoot2";
@@ -1317,7 +1319,7 @@ internal static partial class ImportedPeaVisuals
                     : Plant.mState == PlantState.PotatoRising ? "rise" : "unrised";
                 baseTime = baseClip == "rise" ? Math.Min((50 - Plant.mStateCountdown) * .01f, model.Clips[baseClip].Duration - .00001f) : idle;
             }
-            if ((assets.Identity == FusionPlant.Flytrapper || assets.Identity == FusionPlant.DoomChomper || assets.Identity == FusionPlant.Frostbiter || assets.Identity == FusionPlant.ChompMine || assets.Identity == FusionPlant.SolarChomper || assets.Identity == FusionPlant.CherryChomper || assets.Identity == FusionPlant.ChompNut || assets.Identity == FusionPlant.ChompShooter) && !preview)
+            if ((assets.Identity == FusionPlant.Flytrapper || assets.Identity == FusionPlant.DoomChomper || assets.Identity == FusionPlant.Frostbiter || assets.Identity == FusionPlant.ChompMine || assets.Identity == FusionPlant.SolarChomper || assets.Identity == FusionPlant.CherryChomper || assets.Identity == FusionPlant.ChompNut || assets.Identity == FusionPlant.ChompShooter || assets.Identity == FusionPlant.HypnoChomper) && !preview)
             {
                 // Source states replace the base layer. Native saved states
                 // and animation progress own timing, including pause/load.

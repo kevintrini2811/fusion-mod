@@ -1,0 +1,52 @@
+[
+  {
+    "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/TopLeftLayout/SeedBankContainer/SeedBank/SeedPacks_Layout/P_GamePlay_SeedChooser_Item(Clone)/Offset/SeedBackground",
+    "sprite": "",
+    "enabled": true,
+    "active": true,
+    "texture": {
+      "name": "",
+      "width": 2048,
+      "height": 3696
+    },
+    "spriteRect": {
+      "x": 1152,
+      "y": 1056,
+      "width": 128,
+      "height": 176
+    },
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1
+    },
+    "width": 188.22223,
+    "height": 260.5
+  },
+  {
+    "path": "Panels/P_Gameplay_MainHUD/Canvas/Layout/Center/TopLeftLayout/SeedBankContainer/SeedBank/SeedPacks_Layout/P_GamePlay_SeedChooser_Item(Clone)/Offset/SeedBackground",
+    "sprite": "",
+    "enabled": true,
+    "active": true,
+    "texture": {
+      "name": "",
+      "width": 2048,
+      "height": 3696
+    },
+    "spriteRect": {
+      "x": 1152,
+      "y": 1936,
+      "width": 128,
+      "height": 176
+    },
+    "color": {
+      "r": 1,
+      "g": 1,
+      "b": 1,
+      "a": 1
+    },
+    "width": 188.22223,
+    "height": 260.5
+  }
+]

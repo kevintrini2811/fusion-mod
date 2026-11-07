@@ -1853,6 +1853,16 @@
       "available": true,
       "identity": "FusionPlant.RoastedSpikeweed",
       "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
+    },
+    "Hypno Chomper": {
+      "available": true,
+      "identity": "FusionPlant.HypnoChomper",
+      "evidence": "Original 4.0.5.2 behavior, native saved lifecycle and imported model/projectiles: references/hypno-chomper/port-notes.md. Runtime validation: references/hypno-bolt-22-4-0/validation.md."
+    },
+    "Bolt-pult": {
+      "available": true,
+      "identity": "FusionPlant.BoltPult",
+      "evidence": "Original 4.0.5.2 behavior, native saved lifecycle and imported model/projectiles: references/bolt-pult/port-notes.md. Runtime validation: references/hypno-bolt-22-4-0/validation.md."
     }
   }
 }

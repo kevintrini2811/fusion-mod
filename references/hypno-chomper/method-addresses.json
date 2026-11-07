@@ -1,0 +1,154 @@
+[
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "get_ChompRange",
+    "token": "0x6001160",
+    "rva": "0x49d2d0",
+    "end": "0x49d2e0"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "set_ChompRange",
+    "token": "0x6001161",
+    "rva": "0x486590",
+    "end": "0x4865a0"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "Start",
+    "token": "0x6001162",
+    "rva": "0x49d040",
+    "end": "0x49d1b0"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "UpgradeEvent",
+    "token": "0x6001163",
+    "rva": "0x49d280",
+    "end": "0x49d2d0"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "AttributeEvent",
+    "token": "0x6001164",
+    "rva": "0x49c710",
+    "end": "0x49c740"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "Swallow",
+    "token": "0x6001165",
+    "rva": "0x49d1b0",
+    "end": "0x49d220"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "ChomperSearchZombie",
+    "token": "0x6001166",
+    "rva": "0x49caa0",
+    "end": "0x49cf90"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "CheckZombie",
+    "token": "0x6001167",
+    "rva": "0x49c870",
+    "end": "0x49c930"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "FixedUpdate",
+    "token": "0x6001168",
+    "rva": "0x49cf90",
+    "end": "0x49d040"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "BiteEvent",
+    "token": "0x6001169",
+    "rva": "0x49c740",
+    "end": "0x49c870"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "Chomp",
+    "token": "0x600116a",
+    "rva": "0x49c9d0",
+    "end": "0x49caa0"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "ChompBack",
+    "token": "0x600116b",
+    "rva": "0x49c930",
+    "end": "0x49c9d0"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": "ToChew",
+    "token": "0x600116c",
+    "rva": "0x49d220",
+    "end": "0x49d280"
+  },
+  {
+    "type": "Chomper",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x600116d",
+    "rva": "0x48e710",
+    "end": "0x48e730"
+  },
+  {
+    "type": "HypnoChomper",
+    "namespace": "",
+    "method": "Start",
+    "token": "0x60012a3",
+    "rva": "0x4b1760",
+    "end": "0x4b1830"
+  },
+  {
+    "type": "HypnoChomper",
+    "namespace": "",
+    "method": "CheckZombie",
+    "token": "0x60012a4",
+    "rva": "0x4b1620",
+    "end": "0x4b16c0"
+  },
+  {
+    "type": "HypnoChomper",
+    "namespace": "",
+    "method": "Chomp",
+    "token": "0x60012a5",
+    "rva": "0x4b16c0",
+    "end": "0x4b1760"
+  },
+  {
+    "type": "HypnoChomper",
+    "namespace": "",
+    "method": "BiteEvent",
+    "token": "0x60012a6",
+    "rva": "0x4b14f0",
+    "end": "0x4b1620"
+  },
+  {
+    "type": "HypnoChomper",
+    "namespace": "",
+    "method": ".ctor",
+    "token": "0x60012a7",
+    "rva": "0x4760c0",
+    "end": "0x4760d0"
+  }
+]

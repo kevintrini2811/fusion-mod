@@ -1,0 +1,12 @@
+0055f040: mov eax, 0x79
+0055f045: ret
+0055f046: int3
+0055f047: int3
+0055f048: int3
+0055f049: int3
+0055f04a: int3
+0055f04b: int3
+0055f04c: int3
+0055f04d: int3
+0055f04e: int3
+0055f04f: int3
