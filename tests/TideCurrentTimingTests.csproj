@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><EnableDefaultCompileItems>false</EnableDefaultCompileItems><OutputPath>bin/tide-current-time/</OutputPath></PropertyGroup>
+  <ItemGroup><Compile Include="TideCurrentTimingTests.cs" /><Compile Include="TideCurrentTimingStubs.cs" /><Compile Include="../src/TideCurrent.cs" /><Compile Include="../src/FusionTime.cs" /><Compile Include="../src/FusionNativeTimeRecords.cs" /></ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../src/LumosEnergy.cs" />
+    <Compile Include="Adapters/PlanternFusions.cs" />
+    <Compile Include="../src/FumeFusions.cs" />
+    <Compile Include="../src/FootballFumeDamage.cs" />
+    <Compile Include="../src/EatingShrooms.cs" />
+    <Compile Include="../src/TriggerShroom.cs" />
+    <Compile Include="../src/Spicicle.cs" />
+    <Compile Include="../src/CustomShooterClocks.cs" />
+    <Compile Include="../src/PerfumeShroom.cs" />
+    <Compile Include="../src/FumeSupport.cs" />
+    <Compile Include="../src/ReactiveFumeDamage.cs" />
+    <Compile Include="../src/PlantShields.cs" />
+    <Compile Include="../src/StarCaps.cs" />
+    <Compile Include="../src/FumeVariants.cs" />
+    <Compile Include="../src/FumeProjectiles.cs" />
+    <Compile Include="../src/NutProjectiles.cs" />
+    <Compile Include="../src/GloomFusions.cs" />
+    <Compile Include="../src/GutsyShroom.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+    <Compile Include="FumeFusionsStubs.cs" />
+    <Compile Include="FumeFusionsTests.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+  <Import Project="Adapters/MetalArmor.projitems" />
+  <ItemGroup><Compile Remove="$(MSBuildThisFileDirectory)Adapters/RollingChunks.cs" /></ItemGroup>
+</Project>

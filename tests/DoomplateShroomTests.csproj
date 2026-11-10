@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DoomplateShroomTests.cs" />
+    <Compile Include="DoomplateShroomStubs.cs" />
+    <Compile Include="../src/DoomplateShroom.cs" />
+    <Compile Include="../src/DoomEffects.cs" />
+    <Compile Include="../src/FusionTime.cs" />
+    <Compile Include="../src/FusionNativeTimeRecords.cs" />
+    <Compile Include="../src/FusionCraterTime.cs" />
+  </ItemGroup>
+</Project>

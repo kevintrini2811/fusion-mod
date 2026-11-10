@@ -1,0 +1,15 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ScaredZombies.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../BucketPlantsStubs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/BucketPlants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/BucketDrops.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ScaredContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/IronProjectiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FootballPlants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FusionRecipes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FusionService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ShroomSlots.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PlayerCursorScope.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)PlantLibraryImpact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/LobberImpact.cs" />
+  </ItemGroup>
+</Project>

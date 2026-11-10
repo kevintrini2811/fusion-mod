@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <OutputPath>bin/chomper-fusions/</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ChomperFusionsTests.cs" />
+    <Compile Include="ChomperFusionsStubs.cs" />
+    <Compile Include="Adapters/TorchConverters.cs" />
+    <Compile Include="../src/ChomperFusions.cs" />
+    <Compile Include="../src/RollingProjectiles.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+</Project>

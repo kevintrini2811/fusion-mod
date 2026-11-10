@@ -1,0 +1,1898 @@
+{
+  "policy": "Only explicitly reviewed, fully usable native plants and implemented variants are available. Absent entries are unavailable; recipe registration alone is insufficient.",
+  "ingredients": {
+    "Blover": {
+      "available": true,
+      "identity": "SeedType.Blover",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Cabbage-pult": {
+      "available": true,
+      "identity": "SeedType.Cabbagepult",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Cactus": {
+      "available": true,
+      "identity": "SeedType.Cactus",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Cherry Bomb": {
+      "available": true,
+      "identity": "SeedType.Cherrybomb",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Chomper": {
+      "available": true,
+      "identity": "SeedType.Chomper",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Doom-shroom": {
+      "available": true,
+      "identity": "SeedType.Doomshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Flower Pot": {
+      "available": true,
+      "identity": "SeedType.Flowerpot",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Fume-shroom": {
+      "available": true,
+      "identity": "SeedType.Fumeshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Garlic": {
+      "available": true,
+      "identity": "SeedType.Garlic",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Hypno-shroom": {
+      "available": true,
+      "identity": "SeedType.Hypnoshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Ice-shroom": {
+      "available": true,
+      "identity": "SeedType.Iceshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Jalapeno": {
+      "available": true,
+      "identity": "SeedType.Jalapeno",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Kernel-pult": {
+      "available": true,
+      "identity": "SeedType.Kernelpult",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Lily Pad": {
+      "available": true,
+      "identity": "SeedType.Lilypad",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Magnet-shroom": {
+      "available": true,
+      "identity": "SeedType.Magnetshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Marigold": {
+      "available": true,
+      "identity": "SeedType.Marigold",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Melon-pult": {
+      "available": true,
+      "identity": "SeedType.Melonpult",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Peashooter": {
+      "available": true,
+      "identity": "SeedType.Peashooter",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Plantern": {
+      "available": true,
+      "identity": "SeedType.Plantern",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Potato Mine": {
+      "available": true,
+      "identity": "SeedType.Potatomine",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Puff-shroom": {
+      "available": true,
+      "identity": "SeedType.Puffshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Pumpkin": {
+      "available": true,
+      "identity": "SeedType.Pumpkinshell",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Scaredy-shroom": {
+      "available": true,
+      "identity": "SeedType.Scaredyshroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Sea-shroom": {
+      "available": true,
+      "identity": "SeedType.Seashroom",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Spikeweed": {
+      "available": true,
+      "identity": "SeedType.Spikeweed",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Squash": {
+      "available": true,
+      "identity": "SeedType.Squash",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Starfruit": {
+      "available": true,
+      "identity": "SeedType.Starfruit",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Sunflower": {
+      "available": true,
+      "identity": "SeedType.Sunflower",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Tangle Kelp": {
+      "available": true,
+      "identity": "SeedType.Tanglekelp",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Threepeater": {
+      "available": true,
+      "identity": "SeedType.Threepeater",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Torchwood": {
+      "available": true,
+      "identity": "SeedType.Torchwood",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Umbrella Leaf": {
+      "available": true,
+      "identity": "SeedType.Umbrella",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Wall-nut": {
+      "available": true,
+      "identity": "SeedType.Wallnut",
+      "evidence": "Native selectable Replanted plant; SeedType and native Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/."
+    },
+    "Solar-shooter": {
+      "available": true,
+      "identity": "FusionPlant.SolarShooter",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Cherryshooter": {
+      "available": true,
+      "identity": "FusionPlant.CherryShooter",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Cherrypeater": {
+      "available": true,
+      "identity": "FusionPlant.Cherrypeater",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Split Cherry": {
+      "available": true,
+      "identity": "FusionPlant.SplitCherry",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Gatling Cherry": {
+      "available": true,
+      "identity": "FusionPlant.GatlingCherry",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Explode-o-shooter": {
+      "available": true,
+      "identity": "FusionPlant.ExplodeOShooter",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Cherry-nut": {
+      "available": true,
+      "identity": "FusionPlant.CherryNut",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Solar Bomb": {
+      "available": true,
+      "identity": "FusionPlant.SolarBomb",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Cluster Mine": {
+      "available": true,
+      "identity": "FusionPlant.ClusterMine",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Snow Repeater": {
+      "available": true,
+      "identity": "FusionPlant.SnowRepeater",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Split Snow": {
+      "available": true,
+      "identity": "FusionPlant.SnowSplit",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Gatling Snow": {
+      "available": true,
+      "identity": "FusionPlant.GatlingSnow",
+      "evidence": "Fully implemented variant: src/FusionPlant.cs, src/ImportedPeaVisuals.cs and README.md; available through existing fusion and LawnGlove."
+    },
+    "Repeater": {
+      "available": true,
+      "identity": "SeedType.Repeater",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Split Pea": {
+      "available": true,
+      "identity": "SeedType.Splitpea",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Gatling Pea": {
+      "available": true,
+      "identity": "SeedType.Gatlingpea",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Twin Sunflower": {
+      "available": true,
+      "identity": "SeedType.Twinsunflower",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Giant Wall-nut": {
+      "available": true,
+      "identity": "SeedType.GiantWallnut",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Tall-nut": {
+      "available": true,
+      "identity": "SeedType.Tallnut",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Snow Pea": {
+      "available": true,
+      "identity": "SeedType.Snowpea",
+      "evidence": "Implemented native result and usable ingredient; src/FusionRecipes.cs plus native SeedType/Plant lifecycle; README.md."
+    },
+    "Cherry Chomper": {
+      "available": true,
+      "identity": "FusionPlant.CherryChomper",
+      "evidence": "Native Chomper lifecycle plus src/CherryChomper.cs; original assets embedded, persistent marker, recipe and LawnGlove paths implemented. Runtime checks remain with user."
+    },
+    "Pea-nut": {
+      "available": true,
+      "identity": "FusionPlant.PeaNut",
+      "evidence": "Implemented in src/FusionPlant.cs, src/ChomperFusions.cs and src/RollingProjectiles.cs; original assets, behavior and recipes in references/pea-nut/; offline lifecycle/recipe checks in tests/ChomperFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Chomp-shooter": {
+      "available": true,
+      "identity": "FusionPlant.ChompShooter",
+      "evidence": "Implemented in src/FusionPlant.cs, src/ChomperFusions.cs and src/RollingProjectiles.cs; original assets, behavior and recipes in references/chomp-shooter/; offline lifecycle/recipe checks in tests/ChomperFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Chomp-nut": {
+      "available": true,
+      "identity": "FusionPlant.ChompNut",
+      "evidence": "Implemented in src/FusionPlant.cs, src/ChomperFusions.cs and src/RollingProjectiles.cs; original assets, behavior and recipes in references/chomp-nut/; offline lifecycle/recipe checks in tests/ChomperFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Chompzilla": {
+      "available": true,
+      "identity": "FusionPlant.Chompzilla",
+      "evidence": "Implemented in src/FusionPlant.cs, src/ChomperFusions.cs and src/RollingProjectiles.cs; original assets, behavior and recipes in references/chompzilla/; offline lifecycle/recipe checks in tests/ChomperFusionsTests.cs. Runtime verification remains with user. Corrected source identity: PlantType.SuperChomper=1013; prefab/script and metadata proof in references/chompzilla-0-1-35/. 0.1.34 mistakenly imported UltimateChomper (903)."
+    },
+    "Bucket": {
+      "available": true,
+      "identity": "FusionPlant.Bucket",
+      "evidence": "Implemented in src/BucketPlants.cs, src/IronProjectiles.cs and shared fusion/visual lifecycle. Original 4.0.5.2 almanac, prefab/script, methods and exports in references/bucket/; captured native magnet pails provide Bucket without a seed packet. Since 0.1.39, src/BucketDrops.cs also provides damage drops under the explicitly requested 50% rule, with no duplicate magnetic item; references/bucket-drops/behavior.json."
+    },
+    "Buck-nut": {
+      "available": true,
+      "identity": "FusionPlant.BuckNut",
+      "evidence": "Implemented in src/BucketPlants.cs, src/IronProjectiles.cs and shared fusion/visual lifecycle. Original 4.0.5.2 almanac, prefab/script, methods and exports in references/buck-nut/; captured native magnet pails provide Bucket without a seed packet."
+    },
+    "Buckshooter": {
+      "available": true,
+      "identity": "FusionPlant.Buckshooter",
+      "evidence": "Implemented in src/BucketPlants.cs, src/IronProjectiles.cs and shared fusion/visual lifecycle. Original 4.0.5.2 almanac, prefab/script, methods and exports in references/buckshooter/; captured native magnet pails provide Bucket without a seed packet."
+    },
+    "Peatato Mine": {
+      "available": true,
+      "identity": "FusionPlant.PeatatoMine",
+      "evidence": "src/MineFusions.cs and src/PotatoProjectiles.cs; original 4.0.5.2 behavior, prefab and animations in references/peatato-mine/; persisted native Potato Mine identity preserves low targeting."
+    },
+    "Solar Mine": {
+      "available": true,
+      "identity": "FusionPlant.SolarMine",
+      "evidence": "src/MineFusions.cs and src/PotatoProjectiles.cs; original 4.0.5.2 behavior, prefab and animations in references/solar-mine/; persisted native Potato Mine identity preserves low targeting."
+    },
+    "Mine-nut": {
+      "available": true,
+      "identity": "FusionPlant.MineNut",
+      "evidence": "src/MineFusions.cs and src/PotatoProjectiles.cs; original 4.0.5.2 behavior, prefab and animations in references/mine-nut/; persisted native Potato Mine identity preserves low targeting."
+    },
+    "Chomp-mine": {
+      "available": true,
+      "identity": "FusionPlant.ChompMine",
+      "evidence": "src/SolarChomperPlants.cs, src/FusionPlant.cs, src/RollingProjectiles.cs; native lifecycle, saved timers, imported original graphics and animations; references/chomp-mine/."
+    },
+    "Solar Chomper": {
+      "available": true,
+      "identity": "FusionPlant.SolarChomper",
+      "evidence": "src/SolarChomperPlants.cs, src/FusionPlant.cs, src/RollingProjectiles.cs; native lifecycle, saved timers, imported original graphics and animations; references/solar-chomper/."
+    },
+    "Solar-nut": {
+      "available": true,
+      "identity": "FusionPlant.SolarNut",
+      "evidence": "src/SolarChomperPlants.cs, src/FusionPlant.cs, src/RollingProjectiles.cs; native lifecycle, saved timers, imported original graphics and animations; references/solar-nut/."
+    },
+    "Twin Solar-nut": {
+      "available": true,
+      "identity": "FusionPlant.TwinSolarNut",
+      "evidence": "src/SolarChomperPlants.cs, src/FusionPlant.cs, src/RollingProjectiles.cs; native lifecycle, saved timers, imported original graphics and animations; references/twin-solar-nut/."
+    },
+    "Umbrella Shell": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaShell",
+      "evidence": "src/UmbrellaShell.cs and native Umbrella lifecycle; saved native marker/timers, original prefab, sprites and idle/block animations; references/umbrella-shell/ and umbrella-shell-combat/. Runtime verification remains with user."
+    },
+    "Twin Marigold": {
+      "available": true,
+      "identity": "FusionPlant.TwinMarigold",
+      "evidence": "src/TwinMarigold.cs with native Marigold lifecycle, saved native counters and original prefab/idle animation; all source recipes, actual code, data assets and exports in references/twin-marigold/, twin-marigold-native/ and twin-marigold-data/. Runtime verification remains with user."
+    },
+    "Cherry Squash": {
+      "available": true,
+      "identity": "FusionPlant.CherrySquash",
+      "evidence": "Native Squash lifecycle plus src/SquashFusions.cs; serialized marker and original prefab/animations; source behavior and assets in references/cherry-squash/ and references/squash-fusions/."
+    },
+    "Spicy Squash": {
+      "available": true,
+      "identity": "FusionPlant.SpicySquash",
+      "evidence": "Native Squash lifecycle plus src/SquashFusions.cs; serialized marker and original prefab/animations; source behavior and assets in references/spicy-squash/ and references/squash-fusions/."
+    },
+    "Icy Squash": {
+      "available": true,
+      "identity": "FusionPlant.IcySquash",
+      "evidence": "Native Squash lifecycle plus src/SquashFusions.cs; serialized marker and original prefab/animations; source behavior and assets in references/icy-squash/ and references/squash-fusions/."
+    },
+    "Hypno Squash": {
+      "available": true,
+      "identity": "FusionPlant.HypnoSquash",
+      "evidence": "Native Squash lifecycle plus src/SquashFusions.cs; serialized marker and original prefab/animations; source behavior and assets in references/hypno-squash/ and references/squash-fusions/."
+    },
+    "Flame Wall-nut": {
+      "available": true,
+      "identity": "FusionPlant.FlameWallNut",
+      "evidence": "src/ElementalNuts.cs and src/Overheat.cs; native saved Wall-nut/Tall-nut identity, complete bite/status/heal behavior, original prefab and animations in references/flame-wall-nut/ and elemental-nut-effects/. All source recipes implemented; runtime verification remains with user."
+    },
+    "Frost Wall-nut": {
+      "available": true,
+      "identity": "FusionPlant.FrostWallNut",
+      "evidence": "src/ElementalNuts.cs and src/Overheat.cs; native saved Wall-nut/Tall-nut identity, complete bite/status/heal behavior, original prefab and animations in references/frost-wall-nut/ and elemental-nut-effects/. All source recipes implemented; runtime verification remains with user."
+    },
+    "Flame Tall-nut": {
+      "available": true,
+      "identity": "FusionPlant.FlameTallNut",
+      "evidence": "src/ElementalNuts.cs and src/Overheat.cs; native saved Wall-nut/Tall-nut identity, complete bite/status/heal behavior, original prefab and animations in references/flame-tall-nut/ and elemental-nut-effects/. All source recipes implemented; runtime verification remains with user."
+    },
+    "Frost Tall-nut": {
+      "available": true,
+      "identity": "FusionPlant.FrostTallNut",
+      "evidence": "src/ElementalNuts.cs and src/Overheat.cs; native saved Wall-nut/Tall-nut identity, complete bite/status/heal behavior, original prefab and animations in references/frost-tall-nut/ and elemental-nut-effects/. All source recipes implemented; runtime verification remains with user."
+    },
+    "Solarweed": {
+      "available": true,
+      "identity": "FusionPlant.Solarweed",
+      "evidence": "src/WeedFusions.cs, src/ElementalNuts.cs and src/ImportedPeaVisuals.cs; saved native identity, original 4.0.5.2 prefab and animation assets, complete contact/bite/vehicle behavior. Source evidence in references/solarweed/ and weed-fusions/. Runtime verification remains with user."
+    },
+    "Iceweed": {
+      "available": true,
+      "identity": "FusionPlant.Iceweed",
+      "evidence": "src/WeedFusions.cs, src/ElementalNuts.cs and src/ImportedPeaVisuals.cs; saved native identity, original 4.0.5.2 prefab and animation assets, complete contact/bite/vehicle behavior. Source evidence in references/iceweed/ and weed-fusions/. Runtime verification remains with user."
+    },
+    "Scorchweed": {
+      "available": true,
+      "identity": "FusionPlant.Scorchweed",
+      "evidence": "src/WeedFusions.cs, src/ElementalNuts.cs and src/ImportedPeaVisuals.cs; saved native identity, original 4.0.5.2 prefab and animation assets, complete contact/bite/vehicle behavior. Source evidence in references/scorchweed/ and weed-fusions/. Runtime verification remains with user."
+    },
+    "Spike-nut": {
+      "available": true,
+      "identity": "FusionPlant.SpikeNut",
+      "evidence": "src/WeedFusions.cs, src/ElementalNuts.cs and src/ImportedPeaVisuals.cs; saved native identity, original 4.0.5.2 prefab and animation assets, complete contact/bite/vehicle behavior. Source evidence in references/spike-nut/ and weed-fusions/. Runtime verification remains with user."
+    },
+    "Blaze Pea": {
+      "available": true,
+      "identity": "FusionPlant.BlazePea",
+      "evidence": "src/BlazeShooters.cs; src/FusionPlant.cs; original prefab, animations and local behavior evidence in references/blaze-pea/; shared overheat and native shooter lifecycle."
+    },
+    "Blaze Repeater": {
+      "available": true,
+      "identity": "FusionPlant.BlazeRepeater",
+      "evidence": "src/BlazeShooters.cs; src/FusionPlant.cs; original prefab, animations and local behavior evidence in references/blaze-repeater/; shared overheat and native shooter lifecycle."
+    },
+    "Split Blaze": {
+      "available": true,
+      "identity": "FusionPlant.SplitBlaze",
+      "evidence": "src/BlazeShooters.cs; src/FusionPlant.cs; original prefab, animations and local behavior evidence in references/split-blaze/; shared overheat and native shooter lifecycle."
+    },
+    "Gatling Blaze": {
+      "available": true,
+      "identity": "FusionPlant.GatlingBlaze",
+      "evidence": "src/BlazeShooters.cs; src/FusionPlant.cs; original prefab, animations and local behavior evidence in references/gatling-blaze/; shared overheat and native shooter lifecycle."
+    },
+    "Thorn-nut": {
+      "available": true,
+      "identity": "FusionPlant.ThornNut",
+      "evidence": "Complete 4.0.5.2 port: src/FusionPlant.cs, src/MineFusions.cs, src/IceMineBlasts.cs, src/ElementalNuts.cs and shared visual/fusion lifecycle; authoritative behavior, prefab, original sprites and animation manifests in references/thorn-nut/; isolated regressions in tests/MineFusionsTests.cs and tests/ElementalNutsTests.cs. Runtime checks remain with user."
+    },
+    "Ice Mine": {
+      "available": true,
+      "identity": "FusionPlant.IceMine",
+      "evidence": "Complete 4.0.5.2 port: src/FusionPlant.cs, src/MineFusions.cs, src/IceMineBlasts.cs, src/ElementalNuts.cs and shared visual/fusion lifecycle; authoritative behavior, prefab, original sprites and animation manifests in references/ice-mine/; isolated regressions in tests/MineFusionsTests.cs and tests/ElementalNutsTests.cs. Runtime checks remain with user."
+    },
+    "Hypno Mine": {
+      "available": true,
+      "identity": "FusionPlant.HypnoMine",
+      "evidence": "Complete 4.0.5.2 port: src/FusionPlant.cs, src/MineFusions.cs, src/IceMineBlasts.cs, src/ElementalNuts.cs and shared visual/fusion lifecycle; authoritative behavior, prefab, original sprites and animation manifests in references/hypno-mine/; isolated regressions in tests/MineFusionsTests.cs and tests/ElementalNutsTests.cs. Runtime checks remain with user."
+    },
+    "Chip Mine": {
+      "available": true,
+      "identity": "FusionPlant.ChipMine",
+      "evidence": "Complete 4.0.5.2 port: src/FusionPlant.cs, src/MineFusions.cs, src/IceMineBlasts.cs, src/ElementalNuts.cs and shared visual/fusion lifecycle; authoritative behavior, prefab, original sprites and animation manifests in references/chip-mine/; isolated regressions in tests/MineFusionsTests.cs and tests/ElementalNutsTests.cs. Runtime checks remain with user."
+    },
+    "Poison Pea": {
+      "available": true,
+      "identity": "FusionPlant.PoisonPea",
+      "evidence": "Complete port in src/PoisonShooters.cs, src/ShooterGrowth.cs and src/FusionPlant.cs; native shooter/collision/save lifecycle, original 4.0.5.2 sprites and animations, poison levels, poison damage and miasma. Sources and export manifests in references/poison-pea/, poison-repeater/, split-poison/, gatling-poison/, poison-status/, poison-effects/ and poison-miasma/. Isolated regressions in tests/PoisonShootersTests.cs; runtime verification remains with user."
+    },
+    "Poison Repeater": {
+      "available": true,
+      "identity": "FusionPlant.PoisonRepeater",
+      "evidence": "Complete port in src/PoisonShooters.cs, src/ShooterGrowth.cs and src/FusionPlant.cs; native shooter/collision/save lifecycle, original 4.0.5.2 sprites and animations, poison levels, poison damage and miasma. Sources and export manifests in references/poison-pea/, poison-repeater/, split-poison/, gatling-poison/, poison-status/, poison-effects/ and poison-miasma/. Isolated regressions in tests/PoisonShootersTests.cs; runtime verification remains with user."
+    },
+    "Split Poison": {
+      "available": true,
+      "identity": "FusionPlant.SplitPoison",
+      "evidence": "Complete port in src/PoisonShooters.cs, src/ShooterGrowth.cs and src/FusionPlant.cs; native shooter/collision/save lifecycle, original 4.0.5.2 sprites and animations, poison levels, poison damage and miasma. Sources and export manifests in references/poison-pea/, poison-repeater/, split-poison/, gatling-poison/, poison-status/, poison-effects/ and poison-miasma/. Isolated regressions in tests/PoisonShootersTests.cs; runtime verification remains with user."
+    },
+    "Gatling Poison": {
+      "available": true,
+      "identity": "FusionPlant.GatlingPoison",
+      "evidence": "Complete port in src/PoisonShooters.cs, src/ShooterGrowth.cs and src/FusionPlant.cs; native shooter/collision/save lifecycle, original 4.0.5.2 sprites and animations, poison levels, poison damage and miasma. Sources and export manifests in references/poison-pea/, poison-repeater/, split-poison/, gatling-poison/, poison-status/, poison-effects/ and poison-miasma/. Isolated regressions in tests/PoisonShootersTests.cs; runtime verification remains with user."
+    },
+    "Foul-nut": {
+      "available": true,
+      "identity": "FusionPlant.FoulNut",
+      "evidence": "Complete original 4.0.5.2 port in src/RetaliationNuts.cs, src/RetaliationProjectiles.cs, src/SquashFusions.cs and src/PoisonShooters.cs; saved identity and shared card/glove/terrain lifecycle; authoritative almanac, prefab/script identity, methods, sprites and animations in references/foul-nut/ and references/nut-squash-native/. Offline regressions in tests/SquashFusionsTests.cs, tests/PoisonShootersTests.cs and tests/BucketPlantsTests.cs. Runtime verification remains with user."
+    },
+    "Star-nut": {
+      "available": true,
+      "identity": "FusionPlant.StarNut",
+      "evidence": "Complete original 4.0.5.2 port in src/RetaliationNuts.cs, src/RetaliationProjectiles.cs, src/SquashFusions.cs and src/PoisonShooters.cs; saved identity and shared card/glove/terrain lifecycle; authoritative almanac, prefab/script identity, methods, sprites and animations in references/star-nut/ and references/nut-squash-native/. Offline regressions in tests/SquashFusionsTests.cs, tests/PoisonShootersTests.cs and tests/BucketPlantsTests.cs. Runtime verification remains with user."
+    },
+    "Pea Squash": {
+      "available": true,
+      "identity": "FusionPlant.PeaSquash",
+      "evidence": "Complete original 4.0.5.2 port in src/RetaliationNuts.cs, src/RetaliationProjectiles.cs, src/SquashFusions.cs and src/PoisonShooters.cs; saved identity and shared card/glove/terrain lifecycle; authoritative almanac, prefab/script identity, methods, sprites and animations in references/pea-squash/ and references/nut-squash-native/. Offline regressions in tests/SquashFusionsTests.cs, tests/PoisonShootersTests.cs and tests/BucketPlantsTests.cs. Runtime verification remains with user."
+    },
+    "Iron Squash": {
+      "available": true,
+      "identity": "FusionPlant.IronSquash",
+      "evidence": "Complete original 4.0.5.2 port in src/RetaliationNuts.cs, src/RetaliationProjectiles.cs, src/SquashFusions.cs and src/PoisonShooters.cs; saved identity and shared card/glove/terrain lifecycle; authoritative almanac, prefab/script identity, methods, sprites and animations in references/iron-squash/ and references/nut-squash-native/. Offline regressions in tests/SquashFusionsTests.cs, tests/PoisonShootersTests.cs and tests/BucketPlantsTests.cs. Runtime verification remains with user."
+    },
+    "Butter-nut": {
+      "available": true,
+      "identity": "FusionPlant.ButterNut",
+      "evidence": "Complete 4.0.5.2 port in src/ElementalNuts.cs and src/ButterEffects.cs; saved native identity, shared card/glove placement, original prefab and animations in references/butter-nut/. Native lifecycle proof in references/butter-torch-native/. Offline regressions in tests/ElementalNutsTests.cs, tests/UmbrellaShellTests.cs and tests/MineFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Umbrella Husk": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaHusk",
+      "evidence": "Complete 4.0.5.2 port in src/UmbrellaShell.cs and src/ButterEffects.cs; saved native identity, shared card/glove placement, original prefab and animations in references/umbrella-husk/. Native lifecycle proof in references/butter-torch-native/. Offline regressions in tests/ElementalNutsTests.cs, tests/UmbrellaShellTests.cs and tests/MineFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Torchflower": {
+      "available": true,
+      "identity": "FusionPlant.Torchflower",
+      "evidence": "Complete 4.0.5.2 port in src/Torchflower.cs and src/SolarShooter.cs; saved native identity, shared card/glove placement, original prefab and animations in references/torchflower/. Native lifecycle proof in references/butter-torch-native/. Offline regressions in tests/ElementalNutsTests.cs, tests/UmbrellaShellTests.cs and tests/MineFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Land-mine": {
+      "available": true,
+      "identity": "FusionPlant.LandMine",
+      "evidence": "Complete 4.0.5.2 port in src/MineFusions.cs and src/CherryBombPlants.cs; saved native identity, shared card/glove placement, original prefab and animations in references/land-mine/. Native lifecycle proof in references/butter-torch-native/. Offline regressions in tests/ElementalNutsTests.cs, tests/UmbrellaShellTests.cs and tests/MineFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Starry Squash": {
+      "available": true,
+      "identity": "FusionPlant.StarrySquash",
+      "evidence": "Complete 4.0.5.2 port in src/SquashFusions.cs, src/SolarSquash.cs, src/KelpFusions.cs, src/CherryBombPlants.cs and shared fusion/visual lifecycle. Original behavior, prefab, sprites, animations and checksums in references/starry-squash/, squash-kelp-effects/ and squash-kelp-native/. Saved native identity; offline regressions in tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Solar Squash": {
+      "available": true,
+      "identity": "FusionPlant.SolarSquash",
+      "evidence": "Complete 4.0.5.2 port in src/SquashFusions.cs, src/SolarSquash.cs, src/KelpFusions.cs, src/CherryBombPlants.cs and shared fusion/visual lifecycle. Original behavior, prefab, sprites, animations and checksums in references/solar-squash/, squash-kelp-effects/ and squash-kelp-native/. Saved native identity; offline regressions in tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Spicy Kelp": {
+      "available": true,
+      "identity": "FusionPlant.SpicyKelp",
+      "evidence": "Complete 4.0.5.2 port in src/SquashFusions.cs, src/SolarSquash.cs, src/KelpFusions.cs, src/CherryBombPlants.cs and shared fusion/visual lifecycle. Original behavior, prefab, sprites, animations and checksums in references/spicy-kelp/, squash-kelp-effects/ and squash-kelp-native/. Saved native identity; offline regressions in tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Doom Kelp": {
+      "available": true,
+      "identity": "FusionPlant.DoomKelp",
+      "evidence": "Complete 4.0.5.2 port in src/SquashFusions.cs, src/SolarSquash.cs, src/KelpFusions.cs, src/CherryBombPlants.cs and shared fusion/visual lifecycle. Original behavior, prefab, sprites, animations and checksums in references/doom-kelp/, squash-kelp-effects/ and squash-kelp-native/. Saved native identity; offline regressions in tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Frost-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FrostShroom",
+      "evidence": "Complete original 4.0.5.2 port in src/FumeFusions.cs, src/FusionPlant.cs, src/SnowPea.cs and src/ImportedPeaVisuals.cs; saved native identity, original sprites and all controller clips; sources and asset checksums in references/frost-shroom/, fume-base/, fume-shooter/, fume-spreader-sequence/ fume-grid/ and fume-native/. Offline regression: tests/FumeFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Flame-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FlameShroom",
+      "evidence": "Complete original 4.0.5.2 port in src/FumeFusions.cs, src/FusionPlant.cs, src/SnowPea.cs and src/ImportedPeaVisuals.cs; saved native identity, original sprites and all controller clips; sources and asset checksums in references/flame-shroom/, fume-base/, fume-shooter/, fume-spreader-sequence/ fume-grid/ and fume-native/. Offline regression: tests/FumeFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Soot-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SootShroom",
+      "evidence": "Complete original 4.0.5.2 port in src/FumeFusions.cs, src/FusionPlant.cs, src/SnowPea.cs and src/ImportedPeaVisuals.cs; saved native identity, original sprites and all controller clips; sources and asset checksums in references/soot-shroom/, fume-base/, fume-shooter/, fume-spreader-sequence/ fume-grid/ and fume-native/. Offline regression: tests/FumeFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Fume-spreader": {
+      "available": true,
+      "identity": "FusionPlant.FumeSpreader",
+      "evidence": "Complete original 4.0.5.2 port in src/FumeFusions.cs, src/FusionPlant.cs, src/SnowPea.cs and src/ImportedPeaVisuals.cs; saved native identity, original sprites and all controller clips; sources and asset checksums in references/fume-spreader/, fume-base/, fume-shooter/, fume-spreader-sequence/ fume-grid/ and fume-native/. Offline regression: tests/FumeFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Doom Squash": {
+      "available": true,
+      "identity": "FusionPlant.DoomSquash",
+      "evidence": "Complete original 4.0.5.2 port in src/SquashFusions.cs, src/Jawbreaker.cs, src/ChomperVariants.cs and src/DoomEffects.cs. Saved native identity and shared card/glove/terrain lifecycle; original prefab, sprites, all controller clips and local method evidence in references/doom-squash/, doom-crater/ and chomper-squash-native/. Offline regression: tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Jawbreaker": {
+      "available": true,
+      "identity": "FusionPlant.Jawbreaker",
+      "evidence": "Complete original 4.0.5.2 port in src/SquashFusions.cs, src/Jawbreaker.cs, src/ChomperVariants.cs and src/DoomEffects.cs. Saved native identity and shared card/glove/terrain lifecycle; original prefab, sprites, all controller clips and local method evidence in references/jawbreaker/, doom-crater/ and chomper-squash-native/. Offline regression: tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Doom Chomper": {
+      "available": true,
+      "identity": "FusionPlant.DoomChomper",
+      "evidence": "Complete original 4.0.5.2 port in src/SquashFusions.cs, src/Jawbreaker.cs, src/ChomperVariants.cs and src/DoomEffects.cs. Saved native identity and shared card/glove/terrain lifecycle; original prefab, sprites, all controller clips and local method evidence in references/doom-chomper/, doom-crater/ and chomper-squash-native/. Offline regression: tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Frostbiter": {
+      "available": true,
+      "identity": "FusionPlant.Frostbiter",
+      "evidence": "Complete original 4.0.5.2 port in src/SquashFusions.cs, src/Jawbreaker.cs, src/ChomperVariants.cs and src/DoomEffects.cs. Saved native identity and shared card/glove/terrain lifecycle; original prefab, sprites, all controller clips and local method evidence in references/frostbiter/, doom-crater/ and chomper-squash-native/. Offline regression: tests/SquashFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Spikerock": {
+      "available": true,
+      "identity": "SeedType.Spikerock",
+      "evidence": "Native selectable Replanted upgrade (SeedType 46). PlantInitialize supplies 450 HP; UpdateAbilities/UpdateSpikeweed supply both contact events; DoRowAreaDamage owns tires. Native CanPlantAt/IsUpgradableTo and ../glove-mod/src/PlantPlacementRules.cs own Spikeweed upgrade terrain. See references/weed-fusions/ and references/icerock/port-notes.md."
+    },
+    "Icerock": {
+      "available": true,
+      "identity": "FusionPlant.Icerock",
+      "evidence": "Fully ported in src/FusionPlant.cs, src/FusionRecipes.cs and src/WeedFusions.cs; original prefab, sprites, clips, almanac and actual source methods archived in references/icerock/. Shared card/glove placement and native saved identity; original models embedded in FusionMod.csproj."
+    },
+    "Hearthrock": {
+      "available": true,
+      "identity": "FusionPlant.Hearthrock",
+      "evidence": "Fully ported in src/FusionPlant.cs, src/FusionRecipes.cs and src/WeedFusions.cs; original prefab, sprites, clips, almanac and actual source methods archived in references/hearthrock/. Shared card/glove placement and native saved identity; original models embedded in FusionMod.csproj."
+    },
+    "Foul-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FoulShroom",
+      "evidence": "Fully ported in src/FusionPlant.cs, src/FusionRecipes.cs and src/FumeFusions.cs; original prefab, sprites, clips, almanac and actual source methods archived in references/foul-shroom/. Shared card/glove placement and native saved identity; original models embedded in FusionMod.csproj."
+    },
+    "Starch-shroom": {
+      "available": true,
+      "identity": "FusionPlant.StarchShroom",
+      "evidence": "Fully ported in src/FusionPlant.cs, src/FusionRecipes.cs and src/FumeFusions.cs; original prefab, sprites, clips, almanac and actual source methods archived in references/starch-shroom/. Shared card/glove placement and native saved identity; original models embedded in FusionMod.csproj."
+    },
+    "Stench-spreader": {
+      "available": true,
+      "identity": "FusionPlant.StenchSpreader",
+      "evidence": "Implemented in src/ThreepeaterFusions.cs with shared native Fire, saved plant identity and attack phase; original 4.0.5.2 prefab, almanac, method disassembly and animations under references/stench-spreader/. Poison/snow projectile abilities reuse existing owners; offline checks in tests/ThreepeaterFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Snow Threepeater": {
+      "available": true,
+      "identity": "FusionPlant.SnowThreepeater",
+      "evidence": "Implemented in src/ThreepeaterFusions.cs with shared native Fire, saved plant identity and attack phase; original 4.0.5.2 prefab, almanac, method disassembly and animations under references/snow-threepeater/. Poison/snow projectile abilities reuse existing owners; offline checks in tests/ThreepeaterFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Scorched Threepeater": {
+      "available": true,
+      "identity": "FusionPlant.ScorchedThreepeater",
+      "evidence": "Implemented in src/ThreepeaterFusions.cs with shared native Fire, saved plant identity and attack phase; original 4.0.5.2 prefab, almanac, method disassembly and animations under references/scorched-threepeater/. Poison/snow projectile abilities reuse existing owners; offline checks in tests/ThreepeaterFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Charred Threepeater": {
+      "available": true,
+      "identity": "FusionPlant.CharredThreepeater",
+      "evidence": "Implemented in src/ThreepeaterFusions.cs with shared native Fire, saved plant identity and attack phase; original 4.0.5.2 prefab, almanac, method disassembly and animations under references/charred-threepeater/. Poison/snow projectile abilities reuse existing owners; offline checks in tests/ThreepeaterFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Gloom-shroom": {
+      "available": true,
+      "identity": "FusionPlant.GloomShroom",
+      "evidence": "Native selectable Gloom-shroom (SeedType.Gloomshroom, 42); native ingredient was already fully usable. Source recipe, original artwork and source pulse behavior: references/gloom-shroom/port-notes.md."
+    },
+    "Frost Gloom-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FrostGloomShroom",
+      "evidence": "Complete cold pulses and freeze points, original assets and persisted identity; references/gloom-shroom/port-notes.md and references/frost-gloom-shroom/."
+    },
+    "Flame Gloom-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FlameGloomShroom",
+      "evidence": "Complete fire pulses and existing overheat system, original assets and persisted identity; references/gloom-shroom/port-notes.md and references/flame-gloom-shroom/."
+    },
+    "Gutsy-shroom": {
+      "available": true,
+      "identity": "FusionPlant.GutsyShroom",
+      "evidence": "Complete near smoke / distant two-spore attack with original projectile, original animation and saved attack/projectile state; references/gloom-shroom/port-notes.md and references/gutsy-shroom/."
+    },
+    "Black Cherry": {
+      "available": true,
+      "identity": "FusionPlant.BlackCherry",
+      "evidence": "Complete original 4.0.5.2 port in src/IceInstantFusions.cs with shared CherryBombPlants/DoomEffects, saved identity/counters, original sprites and every controller clip. Source recipes, actual method disassembly and port notes: references/black-cherry/port-notes.md and references/black-cherry/. Native lifecycle proof: references/ice-instant-native/. Offline regressions: tests/IceInstantFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Frozen Cherry": {
+      "available": true,
+      "identity": "FusionPlant.FrozenCherry",
+      "evidence": "Complete original 4.0.5.2 port in src/IceInstantFusions.cs with shared CherryBombPlants/DoomEffects, saved identity/counters, original sprites and every controller clip. Source recipes, actual method disassembly and port notes: references/black-cherry/port-notes.md and references/frozen-cherry/. Native lifecycle proof: references/ice-instant-native/. Offline regressions: tests/IceInstantFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Demise-shroom": {
+      "available": true,
+      "identity": "FusionPlant.DemiseShroom",
+      "evidence": "Complete original 4.0.5.2 port in src/IceInstantFusions.cs with shared CherryBombPlants/DoomEffects, saved identity/counters, original sprites and every controller clip. Source recipes, actual method disassembly and port notes: references/black-cherry/port-notes.md and references/demise-shroom/. Native lifecycle proof: references/ice-instant-native/. Offline regressions: tests/IceInstantFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Sundae-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SundaeShroom",
+      "evidence": "Complete original 4.0.5.2 port in src/IceInstantFusions.cs with shared CherryBombPlants/DoomEffects, saved identity/counters, original sprites and every controller clip. Source recipes, actual method disassembly and port notes: references/black-cherry/port-notes.md and references/sundae-shroom/. Native lifecycle proof: references/ice-instant-native/. Offline regressions: tests/IceInstantFusionsTests.cs. Runtime verification remains with user."
+    },
+    "Speedy-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SpeedyShroom",
+      "evidence": "Fully ported original Scaredy-shroom variant, projectiles, fear/death abilities and saved state; src/ScaredyFusions.cs, src/ScaredyProjectiles.cs and references/speedy-shroom/port-notes.md."
+    },
+    "Blasty-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BlastyShroom",
+      "evidence": "Fully ported original Scaredy-shroom variant, projectiles, fear/death abilities and saved state; src/ScaredyFusions.cs, src/ScaredyProjectiles.cs and references/blasty-shroom/port-notes.md."
+    },
+    "Shivery-shroom": {
+      "available": true,
+      "identity": "FusionPlant.ShiveryShroom",
+      "evidence": "Fully ported original Scaredy-shroom variant, projectiles, fear/death abilities and saved state; src/ScaredyFusions.cs, src/ScaredyProjectiles.cs and references/shivery-shroom/port-notes.md."
+    },
+    "Spuddy-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SpuddyShroom",
+      "evidence": "Fully ported original Scaredy-shroom variant, projectiles, fear/death abilities and saved state; src/ScaredyFusions.cs, src/ScaredyProjectiles.cs and references/spuddy-shroom/port-notes.md."
+    },
+    "Sunny-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SunnyShroom",
+      "evidence": "Fully ported source behavior, original animation and saved identity; src/ScaredyFusions.cs, src/ScaredySupport.cs; references/sunny-shroom/ and references/sunny-shroom/port-notes.md."
+    },
+    "Starry-shroom": {
+      "available": true,
+      "identity": "FusionPlant.StarryShroom",
+      "evidence": "Fully ported source behavior, original animation and saved identity; src/ScaredyFusions.cs, src/ScaredySupport.cs; references/starry-shroom/ and references/sunny-shroom/port-notes.md."
+    },
+    "Sturdy-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SturdyShroom",
+      "evidence": "Fully ported source behavior, original animation and saved identity; src/ScaredyFusions.cs, src/ScaredySupport.cs; references/sturdy-shroom/ and references/sunny-shroom/port-notes.md."
+    },
+    "Camo-shroom": {
+      "available": true,
+      "identity": "FusionPlant.CamoShroom",
+      "evidence": "Fully ported source behavior, original animation and saved identity; src/ScaredyFusions.cs, src/ScaredySupport.cs; references/camo-shroom/ and references/sunny-shroom/port-notes.md."
+    },
+    "Hypno Pea": {
+      "available": true,
+      "identity": "FusionPlant.HypnoPea",
+      "evidence": "Fully ported in src/HypnoShooters.cs, src/ShooterGrowth.cs and shared native shooter/visual lifecycle. Original 4.0.5.2 recipes, almanac, prefab script identity, methods, assets and previews in references/hypno-pea/; shared behavior and save-field proof in references/hypno-pea/port-notes.md. Offline regression: tests/HypnoShootersTests.cs. Runtime verification remains with user."
+    },
+    "Hypno Repeater": {
+      "available": true,
+      "identity": "FusionPlant.HypnoRepeater",
+      "evidence": "Fully ported in src/HypnoShooters.cs, src/ShooterGrowth.cs and shared native shooter/visual lifecycle. Original 4.0.5.2 recipes, almanac, prefab script identity, methods, assets and previews in references/hypno-repeater/; shared behavior and save-field proof in references/hypno-pea/port-notes.md. Offline regression: tests/HypnoShootersTests.cs. Runtime verification remains with user."
+    },
+    "Split Hypno": {
+      "available": true,
+      "identity": "FusionPlant.SplitHypno",
+      "evidence": "Fully ported in src/HypnoShooters.cs, src/ShooterGrowth.cs and shared native shooter/visual lifecycle. Original 4.0.5.2 recipes, almanac, prefab script identity, methods, assets and previews in references/split-hypno/; shared behavior and save-field proof in references/hypno-pea/port-notes.md. Offline regression: tests/HypnoShootersTests.cs. Runtime verification remains with user."
+    },
+    "Gatling Hypno": {
+      "available": true,
+      "identity": "FusionPlant.GatlingHypno",
+      "evidence": "Fully ported in src/HypnoShooters.cs, src/ShooterGrowth.cs and shared native shooter/visual lifecycle. Original 4.0.5.2 recipes, almanac, prefab script identity, methods, assets and previews in references/gatling-hypno/; shared behavior and save-field proof in references/hypno-pea/port-notes.md. Offline regression: tests/HypnoShootersTests.cs. Runtime verification remains with user."
+    },
+    "Fallout Blover": {
+      "available": true,
+      "identity": "FusionPlant.FalloutBlover",
+      "evidence": "Fully ported in src/SupportFusions.cs; local source recipes, behavior and original animated prefab in references/fallout-blover/; native paths in references/support-native/; shared port notes in references/fallout-blover/port-notes.md."
+    },
+    "Solarfruit": {
+      "available": true,
+      "identity": "FusionPlant.Solarfruit",
+      "evidence": "Fully ported in src/SupportFusions.cs; local source recipes, behavior and original animated prefab in references/solarfruit/; native paths in references/support-native/; shared port notes in references/fallout-blover/port-notes.md."
+    },
+    "Hypno Garlic": {
+      "available": true,
+      "identity": "FusionPlant.HypnoGarlic",
+      "evidence": "Fully ported in src/SupportFusions.cs; local source recipes, behavior and original animated prefab in references/hypno-garlic/; native paths in references/support-native/; shared port notes in references/fallout-blover/port-notes.md."
+    },
+    "Flytrapper": {
+      "available": true,
+      "identity": "FusionPlant.Flytrapper",
+      "evidence": "Fully ported in src/SupportFusions.cs; local source recipes, behavior and original animated prefab in references/flytrapper/; native paths in references/support-native/; shared port notes in references/fallout-blover/port-notes.md."
+    },
+    "Football Helmet": {
+      "available": true,
+      "identity": "FusionPlant.FootballHelmet",
+      "evidence": "Original 4.0.5.2 port in src/FootballPlants.cs, src/BucketDrops.cs, src/BucketPlants.cs and src/IronProjectiles.cs; assets and source methods in references/football-helmet/, football-nut/, football-gatling/ and football-projectiles/."
+    },
+    "Football-nut": {
+      "available": true,
+      "identity": "FusionPlant.FootballNut",
+      "evidence": "Original 4.0.5.2 port in src/FootballPlants.cs, src/BucketDrops.cs, src/BucketPlants.cs and src/IronProjectiles.cs; assets and source methods in references/football-helmet/, football-nut/, football-gatling/ and football-projectiles/."
+    },
+    "Football Gatling": {
+      "available": true,
+      "identity": "FusionPlant.FootballGatling",
+      "evidence": "Original 4.0.5.2 port in src/FootballPlants.cs, src/BucketDrops.cs, src/BucketPlants.cs and src/IronProjectiles.cs; assets and source methods in references/football-helmet/, football-nut/, football-gatling/ and football-projectiles/."
+    },
+    "Pea-shroom": {
+      "available": true,
+      "identity": "FusionPlant.PeaShroom",
+      "evidence": "Fully ported Puff-shroom variant: src/PuffShooters.cs; original behavior, data, prefab and animation evidence in references/pea-shroom/, repeat-shroom/, split-pea-shroom/, gatling-pea-shroom/, puff-projectile/ and puff-shooter-base/."
+    },
+    "Repeat-shroom": {
+      "available": true,
+      "identity": "FusionPlant.RepeatShroom",
+      "evidence": "Fully ported Puff-shroom variant: src/PuffShooters.cs; original behavior, data, prefab and animation evidence in references/pea-shroom/, repeat-shroom/, split-pea-shroom/, gatling-pea-shroom/, puff-projectile/ and puff-shooter-base/."
+    },
+    "Split Pea-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SplitPeaShroom",
+      "evidence": "Fully ported Puff-shroom variant: src/PuffShooters.cs; original behavior, data, prefab and animation evidence in references/pea-shroom/, repeat-shroom/, split-pea-shroom/, gatling-pea-shroom/, puff-projectile/ and puff-shooter-base/."
+    },
+    "Gatling Pea-shroom": {
+      "available": true,
+      "identity": "FusionPlant.GatlingPeaShroom",
+      "evidence": "Fully ported Puff-shroom variant: src/PuffShooters.cs; original behavior, data, prefab and animation evidence in references/pea-shroom/, repeat-shroom/, split-pea-shroom/, gatling-pea-shroom/, puff-projectile/ and puff-shooter-base/."
+    },
+    "Nut-shroom": {
+      "available": true,
+      "identity": "FusionPlant.NutShroom",
+      "evidence": "Fully ported source 4.0.5.2 prefab, original animation and abilities; src/PuffSupport.cs; references/nut-shroom/; references/puff-support/port-notes.md."
+    },
+    "Bell Pepper": {
+      "available": true,
+      "identity": "FusionPlant.BellPepper",
+      "evidence": "Fully ported source 4.0.5.2 prefab, original animation and abilities; src/PuffSupport.cs; references/bell-pepper/; references/puff-support/port-notes.md."
+    },
+    "Boom-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BoomShroom",
+      "evidence": "Fully ported source 4.0.5.2 prefab, original animation and abilities; src/PuffSupport.cs; references/boom-shroom/; references/puff-support/port-notes.md."
+    },
+    "Penny-shroom": {
+      "available": true,
+      "identity": "FusionPlant.PennyShroom",
+      "evidence": "Fully ported source 4.0.5.2 prefab, original animation and abilities; src/PuffSupport.cs; references/penny-shroom/; references/puff-support/port-notes.md."
+    },
+    "Hail-shroom": {
+      "available": true,
+      "identity": "FusionPlant.HailShroom",
+      "evidence": "Fully ported in 1.4.0: source prefab/script, original animations, abilities and projectiles; references/hail-shroom/ and references/puff-special-native/port-notes.md."
+    },
+    "Icicle-shroom": {
+      "available": true,
+      "identity": "FusionPlant.IcicleShroom",
+      "evidence": "Fully ported in 1.4.0: source prefab/script, original animations, abilities and projectiles; references/icicle-shroom/ and references/puff-special-native/port-notes.md."
+    },
+    "Twinkle-shroom": {
+      "available": true,
+      "identity": "FusionPlant.TwinkleShroom",
+      "evidence": "Fully ported in 1.4.0: source prefab/script, original animations, abilities and projectiles; references/twinkle-shroom/ and references/puff-special-native/port-notes.md."
+    },
+    "Nugget-shroom": {
+      "available": true,
+      "identity": "FusionPlant.NuggetShroom",
+      "evidence": "Fully ported in 1.4.0: source prefab/script, original animations, abilities and projectiles; references/nugget-shroom/ and references/puff-special-native/port-notes.md."
+    },
+    "Sun-shroom": {
+      "available": true,
+      "identity": "SeedType.Sunshroom",
+      "evidence": "Native Replanted Sunshroom; fusion recipe only. The duplicate Puffshroom/Sunflower port is migrated before native controller creation; src/NativeSunShroom.cs."
+    },
+    "Gnome-shroom": {
+      "available": true,
+      "identity": "FusionPlant.GnomeShroom",
+      "evidence": "Fully ported original 4.0.5.2 abilities, prefab and animations: src/PuffSupport.cs; references/gnome-shroom/; references/puff-support-1-5/port-notes.md."
+    },
+    "Umbrella Cap": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaCap",
+      "evidence": "Fully ported original 4.0.5.2 abilities, prefab and animations: src/PuffSupport.cs; references/umbrella-cap/; references/puff-support-1-5/port-notes.md."
+    },
+    "Buck-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BuckShroom",
+      "evidence": "Complete source port with actual methods, PlantData, prefab scripts and original animation exports in references/buck-shroom/ and references/puff-lob-native/port-notes.md; src/PuffLobbers.cs, src/PuffShooters.cs, src/IronProjectiles.cs, src/FusionPlant.cs."
+    },
+    "Sprout-pult": {
+      "available": true,
+      "identity": "FusionPlant.SproutPult",
+      "evidence": "Complete source port with actual methods, PlantData, prefab scripts and original animation exports in references/sprout-pult/ and references/puff-lob-native/port-notes.md; src/PuffLobbers.cs, src/PuffShooters.cs, src/IronProjectiles.cs, src/FusionPlant.cs."
+    },
+    "Baby Corn": {
+      "available": true,
+      "identity": "FusionPlant.BabyCorn",
+      "evidence": "Complete source port with actual methods, PlantData, prefab scripts and original animation exports in references/baby-corn/ and references/puff-lob-native/port-notes.md; src/PuffLobbers.cs, src/PuffShooters.cs, src/IronProjectiles.cs, src/FusionPlant.cs."
+    },
+    "Slice-pult": {
+      "available": true,
+      "identity": "FusionPlant.SlicePult",
+      "evidence": "Complete source port with actual methods, PlantData, prefab scripts and original animation exports in references/slice-pult/ and references/puff-lob-native/port-notes.md; src/PuffLobbers.cs, src/PuffShooters.cs, src/IronProjectiles.cs, src/FusionPlant.cs."
+    },
+    "Solar Pot": {
+      "available": true,
+      "identity": "FusionPlant.SolarPot",
+      "evidence": "Complete source port: src/SunflowerFusions.cs; original 4.0.5.2 recipes, almanac, methods, prefab identity and assets in references/solar-pot/; references/solar-fusions-native/port-notes.md documents behavior, saved fields, fertilizer and native adapters."
+    },
+    "Sunset-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SunsetShroom",
+      "evidence": "Complete source port: src/SunflowerFusions.cs; original 4.0.5.2 recipes, almanac, methods, prefab identity and assets in references/sunset-shroom/; references/solar-fusions-native/port-notes.md documents behavior, saved fields, fertilizer and native adapters."
+    },
+    "Solar Flare": {
+      "available": true,
+      "identity": "FusionPlant.SolarFlare",
+      "evidence": "Complete source port: src/SunflowerFusions.cs; original 4.0.5.2 recipes, almanac, methods, prefab identity and assets in references/solar-flare/; references/solar-fusions-native/port-notes.md documents behavior, saved fields, fertilizer and native adapters."
+    },
+    "Solar Blover": {
+      "available": true,
+      "identity": "FusionPlant.SolarBlover",
+      "evidence": "Complete source port: src/SunflowerFusions.cs; original 4.0.5.2 recipes, almanac, methods, prefab identity and assets in references/solar-blover/; references/solar-fusions-native/port-notes.md documents behavior, saved fields, fertilizer and native adapters."
+    },
+    "Cherry-spreader": {
+      "available": true,
+      "identity": "FusionPlant.CherrySpreader",
+      "evidence": "Implemented original CherryThreePeater and timed attached cherries; references/cherry-spreader/port-notes.md, cherry-spreader-projectile/, cherry-spreader-charge/; tests/ThreepeaterFusionsTests.csproj."
+    },
+    "Winter Melon": {
+      "available": true,
+      "identity": "SeedType.Wintermelon",
+      "evidence": "Native selectable Replanted upgrade; SeedType and Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/. Native reuse and recipe paths: references/native-upgrade-recipes/port-notes.md."
+    },
+    "Gold Magnet": {
+      "available": true,
+      "identity": "SeedType.GoldMagnet",
+      "evidence": "Native selectable Replanted upgrade; SeedType and Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/. Native reuse and recipe paths: references/native-upgrade-recipes/port-notes.md."
+    },
+    "Cattail": {
+      "available": true,
+      "identity": "SeedType.Cattail",
+      "evidence": "Native selectable Replanted upgrade; SeedType and Plant lifecycle in ../glove-mod/research/dummy/Reloaded.Gameplay/. Native reuse and recipe paths: references/native-upgrade-recipes/port-notes.md."
+    },
+    "Silver-nut": {
+      "available": true,
+      "identity": "FusionPlant.SilverNut",
+      "evidence": "Fully ported silver base fusion; references/silver-nut/research-inputs.json, visual-assets.json and ../silver-plants/port-notes.md; src/SilverPlants.cs and SunflowerFusions.cs."
+    },
+    "Silver Garlic": {
+      "available": true,
+      "identity": "FusionPlant.SilverGarlic",
+      "evidence": "Fully ported silver base fusion; references/silver-garlic/research-inputs.json, visual-assets.json and ../silver-plants/port-notes.md; src/SilverPlants.cs and SunflowerFusions.cs."
+    },
+    "Silver Ice-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SilverIceShroom",
+      "evidence": "Fully ported silver base fusion; references/silver-ice-shroom/research-inputs.json, visual-assets.json and ../silver-plants/port-notes.md; src/SilverPlants.cs and SunflowerFusions.cs."
+    },
+    "Silver Sunflower": {
+      "available": true,
+      "identity": "FusionPlant.SilverSunflower",
+      "evidence": "Fully ported silver base fusion; references/silver-sunflower/research-inputs.json, visual-assets.json and ../silver-plants/port-notes.md; src/SilverPlants.cs and SunflowerFusions.cs."
+    },
+    "Silver Doom-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SilverDoomShroom",
+      "evidence": "references/silver-doom-shroom/port-notes.md; local 4.0.5.2 prefab, source behavior and native lifecycle; original model, projectiles and bilingual almanac."
+    },
+    "Silver Hypno-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SilverHypnoShroom",
+      "evidence": "references/silver-hypno-shroom/port-notes.md; local 4.0.5.2 prefab, source behavior and native lifecycle; original model, projectiles and bilingual almanac."
+    },
+    "Silver Cabbage": {
+      "available": true,
+      "identity": "FusionPlant.SilverCabbage",
+      "evidence": "references/silver-cabbage/port-notes.md; local 4.0.5.2 prefab, source behavior and native lifecycle; original model, projectiles and bilingual almanac."
+    },
+    "Silver Melon": {
+      "available": true,
+      "identity": "FusionPlant.SilverMelon",
+      "evidence": "references/silver-melon/port-notes.md; local 4.0.5.2 prefab, source behavior and native lifecycle; original model, projectiles and bilingual almanac."
+    },
+    "Silver Pot": {
+      "available": true,
+      "identity": "FusionPlant.SilverPot",
+      "evidence": "Imported source 4.0.5.2 variant; references/silver-pot/port-notes.md, research-inputs.json and visual-assets.json; native identity and saved behavior in src/FusionPlant.cs."
+    },
+    "Silver Umbrella": {
+      "available": true,
+      "identity": "FusionPlant.SilverUmbrella",
+      "evidence": "Imported source 4.0.5.2 variant; references/silver-umbrella/port-notes.md, research-inputs.json and visual-assets.json; native identity and saved behavior in src/FusionPlant.cs."
+    },
+    "Silver Kernel": {
+      "available": true,
+      "identity": "FusionPlant.SilverKernel",
+      "evidence": "Imported source 4.0.5.2 variant; references/silver-kernel/port-notes.md, research-inputs.json and visual-assets.json; native identity and saved behavior in src/FusionPlant.cs."
+    },
+    "Lumos Pot": {
+      "available": true,
+      "identity": "FusionPlant.LumosPot",
+      "evidence": "Imported source 4.0.5.2 variant; references/lumos-pot/port-notes.md, research-inputs.json and visual-assets.json; native identity and saved behavior in src/FusionPlant.cs."
+    },
+    "Cabbage Pot": {
+      "available": true,
+      "identity": "FusionPlant.CabbagePot",
+      "evidence": "Implemented support or native selectable result; identity, original behavior, native reuse and limits: references/cabbage-pot/port-notes.md."
+    },
+    "Butter Pot": {
+      "available": true,
+      "identity": "FusionPlant.ButterPot",
+      "evidence": "Implemented support or native selectable result; identity, original behavior, native reuse and limits: references/butter-pot/port-notes.md."
+    },
+    "Umbrella Pot": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaPot",
+      "evidence": "Implemented support or native selectable result; identity, original behavior, native reuse and limits: references/umbrella-pot/port-notes.md."
+    },
+    "Cob Cannon": {
+      "available": true,
+      "identity": "SeedType.Cobcannon",
+      "evidence": "Implemented support or native selectable result; identity, original behavior, native reuse and limits: references/native-cob-cannon/port-notes.md."
+    },
+    "Nut Pot": {
+      "available": true,
+      "identity": "FusionPlant.NutPot",
+      "evidence": "Original 4.0.5.2 model, behavior and native support port; references/nut-pot/port-notes.md; src/PotFusions.cs."
+    },
+    "Garlic Pot": {
+      "available": true,
+      "identity": "FusionPlant.GarlicPot",
+      "evidence": "Original 4.0.5.2 model, behavior and native support port; references/garlic-pot/port-notes.md; src/PotFusions.cs."
+    },
+    "Spike Pot": {
+      "available": true,
+      "identity": "FusionPlant.SpikePot",
+      "evidence": "Original 4.0.5.2 model, behavior and native support port; references/spike-pot/port-notes.md; src/PotFusions.cs."
+    },
+    "Melon Pot": {
+      "available": true,
+      "identity": "FusionPlant.MelonPot",
+      "evidence": "Original 4.0.5.2 model, behavior and native support port; references/melon-pot/port-notes.md; src/PotFusions.cs."
+    },
+    "Cherry Pot": {
+      "available": true,
+      "identity": "FusionPlant.CherryPot",
+      "evidence": "Fully ported in 2.6.0; references/cherry-pot/port-notes.md; local 4.0.5.2 source, native Flowerpot support and saved effects in src/ReactivePots.cs."
+    },
+    "Hot Pot": {
+      "available": true,
+      "identity": "FusionPlant.HotPot",
+      "evidence": "Fully ported in 2.6.0; references/hot-pot/port-notes.md; local 4.0.5.2 source, native Flowerpot support and saved effects in src/ReactivePots.cs."
+    },
+    "Hypno Pot": {
+      "available": true,
+      "identity": "FusionPlant.HypnoPot",
+      "evidence": "Fully ported in 2.6.0; references/hypno-pot/port-notes.md; local 4.0.5.2 source, native Flowerpot support and saved effects in src/ReactivePots.cs."
+    },
+    "Doom Pot": {
+      "available": true,
+      "identity": "FusionPlant.DoomPot",
+      "evidence": "Fully ported in 2.6.0; references/doom-pot/port-notes.md; local 4.0.5.2 source, native Flowerpot support and saved effects in src/ReactivePots.cs."
+    },
+    "Pea Pot": {
+      "available": true,
+      "identity": "FusionPlant.PeaPot",
+      "evidence": "Original Fusion 4.0.5.2 prefab, complete behavior and original projectile assets: references/pea-pot/port-notes.md; src/ShootingPots.cs, src/TriLobbers.cs, src/LobberImpact.cs and shared fusion lifecycle. Static checks and compilation only; runtime tests remain with the user."
+    },
+    "Tri-pot": {
+      "available": true,
+      "identity": "FusionPlant.TriPot",
+      "evidence": "Original Fusion 4.0.5.2 prefab, complete behavior and original projectile assets: references/tri-pot/port-notes.md; src/ShootingPots.cs, src/TriLobbers.cs, src/LobberImpact.cs and shared fusion lifecycle. Static checks and compilation only; runtime tests remain with the user."
+    },
+    "Kernel Tri-pult": {
+      "available": true,
+      "identity": "FusionPlant.KernelTriPult",
+      "evidence": "Original Fusion 4.0.5.2 prefab, complete behavior and original projectile assets: references/kernel-tri-pult/port-notes.md; src/ShootingPots.cs, src/TriLobbers.cs, src/LobberImpact.cs and shared fusion lifecycle. Static checks and compilation only; runtime tests remain with the user."
+    },
+    "Melon Tri-pult": {
+      "available": true,
+      "identity": "FusionPlant.MelonTriPult",
+      "evidence": "Original Fusion 4.0.5.2 prefab, complete behavior and original projectile assets: references/melon-tri-pult/port-notes.md; src/ShootingPots.cs, src/TriLobbers.cs, src/LobberImpact.cs and shared fusion lifecycle. Static checks and compilation only; runtime tests remain with the user."
+    },
+    "Taco-pult": {
+      "available": true,
+      "identity": "FusionPlant.TacoPult",
+      "evidence": "Fully implemented in src/LobberFusions.cs, src/TriLobbers.cs and src/LobberProjectiles.cs; original assets, bilingual almanac, persistent native fields and all available recipes documented in references/taco-pult/port-notes.md. Runtime checks remain with user."
+    },
+    "Cob-pult": {
+      "available": true,
+      "identity": "FusionPlant.CobPult",
+      "evidence": "Fully implemented in src/LobberFusions.cs, src/TriLobbers.cs and src/LobberProjectiles.cs; original assets, bilingual almanac, persistent native fields and all available recipes documented in references/cob-pult/port-notes.md. Runtime checks remain with user."
+    },
+    "Overripe Melon": {
+      "available": true,
+      "identity": "FusionPlant.OverripeMelon",
+      "evidence": "Fully implemented in src/LobberFusions.cs, src/TriLobbers.cs and src/LobberProjectiles.cs; original assets, bilingual almanac, persistent native fields and all available recipes documented in references/overripe-melon/port-notes.md. Runtime checks remain with user."
+    },
+    "Cabbage Tri-pult": {
+      "available": true,
+      "identity": "FusionPlant.CabbageTriPult",
+      "evidence": "Fully implemented in src/LobberFusions.cs, src/TriLobbers.cs and src/LobberProjectiles.cs; original assets, bilingual almanac, persistent native fields and all available recipes documented in references/cabbage-tri-pult/port-notes.md. Runtime checks remain with user."
+    },
+    "Coldslaw": {
+      "available": true,
+      "identity": "FusionPlant.Coldslaw",
+      "evidence": "Complete source port with original models, attack and projectile behavior, fertilizer contract and bilingual almanac; references/coldslaw/port-notes.md and references/elemental-lobbers-2-9-0/report.md."
+    },
+    "Kimchi-pult": {
+      "available": true,
+      "identity": "FusionPlant.KimchiPult",
+      "evidence": "Complete source port with original models, attack and projectile behavior, fertilizer contract and bilingual almanac; references/kimchi-pult/port-notes.md and references/elemental-lobbers-2-9-0/report.md."
+    },
+    "Cobsicle": {
+      "available": true,
+      "identity": "FusionPlant.Cobsicle",
+      "evidence": "Complete source port with original models, attack and projectile behavior, fertilizer contract and bilingual almanac; references/cobsicle/port-notes.md and references/elemental-lobbers-2-9-0/report.md."
+    },
+    "Salad-pult": {
+      "available": true,
+      "identity": "FusionPlant.SaladPult",
+      "evidence": "Complete source port with original models, attack and projectile behavior, fertilizer contract and bilingual almanac; references/salad-pult/port-notes.md and references/elemental-lobbers-2-9-0/report.md."
+    },
+    "Cabbage-nut": {
+      "available": true,
+      "identity": "FusionPlant.CabbageNut",
+      "evidence": "Fully ported 4.0.5.2 plant; src/ActiveNuts.cs, src/NutProjectiles.cs and references/cabbage-nut/port-notes.md; native saved identity and original assets."
+    },
+    "Melon-nut": {
+      "available": true,
+      "identity": "FusionPlant.MelonNut",
+      "evidence": "Fully ported 4.0.5.2 plant; src/ActiveNuts.cs, src/NutProjectiles.cs and references/melon-nut/port-notes.md; native saved identity and original assets."
+    },
+    "Three-nuts": {
+      "available": true,
+      "identity": "FusionPlant.ThreeNuts",
+      "evidence": "Fully ported 4.0.5.2 plant; src/ActiveNuts.cs, src/NutProjectiles.cs and references/three-nuts/port-notes.md; native saved identity and original assets."
+    },
+    "Squash-nut": {
+      "available": true,
+      "identity": "FusionPlant.SquashNut",
+      "evidence": "Fully ported 4.0.5.2 plant; src/ActiveNuts.cs, src/NutProjectiles.cs and references/squash-nut/port-notes.md; native saved identity and original assets."
+    },
+    "Tingle Kelp": {
+      "available": true,
+      "identity": "FusionPlant.TingleKelp",
+      "evidence": "Implemented KelpPuff (1377): src/TingleKelp.cs, KelpProjectiles.cs, KelpEffects.cs; references/tingle-kelp/port-notes.md. Native Tanglekelp terrain; saved Puffshroom marker."
+    },
+    "Grapple Kelp": {
+      "available": true,
+      "identity": "FusionPlant.GrappleKelp",
+      "evidence": "Complete KelpFume 1395 in src/GrappleKelp.cs; KelpEffects, ImportedSkinVisuals and original rig/masks; references/grapple-kelp/port-notes.md."
+    },
+    "Tangle-nut": {
+      "available": true,
+      "identity": "FusionPlant.TangleNut",
+      "evidence": "KelpNut 1313 implemented in src/TangleNut.cs with native aquatic placement, blocking and KelpEffects; original assets and references/tangle-nut/port-notes.md."
+    },
+    "Spike-kelp": {
+      "available": true,
+      "identity": "FusionPlant.SpikeKelp",
+      "evidence": "CaltropKelp_water 1237 in src/SpikeKelp.cs with original animations, contact/driver rules and complete KelpEffects; references/spike-kelp/port-notes.md."
+    },
+    "Eyes Zombie Head": {
+      "available": true,
+      "identity": "FusionPlant.EyesZombieHead",
+      "evidence": "Scared EyesZombie ordinary death drop; src/ScaredContent.cs. Loose fusion ingredient only; never planted."
+    },
+    "Blood Sunflower": {
+      "available": true,
+      "identity": "FusionPlant.BloodSunflower",
+      "evidence": "Scared BloodSunFlower; head + ordinary Sunflower, or original infection; references/scared-2-12-0/report.md."
+    },
+    "Cyclover": {
+      "available": true,
+      "identity": "FusionPlant.Cyclover",
+      "evidence": "Complete Fusion 4.0.5.2 wind port: src/BloverFusions.cs, src/PolarProjectiles.cs, original models and references/blover-fusions-2-13-0/report.md. Native Blover plus unique saved marker; no duplicate native Replanted plant."
+    },
+    "Disguster": {
+      "available": true,
+      "identity": "FusionPlant.Disguster",
+      "evidence": "Complete Fusion 4.0.5.2 wind port: src/BloverFusions.cs, src/PolarProjectiles.cs, original models and references/blover-fusions-2-13-0/report.md. Native Blover plus unique saved marker; no duplicate native Replanted plant."
+    },
+    "Breeze Blover": {
+      "available": true,
+      "identity": "FusionPlant.BreezeBlover",
+      "evidence": "Complete Fusion 4.0.5.2 wind port: src/BloverFusions.cs, src/PolarProjectiles.cs, original models and references/blover-fusions-2-13-0/report.md. Native Blover plus unique saved marker; no duplicate native Replanted plant."
+    },
+    "Mind-blover": {
+      "available": true,
+      "identity": "FusionPlant.MindBlover",
+      "evidence": "Complete Fusion 4.0.5.2 wind port: src/BloverFusions.cs, src/PolarProjectiles.cs, original models and references/blover-fusions-2-13-0/report.md. Native Blover plus unique saved marker; no duplicate native Replanted plant."
+    },
+    "Boost-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BoostShroom",
+      "evidence": "Fully ported source 4.0.5.2 abilities, saved states, original models/projectiles and DE/EN almanac; references/boost-shroom/port-notes.md; shared proof references/fume-expansion-2-14-0/report.md."
+    },
+    "Blowtorch-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BlowtorchShroom",
+      "evidence": "Fully ported source 4.0.5.2 abilities, saved states, original models/projectiles and DE/EN almanac; references/blowtorch-shroom/port-notes.md; shared proof references/fume-expansion-2-14-0/report.md."
+    },
+    "Wallop-shroom": {
+      "available": true,
+      "identity": "FusionPlant.WallopShroom",
+      "evidence": "Fully ported source 4.0.5.2 abilities, saved states, original models/projectiles and DE/EN almanac; references/wallop-shroom/port-notes.md; shared proof references/fume-expansion-2-14-0/report.md."
+    },
+    "Caltrop-shroom": {
+      "available": true,
+      "identity": "FusionPlant.CaltropShroom",
+      "evidence": "Fully ported source 4.0.5.2 abilities, saved states, original models/projectiles and DE/EN almanac; references/caltrop-shroom/port-notes.md; shared proof references/fume-expansion-2-14-0/report.md."
+    },
+    "Garbage-pult": {
+      "available": true,
+      "identity": "FusionPlant.GarbagePult",
+      "evidence": "Implemented original Fusion 4.0.5.2 behavior, projectiles and model; references/garbage-pult/port-notes.md and references/garlic-lobbers-2-15-0/report.md. Runtime validation remains with the user."
+    },
+    "Clove-pult": {
+      "available": true,
+      "identity": "FusionPlant.ClovePult",
+      "evidence": "Implemented original Fusion 4.0.5.2 behavior, projectiles and model; references/clove-pult/port-notes.md and references/garlic-lobbers-2-15-0/report.md. Runtime validation remains with the user."
+    },
+    "Garlic-pult": {
+      "available": true,
+      "identity": "FusionPlant.GarlicPult",
+      "evidence": "Implemented original Fusion 4.0.5.2 behavior, projectiles and model; references/garlic-pult/port-notes.md and references/garlic-lobbers-2-15-0/report.md. Runtime validation remains with the user."
+    },
+    "Summer Melon": {
+      "available": true,
+      "identity": "FusionPlant.SummerMelon",
+      "evidence": "Implemented original Fusion 4.0.5.2 behavior, projectiles and model; references/summer-melon/port-notes.md and references/garlic-lobbers-2-15-0/report.md. Runtime validation remains with the user."
+    },
+    "Starlic": {
+      "available": true,
+      "identity": "FusionPlant.Starlic",
+      "evidence": "Implemented original Fusion 4.0.5.2 variant; complete ability/projectile/save contract in references/starlic/port-notes.md and references/star-fusions-2-16-0/report.md."
+    },
+    "Winter Starfruit": {
+      "available": true,
+      "identity": "FusionPlant.WinterStarfruit",
+      "evidence": "Implemented original Fusion 4.0.5.2 variant; complete ability/projectile/save contract in references/winter-starfruit/port-notes.md and references/star-fusions-2-16-0/report.md."
+    },
+    "Spicy Starfruit": {
+      "available": true,
+      "identity": "FusionPlant.SpicyStarfruit",
+      "evidence": "Implemented original Fusion 4.0.5.2 variant; complete ability/projectile/save contract in references/spicy-starfruit/port-notes.md and references/star-fusions-2-16-0/report.md."
+    },
+    "Starshooter": {
+      "available": true,
+      "identity": "FusionPlant.Starshooter",
+      "evidence": "Implemented original Fusion 4.0.5.2 variant; complete ability/projectile/save contract in references/starshooter/port-notes.md and references/star-fusions-2-16-0/report.md."
+    },
+    "Frost Cattail": {
+      "available": true,
+      "identity": "FusionPlant.FrostCattail",
+      "evidence": "Fusion 4.0.5.2 1068; implemented with original model/projectiles, saved native lifecycle and fertilizer review. references/frost-cattail/port-notes.md; references/mixed-fusions-2-17-0/report.md."
+    },
+    "Flame Cattail": {
+      "available": true,
+      "identity": "FusionPlant.FlameCattail",
+      "evidence": "Fusion 4.0.5.2 1069; implemented with original model/projectiles, saved native lifecycle and fertilizer review. references/flame-cattail/port-notes.md; references/mixed-fusions-2-17-0/report.md."
+    },
+    "Hypno Melon": {
+      "available": true,
+      "identity": "FusionPlant.HypnoMelon",
+      "evidence": "Fusion 4.0.5.2 1286; implemented with original model/projectiles, saved native lifecycle and fertilizer review. references/hypno-melon/port-notes.md; references/mixed-fusions-2-17-0/report.md."
+    },
+    "Hypno Pepper": {
+      "available": true,
+      "identity": "FusionPlant.HypnoPepper",
+      "evidence": "Fusion 4.0.5.2 1336; implemented with original model/projectiles, saved native lifecycle and fertilizer review. references/hypno-pepper/port-notes.md; references/mixed-fusions-2-17-0/report.md."
+    },
+    "Minnow-shroom": {
+      "available": true,
+      "identity": "FusionPlant.MinnowShroom",
+      "evidence": "Implemented aquatic Fusion 4.0.5.2 variant in src/SeaFusions.cs and src/SeaProjectiles.cs; original assets and saved growth/attack state; references/minnow-shroom/port-notes.md and references/sea-fusions-2-18-0/report.md. No matching native Replanted SeedType."
+    },
+    "Urchin-shroom": {
+      "available": true,
+      "identity": "FusionPlant.UrchinShroom",
+      "evidence": "Implemented aquatic Fusion 4.0.5.2 variant in src/SeaFusions.cs and src/SeaProjectiles.cs; original assets and saved growth/attack state; references/urchin-shroom/port-notes.md and references/sea-fusions-2-18-0/report.md. No matching native Replanted SeedType."
+    },
+    "Shark-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SharkShroom",
+      "evidence": "Implemented aquatic Fusion 4.0.5.2 variant in src/SeaFusions.cs and src/SeaProjectiles.cs; original assets and saved growth/attack state; references/shark-shroom/port-notes.md and references/sea-fusions-2-18-0/report.md. No matching native Replanted SeedType."
+    },
+    "Sea Star": {
+      "available": true,
+      "identity": "FusionPlant.SeaStar",
+      "evidence": "Implemented aquatic Fusion 4.0.5.2 variant in src/SeaFusions.cs and src/SeaProjectiles.cs; original assets and saved growth/attack state; references/sea-star/port-notes.md and references/sea-fusions-2-18-0/report.md. No matching native Replanted SeedType."
+    },
+    "Beacon-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BeaconShroom",
+      "evidence": "Implemented aquatic variant with original artwork and complete source ability, feeding/fertilizer and saved lifecycle in src/SeaSupportFusions.cs; references/beacon-shroom/port-notes.md and references/sea-support-2-19-0/report.md."
+    },
+    "Jelly-shroom": {
+      "available": true,
+      "identity": "FusionPlant.JellyShroom",
+      "evidence": "Implemented aquatic variant with original artwork and complete source ability, feeding/fertilizer and saved lifecycle in src/SeaSupportFusions.cs; references/jelly-shroom/port-notes.md and references/sea-support-2-19-0/report.md."
+    },
+    "Swell-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SwellShroom",
+      "evidence": "Implemented aquatic variant with original artwork and complete source ability, feeding/fertilizer and saved lifecycle in src/SeaSupportFusions.cs; references/swell-shroom/port-notes.md and references/sea-support-2-19-0/report.md."
+    },
+    "Hermit-shroom": {
+      "available": true,
+      "identity": "FusionPlant.HermitShroom",
+      "evidence": "Implemented aquatic variant with original artwork and complete source ability, feeding/fertilizer and saved lifecycle in src/SeaSupportFusions.cs; references/hermit-shroom/port-notes.md and references/sea-support-2-19-0/report.md."
+    },
+    "Starry Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.StarryPumpkin",
+      "evidence": "Implemented in src/PumpkinFusions.cs; native accessory identity, original assets and full Almanac. references/starry-pumpkin/port-notes.md; references/pumpkin-fusions-2-20-0/report.md."
+    },
+    "Thorny Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.ThornyPumpkin",
+      "evidence": "Implemented in src/PumpkinFusions.cs; native accessory identity, original assets and full Almanac. references/thorny-pumpkin/port-notes.md; references/pumpkin-fusions-2-20-0/report.md."
+    },
+    "Puff-kin": {
+      "available": true,
+      "identity": "FusionPlant.PuffKin",
+      "evidence": "Implemented in src/PumpkinFusions.cs; native accessory identity, original assets and full Almanac. references/puff-kin/port-notes.md; references/pumpkin-fusions-2-20-0/report.md."
+    },
+    "Fuming Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.FumingPumpkin",
+      "evidence": "Implemented in src/PumpkinFusions.cs; native accessory identity, original assets and full Almanac. references/fuming-pumpkin/port-notes.md; references/pumpkin-fusions-2-20-0/report.md."
+    },
+    "Cherry Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.CherryPumpkin",
+      "evidence": "src/PumpkinFusions.cs; references/cherry-pumpkin/port-notes.md; native accessory lifecycle retained."
+    },
+    "Stinky Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.StinkyPumpkin",
+      "evidence": "src/PumpkinFusions.cs; references/stinky-pumpkin/port-notes.md; native accessory lifecycle retained."
+    },
+    "Scareless Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.ScarelessPumpkin",
+      "evidence": "src/PumpkinFusions.cs; references/scareless-pumpkin/port-notes.md; native accessory lifecycle retained."
+    },
+    "Nut Shell": {
+      "available": true,
+      "identity": "FusionPlant.NutShell",
+      "evidence": "src/PumpkinFusions.cs; references/nut-shell/port-notes.md; native accessory lifecycle retained."
+    },
+    "Windy Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.WindyPumpkin",
+      "evidence": "Implemented with original Fusion 4.0.5.2 artwork, behavior, fertilizer and lifecycle; references/windy-pumpkin/port-notes.md and references/pumpkin-support-2-22-0/report.md."
+    },
+    "Spiky Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.SpikyPumpkin",
+      "evidence": "Implemented with original Fusion 4.0.5.2 artwork, behavior, fertilizer and lifecycle; references/spiky-pumpkin/port-notes.md and references/pumpkin-support-2-22-0/report.md."
+    },
+    "Jack O' Plantern": {
+      "available": true,
+      "identity": "FusionPlant.JackOPlantern",
+      "evidence": "Implemented with original Fusion 4.0.5.2 artwork, behavior, fertilizer and lifecycle; references/jack-o-plantern/port-notes.md and references/pumpkin-support-2-22-0/report.md."
+    },
+    "Sea-shell": {
+      "available": true,
+      "identity": "FusionPlant.SeaShell",
+      "evidence": "Implemented with original Fusion 4.0.5.2 artwork, behavior, fertilizer and lifecycle; references/sea-shell/port-notes.md and references/pumpkin-support-2-22-0/report.md."
+    },
+    "Lettuce-pult": {
+      "available": true,
+      "identity": "FusionPlant.LettucePult",
+      "evidence": "Implemented source plant with full projectiles and fertilizer behavior; references/lettuce-pult/port-notes.md and references/squash-lobbers-2-23-0/report.md."
+    },
+    "Butternut-pult": {
+      "available": true,
+      "identity": "FusionPlant.ButternutPult",
+      "evidence": "Implemented source plant with full projectiles and fertilizer behavior; references/butternut-pult/port-notes.md and references/squash-lobbers-2-23-0/report.md."
+    },
+    "Gourd-pult": {
+      "available": true,
+      "identity": "FusionPlant.GourdPult",
+      "evidence": "Implemented source plant with full projectiles and fertilizer behavior; references/gourd-pult/port-notes.md and references/squash-lobbers-2-23-0/report.md."
+    },
+    "Spring Melon": {
+      "available": true,
+      "identity": "FusionPlant.SpringMelon",
+      "evidence": "Implemented source plant with full projectiles and fertilizer behavior; references/spring-melon/port-notes.md and references/squash-lobbers-2-23-0/report.md."
+    },
+    "Dormant-shroom": {
+      "available": true,
+      "identity": "FusionPlant.DormantShroom",
+      "evidence": "Fully ported in 2.24.0: references/dormant-shroom/port-notes.md; original models, attacks/projectiles and fertilizer reviewed."
+    },
+    "Morph-shroom": {
+      "available": true,
+      "identity": "FusionPlant.MorphShroom",
+      "evidence": "Fully ported in 2.24.0: references/morph-shroom/port-notes.md; original models, attacks/projectiles and fertilizer reviewed."
+    },
+    "Melon Morph": {
+      "available": true,
+      "identity": "FusionPlant.MelonMorph",
+      "evidence": "Fully ported in 2.24.0: references/melon-morph/port-notes.md; original models, attacks/projectiles and fertilizer reviewed."
+    },
+    "Starmorph": {
+      "available": true,
+      "identity": "FusionPlant.Starmorph",
+      "evidence": "Fully ported in 2.24.0: references/starmorph/port-notes.md; original models, attacks/projectiles and fertilizer reviewed."
+    },
+    "Saguaro-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SaguaroShroom",
+      "evidence": "Fully ported Fusion 4.0.5.2 behavior, original assets, saved states and fertilizer; references/saguaro-shroom/port-notes.md and references/cactus-fusions-2-25-0/report.md."
+    },
+    "Ice Cactus": {
+      "available": true,
+      "identity": "FusionPlant.IceCactus",
+      "evidence": "Fully ported Fusion 4.0.5.2 behavior, original assets, saved states and fertilizer; references/ice-cactus/port-notes.md and references/cactus-fusions-2-25-0/report.md."
+    },
+    "Magnet Cactus": {
+      "available": true,
+      "identity": "FusionPlant.MagnetCactus",
+      "evidence": "Fully ported Fusion 4.0.5.2 behavior, original assets, saved states and fertilizer; references/magnet-cactus/port-notes.md and references/cactus-fusions-2-25-0/report.md."
+    },
+    "Illumi-nut": {
+      "available": true,
+      "identity": "FusionPlant.IllumiNut",
+      "evidence": "Fully ported Fusion 4.0.5.2 behavior, original assets, saved states and fertilizer; references/illumi-nut/port-notes.md and references/cactus-fusions-2-25-0/report.md."
+    },
+    "Doom Garlic": {
+      "available": true,
+      "identity": "FusionPlant.DoomGarlic",
+      "evidence": "Fully implemented Fusion 4.0.5.2 port: src/DoomFusions.cs, src/EmberEffects.cs, src/PotatoSeedProjectiles.cs; references/doom-garlic/port-notes.md. Both native ingredients were available before 2.26.0."
+    },
+    "Doom-nut": {
+      "available": true,
+      "identity": "FusionPlant.DoomNut",
+      "evidence": "Fully implemented Fusion 4.0.5.2 port: src/DoomFusions.cs, src/EmberEffects.cs, src/PotatoSeedProjectiles.cs; references/doom-nut/port-notes.md. Both native ingredients were available before 2.26.0."
+    },
+    "Doomflower": {
+      "available": true,
+      "identity": "FusionPlant.Doomflower",
+      "evidence": "Fully implemented Fusion 4.0.5.2 port: src/DoomFusions.cs, src/EmberEffects.cs, src/PotatoSeedProjectiles.cs; references/doomflower/port-notes.md. Both native ingredients were available before 2.26.0."
+    },
+    "Crater-tot": {
+      "available": true,
+      "identity": "FusionPlant.CraterTot",
+      "evidence": "Fully implemented Fusion 4.0.5.2 port: src/DoomFusions.cs, src/EmberEffects.cs, src/PotatoSeedProjectiles.cs; references/crater-tot/port-notes.md. Both native ingredients were available before 2.26.0."
+    },
+    "Doom-spore": {
+      "available": true,
+      "identity": "FusionPlant.DoomSeed",
+      "evidence": "Fully implemented generated subunit of Doomflower, source DoomSeed 1249 / prefab 37375; references/doomflower/port-notes.md. Native saved identity Doomshroom/Sunflower; 30-second growth, proximity detection, full Doom blast and fertilizer timer. No source fusion recipe exists for this subunit."
+    },
+    "Pumpkin Pod": {
+      "available": true,
+      "identity": "FusionPlant.PumpkinPod",
+      "evidence": "Original 4.0.5.2 source 1318, complete imported model/clips, PumpkinSupport/MelonShell and native accessory lifecycle; references/pumpkin-pod/port-notes.md and references/pumpkin-support-2-27-0/report.md."
+    },
+    "Melon Shell": {
+      "available": true,
+      "identity": "FusionPlant.MelonShell",
+      "evidence": "Original 4.0.5.2 source 1352, complete imported model/clips, PumpkinSupport/MelonShell and native accessory lifecycle; references/melon-shell/port-notes.md and references/pumpkin-support-2-27-0/report.md."
+    },
+    "Cryo Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.CryoPumpkin",
+      "evidence": "Original 4.0.5.2 source 1436, complete imported model/clips, PumpkinSupport/MelonShell and native accessory lifecycle; references/cryo-pumpkin/port-notes.md and references/pumpkin-support-2-27-0/report.md."
+    },
+    "Pyro Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.PyroPumpkin",
+      "evidence": "Original 4.0.5.2 source 1413, complete imported model/clips, PumpkinSupport/MelonShell and native accessory lifecycle; references/pyro-pumpkin/port-notes.md and references/pumpkin-support-2-27-0/report.md."
+    },
+    "Kernel Morph": {
+      "available": true,
+      "identity": "FusionPlant.KernelMorph",
+      "evidence": "Fully ported in 2.28.0: references/kernel-morph/port-notes.md; original model, all attacks/projectiles and fertilizer reviewed; shared sources in references/shooter-fusions-2-28-0/report.md."
+    },
+    "Rust-shroom": {
+      "available": true,
+      "identity": "FusionPlant.RustShroom",
+      "evidence": "Fully ported in 2.28.0: references/rust-shroom/port-notes.md; original model, all attacks/projectiles and fertilizer reviewed; shared sources in references/shooter-fusions-2-28-0/report.md."
+    },
+    "Metal-pult": {
+      "available": true,
+      "identity": "FusionPlant.MetalPult",
+      "evidence": "Fully ported in 2.28.0: references/metal-pult/port-notes.md; original model, all attacks/projectiles and fertilizer reviewed; shared sources in references/shooter-fusions-2-28-0/report.md."
+    },
+    "Iron Star": {
+      "available": true,
+      "identity": "FusionPlant.IronStar",
+      "evidence": "Fully ported in 2.28.0: references/iron-star/port-notes.md; original model, all attacks/projectiles and fertilizer reviewed; shared sources in references/shooter-fusions-2-28-0/report.md."
+    },
+    "Doom Pea": {
+      "available": true,
+      "identity": "FusionPlant.DoomPea",
+      "evidence": "Complete source port in src/DoomShooters.cs and src/DoomProjectiles.cs; original model and animations in assets/doom-pea/; references/doom-pea/port-notes.md. Native ingredients and available alternate recipes reviewed for 2.29.0."
+    },
+    "Gatling Doom": {
+      "available": true,
+      "identity": "FusionPlant.GatlingDoom",
+      "evidence": "Complete source port in src/DoomShooters.cs and src/DoomProjectiles.cs; original model and animations in assets/gatling-doom/; references/gatling-doom/port-notes.md. Native ingredients and available alternate recipes reviewed for 2.29.0."
+    },
+    "Doom-spreader": {
+      "available": true,
+      "identity": "FusionPlant.DoomSpreader",
+      "evidence": "Complete source port in src/DoomShooters.cs and src/DoomProjectiles.cs; original model and animations in assets/doom-spreader/; references/doom-spreader/port-notes.md. Native ingredients and available alternate recipes reviewed for 2.29.0."
+    },
+    "Death Star": {
+      "available": true,
+      "identity": "FusionPlant.DeathStar",
+      "evidence": "Complete source port in src/DoomShooters.cs and src/DoomProjectiles.cs; original model and animations in assets/death-star/; references/death-star/port-notes.md. Native ingredients and available alternate recipes reviewed for 2.29.0."
+    },
+    "Umbrella Clove": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaClove",
+      "evidence": "Fully implemented original Fusion 4.0.5.2 plant, abilities, projectiles, original model and almanac; references/umbrella-clove/port-notes.md; native ingredients only."
+    },
+    "Umbrella Thorn": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaThorn",
+      "evidence": "Fully implemented original Fusion 4.0.5.2 plant, abilities, projectiles, original model and almanac; references/umbrella-thorn/port-notes.md; native ingredients only."
+    },
+    "Damage-pult": {
+      "available": true,
+      "identity": "FusionPlant.DamagePult",
+      "evidence": "Fully implemented original Fusion 4.0.5.2 plant, abilities, projectiles, original model and almanac; references/damage-pult/port-notes.md; native ingredients only."
+    },
+    "Starburst-shroom": {
+      "available": true,
+      "identity": "FusionPlant.StarburstShroom",
+      "evidence": "Fully implemented original Fusion 4.0.5.2 plant, abilities, projectiles, original model and almanac; references/starburst-shroom/port-notes.md; native ingredients only."
+    },
+    "Ray-shroom": {
+      "available": true,
+      "identity": "FusionPlant.RayShroom",
+      "evidence": "Complete source port in src/FumeSupport.cs, src/FumeFusions.cs and references/ray-shroom/port-notes.md; original model and all clips, saved ability state, projectiles, fertilizer and bilingual almanac."
+    },
+    "Blubber-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BlubberShroom",
+      "evidence": "Complete source port in src/FumeSupport.cs, src/FumeFusions.cs and references/blubber-shroom/port-notes.md; original model and all clips, saved ability state, projectiles, fertilizer and bilingual almanac."
+    },
+    "Sunrise-shroom": {
+      "available": true,
+      "identity": "FusionPlant.SunriseShroom",
+      "evidence": "Complete source port in src/FumeSupport.cs, src/FumeFusions.cs and references/sunrise-shroom/port-notes.md; original model and all clips, saved ability state, projectiles, fertilizer and bilingual almanac."
+    },
+    "Bush-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BushShroom",
+      "evidence": "Complete source port in src/FumeSupport.cs, src/FumeFusions.cs and references/bush-shroom/port-notes.md; original model and all clips, saved ability state, projectiles, fertilizer and bilingual almanac."
+    },
+    "Beamshooter": {
+      "available": true,
+      "identity": "FusionPlant.Beamshooter",
+      "evidence": "Complete Fusion 4.0.5.2 port with native saved energy, target handles, relay transfer, procedural lasers and original plant clips; references/beamshooter/port-notes.md and references/beam-fusions-2-32-0/report.md. Native ingredients available; no native Replanted result identity."
+    },
+    "Rebeamer": {
+      "available": true,
+      "identity": "FusionPlant.Rebeamer",
+      "evidence": "Complete Fusion 4.0.5.2 port with native saved energy, target handles, relay transfer, procedural lasers and original plant clips; references/rebeamer/port-notes.md and references/beam-fusions-2-32-0/report.md. Native ingredients available; no native Replanted result identity."
+    },
+    "Split Beam": {
+      "available": true,
+      "identity": "FusionPlant.SplitBeam",
+      "evidence": "Complete Fusion 4.0.5.2 port with native saved energy, target handles, relay transfer, procedural lasers and original plant clips; references/split-beam/port-notes.md and references/beam-fusions-2-32-0/report.md. Native ingredients available; no native Replanted result identity."
+    },
+    "Gatling Beam": {
+      "available": true,
+      "identity": "FusionPlant.GatlingBeam",
+      "evidence": "Complete Fusion 4.0.5.2 port with native saved energy, target handles, relay transfer, procedural lasers and original plant clips; references/gatling-beam/port-notes.md and references/beam-fusions-2-32-0/report.md. Native ingredients available; no native Replanted result identity."
+    },
+    "Starthorn": {
+      "available": true,
+      "identity": "FusionPlant.Starthorn",
+      "evidence": "Fully implemented behavior, original artwork, projectiles and bilingual almanac; references/starthorn/port-notes.md and references/cactus-fusions-2-33-0/report.md. Runtime tests remain with the user."
+    },
+    "Doom Cactus": {
+      "available": true,
+      "identity": "FusionPlant.DoomCactus",
+      "evidence": "Fully implemented behavior, original artwork, projectiles and bilingual almanac; references/doom-cactus/port-notes.md and references/cactus-fusions-2-33-0/report.md. Runtime tests remain with the user."
+    },
+    "Lumos Cactus": {
+      "available": true,
+      "identity": "FusionPlant.LumosCactus",
+      "evidence": "Fully implemented behavior, original artwork, projectiles and bilingual almanac; references/lumos-cactus/port-notes.md and references/cactus-fusions-2-33-0/report.md. Runtime tests remain with the user."
+    },
+    "Thornweed": {
+      "available": true,
+      "identity": "FusionPlant.Thornweed",
+      "evidence": "Fully ported contact and three-spike attack, original artwork, projectiles, fertilizer and bilingual almanac; references/thornweed/port-notes.md and references/cactus-fusions-2-33-0/report.md. Runtime tests remain with the user."
+    },
+    "Butterweed": {
+      "available": true,
+      "identity": "FusionPlant.Butterweed",
+      "evidence": "Complete Fusion 4.0.5.2 port; original prefab, animation and source evidence in references/butterweed/; shared native lifecycle and state contract in references/ground-fusions-2-34-0/report.md. Offline cases in tests/WeedFusionsTests.cs; runtime verification remains with user."
+    },
+    "Springweed": {
+      "available": true,
+      "identity": "FusionPlant.Springweed",
+      "evidence": "Complete Fusion 4.0.5.2 port; original prefab, animation and source evidence in references/springweed/; shared native lifecycle and state contract in references/ground-fusions-2-34-0/report.md. Offline cases in tests/WeedFusionsTests.cs; runtime verification remains with user."
+    },
+    "Splash": {
+      "available": true,
+      "identity": "FusionPlant.Splash",
+      "evidence": "Complete Fusion 4.0.5.2 port; original prefab, animation and source evidence in references/splash/; shared native lifecycle and state contract in references/ground-fusions-2-34-0/report.md. Offline cases in tests/WeedFusionsTests.cs; runtime verification remains with user."
+    },
+    "Sea-nut": {
+      "available": true,
+      "identity": "FusionPlant.SeaNut",
+      "evidence": "Complete Fusion 4.0.5.2 port; original prefab, animation and source evidence in references/sea-nut/; shared native lifecycle and state contract in references/ground-fusions-2-34-0/report.md. Offline cases in tests/WeedFusionsTests.cs; runtime verification remains with user."
+    },
+    "Strangle Kelp": {
+      "available": true,
+      "identity": "FusionPlant.StrangleKelp",
+      "evidence": "Complete Fusion 4.0.5.2 port with original models, projectiles, fertilizer and bilingual almanac; references/strangle-kelp/port-notes.md and references/kelp-squash-2-35-0/report.md. Runtime tests remain with the user."
+    },
+    "Kelp-spreader": {
+      "available": true,
+      "identity": "FusionPlant.KelpSpreader",
+      "evidence": "Complete Fusion 4.0.5.2 port with original models, projectiles, fertilizer and bilingual almanac; references/kelp-spreader/port-notes.md and references/kelp-squash-2-35-0/report.md. Runtime tests remain with the user."
+    },
+    "Squash-spreader": {
+      "available": true,
+      "identity": "FusionPlant.SquashSpreader",
+      "evidence": "Complete Fusion 4.0.5.2 port with original models, projectiles, fertilizer and bilingual almanac; references/squash-spreader/port-notes.md and references/kelp-squash-2-35-0/report.md. Runtime tests remain with the user."
+    },
+    "Squashweed": {
+      "available": true,
+      "identity": "FusionPlant.Squashweed",
+      "evidence": "Complete Fusion 4.0.5.2 port with original models, projectiles, fertilizer and bilingual almanac; references/squashweed/port-notes.md and references/kelp-squash-2-35-0/report.md. Runtime tests remain with the user."
+    },
+    "Golden-nut": {
+      "available": true,
+      "identity": "FusionPlant.GoldenNut",
+      "evidence": [
+        "references/golden-bean-10-0-0/report.md",
+        "src/GoldenPlants.cs",
+        "src/GoldenBean.cs"
+      ]
+    },
+    "Golden Sunflower": {
+      "available": true,
+      "identity": "FusionPlant.GoldenSunflower",
+      "evidence": [
+        "references/golden-bean-10-0-0/report.md",
+        "src/GoldenPlants.cs",
+        "src/GoldenBean.cs"
+      ]
+    },
+    "Tangle Mine": {
+      "available": true,
+      "identity": "FusionPlant.TangleMine",
+      "evidence": "Implemented original 4.0.5.2 variant; src/UtilityMines.cs, src/MineFusions.cs and src/SquashFusions.cs; references/tangle-mine/port-notes.md and references/mines-11-0-0/report.md."
+    },
+    "Kelp Mine": {
+      "available": true,
+      "identity": "FusionPlant.KelpMine",
+      "evidence": "Implemented original 4.0.5.2 variant; src/UtilityMines.cs, src/MineFusions.cs and src/SquashFusions.cs; references/kelp-mine/port-notes.md and references/mines-11-0-0/report.md."
+    },
+    "Sea-mine": {
+      "available": true,
+      "identity": "FusionPlant.SeaMine",
+      "evidence": "Implemented original 4.0.5.2 variant; src/UtilityMines.cs, src/MineFusions.cs and src/SquashFusions.cs; references/sea-mine/port-notes.md and references/mines-11-0-0/report.md."
+    },
+    "Potato Masher": {
+      "available": true,
+      "identity": "FusionPlant.PotatoMasher",
+      "evidence": "Implemented original 4.0.5.2 variant; src/UtilityMines.cs, src/MineFusions.cs and src/SquashFusions.cs; references/potato-masher/port-notes.md and references/mines-11-0-0/report.md."
+    },
+    "Potato Mash": {
+      "available": true,
+      "identity": "FusionPlant.PotatoMash",
+      "evidence": "Implemented original 4.0.5.2 variant; src/UtilityMines.cs, src/MineFusions.cs and src/SquashFusions.cs; references/potato-mash/port-notes.md and references/mines-11-0-0/report.md."
+    },
+    "Perfume-shroom": {
+      "available": true,
+      "identity": "FusionPlant.PerfumeShroom",
+      "evidence": "Fully ported Fusion 4.0.5.2 plant; references/perfume-shroom/port-notes.md. Native lifecycle, original assets, complete effects and fertilizer reviewed."
+    },
+    "Tangle Weed": {
+      "available": true,
+      "identity": "FusionPlant.TangleWeed",
+      "evidence": "Fully ported Fusion 4.0.5.2 plant; references/tangle-weed/port-notes.md. Native lifecycle, original assets, complete effects and fertilizer reviewed."
+    },
+    "Glowver": {
+      "available": true,
+      "identity": "FusionPlant.Glowver",
+      "evidence": "Complete source behavior, original models and almanac; references/glowver/port-notes.md; references/debug-fusions-13-0-0/report.md."
+    },
+    "Frenzy-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FrenzyShroom",
+      "evidence": "Complete source behavior, original models and almanac; references/frenzy-shroom/port-notes.md; references/debug-fusions-13-0-0/report.md."
+    },
+    "Phoenix Threepeater": {
+      "available": true,
+      "identity": "FusionPlant.PhoenixThreepeater",
+      "evidence": "Complete source port documented in references/phoenix-threepeater/port-notes.md; native saved identity, abilities, source projectiles, original model, and fertilizer contract. Runtime verification remains with user."
+    },
+    "Solar-pult": {
+      "available": true,
+      "identity": "FusionPlant.SolarPult",
+      "evidence": "Complete source port documented in references/solar-pult/port-notes.md; native saved identity, abilities, source projectiles, original model, and fertilizer contract. Runtime verification remains with user."
+    },
+    "Triplantern": {
+      "available": true,
+      "identity": "FusionPlant.Triplantern",
+      "evidence": "Full port: src/PlanternFusions.cs; references/triplantern/port-notes.md; original model, recipes, abilities, fertilizer and DE/EN almanac."
+    },
+    "Aurora Plantern": {
+      "available": true,
+      "identity": "FusionPlant.AuroraPlantern",
+      "evidence": "Full port: src/PlanternFusions.cs; references/aurora-plantern/port-notes.md; original model, recipes, abilities, fertilizer and DE/EN almanac."
+    },
+    "Blover Pot": {
+      "available": true,
+      "identity": "FusionPlant.BloverPot",
+      "evidence": "src/OffensivePots.cs; references/blover-pot/port-notes.md; references/support-pots-pool-18-0-0/report.md"
+    },
+    "Scaredy Pot": {
+      "available": true,
+      "identity": "FusionPlant.ScaredyPot",
+      "evidence": "src/OffensivePots.cs; references/scaredy-pot/port-notes.md; references/support-pots-pool-18-0-0/report.md"
+    },
+    "Multipeater": {
+      "available": true,
+      "identity": "FusionPlant.Multipeater",
+      "evidence": "Full port: references/multipeater/port-notes.md; references/multipeater-sea-pot-18-1-0/report.md. Native saved identity, original model, abilities, fertilizer and DE/EN almanac. Runtime verification remains with the user."
+    },
+    "Sea Pot": {
+      "available": true,
+      "identity": "FusionPlant.SeaPot",
+      "evidence": "Full port: references/sea-pot/port-notes.md; references/multipeater-sea-pot-18-1-0/report.md. Native saved identity, original model, abilities, fertilizer and DE/EN almanac. Runtime verification remains with the user."
+    },
+    "Cabbage Dropper": {
+      "available": true,
+      "identity": "FusionPlant.CabbageDropper",
+      "evidence": "AirLobbers.cs implements original 4.0.5.2 flight, three ballistic drops, targeting, damage, butter and fertilizer; original models and animations exported. See references/air-lobbers-20-0-0.md."
+    },
+    "Butter Fly": {
+      "available": true,
+      "identity": "FusionPlant.ButterFly",
+      "evidence": "AirLobbers.cs implements original 4.0.5.2 flight, three ballistic drops, targeting, damage, butter and fertilizer; original models and animations exported. See references/air-lobbers-20-0-0.md."
+    },
+    "Cherry Pop": {
+      "available": true,
+      "identity": "FusionPlant.CherryPop",
+      "evidence": "Implemented source 4.0.5.2 variant; src/PuffContactFusions.cs; references/cherry-pop/port-notes.md. Native Puff-shroom lifecycle, saved identity and original visuals."
+    },
+    "Ball Cactus": {
+      "available": true,
+      "identity": "FusionPlant.BallCactus",
+      "evidence": "Implemented source 4.0.5.2 variant; src/PuffContactFusions.cs; references/ball-cactus/port-notes.md. Native Puff-shroom lifecycle, saved identity and original visuals."
+    },
+    "Belch-shroom": {
+      "available": true,
+      "identity": "FusionPlant.BelchShroom",
+      "evidence": "Full 4.0.5.2 port: src/EatingShrooms.cs, src/TriggerShroom.cs and src/Spicicle.cs; references/fume-guard-21-2-0/port-notes.md. Original assets, saved ability/projectile state, fertilizer and DE/EN almanac."
+    },
+    "Hungry-shroom": {
+      "available": true,
+      "identity": "FusionPlant.HungryShroom",
+      "evidence": "Full 4.0.5.2 port: src/EatingShrooms.cs, src/TriggerShroom.cs and src/Spicicle.cs; references/fume-guard-21-2-0/port-notes.md. Original assets, saved ability/projectile state, fertilizer and DE/EN almanac."
+    },
+    "Trigger-shroom": {
+      "available": true,
+      "identity": "FusionPlant.TriggerShroom",
+      "evidence": "Full 4.0.5.2 port: src/EatingShrooms.cs, src/TriggerShroom.cs and src/Spicicle.cs; references/fume-guard-21-2-0/port-notes.md. Original assets, saved ability/projectile state, fertilizer and DE/EN almanac."
+    },
+    "Spicicle": {
+      "available": true,
+      "identity": "FusionPlant.Spicicle",
+      "evidence": "Full 4.0.5.2 port: src/EatingShrooms.cs, src/TriggerShroom.cs and src/Spicicle.cs; references/fume-guard-21-2-0/port-notes.md. Original assets, saved ability/projectile state, fertilizer and DE/EN almanac."
+    },
+    "Chompkin": {
+      "available": true,
+      "identity": "FusionPlant.Chompkin",
+      "evidence": "Complete 4.0.5.2 port: src/PumpkinSupport.cs, src/PlantShields.cs, src/GlacierShroom.cs; original models, animations and executable evidence in references/chompkin/; shared port notes and API proof in references/pumpkin-glacier-21-3-0/."
+    },
+    "Pumpkin Mine": {
+      "available": true,
+      "identity": "FusionPlant.PumpkinMine",
+      "evidence": "Complete 4.0.5.2 port: src/PumpkinSupport.cs, src/PlantShields.cs, src/GlacierShroom.cs; original models, animations and executable evidence in references/pumpkin-mine/; shared port notes and API proof in references/pumpkin-glacier-21-3-0/."
+    },
+    "Sunny Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.SunnyPumpkin",
+      "evidence": "Complete 4.0.5.2 port: src/PumpkinSupport.cs, src/PlantShields.cs, src/GlacierShroom.cs; original models, animations and executable evidence in references/sunny-pumpkin/; shared port notes and API proof in references/pumpkin-glacier-21-3-0/."
+    },
+    "Glacier-shroom": {
+      "available": true,
+      "identity": "FusionPlant.GlacierShroom",
+      "evidence": "Complete 4.0.5.2 port: src/PumpkinSupport.cs, src/PlantShields.cs, src/GlacierShroom.cs; original models, animations and executable evidence in references/glacier-shroom/; shared port notes and API proof in references/pumpkin-glacier-21-3-0/."
+    },
+    "Threetato Mine": {
+      "available": true,
+      "identity": "FusionPlant.ThreetatoMine",
+      "evidence": "Original 4.0.5.2 source, model, abilities, projectiles and fertilizer: references/treasure-three-mines-21-4-0/port-notes.md."
+    },
+    "Marigold Mine": {
+      "available": true,
+      "identity": "FusionPlant.MarigoldMine",
+      "evidence": "Original 4.0.5.2 source, model, abilities, projectiles and fertilizer: references/treasure-three-mines-21-4-0/port-notes.md."
+    },
+    "Umbrella Kale": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaKale",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Umbrella Rind": {
+      "available": true,
+      "identity": "FusionPlant.UmbrellaRind",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Lumos Umbrella": {
+      "available": true,
+      "identity": "FusionPlant.LumosUmbrella",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Ice Pot": {
+      "available": true,
+      "identity": "FusionPlant.IcePot",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Roasted Squash": {
+      "available": true,
+      "identity": "FusionPlant.RoastedSquash",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Roasted Wall-nut": {
+      "available": true,
+      "identity": "FusionPlant.RoastedWallNut",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Roasted Pumpkin": {
+      "available": true,
+      "identity": "FusionPlant.RoastedPumpkin",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Roasted Potato": {
+      "available": true,
+      "identity": "FusionPlant.RoastedPotato",
+      "evidence": "Ported from pinned Fusion 4.0.5.2; native lifecycle, original models and behavior in src/UmbrellaVariants.cs, src/UmbrellaKale.cs and src/IcePot.cs; references/umbrella-ice-21-5-0/notes.md."
+    },
+    "Tide-shroom": {
+      "available": true,
+      "identity": "FusionPlant.TideShroom",
+      "evidence": "Original 4.0.5.2 evidence in references/tide-shroom; SupportTorchFusions.cs and original imported assets implement the complete available behavior."
+    },
+    "Blacklight Plantern": {
+      "available": true,
+      "identity": "FusionPlant.BlacklightPlantern",
+      "evidence": "Original 4.0.5.2 evidence in references/blacklight-plantern; SupportTorchFusions.cs and original imported assets implement the complete available behavior."
+    },
+    "Scorchwood": {
+      "available": true,
+      "identity": "FusionPlant.Scorchwood",
+      "evidence": "Original 4.0.5.2 evidence in references/scorchwood; SupportTorchFusions.cs and original imported assets implement the complete available behavior."
+    },
+    "Stenchwood": {
+      "available": true,
+      "identity": "FusionPlant.Stenchwood",
+      "evidence": "Original 4.0.5.2 evidence in references/stenchwood; SupportTorchFusions.cs and original imported assets implement the complete available behavior."
+    },
+    "Nutwood": {
+      "available": true,
+      "identity": "FusionPlant.Nutwood",
+      "evidence": "Original 4.0.5.2 port: src/TorchFusions.cs; references/nutwood/; original model and saved ignition counters."
+    },
+    "Torchthree": {
+      "available": true,
+      "identity": "FusionPlant.Torchthree",
+      "evidence": "Original 4.0.5.2 port: src/TorchFusions.cs; references/torchthree/; original model and saved ignition counters."
+    },
+    "Sparkwood": {
+      "available": true,
+      "identity": "FusionPlant.Sparkwood",
+      "evidence": "Original 4.0.5.2 port: src/TorchFusions.cs; references/sparkwood/; original model and saved ignition counters."
+    },
+    "Hypnowood": {
+      "available": true,
+      "identity": "FusionPlant.Hypnowood",
+      "evidence": "Original 4.0.5.2 port: src/TorchFusions.cs; references/hypnowood/; original model and saved ignition counters."
+    },
+    "Hot Potato": {
+      "available": true,
+      "identity": "FusionPlant.HotPotato",
+      "evidence": "references/hot-potato/port.md"
+    },
+    "Boomwood": {
+      "available": true,
+      "identity": "FusionPlant.Boomwood",
+      "evidence": "references/boomwood/port.md"
+    },
+    "Squashwood": {
+      "available": true,
+      "identity": "FusionPlant.Squashwood",
+      "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
+    },
+    "Torchweed": {
+      "available": true,
+      "identity": "FusionPlant.Torchweed",
+      "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
+    },
+    "Roasted Spikeweed": {
+      "available": true,
+      "identity": "FusionPlant.RoastedSpikeweed",
+      "evidence": "Original Fusion 4.0.5.2 contract and exported models: references/torch-summons-22-3-0/port-notes.md; saved native identity and src/TorchFusions.cs / src/TorchweedFusions.cs. Runtime verification recorded separately."
+    },
+    "Hypno Chomper": {
+      "available": true,
+      "identity": "FusionPlant.HypnoChomper",
+      "evidence": "Original 4.0.5.2 behavior, native saved lifecycle and imported model/projectiles: references/hypno-chomper/port-notes.md. Runtime validation: references/hypno-bolt-22-4-0/validation.md."
+    },
+    "Bolt-pult": {
+      "available": true,
+      "identity": "FusionPlant.BoltPult",
+      "evidence": "Original 4.0.5.2 behavior, native saved lifecycle and imported model/projectiles: references/bolt-pult/port-notes.md. Runtime validation: references/hypno-bolt-22-4-0/validation.md."
+    },
+    "Football-shroom": {
+      "available": true,
+      "identity": "FusionPlant.FootballShroom",
+      "evidence": "Implemented source 4.0.5.2 port in FumeFusions/FootballFumeDamage; original model and animations imported; references/football-shroom/port-notes.md. Offline and runtime verification status is recorded in the port notes."
+    },
+    "Doomplate-shroom": {
+      "available": true,
+      "identity": "FusionPlant.DoomplateShroom",
+      "evidence": "Implemented source 4.0.5.2 port in DoomplateShroom/DoomEffects; original model and animations imported; references/doomplate-contract-20261107/port-notes.md. Offline and runtime verification status is recorded in the port notes."
+    },
+    "Nibble-shroom": {
+      "available": true,
+      "identity": "FusionPlant.NibbleShroom",
+      "evidence": "Implemented source 4.0.5.2 leaf and original imported model. Source contract and verification limits: references/nibble-shroom-contract-20261108/port-notes.md. Runtime validation remains recorded separately."
+    },
+    "Squish": {
+      "available": true,
+      "identity": "FusionPlant.Squish",
+      "evidence": "Implemented source 4.0.5.2 leaf and original imported model. Source contract and verification limits: references/squish-contract-20261108/port-notes.md. Runtime validation remains recorded separately."
+    },
+    "Gulper-shroom": {
+      "available": true,
+      "identity": "FusionPlant.GulperShroom",
+      "evidence": "Implemented original SeaChomper1456: native Chomper with saved digestion/growth/final giant swallowing, aquatic terrain, original model and bilingual Almanac. Source and port contract: references/gulper-shroom/port-notes.md; live acceptance remains tracked separately."
+    },
+    "Weed-spreader": {
+      "available": true,
+      "identity": "FusionPlant.WeedSpreader",
+      "evidence": "Implemented original ThreeSpike1064: existing Threepeater emitter and RollingProjectiles piercing owner, original saw, saved hit history and bilingual Almanac. Source and port contract: references/weed-spreader/port-notes.md; live acceptance remains tracked separately."
+    }
+  }
+}

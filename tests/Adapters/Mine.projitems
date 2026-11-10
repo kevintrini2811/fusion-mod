@@ -1,0 +1,15 @@
+<Project>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)SourceUnit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TorchConverters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlantLibraryImpact.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/ThreetatoMine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../MineFusionsStubs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/MineFusions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/UtilityMines.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/IceMineBlasts.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/PotatoProjectiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)../../src/FusionRecipes.cs" />
+  </ItemGroup>
+  <Import Project="PotBoosts.projitems" />
+</Project>

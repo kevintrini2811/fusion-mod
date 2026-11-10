@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DefensivePotsTests.cs" />
+    <Compile Include="OffensivePotsCases.cs" />
+    <Compile Include="../src/OffensivePots.cs" />
+    <Compile Include="../src/PlantValue.cs" />
+    <Compile Include="../src/FusionRecipes.cs" />
+    <Compile Include="Adapters/PumpkinFertilizer.cs" />
+    <Compile Include="DefensivePotsStubs.cs" />
+    <Compile Include="../src/PotDefense.cs" />
+    <Compile Include="../src/ReactivePots.cs" />
+    <Compile Include="../src/PotBoosts.cs" />
+    <Compile Include="../src/MelonPot.cs" />
+    <Compile Include="../src/SpikePot.cs" />
+  </ItemGroup>
+  <Import Project="Adapters/FusionIdentity.projitems" />
+</Project>

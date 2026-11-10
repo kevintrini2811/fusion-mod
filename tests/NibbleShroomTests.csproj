@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><EnableDefaultCompileItems>false</EnableDefaultCompileItems><NoWarn>0649</NoWarn><OutputPath>bin/nibble-shroom/</OutputPath></PropertyGroup><ItemGroup>
+<Compile Include="NibbleShroomTests.cs"/><Compile Include="NibbleShroomStubs.cs"/>
+<Compile Include="Adapters/SeedType.cs"/><Compile Include="../src/FusionPlant.cs"/>
+<Compile Include="../src/FusionTime.cs"/><Compile Include="../src/FusionNativeTimeRecords.cs"/>
+<Compile Include="../src/NibbleShroom.cs"/><Compile Include="../src/PuffJumperPatches.cs"/><Compile Include="../src/PuffJumperDamage.cs"/>
+<Compile Include="../src/PlantQueryHide.cs"/></ItemGroup></Project>

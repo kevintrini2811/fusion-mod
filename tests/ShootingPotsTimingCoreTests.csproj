@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ShootingPotsTimingCoreTests.cs" />
+    <Compile Include="ShootingPotsTimingCoreStubs.cs" />
+    <Compile Include="ShootingPotsStubs.cs" />
+    <Compile Include="Adapters/PlantLibraryIdentity.cs" />
+    <Compile Include="Adapters/SeedType.cs" />
+    <Compile Include="Adapters/ArmorTypes.cs" />
+    <Compile Include="../src/FusionPlant.cs" />
+    <Compile Include="../src/FusionTime.cs" /><Compile Include="../src/FusionNativeTimeRecords.cs" />
+    <Compile Include="../src/ShootingPots.cs" />
+    <Compile Include="../src/PotBoosts.cs" />
+  <Compile Include="NativeClockRecordBoundaryStubs.cs" /></ItemGroup>
+</Project>

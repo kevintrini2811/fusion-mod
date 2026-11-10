@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <FootballDamageSource Condition="'$(FootballDamageSource)' == ''">$(MSBuildThisFileDirectory)../src/FootballFumeDamage.cs</FootballDamageSource>
+    <OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="FootballArmorIntegrationTests.cs" />
+    <Compile Include="FootballArmorIntegrationAdapters.cs" />
+    <Compile Include="$(FootballDamageSource)" />
+    <Compile Include="../../zombie-library/tests/Stubs.cs" />
+    <Compile Include="../../zombie-library/src/Zombies.cs" />
+    <Compile Include="../../zombie-library/src/NativeArmorTypes.cs" />
+    <Compile Include="../../zombie-library/src/NativeArmoredZombies.cs" />
+    <Compile Include="../../zombie-library/src/NativeArmorMagnet.cs" />
+    <Compile Include="../../zombie-library/src/NativeArmorShieldDamageScope.cs" />
+    <Compile Include="../../zombie-library/src/NativeBobsledDamageScope.cs" />
+  </ItemGroup>
+</Project>

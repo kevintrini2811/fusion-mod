@@ -1,0 +1,1 @@
+{"Nodes":[{"Name":"Body","Path":"","Parent":-1,"Active":true,"Position":[0,0,0],"Rotation":[0,0,0,1],"Scale":[1,1,1],"Sprite":4582,"Order":0,"FlipX":false,"FlipY":false,"Color":[1,1,1,1]}],"Sprites":{"4582":{"File":"sprite-4582.png","Pivot":[0.5,0.5],"PixelsPerUnit":100.0}},"Clips":{"idle":{"Duration":1,"Bindings":[]}},"IdleSpeed":1,"ShootAdditive":false,"GroundNode":0}

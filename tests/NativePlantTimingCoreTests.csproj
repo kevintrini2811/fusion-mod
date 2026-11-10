@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../src/SeaPot.cs" />
+    <Compile Include="NativePlantTimingCoreTests.cs" /><Compile Include="KelpFusionsStubs.cs" />
+    <Compile Include="../src/TingleKelp.cs" /><Compile Include="../src/KelpEffects.cs" />
+    <Compile Include="../src/KelpProjectiles.cs" />
+    <Compile Include="../src/KelpSpreadFusions.cs" />
+    <Compile Include="../src/MiniSquashProjectiles.cs" />
+    <Compile Include="../src/GrappleKelp.cs" />
+    <Compile Include="../src/TangleNut.cs" />
+    <Compile Include="../../zombie-library/src/SquashZombiePool.cs" />
+    <Compile Include="../../zombie-library/src/PoolZombieRendering.cs" />
+    <Compile Include="Adapters/PoolZombies.cs" />
+    <Compile Include="../src/SpikeKelp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NativePlantTimingCoreStubs.cs" />
+    <Compile Include="../src/FusionTime.cs" /><Compile Include="../src/FusionNativeTimeRecords.cs" />
+    <Compile Include="../src/NativePlantClocks.cs" />
+    <Compile Include="../src/NativeSunShroom.cs" />
+    <Compile Include="../src/CustomShooterClocks.cs" />
+    <Compile Include="../src/FusionPlant.cs" />
+    <Compile Include="Adapters/PlantLibraryIdentity.cs" />
+    <Compile Include="Adapters/SeedType.cs" />
+  </ItemGroup>
+</Project>
