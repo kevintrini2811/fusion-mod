@@ -538,14 +538,15 @@ internal static class FusionSaveCoordinator
         if (service != null) Refuse(service, error); else FusionMod.Instance.LoggerInstance.Error(error.ToString());
     }
     internal static void FailTransition(Il2CppTekly.TreeState.TreeStateManager manager,
-        Il2CppSystem.Collections.Generic.List<Il2CppTekly.TreeState.TreeState> states, Exception error)
+        Il2CppSystem.Collections.Generic.List<Il2CppTekly.TreeState.TreeState>? states, Exception error)
     {
-        for (int i = 0; i < states.Count; ++i)
-            for (int j = 0; j < states[i].m_activities.Count; ++j)
-            {
-                var activity = states[i].m_activities[j].TryCast<Il2CppReloaded.TreeStateActivities.GameplayActivity>();
-                if (activity != null) { FailActivity(activity, error); return; }
-            }
+        if (states != null)
+            for (int i = 0; i < states.Count; ++i)
+                for (int j = 0; j < states[i].m_activities.Count; ++j)
+                {
+                    var activity = states[i].m_activities[j].TryCast<Il2CppReloaded.TreeStateActivities.GameplayActivity>();
+                    if (activity != null) { FailActivity(activity, error); return; }
+                }
         if (ActiveOwner() is { } owner) Hold(owner, error); else FusionMod.Instance.LoggerInstance.Error(error.ToString());
     }
 }

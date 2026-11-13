@@ -6,7 +6,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>23.3.3</Version>
+    <Version>23.3.4</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>

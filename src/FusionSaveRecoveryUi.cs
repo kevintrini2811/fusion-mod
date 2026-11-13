@@ -149,8 +149,10 @@ internal static class FusionSaveLifecycle
     }
     [ThreadStatic] private static SurvivalAuthorization? duplicateSurvival;
     [ThreadStatic] private static int survivalDepth;
-    private static GameplayActivity[] Activities(States states, TreeStateManager manager)
+    private static GameplayActivity[] Activities(States? states, TreeStateManager manager)
     {
+        // Native Initialize passes no unload path for its first transition.
+        if (states == null) return Array.Empty<GameplayActivity>();
         var result = new List<GameplayActivity>();
         for (int i = 0; i < states.Count; ++i)
         {
@@ -177,9 +179,10 @@ internal static class FusionSaveLifecycle
         if (wantsToQuit != null) Application.remove_wantsToQuit(wantsToQuit);
         wantsToQuit = null; recoveryExit = null; retryRequest = null; quit = null;
     }
-    internal static bool StartSequence(TreeStateManager manager, States unload, States load)
+    internal static bool StartSequence(TreeStateManager manager, States? unload, States load)
     {
         if (!FusionSaveCoordinator.Ready) return true;
+        if (load == null) throw new InvalidDataException("Fusion transition requires the native loading path.");
         InvalidateTransition(manager);
         long sequence = sequences[manager.Pointer];
         var loading = Activities(load, manager); var unloading = Activities(unload, manager);
@@ -421,7 +424,7 @@ internal static class FusionSaveLifecycle
 internal static class FusionSaveSequencePatch
 {
     [HarmonyPriority(Priority.First + 3000)]
-    private static bool Prefix(TreeStateManager __instance, States unloadStates, States loadStates)
+    private static bool Prefix(TreeStateManager __instance, States? unloadStates, States loadStates)
     {
         try { return FusionSaveLifecycle.StartSequence(__instance, unloadStates, loadStates); }
         catch (Exception error) { FusionSaveCoordinator.FailTransition(__instance, loadStates, error); return false; }

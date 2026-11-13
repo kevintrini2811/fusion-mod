@@ -1,4 +1,6 @@
-# Fusion Mod 23.3.3 (implementation under review)
+# Fusion Mod 23.3.4 (startup fix under review)
+
+The unpublished 23.3.4 patch accepts the native initial transition's absent unload path as empty. The loading path remains mandatory, and gameplay save/load authorization still runs for every supplied state. Version 23.3.3 failed during startup before its runtime acceptance tests could begin; that failed run and its completed guarded cleanup are preserved. This patch has not been installed or tested in the game.
 
 The unpublished 23.3.3 change moves native-rate projectile provenance out of the shared native GridItem pool. Status, crater and source-clock records retain their existing native format. Canonical source-aged custom projectiles retain their existing record-free contract. The implementation is under independent review; a successful build or offline codec check is not game, controller, save/recovery, or supported-runtime acceptance. It has not been installed.
 
