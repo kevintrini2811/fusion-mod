@@ -25,6 +25,8 @@ internal static class FusionTime
 
     private static readonly Dictionary<IntPtr, Clock> Clocks = new();
     private static int loadDepth;
+    internal static Func<Board, bool>? PersistenceBlocked;
+    internal static Func<Board, bool, bool>? PersistenceCapture;
     private const int LimbMask = (1 << 21) - 1;
     private const int Format = 0x610000, LegacyFlag = 0x100, HasStepFlag = 0x200, Previous120Flag = 0x400;
 
@@ -44,7 +46,8 @@ internal static class FusionTime
         }
     }
 
-    private static bool Running(Board board) => ScaredContent.Playing(board) && !board.mPaused;
+    private static bool Running(Board board) => ScaredContent.Playing(board) && !board.mPaused
+        && PersistenceBlocked?.Invoke(board) != true;
 
     // Called once at the outer native entry, before any board-prefix consumer.
     // Readers never infer elapsed time from a counter that can change mid-call.
@@ -151,23 +154,24 @@ internal static class FusionTime
         if (loadDepth != 0) return null;
         return Clocks[board.Pointer] = CreateClock(board);
     }
-    internal static void Capture(Board board)
+    internal static bool Capture(Board board)
     {
-        if (loadDepth != 0) return;
+        if (loadDepth != 0) return false;
         var clock = ReadClock(board)!;
-        if (clock.Blocked) return;
+        if (clock.Blocked) return false;
         int rate = Rate(clock.StepSeconds), previous = Rate(clock.PreviousStepSeconds);
         if (!clock.Exact || !FusionNativeTimeRecords.ValidRate(rate) || !FusionNativeTimeRecords.ValidRate(previous))
-        { Error(clock, "unsupported simulation interval; exact phase was not saved."); return; }
+        { Error(clock, "unsupported simulation interval; exact phase was not saved."); return false; }
         var entry = FusionNativeTimeRecords.ReadClock(board, out bool marked);
         if (marked && (entry == null || !Decode(entry, out _, out _, out _) || clock.StoredCounter != entry.Flags))
-        { clock.Blocked = true; Error(clock, "marked record changed or became invalid; it was not overwritten."); return; }
+        { clock.Blocked = true; Error(clock, "marked record changed or became invalid; it was not overwritten."); return false; }
         entry ??= FusionNativeTimeRecords.Get(board, FusionNativeTimeRecords.Kind.Clock, FusionNativeTimeRecords.ClockEntity, rate);
-        if (entry == null) { Error(clock, "cannot allocate phase record; exact phase was not saved."); return; }
+        if (entry == null) { Error(clock, "cannot allocate phase record; exact phase was not saved."); return false; }
         entry.Rate = rate; entry.Flags = board.mMainCounter;
         entry.A = clock.SourceTicks & LimbMask; entry.B = (clock.SourceTicks >> 21) & LimbMask; entry.C = (clock.SourceTicks >> 42) & LimbMask;
         entry.D = Format | clock.Phase | (clock.Legacy ? LegacyFlag : 0) | (clock.HasStep ? HasStepFlag : 0) | (previous == 120 ? Previous120Flag : 0);
         clock.StoredCounter = entry.Flags;
+        return true;
     }
     internal static void BeginLoad() => ++loadDepth;
     internal static void EndLoad(Board? board, bool success)
@@ -278,7 +282,18 @@ internal static class FusionTimeDisposePatch
 internal static class FusionTimeSavePatch
 {
     [HarmonyPriority(Priority.First + 100)]
-    private static void Prefix(Board __instance) => FusionTime.Capture(__instance);
+    private static bool Prefix(Board __instance)
+    {
+        if (FusionTime.PersistenceCapture?.Invoke(__instance, true) == false) return false;
+        bool captured;
+        try { captured = FusionTime.Capture(__instance); }
+        catch
+        {
+            if (FusionTime.PersistenceCapture != null) return FusionTime.PersistenceCapture(__instance, false);
+            throw;
+        }
+        return FusionTime.PersistenceCapture?.Invoke(__instance, captured) ?? true;
+    }
 }
 
 [HarmonyPatch(typeof(SerializationService), nameof(SerializationService.Deserialize))]

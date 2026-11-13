@@ -6,7 +6,7 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>23.3.2</Version>
+    <Version>23.3.3</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>
@@ -73,11 +73,13 @@
     <ProjectReference Include="../zombie-library/ZombieLibrary.csproj" Private="false" />
     <ProjectReference Include="../glove-mod/LawnGlove.csproj" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/Il2CppOOI.Platform.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/Il2CppTekly.Extensions.Runtime.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/Il2Cppspine-unity.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/Il2Cppspine-csharp.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/Il2Cppmscorlib.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/UnityEngine.TextRenderingModule.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/UnityEngine.AnimationModule.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/UnityEngine.Physics2DModule.dll" Private="false" />
     <Reference Include="$(GameDir)/MelonLoader/Il2CppAssemblies/UnityEngine.SpriteMaskModule.dll" Private="false" />

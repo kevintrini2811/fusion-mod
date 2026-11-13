@@ -15,8 +15,9 @@ internal static class FusionNativeTimeRecords
 
     internal sealed class Entry
     {
-        private readonly GridItem item;
+        private readonly GridItem? item;
         private readonly uint itemId;
+        private readonly ManagedValues? managed;
         internal readonly Board Board;
         internal readonly Kind Category;
         internal readonly uint EntityId;
@@ -24,17 +25,45 @@ internal static class FusionNativeTimeRecords
         internal Entry(Board board, Kind kind, uint entity, GridItem item)
         { Board = board; Category = kind; EntityId = entity; this.item = item; itemId = item.DataID; }
 
-        internal bool Valid => !item.mDead && item.DataID == itemId
+        internal Entry(Board board, uint entity, ManagedValues values)
+        { Board = board; Category = Kind.Projectile; EntityId = entity; managed = values; }
+
+        internal bool Valid => managed != null ? managed.IsValid() : item != null && !item.mDead && item.DataID == itemId
             && IsRecord(item) && item.mSunCount == MarkerBase - (int)Category
             && unchecked((uint)item.mGridX) == EntityId;
-        internal int Rate { get => item.mGridItemCounter; set => item.mGridItemCounter = value; }
-        internal int Flags { get => item.mGridY; set => item.mGridY = value; }
-        internal float A { get => item.mPosX; set => item.mPosX = value; }
-        internal float B { get => item.mPosY; set => item.mPosY = value; }
-        internal float C { get => item.mGoalX; set => item.mGoalX = value; }
-        internal float D { get => item.mGoalY; set => item.mGoalY = value; }
-        internal void Die() { if (Valid) item.GridItemDie(); }
+        internal int Rate { get => managed?.Rate ?? item!.mGridItemCounter; set { if (managed != null) managed.Rate = value; else item!.mGridItemCounter = value; } }
+        internal int Flags { get => managed?.Flags ?? item!.mGridY; set { if (managed != null) managed.Flags = value; else item!.mGridY = value; } }
+        internal float A { get => managed?.A ?? item!.mPosX; set { if (managed != null) managed.A = value; else item!.mPosX = value; } }
+        internal float B { get => managed?.B ?? item!.mPosY; set { if (managed != null) managed.B = value; else item!.mPosY = value; } }
+        internal float C { get => managed?.C ?? item!.mGoalX; set { if (managed != null) managed.C = value; else item!.mGoalX = value; } }
+        internal float D { get => managed?.D ?? item!.mGoalY; set { if (managed != null) managed.D = value; else item!.mGoalY = value; } }
+        internal void Die()
+        {
+            // The target may already be dead. Managed removal authenticates
+            // this exact entry/session itself and must still reclaim that key.
+            if (managed != null) { managed.Remove(); return; }
+            if (Valid) item!.GridItemDie();
+        }
     }
+
+    internal sealed class ManagedValues
+    {
+        private int rate, flags;
+        private float a, b, c, d;
+        internal Action? BeforeWrite;
+        internal int Rate { get => rate; set { BeforeWrite?.Invoke(); rate = value; } }
+        internal int Flags { get => flags; set { BeforeWrite?.Invoke(); flags = value; } }
+        internal float A { get => a; set { BeforeWrite?.Invoke(); a = value; } }
+        internal float B { get => b; set { BeforeWrite?.Invoke(); b = value; } }
+        internal float C { get => c; set { BeforeWrite?.Invoke(); c = value; } }
+        internal float D { get => d; set { BeforeWrite?.Invoke(); d = value; } }
+        internal Func<bool> IsValid = null!;
+        internal Action Remove = null!;
+    }
+    // Installed only after the complete save coordinator has registered its
+    // guards. Status, Crater and Clock always retain their native backing.
+    internal static Func<Board, uint, int, Entry?>? ProjectileLookup;
+    internal static Func<Board, Entry[]>? ProjectileEntries;
 
     private static readonly Dictionary<Key, Entry> Cache = new();
     internal static int CurrentRate => (int)Math.Round(1 / FusionTime.NativeTickSeconds);
@@ -48,7 +77,9 @@ internal static class FusionNativeTimeRecords
     // Invalid saved provenance is retained and never guessed as legacy data.
     internal static Entry? Get(Board board, Kind kind, uint entity, int createRate = 0)
     {
-        if (entity == 0 || kind != Kind.Clock && !ScaredContent.Playing(board)) return null;
+        if (entity == 0) return null;
+        if (kind == Kind.Projectile && ProjectileLookup != null) return ProjectileLookup(board, entity, createRate);
+        if (kind != Kind.Clock && !ScaredContent.Playing(board)) return null;
         var key = new Key(board.Pointer, kind, entity);
         if (Cache.TryGetValue(key, out var cached))
         {
@@ -107,6 +138,7 @@ internal static class FusionNativeTimeRecords
 
     internal static Entry[] Entries(Board board, Kind kind)
     {
+        if (kind == Kind.Projectile && ProjectileEntries != null) return ProjectileEntries(board);
         var entries = new List<Entry>();
         var seen = new HashSet<uint>();
         for (int i = 0; i < board.m_gridItems.Count; ++i)
