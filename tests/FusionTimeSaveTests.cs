@@ -16,7 +16,7 @@ static class SaveTests
     static void EndLoad(SerializationService service, bool success = true, Exception? error = null) =>
         Hook(typeof(FusionTimeLoadPatch), "Finalizer", service, success, true, error);
     static SerializationService Service(Board? board) => new() { App = new App { Board = board } };
-    static void Capture(Board board) => Hook(typeof(FusionTimeSavePatch), "Prefix", board);
+    static void Capture(Board board) => _ = FusionTime.Capture(board);
     static long Step(Board board, int count, int rate)
     {
         NativeClock.TIME_FOR_UPDATE = 1d / rate;

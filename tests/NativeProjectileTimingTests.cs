@@ -2,6 +2,7 @@ using FusionMod;
 using Il2CppReloaded.Gameplay;
 using Native=Il2CppReloaded.Constants.Gameplay;
 
+FusionProjectileRecords.Initialize();
 int checks=0;
 void Check(bool ok,string reason){++checks;if(!ok)throw new Exception(reason);}
 void Near(double a,double b,string reason,double tolerance=.0001)=>Check(Math.Abs(a-b)<tolerance,reason+": "+a+" vs "+b);
@@ -16,7 +17,7 @@ foreach(int rate in new[]{100,120}) {
  var r=FusionNativeTimeRecords.Get(board,FusionNativeTimeRecords.Kind.Projectile,shot.DataID)!;
  Check(r.Rate==rate,"native rate saved");
  FusionNativeTimeRecords.Forget(board);
- Check(ReferenceEquals(r,FusionNativeTimeRecords.Get(board,FusionNativeTimeRecords.Kind.Projectile,shot.DataID))==false,"saved record reconstructed independently of transient cache");
+ Check(ReferenceEquals(r,FusionNativeTimeRecords.Get(board,FusionNativeTimeRecords.Kind.Projectile,shot.DataID)),"native carrier-cache cleanup leaves live RAM provenance intact");
  int other=rate==100?120:100;Rate(other);FusionProjectileTime.Prepare(shot);
  Near(FusionProjectileTime.AgeSeconds(shot),2.5,"live rate switch preserves age");
  Near(shot.mVelX*other,400,"live rate switch preserves horizontal speed");
@@ -68,12 +69,9 @@ var paused=hb.AddProjectile();paused.DataID=112;paused.mVelX=6;hb.mPaused=true;F
 var nested=FusionProjectileTime.BeginAgeRead(hp);int canonicalView=hp.mProjectileAge;var inner=FusionProjectileTime.BeginAgeRead(hp);FusionProjectileTime.EndAgeRead(inner);Check(hp.mProjectileAge==canonicalView,"nested native age reader restores parent view");FusionProjectileTime.EndAgeRead(nested);Near(FusionProjectileTime.AgeSeconds(hp),2.51,"nested read leaves exact age unchanged");
 var attach=hb.AddProjectile();attach.DataID=113;attach.Flags=FusionProjectileTime.Age|FusionProjectileTime.Planar;attach.mProjectileAge=1;attach.mMotionType=ProjectileMotion.Threepeater;attach.mVelY=3;FusionProjectileTime.Prepare(attach);
 var ageAttach=FusionProjectileTime.BeginAgeRead(attach);var threeAttach=FusionProjectileTime.BeginThreepeater(attach);attach.CanonicalAge=true;attach.mProjectileAge=0;attach.mMotionType=ProjectileMotion.Straight;attach.mVelY=0;FusionProjectileTime.EndThreepeater(threeAttach);FusionProjectileTime.EndAgeRead(ageAttach);Check(attach.mProjectileAge==0&&attach.mVelY==0,"same-ID native impact attachment keeps new canonical age and velocity even when projected old age was zero");
-var loadedBoard=new Board();var loaded=loadedBoard.AddProjectile();loaded.DataID=hp.DataID;loaded.Flags=hp.Flags;loaded.mProjectileAge=hp.mProjectileAge;loaded.mVelX=hp.mVelX;loaded.mVelY=hp.mVelY;loaded.mVelZ=hp.mVelZ;loaded.mAccZ=hp.mAccZ;
-var savedRecord=FusionNativeTimeRecords.Get(hb,FusionNativeTimeRecords.Kind.Projectile,hp.DataID)!;
-var snapshot=hb.m_gridItems.Single(i=>!i.mDead&&unchecked((uint)i.mGridX)==hp.DataID&&i.mGridItemCounter==savedRecord.Rate);
-loadedBoard.m_gridItems.Add(new GridItem{mBoard=loadedBoard,mGridItemType=snapshot.mGridItemType,mGridItemState=snapshot.mGridItemState,mSunCount=snapshot.mSunCount,mGridX=snapshot.mGridX,mGridY=snapshot.mGridY,mGridItemCounter=snapshot.mGridItemCounter,mPosX=snapshot.mPosX,mPosY=snapshot.mPosY,mGoalX=snapshot.mGoalX,mGoalY=snapshot.mGoalY});
-Rate(100);FusionProjectileTime.Prepare(loaded);Near(FusionProjectileTime.AgeSeconds(loaded),2.51,"fresh board saved native scalars recover exact projectile age across rate change");
+// Saved projectiles deliberately lose Fusion provenance. Native load replacement
+// is exercised by FusionTransientProjectileTests, not a carrier-scalar roundtrip.
 Rate(100);var tb=new Board();var ts=tb.AddProjectile();ts.DataID=114;ts.Flags=FusionProjectileTime.Age|FusionProjectileTime.Planar|FusionProjectileTime.FixedStep;ts.mMotionType=ProjectileMotion.Threepeater;ts.mVelY=3;
 foreach(var segment in new[]{(Hz:100,Ticks:50),(Hz:120,Ticks:60)}){Rate(segment.Hz);for(int i=0;i<segment.Ticks;++i){FusionProjectileTime.Prepare(ts);var scope=FusionProjectileTime.BeginThreepeater(ts);ts.mPosY+=ts.mVelY;ts.mVelY*=.97f;FusionProjectileTime.EndThreepeater(scope);++ts.mProjectileAge;}FusionNativeTimeRecords.Forget(tb);}
-Near(ts.mPosY,3*(1-Math.Pow(.97,100))/.03,"Threepeater mixed-rate trajectory survives source/native rate changes and provenance cache reconstruction",.003);Near(FusionProjectileTime.AgeSeconds(ts),1,"Threepeater mixed-rate age accumulates actual elapsed second");
+Near(ts.mPosY,3*(1-Math.Pow(.97,100))/.03,"Threepeater mixed-rate trajectory survives source/native rate changes and native carrier-cache cleanup",.003);Near(FusionProjectileTime.AgeSeconds(ts),1,"Threepeater mixed-rate age accumulates actual elapsed second");
 Rate(100);Console.WriteLine($"Native projectile/crater timing: {checks} checks passed; actual clock and provenance compiled.");

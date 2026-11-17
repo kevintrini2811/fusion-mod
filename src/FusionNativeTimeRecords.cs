@@ -44,6 +44,11 @@ internal static class FusionNativeTimeRecords
             if (managed != null) { managed.Remove(); return; }
             if (Valid) item!.GridItemDie();
         }
+        internal void PrepareController()
+        {
+            if (managed != null || !Valid) throw new InvalidDataException("Fusion native carrier is unavailable.");
+            InitializeController?.Invoke(item!);
+        }
     }
 
     internal sealed class ManagedValues
@@ -60,10 +65,10 @@ internal static class FusionNativeTimeRecords
         internal Func<bool> IsValid = null!;
         internal Action Remove = null!;
     }
-    // Installed only after the complete save coordinator has registered its
-    // guards. Status, Crater and Clock always retain their native backing.
+    // Projectile provenance is transient. The other kinds retain native backing.
     internal static Func<Board, uint, int, Entry?>? ProjectileLookup;
     internal static Func<Board, Entry[]>? ProjectileEntries;
+    internal static Action<GridItem>? InitializeController;
 
     private static readonly Dictionary<Key, Entry> Cache = new();
     internal static int CurrentRate => (int)Math.Round(1 / FusionTime.NativeTickSeconds);
@@ -78,7 +83,7 @@ internal static class FusionNativeTimeRecords
     internal static Entry? Get(Board board, Kind kind, uint entity, int createRate = 0)
     {
         if (entity == 0) return null;
-        if (kind == Kind.Projectile && ProjectileLookup != null) return ProjectileLookup(board, entity, createRate);
+        if (kind == Kind.Projectile) return ProjectileLookup?.Invoke(board, entity, createRate);
         if (kind != Kind.Clock && !ScaredContent.Playing(board)) return null;
         var key = new Key(board.Pointer, kind, entity);
         if (Cache.TryGetValue(key, out var cached))
@@ -115,6 +120,7 @@ internal static class FusionNativeTimeRecords
             allocated.mGridItemCounter = createRate;
             allocated.mX = allocated.mY = -1000;
             allocated.mPosX = allocated.mPosY = allocated.mGoalX = allocated.mGoalY = 0;
+            InitializeController?.Invoke(allocated);
             return Cache[key] = new Entry(board, kind, entity, allocated);
         }
         catch { allocated.GridItemDie(); throw; }
@@ -138,7 +144,7 @@ internal static class FusionNativeTimeRecords
 
     internal static Entry[] Entries(Board board, Kind kind)
     {
-        if (kind == Kind.Projectile && ProjectileEntries != null) return ProjectileEntries(board);
+        if (kind == Kind.Projectile) return ProjectileEntries?.Invoke(board) ?? Array.Empty<Entry>();
         var entries = new List<Entry>();
         var seen = new HashSet<uint>();
         for (int i = 0; i < board.m_gridItems.Count; ++i)

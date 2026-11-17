@@ -17,13 +17,14 @@ namespace Il2CppReloaded.Gameplay {
  internal sealed class Board {
   static int next; public IntPtr Pointer=(IntPtr)(++next);
   public App mApp; public bool Playing=true,mPaused; public int mMainCounter;
-  public GridItems m_gridItems=new(); public List<Projectile> m_projectiles=new();
+  public GridItems m_gridItems=new(); public ProjectileItems m_projectiles=new();
   public Board(){mApp=new(){Board=this};}
   public int GridToPixelX(int col,int row)=>col*80;
   public int GridToPixelY(int col,int row)=>row*100;
   public Projectile AddProjectile(){var p=new Projectile{mBoard=this};m_projectiles.Add(p);return p;}
   public void Serialize() {} public void UpdateGame(){} public void InitLevel(){} public void InitSurvivalStage(){} public void DisposeBoard(){}
  }
+ internal sealed class ProjectileItems:List<Projectile> { public Projectile? DataArrayTryToGet(uint id)=>this.FirstOrDefault(p=>p.DataID==id&&!p.mDead); }
  internal sealed class GridItems:List<GridItem> { public bool FailAllocation; public GridItem? DataArrayAlloc(){if(FailAllocation)return null;var i=new GridItem();Add(i);return i;} }
  internal sealed class GridItem {
   static uint next; public uint DataID=++next; public Board mBoard=null!; public bool mDead;

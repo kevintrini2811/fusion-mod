@@ -3,5 +3,5 @@
 <ItemGroup>
 <Compile Include="NativeProjectileTimingTests.cs" /><Compile Include="NativeProjectileTimingStubs.cs" />
 <Compile Include="../src/FusionTime.cs" /><Compile Include="../src/FusionNativeTimeRecords.cs" />
-<Compile Include="../src/FusionProjectileTime.cs" /><Compile Include="../src/FusionCraterTime.cs" /><Compile Include="../src/LobberFlight.cs" />
+<Compile Include="../src/FusionProjectileRecords.cs" /><Compile Include="../src/FusionProjectileTime.cs" /><Compile Include="../src/FusionCraterTime.cs" /><Compile Include="../src/LobberFlight.cs" />
 </ItemGroup></Project>

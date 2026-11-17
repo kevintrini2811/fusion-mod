@@ -235,9 +235,13 @@ internal static class PoisonShooters
     internal static void Forget(Projectile projectile)
     { Shots.Remove(projectile.Pointer); ImportedPeaVisuals.ForgetProjectile(projectile); }
     internal static void Forget(Zombie zombie) => Poisons.Remove(zombie.Pointer);
-    internal static void ForgetBoard(Board board)
+    internal static void ForgetProjectiles(Board board)
     {
         foreach (var key in Shots.Where(p => p.Value.Board == board.Pointer).Select(p => p.Key).ToArray()) Shots.Remove(key);
+    }
+    internal static void ForgetBoard(Board board)
+    {
+        ForgetProjectiles(board);
         foreach (var key in Poisons.Where(p => p.Value.Board == board.Pointer).Select(p => p.Key).ToArray()) Poisons.Remove(key);
         Clouds.RemoveAll(c => c.Board.Pointer == board.Pointer);
         LastTicks.Remove(board.Pointer);

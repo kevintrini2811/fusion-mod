@@ -408,6 +408,11 @@ internal static partial class ImportedPeaVisuals
     }
     internal static void ForgetProjectile(Projectile projectile)
     { if (ImportedProjectiles.Remove(projectile.Pointer, out var view)) view.Dispose(); }
+    internal static void ForgetProjectiles(Board board)
+    {
+        foreach (var key in ImportedProjectiles.Where(e => e.Value.Board == board.Pointer).Select(e => e.Key).ToArray())
+            if (ImportedProjectiles.Remove(key, out var view)) view.Dispose();
+    }
 
     private static void UpdateImportedProjectiles()
     {

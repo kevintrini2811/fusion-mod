@@ -13,12 +13,12 @@ internal static class FusionProjectileDomains
         || RollingProjectiles.TryShot(shot, out _)
         || SquashLobbers.Family(shot) is not (0 or 7);
 
-    internal static bool TryFlags(Projectile shot, out int flags)
-    {
-        flags = FusionProjectileTime.Age;
-        if (CanonicalAge(shot)) return false;
-        if (CustomMotion(shot) || StarProjectiles.Family(shot) == 2) return true;
-        bool marked = StarProjectiles.Family(shot) != 0 || SeaProjectiles.Family(shot) != 0
+    // Classification during load must not reconstruct managed views or records.
+    internal static bool Marked(Projectile shot) => CanonicalAge(shot)
+            || PotatoProjectiles.Contains(shot) || PotatoSeedProjectiles.Contains(shot)
+            || FumeProjectiles.IsNut(shot) || RollingProjectiles.Chunk(shot) != 0
+            || shot.mCobTargetX == RollingProjectiles.IgnitedNut || RollingProjectiles.IsWeed(shot)
+            || StarProjectiles.Family(shot) != 0 || SeaProjectiles.Family(shot) != 0
             || CactusProjectiles.Family(shot) != 0 || CattailFusions.Family(shot) != 0
             || PuffLobbers.Family(shot) != 0 || SilverLobbers.Family(shot) != 0 || TriLobbers.Family(shot) != 0
             || LobberProjectiles.Family(shot) != 0 || ElementalLobbers.Family(shot) != 0
@@ -26,13 +26,22 @@ internal static class FusionProjectileDomains
             || ScaredyProjectiles.Family(shot) != 0 || DoomProjectiles.Family(shot) != 0
             || AirLobbers.IsShot(shot) || GlacierShroom.Contains(shot) || StarCaps.Contains(shot)
             || PuffShooters.Contains(shot) || PuffSpecials.IsIcicle(shot) || PuffSpecials.IsNugget(shot)
-            || SunflowerFusions.IsShot(shot) || GutsyShroom.IsShot(shot) || IronProjectiles.Contains(shot)
+            || SunflowerFusions.IsShot(shot) || GutsyShroom.IsShot(shot)
+            || shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
+                && shot.mCobTargetX is -450011 or -450168 or IronProjectiles.SmallShot
             || PolarProjectiles.IsPolar(shot) || SupportFusions.IsSolarShot(shot) || MelonPot.Boosted(shot)
             || CherrySpreader.IsFlying(shot) || CherryShooter.TryShot(shot) || PhoenixProjectiles.Contains(shot)
-            || HypnoShooters.Contains(shot) || PoisonShooters.Contains(shot) || BlazeShooters.Contains(shot)
+            || HypnoShooters.Contains(shot) || shot.mCobTargetX == PoisonShooters.GarlicTorchMarker
             || ChargeTorchFusions.IsFireCherry(shot) || ChargeTorchFusions.IsLowFire(shot)
             || shot.mCobTargetX is SupportTorchFusions.Scorch or SupportTorchFusions.Garlic or SupportTorchFusions.Stench
             || UmbrellaVariants.ReflectedPea(shot) || UmbrellaVariants.ReflectedMelon(shot);
+
+    internal static bool TryFlags(Projectile shot, out int flags)
+    {
+        flags = FusionProjectileTime.Age;
+        if (CanonicalAge(shot)) return false;
+        if (CustomMotion(shot) || StarProjectiles.Family(shot) == 2) return true;
+        bool marked = Marked(shot);
         if (!marked)
         {
             var saved = FusionNativeTimeRecords.Get(shot.mBoard, FusionNativeTimeRecords.Kind.Projectile, shot.DataID);

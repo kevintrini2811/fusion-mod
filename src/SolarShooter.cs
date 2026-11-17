@@ -127,10 +127,14 @@ internal static class SolarShooter
     internal static void Forget(Projectile projectile)
     { Shots.Remove(projectile.Pointer); ImportedPeaVisuals.ForgetProjectile(projectile); }
     internal static void Forget(Coin coin) => Suns.Remove(coin.Pointer);
+    internal static void ForgetProjectiles(Board board)
+    {
+        foreach (var key in Shots.Where(e => e.Value.Board == board.Pointer).Select(e => e.Key).ToArray()) Shots.Remove(key);
+    }
     internal static void ForgetBoard(Board board)
     {
         foreach (var key in Producers.Where(e => e.Value.Board == board.Pointer).Select(e => e.Key).ToArray()) Producers.Remove(key);
-        foreach (var key in Shots.Where(e => e.Value.Board == board.Pointer).Select(e => e.Key).ToArray()) Shots.Remove(key);
+        ForgetProjectiles(board);
         foreach (var key in Suns.Where(e => e.Value.Board == board.Pointer).Select(e => e.Key).ToArray()) Suns.Remove(key);
     }
     internal static void Clear() { Producers.Clear(); Shots.Clear(); Suns.Clear(); }

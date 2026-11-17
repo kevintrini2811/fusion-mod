@@ -25,8 +25,6 @@ internal static class FusionTime
 
     private static readonly Dictionary<IntPtr, Clock> Clocks = new();
     private static int loadDepth;
-    internal static Func<Board, bool>? PersistenceBlocked;
-    internal static Func<Board, bool, bool>? PersistenceCapture;
     private const int LimbMask = (1 << 21) - 1;
     private const int Format = 0x610000, LegacyFlag = 0x100, HasStepFlag = 0x200, Previous120Flag = 0x400;
 
@@ -46,8 +44,7 @@ internal static class FusionTime
         }
     }
 
-    private static bool Running(Board board) => ScaredContent.Playing(board) && !board.mPaused
-        && PersistenceBlocked?.Invoke(board) != true;
+    private static bool Running(Board board) => ScaredContent.Playing(board) && !board.mPaused;
 
     // Called once at the outer native entry, before any board-prefix consumer.
     // Readers never infer elapsed time from a counter that can change mid-call.
@@ -277,24 +274,6 @@ internal static class FusionTimeSurvivalPatch
 [HarmonyPatch(typeof(Board), nameof(Board.DisposeBoard))]
 internal static class FusionTimeDisposePatch
 { private static void Prefix(Board __instance) => FusionTime.Dispose(__instance); }
-
-[HarmonyPatch(typeof(Board), nameof(Board.Serialize))]
-internal static class FusionTimeSavePatch
-{
-    [HarmonyPriority(Priority.First + 100)]
-    private static bool Prefix(Board __instance)
-    {
-        if (FusionTime.PersistenceCapture?.Invoke(__instance, true) == false) return false;
-        bool captured;
-        try { captured = FusionTime.Capture(__instance); }
-        catch
-        {
-            if (FusionTime.PersistenceCapture != null) return FusionTime.PersistenceCapture(__instance, false);
-            throw;
-        }
-        return FusionTime.PersistenceCapture?.Invoke(__instance, captured) ?? true;
-    }
-}
 
 [HarmonyPatch(typeof(SerializationService), nameof(SerializationService.Deserialize))]
 internal static class FusionTimeLoadPatch

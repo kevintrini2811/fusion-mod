@@ -108,13 +108,14 @@ internal static class BloverSavedItemDrawPatch
     private static bool Prefix(GridItem __instance) => !BloverEffects.IsEffect(__instance);
 }
 // Keep native ref-struct readers out of IL2CPP Harmony trampolines. Clear
-// transient caches once before loading; saved GridItems remain native-owned and
+// transient caches after a successful load; saved GridItems remain native-owned and
 // restore the statuses on the first UpdateGame after successful deserialization.
 [HarmonyPatch(typeof(SerializationService), nameof(SerializationService.Deserialize))]
 internal static class BloverLoadPatch
 {
-    private static void Prefix(SerializationService __instance)
+    private static void Postfix(SerializationService __instance, bool __result)
     {
+        if (!__result) return;
         var board = __instance.App?.Board;
         if (board == null) return;
         PoisonShooters.ForgetBoard(board);
