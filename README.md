@@ -1,10 +1,12 @@
-# Fusion Mod 24.0.1
+# Fusion Mod 24.0.2
 
 Projectile time provenance now lives only in memory for the current level. It no longer consumes the shared native GridItem pool. After a successful native level load, explicitly marked Fusion projectiles become ordinary native Peas once, before gameplay resumes. Their native slot and full DataID remain intact; native initialization replaces their controller, markers, custom motion, targets and age. Unmarked native and foreign projectiles keep their native fields. Existing status, crater and source-clock records retain their native storage and timing behavior.
 
 New saves use native format 14 and do not require a `FusionProvenance` directory. Old companion files remain untouched and are no longer read. A save with the former Fusion-specific header is backed up byte-for-byte under `FusionLegacyBackups/<profile-guid>/<sha256>.ig.dat` beside the native save before its header is translated in memory. This original-file copy preserves old saves; it contains no new projectile-provenance protocol. An unsuccessful backup prevents that load and blocks writes/deletion only for that exact native file during the session. Normal native save I/O semantics apply; the former companion transaction and recovery UI have been removed.
 
 The gameplay version changes because saved Fusion shots intentionally lose their special behavior on reload. Source review, focused offline checks and native runtime results are tracked separately. A build or simulated native-boundary test alone does not establish game save/load or projectile-motion acceptance.
+
+Version 24.0.2 batches managed projectile age-clock writes after one complete lifetime/thread check and avoids unchanged age/flag writes. Projectile ownership, native motion, collision and save loading remain unchanged. The native, Cherry and Glacier firing fixture completed live validation with the temporary profiler; these measurements do not establish uninstrumented FPS.
 
 Version 24.0.1 completes missing sprite-group scene references only on authenticated Fusion data-carrier controllers. Native serialization writes their scalar group state, while native deserialization also requires these scene references. A normal controller initialization hook prepares them before the native reader, preserving group count and the native save layout. Foreign controllers retain their state.
 

@@ -37,6 +37,11 @@ internal static class FusionNativeTimeRecords
         internal float B { get => managed?.B ?? item!.mPosY; set { if (managed != null) managed.B = value; else item!.mPosY = value; } }
         internal float C { get => managed?.C ?? item!.mGoalX; set { if (managed != null) managed.C = value; else item!.mGoalX = value; } }
         internal float D { get => managed?.D ?? item!.mGoalY; set { if (managed != null) managed.D = value; else item!.mGoalY = value; } }
+        internal void SetAgeClock(int flags, float age, float nativeAge)
+        {
+            if (managed != null) { managed.SetAgeClock(flags, age, nativeAge); return; }
+            A = age; Flags = flags; B = nativeAge;
+        }
         internal void Die()
         {
             // The target may already be dead. Managed removal authenticates
@@ -62,6 +67,13 @@ internal static class FusionNativeTimeRecords
         internal float B { get => b; set { BeforeWrite?.Invoke(); b = value; } }
         internal float C { get => c; set { BeforeWrite?.Invoke(); c = value; } }
         internal float D { get => d; set { BeforeWrite?.Invoke(); d = value; } }
+        internal void SetAgeClock(int nextFlags, float age, float nativeAge)
+        {
+            // Authenticate the complete lifetime once before changing only our
+            // primitive memory. No native call or callback can split this write.
+            BeforeWrite?.Invoke();
+            a = age; flags = nextFlags; b = nativeAge;
+        }
         internal Func<bool> IsValid = null!;
         internal Action Remove = null!;
     }

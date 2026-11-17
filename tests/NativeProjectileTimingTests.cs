@@ -7,6 +7,24 @@ int checks=0;
 void Check(bool ok,string reason){++checks;if(!ok)throw new Exception(reason);}
 void Near(double a,double b,string reason,double tolerance=.0001)=>Check(Math.Abs(a-b)<tolerance,reason+": "+a+" vs "+b);
 void Rate(int rate)=>Native.TIME_FOR_UPDATE=1d/rate;
+Rate(120);
+var batchBoard = new Board(); var batchShot = batchBoard.AddProjectile();
+batchShot.mProjectileAge = 120;
+var batchValues = new FusionNativeTimeRecords.ManagedValues { Rate = 120, Flags = FusionProjectileTime.Age | 32, A = 600, B = 120 };
+int batchValidations = 0;
+batchValues.BeforeWrite = () => ++batchValidations;
+var batchEntry = new FusionNativeTimeRecords.Entry(batchBoard, batchShot.DataID, batchValues);
+FusionProjectileTime.Rebase(batchShot, batchEntry);
+Check(batchValidations == 0, "unchanged native age does not rewrite managed provenance");
+++batchShot.mProjectileAge;
+FusionProjectileTime.Rebase(batchShot, batchEntry);
+Check(batchValidations == 1, "advancing age authenticates one complete managed write");
+Near(batchEntry.A, 605, "batched age preserves 600-unit elapsed clock");
+Check(batchEntry.B == 121 && batchEntry.Flags == (FusionProjectileTime.Age | 32) && batchEntry.Rate == 120, "batched write preserves native age, flags and rate");
+batchValues.BeforeWrite = () => throw new InvalidOperationException("stale lifetime");
+try { batchEntry.SetAgeClock(7, 8, 9); throw new Exception("stale batch accepted"); }
+catch (InvalidOperationException) { ++checks; }
+Check(batchEntry.A == 605 && batchEntry.B == 121 && batchEntry.Flags == (FusionProjectileTime.Age | 32), "refused batch leaves every field unchanged");
 foreach(int rate in new[]{100,120}) {
  Rate(rate);var board=new Board();var shot=board.AddProjectile();shot.DataID=0x12340001;
  shot.mProjectileAge=250;shot.mVelX=4;shot.mVelY=-2;shot.mVelZ=-3;shot.mAccZ=.06f;

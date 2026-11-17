@@ -92,24 +92,26 @@ internal static class FusionProjectileTime
         record ??= FusionNativeTimeRecords.Get(shot.mBoard, FusionNativeTimeRecords.Kind.Projectile, shot.DataID, 100);
         if (record == null) return;
         if ((record.Flags & AgeClock) != 0 && (!float.IsFinite(record.A) || !float.IsFinite(record.B) || record.A < 0)) return;
-        record.Flags = flags | (record.Flags & AgeClock);
+        int nextFlags = flags | (record.Flags & AgeClock);
+        if (record.Flags != nextFlags) record.Flags = nextFlags;
         Rebase(shot, record);
     }
 
     private static void SaveAge(Projectile shot, FusionNativeTimeRecords.Entry record)
     {
-        if ((record.Flags & AgeClock) == 0)
-        {
-            record.A = Math.Max(0, shot.mProjectileAge) * (600f / record.Rate);
-            record.Flags |= AgeClock;
-        }
+        int flags = record.Flags;
+        int nativeAge = shot.mProjectileAge;
+        float age;
+        if ((flags & AgeClock) == 0)
+            age = Math.Max(0, nativeAge) * (600f / record.Rate);
         else
         {
-            float delta = shot.mProjectileAge - record.B;
-            record.A = delta >= 0 ? record.A + delta * (600f / record.Rate)
-                : Math.Max(0, shot.mProjectileAge) * (600f / record.Rate);
+            float delta = nativeAge - record.B;
+            if (delta == 0) return;
+            age = delta >= 0 ? record.A + delta * (600f / record.Rate)
+                : Math.Max(0, nativeAge) * (600f / record.Rate);
         }
-        record.B = shot.mProjectileAge;
+        record.SetAgeClock(flags | AgeClock, age, nativeAge);
     }
 
     internal static void Rebase(Projectile shot, FusionNativeTimeRecords.Entry record)
