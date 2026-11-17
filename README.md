@@ -1,4 +1,8 @@
-# Fusion Mod 24.0.2
+# Fusion Mod 24.1.1
+
+Version 24.1.1 adds controller interaction for captured metal. Confirm (A on Xbox) picks up a magnet's bucket or football helmet when the selected card cannot plant, repair or fuse on that tile; confirm places or uses the metal. Cancel (B on Xbox) releases the selection without consuming it or using the shovel. Existing player bindings and the native controller cursor determine the buttons and target position. The selected magnet fusion keeps its natural digestion clock. Focused controller acceptance is complete; see the [pair acceptance record](references/magnet-pair-24-1-1/acceptance.md).
+
+Version 24.1.0 adds Magnet Blover and Lumos Magnet with their available source recipes, original bodies and action clips, bilingual Almanac entries, source digestion and fertilizer behavior. Native equipment removal and captured metal storage remain native; the existing light and clock owners supply the shared rules. Build, offline and focused live acceptance are complete, including the controller extension in 24.1.1. No Almanac test was performed. See [the source contract](references/magnet-pair-contract/report.md), [Magnet Blover](references/magnet-blover/implementation-notes.md) and [Lumos Magnet](references/lumos-magnet/implementation-notes.md).
 
 Projectile time provenance now lives only in memory for the current level. It no longer consumes the shared native GridItem pool. After a successful native level load, explicitly marked Fusion projectiles become ordinary native Peas once, before gameplay resumes. Their native slot and full DataID remain intact; native initialization replaces their controller, markers, custom motion, targets and age. Unmarked native and foreign projectiles keep their native fields. Existing status, crater and source-clock records retain their native storage and timing behavior.
 
@@ -2497,6 +2501,8 @@ The included translation mod loads the English names from the `Teyliu/PVZF-Trans
 The basic framework is implemented. Active recipes:
 
 ```text
+Blover | Magnet-shroom | Magnet Blover
+Magnet-shroom | Plantern | Lumos Magnet
 Puff-shroom | Chomper | Nibble-shroom
 Puff-shroom | Squash | Squish
 Potato Mine | Torchwood | Hot Potato

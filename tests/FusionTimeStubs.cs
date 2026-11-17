@@ -10,7 +10,7 @@ namespace Il2CppReloaded.Constants {
     internal static class Gameplay { internal static double TIME_FOR_UPDATE = .01; }
 }
 namespace Il2CppReloaded.Gameplay {
-    internal sealed class Board {
+    internal sealed partial class Board {
         private static int next;
         public IntPtr Pointer = (IntPtr)(++next);
         public bool Playing = true, mPaused;
@@ -23,7 +23,7 @@ namespace Il2CppReloaded.Gameplay {
         public void Serialize() {} public void UpdateGame() {} public void InitLevel() {}
         public void InitSurvivalStage() {} public void DisposeBoard() {}
     }
-    internal enum GridItemType { ZenTool, Crater }
+    internal enum GridItemType { ZenTool, Crater, Ladder }
     internal enum GridItemState { Normal, Other }
     internal sealed class GridItems : List<GridItem> {
         internal bool FailAllocation;
@@ -32,7 +32,7 @@ namespace Il2CppReloaded.Gameplay {
             var item = new GridItem(); Add(item); return item;
         }
     }
-    internal sealed class GridItem {
+    internal sealed partial class GridItem {
         private static uint next;
         public uint DataID = ++next;
         public bool mDead;
@@ -44,7 +44,7 @@ namespace Il2CppReloaded.Gameplay {
         public void GridItemDie() { mDead = true; }
         public void Update() {} public void DrawGridItem() {}
     }
-    internal class Plant {
+    internal partial class Plant {
         public Board mBoard = null!;
         public IntPtr Pointer = (IntPtr)100;
         public uint DataID = 1;
@@ -60,15 +60,20 @@ namespace Il2CppReloaded.Gameplay {
         public int mWidth, mHeight, mProjectileAge, mRow;
         public void UpdateNormalMotion() {} public void CheckForCollision() {}
     }
-    internal readonly record struct TargetPoint(float y);
-    internal readonly record struct TargetRect(float Y) { public TargetPoint center => new(Y); }
-    internal enum ZombiePhase { ZombieNormal, ZombieDying }
-    internal sealed class Zombie : Plant {
+    internal readonly record struct TargetPoint(float y, float x = 0);
+    internal readonly record struct TargetRect(float Y, float X = 0) { public TargetPoint center => new(Y, X); public float xMin => X - 20; public float xMax => X + 20; public float yMin => Y - 20; public float yMax => Y + 20; }
+    internal enum ZombiePhase { ZombieNormal, ZombieDying, DiggerTunneling, PolevaulterInVault,
+        DolphinInJump, BalloonFlying, BalloonPopping, ImpGettingThrown, PogoHighBounce1,
+        PogoHighBounce2, PogoHighBounce3, PogoHighBounce4, PogoHighBounce5, PogoHighBounce6,
+        PogoForwardBounce7, DiggerRising, DiggerRiseWithoutAxe, DiggerTunnelingPauseWithoutAxe,
+        ImpLanding, DancerRising, RisingFromGrave, PogoBouncing, PogoForwardBounce2,
+        BossHeadIdleBeforeSpit, BungeeAtBottom, BungeeGrabbing }
+    internal sealed partial class Zombie : Plant {
         internal bool Summoned = true;
         public float TargetX = 1000, TargetY;
         public bool Targetable = true;
         public bool EffectedByDamage(DamageRangeFlags flags) => Targetable;
-        public TargetRect GetZombieRect() => new(TargetY);
+        public TargetRect GetZombieRect() => new(TargetY, TargetX);
         public float ZombieTargetLeadX(float time) => TargetX;
         public bool mDead;
         public ZombiePhase mZombiePhase;

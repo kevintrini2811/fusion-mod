@@ -339,6 +339,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant Squish = new(SeedType.Puffshroom, SeedType.Squash);
     internal static readonly FusionPlant GulperShroom = new(SeedType.Chomper, SeedType.Seashroom);
     internal static readonly FusionPlant WeedSpreader = new(SeedType.Threepeater, SeedType.Spikeweed);
+    internal static readonly FusionPlant MagnetBlover = new(SeedType.Magnetshroom, SeedType.Blover);
+    internal static readonly FusionPlant LumosMagnet = new(SeedType.Magnetshroom, SeedType.Plantern);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -553,6 +555,9 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static bool IsPuffJumper(FusionPlant plant) =>
         plant == NibbleShroom || plant == Squish;
 
+    internal static bool IsMagnetFusion(FusionPlant plant) =>
+        plant == MagnetBlover || plant == LumosMagnet;
+
     internal static bool HasImportedVisuals(FusionPlant plant) =>
         plant == BuckShroom || plant == SproutPult || plant == BabyCorn ||
         plant == SlicePult || plant == GnomeShroom || plant == UmbrellaCap ||
@@ -664,7 +669,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == Torchweed || plant == RoastedSpikeweed || plant == HypnoChomper ||
         plant == BoltPult || plant == FootballShroom || plant == DoomplateShroom ||
         plant == NibbleShroom || plant == Squish || plant == GulperShroom ||
-        plant == WeedSpreader;
+        plant == WeedSpreader || plant == MagnetBlover || plant == LumosMagnet;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -999,6 +1004,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Puffshroom, SeedType.Squash) => Squish,
             (SeedType.Chomper, SeedType.Seashroom) => GulperShroom,
             (SeedType.Threepeater, SeedType.Spikeweed) => WeedSpreader,
+            (SeedType.Magnetshroom, SeedType.Blover) => MagnetBlover,
+            (SeedType.Magnetshroom, SeedType.Plantern) => LumosMagnet,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

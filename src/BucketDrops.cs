@@ -140,6 +140,42 @@ internal static class BucketDrops
         drop.Visual?.Dispose(); drop.Visual = null;
         if (drop.Persistence is { mDead: false } item && item.DataID == drop.PersistenceId) item.GridItemDie();
     }
+    // Transfer one unheld physical metal item to the magnet's serialized slot.
+    // Eyes heads are not metal. No second drop or lifetime reroll is created.
+    internal static bool TakeForMagnet(Plant plant, float radius, int rows, out int row)
+    {
+        row = 0;
+        var drop = drops.FirstOrDefault(d => d.Board.Pointer == plant.mBoard.Pointer
+            && d.Identity != FusionPlant.EyesZombieHead && !BucketPlants.HoldingDrop(d)
+            && MagnetFusions.InRange(plant, d.X, d.Y, d.Row, radius, rows));
+        if (drop == null) return false;
+        row = drop.Row;
+        MagnetFusions.Capture(plant, drop.Identity == FusionPlant.FootballHelmet
+            ? MagnetItemType.FootballHelmet1 : MagnetItemType.Pail1, drop.X, drop.Y);
+        plant.mTargetY = MagnetFusions.StoredLight(plant) * 4 + (drop.Identity == FusionPlant.FootballHelmet ? 2 : 1);
+        plant.mLaunchRate = drop.Age;
+        Consume(drop);
+        return true;
+    }
+    internal sealed record MagnetCapture(Board Board, uint Id, int Kind, int Age, int Row, float X, float Y);
+    internal static MagnetCapture? CaptureMagnet(Plant plant)
+    {
+        int kind = plant.mTargetY % 4;
+        if (kind is not (1 or 2) || plant.mMagnetItems[0].ItemType == MagnetItemType.None) return null;
+        var item = plant.mMagnetItems[0];
+        return new(plant.mBoard, plant.DataID, kind, Math.Clamp(plant.mLaunchRate, 0, 800),
+            plant.mRow, item.PosX, item.PosY);
+    }
+    internal static void ReleaseFromMagnet(Plant plant, MagnetCapture capture)
+    {
+        // Called only after a confirmed death of this exact owner generation.
+        // Native death may have cleared its item slots, so use the pre-death data.
+        plant.mTargetY = plant.mLaunchRate = 0;
+        if (!Playing(capture.Board) || PlayerPlantingScope.ConsumingIngredient == plant.Pointer) return;
+        drops.Add(new Drop(capture.Board, capture.Row, capture.X, capture.Y, 0)
+        { Identity = capture.Kind == 2 ? FusionPlant.FootballHelmet : FusionPlant.Bucket,
+            Age = capture.Age, Height = 0 });
+    }
     internal static void Tick(Board board)
     {
         if (!Playing(board) || board.mPaused) return;

@@ -18,6 +18,8 @@ internal static class BucketPlants
         (magnet != null && Helmet(magnet.mMagnetItems[slot]) ? FusionPlant.FootballHelmet : FusionPlant.Bucket);
     private static Board? SelectionBoard => magnet?.mBoard ?? heldDrop?.Board;
     private static bool ValidSelection => magnet != null ? Valid : BucketDrops.Contains(heldDrop);
+    internal static bool SelectedOn(Board board) => (magnet != null || heldDrop != null)
+        && SelectionBoard?.Pointer == board.Pointer && board.mCursorObject.CursorType == CursorType.Glove;
     internal static bool HoldingDrop(BucketDrops.Drop drop) => ReferenceEquals(heldDrop, drop)
         && drop.Board.mCursorObject.CursorType == CursorType.Glove;
     internal static bool IsIron(FusionPlant identity) => identity == FusionPlant.BuckNut
@@ -61,7 +63,7 @@ internal static class BucketPlants
         var board = SelectionBoard;
         magnet = null;
         heldDrop = null;
-        if (board?.mCursorObject.CursorType == CursorType.Glove) board.ClearCursor();
+        if (board?.mCursorObject.CursorType == CursorType.Glove) board.ClearCursor(ignoreControlType: true, playerIndex: 0);
         ImportedPeaVisuals.ClearBucketCursor();
     }
     internal static void UpdateCursor()
@@ -87,9 +89,9 @@ internal static class BucketPlants
             || board.mCursorObject.CursorType != CursorType.Glove)) Clear();
         if (magnet != null || heldDrop != null)
         {
-            if (clicks < 0) { Clear(); board.ClearCursor(); return false; }
+            if (clicks < 0) { Clear(); return false; }
             if (board.mPaused) return false;
-            if (!ValidSelection) { Clear(); board.ClearCursor(); return false; }
+            if (!ValidSelection) { Clear(); return false; }
             int col = board.PixelToGridX(x, y), row = board.PixelToGridY(x, y);
             if (col < 0 || col >= 9 || row < 0 || row >= board.GetNumRows()) return false;
             var target = board.GetPlantsOnLawn(col, row).NormalPlant;
@@ -110,33 +112,42 @@ internal static class BucketPlants
                 if (ingredient != null) FusionService.CompleteFusion(created, ingredient, SelectedIdentity);
             }
             if (heldDrop is { } used) BucketDrops.Consume(used);
-            else magnet!.mMagnetItems[slot].ItemType = MagnetItemType.None;
+            else {
+                magnet!.mMagnetItems[slot].ItemType = MagnetItemType.None;
+                if (MagnetFusions.Owns(magnet)) {
+                    magnet.mTargetY = MagnetFusions.StoredLight(magnet) * 4;
+                    magnet.mLaunchRate = 0;
+                }
+            }
             Clear();
-            board.ClearCursor();
             return false;
         }
         if (board.mPaused || clicks < 0 || board.mCursorObject.CursorType != CursorType.Normal) return true;
+        return !TrySelect(board, x, y);
+    }
+    internal static bool TrySelect(Board board, int x, int y)
+    {
         if (BucketDrops.TryPick(board, x, y, out var drop))
         {
-            board.ClearCursor();
+            board.ClearCursor(ignoreControlType: true, playerIndex: 0);
             heldDrop = drop;
             board.mCursorObject.CursorType = CursorType.Glove;
-            return false;
+            return true;
         }
         int gridX = board.PixelToGridX(x, y), gridY = board.PixelToGridY(x, y);
-        if (gridX < 0 || gridX >= 9 || gridY < 0 || gridY >= board.GetNumRows()) return true;
+        if (gridX < 0 || gridX >= 9 || gridY < 0 || gridY >= board.GetNumRows()) return false;
         var plant = board.GetPlantsOnLawn(gridX, gridY).NormalPlant;
-        if (plant == null || FusionPlant.From(plant) != (FusionPlant)SeedType.Magnetshroom
-            || !ChomperFusions.Active(plant) || plant.mMagnetItems == null) return true;
+        if (plant == null || FusionPlant.From(plant) != (FusionPlant)SeedType.Magnetshroom && !MagnetFusions.Owns(plant)
+            || !ChomperFusions.Active(plant) || plant.mMagnetItems == null) return false;
         for (int i = 0; i < plant.mMagnetItems.Length; ++i)
         {
             if (!Pail(plant.mMagnetItems[i]) && !Helmet(plant.mMagnetItems[i])) continue;
-            board.ClearCursor();
+            board.ClearCursor(ignoreControlType: true, playerIndex: 0);
             magnet = plant; magnetId = plant.DataID; slot = i;
             board.mCursorObject.CursorType = CursorType.Glove;
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 }
 
@@ -162,7 +173,7 @@ internal static class BucketInitializePatch
 [HarmonyPatch(typeof(Plant), nameof(Plant.UpdateAbilities))]
 internal static class BucketHoldPatch
 {
-    private static bool Prefix(Plant __instance) => !BucketPlants.Holding(__instance);
+    private static bool Prefix(Plant __instance) => MagnetFusions.Owns(__instance) || !BucketPlants.Holding(__instance);
 }
 
 [HarmonyPatch(typeof(Board), nameof(Board.MouseDown))]

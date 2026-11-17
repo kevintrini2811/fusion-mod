@@ -1654,6 +1654,16 @@
       "name": "WeedSpreader",
       "native": "Threepeater",
       "marker": "Spikeweed"
+    },
+    {
+      "name": "MagnetBlover",
+      "native": "Magnetshroom",
+      "marker": "Blover"
+    },
+    {
+      "name": "LumosMagnet",
+      "native": "Magnetshroom",
+      "marker": "Plantern"
     }
   ],
   "reserved": [],
@@ -2041,6 +2051,10 @@
     "IsPuffJumper": [
       "NibbleShroom",
       "Squish"
+    ],
+    "IsMagnetFusion": [
+      "MagnetBlover",
+      "LumosMagnet"
     ]
   }
 }

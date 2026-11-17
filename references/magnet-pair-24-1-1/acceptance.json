@@ -1,0 +1,53 @@
+{
+  "version": "24.1.1",
+  "branch": "task/magnet-pair-resume",
+  "base": "ea0bcb0a32eda10b1c1a9957d61b59b8c12befc7",
+  "fusionDllSha256": "8aa81ad9c6d8c6c635c96ebf2d5ccb75c3e5edf2ce14b0daa88889c409cb6620",
+  "build": {
+    "warnings": 0,
+    "errors": 0
+  },
+  "offline": {
+    "magnet": 81,
+    "bucketController": 133,
+    "fusionTime": 2722,
+    "clockSave": 548,
+    "football": 70,
+    "metalDrops": 38,
+    "scaredContent": "passed"
+  },
+  "live": {
+    "prior": "V4\u2013V6 on24.1.0, ability source hashes unchanged",
+    "controller": "V8 on24.1.1, native A/B; all intended cases passed",
+    "run": "magnet-run-20261117T124019Z",
+    "exitCode": 0,
+    "controllerDigestionObservation": {
+      "tickBefore": 1692,
+      "cooldownBefore": 880,
+      "tickAfter": 1807,
+      "cooldownAfter": 765
+    },
+    "almanacTested": false
+  },
+  "reviewHashes": {
+    "controller-source-review.json": "3099b4893f399e9f9c9f4bf3bb92a312150f6df95144206d7c9452745c8f95e3",
+    "runtime-review-v8.json": "1e58a9d979ef6f29936d8da91b8aaa423d3479f8cf4749c6f5fd5cb9ca4e355a",
+    "manifest-v8.json": "5352555d477ca5018fa92025b12db09b0aa7d11158edf1327ec38b46d932aed5",
+    "joint-controller-review.json": "09921a835ddb7d98effe3516a31ef655856d4321873614dd915539a264b7eff4"
+  },
+  "sourceHashes": {
+    "BucketController.cs": "413b613386f2be6912e1373f542c1b521a759988d4895ff8f346ec23beee26e9",
+    "BucketPlants.cs": "eeaec06fc4bce73ca33fccab45a1aa4775c48edb0f2d5c68c307da5b8d1c3ada",
+    "MagnetFusions.cs": "86f5a4b7264552320ca1d8c406e169d90d4c8fca7707299e14581fda85a41c92",
+    "ImportedMagnetVisuals.cs": "0dbbb0c2ff9d2bc64d03934cbedf38f4a17fa9163f04fbcbac8d4895242d1ce8"
+  },
+  "restoration": "DLLs, mod entries, display and processes verified; profile/configuration contents equal. Native logs, API metadata, registry changes retained.",
+  "limits": [
+    "No Almanac checks",
+    "Blover lifetime bracket only, no exact death tick",
+    "No exact particle curve rendering proof",
+    "No direct native MagnetItem slot observation",
+    "Unported MagnetSystem recipients unavailable",
+    "Pointer diagnosis remains paused"
+  ]
+}

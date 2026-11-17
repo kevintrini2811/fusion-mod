@@ -6,10 +6,12 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AssemblyName>FusionMod</AssemblyName>
-    <Version>24.0.2</Version>
+    <Version>24.1.1</Version>
     <GameDir Condition="'$(GameDir)' == ''">/mnt/FastGaming1/SteamLibrary/steamapps/common/PVZ Replanted</GameDir>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="assets/magnet-blover/*" LogicalName="FusionMod.MagnetBlover.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="assets/lumos-magnet/*" LogicalName="FusionMod.LumosMagnet.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/gulper-shroom/*" LogicalName="FusionMod.GulperShroom.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/weed-spreader/*" LogicalName="FusionMod.WeedSpreader.%(Filename)%(Extension)" />
     <EmbeddedResource Include="assets/weed-spreader-projectile/*" LogicalName="FusionMod.WeedSpreaderProjectile.%(Filename)%(Extension)" />

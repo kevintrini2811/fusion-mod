@@ -6,13 +6,14 @@ namespace HarmonyLib
     [AttributeUsage(AttributeTargets.Method)] public sealed class HarmonyPriority : Attribute { public HarmonyPriority(int priority) {} }
     public static class Priority { public const int First=800, Last=0; }
     public static class AccessTools
-    { public static System.Reflection.MethodInfo Method(Type type,string name) => type.GetMethod(name)!; }
+    { public static System.Reflection.MethodInfo Method(Type type,string name) => type.GetMethod(name)!;
+      public static System.Reflection.MethodInfo Method(string name) => null!; }
 }
 namespace Il2CppReloaded.Services { public enum FoleyType { NewspaperRarrgh } public class SoundSystem { public void PlayFoley(FoleyType type) {} } public class SerializationService { public void Serialize() {} } }
 namespace Il2CppReloaded.Gameplay
 {
 
-    public enum CursorType { Normal, Glove, Shovel }
+    public enum CursorType { Normal, Glove, Shovel, PlantFromBank }
     public enum MagnetItemType { None, Pail1, Pail2, Pail3, FootballHelmet1, FootballHelmet2, FootballHelmet3, Door1 }
     public enum PlantOnBungeeState { NotOnBungee, OnBungee }
     public enum PlantState { Ready, Notready }
@@ -31,8 +32,8 @@ namespace Il2CppReloaded.Gameplay
     public enum ZombieType { Normal, TrafficCone, Pail, Boss, Zamboni, Catapult, Gargantuar, RedeyeGargantuar, Football }
     public class WidgetManager { public int[] LastMouseX=new[] { 0 }, LastMouseY=new[] { 0 }; }
     public class App { public Il2CppReloaded.Services.SoundSystem SoundSystem=new(); public WidgetManager WidgetManager=new(); public GameScenes GameScene; public GameMode GameMode; }
-    public class Cursor { public CursorType CursorType; }
-    public class MagnetItem { public MagnetItemType ItemType; }
+    public class Cursor { public CursorType CursorType; public SeedType mType=SeedType.None,mImitaterType=SeedType.None; }
+    public class MagnetItem { public MagnetItemType ItemType; public float PosX, PosY; }
     public class Lawn { public Plant? NormalPlant,UnderPlant,PumpkinPlant,FlyingPlant; }
     public class Board
     {
@@ -58,9 +59,11 @@ namespace Il2CppReloaded.Gameplay
         public int GetNumRows()=>5;
         public Lawn GetPlantsOnLawn(int col,int row)=>new(){NormalPlant=Plants.GetValueOrDefault((col,row))};
         public int PixelToGridX(int x,int y)=>x; public int PixelToGridY(int x,int y)=>y;
-        public void ClearCursor()=>mCursorObject.CursorType=CursorType.Normal;
+        public bool ControllerMode; public SeedType? AllowedPlacement;
+        public void ClearCursor(bool ignoreControlType=false,int playerIndex=0)
+        { if(!ControllerMode||ignoreControlType) mCursorObject.CursorType=CursorType.Normal; }
         public PlantingReason CanPlantAt(int col,int row,SeedType type)=>
-            Plants.TryGetValue((col,row),out var p)&&p.mIsOnBoard&&!p.mSquished&&!p.mDead ? PlantingReason.NotHere : Terrain;
+            AllowedPlacement==type ? PlantingReason.Ok : Plants.TryGetValue((col,row),out var p)&&p.mIsOnBoard&&!p.mSquished&&!p.mDead ? PlantingReason.NotHere : Terrain;
         public Plant? AddPlant(int col,int row,SeedType type,SeedType marker)
         {
             if(FailCreation) return null;
@@ -139,6 +142,36 @@ namespace Il2CppReloaded.Gameplay
         public void Update(){} public void DrawGridItem(){}
     }
 }
+
+namespace UnityEngine
+{
+    public static class Application { public static bool isFocused=true; }
+    public class GameObject { public bool activeInHierarchy=true; }
+}
+namespace Il2CppReloaded.Input
+{
+    public enum ControlType { Controller, Mouse }
+    public class ReloadedPlayerInput { public bool Paired=true; public ControlType CurrentControlType=ControlType.Controller; }
+    public class GamepadCursorInput { public bool Enabled=true; }
+    public class InputAction { public bool Pressed; public bool IsPressed()=>Pressed; }
+}
+namespace Il2CppSource.Controllers
+{
+    public class GamepadCursorController
+    {
+        public IntPtr Pointer=(IntPtr)21; public bool Alive=true;
+        public static implicit operator bool(GamepadCursorController value)=>value.Alive;
+        public UnityEngine.GameObject gameObject=new();
+        public int PlayerIndex,X=2,Y=1;
+        public Il2CppReloaded.Gameplay.Board Board=new();
+        public Il2CppReloaded.Input.GamepadCursorInput m_cursor=new();
+        public Il2CppReloaded.Input.ReloadedPlayerInput m_playerInput=new();
+        public Il2CppReloaded.Input.InputAction m_secondaryAction=new();
+        public void _updateMousePosition()
+        { Board.mApp.WidgetManager.LastMouseX[0]=X+Board.mX; Board.mApp.WidgetManager.LastMouseY[0]=Y+Board.mY; }
+        public void _onCursorConfirmed(){} public void _onCursorCancel(){} public void OnDie(){}
+    }
+}
 namespace LawnGlove
 {
     using Il2CppReloaded.Gameplay;
@@ -165,7 +198,7 @@ namespace FusionMod
             &&!p.mSquished&&!p.NotOnGround()&&p.mOnBungeeState==PlantOnBungeeState.NotOnBungee
             &&p.mApp.GameScene==GameScenes.Playing&&p.mApp.GameMode!=GameMode.ChallengeZenGarden;
     }
-    internal static class PlayerPlantingScope { internal sealed class Context { internal Board Board=new(); internal int X=0,Y=0,PlayerIndex=0; } internal static Context? Current=null; internal static void Consume(Plant p)=>p.Die(); }
+    internal static class PlayerPlantingScope { internal static IntPtr ConsumingIngredient; internal sealed class Context { internal Board Board=new(); internal int X=0,Y=0,PlayerIndex=0; } internal static Context? Current=null; internal static void Consume(Plant p)=>p.Die(); }
     internal static class CherryBombPlants { internal static IntPtr DisposingBoard; internal static void ExplodeFusion(Plant p){} }
     public class Logger { public void Error(string s){} public void Msg(string s){} }
     public class FusionMod { public static FusionMod Instance=new(); public Logger LoggerInstance=new(); }
@@ -178,3 +211,19 @@ namespace FusionMod { internal static class ThreepeaterFusions { internal static
 namespace FusionMod { internal static class IceInstantFusions { internal static void OnIceFusion(Il2CppReloaded.Gameplay.Plant plant) {} internal static void OnFusion(Il2CppReloaded.Gameplay.Plant plant) {} } }
 
 namespace FusionMod { internal static class PuffSupport { internal static bool BiteGnome(Il2CppReloaded.Gameplay.Plant plant,Il2CppReloaded.Gameplay.Zombie zombie) => false; } }
+
+namespace FusionMod {
+    internal static class PuffJumpers { internal static bool Retained(Il2CppReloaded.Gameplay.Plant plant) => false; }
+    internal static class GulperShroom { internal static bool Owns(Il2CppReloaded.Gameplay.Plant plant) => FusionPlant.From(plant) == FusionPlant.GulperShroom; }
+    // Only the range/presentation boundary is doubled in the BucketDrops suite.
+    // The actual MagnetFusions source and clock are covered separately.
+    internal static class MagnetFusions {
+        internal static bool Owns(Il2CppReloaded.Gameplay.Plant plant) => FusionPlant.IsMagnetFusion(FusionPlant.From(plant));
+        internal static int StoredLight(Il2CppReloaded.Gameplay.Plant plant) => plant.mTargetY / 4;
+        internal static bool InRange(Il2CppReloaded.Gameplay.Plant plant, float x, float y, int row, float radius, int rows) =>
+            Math.Abs(row - plant.mRow) <= rows && Math.Abs(x - plant.mX) <= radius;
+        internal static void Capture(Il2CppReloaded.Gameplay.Plant plant, Il2CppReloaded.Gameplay.MagnetItemType type, float x, float y) {
+            var item = plant.mMagnetItems[0]; item.ItemType = type; item.PosX = x; item.PosY = y;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net9.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable><NoWarn>CS0649;CS0108</NoWarn><EnableDefaultCompileItems>false</EnableDefaultCompileItems></PropertyGroup>
+  <ItemGroup>
+    <Compile Include="MagnetFusionsTests.cs" />
+    <Compile Include="FusionTimeStubs.cs" />
+    <Compile Include="MagnetFusionsBoundaryStubs.cs" />
+    <Compile Include="../src/FusionTime.cs" />
+    <Compile Include="../src/FusionNativeTimeRecords.cs" />
+    <Compile Include="../src/MagnetFusions.cs" />
+    <Compile Include="../../zombie-library/src/NativeArmorMagnet.cs" />
+  </ItemGroup>
+</Project>

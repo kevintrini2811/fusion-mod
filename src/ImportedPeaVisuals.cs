@@ -485,6 +485,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Squish, "Squish"),
         new(FusionPlant.GulperShroom, "GulperShroom"),
         new(FusionPlant.WeedSpreader, "WeedSpreader"),
+        new(FusionPlant.MagnetBlover, "MagnetBlover"),
+        new(FusionPlant.LumosMagnet, "LumosMagnet"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -609,6 +611,7 @@ internal static partial class ImportedPeaVisuals
     internal static void ForgetBoard(Board board)
     {
         ClearFalloutSplats(board);
+        ClearMagnetLights(board);
         ReportedProjectileBoards.RemoveWhere(entry => entry.Board == board.Pointer);
         foreach (var entry in ImportedProjectiles.Where(e => e.Value.Board == board.Pointer).ToArray())
         { entry.Value.Dispose(); ImportedProjectiles.Remove(entry.Key); }
@@ -619,6 +622,7 @@ internal static partial class ImportedPeaVisuals
     internal static void Update()
     {
         UpdateFalloutSplats();
+        UpdateMagnetLights();
         UpdateImportedProjectiles();
         foreach (var (key, view) in Views.ToArray())
         {
@@ -639,6 +643,7 @@ internal static partial class ImportedPeaVisuals
     internal static void Dispose()
     {
         ClearFalloutSplats();
+        ClearMagnetLights();
         foreach (var view in Views.Values) view.Dispose();
         Views.Clear();
         foreach (var view in ImportedProjectiles.Values) view.Dispose();
@@ -1019,7 +1024,7 @@ internal static partial class ImportedPeaVisuals
                 scale = (preview ? target.size.x : plantSize) / 1.35f;
             // Sea support models have no shadow reference. Their full animated
             // geometry changes with growth; use the source unit conversion.
-            if (FusionPlant.IsSeaSupport(assets.Identity) || assets.Identity == FusionPlant.SunsetShroom || assets.Identity == FusionPlant.TideShroom || assets.Identity == FusionPlant.GrappleKelp || assets.Identity == FusionPlant.Sparkwood || assets.Identity == FusionPlant.GulperShroom || assets.Identity == FusionPlant.WeedSpreader)
+            if (FusionPlant.IsMagnetFusion(assets.Identity) || FusionPlant.IsSeaSupport(assets.Identity) || assets.Identity == FusionPlant.SunsetShroom || assets.Identity == FusionPlant.TideShroom || assets.Identity == FusionPlant.GrappleKelp || assets.Identity == FusionPlant.Sparkwood || assets.Identity == FusionPlant.GulperShroom || assets.Identity == FusionPlant.WeedSpreader)
                 scale = plantSize / 1.35f;
             // DoomSeed is a small spawned spore, not a full-size Doom-shroom.
             // Keep its wrapper scale stable; only its source root grows later.
@@ -1120,6 +1125,10 @@ internal static partial class ImportedPeaVisuals
                 foreach (var part in Controller.GetComponentsInChildren<MeshRenderer>(true))
                 {
                     if (part.Pointer == native.Pointer) continue;
+                    // Native DrawMagnetItems parents its separate equipment
+                    // controllers below this plant. Hide only the plant body.
+                    if (FusionPlant.IsMagnetFusion(assets.Identity)
+                        && part.GetComponentInParent<MagnetItemController>() != null) continue;
                     if (!nativeParts.ContainsKey(part.Pointer))
                         nativeParts[part.Pointer] = (part, part.enabled);
                     part.enabled = false;
@@ -1639,6 +1648,20 @@ internal static partial class ImportedPeaVisuals
             }
             if ((FusionPlant.IsThreepeater(assets.Identity) || assets.Identity == FusionPlant.SquashSpreader) && !preview && Plant.mStartRow > 0)
                 shoot = (100 - Plant.mStartRow) * .01f;
+            if (FusionPlant.IsMagnetFusion(assets.Identity))
+            {
+                shoot = null;
+                if (!preview && assets.Identity == FusionPlant.MagnetBlover)
+                {
+                    baseClip = Plant.mTargetX < MagnetFusions.BlowDuration ? "blow" : "blowloop";
+                    baseTime = baseClip == "blow" ? Plant.mTargetX * .01f
+                        : (Plant.mTargetX - MagnetFusions.BlowDuration) * .003f;
+                }
+                else if (!preview && Plant.mStartRow > 0)
+                { baseClip = "attrack"; baseTime = Math.Min((Plant.mStartRow - 1) * .01f, model.Clips[baseClip].Duration - .00001f); }
+                else if (!preview && Plant.mLaunchCounter > 0)
+                { baseClip = "idle2"; baseTime = idle; }
+            }
             if (assets.Identity == FusionPlant.WeedSpreader)
             {
                 shoot = null;
@@ -1751,6 +1774,7 @@ internal static partial class ImportedPeaVisuals
             if (loopShooting && shoot.HasValue) shoot %= model.Clips[shootClip].Duration;
             ImportedPeaVisuals.Pose(model, transforms, baseTime, shoot, renderers, assets.Sprites, baseClip, shootClip);
             if (!preview) idle = visualClock.Sample("overlays", idle);
+            if (assets.Identity == FusionPlant.LumosMagnet && !preview) UpdateLanternShine();
             if (assets.Identity == FusionPlant.GulperShroom && !preview)
                 transforms[0].localScale *= GulperShroom.Scale(Plant);
             if (assets.Identity == FusionPlant.SeaNut && !preview)

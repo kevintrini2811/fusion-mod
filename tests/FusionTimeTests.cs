@@ -57,8 +57,10 @@ static class Program
         Check(restored.Rate == 100 && restored.Flags == 7 && restored.A == 400 && restored.B == 900
             && restored.C == 12 && restored.D == -8, "native serialized fields reconstruct provenance after cache loss");
         Check(FusionNativeTimeRecords.Entries(board, entry.Category).Length == 1, "enumeration finds exactly one persisted record");
-        var otherKind = FusionNativeTimeRecords.Get(board, FusionNativeTimeRecords.Kind.Projectile, target, 120)!;
-        Check(otherKind.Rate == 120 && board.m_gridItems.Count == 2, "entity categories do not alias");
+        Check(FusionNativeTimeRecords.Get(board, FusionNativeTimeRecords.Kind.Projectile, target, 120) == null
+            && board.m_gridItems.Count == 1, "unbound transient projectile owner cannot create a native grid record");
+        var otherKind = FusionNativeTimeRecords.Get(board, FusionNativeTimeRecords.Kind.Crater, target, 120)!;
+        Check(otherKind.Rate == 120 && board.m_gridItems.Count == 2, "native persisted entity categories do not alias");
         restored.Rate = 99;
         Check(FusionNativeTimeRecords.Get(board, entry.Category, target, 120) == null
             && board.m_gridItems.Count == 2, "invalid saved provenance is preserved without a replacement guess");

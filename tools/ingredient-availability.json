@@ -1893,6 +1893,16 @@
       "available": true,
       "identity": "FusionPlant.WeedSpreader",
       "evidence": "Implemented original ThreeSpike1064: existing Threepeater emitter and RollingProjectiles piercing owner, original saw, saved hit history and bilingual Almanac. Source and port contract: references/weed-spreader/port-notes.md; live acceptance remains tracked separately."
+    },
+    "Magnet Blover": {
+      "available": true,
+      "identity": "FusionPlant.MagnetBlover",
+      "evidence": "MagnetFusions owns the source single-item clock, wind event and lifetime; original body and action clips exported from prefab42478. Native Magnetshroom owns equipment transitions, item presentation and serialization. See references/magnet-pair-contract/report.md and references/magnet-blover/implementation-notes.md; runtime acceptance pending."
+    },
+    "Lumos Magnet": {
+      "available": true,
+      "identity": "FusionPlant.LumosMagnet",
+      "evidence": "MagnetFusions owns the source external-light ranges, digestion and local shock; original body/lightShine exported from prefab45021. Native Magnetshroom owns equipment transitions, item presentation and serialization. See references/magnet-pair-contract/report.md and references/lumos-magnet/implementation-notes.md; runtime acceptance pending."
     }
   }
 }

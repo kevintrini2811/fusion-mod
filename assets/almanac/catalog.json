@@ -4491,6 +4491,33 @@
     "Portrait": "1079.png"
   },
   {
+    "SourceId": 1100,
+    "Identity": "FusionPlant.LumosMagnet",
+    "CanonicalName": "Lumos Magnet",
+    "English": {
+      "Name": "Lumos Magnet",
+      "Info": "Lumos Magnet gains more attraction range and less cooldown time the more Lumos Levels it has, and can even deal damage!\n\nMagnet Interval: 15 Seconds (LL0) → 11 Seconds → 7.5 Seconds → 5 Seconds (LL3)\nMagnet Range (Radius): 1.5 Tiles (LL0) → 3.7 Tiles → 4.5 Tiles → 5.2 Tiles(LL3)\nLumos System: Higher Lumos Levels will significantly shorten the attraction interval and increase the attraction range. When it's Lumos Level 2, the attraction will cause 200 damage to zombies near the attraction target.",
+      "Flavor": "\"Honestly, I wish I could be a simple Magnet-shroom,\" Lumos Magnet confessed. \"That way, I wouldn't have to be in the spotlight constantly or feel the pressure of using one magnet to do the work of two.\"",
+      "Notes": "External light providers determine Lumos Level; this plant contributes no light itself. The maximum row distances at LL0/1/2/3 are 2/3/4/5. Light changes take effect after the current digestion finishes. At LL2 or higher, equipment is removed before a 200-damage shock hits nearby ground zombies on the attraction row. Fertilizer heals and shortens remaining digestion to at most 0.5 seconds without adding light or an immediate shock. Native mushroom, coffee and terrain rules apply. No projectile is fired.",
+      "Recipes": [
+        "Magnet-shroom + Plantern"
+      ]
+    },
+    "German": {
+      "Name": "Lichtmagnetpilz",
+      "Info": "Mit höherer Lichtstufe steigt die Reichweite des Lichtmagnetpilzes, während seine Verdauungszeit sinkt.\n\nVerdauung bei Lichtstufe 0/1/2/3: 15/11/7,5/5 Sekunden.\nAnziehungsradius: ungefähr 1,5/3,7/4,5/5,2 Felder.\nAb Lichtstufe 2 verursacht die Anziehung 200 Schaden an Zombies nahe dem Ziel.",
+      "Flavor": "„Ehrlich gesagt wäre ich manchmal lieber ein einfacher Magnetpilz“, gesteht der Lichtmagnetpilz. „Dann müsste ich nicht ständig im Rampenlicht stehen oder unter dem Druck arbeiten, mit einem Magneten die Arbeit von zwei Pilzen zu erledigen.“",
+      "Notes": "Externe Lichtspender bestimmen die Lichtstufe; diese Pflanze liefert selbst kein Licht. Der maximale Reihenabstand beträgt bei Lichtstufe 0/1/2/3 jeweils 2/3/4/5. Lichtänderungen wirken nach der laufenden Verdauung. Ab Lichtstufe 2 wird zuerst Metall entfernt. Danach trifft ein Schock mit 200 Schaden nahe Bodenzombies ausschließlich auf der Zielreihe. Dünger heilt und verkürzt die restliche Verdauung auf höchstens 0,5 Sekunden, erzeugt aber weder Licht noch einen sofortigen Schock. Native Pilz-, Kaffee- und Geländeregeln gelten. Feuert keine Projektile.",
+      "Recipes": [
+        "Magnetpilz + Laternenblatt"
+      ]
+    },
+    "Recipes": [
+      "Magnet-shroom + Plantern"
+    ],
+    "Portrait": "1100.png"
+  },
+  {
     "SourceId": 1195,
     "Identity": "FusionPlant.LumosPot",
     "CanonicalName": "Lumos Pot",
@@ -4543,6 +4570,33 @@
       "Plantern + Umbrella Leaf"
     ],
     "Portrait": "1185.png"
+  },
+  {
+    "SourceId": 1102,
+    "Identity": "FusionPlant.MagnetBlover",
+    "CanonicalName": "Magnet Blover",
+    "English": {
+      "Name": "Magnet Blover",
+      "Info": "Magnet Blover sucks away all the iron objects present on the lawn.\n\nSpecial: Attracts up to 10 metal objects across the whole field. Takes 1 second to process each. Lasts for 10s before disappearing.",
+      "Flavor": "The plants often call Magnet Blover \"Magneto.\" He confidently casts his favorite spell, \"Disarmament!\" at the zombies, even though he has no idea how the conversion of wind energy to magnetic energy works behind the scenes.",
+      "Notes": "The original source retains a maximum row distance of two despite its field-wide description. The wind event occurs 0.3833 seconds into the original blow animation, removes flying balloons and clears fog; disappearance follows ten seconds later. The first metal is acquired after 0.5 seconds, then one per second, without an independent count cap. Fertilizer heals and caps a positive digestion timer at 0.5 seconds without extending lifetime. Native mushroom, coffee and terrain rules apply. The source bucket offer to unported Hypno Magnet / ultimate hypno consumers is unavailable. No projectile is fired.",
+      "Recipes": [
+        "Blover + Magnet-shroom"
+      ]
+    },
+    "German": {
+      "Name": "Magnetklee",
+      "Info": "Magnetklee zieht Metallgegenstände auf dem Rasen an.\n\nVerarbeitet während seiner zehn Sekunden Lebensdauer ungefähr einen Metallgegenstand pro Sekunde. Die Quelle beschreibt bis zu zehn Gegenstände auf dem gesamten Feld.",
+      "Flavor": "Die Pflanzen nennen Magnetklee oft „Magneto“. Selbstbewusst spricht er seinen Lieblingszauber „Entwaffnung!“ gegen die Zombies, obwohl er keine Ahnung hat, wie Windenergie hinter den Kulissen in Magnetenergie umgewandelt wird.",
+      "Notes": "Der tatsächliche Quellcode begrenzt den Reihenabstand trotz der Beschreibung des gesamten Felds auf zwei. Das Windereignis liegt 0,3833 Sekunden nach Beginn der Originalanimation, entfernt fliegende Ballonzombies und vertreibt Nebel. Zehn Sekunden danach verschwindet die Pflanze. Der erste Metallgegenstand wird nach 0,5 Sekunden angezogen, weitere jeweils nach einer Sekunde, ohne unabhängige Anzahlgrenze. Dünger heilt und verkürzt eine positive Verdauungszeit auf höchstens 0,5 Sekunden, verlängert aber nicht die Lebensdauer. Native Pilz-, Kaffee- und Geländeregeln gelten. Das Eimerangebot an die nicht portierten Hypno-Magnet-Verbraucher bleibt unverfügbar. Feuert keine Projektile.",
+      "Recipes": [
+        "Wehblatt + Magnetpilz"
+      ]
+    },
+    "Recipes": [
+      "Blover + Magnet-shroom"
+    ],
+    "Portrait": "1102.png"
   },
   {
     "SourceId": 1103,
