@@ -489,6 +489,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.LumosMagnet, "LumosMagnet"),
         new(FusionPlant.PepperPopper, "BellPepper"),
         new(FusionPlant.MadPepper, "SolarFlare"),
+        new(FusionPlant.Hoverleaf, "UmbrellaCap"),
+        new(FusionPlant.DroneNut, "FrostWallNut"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -1031,11 +1033,13 @@ internal static partial class ImportedPeaVisuals
             // DoomSeed is a small spawned spore, not a full-size Doom-shroom.
             // Keep its wrapper scale stable; only its source root grows later.
             if (assets.Identity == FusionPlant.DoomSeed) scale *= .5f;
+            bool airDefense = AirDefenses.Owns(assets.Identity);
+            if (airDefense) scale *= .68f;
             if (!float.IsFinite(scale) || scale <= 0)
                 throw new InvalidDataException($"Original {assets.Name} artwork has an invalid scale.");
             root.transform.localScale = Vector3.one * scale;
             root.transform.localPosition = new Vector3(target.center.x - bounds.center.x * scale,
-                target.min.y - bounds.min.y * scale, 0);
+                target.min.y - bounds.min.y * scale + (airDefense && !preview ? plantSize * .52f : 0), 0);
             if (assets.Identity == FusionPlant.DoomSeed)
             {
                 var ground = renderers[data.GroundNode]!;
@@ -1553,6 +1557,12 @@ internal static partial class ImportedPeaVisuals
             if (!preview && assets.Identity == FusionPlant.ChompShooter && Plant.mState == PlantState.ChomperDigesting)
                 shoot = (300 - Plant.mLaunchCounter) * .01f < model.Clips["shoot"].Duration
                     ? (300 - Plant.mLaunchCounter) * .01f : null;
+            if (!preview && assets.Identity == FusionPlant.Hoverleaf && Plant.mShootingCounter > 0)
+            {
+                baseClip = "block";
+                baseTime = Math.Min((AirDefenses.BlockTicks - Plant.mShootingCounter) * .01f,
+                    model.Clips[baseClip].Duration - .00001f);
+            }
             if (!preview && FusionPlant.IsContactUmbrella(assets.Identity))
             {
                 if (Plant.mShootingCounter > 0)
@@ -2068,7 +2078,7 @@ internal static partial class ImportedPeaVisuals
             if (assets.Identity == FusionPlant.BlackCherry || assets.Identity == FusionPlant.SolarFlare || assets.Identity == FusionPlant.HypnoPepper)
                 Apply(transforms, model.Clips["shake"], idle % model.Clips["shake"].Duration, true);
             if (FusionPlant.IsEnergyNut(assets.Identity) || assets.Identity == FusionPlant.SquashNut || assets.Identity == FusionPlant.SilverNut || assets.Identity == FusionPlant.GoldenNut || assets.Identity == FusionPlant.SilverGarlic || assets.Identity == FusionPlant.HypnoGarlic || assets.Identity == FusionPlant.DoomGarlic || FusionPlant.IsReactiveNut(assets.Identity) || FusionPlant.IsSolarNut(assets.Identity) || assets.Identity == FusionPlant.BuckNut || assets.Identity == FusionPlant.CherryNut || assets.Identity == FusionPlant.PeaNut
-                || assets.Identity == FusionPlant.Chompzilla)
+                || assets.Identity == FusionPlant.Chompzilla || assets.Identity == FusionPlant.DroneNut)
             {
                 // These are original alternate bodies, not additional layers.
                 int damage = Plant.mPlantMaxHealth <= 0 ? 0

@@ -15,6 +15,7 @@ internal static class PumpkinCases
     }
     internal static void Run()
     {
+        AirDefenseCases();
         foreach (var (ingredient, result) in new[] {
             (SeedType.Peashooter, FusionPlant.PumpkinPod), (SeedType.Melonpult, FusionPlant.MelonShell),
             (SeedType.Iceshroom, FusionPlant.CryoPumpkin), (SeedType.Jalapeno, FusionPlant.PyroPumpkin),
@@ -181,5 +182,56 @@ internal static class PumpkinCases
         Check(eater.Poison == 1 && eater.mYuckyFace && eater.Damage == 0,
             "Stinky bite adds poison and starts native delayed garlic lane change");
 
+    }
+
+    private static void AirDefenseCases()
+    {
+        foreach (var (ingredient, result) in new[] {
+            (SeedType.Umbrella, FusionPlant.Hoverleaf), (SeedType.Wallnut, FusionPlant.DroneNut) })
+        {
+            Check(FusionRecipes.TryGet(SeedType.Blover, ingredient, out var first) && first == result,
+                "Blover-first air defense recipe");
+            Check(FusionRecipes.TryGet(ingredient, SeedType.Blover, out var second) && second == result,
+                "Reverse air defense recipe");
+        }
+        var leafBoard = new Board();
+        var leaf = Plant(leafBoard, FusionPlant.Hoverleaf);
+        AirDefenses.Initialize(leaf, FusionPlant.Hoverleaf);
+        Plant? found = null;
+        HoverleafUmbrellaPatch.Postfix(leafBoard, 1, 0, true, ref found);
+        Check(found == null, "Hoverleaf does not cover adjacent tile");
+        HoverleafUmbrellaPatch.Postfix(leafBoard, 0, 0, true, ref found);
+        Check(found == leaf && leaf.mShootingCounter == AirDefenses.BlockTicks, "Exact-tile umbrella fallback");
+
+        var board = new Board();
+        var drone = Plant(board, FusionPlant.DroneNut);
+        AirDefenses.Initialize(drone, FusionPlant.DroneNut);
+        var protectedPlant = Plant(board, SeedType.Peashooter);
+        var hit = PumpkinFusions.Capture(protectedPlant)!;
+        protectedPlant.mPlantHealth = -25;
+        hit.Apply();
+        Check(protectedPlant.mPlantHealth == 300 && drone.mPlantHealth == 3675,
+            "Full lethal damage redirects to air defender");
+        hit.Apply();
+        Check(drone.mPlantHealth == 3675, "One captured hit redirects once");
+        board.mPaused = true;
+        AirDefenses.Tick(drone, FusionPlant.DroneNut);
+        Check(drone.mLaunchCounter == AirDefenses.RecoveryDelay, "Pause retains damage cooldown");
+        board.mPaused = false;
+        for (int tick = 0; tick < AirDefenses.RecoveryDelay - 1; ++tick)
+            AirDefenses.Tick(drone, FusionPlant.DroneNut);
+        Check(drone.mPlantHealth == 3675, "No early recovery");
+        AirDefenses.Tick(drone, FusionPlant.DroneNut);
+        AirDefenses.Tick(drone, FusionPlant.DroneNut);
+        Check(drone.mPlantHealth == 3676, "One recovery point per two ticks");
+        AirDefenses.Tick(drone, FusionPlant.DroneNut);
+        Check(drone.mPlantHealth == 3677, "Recovery repeats at 20 ms");
+
+        hit = PumpkinFusions.Capture(protectedPlant)!;
+        drone.DataID++;
+        protectedPlant.mPlantHealth = 200;
+        hit.Apply();
+        Check(protectedPlant.mPlantHealth == 200 && drone.mPlantHealth == 3677, "Recycled protection is rejected");
+        Console.WriteLine("Air defense recipe, exact-tile fallback, damage and recovery checks passed.");
     }
 }

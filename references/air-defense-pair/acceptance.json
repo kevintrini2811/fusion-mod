@@ -1,0 +1,35 @@
+{
+  "version": "24.3.0",
+  "base": "125ad412cd8c4f1e51d84ed0c6c2f1d306b93765",
+  "branch": "task/fusion-pair-20261120-02",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "9bbc2ee0611dc8c459fafe178aa7ca08e65d3ed6dec08bc0f9c320123abf6286"
+  },
+  "testedCandidate": "f4ed0b00581ec7dceae95e2d95a8dfbe732e59bb05bf93b252f22bfd2f1810d0",
+  "versionChangeAfterRuntime": "Version metadata only. The final artifact was rebuilt after the gameplay tests.",
+  "offline": {
+    "registrationAndTargetedRecipeAvailability": "passed",
+    "documentationConsistency": "passed",
+    "starAndPumpkinHarness": "passed, including exact-tile fallback, damage transfer, defender generation, pause and regeneration"
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both ingredient orders for both recipes passed through Debug Mod plant.place. Each result shared its tile with a Sunflower.",
+    "droneNut": "Spawned at 4000 HP. Normal zombie bites reduced Drone-nut to 3584 HP and left the ground Wall-nut at 4000 HP. Drone-nut held at 3584 HP during the early interval and later recovered to 3609 HP.",
+    "hoverleaf": "An observed same-tile basketball set the block timer to 84 ticks. A basketball in the adjacent row damaged Wall-nut from 4000 to 3925 HP while the Hoverleaf timer stayed at zero.",
+    "visuals": "The active-board screenshot shows both imported models above their Sunflowers. The initial paused screenshot was inconclusive.",
+    "restoration": "All three temporary installs returned to the 24.2.0 digest. DP-3 configuration and profile hash matched the baseline. The first owned game process stopped through window close and SIGTERM. The next two stopped through the regular menu. Steam exit codes were unavailable.",
+    "logs": "pvzreplanted/.test-runs/task1-20261120-pair-02/gameplay/",
+    "adjacentHit": "The initial attempt left the leaf in the catapult lane and did not bind the target. The verified result is adjacent/0006-check.json.",
+    "activeBoardImage": "visual/0005-visual-image.json",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-02/gameplay/assessment.md"
+  },
+  "review": "Approved.",
+  "limits": [
+    "Live scenarios used a Day board. Bungee interception, Drone-nut projectile transfer and fertilizer were outside the live scenarios.",
+    "Hoverleaf uses the native umbrella attack routes. The source projectile types that lack a native umbrella route have no direct Replanted equivalent.",
+    "The game Almanac and offline Almanac catalog, portrait and image validations were excluded."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "1204": {
+    "adaptation": {
+      "info": "A flying umbrella that deflects basketballs and bungee attacks aimed at its own tile.",
+      "flavor": "",
+      "notes": "Shares a tile with a ground plant. It uses the existing Umbrella Cap artwork.",
+      "portrait": "1301.png"
+    },
+    "german": {
+      "Name": "Schwebeschirm",
+      "Info": "Ein fliegender Schirm, der Basketbälle und Bungee-Angriffe auf seinem eigenen Feld abwehrt.",
+      "Flavor": "",
+      "Notes": "Teilt das Feld mit einer Bodenpflanze. Verwendet das vorhandene Umbrella-Cap-Modell.",
+      "EnglishSha256": "62e061304bc06a13b31a8fe263de805f6d54cfdce5be8e63915ecc7975a93224"
+    }
+  },
+  "1255": {
+    "adaptation": {
+      "info": "A flying defender with 4000 toughness. It takes incoming bite and projectile damage for other plants on its tile. After ten seconds without damage, it regenerates one health every 20 milliseconds.",
+      "flavor": "",
+      "notes": "Fertilizer applies ordinary healing. The floating defender uses the existing Frost Wall-nut artwork.",
+      "portrait": "1189.png"
+    },
+    "german": {
+      "Name": "Drohnen-Nuss",
+      "Info": "Ein fliegender Verteidiger mit 4000 Zähigkeit. Er übernimmt Biss- und Projektilschaden für andere Pflanzen auf seinem Feld. Nach zehn Sekunden ohne Schaden regeneriert er alle 20 Millisekunden einen Gesundheitspunkt.",
+      "Flavor": "",
+      "Notes": "Dünger heilt wie üblich. Die schwebende Nuss verwendet das vorhandene Frost-Wall-nut-Modell.",
+      "EnglishSha256": "16e8fc1542f1ae9f4c1ed3d4d291e9aca79bfb4c74bafe41ebcdf5e137c238a0"
+    }
+  }
+}

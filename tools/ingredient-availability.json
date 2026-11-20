@@ -1913,6 +1913,16 @@
       "available": true,
       "identity": "FusionPlant.MadPepper",
       "evidence": "FusionMod recipe and behavior in src/PepperFusions.cs. Source and adaptation documented in references/pepper-pair/implementation-notes.md."
+    },
+    "Hoverleaf": {
+      "available": true,
+      "identity": "FusionPlant.Hoverleaf",
+      "evidence": "FusionMod recipe, air layer and abilities in src/AirDefenses.cs. REA source and limitations in references/air-defense-pair/implementation-notes.md."
+    },
+    "Drone-nut": {
+      "available": true,
+      "identity": "FusionPlant.DroneNut",
+      "evidence": "FusionMod recipe, air layer and abilities in src/AirDefenses.cs. REA source and limitations in references/air-defense-pair/implementation-notes.md."
     }
   }
 }

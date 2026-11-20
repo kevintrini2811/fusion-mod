@@ -15,7 +15,10 @@ from scared_content import merged_recipe_source, localized_source, content as sc
 REFERENCE = PROJECT / "references/fusion-almanac"
 OUTPUT = PROJECT / "assets/almanac"
 UPGRADES = "references/golden-bean-10-0-0/upgrades.json"
-PEPPER_PRESENTATION = "references/pepper-pair/presentation.json"
+PRESENTATION_FILES = (
+    "references/pepper-pair/presentation.json",
+    "references/air-defense-pair/presentation.json",
+)
 
 
 def plain(text):
@@ -41,11 +44,11 @@ def text_hash(text):
     return hashlib.sha256(content).hexdigest()
 
 
-def apply_pepper_presentation(project, adaptations, german):
-    data = json.loads((project / PEPPER_PRESENTATION).read_text())
-    for source_id, entry in data.items():
-        adaptations[source_id] = entry["adaptation"]
-        german["Entries"][source_id] = entry["german"]
+def apply_presentations(project, adaptations, german):
+    for file in PRESENTATION_FILES:
+        for source_id, entry in json.loads((project / file).read_text()).items():
+            adaptations[source_id] = entry["adaptation"]
+            german["Entries"][source_id] = entry["german"]
 
 
 def entry_portrait(source_id, adjustment):
@@ -117,7 +120,7 @@ def check_catalog(project, rows, names, source):
         adaptations = json.loads((reference / "adaptations.json").read_text())
         german = json.loads((reference / "translations.de.json").read_text())
         localized_source(english_source, german, project)
-        apply_pepper_presentation(project, adaptations, german)
+        apply_presentations(project, adaptations, german)
         adaptations[str(SOURCE_ID)] = scared_source(project)["adaptation"]
         localized_names = translation_names(rows, names, expected, ids, german)
         if len(entries) != len(expected) or {e["CanonicalName"] for e in entries} != set(expected):
@@ -187,7 +190,7 @@ def export():
     translated_german = json.loads((REFERENCE / "translations.de.json").read_text())
     localized_source(english, translated_german)
     adaptations = json.loads((REFERENCE / "adaptations.json").read_text())
-    apply_pepper_presentation(PROJECT, adaptations, translated_german)
+    apply_presentations(PROJECT, adaptations, translated_german)
     localized_names = translation_names(rows, names, results, ids, translated_german)
     original_path = SOURCE / "Mods/PvZ_Fusion_Translator/Dumps/LawnStrings.json"
     original = {p["seedType"]: p for p in json.loads(original_path.read_text())["plants"]}
@@ -260,7 +263,7 @@ def export():
     (REFERENCE / "original-entries.json").write_text(json.dumps(originals, ensure_ascii=False, indent=2) + "\n")
     input_paths = [PROJECT/UPGRADES, en_path, de_path, REFERENCE/"translations.de.json", REFERENCE/"PlantType.cs", REFERENCE/"adaptations.json",
                    REFERENCE/"portrait-aliases.json", Path(__file__), PROJECT/CONTENT_PATH,
-                   PROJECT/"references/scared-2-12-0/portrait.png", PROJECT/"tools/scared_content.py", PROJECT/PEPPER_PRESENTATION]
+                   PROJECT/"references/scared-2-12-0/portrait.png", PROJECT/"tools/scared_content.py", *(PROJECT/file for file in PRESENTATION_FILES)]
     manifest = dict(bundle=str(BUNDLE), bundle_sha256=sha256(BUNDLE),
                     original_almanac=str(original_path), original_sha256=sha256(original_path),
                     source_assembly_sha256=sha256(SOURCE/"MelonLoader/Il2CppAssemblies/Assembly-CSharp.dll"),

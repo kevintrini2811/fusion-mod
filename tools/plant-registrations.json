@@ -1676,6 +1676,18 @@
       "native": "Jalapeno",
       "marker": "Doomshroom",
       "model": "SolarFlare"
+    },
+    {
+      "name": "Hoverleaf",
+      "native": "Blover",
+      "marker": "Umbrella",
+      "model": "UmbrellaCap"
+    },
+    {
+      "name": "DroneNut",
+      "native": "Blover",
+      "marker": "Wallnut",
+      "model": "FrostWallNut"
     }
   ],
   "reserved": [],

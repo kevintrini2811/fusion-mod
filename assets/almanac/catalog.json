@@ -2121,6 +2121,33 @@
     "Portrait": "1213.png"
   },
   {
+    "SourceId": 1255,
+    "Identity": "FusionPlant.DroneNut",
+    "CanonicalName": "Drone-nut",
+    "English": {
+      "Name": "Drone-nut",
+      "Info": "A flying defender with 4000 toughness. It takes incoming bite and projectile damage for other plants on its tile. After ten seconds without damage, it regenerates one health every 20 milliseconds.",
+      "Flavor": "",
+      "Notes": "Fertilizer applies ordinary healing. The floating defender uses the existing Frost Wall-nut artwork.",
+      "Recipes": [
+        "Blover + Wall-nut"
+      ]
+    },
+    "German": {
+      "Name": "Drohnen-Nuss",
+      "Info": "Ein fliegender Verteidiger mit 4000 Zähigkeit. Er übernimmt Biss- und Projektilschaden für andere Pflanzen auf seinem Feld. Nach zehn Sekunden ohne Schaden regeneriert er alle 20 Millisekunden einen Gesundheitspunkt.",
+      "Flavor": "",
+      "Notes": "Dünger heilt wie üblich. Die schwebende Nuss verwendet das vorhandene Frost-Wall-nut-Modell.",
+      "Recipes": [
+        "Wehblatt + Wall-Nuss"
+      ]
+    },
+    "Recipes": [
+      "Blover + Wall-nut"
+    ],
+    "Portrait": "1189.png"
+  },
+  {
     "SourceId": 1005,
     "Identity": "FusionPlant.ExplodeOShooter",
     "CanonicalName": "Explode-o-shooter",
@@ -3613,6 +3640,33 @@
       "Potato Mine + Torchwood"
     ],
     "Portrait": "1421.png"
+  },
+  {
+    "SourceId": 1204,
+    "Identity": "FusionPlant.Hoverleaf",
+    "CanonicalName": "Hoverleaf",
+    "English": {
+      "Name": "Hoverleaf",
+      "Info": "A flying umbrella that deflects basketballs and bungee attacks aimed at its own tile.",
+      "Flavor": "",
+      "Notes": "Shares a tile with a ground plant. It uses the existing Umbrella Cap artwork.",
+      "Recipes": [
+        "Blover + Umbrella Leaf"
+      ]
+    },
+    "German": {
+      "Name": "Schwebeschirm",
+      "Info": "Ein fliegender Schirm, der Basketbälle und Bungee-Angriffe auf seinem eigenen Feld abwehrt.",
+      "Flavor": "",
+      "Notes": "Teilt das Feld mit einer Bodenpflanze. Verwendet das vorhandene Umbrella-Cap-Modell.",
+      "Recipes": [
+        "Wehblatt + Schirmblatt"
+      ]
+    },
+    "Recipes": [
+      "Blover + Umbrella Leaf"
+    ],
+    "Portrait": "1301.png"
   },
   {
     "SourceId": 1452,

@@ -23,7 +23,7 @@ namespace Il2CppReloaded.Gameplay {
     public enum CoinMotion { FromPlant }
     public class CoinController { public SeedType SeedType; }
     public class Coin { public SeedType mUsableSeedType; public CoinController? mController; }
-    public class Lawn { public Plant? NormalPlant,PumpkinPlant; }
+    public class Lawn { public Plant? NormalPlant,PumpkinPlant,FlyingPlant; }
     public enum GameScenes { Playing }
     public class App { public GameScenes GameScene = GameScenes.Playing; public SoundSystem SoundSystem = new(); public int Effects; public void AddTodParticle(float x,float y,int order,ParticleEffect effect) => ++Effects; }
     public class Board {
@@ -39,7 +39,16 @@ namespace Il2CppReloaded.Gameplay {
         public int GridToPixelX(int col,int row) => col*80; public int GridToPixelY(int col,int row) => row*100;
         public int Cards;
         public Coin? AddCoin(float x,float y,CoinType type,CoinMotion motion) { if(FailAllocation)return null; ++Cards;return new Coin(); }
-        public Lawn GetPlantsOnLawn(int col,int row) => new() { NormalPlant=m_plants.FirstOrDefault(p=>!p.mDead&&p.mPlantCol==col&&p.mRow==row&&p.mSeedType!=SeedType.Pumpkinshell),PumpkinPlant=m_plants.FirstOrDefault(p=>!p.mDead&&p.mPlantCol==col&&p.mRow==row&&p.mSeedType==SeedType.Pumpkinshell) };
+        public Lawn GetPlantsOnLawn(int col,int row)
+        {
+            var occupants = m_plants.Where(p => !p.mDead && p.mPlantCol == col && p.mRow == row);
+            return new Lawn {
+                NormalPlant = occupants.FirstOrDefault(p => p.mSeedType != SeedType.Pumpkinshell && !FusionMod.AirDefenses.Owns(FusionMod.FusionPlant.From(p))),
+                PumpkinPlant = occupants.FirstOrDefault(p => p.mSeedType == SeedType.Pumpkinshell),
+                FlyingPlant = occupants.FirstOrDefault(p => FusionMod.AirDefenses.Owns(FusionMod.FusionPlant.From(p)))
+            };
+        }
+        public Plant? FindUmbrellaPlant(int col, int row) => null;
         public bool StageHasFog() => true;
         public FogArray? mGridCelFog;
         public Zombie? AddZombieAtCell(ZombieType type,int col,int row) {
@@ -61,7 +70,10 @@ namespace Il2CppReloaded.Gameplay {
     public class FogArray { public IntPtr Pointer; public T Cast<T>() where T:new()=>new(); }
     public enum CursorType { Normal, Shovel }
     public class Cursor { public CursorType CursorType; }
+    public enum PlantState { Ready, UmbrellaTriggered }
     public class Plant {
+        public PlantState mState;
+        public void UpdateReanimColor() {}
         private static uint next = 100; public uint DataID = ++next; public IntPtr Pointer => (IntPtr)DataID;
         public Board mBoard = null!; public SeedType mSeedType,mImitaterType;
         public int mPlantHealth=300,mPlantMaxHealth=300,mDoSpecialCountdown,mStartRow,mShootingCounter,mTargetX,mTargetY,mLaunchCounter,mLaunchRate;
@@ -116,6 +128,11 @@ namespace FusionMod {
         }
     }
 
+    internal static class ScaredContent { internal static bool Playing(Board? board) => board?.mApp.GameScene == GameScenes.Playing; }
+    internal static class GulperShroom {
+        internal static bool Low(Plant plant) => FusionPlant.From(plant) == FusionPlant.GulperShroom
+            && Math.Clamp(plant.mTargetX, 0, 3) - (plant.mTargetY > 0 ? 1 : 0) < 2;
+    }
     internal static class ChomperFusions { internal static bool Active(Plant p) => !p.mDead&&!p.Carried&&p.mIsOnBoard&&!p.mBoard.mPaused; }
     internal static class CherryBombPlants {
         internal sealed record Death(Board Board,FusionPlant Identity,uint Id,int Col,int Row,float X,float Y,int Order);

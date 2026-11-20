@@ -1,4 +1,4 @@
-# Fusion Mod 24.2.0
+# Fusion Mod 24.3.0
 
 Version 24.1.1 adds controller interaction for captured metal. Confirm (A on Xbox) picks up a magnet's bucket or football helmet when the selected card cannot plant, repair or fuse on that tile; confirm places or uses the metal. Cancel (B on Xbox) releases the selection without consuming it or using the shovel. Existing player bindings and the native controller cursor determine the buttons and target position. The selected magnet fusion keeps its natural digestion clock. Focused controller acceptance is complete; see the [pair acceptance record](references/magnet-pair-24-1-1/acceptance.md).
 
@@ -2476,9 +2476,13 @@ Installation: `Mods/FusionMod.dll`, version 0.1.30. Dismantling when the game is
 
 Pepper Popper rolls down its row after a one-second fuse and deals 300 damage in small cherry blasts on zombie contact. M.A.D. Pepper waits for a click, controller confirm or crush. Its row fire and doom blasts deal 1800 ash damage each. Occupied tiles in that row are sacrificed for additional blasts and can return usable seed packets. [Implementation and source evidence](references/pepper-pair/implementation-notes.md)
 
+## Hoverleaf and Drone-nut
+
+Both defenders occupy the air slot. Hoverleaf deflects basketballs and bungees aimed at its tile. Drone-nut takes bite and projectile damage for plants below and regenerates one health point every 20 milliseconds after ten seconds without damage. [Implementation and source evidence](references/air-defense-pair/implementation-notes.md)
+
 ## List
 
-`fusionen.txt` contains **272 open recipes** with **214 result plants** in the format:
+`fusionen.txt` contains **270 open recipes** with **212 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2902,6 +2906,8 @@ Sea-shroom | Chomper | Gulper-shroom
 Spikeweed | Threepeater | Weed-spreader
 Cherry Bomb | Jalapeno | Pepper Popper
 Doom-shroom | Jalapeno | M.A.D. Pepper
+Blover | Umbrella Leaf | Hoverleaf
+Blover | Wall-nut | Drone-nut
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

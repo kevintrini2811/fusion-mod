@@ -237,31 +237,41 @@ internal static class PumpkinFusions
         internal readonly Plant Plant, Shell;
         internal readonly uint Id, ShellId;
         internal readonly int Health;
-        internal readonly bool Armor;
+        internal readonly bool Armor, Drone;
         internal bool Eating;
         internal bool Applied;
         internal Hit(Plant plant, Plant shell)
         {
             Plant = plant; Shell = shell; Id = plant.DataID; ShellId = shell.DataID;
-            Health = plant.mPlantHealth; Armor = Armored(shell);
+            Health = plant.mPlantHealth;
+            Drone = AirDefenses.IsDrone(shell);
+            Armor = !Drone && Armored(shell);
         }
         internal void Apply()
         {
             if (Applied || Plant.DataID != Id || Shell.DataID != ShellId
-                || Plant.mBoard?.Pointer != Shell.mBoard?.Pointer || Plant.mPlantHealth >= Health) return;
+                || Plant.mBoard?.Pointer != Shell.mBoard?.Pointer || Plant.mPlantHealth >= Health
+                || Drone && Plant.Pointer != Shell.Pointer && !ChomperFusions.Active(Shell)) return;
             Applied = true;
             int damage = Health - Plant.mPlantHealth;
             if (Plant.Pointer == Shell.Pointer)
-                Plant.mPlantHealth = Health - (Armor ? damage / 2 : damage);
+            {
+                if (Drone) Shell.mLaunchCounter = AirDefenses.RecoveryDelay;
+                else Plant.mPlantHealth = Health - (Armor ? damage / 2 : damage);
+            }
             else
             {
                 // Eligibility belongs to the pre-hit snapshot. Lethal damage
                 // still redirects, even when the shell cannot survive it.
                 Plant.mPlantHealth = Health;
-                Shell.mPlantHealth -= PotDefense.Damage(Shell, Armor ? damage / 2 : damage);
                 if (Current != null)
                     foreach (var shellHit in Current.Where(hit => hit.Plant.Pointer == Shell.Pointer)) shellHit.Applied = true;
-                if (Shell.mPlantHealth <= 0 && !Shell.mDead) Shell.Die();
+                if (Drone) AirDefenses.TakeRedirectedDamage(Shell, damage);
+                else
+                {
+                    Shell.mPlantHealth -= PotDefense.Damage(Shell, Armor ? damage / 2 : damage);
+                    if (Shell.mPlantHealth <= 0 && !Shell.mDead) Shell.Die();
+                }
             }
         }
     }
@@ -269,8 +279,13 @@ internal static class PumpkinFusions
     internal static Hit? Capture(Plant plant)
     {
         if (!ChomperFusions.Active(plant) || plant.mPlantHealth <= 0) return null;
-        if (FusionPlant.From(plant) == FusionPlant.PuffKin) return new(plant, plant);
-        var shell = plant.mBoard.GetPlantsOnLawn(plant.mPlantCol, plant.mRow).PumpkinPlant;
+        var identity = FusionPlant.From(plant);
+        if (identity == FusionPlant.DroneNut) return new(plant, plant);
+        var layers = plant.mBoard.GetPlantsOnLawn(plant.mPlantCol, plant.mRow);
+        if (layers.FlyingPlant is { } drone && drone.Pointer != plant.Pointer && AirDefenses.IsDrone(drone)
+            && ChomperFusions.Active(drone)) return new(plant, drone);
+        if (identity == FusionPlant.PuffKin) return new(plant, plant);
+        var shell = layers.PumpkinPlant;
         return shell != null && shell.Pointer != plant.Pointer && ChomperFusions.Active(shell)
             && FusionPlant.From(shell) == FusionPlant.PuffKin && Protects(shell) ? new(plant, shell) : null;
     }
