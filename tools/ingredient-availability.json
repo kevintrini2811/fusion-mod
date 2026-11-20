@@ -2023,6 +2023,16 @@
       "available": true,
       "identity": "FusionPlant.CryonicShroom",
       "evidence": "Registers both source recipe orders, native Ice-shroom freeze, and a friendly frost Tall-nut zombie or pool Buckethead. See references/transmutation-pair/implementation-notes.md."
+    },
+    "Curse-shroom": {
+      "available": true,
+      "identity": "FusionPlant.CurseShroom",
+      "evidence": "Registers both source recipe orders and binds a Doom burst to the hypnotized biter. See references/hypno-bite-pair/implementation-notes.md."
+    },
+    "Zodiac-shroom": {
+      "available": true,
+      "identity": "FusionPlant.ZodiacShroom",
+      "evidence": "Registers both source recipe orders and emits rotating sea-star salvos from the hypnotized biter. See references/hypno-bite-pair/implementation-notes.md."
     }
   }
 }

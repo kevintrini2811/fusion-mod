@@ -13,6 +13,7 @@
     <Compile Include="../src/FusionRecipes.cs" />
     <Compile Include="../src/DoomFusions.cs" />
     <Compile Include="../src/EmberEffects.cs" />
+    <Compile Include="../src/HypnoBiteEffects.cs" />
     <Compile Include="../src/PotatoSeedProjectiles.cs" />
     <Compile Include="../src/DoomEffects.cs" />
   </ItemGroup>

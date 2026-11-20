@@ -41,6 +41,12 @@ internal static class HypnoticTransmutations
         if (plant == null || plant.mBoard?.Pointer != board.Pointer || plant.mIsAsleep
             || !ChomperFusions.Active(plant)) return false;
         var identity = FusionPlant.From(plant);
+        if (identity == FusionPlant.CurseShroom || identity == FusionPlant.ZodiacShroom)
+        {
+            if (biter.mZombieType is not (ZombieType.Boss or ZombieType.Gravestone or ZombieType.Target))
+                HypnoBiteEffects.Attach(plant, biter, identity == FusionPlant.CurseShroom);
+            return true;
+        }
         bool cryonic = identity == FusionPlant.CryonicShroom;
         if (!cryonic && identity != FusionPlant.CatalystShroom) return false;
         if (biter.mZombieType is ZombieType.Boss or ZombieType.Gravestone or ZombieType.Target) return true;

@@ -513,6 +513,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.CometShroom, "SilverHypnoShroom"),
         new(FusionPlant.CatalystShroom, "SilverHypnoShroom"),
         new(FusionPlant.CryonicShroom, "SilverHypnoShroom"),
+        new(FusionPlant.CurseShroom, "SilverHypnoShroom"),
+        new(FusionPlant.ZodiacShroom, "SilverHypnoShroom"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;

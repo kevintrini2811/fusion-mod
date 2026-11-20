@@ -1,0 +1,57 @@
+{
+  "status": "Approved",
+  "releaseVersion": "24.14.0",
+  "releaseSha256": "8d94c1e5b0259881794f87e9a44aafdbd6c016fb58515659bd0a4e1db03212ec",
+  "candidateVersion": "24.13.0",
+  "candidateSha256": "e70d1889fb947c8fc841f414b5a9a246b2217c1c30e1cc17cc99687164d3c1d7",
+  "baselineCommit": "ba5b56f14ca66d0983eb7dc90069b6bc642acd65",
+  "debugVersion": "1.3.34",
+  "gameplayEvidenceRoot": "task1-20261121-pair-13/gameplay",
+  "checks": {
+    "recipes": "Both orders of Hypno-shroom with Doom-shroom and Starfruit",
+    "curseDeath": {
+      "damage": 1800,
+      "crater": [
+        5,
+        2
+      ],
+      "evidence": "0013-bite-Doomshroom.json, 0016-curse-after-hit.json, 0017-check.json, 0018-check.json"
+    },
+    "curseExit": {
+      "lastAliveX": 843.0562,
+      "lastAliveHealth": 10000,
+      "crater": [
+        8,
+        2
+      ],
+      "evidence": "exit-and-cancel/0002-edge-samples.json, exit-and-cancel/0003-check.json"
+    },
+    "zodiacCompletion": {
+      "highestObservedSalvoIndex": 59,
+      "observedProjectiles": 250,
+      "directionCount": 18,
+      "offlineProjectiles": 300,
+      "evidence": "0022-zodiac-samples.json, 0023-check.json"
+    },
+    "zodiacEarlyDeath": {
+      "indexBeforeHit": 16,
+      "projectilesAfterHit": 20,
+      "projectilesOneSecondLater": 0,
+      "evidence": "exit-and-cancel/0005-cancel-before.json, exit-and-cancel/0008-check.json"
+    },
+    "offline": [
+      "DoomFusionsTests",
+      "StarFusionsTests",
+      "registrations --check"
+    ]
+  },
+  "postflight": [
+    "postflight-independent.json",
+    "exit-and-cancel/postflight-independent.json"
+  ],
+  "limits": [
+    "The release updates version metadata after gameplay acceptance.",
+    "Live samples captured 250 distinct stars. Offline tests counted all 300.",
+    "The cancellation observation ended after all previous stars had expired."
+  ]
+}

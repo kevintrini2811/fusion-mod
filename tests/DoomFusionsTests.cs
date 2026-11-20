@@ -10,7 +10,7 @@ static class DoomFusionsTests
     { var z=new Zombie {mBoard=b,X=x,Y=y,mRow=2}; b.m_zombies.Add(z); return z; }
     static void Main()
     {
-        Recipes(); Growth(); Fragments(); Ember(); DeathSafety();
+        Recipes(); Growth(); Fragments(); Ember(); DeathSafety(); HypnoBitePayloads();
         Console.WriteLine("Doom fusion cases passed.");
     }
     static void Recipes()
@@ -81,5 +81,67 @@ static class DoomFusionsTests
         Check(EmberEffects.Apply(z),"marker");foreach(var item in b.m_gridItems)item.mBoard=b;
         CherryBombPlants.DisposingBoard=b.Pointer;var death=EmberEffects.Capture(z);
         Check(death==null,"teardown has no explosion");CherryBombPlants.DisposingBoard=IntPtr.Zero;
+    }
+
+    static void HypnoBitePayloads()
+    {
+        foreach (var (ingredient, identity) in new[] {
+            (SeedType.Doomshroom, FusionPlant.CurseShroom), (SeedType.Starfruit, FusionPlant.ZodiacShroom) })
+        {
+            Check(FusionRecipes.TryGet(ingredient, SeedType.Hypnoshroom, out var forward) && forward == identity,
+                "hypno recipe in forward order");
+            Check(FusionRecipes.TryGet(SeedType.Hypnoshroom, ingredient, out var reverse) && reverse == identity,
+                "hypno recipe in reverse order");
+        }
+
+        var curseBoard = new Board();
+        var curse = Plant(curseBoard, FusionPlant.CurseShroom);
+        var ally = Zombie(curseBoard);
+        var target = Zombie(curseBoard, 300, 200);
+        ally.ResistsHypnosis = true;
+        HypnoBiteEffects.Attach(curse, ally, curse: true);
+        Check(!curse.mDead && !ally.mMindControlled && curseBoard.m_gridItems.All(item => item.mDead),
+            "hypnosis refusal retains the plant and retires its payload");
+        ally.ResistsHypnosis = false;
+        HypnoBiteEffects.Attach(curse, ally, curse: true);
+        var death = HypnoBiteEffects.Capture(ally);
+        Check(curse.mDead && ally.mMindControlled && !EmberEffects.Has(ally) && death != null,
+            "curse marks the same ally independently from ember");
+        HypnoBiteEffects.Explode(death);
+        Check(target.Received == 0, "a live curse carrier does not detonate");
+        ally.Dying = true;
+        HypnoBiteEffects.Explode(death);
+        HypnoBiteEffects.Explode(death);
+        Check(target.Received == 1800 && curseBoard.m_gridItems.Count(item =>
+            item.mGridItemType == GridItemType.Crater && item.mGridX == 3 && item.mGridY == 2) == 1,
+            "curse detonates once and craters the death tile");
+
+        var zodiacBoard = new Board();
+        var zodiac = Plant(zodiacBoard, FusionPlant.ZodiacShroom);
+        var shooter = Zombie(zodiacBoard);
+        HypnoBiteEffects.Attach(zodiac, shooter, curse: false);
+        var scheduler = zodiacBoard.m_gridItems.Single();
+        Check(zodiac.mDead && shooter.mMindControlled && zodiacBoard.Stars.Select(shot => shot.Angle)
+            .SequenceEqual(new float[] { 0, 60, 120, 180, 240 }), "first five stars launch immediately");
+        zodiacBoard.mPaused = true;
+        HypnoBiteEffects.Tick(scheduler);
+        Check(scheduler.mGridItemCounter == 10, "paused board preserves the salvo countdown");
+        zodiacBoard.mPaused = false;
+        for (int step = 0; step < 9; ++step) HypnoBiteEffects.Tick(scheduler);
+        Check(zodiacBoard.Stars.Count == 5, "no early second salvo");
+        HypnoBiteEffects.Tick(scheduler);
+        Check(zodiacBoard.Stars[5].Angle == 20, "second salvo rotates after ten source ticks");
+        for (int step = 0; step < 580; ++step) HypnoBiteEffects.Tick(scheduler);
+        Check(scheduler.mDead && zodiacBoard.Stars.Count == 300 && zodiacBoard.Stars.All(shot =>
+            shot.Damage == 20 && shot.Family == 6), "exactly sixty sea-star salvos then retire");
+
+        var orphan = Plant(zodiacBoard, FusionPlant.ZodiacShroom);
+        var recycled = Zombie(zodiacBoard);
+        HypnoBiteEffects.Attach(orphan, recycled, curse: false);
+        var orphanedRecord = zodiacBoard.m_gridItems.Last();
+        recycled.DataID += 100;
+        HypnoBiteEffects.Tick(orphanedRecord);
+        Check(orphanedRecord.mDead && zodiacBoard.Stars.Count == 305,
+            "a reused zombie slot cannot inherit a salvo schedule");
     }
 }

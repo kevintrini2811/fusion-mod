@@ -367,6 +367,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant CometShroom = new(SeedType.Sunflower, SeedType.Hypnoshroom);
     internal static readonly FusionPlant CatalystShroom = new(SeedType.Hypnoshroom, SeedType.Cherrybomb);
     internal static readonly FusionPlant CryonicShroom = new(SeedType.Hypnoshroom, SeedType.Iceshroom);
+    internal static readonly FusionPlant CurseShroom = new(SeedType.Hypnoshroom, SeedType.Doomshroom);
+    internal static readonly FusionPlant ZodiacShroom = new(SeedType.Hypnoshroom, SeedType.Starfruit);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -707,7 +709,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == Starglow || plant == FrostburnWood || plant == DoomPult ||
         plant == Bombrella || plant == Levitater || plant == AnchorShroom ||
         plant == OrcaShroom || plant == TrippyShroom || plant == CometShroom ||
-        plant == CatalystShroom || plant == CryonicShroom;
+        plant == CatalystShroom || plant == CryonicShroom || plant == CurseShroom ||
+        plant == ZodiacShroom;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1070,6 +1073,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Sunflower, SeedType.Hypnoshroom) => CometShroom,
             (SeedType.Hypnoshroom, SeedType.Cherrybomb) => CatalystShroom,
             (SeedType.Hypnoshroom, SeedType.Iceshroom) => CryonicShroom,
+            (SeedType.Hypnoshroom, SeedType.Doomshroom) => CurseShroom,
+            (SeedType.Hypnoshroom, SeedType.Starfruit) => ZodiacShroom,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

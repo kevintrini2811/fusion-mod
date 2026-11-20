@@ -1,4 +1,6 @@
-# Fusion Mod 24.13.0
+# Fusion Mod 24.14.0
+
+Version 24.14.0 adds Curse-shroom and Zodiac-shroom in both recipe orders. Curse-shroom hypnotizes its biter and leaves a Doom crater when that zombie dies or leaves the lawn. Zodiac-shroom hypnotizes its biter and launches rotating salvos of five sea stars while that zombie lives. [Implementation notes](references/hypno-bite-pair/implementation-notes.md) and [gameplay acceptance](references/hypno-bite-pair/acceptance.json).
 
 Version 24.13.0 adds Torch Driftwood and Torch-kelp. Place Torchwood on Sea-shroom for Driftwood or on Tangle Kelp for Torch-kelp. Both convert friendly projectiles in their water lane. Driftwood summons a roasted Sea-shroom after 51 conversions. Further batches strengthen the same child. Torch-kelp summons Roasted Kelp after 101 conversions and keeps its native grab. [Implementation notes](references/aquatic-torches/implementation-notes.md) and [gameplay acceptance](references/aquatic-torches/acceptance.json).
 
@@ -2508,7 +2510,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **250 open recipes** with **192 result plants** in the format:
+`fusionen.txt` contains **248 open recipes** with **190 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2954,6 +2956,8 @@ Cherry Bomb | Magnet-shroom | Grenadier Magnet
 Magnet-shroom | Sunflower | Solar Magnet
 Sea-shroom | Torchwood | Torch Driftwood
 Tangle Kelp | Torchwood | Torch-kelp
+Doom-shroom | Hypno-shroom | Curse-shroom
+Hypno-shroom | Starfruit | Zodiac-shroom
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

@@ -24,10 +24,13 @@ namespace Il2CppReloaded.Gameplay {
  public enum FoleyType { Explosion, JalapenoIgnite }
  [Flags] public enum DamageRangeFlags { Ground=1, Flying=2, Submerged=4, Dog=8, OffGround=16, Underground=32 }
  [Flags] public enum DamageFlags { HitsShieldAndBody=1, DoesntLeaveBody=2 }
- public readonly record struct Rect(float xMin, float yMin, float xMax, float yMax);
+ public readonly record struct Rect(float xMin, float yMin, float xMax, float yMax) {
+  public (float x, float y) center => ((xMin+xMax)/2, (yMin+yMax)/2);
+ }
  public sealed class Sounds { public void PlayFoley(FoleyType type) {} }
  public sealed class App {
   public GameScenes GameScene = GameScenes.Playing; public GameMode GameMode; public Sounds SoundSystem = new();
+  public Board Board = null!;
   public void AddTodParticle(float x,float y,int order,ParticleEffect effect) { }
  }
  public sealed class Pool<T> : List<T> where T : new() {
@@ -37,6 +40,8 @@ namespace Il2CppReloaded.Gameplay {
   public IntPtr Pointer=(IntPtr)1; public bool mPaused; public App mApp=new(); public int mPlantsEaten, Sun;
   public List<Plant> m_plants=new(); public List<Zombie> m_zombies=new(); public Pool<GridItem> m_gridItems=new();
   public List<Projectile> Shots=new(); public bool FailAllocation;
+  public List<(float Angle, int Damage, int Family)> Stars = new();
+  public Board() { mApp.Board = this; }
   public int Rand(int n)=>0; public int GetNumRows()=>5;
   public (Plant? NormalPlant, Plant? PumpkinPlant) GetPlantsOnLawn(int col,int row) =>
    (m_plants.FirstOrDefault(p=>!p.mDead && p.mIsOnBoard && p.mPlantCol==col && p.mRow==row),null);
@@ -50,6 +55,7 @@ namespace Il2CppReloaded.Gameplay {
    var p=new Projectile {mBoard=this,mPosX=x,mPosY=y,mRow=row,mProjectileType=type};Shots.Add(p);return p;
   }
   public int GridToPixelX(int col,int row)=>80*col; public int GridToPixelY(int col,int row)=>100*row;
+  public int PixelToGridX(int x,int y)=>x/80;
   public void AddCoin(float x,float y,CoinType type,CoinMotion motion)=>Sun+=25;
   public GridItem AddACrater(int col,int row) {var g=new GridItem {mGridItemType=GridItemType.Crater,mGridX=col,mGridY=row,mBoard=this};m_gridItems.Add(g);return g;}
   public void ShakeBoard(int x,int y) { }
@@ -68,7 +74,7 @@ namespace Il2CppReloaded.Gameplay {
  }
  public sealed class Zombie {
   private static uint next; public uint DataID=++next; public IntPtr Pointer; public Board mBoard=null!;
-  public bool mDead,mMindControlled,Dying; public ZombieType mZombieType; public int mBodyHealth=10000,mRow,mRenderOrder,mYuckyFaceCounter;
+  public bool mDead,mMindControlled,Dying,ResistsHypnosis; public ZombieType mZombieType; public int mBodyHealth=10000,mRow,mRenderOrder,mYuckyFaceCounter;
   public float X,Y; public int Received; public DamageRangeFlags Category=DamageRangeFlags.Ground;
   public Zombie() {Pointer=(IntPtr)DataID;}
   public bool IsDeadOrDying()=>Dying || mBodyHealth<=0;
@@ -78,9 +84,12 @@ namespace Il2CppReloaded.Gameplay {
   public void RemoveColdEffects() {} public void ApplyBurn() {} public void DieWithLoot() {} public void DieNoLoot() {} public void Update() {} public void EatPlant() {}
  }
  public sealed class GridItem {
+  private static uint next;
+  public uint DataID=++next;
+  public IntPtr Pointer => (IntPtr)DataID;
   public Board mBoard=null!; public bool mDead; public GridItemType mGridItemType; public GridItemState mGridItemState;
   public int mSunCount,mGridX,mGridY,mGridItemCounter; public SeedType mSeedType;public float mX,mY,mPosX,mPosY;
-  public void Init(App app,GridItemType type) {mGridItemType=type;}
+  public void Init(App app,GridItemType type) {mBoard=app.Board;mGridItemType=type;}
   public void GridItemDie()=>mDead=true; public void Update(){} public void DrawGridItem(){}
  }
  public sealed class Projectile {
@@ -92,7 +101,18 @@ namespace Il2CppReloaded.Gameplay {
 }
 namespace FusionMod {
  using Il2CppReloaded.Gameplay;
- internal static class PlayerPlantingScope {internal static object? Current;internal static IntPtr ConsumingIngredient=IntPtr.Zero;}
+ internal static class PlayerPlantingScope {
+  internal static object? Current;internal static IntPtr ConsumingIngredient=IntPtr.Zero;
+  internal static void Consume(Plant plant) => plant.Die();
+ }
+ internal static class ChomperFusions { internal static bool Active(Plant plant) => MineFusions.Active(plant); }
+ internal static class HypnoPlants {
+  internal static bool MindControl(Zombie zombie) => !zombie.ResistsHypnosis && (zombie.mMindControlled = true);
+ }
+ internal static class StarProjectiles {
+  internal static void Spawn(Board board,float x,float y,int order,int row,int family,float angle,float speed,int damage) =>
+   board.Stars.Add((angle,damage,family));
+ }
  internal static class FusionService {
   internal static PlantingReason CheckNativePlacement(Board b,int c,int r,SeedType t)=>
    b.m_gridItems.Any(g=>!g.mDead && g.mGridItemType==GridItemType.Crater && g.mGridX==c && g.mGridY==r) ? PlantingReason.NotHere : PlantingReason.Ok;
@@ -122,7 +142,7 @@ namespace FusionMod {
   internal static bool Eligible(Board b,Zombie z,DamageRangeFlags flags)=>!z.mDead && !z.IsDeadOrDying() && !z.mMindControlled && z.EffectedByDamage(flags);
  }
  internal static class ImportedPeaVisuals {internal static void EnsurePotatoSeedProjectile(Projectile p) {}}
- internal static class ScaredContent {internal static bool Playing(Board b)=>b.mApp.GameScene==GameScenes.Playing && b.Pointer!=CherryBombPlants.DisposingBoard;}
+ internal static class ScaredContent {internal static bool Playing(Board? b)=>b!=null && b.mApp.GameScene==GameScenes.Playing && b.Pointer!=CherryBombPlants.DisposingBoard;}
  internal static class BloverEffects {internal static bool Reserve(Zombie z,bool cryo)=>true;}
  internal static class PoisonShooters {internal static void PoisonBite(Board b,Zombie z) {}}
  internal static class BucketPlants {internal static bool IsDropIngredient(FusionPlant p)=>false;}

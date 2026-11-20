@@ -1820,6 +1820,18 @@
       "native": "Hypnoshroom",
       "marker": "Iceshroom",
       "model": "SilverHypnoShroom"
+    },
+    {
+      "name": "CurseShroom",
+      "native": "Hypnoshroom",
+      "marker": "Doomshroom",
+      "model": "SilverHypnoShroom"
+    },
+    {
+      "name": "ZodiacShroom",
+      "native": "Hypnoshroom",
+      "marker": "Starfruit",
+      "model": "SilverHypnoShroom"
     }
   ],
   "reserved": [],
