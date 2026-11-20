@@ -9,6 +9,8 @@ internal static class FusionRecipes
 {
     private static readonly Dictionary<(FusionPlant Existing, FusionPlant Incoming), FusionPlant> Recipes = new()
     {
+        [(SeedType.Chomper, SeedType.Plantern)] = FusionPlant.LumosAngler,
+        [(SeedType.Plantern, SeedType.Starfruit)] = FusionPlant.Starglow,
         [(SeedType.Blover, SeedType.Melonpult)] = FusionPlant.FallMelon,
         [(SeedType.Blover, SeedType.Squash)] = FusionPlant.SquashDrone,
         [(SeedType.Blover, SeedType.Cactus)] = FusionPlant.CactusDrone,

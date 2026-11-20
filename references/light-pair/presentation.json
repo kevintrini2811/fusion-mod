@@ -1,0 +1,32 @@
+{
+  "1241": {
+    "adaptation": {
+      "info": "Swallows a zombie and digests it for 40 seconds. Each light level cuts digestion by 10 seconds, down to a minimum of 10 seconds.",
+      "flavor": "",
+      "notes": "After swallowing, it draws one nearby zombie from an adjacent lane of the same terrain if its own lane has no eligible zombie.",
+      "portrait": "1014.png"
+    },
+    "german": {
+      "Name": "Laternen-Schnapper",
+      "Info": "Verschluckt einen Zombie und verdaut ihn 40 Sekunden lang. Jede Lichtstufe verkürzt die Verdauung um 10 Sekunden, bis auf mindestens 10 Sekunden.",
+      "Flavor": "",
+      "Notes": "Nach dem Schlucken lockt er einen nahen Zombie aus einer Nachbarreihe mit demselben Gelände an, wenn in seiner Reihe kein geeignetes Ziel steht.",
+      "EnglishSha256": "5e7c61daaaf9636d9fb09af8e502140e69e4972b60b555f5d7642ab7b27c5302"
+    }
+  },
+  "1081": {
+    "adaptation": {
+      "info": "Fires five stars about every three seconds. Each star deals 60 damage.",
+      "flavor": "",
+      "notes": "At light level 1, stars track targets in its lane. At level 2, it fires even without a target. At level 3, stars can track targets across the lawn.",
+      "portrait": "1457.png"
+    },
+    "german": {
+      "Name": "Sternenglanz",
+      "Info": "Feuert etwa alle drei Sekunden fünf Sterne ab. Jeder Stern verursacht 60 Schaden.",
+      "Flavor": "",
+      "Notes": "Ab Lichtstufe 1 verfolgen die Sterne Ziele in ihrer Reihe. Ab Stufe 2 feuert die Pflanze auch ohne Ziel. Ab Stufe 3 verfolgen die Sterne Ziele auf dem ganzen Spielfeld.",
+      "EnglishSha256": "546106ff8c459a1b532000c30eeb202edd001d355eb6e4ddcb5a28d3a1b94b94"
+    }
+  }
+}

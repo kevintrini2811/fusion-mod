@@ -235,6 +235,7 @@ internal static class Fertilizer
             if (identity == FusionPlant.Butterweed && plant.mTargetY > 50) plant.mTargetY = 50;
             SeaSupportFusions.Fertilize(plant);
             ChomperFusions.Fertilize(plant);
+            LumosAngler.Fertilize(plant);
             GulperShroom.Fertilize(plant);
             MagnetFusions.Fertilize(plant);
             PepperFusions.Fertilize(plant);

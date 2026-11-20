@@ -1,0 +1,42 @@
+{
+  "version": "24.6.0",
+  "base": "8a8930f408b607b13fac993668c8b6902875d706",
+  "branch": "task/fusion-pair-20261120-05",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "c519af2d6b1a3aa28c87c0f2baf00aa9c50871659730317532ed88efeae1bc20"
+  },
+  "testedCandidate": "7e09de00528fa399fd8b53c73a997f5da243fc96a822f873ded03a796e112eb0",
+  "earlierCandidate": "ca9e52055dae6d1cf6c927ecd23304c8f569b8d324048c15a45ca68b17af5398",
+  "versionChangeAfterRuntime": "The Release DLL updates version metadata after the approved gameplay candidate.",
+  "offline": {
+    "registrationToolTests": 11,
+    "registrationsAndTargetedStrictRecipes": "passed",
+    "starFusionHarness": "passed with tracking collision and shield regressions",
+    "nativeChomperTimingChecks": 134
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both recipe orders passed for both plants via Debug Mod plant.place. Both imported models were visible on the lawn.",
+    "lumosAngler": "Successful native chomps saved 4000, 3000, 2000, and 1000 centiseconds. Fertilizer capped digestion at 50. An eligible neighbor moved into the empty lane after swallowing. A separate own-lane zombie prevented the pull.",
+    "starglow": "All four light levels produced five Stars with base damage 60. Level 0 hit on an ordinary ray. Levels 1 and 3 tracked and hit an isolated target in the same or another lane. Level 2 fired on an empty lawn. One adjacent Triplantern also produced level 3 shots.",
+    "correction": "The earlier candidate tracked a same-lane target without hitting. The correction delegates high-ground checking to the native collision owner. The corrected candidate hit at levels 1 and 3.",
+    "restoration": "All three guarded runs restored the 24.5.0 digest. DP-3 and the checked profile hashes matched preflight. All owned game processes were absent afterward.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-05/gameplay/assessment.md",
+    "starglowChecks": [
+      "starglow-v3/0017-check.json",
+      "starglow-v3/0051-check.json",
+      "starglow-v3/0066-check.json",
+      "starglow-v3/0100-check.json"
+    ],
+    "triplanternCheck": "triplantern/0013-check.json"
+  },
+  "review": "Approved.",
+  "test": "Approved.",
+  "limits": [
+    "The Day debug levels establish sampled gameplay and active models. The test scope excluded the Almanac and save/load.",
+    "The test observed isolated target damage and trajectories. The Debug Mod snapshot omits the internal target ID.",
+    "The gameplay views reuse the Solar Chomper, Winter Starfruit, and plain Star models."
+  ]
+}

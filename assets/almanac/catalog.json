@@ -4599,6 +4599,33 @@
     "Portrait": "1378.png"
   },
   {
+    "SourceId": 1241,
+    "Identity": "FusionPlant.LumosAngler",
+    "CanonicalName": "Lumos Angler",
+    "English": {
+      "Name": "Lumos Angler",
+      "Info": "Swallows a zombie and digests it for 40 seconds. Each light level cuts digestion by 10 seconds, down to a minimum of 10 seconds.",
+      "Flavor": "",
+      "Notes": "After swallowing, it draws one nearby zombie from an adjacent lane of the same terrain if its own lane has no eligible zombie.",
+      "Recipes": [
+        "Chomper + Plantern"
+      ]
+    },
+    "German": {
+      "Name": "Laternen-Schnapper",
+      "Info": "Verschluckt einen Zombie und verdaut ihn 40 Sekunden lang. Jede Lichtstufe verkürzt die Verdauung um 10 Sekunden, bis auf mindestens 10 Sekunden.",
+      "Flavor": "",
+      "Notes": "Nach dem Schlucken lockt er einen nahen Zombie aus einer Nachbarreihe mit demselben Gelände an, wenn in seiner Reihe kein geeignetes Ziel steht.",
+      "Recipes": [
+        "Schnapper + Laternenblatt"
+      ]
+    },
+    "Recipes": [
+      "Chomper + Plantern"
+    ],
+    "Portrait": "1014.png"
+  },
+  {
     "SourceId": 1079,
     "Identity": "FusionPlant.LumosCactus",
     "CanonicalName": "Lumos Cactus",
@@ -8056,6 +8083,33 @@
       "Fume-shroom + Potato Mine"
     ],
     "Portrait": "1362.png"
+  },
+  {
+    "SourceId": 1081,
+    "Identity": "FusionPlant.Starglow",
+    "CanonicalName": "Starglow",
+    "English": {
+      "Name": "Starglow",
+      "Info": "Fires five stars about every three seconds. Each star deals 60 damage.",
+      "Flavor": "",
+      "Notes": "At light level 1, stars track targets in its lane. At level 2, it fires even without a target. At level 3, stars can track targets across the lawn.",
+      "Recipes": [
+        "Plantern + Starfruit"
+      ]
+    },
+    "German": {
+      "Name": "Sternenglanz",
+      "Info": "Feuert etwa alle drei Sekunden fünf Sterne ab. Jeder Stern verursacht 60 Schaden.",
+      "Flavor": "",
+      "Notes": "Ab Lichtstufe 1 verfolgen die Sterne Ziele in ihrer Reihe. Ab Stufe 2 feuert die Pflanze auch ohne Ziel. Ab Stufe 3 verfolgen die Sterne Ziele auf dem ganzen Spielfeld.",
+      "Recipes": [
+        "Laternenblatt + Sternenfrucht"
+      ]
+    },
+    "Recipes": [
+      "Plantern + Starfruit"
+    ],
+    "Portrait": "1457.png"
   },
   {
     "SourceId": 1461,

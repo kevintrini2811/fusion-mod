@@ -1712,6 +1712,18 @@
       "native": "Blover",
       "marker": "Squash",
       "model": "MiniSquashProjectile"
+    },
+    {
+      "name": "LumosAngler",
+      "native": "Chomper",
+      "marker": "Plantern",
+      "model": "SolarChomper"
+    },
+    {
+      "name": "Starglow",
+      "native": "Starfruit",
+      "marker": "Plantern",
+      "model": "WinterStarfruit"
     }
   ],
   "reserved": [],
@@ -2024,7 +2036,8 @@
       "SpicyStarfruit",
       "Starshooter",
       "Starmorph",
-      "IronStar"
+      "IronStar",
+      "Starglow"
     ],
     "IsElementalCattail": [
       "FrostCattail",

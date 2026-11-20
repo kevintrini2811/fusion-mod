@@ -126,6 +126,24 @@ static class Program
         var victim=Zombie(board);var neighbor=Zombie(board);neighbor.X=240;
         StarProjectiles.Impact(incoming,victim);
         Check(victim.Damage==50&&neighbor.Damage==16&&victim.Poison==0,"fire damage and splash replace poison");
+        var starglow = Plant(board, FusionPlant.Starglow);
+        StarProjectiles.LaunchStarglow(starglow, 40, 40, 1);
+        var burst = board.m_projectiles.TakeLast(5).ToArray();
+        Check(burst.All(p => p.mCobTargetRow == 60 && p.mAccZ == starglow.mRow + 1),
+            "five Starglow projectiles save the damage and search lane");
+        StarProjectiles.Impact(Restore(burst[2]), victim);
+        Check(victim.LastDamageFlags == DamageFlags.BypassesShield, "left-moving star bypasses shield before tracking");
+        burst[2].mProjectileAge = 35;
+        burst[2].mTargetZombieID = (ZombieID)victim.DataID;
+        burst[2].mPosX = victim.X;
+        burst[2].mPosY = victim.Y;
+        Zombie? found = null;
+        Check(!StarProjectiles.StarglowCollision(burst[2], ref found) && found == victim,
+            "tracking star resolves its overlapping ground target for native impact");
+        StarProjectiles.Impact(burst[2], victim);
+        Check(victim.LastDamageFlags == DamageFlags.None, "tracking star honors the shield when turning left");
+        StarProjectiles.Impact(burst[3], victim);
+        Check(victim.LastDamageFlags == DamageFlags.None, "vertical star honors the shield");
         if (!args.Contains("--stars-only")) PumpkinCases.Run();
         Console.WriteLine("Star fusion contracts passed.");
     }

@@ -495,6 +495,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.CherryDrone, "CherryDroneProjectile"),
         new(FusionPlant.FallMelon, "SpringMelon"),
         new(FusionPlant.SquashDrone, "MiniSquashProjectile"),
+        new(FusionPlant.LumosAngler, "SolarChomper"),
+        new(FusionPlant.Starglow, "WinterStarfruit"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -1393,7 +1395,7 @@ internal static partial class ImportedPeaVisuals
                     : Plant.mState == PlantState.PotatoRising ? "rise" : "unrised";
                 baseTime = baseClip == "rise" ? Math.Min((50 - Plant.mStateCountdown) * .01f, model.Clips[baseClip].Duration - .00001f) : idle;
             }
-            if ((assets.Identity == FusionPlant.Flytrapper || assets.Identity == FusionPlant.DoomChomper || assets.Identity == FusionPlant.Frostbiter || assets.Identity == FusionPlant.ChompMine || assets.Identity == FusionPlant.SolarChomper || assets.Identity == FusionPlant.CherryChomper || assets.Identity == FusionPlant.ChompNut || assets.Identity == FusionPlant.ChompShooter || assets.Identity == FusionPlant.HypnoChomper || assets.Identity == FusionPlant.GulperShroom) && !preview)
+            if (!preview && (assets.Identity == FusionPlant.Flytrapper || assets.Identity == FusionPlant.DoomChomper || assets.Identity == FusionPlant.Frostbiter || assets.Identity == FusionPlant.ChompMine || assets.Identity == FusionPlant.SolarChomper || assets.Identity == FusionPlant.CherryChomper || assets.Identity == FusionPlant.ChompNut || assets.Identity == FusionPlant.ChompShooter || assets.Identity == FusionPlant.HypnoChomper || assets.Identity == FusionPlant.GulperShroom || assets.Identity == FusionPlant.LumosAngler))
             {
                 // Source states replace the base layer. Native saved states
                 // and animation progress own timing, including pause/load.
@@ -2180,6 +2182,7 @@ internal static partial class ImportedPeaVisuals
             }
             Color tint = Color.white;
             Color additive = Color.clear;
+            bool starglowLit = !preview && assets.Identity == FusionPlant.Starglow && Plant.mTargetY >= 2;
             if (preview) tint = native.Cast<SpriteRenderer>().color;
             else
             {
@@ -2209,6 +2212,7 @@ internal static partial class ImportedPeaVisuals
                         && i != model.GroundNode ? IceInstantFusions.Brightness(Plant)
                         : !preview && assets.Identity == FusionPlant.SolarShooter
                         && i != model.GroundNode ? SolarShooter.Brightness(Plant)
+                        : starglowLit && i != model.GroundNode ? 1.3f
                         : !preview && (assets.Identity == FusionPlant.TwinMarigold || assets.Identity == FusionPlant.SilverPot) && i != model.GroundNode
                             ? TwinMarigold.Brightness(Plant)
                             : !preview && assets.Identity == FusionPlant.Torchflower && i != model.GroundNode

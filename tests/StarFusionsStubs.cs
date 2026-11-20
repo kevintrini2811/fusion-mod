@@ -5,14 +5,14 @@ namespace HarmonyLib {
     public static class AccessTools { public static System.Reflection.MethodInfo Method(Type t,string n) => t.GetMethod(n)!; }
     public static class Priority { public const int First = 800, Last = 0; }
 }
-namespace Il2CppReloaded.Services { public enum FoleyType { Fume, Frozen, Splat } }
+namespace Il2CppReloaded.Services { public enum FoleyType { Fume, Frozen, Splat, Throw } }
 namespace Il2CppReloaded.Gameplay {
     public enum PlantWeapon { Primary }
     public enum ProjectileType { Pea, Star, Spike, ZombiePea, Basketball }
     public enum ProjectileMotion { Straight, Star }
     public enum ZombieID : uint { }
     public enum ZombieType { Catapult, Balloon = 30, Zamboni = 12, Normal = 0, Gravestone = 99, Target }
-    public enum ParticleEffect { PeaSplat, SnowpeaSplat, Powie, FumeCloud, PoolSplash, IceSparkle }
+    public enum ParticleEffect { PeaSplat, SnowpeaSplat, Powie, FumeCloud, PoolSplash, IceSparkle, StarSplat }
     [Flags] public enum DamageRangeFlags { Ground = 1, Flying = 2, Dog = 4 }
     [Flags] public enum DamageFlags { None = 0, BypassesShield = 1, Spike = 2 }
     public readonly record struct Point(float x,float y);
@@ -61,6 +61,7 @@ namespace Il2CppReloaded.Gameplay {
             var plant=new Plant {mBoard=this,mPlantCol=col,mRow=row,mSeedType=type,mImitaterType=marker};m_plants.Add(plant);return plant;
         }
         public int RandomValue; public int Rand(int range) => Math.Clamp(RandomValue, 0, range - 1);
+        public Zombie? ZombieTryToGet(ZombieID id) => m_zombies.FirstOrDefault(z => z.DataID == (uint)id);
         public Projectile? AddProjectile(float x,float y,int order,int row,ProjectileType type) {
             if (FailAllocation) return null;
             var shot = new Projectile { mBoard=this,mPosX=x,mPosY=y,mRenderOrder=order,mRow=row,mProjectileType=type };
@@ -72,6 +73,7 @@ namespace Il2CppReloaded.Gameplay {
     public class Cursor { public CursorType CursorType; }
     public enum PlantState { Ready, UmbrellaTriggered }
     public class Plant {
+        public App mApp => mBoard.mApp;
         public PlantState mState;
         public void UpdateReanimColor() {}
         private static uint next = 100; public uint DataID = ++next; public IntPtr Pointer => (IntPtr)DataID;
@@ -89,9 +91,15 @@ namespace Il2CppReloaded.Gameplay {
         public float mCobTargetX,mVelX,mVelY,mVelZ,mAccZ,mPosX,mPosY,mPosZ,mShadowY;
         public int mCobTargetRow,mProjectileAge,mRow,mRenderOrder,mHitTorchwoodGridX,Bonus;
         public ZombieID mTargetZombieID; public DamageRangeFlags mDamageRangeFlags; public bool mDead;
+        public Zombie? FindCollisionTarget() => null;
+        public bool CantHitHighGround() => mProjectileType == ProjectileType.Star;
+        public Rect GetProjectileRect() => new(mPosX, mPosY, mPosX + 12, mPosY + 12);
+        public void PlayImpactSound(Zombie zombie) { }
         public void FindCollisionTargetPlant() {} public void CheckForCollision() {} public void UpdateLobMotion() {}
         public void Die() => mDead=true; public void UpdateNormalMotion() {} public void DoImpact() {} public void Update() {}
-        public void ConvertToFireball() {} public void ConvertToPea() {} public DamageFlags GetDamageFlags(Zombie zombie) => 0;
+        public void ConvertToFireball() {} public void ConvertToPea() {}
+        public DamageFlags GetDamageFlags(Zombie zombie) => mProjectileType == ProjectileType.Star && mVelX < 0
+            ? DamageFlags.BypassesShield : 0;
     }
     public class Zombie {
         public int Shrinks;
@@ -103,7 +111,8 @@ namespace Il2CppReloaded.Gameplay {
         public bool IsDeadOrDying() => Dying; public void StopEating() {} public void UpdateAnimSpeed() {} public void EatPlant() {} public void CanTargetPlant() {}
         public void ApplyChill(bool ice) => Chilled=true; public void RemoveColdEffects() { ColdRemoved=true; mIceTrapCounter=0; }
         public void LandFlyer(DamageFlags flags) { Flying=false; }
-        public void TakeDamage(int damage,DamageFlags flags) { Damage+=damage; OnDamage?.Invoke(); }
+        public DamageFlags LastDamageFlags;
+        public void TakeDamage(int damage,DamageFlags flags) { Damage+=damage; LastDamageFlags=flags; OnDamage?.Invoke(); }
     }
 }
 namespace FusionMod {

@@ -207,7 +207,8 @@ internal static partial class ImportedPeaVisuals
         var assets = StarProjectiles.Family(projectile) switch {
             1 => GarlicStarProjectileAssets, 2 => IceStarProjectileAssets,
             3 or 9 => FireStarProjectileAssets, 4 => StarPeaProjectileAssets,
-            5 => PlainStarProjectileAssets, 6 => SeaStarProjectileAssets, 7 => MetalStarProjectileAssets, 8 => IronStarProjectileAssets, _ => null };
+            5 or StarProjectiles.StarglowFamily => PlainStarProjectileAssets,
+            6 => SeaStarProjectileAssets, 7 => MetalStarProjectileAssets, 8 => IronStarProjectileAssets, _ => null };
         if (assets == null) return;
         RegisterProjectile(projectile, assets);
     }
@@ -524,7 +525,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == ShiveryProjectileAssets ? ScaredyProjectiles.Family(projectile) == 3 && projectile.mProjectileType == ProjectileType.Snowpea
                 : assets == ThawedShiveryProjectileAssets ? ScaredyProjectiles.Family(projectile) == 3 && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
                 : assets == GutsyProjectileAssets ? GutsyShroom.IsShot(projectile) || ScaredyProjectiles.Family(projectile) == 6 : assets == PlainPeaProjectileAssets ? UmbrellaVariants.ReflectedPea(projectile) || RetaliationProjectiles.IsPea(projectile) || (ThreepeaterFusions.IsScorchedShot(projectile)
-                && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea) : assets == PlainStarProjectileAssets ? RetaliationProjectiles.IsStar(projectile) || StarProjectiles.Family(projectile) == 5 : assets == HypnoFireProjectileAssets ? HypnoShooters.IsFire(projectile)
+                && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea) : assets == PlainStarProjectileAssets ? RetaliationProjectiles.IsStar(projectile) || StarProjectiles.Family(projectile) is 5 or StarProjectiles.StarglowFamily : assets == HypnoFireProjectileAssets ? HypnoShooters.IsFire(projectile)
                 : assets == HypnoProjectileAssets ? HypnoShooters.Contains(projectile) && !HypnoShooters.IsFire(projectile)
                 : assets == PotatoProjectileAssets ? PotatoProjectiles.Contains(projectile)
                 : assets == CherryDroneProjectileAssets ? ChargeTorchFusions.IsFireCherry(projectile) && projectile.mMotionType == ProjectileMotion.Puff

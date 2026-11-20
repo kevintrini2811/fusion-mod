@@ -1943,6 +1943,16 @@
       "available": true,
       "identity": "FusionPlant.SquashDrone",
       "evidence": "Registered with both recipes, shared air placement, and a source ability in src/AirRaidFusions.cs."
+    },
+    "Lumos Angler": {
+      "available": true,
+      "identity": "FusionPlant.LumosAngler",
+      "evidence": "Registered with both recipe orders, light-dependent digestion and adjacent-lane attraction. See references/light-pair/implementation-notes.md."
+    },
+    "Starglow": {
+      "available": true,
+      "identity": "FusionPlant.Starglow",
+      "evidence": "Registered with both recipe orders and light-dependent star targeting. See references/light-pair/implementation-notes.md."
     }
   }
 }

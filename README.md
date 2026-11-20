@@ -1,4 +1,6 @@
-# Fusion Mod 24.5.0
+# Fusion Mod 24.6.0
+
+Version 24.6.0 adds Lumos Angler and Starglow in both recipe orders. Lumos Angler digests faster in stronger light and draws a nearby zombie into its lane after swallowing. Starglow gains same-lane tracking, target-free firing, and lawn-wide tracking as the light rises. Both use existing plant models and portraits. [Implementation notes](references/light-pair/implementation-notes.md) and [gameplay acceptance](references/light-pair/acceptance.json).
 
 Version 24.4.1 restores the imported cabbage, kernel, and butter projectile views for Cabbage Dropper and Butter Fly.
 
@@ -2492,7 +2494,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **266 open recipes** with **208 result plants** in the format:
+`fusionen.txt` contains **264 open recipes** with **206 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2922,6 +2924,8 @@ Blover | Cactus | Cactus Drone
 Blover | Cherry Bomb | Cherry Drone
 Blover | Melon-pult | Fall Melon
 Blover | Squash | Squash Drone
+Chomper | Plantern | Lumos Angler
+Plantern | Starfruit | Starglow
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

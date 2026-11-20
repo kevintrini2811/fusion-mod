@@ -9,8 +9,14 @@ internal static class StarProjectiles
 {
     internal static readonly float[] Angles = { 30, -30, 180, 90, -90 };
     private const int Marker = -540000;
+    internal const int StarglowFamily = 10;
+    private const float StarglowFlight = .30f;
+    internal const float StarglowLifetime = 20f;
+    private const float StarglowSpeed = 6 * (80f / 1.35f) / 100;
+    private const float StarglowTrackSpeed = 5 * (80f / 1.35f) / 100;
     internal static int Family(Projectile shot) => shot.mCobTargetX switch
     {
+        Marker - StarglowFamily when shot.mProjectileType == ProjectileType.Star => StarglowFamily,
         Marker - 9 when shot.mProjectileType == ProjectileType.Star => 9,
         Marker - 1 when shot.mProjectileType == ProjectileType.Star => 1,
         Marker - 2 when shot.mProjectileType == ProjectileType.Star => 2,
@@ -38,7 +44,7 @@ internal static class StarProjectiles
     }
 
     internal static Projectile? Spawn(Board board, float x, float y, int order, int row,
-        int family, float angle, float speed, int damage)
+        int family, float angle, float speed, int damage, int trackingLane = 0)
     {
         var shot = board.AddProjectile(x, y, order + 1, row, family == 4 ? ProjectileType.Pea : ProjectileType.Star);
         if (shot == null || shot.mDead) return null;
@@ -48,7 +54,10 @@ internal static class StarProjectiles
         float radians = angle * MathF.PI / 180;
         shot.mVelX = MathF.Cos(radians) * speed;
         shot.mVelY = -MathF.Sin(radians) * speed;
-        shot.mVelZ = shot.mAccZ = shot.mPosZ = 0;
+        shot.mVelZ = shot.mPosZ = 0;
+        // Star ignores Z acceleration. Starglow saves its launch lane here
+        // because native row lookup follows the projectile as it travels.
+        shot.mAccZ = trackingLane;
         // Native UpdateNormalMotion hits land below 23px (Star) / 28px (Pea).
         shot.mShadowY = y + PuffShooters.FlightHeight;
         shot.mDamageRangeFlags = DamageRangeFlags.Ground;
@@ -57,11 +66,83 @@ internal static class StarProjectiles
         return shot;
     }
 
+    internal static void LaunchStarglow(Plant plant, float x, float y, int light)
+    {
+        bool fired = false;
+        int trackingLane = light >= 3 ? -1 : light >= 1 ? plant.mRow + 1 : 0;
+        foreach (float angle in Angles)
+        {
+            var shot = Spawn(plant.mBoard, x, y, plant.mRenderOrder, plant.mRow,
+                StarglowFamily, angle, StarglowSpeed, 60, trackingLane);
+            fired |= shot != null;
+        }
+        if (fired) plant.mApp.SoundSystem.PlayFoley(Il2CppReloaded.Services.FoleyType.Throw);
+    }
+
+    internal static bool StarglowTarget(Board board, Zombie zombie) =>
+        zombie.mZombieType is not (ZombieType.Gravestone or ZombieType.Target)
+        && SquashFusions.Eligible(board, zombie, DamageRangeFlags.Ground);
+
+    private static bool StarglowTracking(Projectile shot) => shot.mAccZ != 0
+        && FusionProjectileTime.AgeSeconds(shot) >= StarglowFlight;
+
+    private static bool Trackable(Projectile shot, Zombie zombie) => StarglowTarget(shot.mBoard, zombie)
+        && (shot.mAccZ < 0 || zombie.mRow + 1 == shot.mAccZ);
+
+    private static void MoveStarglow(Projectile shot)
+    {
+        if (!StarglowTracking(shot)) return;
+        var board = shot.mBoard;
+        var target = board.ZombieTryToGet(shot.mTargetZombieID);
+        if (target == null || !Trackable(shot, target))
+        {
+            target = null;
+            float best = float.MaxValue;
+            for (int i = 0; i < board.m_zombies.Count; ++i)
+            {
+                var zombie = board.m_zombies[i];
+                if (zombie == null || !Trackable(shot, zombie)) continue;
+                var center = zombie.GetZombieRect().center;
+                float dx = center.x - shot.mPosX, dy = center.y - shot.mPosY;
+                float distance = dx * dx + dy * dy;
+                if (distance >= best) continue;
+                best = distance;
+                target = zombie;
+            }
+            shot.mTargetZombieID = (ZombieID)(target?.DataID ?? 0);
+        }
+        if (target == null) return;
+        var aim = target.GetZombieRect().center;
+        float x = aim.x - shot.mPosX, y = aim.y - shot.mPosY;
+        float distanceToTarget = MathF.Sqrt(x * x + y * y);
+        if (distanceToTarget <= .001f) return;
+        float speed = FusionProjectileTime.SourceVelocity(StarglowTrackSpeed);
+        float scale = Math.Min(1f, speed / distanceToTarget);
+        shot.mVelX = x * scale;
+        shot.mVelY = y * scale;
+    }
+
+    internal static bool StarglowCollision(Projectile shot, ref Zombie? result)
+    {
+        if (Family(shot) != StarglowFamily || !StarglowTracking(shot)) return true;
+        var target = shot.mBoard.ZombieTryToGet(shot.mTargetZombieID);
+        if (target == null || !Trackable(shot, target))
+        { result = null; return false; }
+        // CheckForCollision checks the returned zombie's high ground state.
+        var projectile = shot.GetProjectileRect();
+        var zombie = target.GetZombieRect();
+        result = projectile.xMin < zombie.xMax && projectile.xMax > zombie.xMin
+            && projectile.yMin < zombie.yMax && projectile.yMax > zombie.yMin ? target : null;
+        return false;
+    }
+
     internal static void BeforeMove(Projectile shot)
     {
         int family = Family(shot);
         if (family == 0 || shot.mDead || shot.mBoard.mPaused) return;
-        if (family == 2)
+        if (family == StarglowFamily)
+            MoveStarglow(shot);
+        else if (family == 2)
         {
             // IceStar's coroutine is cancelled when its source is destroyed.
             bool owner = false;
@@ -97,8 +178,13 @@ internal static class StarProjectiles
         uint id = zombie?.DataID ?? 0;
         int damage = FumeProjectiles.ModifiedDamage(shot, Math.Max(0, shot.mCobTargetRow));
         var flags = zombie == null ? (DamageFlags)0 : shot.GetDamageFlags(zombie);
+        // Bullet_star only bypasses shields in the original leftward mode.
+        // Replanted Star derives the flag from X velocity, including turns.
+        if (family == StarglowFamily && (shot.mVelX >= -.001f || StarglowTracking(shot)))
+            flags &= ~DamageFlags.BypassesShield;
         float x = shot.mPosX, y = shot.mPosY;
         int order = shot.mRenderOrder;
+        if (family == StarglowFamily && zombie != null && Live(board, zombie)) shot.PlayImpactSound(zombie);
         shot.Die();
         if (zombie == null || !Live(board, zombie)) return true;
         if (family == 1) damage = (int)Math.Min(int.MaxValue, (long)damage + 5 * PoisonShooters.Level(zombie));
@@ -129,7 +215,7 @@ internal static class StarProjectiles
             if (family == 2) FusionStatuses.Chill(zombie);
         }
         board.mApp.AddTodParticle(x, y, order, family == 2 ? ParticleEffect.SnowpeaSplat
-            : family == 3 ? ParticleEffect.Powie : ParticleEffect.PeaSplat);
+            : family == 3 ? ParticleEffect.Powie : family == StarglowFamily ? ParticleEffect.StarSplat : ParticleEffect.PeaSplat);
         return true;
     }
 
@@ -153,9 +239,19 @@ internal static class StarProjectileVisualPatch
 {
     private static void Postfix(Projectile __instance)
     {
-        if (!__instance.mDead && StarProjectiles.Family(__instance) != 0)
-            ImportedPeaVisuals.EnsureStarProjectile(__instance);
+        if (__instance.mDead) return;
+        int family = StarProjectiles.Family(__instance);
+        if (family == StarProjectiles.StarglowFamily
+            && FusionProjectileTime.AgeSeconds(__instance) >= StarProjectiles.StarglowLifetime)
+            __instance.Die();
+        else if (family != 0) ImportedPeaVisuals.EnsureStarProjectile(__instance);
     }
+}
+[HarmonyPatch(typeof(Projectile), nameof(Projectile.FindCollisionTarget))]
+internal static class StarglowCollisionPatch
+{
+    private static bool Prefix(Projectile __instance, ref Zombie? __result) =>
+        StarProjectiles.StarglowCollision(__instance, ref __result);
 }
 [HarmonyPatch(typeof(Projectile), nameof(Projectile.ConvertToFireball))]
 internal static class StarIgnitionPatch

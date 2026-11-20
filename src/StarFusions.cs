@@ -23,7 +23,9 @@ internal static class StarFusions
 
     internal static bool HasTarget(Plant plant)
     {
-        bool pea = FusionPlant.From(plant) == FusionPlant.Starshooter;
+        var identity = FusionPlant.From(plant);
+        if (identity == FusionPlant.Starglow) return StarglowReady(plant, PumpkinFusions.LightLevel(plant));
+        bool pea = identity == FusionPlant.Starshooter;
         for (int i = 0; i < plant.mBoard.m_zombies.Count; ++i)
         {
             var zombie = plant.mBoard.m_zombies[i];
@@ -33,8 +35,20 @@ internal static class StarFusions
             {
                 if (zombie.mRow == plant.mRow && zombie.GetZombieRect().xMax >= plant.mX + 40) return true;
             }
-            else if (FusionPlant.From(plant) == FusionPlant.WinterStarfruit || StarRay(plant, zombie)) return true;
+            else if (identity == FusionPlant.WinterStarfruit || StarRay(plant, zombie)) return true;
         }
+        return false;
+    }
+
+    private static bool StarglowReady(Plant plant, int light)
+    {
+        if (light == 0) return HasStarTarget(plant);
+        if (light >= 2) return true;
+        float x = plant.mX + plant.mWidth * .5f;
+        var board = plant.mBoard;
+        for (int i = 0; i < board.m_zombies.Count; ++i)
+            if (board.m_zombies[i] is { } zombie && zombie.mRow == plant.mRow
+                && StarProjectiles.StarglowTarget(board, zombie) && zombie.GetZombieRect().center.x > x) return true;
         return false;
     }
 
@@ -71,6 +85,7 @@ internal static class StarFusions
         var identity = FusionPlant.From(plant);
         if (!FusionPlant.IsStarFusion(identity) || !ChomperFusions.Active(plant) || plant.mIsAsleep) return;
         if (!FusionTime.SourceStep(plant, typeof(StarFusions))) return;
+        if (identity == FusionPlant.Starglow) plant.mTargetY = Math.Min(3, PumpkinFusions.LightLevel(plant));
         if (plant.mLaunchCounter > 0) --plant.mLaunchCounter;
         if (identity == FusionPlant.SpicyStarfruit)
         {
@@ -87,10 +102,15 @@ internal static class StarFusions
             }
             return;
         }
-        if (plant.mStartRow == 0 && plant.mLaunchCounter == 0 && HasTarget(plant))
+        if (plant.mStartRow == 0 && plant.mLaunchCounter == 0)
         {
-            plant.mLaunchCounter = 143 + plant.mBoard.Rand(15);
-            plant.mStartRow = ShootTicks(identity);
+            bool starglow = identity == FusionPlant.Starglow;
+            plant.mLaunchCounter = starglow ? 285 + plant.mBoard.Rand(31) : 0;
+            if (starglow ? StarglowReady(plant, plant.mTargetY) : HasTarget(plant))
+            {
+                if (!starglow) plant.mLaunchCounter = 143 + plant.mBoard.Rand(15);
+                plant.mStartRow = ShootTicks(identity);
+            }
         }
         if (plant.mStartRow == 0) return;
         int elapsed = ShootTicks(identity) - plant.mStartRow + 1;
@@ -108,7 +128,9 @@ internal static class StarFusions
             StarProjectiles.Spawn(plant.mBoard, x + 20, y, plant.mRenderOrder, plant.mRow, 4, 0, 3.33f, 20);
             return;
         }
-        if (identity == FusionPlant.WinterStarfruit)
+        if (identity == FusionPlant.Starglow)
+            StarProjectiles.LaunchStarglow(plant, x, y, plant.mTargetY);
+        else if (identity == FusionPlant.WinterStarfruit)
         {
             for (int angle = 0; angle < 360; angle += 72)
             {

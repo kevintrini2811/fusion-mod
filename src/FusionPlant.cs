@@ -349,6 +349,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant CherryDrone = new(SeedType.Blover, SeedType.Cherrybomb);
     internal static readonly FusionPlant FallMelon = new(SeedType.Blover, SeedType.Melonpult);
     internal static readonly FusionPlant SquashDrone = new(SeedType.Blover, SeedType.Squash);
+    internal static readonly FusionPlant LumosAngler = new(SeedType.Chomper, SeedType.Plantern);
+    internal static readonly FusionPlant Starglow = new(SeedType.Starfruit, SeedType.Plantern);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -517,7 +519,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
 
     internal static bool IsStarFusion(FusionPlant plant) =>
         plant == Starlic || plant == WinterStarfruit || plant == SpicyStarfruit ||
-        plant == Starshooter || plant == Starmorph || plant == IronStar;
+        plant == Starshooter || plant == Starmorph || plant == IronStar ||
+        plant == Starglow;
 
     internal static bool IsElementalCattail(FusionPlant plant) =>
         plant == FrostCattail || plant == FlameCattail;
@@ -680,7 +683,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == WeedSpreader || plant == MagnetBlover || plant == LumosMagnet ||
         plant == PepperPopper || plant == MadPepper || plant == Hoverleaf ||
         plant == DroneNut || plant == CactusDrone || plant == CherryDrone ||
-        plant == FallMelon || plant == SquashDrone;
+        plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
+        plant == Starglow;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1025,6 +1029,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Blover, SeedType.Cherrybomb) => CherryDrone,
             (SeedType.Blover, SeedType.Melonpult) => FallMelon,
             (SeedType.Blover, SeedType.Squash) => SquashDrone,
+            (SeedType.Chomper, SeedType.Plantern) => LumosAngler,
+            (SeedType.Starfruit, SeedType.Plantern) => Starglow,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

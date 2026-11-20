@@ -20,6 +20,7 @@ PRESENTATION_FILES = (
     "references/air-defense-pair/presentation.json",
     "references/air-raid-pair/presentation.json",
     "references/air-drop-pair/presentation.json",
+    "references/light-pair/presentation.json",
 )
 
 
