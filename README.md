@@ -1,4 +1,6 @@
-# Fusion Mod 24.4.0
+# Fusion Mod 24.4.1
+
+Version 24.4.1 restores the imported cabbage, kernel, and butter projectile views for Cabbage Dropper and Butter Fly.
 
 Version 24.1.1 adds controller interaction for captured metal. Confirm (A on Xbox) picks up a magnet's bucket or football helmet when the selected card cannot plant, repair or fuse on that tile; confirm places or uses the metal. Cancel (B on Xbox) releases the selection without consuming it or using the shovel. Existing player bindings and the native controller cursor determine the buttons and target position. The selected magnet fusion keeps its natural digestion clock. Focused controller acceptance is complete; see the [pair acceptance record](references/magnet-pair-24-1-1/acceptance.md).
 

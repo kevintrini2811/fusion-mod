@@ -489,6 +489,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == OverripeProjectileAssets ? LobberProjectiles.Family(projectile) == 5
                 : assets == TriCabbageProjectileAssets ? LobberProjectiles.Family(projectile) == 6 && LobberProjectiles.Remaining(projectile) > 0
                 : assets == CabbageProjectileAssets ? NutProjectiles.Family(projectile) == 1 || LobberProjectiles.Family(projectile) == 6 && LobberProjectiles.Remaining(projectile) == 0
+                    || projectile.mProjectileType == ProjectileType.Cabbage && AirLobbers.IsShot(projectile)
                 : assets == StarCapProjectileAssets ? StarCaps.Contains(projectile)
                 : assets == DoomCabbageProjectileAssets ? LobberProjectiles.Family(projectile) == 13
                 : assets == ColdslawProjectileAssets ? ElementalLobbers.Family(projectile) == 1
@@ -505,7 +506,9 @@ internal static partial class ImportedPeaVisuals
                 : assets == FireMelonProjectileAssets ? ElementalLobbers.Family(projectile) == 10
                 : assets == SaladProjectileAssets ? LobberProjectiles.Family(projectile) == 7
                 : assets == KernelProjectileAssets ? TriLobbers.Family(projectile) == 1
+                    || projectile.mProjectileType == ProjectileType.Kernel && AirLobbers.IsShot(projectile)
                 : assets == ButterProjectileAssets ? TriLobbers.Family(projectile) == 2 || LobberProjectiles.Family(projectile) == 14
+                    || projectile.mProjectileType == ProjectileType.Butter && AirLobbers.IsShot(projectile)
                 : assets == MelonProjectileAssets ? UmbrellaVariants.ReflectedMelon(projectile) || LobberProjectiles.Family(projectile) == 9 || SquashLobbers.Family(projectile) == 7 || NutProjectiles.Family(projectile) == 2 || TriLobbers.Family(projectile) == 3
                 : assets == PuffPeaProjectileAssets ? PuffShooters.Contains(projectile) : assets == SpeedyProjectileAssets ? ScaredyProjectiles.Family(projectile) == 1 && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
                 : assets == CherrySporeAssets ? ScaredyProjectiles.Family(projectile) == 2
