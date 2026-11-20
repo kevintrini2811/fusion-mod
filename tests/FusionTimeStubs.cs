@@ -101,6 +101,9 @@ namespace Il2CppReloaded.Services {
     }
 }
 namespace FusionMod {
+    internal static class HypnoticTransmutations {
+        internal static bool IsCatalyst(Il2CppReloaded.Gameplay.Zombie zombie) => false;
+    }
     internal static class HypnoShooters {
         internal static bool IsSummoned(Il2CppReloaded.Gameplay.Zombie zombie) => zombie.Summoned;
     }

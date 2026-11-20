@@ -57,8 +57,14 @@ internal static class HypnoShooters
         if (FiringPlant is { } plant && plant.mBoard?.Pointer == shot.mBoard.Pointer
             && !plant.mDead && FusionPlant.IsHypnoShooter(FusionPlant.From(plant))) shot.mCobTargetX = PlantShot;
         else if (FiringZombie is { } zombie && zombie.mBoard?.Pointer == shot.mBoard.Pointer
-            && !zombie.mDead && IsSummoned(zombie))
+            && !zombie.mDead)
         {
+            if (HypnoticTransmutations.IsCatalyst(zombie))
+            {
+                CherryShooter.MarkAlliedExplosion(shot);
+                return;
+            }
+            if (!IsSummoned(zombie)) return;
             shot.mCobTargetX = zombie.mSummonCounter == SummonedFire ? FireShot : AllyShot;
             if (IsFire(shot)) shot.mCobTargetRow = 40;
         }
@@ -123,14 +129,24 @@ internal static class HypnoAllyFireScope
     private static IEnumerable<MethodBase> TargetMethods() => new[] {
         AccessTools.Method(typeof(Zombie), nameof(Zombie.UpdateZombiePeaHead)),
         AccessTools.Method(typeof(Zombie), nameof(Zombie.UpdateActions)) };
-    internal static void Prefix(Zombie __instance, out (Plant? Plant, Zombie? Zombie) __state)
+    internal static void Prefix(Zombie __instance,
+        out (Plant? Plant, Zombie? Zombie, IntPtr Board, uint Id, bool CatalystFiring) __state)
     {
-        __state = (HypnoShooters.FiringPlant, HypnoShooters.FiringZombie);
+        bool catalyst = HypnoticTransmutations.IsCatalyst(__instance);
+        __state = (HypnoShooters.FiringPlant, HypnoShooters.FiringZombie,
+            __instance.mBoard?.Pointer ?? IntPtr.Zero, __instance.DataID, catalyst && __instance.mPhaseCounter == 0);
         HypnoShooters.FiringPlant = null;
-        HypnoShooters.FiringZombie = HypnoShooters.IsSummoned(__instance) ? __instance : null;
+        HypnoShooters.FiringZombie = catalyst || HypnoShooters.IsSummoned(__instance) ? __instance : null;
     }
-    internal static void Finalizer((Plant? Plant, Zombie? Zombie) __state)
-    { HypnoShooters.FiringPlant = __state.Plant; HypnoShooters.FiringZombie = __state.Zombie; }
+    internal static void Finalizer(Zombie __instance,
+        (Plant? Plant, Zombie? Zombie, IntPtr Board, uint Id, bool CatalystFiring) __state)
+    {
+        HypnoShooters.FiringPlant = __state.Plant;
+        HypnoShooters.FiringZombie = __state.Zombie;
+        if (__state.CatalystFiring && __instance.DataID == __state.Id && __state.Board == __instance.mBoard?.Pointer
+            && !__instance.mDead && HypnoticTransmutations.IsCatalyst(__instance) && __instance.mPhaseCounter > 0)
+            __instance.mPhaseCounter = HypnoticTransmutations.CatalystInterval;
+    }
 }
 
 [HarmonyPatch(typeof(Projectile), nameof(Projectile.ProjectileInitialize))]

@@ -94,6 +94,12 @@ namespace LawnGlove {
 }
 namespace FusionMod {
     using Il2CppReloaded.Gameplay;
+    internal static class HypnoticTransmutations {
+        internal const int CatalystInterval = 600;
+        internal static bool IsCatalyst(Zombie zombie) => zombie.mMindControlled
+            && zombie.mZombieType == ZombieType.PeaHead && zombie.mSummonCounter == -430133;
+    }
+    internal static class CherryShooter { internal static void MarkAlliedExplosion(Projectile shot) => shot.mCobTargetX = -41010; }
     internal static class ChomperFusions {
         internal static bool Active(Plant p)=>p.mBoard!=null&&!p.mBoard.mPaused&&!p.mDead&&p.mIsOnBoard&&!p.mSquished&&!p.NotOnGround()
             &&p.mOnBungeeState==PlantOnBungeeState.NotOnBungee&&p.mApp.GameScene==GameScenes.Playing&&p.mApp.GameMode!=GameMode.ChallengeZenGarden

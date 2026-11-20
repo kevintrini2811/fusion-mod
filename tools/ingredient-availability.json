@@ -1993,6 +1993,16 @@
       "available": true,
       "identity": "FusionPlant.CometShroom",
       "evidence": "Registers both source recipe orders, sun production, hypnosis on bite, and a jumping sun on departure. See references/hypnotic-pair/implementation-notes.md."
+    },
+    "Catalyst-shroom": {
+      "available": true,
+      "identity": "FusionPlant.CatalystShroom",
+      "evidence": "Registers both source recipe orders and replaces the biter with a friendly Super Cherry zombie or pool Buckethead. See references/transmutation-pair/implementation-notes.md."
+    },
+    "Cryonic-shroom": {
+      "available": true,
+      "identity": "FusionPlant.CryonicShroom",
+      "evidence": "Registers both source recipe orders, native Ice-shroom freeze, and a friendly frost Tall-nut zombie or pool Buckethead. See references/transmutation-pair/implementation-notes.md."
     }
   }
 }

@@ -273,6 +273,8 @@ internal static class FusionRecipes
         [(SeedType.Scaredyshroom, SeedType.Sunflower)] = FusionPlant.SunnyShroom,
         [(SeedType.Hypnoshroom, SeedType.Scaredyshroom)] = FusionPlant.TrippyShroom,
         [(SeedType.Hypnoshroom, SeedType.Sunflower)] = FusionPlant.CometShroom,
+        [(SeedType.Cherrybomb, SeedType.Hypnoshroom)] = FusionPlant.CatalystShroom,
+        [(SeedType.Hypnoshroom, SeedType.Iceshroom)] = FusionPlant.CryonicShroom,
         [(SeedType.Scaredyshroom, SeedType.Starfruit)] = FusionPlant.StarryShroom,
         [(SeedType.Scaredyshroom, SeedType.Wallnut)] = FusionPlant.SturdyShroom,
         [(SeedType.Scaredyshroom, SeedType.Blover)] = FusionPlant.CamoShroom,

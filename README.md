@@ -1,4 +1,6 @@
-# Fusion Mod 24.10.0
+# Fusion Mod 24.11.0
+
+Version 24.11.0 adds Catalyst-shroom and Cryonic-shroom. On land, Catalyst-shroom replaces its biter with a friendly Super Cherry Zombie. Cryonic-shroom freezes the lawn and replaces its biter with a friendly Frost Tall-nut Zombie. Both replacements become friendly Bucketheads in the pool. Both recipes work in either ingredient order. [Implementation notes](references/transmutation-pair/implementation-notes.md) and [gameplay acceptance](references/transmutation-pair/acceptance.json).
 
 Version 24.10.0 adds Trippy-shroom and Comet-shroom. Trippy-shroom hypnotizes zombies after all seven spore colors hit. A bite also hypnotizes the zombie and leaves a Scaredy-shroom. Comet-shroom produces sun and releases a jumping sun when removed. Both recipes work in either ingredient order and reuse existing artwork. [Implementation notes](references/hypnotic-pair/implementation-notes.md) and [gameplay acceptance](references/hypnotic-pair/acceptance.json).
 
@@ -2502,7 +2504,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **256 open recipes** with **198 result plants** in the format:
+`fusionen.txt` contains **254 open recipes** with **196 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2942,6 +2944,8 @@ Sea-shroom | Doom-shroom | Orca-shroom
 Sea-shroom | Magnet-shroom | Anchor-shroom
 Hypno-shroom | Scaredy-shroom | Trippy-shroom
 Hypno-shroom | Sunflower | Comet-shroom
+Cherry Bomb | Hypno-shroom | Catalyst-shroom
+Hypno-shroom | Ice-shroom | Cryonic-shroom
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

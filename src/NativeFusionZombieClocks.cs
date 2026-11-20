@@ -12,7 +12,7 @@ internal static class NativeFusionZombieClocks
     [ThreadStatic] private static UpdateState? current;
     internal sealed record ActionState(IntPtr Board, IntPtr Pointer, uint Id, int Phase);
 
-    private static bool Owns(Zombie zombie) => HypnoShooters.IsSummoned(zombie)
+    private static bool Owns(Zombie zombie) => (HypnoShooters.IsSummoned(zombie) || HypnoticTransmutations.IsCatalyst(zombie))
         && !zombie.mDead && zombie.mZombiePhase == ZombiePhase.ZombieNormal
         && ScaredContent.Playing(zombie.mBoard) && !zombie.mBoard.mPaused;
 

@@ -13,7 +13,7 @@ Projectile Fire(Plant plant) {
 Zombie Enemy(Board board,int hp=100)=>new(){mBoard=board,Health=hp,mPosX=420,mRow=2};
 Projectile AllyFire(Zombie ally) {
     HypnoAllyFireScope.Prefix(ally,out var old);
-    try{return ally.mBoard.AddProjectile();}finally{HypnoAllyFireScope.Finalizer(old);}
+    try{return ally.mBoard.AddProjectile();}finally{HypnoAllyFireScope.Finalizer(ally,old);}
 }
 var recipes=new (FusionPlant A,FusionPlant B,FusionPlant R)[]{
     (SeedType.Hypnoshroom,SeedType.Peashooter,FusionPlant.HypnoPea),
@@ -103,12 +103,12 @@ try {
     try {Check(!HypnoShooters.Contains(board.AddProjectile()),"nested ordinary plant cannot inherit allied ammunition");}
     finally {HypnoFireScope.Finalizer(ordinaryInner);}
     Check(HypnoShooters.Contains(board.AddProjectile()),"allied context restored after nested plant fire");
-}finally{HypnoAllyFireScope.Finalizer(allyOuter);}
+}finally{HypnoAllyFireScope.Finalizer(specialAlly,allyOuter);}
 HypnoFireScope.Prefix(plant,out var plantOuter);
 try {
     HypnoAllyFireScope.Prefix(ordinaryAlly,out var ordinaryInner);
     try {Check(!HypnoShooters.Contains(board.AddProjectile()),"nested ordinary zombie cannot inherit plant ammunition");}
-    finally {HypnoAllyFireScope.Finalizer(ordinaryInner);}
+    finally {HypnoAllyFireScope.Finalizer(ordinaryAlly,ordinaryInner);}
     Check(HypnoShooters.Contains(board.AddProjectile()),"plant context restored after nested zombie fire");
 }finally{HypnoFireScope.Finalizer(plantOuter);}
 Check(specialAlly.mPhaseCounter>=50&&specialAlly.mPhaseCounter<=150,"source randomized startup interval");
@@ -127,7 +127,16 @@ HypnoAllyFireScope.Prefix(fireAlly,out var fireScope);
 try {
     var child=board.AddProjectile();
     Check(HypnoShooters.IsFire(child)&&child.mCobTargetRow==40&&HypnoShooters.FromAlly(child),"fire ally shots remain recognizable and cannot farm ignition credit");
-} finally { HypnoAllyFireScope.Finalizer(fireScope); }
+} finally { HypnoAllyFireScope.Finalizer(fireAlly,fireScope); }
+var catalyst = new Zombie { mBoard = board, mZombieType = ZombieType.PeaHead, mMindControlled = true,
+    mSummonCounter = -430133, mPhaseCounter = 0 };
+HypnoAllyFireScope.Prefix(catalyst, out var catalystScope);
+try {
+    var explosive = board.AddProjectile();
+    Check(explosive.mCobTargetX == -41010 && !HypnoShooters.Contains(explosive), "Catalyst uses explosive cherry ammunition");
+    catalyst.mPhaseCounter = 150; // Native firing reset.
+} finally { HypnoAllyFireScope.Finalizer(catalyst, catalystScope); }
+Check(catalyst.mPhaseCounter == 600 && HypnoShooters.FiringZombie == null, "Catalyst uses the six-second reload and closes the firing scope");
 board.FailSummon=true;
 Check(HypnoShooters.SummonFire(board,0,100)==null,"summon allocation failure stays safe");
 board.FailSummon=false;

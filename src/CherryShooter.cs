@@ -32,6 +32,13 @@ internal static class CherryShooter
         && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea or ProjectileType.Fireball or ProjectileType.PeashooterFireball
         && projectile.mCobTargetX is CherryMarker or ExplosiveMarker or CatalyzedMarker or CatalyzedFireMarker;
 
+    internal static void MarkAlliedExplosion(Projectile projectile)
+    {
+        if (TryShot(projectile)) return;
+        projectile.mCobTargetX = ExplosiveMarker;
+        ImportedPeaVisuals.RegisterExplodeProjectile(projectile);
+    }
+
     internal static bool IsExplosive(Projectile projectile) => TryShot(projectile)
         && projectile.mCobTargetX is ExplosiveMarker or CatalyzedMarker or CatalyzedFireMarker;
 

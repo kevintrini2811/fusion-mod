@@ -359,6 +359,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant OrcaShroom = new(SeedType.Seashroom, SeedType.Doomshroom);
     internal static readonly FusionPlant TrippyShroom = new(SeedType.Scaredyshroom, SeedType.Hypnoshroom);
     internal static readonly FusionPlant CometShroom = new(SeedType.Sunflower, SeedType.Hypnoshroom);
+    internal static readonly FusionPlant CatalystShroom = new(SeedType.Hypnoshroom, SeedType.Cherrybomb);
+    internal static readonly FusionPlant CryonicShroom = new(SeedType.Hypnoshroom, SeedType.Iceshroom);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -694,7 +696,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
         plant == Starglow || plant == FrostburnWood || plant == DoomPult ||
         plant == Bombrella || plant == Levitater || plant == AnchorShroom ||
-        plant == OrcaShroom || plant == TrippyShroom || plant == CometShroom;
+        plant == OrcaShroom || plant == TrippyShroom || plant == CometShroom ||
+        plant == CatalystShroom || plant == CryonicShroom;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1049,6 +1052,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Seashroom, SeedType.Doomshroom) => OrcaShroom,
             (SeedType.Scaredyshroom, SeedType.Hypnoshroom) => TrippyShroom,
             (SeedType.Sunflower, SeedType.Hypnoshroom) => CometShroom,
+            (SeedType.Hypnoshroom, SeedType.Cherrybomb) => CatalystShroom,
+            (SeedType.Hypnoshroom, SeedType.Iceshroom) => CryonicShroom,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

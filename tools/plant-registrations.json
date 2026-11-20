@@ -1772,6 +1772,18 @@
       "native": "Sunflower",
       "marker": "Hypnoshroom",
       "model": "SilverHypnoShroom"
+    },
+    {
+      "name": "CatalystShroom",
+      "native": "Hypnoshroom",
+      "marker": "Cherrybomb",
+      "model": "SilverHypnoShroom"
+    },
+    {
+      "name": "CryonicShroom",
+      "native": "Hypnoshroom",
+      "marker": "Iceshroom",
+      "model": "SilverHypnoShroom"
     }
   ],
   "reserved": [],

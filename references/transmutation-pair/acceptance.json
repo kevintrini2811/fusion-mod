@@ -1,0 +1,47 @@
+{
+  "version": "24.11.0",
+  "base": "13843da40120a749624acde19e3cb41619dff40c",
+  "branch": "task/fusion-pair-20261120-10",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "246846505825e710704c4eef765cc83d250255f876924673b3ec56434448a472"
+  },
+  "testedCandidate": "d7a81740f631143e9ddb0539c66a3da71f4bdf82b30e1c24c466873ba8ef43bc",
+  "versionChangeAfterRuntime": "The release updates version metadata after the approved gameplay candidate.",
+  "offline": {
+    "registrationToolTests": 11,
+    "registrationsAndTargetedStrictRecipes": "passed",
+    "hypnoShooterChecks": 119,
+    "nativeZombieClockChecks": 29,
+    "fusionTimeAssertions": 2722,
+    "iceInstantChecks": 94,
+    "threepeaterChecks": 198
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both ingredient orders produced both results on a temporary board.",
+    "catalystShroom": "The land biter was replaced by a friendly PeaHead with 720 body health. Phase was 299 at age 1 and reset to 600 at the shot. The cherry projectile dealt 300 damage.",
+    "cryonicShroom": "The land biter became a friendly TallnutHead with 270 body and 2200 helmet health. A separate zombie froze. The frosted helmet was visible.",
+    "pool": "Both plants replaced their pool biters with friendly Pail zombies in the water. Cryonic froze the separate zombie in the pool fixture.",
+    "restoration": "The test restored the temporary difficulty and original DLL, verified profile hashes and DP-3, and confirmed process exit.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-10/gameplay/assessment.md",
+    "evidence": {
+      "cryonicLand": "0070-check.json",
+      "cryonicHead": "0071-cryo-zombies-visuals.json",
+      "catalystWater": "0137-check.json",
+      "cryonicWater": "0259-check.json",
+      "catalystInitialPhase": "0309-catalyst-bite-0048.json",
+      "catalystLand": "0313-check.json",
+      "catalystShot": "0329-catalyst-shot.json",
+      "catalystImpact": "0342-catalyst-hit.json",
+      "restore": "restore.json"
+    }
+  },
+  "review": "Approved.",
+  "test": "Approved.",
+  "limits": [
+    "The test sampled the global freeze counter. The full duration, standalone frost immunity and fire weakness were outside the focused gameplay fixture.",
+    "The port reuses existing plant, zombie and projectile artwork. The native save and load paths were outside the focused gameplay fixture."
+  ]
+}

@@ -9,7 +9,7 @@ internal static class FusionZombies
     private static T Retain<T>(T asset) where T : UnityEngine.Object
     { asset.hideFlags |= UnityEngine.HideFlags.DontUnloadUnusedAsset; return asset; }
 
-    internal static ZombieDefinition Eyes = null!, EyesCone = null!, EyesBucket = null!, Hypno = null!;
+    internal static ZombieDefinition Eyes = null!, EyesCone = null!, EyesBucket = null!, Hypno = null!, Catalyst = null!;
     private static UnityEngine.Sprite? eyesPortrait;
     private static readonly Dictionary<string, UnityEngine.Sprite> thumbnails = new();
     private static UnityEngine.Sprite Thumbnail(string key, bool duck)
@@ -88,5 +88,13 @@ internal static class FusionZombies
         Hypno.Portrait = _ => Thumbnail("hypno-portrait", false);
         Hypno.Thumbnail = (_, duck) => Thumbnail("hypno", duck);
 
+        Catalyst = Zombies.RegisterZombie(mod, "catalyst-cherry",
+            new(ZombieType.PeaHead, MarkerField.SummonCounter, HypnoticTransmutations.CatalystMarker),
+            new("Super Cherry Zombie", "Fires an explosive cherry every six seconds."),
+            new("Superkirsch-Zombie", "Feuert alle sechs Sekunden eine explosive Kirsche."));
+        Catalyst.Initialize = zombie => {
+            zombie.mBodyHealth = zombie.mBodyMaxHealth = 720;
+            zombie.mPhaseCounter = HypnoticTransmutations.CatalystFirstShot;
+        };
     }
 }
