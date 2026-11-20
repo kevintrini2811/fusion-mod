@@ -238,6 +238,7 @@ internal static class Fertilizer
             LumosAngler.Fertilize(plant);
             GulperShroom.Fertilize(plant);
             MagnetFusions.Fertilize(plant);
+            if (identity == FusionPlant.SolarMagnet) SunflowerFusions.Fertilize(plant);
             PepperFusions.Fertilize(plant);
             AirRaidFusions.Fertilize(plant);
             EatingShrooms.Fertilize(plant);

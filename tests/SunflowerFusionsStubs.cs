@@ -10,7 +10,7 @@ namespace Il2CppReloaded.Gameplay {
  public enum ZombieType { Normal,Balloon }
  public partial class App { public void AddTodParticle(float x,float y,int order,ParticleEffect effect){} }
  public partial class Board {
-  public int mFogBlownCountDown; public int Roll; public Queue<int> Rolls=new();
+  public int mFogBlownCountDown, MetalProduced; public int Roll; public Queue<int> Rolls=new();
   public List<CoinType> Coins=new(); public List<Projectile> Shots=new(); public List<int> SmallSuns=new();
   public int Rand(int max)=>Rolls.Count>0?Rolls.Dequeue()%max:Roll%max;
   public Coin AddCoin(float x,float y,CoinType type,CoinMotion motion) { Coins.Add(type); return new Coin(); }
@@ -68,6 +68,7 @@ namespace FusionMod {
  internal static class LumosAngler { internal static void Fertilize(Plant plant) { } }
  internal static class GulperShroom { internal static void Fertilize(Plant plant) { } }
  internal static class MagnetFusions { internal static void Fertilize(Plant plant) { } }
+ internal static class BucketDrops { internal static void ProduceMetal(Plant plant) => ++plant.mBoard.MetalProduced; }
  internal static class PepperFusions { internal static void Fertilize(Plant plant) { } }
  internal static class AirRaidFusions { internal static void Fertilize(Plant plant) { } }
  internal static class EatingShrooms { internal static void Fertilize(Il2CppReloaded.Gameplay.Plant plant) { } }

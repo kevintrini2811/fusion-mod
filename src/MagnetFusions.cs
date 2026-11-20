@@ -15,6 +15,7 @@ internal static class MagnetFusions
         internal readonly uint Id;
         internal bool InnerCompleted;
         internal (float X, float Y, int Row)? Shock;
+        internal (float X, float Y)? Grenade;
         internal AbilityFrame(Plant plant) { Plant = plant; Board = plant.mBoard; Id = plant.DataID; }
     }
     [ThreadStatic] internal static AbilityFrame? CurrentAbility;
@@ -31,18 +32,30 @@ internal static class MagnetFusions
     internal static void FinishAbility(AbilityFrame frame)
     {
         var pending = frame.Shock;
+        var grenade = frame.Grenade;
         frame.Shock = null; // Commit once before damage callbacks can reenter.
+        frame.Grenade = null;
         if (frame.InnerCompleted && pending is { } shock && Same(frame.Plant, frame.Board, frame.Id))
             ZombieLibrary.NativeArmorMagnet.RunAfterRestore(() =>
             {
                 if (Same(frame.Plant, frame.Board, frame.Id))
                     Shock(frame.Plant, frame.Board, frame.Id, shock.X, shock.Y, shock.Row);
             });
+        if (frame.InnerCompleted && grenade is { } impact && Same(frame.Plant, frame.Board, frame.Id))
+            ZombieLibrary.NativeArmorMagnet.RunAfterRestore(() =>
+            {
+                var plant = frame.Plant;
+                if (Same(plant, frame.Board, frame.Id))
+                    CherryBombPlants.Explode(new(frame.Board, FusionPlant.GrenadierMagnet, frame.Id,
+                        plant.mPlantCol, plant.mRow, impact.X, impact.Y, plant.mRenderOrder),
+                        sourceRadius: 2 * Unit, damage: 300);
+            });
     }
     internal const int BlowEvent = 39, BlowDuration = 127, Lifetime = 1000;
     internal const float Unit = 80f / 1.35f;
     internal static bool Owns(Plant plant) => FusionPlant.IsMagnetFusion(FusionPlant.From(plant));
     internal static bool Blover(Plant plant) => FusionPlant.From(plant) == FusionPlant.MagnetBlover;
+    internal static bool Grenadier(Plant plant) => FusionPlant.From(plant) == FusionPlant.GrenadierMagnet;
     internal static int Light(Plant plant) => Math.Clamp(PumpkinFusions.LightLevel(plant), 0, 3);
     internal static int StoredLight(Plant plant) => Math.Clamp(plant.mTargetY / 4, 0, 3);
     internal static int Interval(int light) => light switch { 0 => 1500, 1 => 1100, 2 => 750, _ => 500 };
@@ -85,7 +98,9 @@ internal static class MagnetFusions
         var board = plant.mBoard;
         uint id = plant.DataID;
         bool blover = Blover(plant);
+        bool grenadier = Grenadier(plant);
         bool anchor = FusionPlant.From(plant) == FusionPlant.AnchorShroom;
+        if (grenadier && TickGrenadier(plant, board, id)) return;
         if (blover)
         {
             ++plant.mTargetX;
@@ -106,9 +121,9 @@ internal static class MagnetFusions
         // The previous item is digested before acquisition. Light changes do
         // not rewrite an already running interval.
         ClearItem(plant);
-        int light = blover || anchor ? 0 : Light(plant);
-        float radius = blover ? 40 * Unit : anchor ? 4 * Unit : Radius(light);
-        int rows = blover || anchor ? 2 : Rows(light);
+        int light = blover || anchor || grenadier ? 0 : Light(plant);
+        float radius = blover ? 40 * Unit : anchor || grenadier ? 4 * Unit : Radius(light);
+        int rows = blover || anchor || grenadier ? 2 : Rows(light);
         int interval = blover ? 100 : anchor ? (plant.mTargetX >= 3 ? 1000 : 1500) : Interval(light);
         plant.mTargetY = light * 4;
         for (int i = 0; i < board.m_zombies.Count; ++i)
@@ -169,6 +184,94 @@ internal static class MagnetFusions
         plant.mLaunchCounter = interval;
         plant.mState = PlantState.MagnetshroomSucking;
         plant.mStartRow = 1;
+        if (Grenadier(plant))
+        {
+            plant.mTargetX = 0;
+            plant.mShootingCounter = 100;
+        }
+    }
+
+    internal static bool CanReceive(Plant plant) => Grenadier(plant) && ChomperFusions.Active(plant)
+        && plant.mLaunchCounter == 0 && plant.mMagnetItems[0].ItemType == MagnetItemType.None;
+
+    internal static bool TryReceive(Plant plant, MagnetItemType type, float x, float y)
+    {
+        if (!CanReceive(plant)) return false;
+        Capture(plant, type, x, y);
+        Commit(plant, 1500);
+        return true;
+    }
+
+    // Negative action phases are outside the ordinary 1..69 acquisition
+    // animation. Native drawing and saves own the item's world position.
+    private const int Outbound = -1, Returning = -2;
+    internal static bool CanTakeItem(Plant plant) => !Grenadier(plant) || plant.mStartRow >= 0;
+
+    private static bool TickGrenadier(Plant plant, Board board, uint id)
+    {
+        if (plant.mLaunchCounter > 0) --plant.mLaunchCounter;
+        var item = plant.mMagnetItems[0];
+        if (item.ItemType == MagnetItemType.None) return plant.mLaunchCounter > 0;
+
+        MoveItem(plant);
+        if (plant.mStartRow > 0 && ++plant.mStartRow > 69) plant.mStartRow = 0;
+        if (plant.mShootingCounter > 0) --plant.mShootingCounter;
+        if (plant.mShootingCounter == 0)
+        {
+            plant.mShootingCounter = 300;
+            if (plant.mStartRow != Outbound && !BucketPlants.Holding(plant)) AimGrenade(plant, board, item);
+        }
+
+        if (plant.mStartRow == Outbound)
+        {
+            float x = item.DestOffsetX, y = item.DestOffsetY;
+            if (!MoveToward(item, x, y, 40 * Unit / 100, Unit)) return true;
+            item.DestOffsetX = plant.mWidth / 2f;
+            item.DestOffsetY = 10;
+            plant.mStartRow = Returning;
+            if (++plant.mTargetX == 5)
+            {
+                ClearItem(plant);
+                plant.mLaunchCounter = Math.Min(plant.mLaunchCounter, 50);
+            }
+            if (CurrentAbility is { } frame && frame.Id == id && frame.Plant.Pointer == plant.Pointer
+                && frame.Board.Pointer == board.Pointer) frame.Grenade ??= (x, y);
+        }
+        else if (plant.mStartRow == Returning && MoveToward(item,
+            plant.mX + item.DestOffsetX, plant.mY + item.DestOffsetY, 32 * Unit / 100, 0))
+            plant.mStartRow = 0;
+        return true;
+    }
+
+    private static void AimGrenade(Plant plant, Board board, MagnetItem item)
+    {
+        float x = plant.mX + plant.mWidth / 2f, y = plant.mY + plant.mHeight / 2f;
+        float nearest = float.PositiveInfinity;
+        for (int i = 0; i < board.m_zombies.Count; ++i)
+        {
+            var zombie = board.m_zombies[i];
+            if (zombie == null || zombie.mRow != plant.mRow || !BloverFusions.Live(board, zombie)
+                || !ShockEligible(zombie)) continue;
+            var center = zombie.GetZombieRect().center;
+            float dx = center.x - x, dy = center.y - y;
+            float distance = dx * dx + dy * dy;
+            if (distance >= nearest) continue;
+            nearest = distance;
+            item.DestOffsetX = center.x;
+            item.DestOffsetY = center.y;
+            plant.mStartRow = Outbound;
+        }
+    }
+
+    private static bool MoveToward(MagnetItem item, float x, float y, float speed, float tolerance)
+    {
+        float dx = x - item.PosX, dy = y - item.PosY;
+        float distance = MathF.Sqrt(dx * dx + dy * dy);
+        if (distance <= tolerance) return true;
+        float step = Math.Min(distance, speed);
+        item.PosX += dx * step / distance;
+        item.PosY += dy * step / distance;
+        return distance <= tolerance + step;
     }
     private static void MoveItem(Plant plant)
     {
@@ -180,13 +283,14 @@ internal static class MagnetFusions
         item.PosX += (plant.mX + item.DestOffsetX - item.PosX) / remaining;
         item.PosY += (plant.mY + item.DestOffsetY - item.PosY) / remaining;
     }
-    private static void ClearItem(Plant plant)
+    internal static void ClearItem(Plant plant)
     {
         if (BucketPlants.Holding(plant)) BucketPlants.Clear();
         plant.mMagnetItems[0].ItemType = MagnetItemType.None;
         plant.mTargetY = StoredLight(plant) * 4;
         plant.mLaunchRate = 0;
         plant.mState = PlantState.Ready;
+        if (Grenadier(plant)) plant.mTargetX = plant.mStartRow = plant.mShootingCounter = 0;
     }
     internal static bool ShockEligible(Zombie zombie)
     {
@@ -248,7 +352,7 @@ internal static class MagnetFusionAbilityPatch
         if (__state == null) return; // Prefix skipped: this call owns no frame.
         // A native or callback exception skips the postfix. Discard pending
         // damage and restore the exact enclosing invocation in either case.
-        if (__state.Frame is { } frame) frame.Shock = null;
+        if (__state.Frame is { } frame) { frame.Shock = null; frame.Grenade = null; }
         MagnetFusions.CurrentAbility = __state.Parent;
     }
 }
@@ -256,6 +360,10 @@ internal static class MagnetFusionAbilityPatch
 [HarmonyPatch(typeof(Plant), nameof(Plant.PlantInitialize))]
 internal static class MagnetFusionInitializePatch
 { private static void Postfix(Plant __instance) => MagnetFusions.Initialize(__instance); }
+
+[HarmonyPatch(typeof(Plant), nameof(Plant.UpdateShooting))]
+internal static class GrenadierNativeShootingPatch
+{ private static bool Prefix(Plant __instance) => !MagnetFusions.Grenadier(__instance); }
 
 [HarmonyPatch(typeof(Plant), nameof(Plant.UpdateMagnetShroom))]
 internal static class MagnetFusionUpdatePatch
@@ -286,6 +394,8 @@ internal static class MagnetFusionDeathPatch
 {
     private static void Prefix(Plant __instance, bool __runOriginal, out BucketDrops.MagnetCapture? __state) =>
         __state = __runOriginal && !__instance.mDead && MagnetFusions.Owns(__instance) && !MagnetFusions.Blover(__instance)
+            // CherryMagnet.DieEventMustExecute destroys the held object.
+            && !MagnetFusions.Grenadier(__instance)
             ? BucketDrops.CaptureMagnet(__instance) : null;
     private static void Postfix(Plant __instance, bool __runOriginal, BucketDrops.MagnetCapture? __state)
     {

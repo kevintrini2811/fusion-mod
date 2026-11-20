@@ -13,7 +13,8 @@ internal static class SunflowerFusions
     internal static bool IsShot(Projectile shot) => shot.mProjectileType == ProjectileType.Pea
         && shot.mMotionType == ProjectileMotion.Star && shot.mCobTargetX == SolarShotMarker;
     internal static bool Producer(FusionPlant identity) => identity == FusionPlant.SilverSunflower
-        || identity == FusionPlant.SolarPot || identity == FusionPlant.SunsetShroom || identity == FusionPlant.CometShroom;
+        || identity == FusionPlant.SolarPot || identity == FusionPlant.SunsetShroom || identity == FusionPlant.CometShroom
+        || identity == FusionPlant.SolarMagnet;
 
     internal static void Initialize(Plant plant)
     {
@@ -22,8 +23,8 @@ internal static class SunflowerFusions
         plant.mPlantHealth = plant.mPlantMaxHealth = 300;
         plant.mDoSpecialCountdown = 0;
         plant.mLaunchCounter = plant.mShootingCounter = plant.mStartRow = plant.mTargetY = 0;
-        // mTargetX is the remaining growth time; mStartRow is the size stage.
-        plant.mTargetX = identity == FusionPlant.SunsetShroom ? 2000 : 0;
+        // mTargetX is the attribute clock; mStartRow is the Sunset size stage.
+        plant.mTargetX = identity == FusionPlant.SunsetShroom ? 2000 : identity == FusionPlant.SolarMagnet ? 1000 : 0;
     }
 
     internal static float Brightness(Plant plant) => plant.mShootingCounter <= 0 ? 1
@@ -33,7 +34,8 @@ internal static class SunflowerFusions
     {
         // Fertilize.Upgrade reduces a positive attribute countdown to at most
         // 0.5 seconds. It does not skip both SunSeaShroom growth stages.
-        if (FusionPlant.From(plant) == FusionPlant.SunsetShroom && plant.mStartRow < 2)
+        var identity = FusionPlant.From(plant);
+        if (identity == FusionPlant.SolarMagnet || identity == FusionPlant.SunsetShroom && plant.mStartRow < 2)
             plant.mTargetX = Math.Min(plant.mTargetX, 50);
     }
 
@@ -44,6 +46,12 @@ internal static class SunflowerFusions
         var identity = FusionPlant.From(plant);
         if (Producer(identity))
         {
+            bool solarMagnet = identity == FusionPlant.SolarMagnet;
+            if (solarMagnet && --plant.mTargetX <= 0)
+            {
+                plant.mTargetX = 3000;
+                BucketDrops.ProduceMetal(plant);
+            }
             if (identity == FusionPlant.SunsetShroom)
             {
                 if (plant.mTargetY > 0) --plant.mTargetY;
@@ -57,13 +65,13 @@ internal static class SunflowerFusions
             if (plant.mApp.GameMode is >= GameMode.PuzzleIZombie1 and <= GameMode.PuzzleIZombieEndless) return;
             if (plant.mShootingCounter > 0 && --plant.mShootingCounter == 50)
             {
-                var type = identity == FusionPlant.SilverSunflower || identity == FusionPlant.CometShroom ? CoinType.Sun
+                var type = solarMagnet || identity == FusionPlant.SilverSunflower || identity == FusionPlant.CometShroom ? CoinType.Sun
                     : identity == FusionPlant.SolarPot || plant.mStartRow == 0 ? CoinType.SmallSun
                     : plant.mStartRow == 1 ? CoinType.Sun : CoinType.LargeSun;
                 plant.mBoard.AddCoin(plant.mX, plant.mY, type, CoinMotion.FromPlant);
             }
             if (--plant.mLaunchCounter > 0) return;
-            int interval = identity == FusionPlant.SolarPot || identity == FusionPlant.CometShroom ? 2500 : 1500;
+            int interval = solarMagnet || identity == FusionPlant.SolarPot || identity == FusionPlant.CometShroom ? 2500 : 1500;
             // SunPot inherits MoneyPot's +/-10%; Producer uses +/-5%.
             int jitter = identity == FusionPlant.SolarPot ? 10 : 5;
             plant.mLaunchCounter = interval * (100 - jitter) / 100
@@ -202,7 +210,7 @@ internal static class SunflowerFusionTickPatch
 {
     private static bool OwnsAbilities(FusionPlant identity) => identity == FusionPlant.SolarFlare
         || identity == FusionPlant.SolarBlover || identity == FusionPlant.SilverSunflower
-        || identity == FusionPlant.CometShroom;
+        || identity == FusionPlant.CometShroom || identity == FusionPlant.SolarMagnet;
 
     internal static bool Prefix(Plant __instance)
     {

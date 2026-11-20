@@ -59,6 +59,21 @@ Check(pot.mLaunchCounter == 2200, "pot production delay is sampled from 25 secon
 pot.mBoard.Roll = 500; pot.mLaunchCounter = 1; Ticks(pot, 1);
 Check(pot.mLaunchCounter == 2750, "production upper jitter bound");
 
+var solarMagnet = Make(FusionPlant.SolarMagnet);
+Ticks(solarMagnet, 999);
+Check(solarMagnet.mBoard.MetalProduced == 0 && solarMagnet.mBoard.Coins.SequenceEqual(new[] { CoinType.Sun }),
+    "Solar Magnet independently produces a full sun before its first metal");
+Ticks(solarMagnet, 1);
+Check(solarMagnet.mBoard.MetalProduced == 1 && solarMagnet.mTargetX == 3000,
+    "ten-second initial metal interval followed by thirty seconds");
+int sunClock = solarMagnet.mLaunchCounter;
+Check(Fertilizer.Apply(solarMagnet.mBoard, 0, 0) && solarMagnet.mTargetX == 50
+    && solarMagnet.mLaunchCounter == sunClock, "fertilizer caps the metal clock only");
+Ticks(solarMagnet, 49);
+Check(solarMagnet.mBoard.MetalProduced == 1, "fertilizer does not skip the last half second");
+Ticks(solarMagnet, 1);
+Check(solarMagnet.mBoard.MetalProduced == 2 && solarMagnet.mTargetX == 3000, "fertilized metal production resets normally");
+
 var sea = Make(FusionPlant.SunsetShroom);
 Ticks(sea, 51);
 Check(sea.mBoard.Coins.SequenceEqual(new[] { CoinType.SmallSun }), "young aquatic sun");

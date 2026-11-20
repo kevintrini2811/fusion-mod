@@ -487,6 +487,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.WeedSpreader, "WeedSpreader"),
         new(FusionPlant.MagnetBlover, "MagnetBlover"),
         new(FusionPlant.LumosMagnet, "LumosMagnet"),
+        new(FusionPlant.SolarMagnet, "LumosMagnet"),
+        new(FusionPlant.GrenadierMagnet, "LumosMagnet"),
         new(FusionPlant.PepperPopper, "BellPepper"),
         new(FusionPlant.MadPepper, "SolarFlare"),
         new(FusionPlant.Hoverleaf, "UmbrellaCap"),
@@ -510,17 +512,25 @@ internal static partial class ImportedPeaVisuals
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
+    private static MagnetItemController? metalCursor;
     internal static void ClearBucketCursor()
     {
+        if (metalCursor != null && metalCursor) metalCursor.Die();
+        metalCursor = null;
         if (bucketCursor != null && bucketCursor) Object.Destroy(bucketCursor);
         bucketCursor = null;
     }
     private static int DropSprite(Assets assets) => assets.model!.Nodes.First(n => n.Name == "Body").Sprite;
-    internal static void ShowBucketCursor(Board board, FusionPlant identity = default)
+    internal static void ShowBucketCursor(Board board, FusionPlant identity = default, MagnetItemType metalType = MagnetItemType.None)
     {
         var cursor = board.mCursorObject?.mController;
         if (cursor == null || !cursor) return;
-        if (bucketCursor != null && bucketCursor) return;
+        if (bucketCursor != null && bucketCursor || metalCursor != null && metalCursor) return;
+        if (metalType != MagnetItemType.None)
+        {
+            metalCursor = CreateLooseMetal(board, metalType, cursor.transform);
+            return;
+        }
         var assets = Models.First(a => a.Identity == (identity == default ? FusionPlant.Bucket : identity));
         assets.Load(board, null);
         bucketCursor = new GameObject("Fusion-BucketCursor") { layer = cursor.gameObject.layer };
@@ -2211,6 +2221,8 @@ internal static partial class ImportedPeaVisuals
             if (assets.Identity == FusionPlant.FrostburnWood) tint *= new Color(.65f, .87f, 1, 1);
             if (assets.Identity == FusionPlant.Bombrella) tint *= new Color(1, .69f, .62f, 1);
             if (assets.Identity == FusionPlant.AnchorShroom) tint *= new Color(.62f, .84f, 1, 1);
+            if (assets.Identity == FusionPlant.SolarMagnet) tint *= new Color(1, .84f, .38f, 1);
+            if (assets.Identity == FusionPlant.GrenadierMagnet) tint *= new Color(1, .45f, .53f, 1);
             if (assets.Identity == FusionPlant.OrcaShroom) tint *= new Color(.62f, .65f, .8f, 1);
             if (assets.Identity == FusionPlant.TrippyShroom) tint *= new Color(1, .63f, .97f, 1);
             if (assets.Identity == FusionPlant.CometShroom) tint *= new Color(1, .84f, .46f, 1);

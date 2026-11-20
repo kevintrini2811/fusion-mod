@@ -225,6 +225,32 @@ Check(!BucketDrops.TakeForMagnet(capturing, 1000, 5, out _), "nonmetal head excl
 BucketDrops.Clear();
 Console.WriteLine($"Physical magnet transfers included: {assertions} checks");
 
+var metalBoard = new Board();
+Plant MetalPlant(FusionPlant identity, int col) => metalBoard.Plants[(col, 1)] = new Plant
+{
+    mBoard = metalBoard, mPlantCol = col, mRow = 1, Pointer = (IntPtr)(20 + col),
+    mSeedType = identity.NativeType, mImitaterType = identity.Marker
+};
+var solar = MetalPlant(FusionPlant.SolarMagnet, 1);
+var grenadier = MetalPlant(FusionPlant.GrenadierMagnet, 2);
+metalBoard.RandomValues.Enqueue(2);
+BucketDrops.ProduceMetal(solar);
+Check(BucketDrops.Count == 0 && grenadier.mMagnetItems[0].ItemType == MagnetItemType.PickAxe
+    && grenadier.mLaunchCounter == 1500, "right-hand ready Grenadier receives the generated item directly");
+metalBoard.RandomValues.Enqueue(3);
+BucketDrops.ProduceMetal(solar);
+var metalDrop = BucketDrops.Snapshot(metalBoard).Single();
+Check(metalBoard.m_gridItems.Any(i => !i.mDead && BucketDrops.IsSavedDrop(i)),
+    "busy automatic recipient leaves one persisted loose item");
+Check(BucketPlants.TrySelect(metalBoard, (int)metalDrop.X, (int)metalDrop.Y), "generic generated metal is selectable");
+BucketPlants.MouseDown(metalBoard, 2, 1, 1, 0);
+Check(BucketDrops.Count == 1 && BucketPlants.SelectedOn(metalBoard), "busy manual recipient preserves the selection");
+BucketPlants.MouseDown(metalBoard, 3, 1, 1, 0);
+Check(metalBoard.Created == 0 && BucketDrops.Count == 1, "generic metal cannot be planted as a bucket");
+BucketPlants.MouseDown(metalBoard, 1, 1, 1, 0);
+Check(BucketDrops.Count == 0 && metalBoard.Suns == 1 && !BucketPlants.SelectedOn(metalBoard),
+    "Solar consumes one generic metal item for one full sun");
+
 // The real controller boundary must retain the item across native seed cursor
 // state and force-clear on completion. Default ClearCursor is a controller no-op.
 BucketPlants.Clear();

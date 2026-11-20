@@ -1666,6 +1666,18 @@
       "marker": "Plantern"
     },
     {
+      "name": "SolarMagnet",
+      "native": "Sunflower",
+      "marker": "Magnetshroom",
+      "model": "LumosMagnet"
+    },
+    {
+      "name": "GrenadierMagnet",
+      "native": "Magnetshroom",
+      "marker": "Cherrybomb",
+      "model": "LumosMagnet"
+    },
+    {
       "name": "PepperPopper",
       "native": "Jalapeno",
       "marker": "Cherrybomb",
@@ -1810,7 +1822,8 @@
       "SunsetShroom",
       "SolarFlare",
       "SolarBlover",
-      "CometShroom"
+      "CometShroom",
+      "SolarMagnet"
     ],
     "IsPuffLobber": [
       "SproutPult",
@@ -2182,7 +2195,8 @@
     "IsMagnetFusion": [
       "MagnetBlover",
       "LumosMagnet",
-      "AnchorShroom"
+      "AnchorShroom",
+      "GrenadierMagnet"
     ]
   }
 }

@@ -9,12 +9,13 @@ namespace HarmonyLib
     { public static System.Reflection.MethodInfo Method(Type type,string name) => type.GetMethod(name)!;
       public static System.Reflection.MethodInfo Method(string name) => null!; }
 }
-namespace Il2CppReloaded.Services { public enum FoleyType { NewspaperRarrgh } public class SoundSystem { public void PlayFoley(FoleyType type) {} } public class SerializationService { public void Serialize() {} } }
+namespace Il2CppReloaded.Services { public enum FoleyType { NewspaperRarrgh, MagnetShroom } public class SoundSystem { public void PlayFoley(FoleyType type) {} } public class SerializationService { public void Serialize() {} } }
 namespace Il2CppReloaded.Gameplay
 {
 
     public enum CursorType { Normal, Glove, Shovel, PlantFromBank }
-    public enum MagnetItemType { None, Pail1, Pail2, Pail3, FootballHelmet1, FootballHelmet2, FootballHelmet3, Door1 }
+    public enum MagnetItemType { None, Pail1, Pail2, Pail3, FootballHelmet1, FootballHelmet2,
+        FootballHelmet3, Door1, PickAxe, JackInTheBox, Pogo1, SilverCoin, GoldCoin, Diamond }
     public enum PlantOnBungeeState { NotOnBungee, OnBungee }
     public enum PlantState { Ready, Notready }
     public enum GameScenes { Playing, Loading }
@@ -23,6 +24,7 @@ namespace Il2CppReloaded.Gameplay
     public enum ProjectileType { Pea, PeashooterPea, Cabbage, ZombiePea, Basketball }
     public enum ZombiePhase { ZombieNormal, ZombieDying, RisingFromGrave }
     public enum CoinType { Sun }
+    public class Coin {}
     public enum CoinMotion { FromPlant }
     public enum GridItemType { ZenTool }
     public enum GridItemState { Normal }
@@ -44,7 +46,7 @@ namespace Il2CppReloaded.Gameplay
         public List<Plant> m_plants=>Plants.Values.ToList();
         public List<Zombie> m_zombies=new(); public List<Projectile> m_projectiles=new();
         public GridItems m_gridItems=new(); public int Suns;
-        public void AddCoin(float x,float y,CoinType type,CoinMotion motion)=>++Suns;
+        public Coin AddCoin(float x,float y,CoinType type,CoinMotion motion) { ++Suns; return new(); }
         public int Rand(int maximum)=>(int)(Rand()%(uint)maximum);
         public int GridToPixelX(int col,int row)=>col*80; public int GridToPixelY(int col,int row)=>row*80;
         public Dictionary<(int,int),Plant> Plants=new();
@@ -86,7 +88,7 @@ namespace Il2CppReloaded.Gameplay
         public App mApp=>mBoard.mApp;
         public PlantState mState; public PlantOnBungeeState mOnBungeeState;
         public MagnetItem[] mMagnetItems=new[] { new MagnetItem() };
-        public float mX,mY; public int mRenderOrder,mShadowRenderOrder;
+        public float mX,mY; public int mRenderOrder,mShadowRenderOrder,mWidth=80;
         public int CalcRenderOrder()=>mRow*100; public void UpdateReanim(){}
         public bool NotOnGround()=>OffGround;
         public static bool IsUpgrade(SeedType type)=>false;
@@ -186,10 +188,10 @@ namespace FusionMod
         internal static void EnsureEyesZombie(Zombie z){} internal static void ClearEyesZombies(Board? b=null){}
         internal sealed class BucketDropView : IDisposable
         {
-            internal BucketDropView(Board board, FusionPlant identity = default) {} internal void Update(float x,float y,float alpha) {}
+            internal BucketDropView(Board board, FusionPlant identity = default, MagnetItemType metal=default) {} internal void Update(float x,float y,float alpha) {}
             public void Dispose() {}
         }
-        internal static void ClearBucketCursor(){} internal static void ShowBucketCursor(Board b, FusionPlant identity = default){}
+        internal static void ClearBucketCursor(){} internal static void ShowBucketCursor(Board b, FusionPlant identity = default, MagnetItemType metal=default){}
         internal static void EnsureIronProjectile(Projectile p){} internal static void RegisterIronProjectile(Projectile p){} internal static void ForgetProjectile(Projectile p){}
     }
     internal static class ChomperFusions
@@ -218,6 +220,17 @@ namespace FusionMod {
     // Only the range/presentation boundary is doubled in the BucketDrops suite.
     // The actual MagnetFusions source and clock are covered separately.
     internal static class MagnetFusions {
+        internal static bool Grenadier(Il2CppReloaded.Gameplay.Plant plant) => FusionPlant.From(plant) == FusionPlant.GrenadierMagnet;
+        internal static bool CanTakeItem(Il2CppReloaded.Gameplay.Plant plant) => !Grenadier(plant) || plant.mStartRow >= 0;
+        internal static bool CanReceive(Il2CppReloaded.Gameplay.Plant plant) => Grenadier(plant)
+            && plant.mLaunchCounter == 0 && plant.mMagnetItems[0].ItemType == Il2CppReloaded.Gameplay.MagnetItemType.None;
+        internal static void ClearItem(Il2CppReloaded.Gameplay.Plant plant) => plant.mMagnetItems[0].ItemType = Il2CppReloaded.Gameplay.MagnetItemType.None;
+        internal static bool TryReceive(Il2CppReloaded.Gameplay.Plant plant, Il2CppReloaded.Gameplay.MagnetItemType type, float x, float y) {
+            if (!CanReceive(plant)) return false;
+            Capture(plant, type, x, y);
+            plant.mLaunchCounter = 1500;
+            return true;
+        }
         internal static bool Owns(Il2CppReloaded.Gameplay.Plant plant) => FusionPlant.IsMagnetFusion(FusionPlant.From(plant));
         internal static int StoredLight(Il2CppReloaded.Gameplay.Plant plant) => plant.mTargetY / 4;
         internal static bool InRange(Il2CppReloaded.Gameplay.Plant plant, float x, float y, int row, float radius, int rows) =>

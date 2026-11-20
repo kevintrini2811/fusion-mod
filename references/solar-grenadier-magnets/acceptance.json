@@ -1,0 +1,44 @@
+{
+  "status": "Approved",
+  "candidateSha256": "4bda0f832cc958f1612d4ebd528f80d87fe6229174888d53c02f4af83eedbdfc",
+  "gameplayEvidenceRoot": "/home/kevin/modding/replanted/pvzreplanted/.test-runs/task1-20261120-pair-11/gameplay",
+  "checks": {
+    "recipes": {
+      "passed": true,
+      "evidence": "r2/0003-check.json through r2/0006-check.json"
+    },
+    "solar": {
+      "passed": true,
+      "evidence": "r5/0012-check.json, r5/0014-check.json, r5/0018-check.json, r5/0025-check.json",
+      "details": "25 sun from production and from controller-selected loose metal; occupied Tallnut tile prevents seed action. Collector remained enabled."
+    },
+    "fertilizer": {
+      "passed": true,
+      "evidence": "r5/0009-check.json, r5/0032-check.json"
+    },
+    "grenadier": {
+      "passed": true,
+      "evidence": "r6/0007-check.json, r6/0023-grenadier-observations.json, r6/0024-check.json, r6/0026-check.json",
+      "details": "Pail captured; outbound phase observed; HP 10000, 9700, 9400, 9100, 8800, 8500; second Pail captured after disposal."
+    },
+    "directAndBusy": {
+      "passed": true,
+      "evidence": "r6/0031-check.json, r6/0034-check.json, r6/0037-check.json, r6/busy-gameplay.png"
+    }
+  },
+  "cleanup": {
+    "pid": 850303,
+    "processEnded": true,
+    "installedDllSha256": "246846505825e710704c4eef765cc83d250255f876924673b3ec56434448a472",
+    "profile1Sha256": "64f3729daa99f6a58d169f95b4eb7ece09dae83ce84260c729bfe17de9ccb504",
+    "profileDataSha256": "1630572dfb8900e8a84e3eb1c060ae15299088d70dc865856b4f308900467145",
+    "displayUnchanged": true,
+    "difficulty": "Normal 3 during gameplay; restored Extreme 5 before leave",
+    "evidence": "r6/preflight.json, r6/0039-difficulty-restored.json, r6/run-result.json, r6/restore.json"
+  },
+  "limits": [
+    "Almanac, save/load and unrequested behavior not tested.",
+    "Transient bank override was confined to debug session.",
+    "Earlier fixture failures and guarded cleanup remain archived in gameplay root and r2-r5."
+  ]
+}

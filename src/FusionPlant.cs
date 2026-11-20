@@ -341,6 +341,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant WeedSpreader = new(SeedType.Threepeater, SeedType.Spikeweed);
     internal static readonly FusionPlant MagnetBlover = new(SeedType.Magnetshroom, SeedType.Blover);
     internal static readonly FusionPlant LumosMagnet = new(SeedType.Magnetshroom, SeedType.Plantern);
+    internal static readonly FusionPlant SolarMagnet = new(SeedType.Sunflower, SeedType.Magnetshroom);
+    internal static readonly FusionPlant GrenadierMagnet = new(SeedType.Magnetshroom, SeedType.Cherrybomb);
     internal static readonly FusionPlant PepperPopper = new(SeedType.Jalapeno, SeedType.Cherrybomb);
     internal static readonly FusionPlant MadPepper = new(SeedType.Jalapeno, SeedType.Doomshroom);
     internal static readonly FusionPlant Hoverleaf = new(SeedType.Blover, SeedType.Umbrella);
@@ -372,7 +374,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
 
     internal static bool IsSunflowerFusion(FusionPlant plant) =>
         plant == SilverSunflower || plant == SolarPot || plant == SunsetShroom ||
-        plant == SolarFlare || plant == SolarBlover || plant == CometShroom;
+        plant == SolarFlare || plant == SolarBlover || plant == CometShroom ||
+        plant == SolarMagnet;
 
     internal static bool IsPuffLobber(FusionPlant plant) =>
         plant == SproutPult || plant == BabyCorn || plant == SlicePult;
@@ -577,7 +580,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == NibbleShroom || plant == Squish;
 
     internal static bool IsMagnetFusion(FusionPlant plant) =>
-        plant == MagnetBlover || plant == LumosMagnet || plant == AnchorShroom;
+        plant == MagnetBlover || plant == LumosMagnet || plant == AnchorShroom ||
+        plant == GrenadierMagnet;
 
     internal static bool HasImportedVisuals(FusionPlant plant) =>
         plant == BuckShroom || plant == SproutPult || plant == BabyCorn ||
@@ -691,13 +695,14 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == BoltPult || plant == FootballShroom || plant == DoomplateShroom ||
         plant == NibbleShroom || plant == Squish || plant == GulperShroom ||
         plant == WeedSpreader || plant == MagnetBlover || plant == LumosMagnet ||
-        plant == PepperPopper || plant == MadPepper || plant == Hoverleaf ||
-        plant == DroneNut || plant == CactusDrone || plant == CherryDrone ||
-        plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
-        plant == Starglow || plant == FrostburnWood || plant == DoomPult ||
-        plant == Bombrella || plant == Levitater || plant == AnchorShroom ||
-        plant == OrcaShroom || plant == TrippyShroom || plant == CometShroom ||
-        plant == CatalystShroom || plant == CryonicShroom;
+        plant == SolarMagnet || plant == GrenadierMagnet || plant == PepperPopper ||
+        plant == MadPepper || plant == Hoverleaf || plant == DroneNut ||
+        plant == CactusDrone || plant == CherryDrone || plant == FallMelon ||
+        plant == SquashDrone || plant == LumosAngler || plant == Starglow ||
+        plant == FrostburnWood || plant == DoomPult || plant == Bombrella ||
+        plant == Levitater || plant == AnchorShroom || plant == OrcaShroom ||
+        plant == TrippyShroom || plant == CometShroom || plant == CatalystShroom ||
+        plant == CryonicShroom;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1034,6 +1039,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Threepeater, SeedType.Spikeweed) => WeedSpreader,
             (SeedType.Magnetshroom, SeedType.Blover) => MagnetBlover,
             (SeedType.Magnetshroom, SeedType.Plantern) => LumosMagnet,
+            (SeedType.Sunflower, SeedType.Magnetshroom) => SolarMagnet,
+            (SeedType.Magnetshroom, SeedType.Cherrybomb) => GrenadierMagnet,
             (SeedType.Jalapeno, SeedType.Cherrybomb) => PepperPopper,
             (SeedType.Jalapeno, SeedType.Doomshroom) => MadPepper,
             (SeedType.Blover, SeedType.Umbrella) => Hoverleaf,

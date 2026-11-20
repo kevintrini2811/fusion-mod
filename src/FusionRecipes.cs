@@ -25,6 +25,8 @@ internal static class FusionRecipes
         [(SeedType.Doomshroom, SeedType.Jalapeno)] = FusionPlant.MadPepper,
         [(SeedType.Blover, SeedType.Magnetshroom)] = FusionPlant.MagnetBlover,
         [(SeedType.Magnetshroom, SeedType.Plantern)] = FusionPlant.LumosMagnet,
+        [(SeedType.Magnetshroom, SeedType.Sunflower)] = FusionPlant.SolarMagnet,
+        [(SeedType.Cherrybomb, SeedType.Magnetshroom)] = FusionPlant.GrenadierMagnet,
         [(SeedType.Chomper, SeedType.Hypnoshroom)] = FusionPlant.HypnoChomper,
         [(FusionPlant.KernelMorph, FusionPlant.Bucket)] = FusionPlant.BoltPult,
         [(SeedType.Torchwood, SeedType.Squash)] = FusionPlant.Squashwood,

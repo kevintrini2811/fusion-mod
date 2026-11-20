@@ -13,6 +13,7 @@ namespace Il2CppReloaded.Gameplay {
     }
     internal sealed partial class Board {
         public readonly List<Zombie> m_zombies = new();
+        internal readonly List<(float X, float Y, int Damage)> Blasts = new();
         internal int Winds, Effects;
     }
     internal partial class Plant {
@@ -20,11 +21,11 @@ namespace Il2CppReloaded.Gameplay {
         public bool mDead, mIsAsleep;
         public int mPlantHealth = 300, mPlantMaxHealth = 300, mDoSpecialCountdown, mStateCountdown,
             mShootingCounter, mLaunchCounter, mLaunchRate, mTargetX, mTargetY, mStartRow,
-            mX = 100, mY = 100, mWidth = 80, mHeight = 80, mRow = 2, mRenderOrder, Level;
+            mX = 100, mY = 100, mWidth = 80, mHeight = 80, mRow = 2, mPlantCol, mRenderOrder, Level;
         public PlantState mState;
         public MagnetItem[] mMagnetItems = { new() };
         public Action? OnCapture;
-        public void PlantInitialize() {} public void UpdateMagnetShroom() {} public void UpdateAbilities() {}
+        public void PlantInitialize() {} public void UpdateMagnetShroom() {} public void UpdateAbilities() {} public void UpdateShooting() {}
         public void Die() { mDead = true; }
         public void MagnetShroomAttactItem(Zombie zombie) {
             if (zombie.mHelmType is HelmType.Pail or HelmType.Football) {
@@ -67,9 +68,13 @@ namespace Il2CppReloaded.Gameplay {
 namespace FusionMod {
     using Il2CppReloaded.Gameplay;
     internal readonly record struct FusionPlant(int Id) {
-        internal static readonly FusionPlant MagnetBlover = new(1), LumosMagnet = new(2), AnchorShroom = new(3);
+        internal static readonly FusionPlant MagnetBlover = new(1), LumosMagnet = new(2), AnchorShroom = new(3), GrenadierMagnet = new(4);
         internal static FusionPlant From(Plant plant) => plant.Identity;
-        internal static bool IsMagnetFusion(FusionPlant identity) => identity.Id is 1 or 2 or 3;
+        internal static bool IsMagnetFusion(FusionPlant identity) => identity.Id is 1 or 2 or 3 or 4;
+    }
+    internal static class CherryBombPlants {
+        internal sealed record Death(Board Board, FusionPlant Identity, uint Id, int Col, int Row, float X, float Y, int Order);
+        internal static void Explode(Death impact, float sourceRadius, int damage) => impact.Board.Blasts.Add((impact.X, impact.Y, damage));
     }
     internal static class ImportedPeaVisuals { internal static void ShowMagnetLight(Plant plant, float x, float y) {} }
     internal static class BucketPlants { internal static bool Held; internal static int Clears; internal static bool Holding(Plant plant) => Held; internal static void Clear() { Held = false; ++Clears; } }

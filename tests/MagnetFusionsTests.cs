@@ -107,6 +107,42 @@ Check(MagnetFusions.ShockEligible(snorkel), "land snorkel eligible");
 snorkel.mMindControlled = true;
 Check(!MagnetFusions.ShockEligible(snorkel), "source mind-controlled shock target excluded");
 var mixed = Make(true);
+var grenadier = Make();
+grenadier.Identity = FusionPlant.GrenadierMagnet;
+MagnetFusions.Initialize(grenadier);
+Il2CppReloaded.Constants.Gameplay.TIME_FOR_UPDATE = .01;
+Check(MagnetFusions.TryReceive(grenadier, MagnetItemType.Pail1, 180, 140)
+    && !MagnetFusions.TryReceive(grenadier, MagnetItemType.FootballHelmet1, 180, 140),
+    "Grenadier accepts one manual item");
+Step(grenadier, 1600);
+Check(grenadier.mBoard.Blasts.Count == 0 && grenadier.mLaunchCounter == 0
+    && grenadier.mMagnetItems[0].ItemType == MagnetItemType.Pail1, "item persists through empty searches");
+var farther = Target(grenadier, 650);
+var closer = Target(grenadier, 420);
+var wrongLane = Target(grenadier, 160, 3);
+foreach (var zombie in new[] { farther, closer, wrongLane }) zombie.mHelmHealth = 0;
+Step(grenadier, 10);
+Check(grenadier.mBoard.Blasts.Count == 0, "search cooldown is independent from attraction");
+for (int i = 0; i < 300 && grenadier.mStartRow != -1; ++i) Step(grenadier);
+Check(grenadier.mStartRow == -1, "search puts the metal in outbound flight");
+float savedTarget = grenadier.mMagnetItems[0].DestOffsetX;
+closer.TargetX = 470;
+Step(grenadier, 20);
+Check(grenadier.mBoard.Blasts.Count == 1 && Math.Abs(grenadier.mBoard.Blasts[0].X - savedTarget) < .001
+    && grenadier.mBoard.Blasts[0].Damage == 300, "nearest same-row target is snapped before flight");
+Step(grenadier, 1220);
+Check(grenadier.mBoard.Blasts.Count == 5 && grenadier.mBoard.Blasts.All(hit => hit.Damage == 300)
+    && grenadier.mMagnetItems[0].ItemType == MagnetItemType.None, "one item gives exactly five 300-damage attacks");
+var cooled = Make();
+cooled.Identity = FusionPlant.GrenadierMagnet;
+MagnetFusions.Initialize(cooled);
+Target(cooled);
+Step(cooled);
+Check(cooled.mLaunchCounter == 1500, "natural equipment capture starts the fifteen-second timer");
+MagnetFusions.Fertilize(cooled);
+Check(cooled.mLaunchCounter == 50 && cooled.mShootingCounter == 100 && cooled.mTargetX == 0,
+    "fertilizer preserves attack count and search clock");
+
 var headlessMagnet = Make(); var headlessMetal = Target(headlessMagnet); headlessMetal.mHasHead = false;
 Il2CppReloaded.Constants.Gameplay.TIME_FOR_UPDATE = .01;
 Step(headlessMagnet, 2);

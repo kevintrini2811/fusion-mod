@@ -1979,6 +1979,16 @@
       "identity": "FusionPlant.AnchorShroom",
       "evidence": "Registers the directed aquatic recipe and changes digestion speed after three completed cycles. See references/aquatic-pair/implementation-notes.md."
     },
+    "Solar Magnet": {
+      "available": true,
+      "identity": "FusionPlant.SolarMagnet",
+      "evidence": "Both recipe orders produce a Sunflower with a separate metal clock and a manual metal-to-sun interaction. See references/solar-grenadier-magnets/implementation-notes.md."
+    },
+    "Grenadier Magnet": {
+      "available": true,
+      "identity": "FusionPlant.GrenadierMagnet",
+      "evidence": "Both recipe orders produce a Magnet-shroom that throws its captured item up to five times. See references/solar-grenadier-magnets/implementation-notes.md."
+    },
     "Orca-shroom": {
       "available": true,
       "identity": "FusionPlant.OrcaShroom",

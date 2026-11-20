@@ -14,8 +14,8 @@ internal static class BucketPlants
     private static uint magnetId;
     private static int slot;
     private static BucketDrops.Drop? heldDrop;
-    private static FusionPlant SelectedIdentity => heldDrop?.Identity ??
-        (magnet != null && Helmet(magnet.mMagnetItems[slot]) ? FusionPlant.FootballHelmet : FusionPlant.Bucket);
+    private static MagnetItemType SelectedMetal => heldDrop?.Metal ?? magnet?.mMagnetItems[slot].ItemType ?? MagnetItemType.None;
+    private static FusionPlant SelectedIdentity => heldDrop?.Identity ?? BucketDrops.Plantable(SelectedMetal);
     private static Board? SelectionBoard => magnet?.mBoard ?? heldDrop?.Board;
     private static bool ValidSelection => magnet != null ? Valid : BucketDrops.Contains(heldDrop);
     internal static bool SelectedOn(Board board) => (magnet != null || heldDrop != null)
@@ -38,22 +38,30 @@ internal static class BucketPlants
         plant.mPlantHealth = (int)Math.Min(Math.Max(plant.mPlantMaxHealth, plant.mPlantHealth),
             (long)plant.mPlantHealth + (FusionPlant.From(plant) == FusionPlant.FootballNut ? 5000 : 500));
     }
-    private static bool Helmet(MagnetItem item) => item.ItemType is MagnetItemType.FootballHelmet1
-        or MagnetItemType.FootballHelmet2 or MagnetItemType.FootballHelmet3;
-    private static bool Pail(MagnetItem item) => item.ItemType is MagnetItemType.Pail1
-        or MagnetItemType.Pail2 or MagnetItemType.Pail3;
     private static bool Valid => magnet != null && magnet.DataID == magnetId
         && ChomperFusions.Active(magnet) && magnet.mMagnetItems != null
-        && slot < magnet.mMagnetItems.Length && (Pail(magnet.mMagnetItems[slot]) || Helmet(magnet.mMagnetItems[slot]));
+        && slot < magnet.mMagnetItems.Length && MagnetFusions.CanTakeItem(magnet)
+        && BucketDrops.IsEquipment(magnet.mMagnetItems[slot].ItemType);
+
+    private static bool MetalRecipient(Plant plant)
+    {
+        var identity = FusionPlant.From(plant);
+        return SelectedMetal != MagnetItemType.None && magnet?.Pointer != plant.Pointer
+            && (identity == FusionPlant.SolarMagnet || identity == FusionPlant.GrenadierMagnet);
+    }
+
     internal static bool IsTarget(Plant plant)
     {
         var board = plant.mBoard;
         if (!ValidSelection || board == null || SelectionBoard?.Pointer != board.Pointer
             || board.mCursorObject.CursorType != CursorType.Glove) return false;
-        return CanFeed(plant, SelectedIdentity)
+        if (MetalRecipient(plant))
+            return ChomperFusions.Active(plant) && (FusionPlant.From(plant) == FusionPlant.SolarMagnet
+                || MagnetFusions.CanReceive(plant));
+        return SelectedIdentity != (FusionPlant)SeedType.None && (CanFeed(plant, SelectedIdentity)
             || (FusionService.TryResolve(board, SelectedIdentity, plant.mPlantCol, plant.mRow,
                     out var target, out var result) && target.Pointer == plant.Pointer
-                && FusionService.CheckFusionPlacement(board, target, result) == PlantingReason.Ok);
+                && FusionService.CheckFusionPlacement(board, target, result) == PlantingReason.Ok));
     }
     internal static bool Holding(Plant plant) => magnet?.Pointer == plant.Pointer
         && magnetId == plant.DataID && Valid
@@ -74,7 +82,12 @@ internal static class BucketPlants
         if (board == null || board.mCursorObject.CursorType != CursorType.Glove) { Clear(); return; }
         if (board.mPaused) return;
         if (!ValidSelection) { Clear(); return; }
-        try { ImportedPeaVisuals.ShowBucketCursor(board, SelectedIdentity); }
+        try
+        {
+            var type = heldDrop?.GeneratedMetal ?? MagnetItemType.None;
+            if (SelectedIdentity == (FusionPlant)SeedType.None) type = SelectedMetal;
+            ImportedPeaVisuals.ShowBucketCursor(board, SelectedIdentity, type);
+        }
         catch (Exception error)
         {
             Clear();
@@ -95,10 +108,15 @@ internal static class BucketPlants
             int col = board.PixelToGridX(x, y), row = board.PixelToGridY(x, y);
             if (col < 0 || col >= 9 || row < 0 || row >= board.GetNumRows()) return false;
             var target = board.GetPlantsOnLawn(col, row).NormalPlant;
-            if (target != null && CanFeed(target, SelectedIdentity)) Feed(target);
+            if (target != null && MetalRecipient(target))
+            {
+                if (!FeedMetal(target)) return false;
+            }
+            else if (target != null && CanFeed(target, SelectedIdentity)) Feed(target);
             else
             {
                 FusionPlant result = SelectedIdentity;
+                if (result == (FusionPlant)SeedType.None) return false;
                 Plant? ingredient = null;
                 if (FusionService.TryResolve(board, SelectedIdentity, col, row, out var found, out var fusion))
                 { ingredient = found; result = fusion; }
@@ -112,6 +130,7 @@ internal static class BucketPlants
                 if (ingredient != null) FusionService.CompleteFusion(created, ingredient, SelectedIdentity);
             }
             if (heldDrop is { } used) BucketDrops.Consume(used);
+            else if (MagnetFusions.Grenadier(magnet!)) MagnetFusions.ClearItem(magnet!);
             else {
                 magnet!.mMagnetItems[slot].ItemType = MagnetItemType.None;
                 if (MagnetFusions.Owns(magnet)) {
@@ -125,6 +144,19 @@ internal static class BucketPlants
         if (board.mPaused || clicks < 0 || board.mCursorObject.CursorType != CursorType.Normal) return true;
         return !TrySelect(board, x, y);
     }
+
+    private static bool FeedMetal(Plant target)
+    {
+        if (!ChomperFusions.Active(target)) return false;
+        if (FusionPlant.From(target) == FusionPlant.SolarMagnet)
+            return target.mBoard.AddCoin(target.mX, target.mY, CoinType.Sun, CoinMotion.FromPlant) != null;
+
+        if (heldDrop is { } drop)
+            return MagnetFusions.TryReceive(target, drop.Metal, drop.X, drop.Y);
+        var item = magnet!.mMagnetItems[slot];
+        return MagnetFusions.TryReceive(target, item.ItemType, item.PosX, item.PosY);
+    }
+
     internal static bool TrySelect(Board board, int x, int y)
     {
         if (BucketDrops.TryPick(board, x, y, out var drop))
@@ -138,10 +170,10 @@ internal static class BucketPlants
         if (gridX < 0 || gridX >= 9 || gridY < 0 || gridY >= board.GetNumRows()) return false;
         var plant = board.GetPlantsOnLawn(gridX, gridY).NormalPlant;
         if (plant == null || FusionPlant.From(plant) != (FusionPlant)SeedType.Magnetshroom && !MagnetFusions.Owns(plant)
-            || !ChomperFusions.Active(plant) || plant.mMagnetItems == null) return false;
+            || !ChomperFusions.Active(plant) || plant.mMagnetItems == null || !MagnetFusions.CanTakeItem(plant)) return false;
         for (int i = 0; i < plant.mMagnetItems.Length; ++i)
         {
-            if (!Pail(plant.mMagnetItems[i]) && !Helmet(plant.mMagnetItems[i])) continue;
+            if (!BucketDrops.IsEquipment(plant.mMagnetItems[i].ItemType)) continue;
             board.ClearCursor(ignoreControlType: true, playerIndex: 0);
             magnet = plant; magnetId = plant.DataID; slot = i;
             board.mCursorObject.CursorType = CursorType.Glove;
