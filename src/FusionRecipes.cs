@@ -271,6 +271,8 @@ internal static class FusionRecipes
         [(FusionPlant.HypnoRepeater, SeedType.Repeater)] = FusionPlant.GatlingHypno,
         [(SeedType.Peashooter, FusionPlant.SplitHypno)] = FusionPlant.GatlingHypno,
         [(SeedType.Scaredyshroom, SeedType.Sunflower)] = FusionPlant.SunnyShroom,
+        [(SeedType.Hypnoshroom, SeedType.Scaredyshroom)] = FusionPlant.TrippyShroom,
+        [(SeedType.Hypnoshroom, SeedType.Sunflower)] = FusionPlant.CometShroom,
         [(SeedType.Scaredyshroom, SeedType.Starfruit)] = FusionPlant.StarryShroom,
         [(SeedType.Scaredyshroom, SeedType.Wallnut)] = FusionPlant.SturdyShroom,
         [(SeedType.Scaredyshroom, SeedType.Blover)] = FusionPlant.CamoShroom,

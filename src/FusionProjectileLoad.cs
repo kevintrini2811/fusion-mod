@@ -12,6 +12,7 @@ internal static class FusionProjectileLoad
         BlazeShooters.ForgetBoard(board); IronProjectiles.ForgetBoard(board);
         RollingProjectiles.ForgetBoard(board); SplitPeaProjectiles.ForgetBoard(board);
         SolarShooter.ForgetProjectiles(board); PoisonShooters.ForgetProjectiles(board);
+        CometShroom.ForgetBoard(board);
         ImportedPeaVisuals.ForgetProjectiles(board);
     }
     private static void Forget(Projectile shot)

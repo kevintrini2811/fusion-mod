@@ -64,6 +64,12 @@ namespace FusionMod {
 namespace FusionMod { internal static class SquashLobbers { internal static void Fertilize(Il2CppReloaded.Gameplay.Plant plant) { } } }
 
 namespace FusionMod {
+ using Il2CppReloaded.Gameplay;
+ internal static class LumosAngler { internal static void Fertilize(Plant plant) { } }
+ internal static class GulperShroom { internal static void Fertilize(Plant plant) { } }
+ internal static class MagnetFusions { internal static void Fertilize(Plant plant) { } }
+ internal static class PepperFusions { internal static void Fertilize(Plant plant) { } }
+ internal static class AirRaidFusions { internal static void Fertilize(Plant plant) { } }
  internal static class EatingShrooms { internal static void Fertilize(Il2CppReloaded.Gameplay.Plant plant) { } }
  internal static class Spicicle { internal static void Fertilize(Il2CppReloaded.Gameplay.Plant plant) { } }
 }

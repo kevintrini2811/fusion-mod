@@ -11,6 +11,11 @@ internal static class FusionAudio
     {
         foreach (var sound in new[] { FoleyType.Puff, FoleyType.Throw, FoleyType.MelonImpact, FoleyType.KernelSplat, FoleyType.Butter, FoleyType.Splat })
             PlantLibrary.Projectiles.RegisterSound("fusion:" + sound, board => board.mApp.SoundSystem.PlayFoley(sound));
+        PlantLibrary.Projectiles.RegisterImpactEffect("fusion:trippy-spore",
+            impact => impact.Board.mApp.AddTodParticle(impact.X, impact.Y, impact.RenderOrder, ParticleEffect.PuffSplat));
+        PlantLibrary.Projectiles.RegisterProjectile(new("fusion:trippy-spore", shot => ScaredyProjectiles.Family(shot) == 7,
+            Born, ImpactEffect: "fusion:trippy-spore", ImpactSound: "fusion:Splat", ImpactOnlyWhenOriginalSkipped: true));
+        PlantLibrary.Projectiles.RegisterProjectile(new("fusion:comet", CometShroom.IsShot));
         foreach (var type in new[] { ProjectileType.Melon, ProjectileType.Kernel, ProjectileType.Butter, ProjectileType.Pea }) {
             var sound = type == ProjectileType.Melon ? FoleyType.MelonImpact : type == ProjectileType.Kernel ? FoleyType.KernelSplat
                 : type == ProjectileType.Butter ? FoleyType.Butter : FoleyType.Splat;

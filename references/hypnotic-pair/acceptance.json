@@ -1,0 +1,45 @@
+{
+  "version": "24.10.0",
+  "base": "14fbafe316c8b6d6cbb8477d2e394fb6d3c90326",
+  "branch": "task/fusion-pair-20261120-09",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "6076b1841bbce472caadb939ae9651a516369538caffd054d54b9820a544e558"
+  },
+  "testedCandidate": "17cfb37870fe383275db91b90542e75bcf7b42e38de33d02fae529bc19f733eb",
+  "versionChangeAfterRuntime": "The release updates version metadata after the approved gameplay candidate.",
+  "offline": {
+    "registrationToolTests": 11,
+    "registrationsAndTargetedStrictRecipes": "passed",
+    "scaredyFusionChecks": 139,
+    "sunflowerFusionChecks": 427,
+    "transientProjectileChecks": 56,
+    "tileAndFertilizerAdapterChecks": 51,
+    "shootingPotsLobberHarness": "passed"
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both ingredient orders created each fusion on the temporary Night debug board. Both world models were visible.",
+    "trippyShroom": "All seven spore markers appeared. Early hits dealt 20 damage on Extreme, consistent with 40 base damage. Successful hypnosis left HP at 8740. On Normal, the bite hypnotized the eater and left an ordinary Scaredy-shroom.",
+    "cometShroom": "Produced a native Sun. On Normal, the bite hypnotized the eater before launching. The isolated flight hit the ally for 200 before hitting the hostile zombie for 100 and leaving two SmallSun pickups. In the cap fixture, it hit the ally and nine of ten hostile zombies. On Extreme, a ten-hostile-target flight produced eleven SmallSun pickups.",
+    "restoration": "The test runner verified process absence, the baseline DLL, DP-3 and profile hashes. It restored temporary speed and difficulty changes.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-09/gameplay/assessment.md",
+    "evidence": {
+      "models": "r2/0008-models.json",
+      "trippyHypnosis": "r2/0687-trippy-hypnotized.json",
+      "trippyBite": "r2-normal/0119-trippy-bite-after.json",
+      "cometProduction": "r2-normal/0128-comet-produced-sun.json",
+      "cometHitLimit": "r2-normal/0265-comet-result.json",
+      "cometPriority": "r2-priority/0145-priority-result.json",
+      "lastRestore": "r2-priority/restore.json"
+    }
+  },
+  "review": "Approved for the exact R2 candidate.",
+  "test": "Approved with the documented observation limit.",
+  "limits": [
+    "The friendly 25-sun pickup was not separately observed during runtime polling. Automatic collection was active and the debug sun counter stayed at 9990.",
+    "The Difficulty Mod applies its existing 50 percent hypnosis resistance on Extreme. The Normal fixtures verified both bite effects without this modifier.",
+    "The port reuses existing plant and projectile artwork. The gameplay fixtures used Night boards. The offline transient projectile harness simulates native save and load."
+  ]
+}

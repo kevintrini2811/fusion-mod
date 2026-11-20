@@ -27,7 +27,7 @@ internal static class FusionProjectileDomains
             || AirLobbers.IsShot(shot) || DoomPult.IsShot(shot) || OrcaShroom.IsShot(shot)
             || GlacierShroom.Contains(shot) || StarCaps.Contains(shot)
             || PuffShooters.Contains(shot) || PuffSpecials.IsIcicle(shot) || PuffSpecials.IsNugget(shot)
-            || SunflowerFusions.IsShot(shot) || GutsyShroom.IsShot(shot)
+            || SunflowerFusions.IsShot(shot) || CometShroom.IsShot(shot) || GutsyShroom.IsShot(shot)
             || shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
                 && shot.mCobTargetX is -450011 or -450168 or IronProjectiles.SmallShot
             || PolarProjectiles.IsPolar(shot) || SupportFusions.IsSolarShot(shot) || MelonPot.Boosted(shot)

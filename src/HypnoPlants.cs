@@ -67,9 +67,14 @@ internal static class HypnoPlants
     internal static bool Bite(Plant plant, Zombie zombie)
     {
         if (FusionPlant.From(plant) != FusionPlant.HypnoMelon) return false;
+        return ReplaceAfterBite(plant, zombie, SeedType.Melonpult);
+    }
+
+    internal static bool ReplaceAfterBite(Plant plant, Zombie zombie, SeedType replacement)
+    {
         if (!ChomperFusions.Active(plant) || zombie.mBoard?.Pointer != plant.mBoard.Pointer
             || zombie.mDead || zombie.IsDeadOrDying() || zombie.mMindControlled) return true;
-        var plain = plant.mBoard.AddPlant(plant.mPlantCol, plant.mRow, SeedType.Melonpult, SeedType.None);
+        var plain = plant.mBoard.AddPlant(plant.mPlantCol, plant.mRow, replacement, SeedType.None);
         if (plain == null || plain.mDead || !plain.mIsOnBoard) return true;
         // Allocate before consumption; preserve the support/pumpkin stack.
         PlayerPlantingScope.Consume(plant);

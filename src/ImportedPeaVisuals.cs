@@ -503,6 +503,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Levitater, "PeatatoMine"),
         new(FusionPlant.AnchorShroom, "LumosMagnet"),
         new(FusionPlant.OrcaShroom, "SharkShroom"),
+        new(FusionPlant.TrippyShroom, "SpeedyShroom"),
+        new(FusionPlant.CometShroom, "SilverHypnoShroom"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -2208,6 +2210,8 @@ internal static partial class ImportedPeaVisuals
             if (assets.Identity == FusionPlant.Bombrella) tint *= new Color(1, .69f, .62f, 1);
             if (assets.Identity == FusionPlant.AnchorShroom) tint *= new Color(.62f, .84f, 1, 1);
             if (assets.Identity == FusionPlant.OrcaShroom) tint *= new Color(.62f, .65f, .8f, 1);
+            if (assets.Identity == FusionPlant.TrippyShroom) tint *= new Color(1, .63f, .97f, 1);
+            if (assets.Identity == FusionPlant.CometShroom) tint *= new Color(1, .84f, .46f, 1);
             for (int i = 0; i < renderers.Length; ++i)
                 if (renderers[i] != null)
                 {

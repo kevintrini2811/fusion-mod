@@ -133,6 +133,13 @@ namespace FusionMod {
 namespace FusionMod { internal static class IronProjectiles { internal const int SmallShot=-480090; internal static bool IsSmall(Il2CppReloaded.Gameplay.Projectile p)=>p.mCobTargetX==SmallShot; } }
 
 namespace FusionMod { internal static class SunflowerFusions { internal static bool IsShot(Il2CppReloaded.Gameplay.Projectile p)=>false; } }
+namespace FusionMod
+{
+    internal static class TrippyShroom
+    {
+        internal const int FirstColor = -426000, LastColor = FirstColor - 6;
+    }
+}
 
 namespace FusionMod { internal static class ScaredContent { internal static bool Eyes(Il2CppReloaded.Gameplay.Zombie zombie) => false; } }
 

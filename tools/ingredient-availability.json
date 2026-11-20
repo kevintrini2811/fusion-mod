@@ -1983,6 +1983,16 @@
       "available": true,
       "identity": "FusionPlant.OrcaShroom",
       "evidence": "Registers the directed aquatic recipe and launches a Doom bomb when fed a Sea-shroom. See references/aquatic-pair/implementation-notes.md."
+    },
+    "Trippy-shroom": {
+      "available": true,
+      "identity": "FusionPlant.TrippyShroom",
+      "evidence": "Registers both source recipe orders, colored spores, and hypnosis on completed colors or bites. See references/hypnotic-pair/implementation-notes.md."
+    },
+    "Comet-shroom": {
+      "available": true,
+      "identity": "FusionPlant.CometShroom",
+      "evidence": "Registers both source recipe orders, sun production, hypnosis on bite, and a jumping sun on departure. See references/hypnotic-pair/implementation-notes.md."
     }
   }
 }

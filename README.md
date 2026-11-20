@@ -1,4 +1,6 @@
-# Fusion Mod 24.9.0
+# Fusion Mod 24.10.0
+
+Version 24.10.0 adds Trippy-shroom and Comet-shroom. Trippy-shroom hypnotizes zombies after all seven spore colors hit. A bite also hypnotizes the zombie and leaves a Scaredy-shroom. Comet-shroom produces sun and releases a jumping sun when removed. Both recipes work in either ingredient order and reuse existing artwork. [Implementation notes](references/hypnotic-pair/implementation-notes.md) and [gameplay acceptance](references/hypnotic-pair/acceptance.json).
 
 Version 24.9.0 adds Anchor-shroom and Orca-shroom. Both start with Sea-shroom as the existing plant. Anchor-shroom grows after digesting three metal items and shortens future digestion from 15 to 10 seconds. Feeding a Sea-shroom to Orca-shroom launches a small Doom bomb that explodes on landing. Both plants reuse existing artwork. [Implementation notes](references/aquatic-pair/implementation-notes.md) and [gameplay acceptance](references/aquatic-pair/acceptance.json).
 
@@ -2500,7 +2502,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **258 open recipes** with **200 result plants** in the format:
+`fusionen.txt` contains **256 open recipes** with **198 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2938,6 +2940,8 @@ Blover | Potato Mine | Levitater
 Cherry Bomb | Umbrella Leaf | Bombrella
 Sea-shroom | Doom-shroom | Orca-shroom
 Sea-shroom | Magnet-shroom | Anchor-shroom
+Hypno-shroom | Scaredy-shroom | Trippy-shroom
+Hypno-shroom | Sunflower | Comet-shroom
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

@@ -103,6 +103,11 @@ internal static partial class ImportedPeaVisuals
     private static readonly Assets IcicleProjectileAssets = new(FusionPlant.IcicleShroom, "IcicleProjectile");
     private static readonly Assets FrenzyProjectileAssets = new(FusionPlant.FrenzyShroom, "FrenzyProjectile");
     private static readonly Assets SpeedyProjectileAssets = new(FusionPlant.SpeedyShroom, "SpeedyProjectile");
+    private static readonly Color[] TrippySporeColors =
+    {
+        new(1, .35f, .4f), new(1, .64f, .25f), new(1, .95f, .35f), new(.35f, 1, .45f),
+        new(.32f, 1, 1), new(.55f, .65f, 1), new(.95f, .45f, 1)
+    };
     private static readonly Assets ThawedShiveryProjectileAssets = new(FusionPlant.ShiveryShroom, "PlainPeaProjectile");
     private static readonly Assets CherrySporeAssets = new(FusionPlant.BlastyShroom, "CherrySpore");
     private static readonly Assets PotatoSporeAssets = new(FusionPlant.SpuddyShroom, "PotatoSpore");
@@ -316,7 +321,7 @@ internal static partial class ImportedPeaVisuals
     {
         var assets = ScaredyProjectiles.Family(projectile) switch
         {
-            1 when projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea => SpeedyProjectileAssets,
+            1 or 7 when projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea => SpeedyProjectileAssets,
             2 => CherrySporeAssets,
             3 when projectile.mProjectileType == ProjectileType.Snowpea => ShiveryProjectileAssets,
             3 when projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea => ThawedShiveryProjectileAssets,
@@ -475,7 +480,8 @@ internal static partial class ImportedPeaVisuals
                 : assets == MetalStarProjectileAssets ? StarProjectiles.Family(projectile) == 7
                 : assets == MetalMelonProjectileAssets ? LobberProjectiles.Family(projectile) == 8 || DoomPult.IsShot(projectile)
                 : assets == StarPeaProjectileAssets ? StarProjectiles.Family(projectile) == 4
-                : assets == PolarProjectileAssets ? PolarProjectiles.IsPolar(projectile) : assets == BloverSunProjectileAssets ? SunflowerFusions.IsShot(projectile)
+                : assets == PolarProjectileAssets ? PolarProjectiles.IsPolar(projectile)
+                : assets == BloverSunProjectileAssets ? SunflowerFusions.IsShot(projectile) || CometShroom.IsShot(projectile)
                 : assets == LettuceProjectileAssets ? SquashLobbers.Family(projectile) == 1
                 : assets == LittleLettuceProjectileAssets ? SquashLobbers.Family(projectile) == 2
                 : assets == ButternutProjectileAssets ? SquashLobbers.Family(projectile) is 3 or 8
@@ -519,7 +525,9 @@ internal static partial class ImportedPeaVisuals
                     || projectile.mProjectileType == ProjectileType.Butter && AirLobbers.IsShot(projectile)
                 : assets == MelonProjectileAssets ? UmbrellaVariants.ReflectedMelon(projectile) || LobberProjectiles.Family(projectile) == 9 || SquashLobbers.Family(projectile) == 7 || NutProjectiles.Family(projectile) == 2 || TriLobbers.Family(projectile) == 3
                     || projectile.mProjectileType == ProjectileType.Melon && AirLobbers.IsShot(projectile)
-                : assets == PuffPeaProjectileAssets ? PuffShooters.Contains(projectile) : assets == SpeedyProjectileAssets ? ScaredyProjectiles.Family(projectile) == 1 && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
+                : assets == PuffPeaProjectileAssets ? PuffShooters.Contains(projectile)
+                : assets == SpeedyProjectileAssets ? ScaredyProjectiles.Family(projectile) is 1 or 7
+                    && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
                 : assets == CherrySporeAssets ? ScaredyProjectiles.Family(projectile) == 2
                 : assets == FrenzyProjectileAssets ? ScaredyProjectiles.Family(projectile) == 5
                 : assets == IcicleProjectileAssets ? PuffSpecials.IsIcicle(projectile)
@@ -607,7 +615,9 @@ internal static partial class ImportedPeaVisuals
                     renderer.sprite = assets.Sprites[node.Sprite];
                     renderer.sortingOrder = node.Order;
                     renderer.flipX = node.FlipX; renderer.flipY = node.FlipY;
-                    renderer.color = new Color(node.Color[0], node.Color[1], node.Color[2], node.Color[3]);
+                    renderer.color = assets == SpeedyProjectileAssets && ScaredyProjectiles.Family(projectile) == 7
+                        ? TrippySporeColors[TrippyShroom.ColorIndex(projectile)] * new Color(1, 1, 1, node.Color[3])
+                        : new Color(node.Color[0], node.Color[1], node.Color[2], node.Color[3]);
                 }
                 Pose(model, transforms, FusionProjectileTime.AgeSeconds(projectile), null);
                 if (ReportedProjectileBoards.Add((Board, assets.Name)))

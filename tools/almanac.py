@@ -24,6 +24,7 @@ PRESENTATION_FILES = (
     "references/frost-doom-pair/presentation.json",
     "references/umbrella-mine-pair/presentation.json",
     "references/aquatic-pair/presentation.json",
+    "references/hypnotic-pair/presentation.json",
 )
 
 

@@ -1,0 +1,32 @@
+{
+  "1024": {
+    "adaptation": {
+      "info": "Fires a random spore from seven colors every 1.5 seconds. Each hit deals 40 damage until a zombie has been hit by all seven colors, when it is hypnotized.",
+      "flavor": "",
+      "notes": "On a bite, it hypnotizes the zombie and turns into an ordinary Scaredy-shroom.",
+      "portrait": "1425.png"
+    },
+    "german": {
+      "Name": "Trip-Pilz",
+      "Info": "Feuert alle 1,5 Sekunden eine zufällige Spore in einer von sieben Farben. Treffer verursachen 40 Schaden, bis ein Zombie alle sieben Farben abbekommen hat und hypnotisiert wird.",
+      "Flavor": "",
+      "Notes": "Bei einem Biss hypnotisiert er den Zombie und wird zum gewöhnlichen Angsthasenpilz.",
+      "EnglishSha256": "79a38f484ae15f01473785607513671b3e23ea5f523c6c630d6fa9da2b194d1a"
+    }
+  },
+  "1326": {
+    "adaptation": {
+      "info": "Produces 25 sun every 25 seconds. When removed, it launches a jumping sun that targets up to ten zombies, starting with hypnotized zombies.",
+      "flavor": "",
+      "notes": "It hypnotizes its biter and disappears. The jumping sun deals 100 damage and drops 15 sun on an enemy, or deals 200 and drops 25 sun on a hypnotized zombie. It leaves 15 sun when it stops.",
+      "portrait": "1449.png"
+    },
+    "german": {
+      "Name": "Kometenpilz",
+      "Info": "Produziert alle 25 Sekunden 25 Sonne. Wenn er das Feld verlässt, springt eine Sonne auf bis zu zehn Zombies. Hypnotisierte Zombies kommen zuerst.",
+      "Flavor": "",
+      "Notes": "Bei einem Biss hypnotisiert er den Zombie und verschwindet. Die Sprungsonne verursacht bei Feinden 100 Schaden und hinterlässt 15 Sonne, bei hypnotisierten Zombies 200 Schaden und 25 Sonne. Am Ende bleiben 15 Sonne.",
+      "EnglishSha256": "2748a4bfbfefd53ffde7fbd9a546e7e3b8ece629054ba6df699539c91254095c"
+    }
+  }
+}

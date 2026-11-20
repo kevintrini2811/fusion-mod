@@ -145,6 +145,7 @@ namespace Il2CppReloaded.Gameplay
 namespace FusionMod
 {
     static class ScaredContent { public static bool Playing(Il2CppReloaded.Gameplay.Board board) => board.Playing; }
+    static class CometShroom { internal static void ForgetBoard(Il2CppReloaded.Gameplay.Board board) {} }
     static class FusionTime
     {
         public const double NativeTickSeconds = .01;

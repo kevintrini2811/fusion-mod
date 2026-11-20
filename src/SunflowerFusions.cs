@@ -12,7 +12,8 @@ internal static class SunflowerFusions
     internal const float SolarShotMarker = -450010;
     internal static bool IsShot(Projectile shot) => shot.mProjectileType == ProjectileType.Pea
         && shot.mMotionType == ProjectileMotion.Star && shot.mCobTargetX == SolarShotMarker;
-    internal static bool Producer(FusionPlant identity) => identity == FusionPlant.SilverSunflower || identity == FusionPlant.SolarPot || identity == FusionPlant.SunsetShroom;
+    internal static bool Producer(FusionPlant identity) => identity == FusionPlant.SilverSunflower
+        || identity == FusionPlant.SolarPot || identity == FusionPlant.SunsetShroom || identity == FusionPlant.CometShroom;
 
     internal static void Initialize(Plant plant)
     {
@@ -56,13 +57,13 @@ internal static class SunflowerFusions
             if (plant.mApp.GameMode is >= GameMode.PuzzleIZombie1 and <= GameMode.PuzzleIZombieEndless) return;
             if (plant.mShootingCounter > 0 && --plant.mShootingCounter == 50)
             {
-                var type = identity == FusionPlant.SilverSunflower ? CoinType.Sun
+                var type = identity == FusionPlant.SilverSunflower || identity == FusionPlant.CometShroom ? CoinType.Sun
                     : identity == FusionPlant.SolarPot || plant.mStartRow == 0 ? CoinType.SmallSun
                     : plant.mStartRow == 1 ? CoinType.Sun : CoinType.LargeSun;
                 plant.mBoard.AddCoin(plant.mX, plant.mY, type, CoinMotion.FromPlant);
             }
             if (--plant.mLaunchCounter > 0) return;
-            int interval = identity == FusionPlant.SolarPot ? 2500 : 1500;
+            int interval = identity == FusionPlant.SolarPot || identity == FusionPlant.CometShroom ? 2500 : 1500;
             // SunPot inherits MoneyPot's +/-10%; Producer uses +/-5%.
             int jitter = identity == FusionPlant.SolarPot ? 10 : 5;
             plant.mLaunchCounter = interval * (100 - jitter) / 100
@@ -199,18 +200,20 @@ internal static class SunflowerFusionInitializePatch
 [HarmonyPatch(typeof(Plant), nameof(Plant.UpdateAbilities))]
 internal static class SunflowerFusionTickPatch
 {
+    private static bool OwnsAbilities(FusionPlant identity) => identity == FusionPlant.SolarFlare
+        || identity == FusionPlant.SolarBlover || identity == FusionPlant.SilverSunflower
+        || identity == FusionPlant.CometShroom;
+
     internal static bool Prefix(Plant __instance)
     {
-        var identity = FusionPlant.From(__instance);
-        if (identity != FusionPlant.SolarFlare && identity != FusionPlant.SolarBlover
-            && identity != FusionPlant.SilverSunflower) return true;
+        if (!OwnsAbilities(FusionPlant.From(__instance))) return true;
         SunflowerFusions.Tick(__instance);
         return false;
     }
     internal static void Postfix(Plant __instance)
     {
-        if (SunflowerFusions.Producer(FusionPlant.From(__instance))
-            && FusionPlant.From(__instance) != FusionPlant.SilverSunflower) SunflowerFusions.Tick(__instance);
+        var identity = FusionPlant.From(__instance);
+        if (SunflowerFusions.Producer(identity) && !OwnsAbilities(identity)) SunflowerFusions.Tick(__instance);
     }
 }
 

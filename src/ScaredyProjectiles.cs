@@ -19,10 +19,11 @@ internal static class ScaredyProjectiles
             -423060 or -423600 => 4,
             <= -424020 and >= -424100 => 5,
             -425040 => 6,
+            <= TrippyShroom.FirstColor and >= TrippyShroom.LastColor => 7,
             _ => 0
         };
     }
-    internal static int Damage(Projectile shot) => -(int)shot.mCobTargetX % 1000;
+    internal static int Damage(Projectile shot) => Family(shot) == 7 ? 40 : -(int)shot.mCobTargetX % 1000;
 
     internal static void Mark(Projectile shot, FusionPlant identity, int damage)
     {
@@ -31,7 +32,9 @@ internal static class ScaredyProjectiles
         shot.mDamageRangeFlags = DamageRangeFlags.Ground;
         int family = identity == FusionPlant.HungryShroom ? 5 : identity == FusionPlant.SpeedyShroom ? 0 : identity == FusionPlant.BlastyShroom ? 1
             : identity == FusionPlant.ShiveryShroom ? 2 : identity == FusionPlant.FrenzyShroom ? 4 : 3;
-        shot.mCobTargetX = -420000 - family * 1000 - damage;
+        shot.mCobTargetX = identity == FusionPlant.TrippyShroom
+            ? TrippyShroom.FirstColor - shot.mBoard.Rand(7)
+            : -420000 - family * 1000 - damage;
         ImportedPeaVisuals.EnsureScaredyProjectile(shot);
     }
 
@@ -71,7 +74,7 @@ internal static class ScaredyImpactPatch
     internal static void Prefix(Projectile __instance, out (ScaredyProjectiles.Impact? Impact, bool Pending) __state)
     {
         __state = (ScaredyProjectiles.CurrentImpact, ScaredyProjectiles.Pending);
-        ScaredyProjectiles.CurrentImpact = !__instance.mDead && ScaredyProjectiles.Family(__instance) != 0
+        ScaredyProjectiles.CurrentImpact = !__instance.mDead && ScaredyProjectiles.Family(__instance) is not (0 or 7)
             ? new(__instance, __instance.DataID) : null;
         ScaredyProjectiles.Pending = false;
     }

@@ -1760,6 +1760,18 @@
       "native": "Seashroom",
       "marker": "Doomshroom",
       "model": "SharkShroom"
+    },
+    {
+      "name": "TrippyShroom",
+      "native": "Scaredyshroom",
+      "marker": "Hypnoshroom",
+      "model": "SpeedyShroom"
+    },
+    {
+      "name": "CometShroom",
+      "native": "Sunflower",
+      "marker": "Hypnoshroom",
+      "model": "SilverHypnoShroom"
     }
   ],
   "reserved": [],
@@ -1785,7 +1797,8 @@
       "SolarPot",
       "SunsetShroom",
       "SolarFlare",
-      "SolarBlover"
+      "SolarBlover",
+      "CometShroom"
     ],
     "IsPuffLobber": [
       "SproutPult",
@@ -1844,7 +1857,8 @@
       "ShiveryShroom",
       "SpuddyShroom",
       "FrenzyShroom",
-      "HungryShroom"
+      "HungryShroom",
+      "TrippyShroom"
     ],
     "IsIceInstant": [
       "BlackCherry",
