@@ -2229,6 +2229,33 @@
     "Portrait": "1005.png"
   },
   {
+    "SourceId": 1361,
+    "Identity": "FusionPlant.FallMelon",
+    "CanonicalName": "Fall Melon",
+    "English": {
+      "Name": "Fall Melon",
+      "Info": "Drops three melons when a ground zombie approaches its lane. The three arcs cover its own tile and the tiles to either side. Each direct hit deals 80 damage and adds melon splash damage.",
+      "Flavor": "",
+      "Notes": "Attacks every three seconds and shares an air tile with a ground plant. Uses the existing Spring Melon body and melon projectile.",
+      "Recipes": [
+        "Blover + Melon-pult"
+      ]
+    },
+    "German": {
+      "Name": "Melonen-Gleiter",
+      "Info": "Wirft drei Melonen ab, wenn sich ein Bodenzombie in seiner Reihe nähert. Die Melonen fallen auf das eigene Feld und zu beiden Seiten. Jeder direkte Treffer verursacht 80 Schaden plus Melonen-Flächenschaden.",
+      "Flavor": "",
+      "Notes": "Greift alle drei Sekunden an und teilt das Feld mit einer Bodenpflanze. Verwendet das vorhandene Modell von Spring Melon und das Melonengeschoss.",
+      "Recipes": [
+        "Wehblatt + Melonapult"
+      ]
+    },
+    "Recipes": [
+      "Blover + Melon-pult"
+    ],
+    "Portrait": "1196.png"
+  },
+  {
     "SourceId": 1275,
     "Identity": "FusionPlant.FalloutBlover",
     "CanonicalName": "Fallout Blover",
@@ -7786,6 +7813,33 @@
       "Potato Mine + Scaredy-shroom"
     ],
     "Portrait": "1171.png"
+  },
+  {
+    "SourceId": 1374,
+    "Identity": "FusionPlant.SquashDrone",
+    "CanonicalName": "Squash Drone",
+    "English": {
+      "Name": "Squash Drone",
+      "Info": "Stomps ground zombies directly beneath it for 100 damage. It rises back to its air slot and can attack again after two seconds.",
+      "Flavor": "",
+      "Notes": "A short descent precedes the hit. The body uses the existing mini-squash model.",
+      "Recipes": [
+        "Blover + Squash"
+      ]
+    },
+    "German": {
+      "Name": "Kürbisdrohne",
+      "Info": "Stampft Bodenzombies direkt unter sich für 100 Schaden. Danach kehrt sie in den Luftplatz zurück und kann nach zwei Sekunden erneut angreifen.",
+      "Flavor": "",
+      "Notes": "Vor dem Treffer sinkt sie kurz ab. Sie verwendet das vorhandene Mini-Squash-Modell.",
+      "Recipes": [
+        "Wehblatt + Matschkürbis"
+      ]
+    },
+    "Recipes": [
+      "Blover + Squash"
+    ],
+    "Portrait": "1366.png"
   },
   {
     "SourceId": 1250,

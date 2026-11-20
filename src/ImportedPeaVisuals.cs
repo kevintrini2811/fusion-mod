@@ -493,6 +493,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.DroneNut, "FrostWallNut"),
         new(FusionPlant.CactusDrone, "BallCactus"),
         new(FusionPlant.CherryDrone, "CherryDroneProjectile"),
+        new(FusionPlant.FallMelon, "SpringMelon"),
+        new(FusionPlant.SquashDrone, "MiniSquashProjectile"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -868,7 +870,7 @@ internal static partial class ImportedPeaVisuals
         private readonly MaterialPropertyBlock colorEffects = new();
         private Model model => assets.model!;
         private GameObject? root;
-        private Vector3 cherryDroneHome;
+        private Vector3 airRaidHome;
         private Vector3 doomGround;
         private SortingGroup? sorting;
         private Renderer? native;
@@ -1043,7 +1045,7 @@ internal static partial class ImportedPeaVisuals
             root.transform.localScale = Vector3.one * scale;
             root.transform.localPosition = new Vector3(target.center.x - bounds.center.x * scale,
                 target.min.y - bounds.min.y * scale + (airUtility && !preview ? plantSize * .52f : 0), 0);
-            if (assets.Identity == FusionPlant.CherryDrone) cherryDroneHome = root.transform.localPosition;
+            if (AirRaidFusions.Owns(assets.Identity)) airRaidHome = root.transform.localPosition;
             if (assets.Identity == FusionPlant.DoomSeed)
             {
                 var ground = renderers[data.GroundNode]!;
@@ -1151,8 +1153,10 @@ internal static partial class ImportedPeaVisuals
             if (!preview && assets.Identity == FusionPlant.CherryDrone)
             {
                 var offset = AirRaidFusions.FlightOffset(Plant);
-                root.transform.localPosition = cherryDroneHome + new Vector3(offset.x, -offset.y, 0) * 2.82f;
+                root.transform.localPosition = airRaidHome + new Vector3(offset.x, -offset.y, 0) * 2.82f;
             }
+            if (!preview && assets.Identity == FusionPlant.SquashDrone)
+                root.transform.localPosition = airRaidHome - Vector3.up * (80f * 2.82f * .52f * AirRaidFusions.SquashDescent(Plant));
             float? shoot = null;
             if (!preview && !FusionPlant.IsMine(assets.Identity) && model.Clips.ContainsKey("shoot"))
             {
@@ -1197,6 +1201,8 @@ internal static partial class ImportedPeaVisuals
             if (FusionPlant.IsAirLobber(assets.Identity))
                 shoot = !preview && Plant.mStartRow > 0
                     ? (AirLobbers.ShootTicks - Plant.mStartRow) * .01f : null;
+            if (assets.Identity == FusionPlant.FallMelon && shoot.HasValue)
+                shoot *= model.Clips["shoot"].Duration * 100f / AirLobbers.ShootTicks;
             string shootClip = "shoot";
             bool loopShooting = false;
             if (FusionPlant.IsBeamShooter(assets.Identity))

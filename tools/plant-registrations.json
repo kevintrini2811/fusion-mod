@@ -1700,6 +1700,18 @@
       "native": "Blover",
       "marker": "Cherrybomb",
       "model": "CherryDroneProjectile"
+    },
+    {
+      "name": "FallMelon",
+      "native": "Blover",
+      "marker": "Melonpult",
+      "model": "SpringMelon"
+    },
+    {
+      "name": "SquashDrone",
+      "native": "Blover",
+      "marker": "Squash",
+      "model": "MiniSquashProjectile"
     }
   ],
   "reserved": [],
@@ -2082,7 +2094,8 @@
     ],
     "IsAirLobber": [
       "CabbageDropper",
-      "ButterFly"
+      "ButterFly",
+      "FallMelon"
     ],
     "IsPuffJumper": [
       "NibbleShroom",

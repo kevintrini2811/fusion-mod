@@ -1,0 +1,36 @@
+{
+  "version": "24.5.0",
+  "base": "50302a46e6bb6480ea134058da254ff4d525c8df",
+  "branch": "task/fusion-pair-20261120-04",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "31b371893cf590364a953dd549e257f1faf514f1d10d18006ded6dfbbe87ad88"
+  },
+  "testedCandidate": "e4e72d402a50a35128061b019703eff237fb98eb6c06c02b553ad75488b8b8be",
+  "versionChangeAfterRuntime": "The final build changed only version metadata after the approved gameplay candidate.",
+  "offline": {
+    "registrationToolTests": 11,
+    "registrationsAndTargetedStrictRecipes": "passed",
+    "airPlacementHarness": "passed",
+    "fusionTimeAssertions": 2722
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both orders for both results passed using Debug Mod plant.place. Each result shared its tile with a Sunflower, and the gameplay screenshot and renderer states show the active models.",
+    "fallMelon": "A single flight snapshot contains three live 80-base Melons with negative, zero and positive velocities and active imported renderers. The close fixture confirmed direct and splash damage. The Extreme log records 80 to 40 and 26 to 13 applied damage.",
+    "squashDrone": "Two same-tile zombies lost 50 HP per stomp twice in Extreme and the adjacent row control kept 10000 HP. The attack counter records descent, return and a second cycle.",
+    "restoration": "Each temporary candidate uninstall restored the 24.4.1 digest. DP-3 and the checked test profile hashes matched preflight. All owned processes are absent. The first stopped through window close and SIGTERM. The follow-ups stopped through the regular menu. Steam exit codes were unavailable.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-04/gameplay/assessment.md",
+    "flightProof": "melon-flight/0010-flight-trio.json",
+    "combatProof": "combat-followup/squash-series.json"
+  },
+  "review": "Approved.",
+  "test": "Approved.",
+  "limits": [
+    "The first projectile-only sampler recorded neither live shots nor board clocks after unpause. The follow-ups captured the attacks and live renderers with controlled target geometry.",
+    "The Day scenarios establish sampled attack phases and hits. Pool effects, exact landing ticks, continuous projectile visibility and save/load were outside the live scenarios.",
+    "The reused Spring Melon and mini-squash models stand in for the source bodies. Squash Drone has a port-specific 20-tick descent and 30-tick recovery.",
+    "The game Almanac and offline Almanac catalog, portraits and image checks were excluded."
+  ]
+}

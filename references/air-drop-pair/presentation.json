@@ -1,0 +1,32 @@
+{
+  "1361": {
+    "adaptation": {
+      "info": "Drops three melons when a ground zombie approaches its lane. The three arcs cover its own tile and the tiles to either side. Each direct hit deals 80 damage and adds melon splash damage.",
+      "flavor": "",
+      "notes": "Attacks every three seconds and shares an air tile with a ground plant. Uses the existing Spring Melon body and melon projectile.",
+      "portrait": "1196.png"
+    },
+    "german": {
+      "Name": "Melonen-Gleiter",
+      "Info": "Wirft drei Melonen ab, wenn sich ein Bodenzombie in seiner Reihe nähert. Die Melonen fallen auf das eigene Feld und zu beiden Seiten. Jeder direkte Treffer verursacht 80 Schaden plus Melonen-Flächenschaden.",
+      "Flavor": "",
+      "Notes": "Greift alle drei Sekunden an und teilt das Feld mit einer Bodenpflanze. Verwendet das vorhandene Modell von Spring Melon und das Melonengeschoss.",
+      "EnglishSha256": "5bb63836b36dc229b55bc80ab692acb568d9e3488f1dec25f697752a0c0dc505"
+    }
+  },
+  "1374": {
+    "adaptation": {
+      "info": "Stomps ground zombies directly beneath it for 100 damage. It rises back to its air slot and can attack again after two seconds.",
+      "flavor": "",
+      "notes": "A short descent precedes the hit. The body uses the existing mini-squash model.",
+      "portrait": "1366.png"
+    },
+    "german": {
+      "Name": "Kürbisdrohne",
+      "Info": "Stampft Bodenzombies direkt unter sich für 100 Schaden. Danach kehrt sie in den Luftplatz zurück und kann nach zwei Sekunden erneut angreifen.",
+      "Flavor": "",
+      "Notes": "Vor dem Treffer sinkt sie kurz ab. Sie verwendet das vorhandene Mini-Squash-Modell.",
+      "EnglishSha256": "2d36daa838b65b05d86ba4705f17acb63e24d7a01c4fce18eb165f1ba45943ad"
+    }
+  }
+}

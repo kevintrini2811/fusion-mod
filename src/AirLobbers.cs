@@ -10,7 +10,7 @@ internal static class AirLobbers
     internal const int ShootTicks = 50, ShotEvent = 25;
     private const int Marker = -529100;
     internal static bool IsShot(Projectile shot) => shot.mCobTargetX == Marker
-        && shot.mProjectileType is ProjectileType.Cabbage or ProjectileType.Kernel or ProjectileType.Butter;
+        && shot.mProjectileType is ProjectileType.Cabbage or ProjectileType.Kernel or ProjectileType.Butter or ProjectileType.Melon;
     internal static void Initialize(Plant plant)
     {
         if (!FusionPlant.IsAirLobber(FusionPlant.From(plant))) return;
@@ -32,25 +32,28 @@ internal static class AirLobbers
     }
     internal static void Tick(Plant plant)
     {
-        if (!ChomperFusions.Active(plant) || plant.mIsAsleep) return;
+        var identity = FusionPlant.From(plant);
+        bool fallMelon = identity == FusionPlant.FallMelon;
+        if (fallMelon ? !CactusFusions.Active(plant) : !ChomperFusions.Active(plant) || plant.mIsAsleep) return;
         if (!FusionTime.SourceStep(plant, typeof(AirLobbers))) return;
         if (plant.mLaunchCounter > 0) --plant.mLaunchCounter;
-        if (plant.mStartRow > 0 && --plant.mStartRow == ShotEvent) Fire(plant);
+        if (plant.mStartRow > 0 && --plant.mStartRow == ShotEvent) Fire(plant, identity);
         if (plant.mStartRow > 0 || plant.mLaunchCounter > 0 || !HasTarget(plant)) return;
-        plant.mLaunchCounter = 285 + plant.mBoard.Rand(31);
+        plant.mLaunchCounter = fallMelon ? 300 : 285 + plant.mBoard.Rand(31);
         plant.mStartRow = ShootTicks;
     }
-    private static void Fire(Plant plant)
+    private static void Fire(Plant plant, FusionPlant identity)
     {
         for (int side = -1; side <= 1; side++)
         {
-            var type = FusionPlant.From(plant) == FusionPlant.CabbageDropper ? ProjectileType.Cabbage
+            var type = identity == FusionPlant.FallMelon ? ProjectileType.Melon
+                : identity == FusionPlant.CabbageDropper ? ProjectileType.Cabbage
                 : plant.mBoard.Rand(4) == 0 ? ProjectileType.Butter : ProjectileType.Kernel;
             var shot = plant.mBoard.AddProjectile(plant.mX + plant.mWidth / 2f,
                 plant.mY + plant.mHeight / 2f, plant.mRenderOrder + 1, plant.mRow, type);
             if (shot == null || shot.mDead) continue;
             shot.mCobTargetX = Marker;
-            shot.mCobTargetRow = type == ProjectileType.Kernel ? 20 : 40;
+            shot.mCobTargetRow = type == ProjectileType.Melon ? 80 : type == ProjectileType.Kernel ? 20 : 40;
             shot.mDamageRangeFlags = DamageRangeFlags.Ground;
             shot.mMotionType = ProjectileMotion.Lobbed;
             shot.mVelX = side * 2 * ScaredyFusions.SourceUnit * .01f;
@@ -88,7 +91,7 @@ internal static class AirLobberImpactPatch
     {
         if (!AirLobbers.IsShot(__instance)) return true;
         LobberImpact.Apply(__instance, theZombie, FumeProjectiles.ModifiedDamage(__instance, __instance.mCobTargetRow),
-            false, __instance.mProjectileType == ProjectileType.Butter, 0, false);
+            __instance.mProjectileType == ProjectileType.Melon, __instance.mProjectileType == ProjectileType.Butter, 0, false);
         return false;
     }
 }

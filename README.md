@@ -1,4 +1,4 @@
-# Fusion Mod 24.4.1
+# Fusion Mod 24.5.0
 
 Version 24.4.1 restores the imported cabbage, kernel, and butter projectile views for Cabbage Dropper and Butter Fly.
 
@@ -2486,9 +2486,13 @@ Both defenders occupy the air slot. Hoverleaf deflects basketballs and bungees a
 
 Cactus Drone clears fog and blows away Balloon Zombies when placed. It then fires pairs of air-only cactus spikes down its lane. Cherry Drone flies toward nearby ground zombies and delivers a 300-damage cherry blast. Fertilizer caps its remaining attack cooldown at half a second. Both use the air slot and accept both recipe orders. [Implementation and source evidence](references/air-raid-pair/implementation-notes.md)
 
+## Fall Melon and Squash Drone
+
+Fall Melon drops three melons across its lane when a ground zombie approaches. Squash Drone descends to stomp ground zombies beneath its own tile and returns to its air position. The plants share their tile with a ground plant and accept both ingredient orders. [Implementation and source evidence](references/air-drop-pair/implementation-notes.md)
+
 ## List
 
-`fusionen.txt` contains **268 open recipes** with **210 result plants** in the format:
+`fusionen.txt` contains **266 open recipes** with **208 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2916,6 +2920,8 @@ Blover | Umbrella Leaf | Hoverleaf
 Blover | Wall-nut | Drone-nut
 Blover | Cactus | Cactus Drone
 Blover | Cherry Bomb | Cherry Drone
+Blover | Melon-pult | Fall Melon
+Blover | Squash | Squash Drone
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

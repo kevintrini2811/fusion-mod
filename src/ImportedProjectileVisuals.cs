@@ -393,8 +393,13 @@ internal static partial class ImportedPeaVisuals
     internal static void EnsureAirLobProjectile(Projectile projectile)
     {
         if (projectile.mDead || !AirLobbers.IsShot(projectile)) return;
-        RegisterProjectile(projectile, projectile.mProjectileType == ProjectileType.Cabbage ? CabbageProjectileAssets
-            : projectile.mProjectileType == ProjectileType.Butter ? ButterProjectileAssets : KernelProjectileAssets);
+        RegisterProjectile(projectile, projectile.mProjectileType switch
+        {
+            ProjectileType.Melon => MelonProjectileAssets,
+            ProjectileType.Cabbage => CabbageProjectileAssets,
+            ProjectileType.Butter => ButterProjectileAssets,
+            _ => KernelProjectileAssets
+        });
     }
 
     internal static bool HasProjectileArt(Projectile projectile) => ImportedProjectiles.TryGetValue(projectile.Pointer, out var view) && view.IsValid;
@@ -510,6 +515,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == ButterProjectileAssets ? TriLobbers.Family(projectile) == 2 || LobberProjectiles.Family(projectile) == 14
                     || projectile.mProjectileType == ProjectileType.Butter && AirLobbers.IsShot(projectile)
                 : assets == MelonProjectileAssets ? UmbrellaVariants.ReflectedMelon(projectile) || LobberProjectiles.Family(projectile) == 9 || SquashLobbers.Family(projectile) == 7 || NutProjectiles.Family(projectile) == 2 || TriLobbers.Family(projectile) == 3
+                    || projectile.mProjectileType == ProjectileType.Melon && AirLobbers.IsShot(projectile)
                 : assets == PuffPeaProjectileAssets ? PuffShooters.Contains(projectile) : assets == SpeedyProjectileAssets ? ScaredyProjectiles.Family(projectile) == 1 && projectile.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
                 : assets == CherrySporeAssets ? ScaredyProjectiles.Family(projectile) == 2
                 : assets == FrenzyProjectileAssets ? ScaredyProjectiles.Family(projectile) == 5

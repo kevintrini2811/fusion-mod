@@ -1933,6 +1933,16 @@
       "available": true,
       "identity": "FusionPlant.CherryDrone",
       "evidence": "Registered in the Fusion Mod with native identities, both recipe directions, shared air placement and source ability in src/AirRaidFusions.cs."
+    },
+    "Fall Melon": {
+      "available": true,
+      "identity": "FusionPlant.FallMelon",
+      "evidence": "Registered with both recipes, shared air placement, and a source ability in src/AirLobbers.cs."
+    },
+    "Squash Drone": {
+      "available": true,
+      "identity": "FusionPlant.SquashDrone",
+      "evidence": "Registered with both recipes, shared air placement, and a source ability in src/AirRaidFusions.cs."
     }
   }
 }

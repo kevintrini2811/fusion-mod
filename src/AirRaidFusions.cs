@@ -9,12 +9,13 @@ internal static class AirRaidFusions
 {
     private const int CactusInterval = 150, ShotGap = 10;
     private const int CherryInterval = 1500, OffsetPrecision = 256;
+    private const int SquashInterval = 200, SquashWindup = 20, SquashRecovery = 30;
     private const float CherrySearchRadius = 3 * BloverFusions.Unit;
     private const float CherryContactRadius = .5f * BloverFusions.Unit;
     internal const int CactusShootTicks = 50;
 
     internal static bool Owns(FusionPlant identity) =>
-        identity == FusionPlant.CactusDrone || identity == FusionPlant.CherryDrone;
+        identity == FusionPlant.CactusDrone || identity == FusionPlant.CherryDrone || identity == FusionPlant.SquashDrone;
 
     internal static void Initialize(Plant plant)
     {
@@ -43,7 +44,8 @@ internal static class AirRaidFusions
         if (!CactusFusions.Active(plant) || !FusionTime.SourceStep(plant, typeof(AirRaidFusions))) return;
         if (plant.mLaunchCounter > 0) --plant.mLaunchCounter;
         if (identity == FusionPlant.CactusDrone) TickCactus(plant);
-        else TickCherry(plant);
+        else if (identity == FusionPlant.CherryDrone) TickCherry(plant);
+        else TickSquash(plant);
     }
 
     private static void TickCactus(Plant plant)
@@ -135,6 +137,59 @@ internal static class AirRaidFusions
         var impact = origin + offset;
         CherryBombPlants.Explode(new(board, FusionPlant.CherryDrone, plant.DataID, plant.mPlantCol,
             target.mRow, impact.x, impact.y, plant.mRenderOrder), sourceRadius: 80, damage: 300);
+    }
+
+    internal static float SquashDescent(Plant plant)
+    {
+        if (plant.mShootingCounter <= SquashRecovery) return plant.mShootingCounter / (float)SquashRecovery;
+        float windup = (SquashWindup + SquashRecovery - plant.mShootingCounter) / (float)SquashWindup;
+        return windup * windup;
+    }
+
+    private static void TickSquash(Plant plant)
+    {
+        if (plant.mShootingCounter > 0)
+        {
+            if (--plant.mShootingCounter == SquashRecovery) Stomp(plant);
+            return;
+        }
+        if (plant.mLaunchCounter != 0) return;
+        var zombies = plant.mBoard.m_zombies;
+        for (int i = 0; i < zombies.Count; ++i)
+        {
+            if (zombies[i] is not { } zombie || !Below(plant, zombie, .6f * BloverFusions.Unit)) continue;
+            plant.mLaunchCounter = SquashInterval;
+            plant.mShootingCounter = SquashWindup + SquashRecovery;
+            return;
+        }
+    }
+
+    private static bool Below(Plant plant, Zombie zombie, float radius)
+    {
+        if (zombie.mRow != plant.mRow || zombie.mZombieType is ZombieType.Gravestone or ZombieType.Target
+            || !SquashFusions.Eligible(plant.mBoard, zombie, DamageRangeFlags.Ground)) return false;
+        float x = plant.mX + plant.mWidth / 2f;
+        var body = zombie.GetZombieRect();
+        return body.xMax >= x - radius && body.xMin <= x + radius;
+    }
+
+    private static void Stomp(Plant plant)
+    {
+        var board = plant.mBoard;
+        var targets = new List<(Zombie Zombie, uint Id)>();
+        float radius = .7f * BloverFusions.Unit;
+        for (int i = 0; i < board.m_zombies.Count; ++i)
+            if (board.m_zombies[i] is { } zombie && Below(plant, zombie, radius))
+                targets.Add((zombie, zombie.DataID));
+        foreach (var (zombie, id) in targets)
+            if (zombie.DataID == id && Below(plant, zombie, radius))
+                zombie.TakeDamage(100, DamageFlags.HitsShieldAndBody | DamageFlags.DoesntLeaveBody);
+        bool pool = board.IsPoolSquare(plant.mPlantCol, plant.mRow);
+        if (pool)
+            plant.mApp.AddTodParticle(plant.mX + plant.mWidth / 2f, plant.mY + plant.mHeight / 2f,
+                plant.mRenderOrder, ParticleEffect.PoolSplash);
+        else board.ShakeBoard(1, -2);
+        plant.mApp.SoundSystem.PlayFoley(pool ? FoleyType.ZombieSplash : FoleyType.Squish);
     }
 }
 
