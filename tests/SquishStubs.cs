@@ -18,13 +18,13 @@ namespace Il2CppReloaded.Services
 }
 namespace Il2CppReloaded.Gameplay
 {
-    internal enum SeedType { None, Doomshroom, Tallnut, Bucket, Wallnut, Puffshroom, Squash, Lilypad }
+    internal enum SeedType { None, Doomshroom, Tallnut, Bucket, Wallnut, Puffshroom, Squash, Lilypad, Sunshroom, Potatomine, Spikeweed, Spikerock }
     internal enum ZombieType { Pogo, Normal, Gargantuar, RedeyeGargantuar, Boss, Zamboni, Catapult, Gravestone, Target }
     internal enum ZombiePhase { ZombieNormal, ZombieDying, PogoBouncing, PolevaulterInVault, DolphinInJump,
         ImpGettingThrown,BalloonFlying,BalloonPopping,DiggerTunneling,DiggerTunnelingPauseWithoutAxe,
         DiggerRising,DiggerRiseWithoutAxe,PogoHighBounce1,PogoHighBounce2,PogoHighBounce3,PogoHighBounce4,
         PogoHighBounce5,PogoHighBounce6,PogoForwardBounce2,PogoForwardBounce7,BungeeDiving,BungeeDivingScreaming,BungeeRising }
-    internal enum PlantPriority { Normal, DiggingOrder=1, BungeeOrder=2 }
+    internal enum PlantPriority { Normal, EatingOrder=Normal, DiggingOrder=1, BungeeOrder=2, CatapultOrder=3 }
     internal enum CursorType { Normal, Shovel, Glove, PlantFromBank }
     internal sealed class Cursor { internal CursorType CursorType; }
     internal enum ProjectileType { Basketball, ZombiePea }
@@ -90,7 +90,7 @@ namespace Il2CppReloaded.Gameplay
         internal void ToolHitTest() {}
         internal void MouseDownWithTool(int x,int y,int theClickCount,CursorType theCursorType,int playerIndex) {}
         internal void CanPlantAt() {}
-        internal Plant? GetTopPlantAt() => null;
+        internal Plant? GetTopPlantAt(int col, int row, PlantPriority priority) => null;
         internal void ShakeBoard(int x, int y) {}
         public void UpdateGame() {} public void InitLevel() {} public void InitSurvivalStage() {}
         public void DisposeBoard() { Disposed = true; FusionMod.FusionTime.Dispose(this); } public void Serialize() {}
@@ -149,7 +149,22 @@ namespace Il2CppReloaded.Gameplay
         internal void TakeDamage(int damage, DamageFlags flags)
         { Received += damage; mBodyHealth -= damage; LastFlags = flags; OnDamage?.Invoke(); }
     }
-    internal sealed class Projectile { internal Board mBoard = null!; internal IntPtr Pointer; internal uint DataID; internal bool mDead; internal ProjectileType mProjectileType; internal Plant? FindCollisionTargetPlant() => null; }
+    internal sealed class Projectile
+    {
+        internal Board mBoard = null!;
+        internal IntPtr Pointer;
+        internal uint DataID;
+        internal bool mDead;
+        internal int mRow;
+        internal ProjectileType mProjectileType;
+        internal Plant? FindCollisionTargetPlant() => null;
+        internal UnityEngine.Rect GetProjectileRect() => default;
+    }
+    internal static class Common
+    {
+        internal static int GetRectOverlap(ref UnityEngine.Rect a, ref UnityEngine.Rect b) =>
+            (int)(Math.Min(a.x + a.width, b.x + b.width) - Math.Max(a.x, b.x));
+    }
     internal sealed class GridItem
     {
         private static uint next;

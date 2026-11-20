@@ -1,4 +1,6 @@
-# Fusion Mod 24.12.0
+# Fusion Mod 24.12.1
+
+Version 24.12.1 moves the special plant collision rules for basketballs and zombie peas into the projectile query. It keeps native rectangle and home-cell lookups while preserving moving Nibble and Squish targets and the disabled colliders of airborne Squish and rolling peppers.
 
 Version 24.12.0 adds Solar Magnet and Grenadier Magnet. Solar Magnet produces sun and metal, turns supplied metal into 25 sun, and can deliver generated gear to a ready Grenadier immediately to its right. Grenadier Magnet attracts or receives metal and throws it for up to five 300-damage blasts. Both recipes accept either ingredient order. [Implementation notes](references/solar-grenadier-magnets/implementation-notes.md) and [gameplay acceptance](references/solar-grenadier-magnets/acceptance.json).
 

@@ -22,7 +22,18 @@ namespace Il2CppReloaded.Gameplay {
         public int GridToPixelX(int x,int y) => x*80;
         public float GetPosYBasedOnRow(float x,int row) => row*100 + x*.1f;
         public bool IsPoolSquare(int col,int row) => Pool;
-        public Plant? GetTopPlantAt(int theGridX,int theGridY,PlantPriority thePriority) => null;
+        internal Func<int, int, PlantPriority, (Plant? Target, bool OriginalRan)>? TopLookup;
+        public Plant? GetTopPlantAt(int theGridX, int theGridY, PlantPriority thePriority)
+        {
+            FusionMod.PuffJumperProjectileCandidateRemap.Prefix(this, theGridX, theGridY, thePriority, true, out var claim);
+            try
+            {
+                var (target, originalRan) = TopLookup?.Invoke(theGridX, theGridY, thePriority) ?? (null, true);
+                FusionMod.PuffJumperProjectileCandidateRemap.Postfix(originalRan, claim, ref target);
+                return target;
+            }
+            finally { FusionMod.PuffJumperProjectileCandidateRemap.Finalizer(claim); }
+        }
         public bool CanPlantAt() => true; public void KillAllPlantsInRadius() {}
         public GridItems m_gridItems = new();
         public Zombie? Target;
@@ -62,14 +73,15 @@ namespace Il2CppReloaded.Gameplay {
         public int mPlantHealth=300,mPlantMaxHealth=300,mPlantCol,mRow,mWidth=80,mHeight=80,mRenderOrder;
         public float mX,mY; public bool mIsOnBoard=true,mDead,mSquished,mIsAsleep;
         public PlantOnBungeeState mOnBungeeState;
-        public Action? OnReanim,OnDeath;
+        public Action? OnReanim,OnDeath,OnRect;
+        public bool RollingPepper;
         public void UpdateReanim() => OnReanim?.Invoke();
         public void Die() { if(FusionMod.PuffJumperLethalDamagePatch.Prefix(this,true)) { mDead=true; OnDeath?.Invoke(); } }
         public void Squish() {} public void PlantInitialize() {} public void UpdateAbilities() {}
         public bool NotOnGround() => false;
-        public UnityEngine.Rect GetPlantRect() => new(mX,mY,mWidth,mHeight);
+        public UnityEngine.Rect GetPlantRect() { OnRect?.Invoke(); return new(mX,mY,mWidth,mHeight); }
     }
-    internal enum PlantPriority { Normal=0, Projectile=3 }
+    internal enum PlantPriority { EatingOrder, CatapultOrder=3 }
     internal enum PlantOnBungeeState { NotOnBungee, OnBungee }
     internal enum ProjectileType { Basketball, ZombiePea, Pea }
     internal enum DamageFlags { BypassesShield }
@@ -79,12 +91,17 @@ namespace Il2CppReloaded.Gameplay {
     internal sealed class Projectile : Plant {
         public bool Owned = true; public ProjectileType mProjectileType;
         public Plant? FindCollisionTargetPlant() => null; public void UpdateLobMotion() {}
+        public UnityEngine.Rect GetProjectileRect() => new(mX,mY,mWidth,mHeight);
         public ProjectileMotion mMotionType = ProjectileMotion.Homing;
         public uint mTargetZombieID;
         public DamageRangeFlags mDamageRangeFlags;
         public float mPosX, mPosY, mVelX, mVelY, mRotation;
         public int mProjectileAge;
         public void UpdateNormalMotion() {} public void CheckForCollision() {}
+    }
+    internal static class Common {
+        internal static int GetRectOverlap(ref UnityEngine.Rect a, ref UnityEngine.Rect b) =>
+            (int)(Math.Min(a.xMax, b.xMax) - Math.Max(a.xMin, b.xMin));
     }
     internal readonly record struct TargetPoint(float y);
     
@@ -178,7 +195,7 @@ namespace FusionMod
 {
     internal static class PepperFusions
     {
-        internal static bool Rolling(Il2CppReloaded.Gameplay.Plant plant) => false;
+        internal static bool Rolling(Il2CppReloaded.Gameplay.Plant plant) => plant.RollingPepper;
         internal static bool PopperImmune(Il2CppReloaded.Gameplay.Plant plant) => false;
     }
 }

@@ -102,83 +102,143 @@ static class Program
         PuffJumperExplosionDamageScope.Prefix(p.mBoard,out old);PlayerPlantingScope.ConsumingIngredient=p.Pointer;p.Die();
         Check(p.mDead,"ingredient removal remains legal");PlayerPlantingScope.ConsumingIngredient=default;PuffJumperExplosionDamageScope.Finalizer(old);
     }
-    static void Query()
+    static (bool Native, Plant? Target) Select(Projectile shot, bool runOriginal = true, Plant? initial = null)
     {
-        var p=New();p.mShootingCounter=1;p.mIsOnBoard=false;p.mX=300;
-        var sentinel=New(p.mBoard);sentinel.mImitaterType=SeedType.Peashooter;
-        var shot=new Projectile {mBoard=p.mBoard,mProjectileType=ProjectileType.Basketball,DataID=0xf0010022};
-        PuffJumperProjectileCandidateScope.Prefix(shot,out var old);
-        var rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,true,ref rect);
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out var claim);
-        Plant? result=sentinel;PuffJumperProjectileCandidateRemap.Postfix(true,claim,ref result);PuffJumperProjectileCandidateRemap.Finalizer(claim);
-        Check(ReferenceEquals(result,p),"physical collision resolves moving candidate, not home sentinel");
-        rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,true,ref rect);
-        rect=sentinel.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(sentinel,true,ref rect);
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out claim);result=sentinel;
-        PuffJumperProjectileCandidateRemap.Postfix(true,claim,ref result);PuffJumperProjectileCandidateRemap.Finalizer(claim);
-        Check(ReferenceEquals(result,sentinel),"foreign candidate clears moving claim");
-        var air=New(p.mBoard);air.mImitaterType=SeedType.Squash;air.mStartRow=2;
-        rect=air.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(air,true,ref rect);
-        Check(rect.xMax==rect.xMin && rect.xMin<0,"air Squish rejected before native selection");
-        rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,true,ref rect);++p.DataID;
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out claim);result=sentinel;
-        PuffJumperProjectileCandidateRemap.Postfix(true,claim,ref result);PuffJumperProjectileCandidateRemap.Finalizer(claim);
-        Check(ReferenceEquals(result,sentinel),"recycled candidate never rebound");
-        rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,true,ref rect);
-        ++shot.DataID;
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out claim);result=sentinel;
-        PuffJumperProjectileCandidateRemap.Postfix(true,claim,ref result);PuffJumperProjectileCandidateRemap.Finalizer(claim);
-        Check(ReferenceEquals(result,sentinel),"recycled projectile cannot claim candidate");
-        PuffJumperProjectileCandidateScope.Finalizer(old);
-        PuffJumperProjectileCandidateScope.Prefix(shot,out old);
-        rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,true,ref rect);
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out claim);
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out var inner);result=sentinel;
-        PuffJumperProjectileCandidateRemap.Postfix(true,inner,ref result);PuffJumperProjectileCandidateRemap.Finalizer(inner);
-        Check(ReferenceEquals(result,sentinel),"nested home query cannot steal native claim");
-        PuffJumperProjectileCandidateRemap.Postfix(false,claim,ref result);PuffJumperProjectileCandidateRemap.Finalizer(claim);
-        Check(ReferenceEquals(result,sentinel),"foreign veto retains its result");
-        rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,false,ref rect);
-        PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,0,0,(PlantPriority)3,true,out claim);result=sentinel;
-        PuffJumperProjectileCandidateRemap.Postfix(true,claim,ref result);PuffJumperProjectileCandidateRemap.Finalizer(claim);
-        Check(ReferenceEquals(result,sentinel),"foreign bounds veto cannot authorize remap");
-        PuffJumperProjectileCandidateScope.Prefix(shot,out var nested);PuffJumperProjectileCandidateScope.Finalizer(nested);
-        Check(PuffJumperProjectileCandidateScope.Current==nested,"nested projectile scope restores parent");
-        PuffJumperProjectileCandidateScope.Finalizer(old);Check(PuffJumperProjectileCandidateScope.Current==null,"query finalizer restores after throw");
-        Check(!p.NotOnGround(),"moving Nibble keeps native physical ground query");
-        PuffJumperPlacementScope.Prefix(p.mBoard,p.mPlantCol,p.mRow,out var hidden);
-        Check(p.mSquished&&!p.mIsOnBoard,"placement query alone hides detached source slot");
-        PuffJumperPlacementScope.Finalizer(hidden);
-        Check(!p.mSquished&&!p.mIsOnBoard,"placement restores detached source state");
-    }
-    static void SquishQuery()
-    {
-        var p=New();p.mImitaterType=SeedType.Squash;p.mIsOnBoard=false;p.mX=300;p.mStartRow=0;
-        var sentinel=New(p.mBoard);sentinel.mImitaterType=SeedType.None;
-        var shot=new Projectile {mBoard=p.mBoard,mProjectileType=ProjectileType.Basketball,DataID=0xf0010033};
-        PuffJumperProjectileCandidateScope.Prefix(shot,out var old);
-        void Select() { var rect=p.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(p,true,ref rect); }
-        Plant? Resolve(Action? beforePostfix=null)
-        {
-            PuffJumperProjectileCandidateRemap.Prefix(p.mBoard,p.mPlantCol,p.mRow,(PlantPriority)3,true,out var claim);
-            Plant? result=sentinel;
-            try { beforePostfix?.Invoke();PuffJumperProjectileCandidateRemap.Postfix(true,claim,ref result);return result; }
-            finally { PuffJumperProjectileCandidateRemap.Finalizer(claim); }
-        }
+        PuffJumperProjectileCandidateScope.Prefix(shot, out var previous);
+        var result = initial;
         try
         {
-            Select();Check(ReferenceEquals(Resolve(),p),"grounded offgrid Squish receives physical basketball instead of home sentinel");
-            Check(ReferenceEquals(Resolve(),sentinel),"Squish claim is one use");
-            Select();p.mStartRow=2;Check(ReferenceEquals(Resolve(),sentinel),"Squish takeoff before claim rejects home remap");
-            Select();Check(ReferenceEquals(Resolve(),sentinel),"airborne Squish never creates physical claim");
-            p.mStartRow=0;Select();Check(ReferenceEquals(Resolve(()=>p.mStartRow=2),sentinel),"Squish takeoff during native home query rejects remap");
-            p.mStartRow=0;Select();var rect=sentinel.GetPlantRect();PuffJumperProjectileCandidateBounds.Postfix(sentinel,true,ref rect);
-            Check(ReferenceEquals(Resolve(),sentinel),"foreign bounds clear grounded Squish claim");
-            Select();++p.DataID;Check(ReferenceEquals(Resolve(),sentinel),"recycled grounded Squish cannot receive old hit");
-            Select();Check(ReferenceEquals(Resolve(()=>p.mImitaterType=SeedType.Chomper),sentinel),"identity-changed Squish cannot inherit query claim");
+            bool native = PuffJumperProjectilePhysicalSearch.Prefix(shot, runOriginal, ref result);
+            return (native, result);
         }
-        finally { PuffJumperProjectileCandidateScope.Finalizer(old); }
-        Check(PuffJumperProjectileCandidateScope.Current==null,"Squish scope restores parent context");
+        finally { PuffJumperProjectileCandidateScope.Finalizer(previous); }
     }
+
+    static void Query()
+    {
+        var moving = New();
+        moving.mShootingCounter = 1; moving.mIsOnBoard = false; moving.mX = 300;
+        var board = moving.mBoard;
+        var sentinel = New(board);
+        sentinel.mImitaterType = SeedType.Peashooter;
+        var shot = new Projectile { mBoard = board, mProjectileType = ProjectileType.Basketball,
+            DataID = 0xf0010022, mX = 320, mY = 1000 };
+        board.TopLookup = (col, row, priority) =>
+        {
+            Check(col == moving.mPlantCol && row == moving.mRow && priority == PlantPriority.CatapultOrder,
+                "basketball uses the native candidate home cell and catapult priority");
+            return (sentinel, true);
+        };
+        foreach (bool pool in new[] { false, true })
+        {
+            board.Pool = pool;
+            var result = Select(shot);
+            Check(!result.Native && ReferenceEquals(result.Target, moving),
+                "horizontal geometry selects physical Nibble on either ground or pool");
+        }
+        shot.mX = 372;
+        Check(Select(shot) == (false, null), "exactly eight pixels of horizontal overlap miss");
+        shot.mX = 371;
+        Check(ReferenceEquals(Select(shot).Target, moving), "nine pixels of horizontal overlap hit");
+        shot.mX = 320;
+
+        board.m_plants.Remove(sentinel);
+        board.m_plants.Insert(0, sentinel);
+        sentinel.mX = 310;
+        Check(ReferenceEquals(Select(shot).Target, sentinel), "first matching ordinary rectangle owns its home claim");
+        int homeLookups = 0;
+        board.TopLookup = (_, _, _) => { ++homeLookups; return (null, true); };
+        Check(Select(shot) == (false, null) && homeLookups == 1,
+            "null result from the first overlap terminates the search before a later matching rectangle");
+        board.TopLookup = (_, _, _) => (sentinel, true);
+        sentinel.mX = 0;
+        var air = New(board);
+        air.mImitaterType = SeedType.Squash; air.mStartRow = 2; air.mX = 310;
+        var rolling = New(board);
+        rolling.mImitaterType = SeedType.None; rolling.RollingPepper = true; rolling.mX = 310;
+        board.m_plants.Remove(air); board.m_plants.Insert(0, air);
+        board.m_plants.Remove(rolling); board.m_plants.Insert(0, rolling);
+        Check(ReferenceEquals(Select(shot).Target, moving), "airborne Squish and rolling Pepper yield to next collider");
+        Check(air.mX == 310 && rolling.mX == 310, "rectangle search changes no plant position");
+
+        moving.OnRect = () => ++moving.DataID;
+        Check(Select(shot) == (false, null), "a recycled rectangle candidate cannot claim the hit");
+        moving.OnRect = null;
+        board.TopLookup = (_, _, _) => { ++shot.DataID; return (sentinel, true); };
+        Check(ReferenceEquals(Select(shot).Target, sentinel), "recycled projectile cannot rebind native result");
+        board.TopLookup = (_, _, _) => (sentinel, false);
+        Check(ReferenceEquals(Select(shot).Target, sentinel), "foreign veto of home lookup retains its result");
+
+        Check(Select(shot, false, sentinel) == (true, sentinel), "earlier query veto is preserved");
+        shot.mRow = 1;
+        Check(Select(shot, initial: sentinel) == (true, sentinel), "unaffected rows use original query");
+        shot.mRow = 0;
+        PuffJumperProjectileCandidateScope.Prefix(shot, out var previous);
+        var outer = PuffJumperProjectileCandidateScope.Current;
+        _ = Select(shot);
+        Check(ReferenceEquals(PuffJumperProjectileCandidateScope.Current, outer), "nested query restores parent");
+        PuffJumperProjectileCandidateScope.Finalizer(previous);
+        Check(PuffJumperProjectileCandidateScope.Current == null, "query releases the outer scope");
+
+        Check(!moving.NotOnGround(), "moving Nibble keeps native physical ground query");
+        PuffJumperPlacementScope.Prefix(board, moving.mPlantCol, moving.mRow, out var hidden);
+        Check(moving.mSquished && !moving.mIsOnBoard, "placement query hides detached source slot");
+        PuffJumperPlacementScope.Finalizer(hidden);
+        Check(!moving.mSquished && !moving.mIsOnBoard, "placement restores detached source state");
+    }
+
+    static void SquishQuery()
+    {
+        var moving = New();
+        moving.mImitaterType = SeedType.Squash; moving.mIsOnBoard = false; moving.mX = 300;
+        var board = moving.mBoard;
+        var sentinel = New(board);
+        sentinel.mImitaterType = SeedType.None;
+        var shot = new Projectile { mBoard = board, mProjectileType = ProjectileType.Basketball,
+            DataID = 0xf0010033, mX = 320 };
+        board.TopLookup = (_, _, _) => (sentinel, true);
+        Check(ReferenceEquals(Select(shot).Target, moving), "grounded displaced Squish receives physical hit");
+        moving.mStartRow = 2;
+        Check(Select(shot) == (false, null), "airborne Squish suppresses its collider");
+        moving.mStartRow = 0;
+        board.TopLookup = (_, _, _) => { moving.mStartRow = 2; return (sentinel, true); };
+        Check(ReferenceEquals(Select(shot).Target, sentinel), "takeoff during home lookup invalidates claim");
+        moving.mStartRow = 0;
+        board.TopLookup = (_, _, _) => { moving.mImitaterType = SeedType.Chomper; return (sentinel, true); };
+        Check(ReferenceEquals(Select(shot).Target, sentinel), "a changed identity cannot inherit a claim");
+        moving.mImitaterType = SeedType.Squash;
+
+        shot.mProjectileType = ProjectileType.ZombiePea;
+        var excludedSeeds = new[] { SeedType.Puffshroom, SeedType.Sunshroom, SeedType.Potatomine,
+            SeedType.Spikeweed, SeedType.Spikerock, SeedType.Lilypad };
+        sentinel.RollingPepper = true;
+        foreach (var seed in excludedSeeds)
+        {
+            sentinel.mSeedType = seed;
+            Check(Select(shot) == (true, null), "ZombiePea retains original query when only excluded plants are present");
+        }
+
+        sentinel.RollingPepper = false;
+        sentinel.mX = 320; sentinel.mPlantCol = 4;
+        sentinel.mSeedType = SeedType.Tallnut;
+        var rolling = New(board);
+        rolling.mSeedType = SeedType.Tallnut; rolling.RollingPepper = true; rolling.mX = 310;
+        board.m_plants.Remove(rolling); board.m_plants.Insert(0, rolling);
+        board.TopLookup = (col, row, priority) =>
+        {
+            Check(col == 4 && row == 0 && priority == PlantPriority.EatingOrder,
+                "ZombiePea respects its seed exclusions and native eating priority");
+            return (sentinel, true);
+        };
+        var excluded = New(board);
+        excluded.mImitaterType = SeedType.None; excluded.mX = 315; excluded.mPlantCol = 2;
+        board.m_plants.Remove(excluded); board.m_plants.Insert(1, excluded);
+        foreach (var seed in excludedSeeds)
+        {
+            excluded.mSeedType = seed;
+            Check(Select(shot) == (false, sentinel), "ZombiePea keeps ordinary fallback after excluded and rolling plants");
+        }
+    }
+
     static void Main() { Frequency(.01,340); Frequency(1d/120,408); ClockAndSave();TargetsAndLanding();Damage();Query();SquishQuery();Console.WriteLine($"Nibble-shroom: {checks} checks passed."); }
 }

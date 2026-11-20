@@ -81,9 +81,8 @@ internal static class PuffJumperCrushPatch
     }
 }
 
-// FindCollisionTargetPlant does not consult NotOnGround before comparing each
-// candidate rectangle. Represent only Squish's disabled collider as an empty
-// bound during this exact query so the native loop can select another plant.
+// Keep the physical candidate and the native home-cell claim on the same
+// query, including when a nested call temporarily owns selection.
 [HarmonyPatch(typeof(Projectile), nameof(Projectile.FindCollisionTargetPlant))]
 internal static class PuffJumperProjectileCandidateScope
 {
@@ -104,28 +103,69 @@ internal static class PuffJumperProjectileCandidateScope
         internal bool CandidateValid => Valid && Candidate is { } plant && plant.DataID == CandidateId
             && plant.mBoard?.Pointer == Board.Pointer && FusionPlant.From(plant) == CandidateIdentity
             && PuffJumpers.PhysicalRetained(plant);
+
+        private bool InNativeSearch(Plant plant) => plant.mBoard?.Pointer == Board.Pointer
+            && plant.mRow == Shot.mRow
+            && (Type != ProjectileType.ZombiePea || plant.mSeedType is not
+                (SeedType.Puffshroom or SeedType.Sunshroom or SeedType.Potatomine
+                or SeedType.Spikeweed or SeedType.Spikerock or SeedType.Lilypad));
+
+        private static bool ColliderDisabled(Plant plant) => Squish.Airborne(plant) || PepperFusions.Rolling(plant);
+
+        internal bool NeedsPhysicalSearch()
+        {
+            if (!Valid || Type is not (ProjectileType.Basketball or ProjectileType.ZombiePea)) return false;
+            for (int i = 0; i < Board.m_plants.Count; ++i)
+            {
+                var plant = Board.m_plants[i];
+                if (plant != null && InNativeSearch(plant)
+                    && (ColliderDisabled(plant) || PuffJumpers.PhysicalRetained(plant))) return true;
+            }
+            return false;
+        }
+
+        internal Plant? FindPhysicalTarget()
+        {
+            var shotBounds = Shot.GetProjectileRect();
+            // Keep the native list order, row and seed filters, horizontal
+            // overlap threshold and first claimant's home-cell lookup.
+            for (int i = 0; i < Board.m_plants.Count && Valid; ++i)
+            {
+                var plant = Board.m_plants[i];
+                if (plant == null || !InNativeSearch(plant) || ColliderDisabled(plant)) continue;
+                uint plantId = plant.DataID;
+                var plantBounds = plant.GetPlantRect();
+                if (!Valid || plant.DataID != plantId || !InNativeSearch(plant) || ColliderDisabled(plant)
+                    || Common.GetRectOverlap(ref shotBounds, ref plantBounds) <= 8) continue;
+                if (PuffJumpers.PhysicalRetained(plant))
+                {
+                    Candidate = plant;
+                    CandidateId = plantId;
+                    CandidateIdentity = FusionPlant.From(plant);
+                }
+                var priority = Type == ProjectileType.ZombiePea ? PlantPriority.EatingOrder : PlantPriority.CatapultOrder;
+                return Board.GetTopPlantAt(plant.mPlantCol, plant.mRow, priority);
+            }
+            return null;
+        }
     }
     [ThreadStatic] internal static Query? Current;
     internal static void Prefix(Projectile __instance, out Query? __state)
-    { __state = Current; Current = new Query(__instance); }
+    { __state = Current; Current = __instance.mBoard == null ? null : new Query(__instance); }
     internal static void Finalizer(Query? __state) => Current = __state;
 }
 
-[HarmonyPatch(typeof(Plant), nameof(Plant.GetPlantRect))]
-internal static class PuffJumperProjectileCandidateBounds
+[HarmonyPatch(typeof(Projectile), nameof(Projectile.FindCollisionTargetPlant))]
+internal static class PuffJumperProjectilePhysicalSearch
 {
-    internal static void Postfix(Plant __instance, bool __runOriginal, ref UnityEngine.Rect __result)
+    // Let the existing query scopes and any earlier vetoes run first.
+    [HarmonyPriority(Priority.Last - 1000)]
+    internal static bool Prefix(Projectile __instance, bool __runOriginal, ref Plant? __result)
     {
-        if (PuffJumperProjectileCandidateScope.Current is not { } query) return;
-        // Every native candidate supersedes the preceding candidate, including
-        // foreign plants and disabled colliders. Never retain a prior overlap.
-        query.Candidate = null;
-        if (!__runOriginal || !query.Valid || query.TopDepth != 0
-            || query.Board.Pointer != __instance.mBoard?.Pointer) return;
-        if (Squish.Airborne(__instance) || PepperFusions.Rolling(__instance))
-            __result = new UnityEngine.Rect(-100000, -100000, 0, 0);
-        else if (PuffJumpers.PhysicalRetained(__instance))
-        { query.Candidate = __instance; query.CandidateId = __instance.DataID; query.CandidateIdentity = FusionPlant.From(__instance); }
+        if (!__runOriginal || PuffJumperProjectileCandidateScope.Current is not { } query
+            || query.Shot.Pointer != __instance.Pointer || !query.NeedsPhysicalSearch()) return true;
+        __result = query.FindPhysicalTarget();
+        return false;
     }
 }
 
@@ -144,7 +184,8 @@ internal static class PuffJumperProjectileCandidateRemap
         var candidate = query.Candidate;
         bool match = __runOriginal && query.TopDepth == 0 && query.Type is ProjectileType.Basketball or ProjectileType.ZombiePea && query.CandidateValid
             && __instance.Pointer == query.Board.Pointer && candidate!.mPlantCol == theGridX
-            && candidate.mRow == theGridY && (int)thePriority == (query.Shot.mProjectileType == ProjectileType.Basketball ? 3 : 0);
+            && candidate.mRow == theGridY
+            && thePriority == (query.Type == ProjectileType.Basketball ? PlantPriority.CatapultOrder : PlantPriority.EatingOrder);
         query.Candidate = null; // One use, also across foreign/nested claims.
         ++query.TopDepth;
         __state = new(query, match ? candidate : null, match ? query.CandidateId : 0, query.CandidateIdentity);
