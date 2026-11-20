@@ -1,0 +1,32 @@
+{
+  "1182": {
+    "adaptation": {
+      "info": "Turns passing Peas into Snow Peas and turns Snow Peas into Extreme Snow Peas with double damage and freeze buildup.",
+      "flavor": "",
+      "notes": "Extinguishes ordinary Fire Peas into 20-damage Peas.",
+      "portrait": "1053.png"
+    },
+    "german": {
+      "Name": "Eisbrandholz",
+      "Info": "Wandelt vorbeifliegende Erbsen in Eis-Erbsen um. Eis-Erbsen werden zu Extrem-Eis-Erbsen mit doppeltem Schaden und doppeltem Gefrierwert.",
+      "Flavor": "",
+      "Notes": "Löscht gewöhnliche Feuererbsen. Die entstandenen Erbsen verursachen 20 Schaden.",
+      "EnglishSha256": "51d2695995b2de87fcc4ebaf44b6b3abb3810e50635530a14a4523c51f43dd92"
+    }
+  },
+  "1408": {
+    "adaptation": {
+      "info": "Lobs a melon about every three seconds. On landing it explodes for 1,800 damage and leaves an ember crater that marks passing zombies.",
+      "flavor": "",
+      "notes": "Melons that land in water or in an existing crater explode in a smaller area for 100 damage. A Melon Pot expands this smaller blast.",
+      "portrait": "1314.png"
+    },
+    "german": {
+      "Name": "Unheilapult",
+      "Info": "Wirft etwa alle drei Sekunden eine Melone. Beim Aufprall explodiert sie für 1.800 Schaden und hinterlässt einen Glutkrater, der vorbeilaufende Zombies mit Glut belegt.",
+      "Flavor": "",
+      "Notes": "Melonen explodieren im Wasser oder in einem vorhandenen Krater in einem kleineren Bereich für 100 Schaden. Ein Melonentopf vergrößert diesen kleineren Bereich.",
+      "EnglishSha256": "2048d24aeb9fa92c976924a0b6b03578d7dfdc04b1dea9f317f2eae8785c4deb"
+    }
+  }
+}

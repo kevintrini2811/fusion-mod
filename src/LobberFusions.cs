@@ -37,7 +37,8 @@ internal static class LobberFusions
                 : (identity == FusionPlant.SaladPult || identity == FusionPlant.SolarPult)
                 ? 475 + plant.mBoard.Rand(51) : 285 + plant.mBoard.Rand(31);
             plant.mStartRow = Duration(identity);
-            plant.mShootingCounter = identity != FusionPlant.DamagePult && identity != FusionPlant.OverripeMelon && identity != FusionPlant.SaladPult && identity != FusionPlant.MelonMorph && identity != FusionPlant.MetalPult
+            plant.mShootingCounter = identity != FusionPlant.DamagePult && identity != FusionPlant.OverripeMelon && identity != FusionPlant.SaladPult
+                && identity != FusionPlant.MelonMorph && identity != FusionPlant.MetalPult && identity != FusionPlant.DoomPult
                 && plant.mBoard.Rand(PotBoosts.ButterRange(plant)) == 0 ? 1 : 0;
         }
         // First simulation tick at or after the original animation event.

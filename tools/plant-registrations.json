@@ -1724,6 +1724,18 @@
       "native": "Starfruit",
       "marker": "Plantern",
       "model": "WinterStarfruit"
+    },
+    {
+      "name": "FrostburnWood",
+      "native": "Torchwood",
+      "marker": "Iceshroom",
+      "model": "Scorchwood"
+    },
+    {
+      "name": "DoomPult",
+      "native": "Melonpult",
+      "marker": "Doomshroom",
+      "model": "MelonMorph"
     }
   ],
   "reserved": [],
@@ -2012,7 +2024,8 @@
       "MetalPult",
       "DamagePult",
       "SolarPult",
-      "BoltPult"
+      "BoltPult",
+      "DoomPult"
     ],
     "IsEnergyNut": [
       "CabbageNut",

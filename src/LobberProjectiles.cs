@@ -43,6 +43,7 @@ internal static class LobberProjectiles
         var identity = FusionPlant.From(plant);
         bool butter = plant.mShootingCounter == 1;
         if (identity == FusionPlant.SolarPult) { FireSolar(plant, target); return; }
+        if (identity == FusionPlant.DoomPult) { DoomPult.Shoot(plant, target); return; }
         int family = identity == FusionPlant.BoltPult ? butter ? 17 : 16 : identity == FusionPlant.DamagePult ? 13 : identity == FusionPlant.KernelMorph ? butter ? 11 : 10
             : identity == FusionPlant.MetalPult ? 12 : identity == FusionPlant.MelonMorph ? 8 : identity == FusionPlant.TacoPult ? butter ? 2 : 1
             : identity == FusionPlant.CobPult ? butter ? 4 : 3

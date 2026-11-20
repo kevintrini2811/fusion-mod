@@ -19,11 +19,15 @@ internal static class PolarProjectiles
             if (shot == null || shot.mDead || shot.mProjectileType != ProjectileType.Snowpea || IsPolar(shot)) continue;
             int damage = ScaredyProjectiles.Family(shot) == 3 ? ScaredyProjectiles.Damage(shot) : 20;
             damage = ShootingPots.ProjectileDamage(shot, damage);
-            FusionProjectileTime.AdoptConversion(shot);
-            shot.mCobTargetRow = damage;
-            shot.mCobTargetX = Marker;
-            ImportedPeaVisuals.EnsurePolarProjectile(shot);
+            Promote(shot, damage);
         }
+    }
+    internal static void Promote(Projectile shot, int damage)
+    {
+        FusionProjectileTime.AdoptConversion(shot);
+        shot.mCobTargetRow = damage;
+        shot.mCobTargetX = Marker;
+        ImportedPeaVisuals.EnsurePolarProjectile(shot);
     }
     internal static bool Impact(Projectile shot, Zombie? zombie)
     {

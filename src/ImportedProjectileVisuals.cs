@@ -192,6 +192,8 @@ internal static partial class ImportedPeaVisuals
     private static readonly Assets MagnetButterProjectileAssets = new(FusionPlant.KernelMorph, "MagnetButterProjectile");
     private static readonly Assets MetalStarProjectileAssets = new(FusionPlant.Starmorph, "MetalStarProjectile");
     private static readonly Assets MetalMelonProjectileAssets = new(FusionPlant.MelonMorph, "MetalMelonProjectile");
+    internal static void EnsureDoomMelonProjectile(Projectile projectile) =>
+        RegisterProjectile(projectile, MetalMelonProjectileAssets);
 
     private static readonly Assets StarCapProjectileAssets = new(FusionPlant.StarburstShroom, "StarCapProjectile");
     private static readonly Assets DoomCabbageProjectileAssets = new(FusionPlant.DamagePult, "DoomCabbageProjectile");
@@ -471,7 +473,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == MagnetKernelProjectileAssets ? LobberProjectiles.Family(projectile) == 10
                 : assets == MagnetButterProjectileAssets ? LobberProjectiles.Family(projectile) == 11
                 : assets == MetalStarProjectileAssets ? StarProjectiles.Family(projectile) == 7
-                : assets == MetalMelonProjectileAssets ? LobberProjectiles.Family(projectile) == 8
+                : assets == MetalMelonProjectileAssets ? LobberProjectiles.Family(projectile) == 8 || DoomPult.IsShot(projectile)
                 : assets == StarPeaProjectileAssets ? StarProjectiles.Family(projectile) == 4
                 : assets == PolarProjectileAssets ? PolarProjectiles.IsPolar(projectile) : assets == BloverSunProjectileAssets ? SunflowerFusions.IsShot(projectile)
                 : assets == LettuceProjectileAssets ? SquashLobbers.Family(projectile) == 1

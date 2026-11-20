@@ -2067,6 +2067,33 @@
     "Portrait": "1236.png"
   },
   {
+    "SourceId": 1408,
+    "Identity": "FusionPlant.DoomPult",
+    "CanonicalName": "Doom-pult",
+    "English": {
+      "Name": "Doom-pult",
+      "Info": "Lobs a melon about every three seconds. On landing it explodes for 1,800 damage and leaves an ember crater that marks passing zombies.",
+      "Flavor": "",
+      "Notes": "Melons that land in water or in an existing crater explode in a smaller area for 100 damage. A Melon Pot expands this smaller blast.",
+      "Recipes": [
+        "Doom-shroom + Melon-pult"
+      ]
+    },
+    "German": {
+      "Name": "Unheilapult",
+      "Info": "Wirft etwa alle drei Sekunden eine Melone. Beim Aufprall explodiert sie für 1.800 Schaden und hinterlässt einen Glutkrater, der vorbeilaufende Zombies mit Glut belegt.",
+      "Flavor": "",
+      "Notes": "Melonen explodieren im Wasser oder in einem vorhandenen Krater in einem kleineren Bereich für 100 Schaden. Ein Melonentopf vergrößert diesen kleineren Bereich.",
+      "Recipes": [
+        "Unheilpilz + Melonapult"
+      ]
+    },
+    "Recipes": [
+      "Doom-shroom + Melon-pult"
+    ],
+    "Portrait": "1314.png"
+  },
+  {
     "SourceId": 1440,
     "Identity": "FusionPlant.DoomSpreader",
     "CanonicalName": "Doom-spreader",
@@ -2779,6 +2806,33 @@
       "Chomper + Ice-shroom"
     ],
     "Portrait": "1462.png"
+  },
+  {
+    "SourceId": 1182,
+    "Identity": "FusionPlant.FrostburnWood",
+    "CanonicalName": "Frostburn-wood",
+    "English": {
+      "Name": "Frostburn-wood",
+      "Info": "Turns passing Peas into Snow Peas and turns Snow Peas into Extreme Snow Peas with double damage and freeze buildup.",
+      "Flavor": "",
+      "Notes": "Extinguishes ordinary Fire Peas into 20-damage Peas.",
+      "Recipes": [
+        "Ice-shroom + Torchwood"
+      ]
+    },
+    "German": {
+      "Name": "Eisbrandholz",
+      "Info": "Wandelt vorbeifliegende Erbsen in Eis-Erbsen um. Eis-Erbsen werden zu Extrem-Eis-Erbsen mit doppeltem Schaden und doppeltem Gefrierwert.",
+      "Flavor": "",
+      "Notes": "Löscht gewöhnliche Feuererbsen. Die entstandenen Erbsen verursachen 20 Schaden.",
+      "Recipes": [
+        "Eispilz + Zunderholz"
+      ]
+    },
+    "Recipes": [
+      "Ice-shroom + Torchwood"
+    ],
+    "Portrait": "1053.png"
   },
   {
     "SourceId": 1212,

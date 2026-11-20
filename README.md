@@ -1,4 +1,6 @@
-# Fusion Mod 24.6.0
+# Fusion Mod 24.7.0
+
+Version 24.7.0 adds Frostburn-wood and Doom-pult in both recipe orders. Frostburn-wood turns Peas into Snow Peas, upgrades Snow Peas to stronger Polar shots and extinguishes Fire Peas. Doom-pult explodes on landing and leaves an ember crater. Landing on water or an existing crater produces a smaller blast, whose radius increases with Melon Pot support. Both plants reuse existing artwork. [Implementation notes](references/frost-doom-pair/implementation-notes.md) and [gameplay acceptance](references/frost-doom-pair/acceptance.json).
 
 Version 24.6.0 adds Lumos Angler and Starglow in both recipe orders. Lumos Angler digests faster in stronger light and draws a nearby zombie into its lane after swallowing. Starglow gains same-lane tracking, target-free firing, and lawn-wide tracking as the light rises. Both use existing plant models and portraits. [Implementation notes](references/light-pair/implementation-notes.md) and [gameplay acceptance](references/light-pair/acceptance.json).
 
@@ -2494,7 +2496,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **264 open recipes** with **206 result plants** in the format:
+`fusionen.txt` contains **262 open recipes** with **204 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2926,6 +2928,8 @@ Blover | Melon-pult | Fall Melon
 Blover | Squash | Squash Drone
 Chomper | Plantern | Lumos Angler
 Plantern | Starfruit | Starglow
+Doom-shroom | Melon-pult | Doom-pult
+Ice-shroom | Torchwood | Frostburn-wood
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

@@ -351,6 +351,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant SquashDrone = new(SeedType.Blover, SeedType.Squash);
     internal static readonly FusionPlant LumosAngler = new(SeedType.Chomper, SeedType.Plantern);
     internal static readonly FusionPlant Starglow = new(SeedType.Starfruit, SeedType.Plantern);
+    internal static readonly FusionPlant FrostburnWood = new(SeedType.Torchwood, SeedType.Iceshroom);
+    internal static readonly FusionPlant DoomPult = new(SeedType.Melonpult, SeedType.Doomshroom);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -505,7 +507,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == LettucePult || plant == ButternutPult || plant == GourdPult ||
         plant == SpringMelon || plant == MelonMorph || plant == KernelMorph ||
         plant == MetalPult || plant == DamagePult || plant == SolarPult ||
-        plant == BoltPult;
+        plant == BoltPult || plant == DoomPult;
 
     internal static bool IsEnergyNut(FusionPlant plant) =>
         plant == CabbageNut || plant == MelonNut;
@@ -684,7 +686,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == PepperPopper || plant == MadPepper || plant == Hoverleaf ||
         plant == DroneNut || plant == CactusDrone || plant == CherryDrone ||
         plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
-        plant == Starglow;
+        plant == Starglow || plant == FrostburnWood || plant == DoomPult;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1031,6 +1033,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Blover, SeedType.Squash) => SquashDrone,
             (SeedType.Chomper, SeedType.Plantern) => LumosAngler,
             (SeedType.Starfruit, SeedType.Plantern) => Starglow,
+            (SeedType.Torchwood, SeedType.Iceshroom) => FrostburnWood,
+            (SeedType.Melonpult, SeedType.Doomshroom) => DoomPult,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

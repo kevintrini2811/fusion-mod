@@ -1953,6 +1953,16 @@
       "available": true,
       "identity": "FusionPlant.Starglow",
       "evidence": "Registered with both recipe orders and light-dependent star targeting. See references/light-pair/implementation-notes.md."
+    },
+    "Frostburn-wood": {
+      "available": true,
+      "identity": "FusionPlant.FrostburnWood",
+      "evidence": "Registers both source recipe orders and shared projectile-conversion behavior. See references/frost-doom-pair/implementation-notes.md."
+    },
+    "Doom-pult": {
+      "available": true,
+      "identity": "FusionPlant.DoomPult",
+      "evidence": "Registers both source recipe orders and a landing explosion with ember craters. See references/frost-doom-pair/implementation-notes.md."
     }
   }
 }

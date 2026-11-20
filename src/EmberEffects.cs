@@ -23,7 +23,7 @@ internal static class EmberEffects
 
     internal static bool Has(Zombie zombie) => Find(zombie) != null;
 
-    internal static bool Apply(Zombie zombie)
+    internal static bool Apply(Zombie zombie, bool explode = true)
     {
         if (!ScaredContent.Playing(zombie.mBoard) || zombie.mDead || zombie.IsDeadOrDying()
             || zombie.mMindControlled || zombie.mZombieType is ZombieType.Boss or ZombieType.Gravestone or ZombieType.Target)
@@ -40,12 +40,13 @@ internal static class EmberEffects
                 item.mSunCount = Marker;
                 item.mSeedType = SeedType.Doomshroom;
                 item.mGridX = unchecked((int)zombie.DataID);
+                item.mGridY = 0;
                 item.mGridItemCounter = -1;
                 item.mX = item.mY = item.mPosX = item.mPosY = -1000;
             }
             catch { item.GridItemDie(); throw; }
         }
-        item.mGridY = 1; // Repeated bites refresh the flag; never stack bursts.
+        if (explode) item.mGridY = 1; // Repeated bites refresh the flag; never stack bursts.
         return true;
     }
 

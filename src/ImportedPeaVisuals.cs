@@ -497,6 +497,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.SquashDrone, "MiniSquashProjectile"),
         new(FusionPlant.LumosAngler, "SolarChomper"),
         new(FusionPlant.Starglow, "WinterStarfruit"),
+        new(FusionPlant.FrostburnWood, "Scorchwood"),
+        new(FusionPlant.DoomPult, "MelonMorph"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -2195,6 +2197,7 @@ internal static partial class ImportedPeaVisuals
                     if (effects.m_enableAdditiveColor) additive = effects.m_additiveColor;
                 }
             }
+            if (assets.Identity == FusionPlant.FrostburnWood) tint *= new Color(.65f, .87f, 1, 1);
             for (int i = 0; i < renderers.Length; ++i)
                 if (renderers[i] != null)
                 {

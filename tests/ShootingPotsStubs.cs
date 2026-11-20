@@ -174,6 +174,8 @@ namespace FusionMod
     internal static class ChomperFusions
     { internal static bool Active(Plant plant) => !plant.mDead && plant.mIsOnBoard && !plant.mSquished && !plant.OffGround && !plant.mBoard.mPaused; }
     internal static class ScaredyFusions { internal const float SourceUnit = 80f / 1.35f; }
+    internal static class DoomPult
+    { internal static void Shoot(Plant plant, Zombie? target) => throw new NotSupportedException(); }
     internal static class SquashFusions
     { internal static bool Eligible(Board board, Zombie zombie, DamageRangeFlags flags) => zombie.mBoard == board && !zombie.mDead && !zombie.mMindControlled; }
     internal static class PuffShooters { internal const float FlightHeight = 40; }

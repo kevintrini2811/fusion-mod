@@ -21,7 +21,7 @@ internal static class DoomEffects
 
     internal static void Damage(Board board, int row, float x, float y, int order, bool fire = false,
         int damage = 1800, bool global = false, int freezeTicks = 0, float radius = 5f / 1.35f * 80,
-        Action? confirmedKill = null, Func<bool>? ownsPayload = null)
+        Action? confirmedKill = null, Func<bool>? ownsPayload = null, bool showEffects = true)
     {
         if (fire) { ReactivePots.Fire(board, row); PumpkinSupport.FireEnergy(board, row, damage); }
         var range = DamageRangeFlags.Ground | DamageRangeFlags.Flying | DamageRangeFlags.Submerged
@@ -63,7 +63,7 @@ internal static class DoomEffects
                 && boardPointer != CherryBombPlants.DisposingBoard
                 && (zombie.mDead || zombie.IsDeadOrDying())) confirmedKill!();
         }
-        if (ownsPayload != null && !ownsPayload()) return;
+        if (!showEffects || ownsPayload != null && !ownsPayload()) return;
         if (fire) NativeCombatVisuals.Fire(board, row, order);
         else board.mApp.AddTodParticle(x, y, order, ParticleEffect.Doom);
         if (ownsPayload != null && !ownsPayload()) return;
