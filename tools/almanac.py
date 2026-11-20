@@ -15,6 +15,7 @@ from scared_content import merged_recipe_source, localized_source, content as sc
 REFERENCE = PROJECT / "references/fusion-almanac"
 OUTPUT = PROJECT / "assets/almanac"
 UPGRADES = "references/golden-bean-10-0-0/upgrades.json"
+PEPPER_PRESENTATION = "references/pepper-pair/presentation.json"
 
 
 def plain(text):
@@ -38,6 +39,20 @@ def text_hash(text):
     content = json.dumps({key:text[key] for key in TEXT_FIELDS}, ensure_ascii=False,
                          sort_keys=True, separators=(",", ":")).encode("utf-8")
     return hashlib.sha256(content).hexdigest()
+
+
+def apply_pepper_presentation(project, adaptations, german):
+    data = json.loads((project / PEPPER_PRESENTATION).read_text())
+    for source_id, entry in data.items():
+        adaptations[source_id] = entry["adaptation"]
+        german["Entries"][source_id] = entry["german"]
+
+
+def entry_portrait(source_id, adjustment):
+    image = adjustment.get("portrait", f"{source_id}.png")
+    if not isinstance(image, str) or not re.fullmatch(r"\d+\.png", image):
+        raise ValueError(f"Invalid embedded portrait reference for {source_id}: {image}")
+    return image
 
 
 def localized_texts(source_id, name, source, adjustment, german):
@@ -102,6 +117,7 @@ def check_catalog(project, rows, names, source):
         adaptations = json.loads((reference / "adaptations.json").read_text())
         german = json.loads((reference / "translations.de.json").read_text())
         localized_source(english_source, german, project)
+        apply_pepper_presentation(project, adaptations, german)
         adaptations[str(SOURCE_ID)] = scared_source(project)["adaptation"]
         localized_names = translation_names(rows, names, expected, ids, german)
         if len(entries) != len(expected) or {e["CanonicalName"] for e in entries} != set(expected):
@@ -137,7 +153,7 @@ def check_catalog(project, rows, names, source):
             if bool(english_texts["Notes"]) != bool(german_texts["Notes"]):
                 errors.append(f"Almanac translation is missing Replanted notes: {name}")
             image = entry["Portrait"]
-            if image != f'{entry["SourceId"]}.png' or not (output/image).is_file():
+            if image != entry_portrait(ids[name], adaptations.get(str(ids[name]), {})) or not (output/image).is_file():
                 errors.append(f"Missing or invalid almanac portrait: {name}")
         manifest = json.loads((reference / "export.json").read_text())
         actual = {p.name: sha256(p) for p in output.iterdir() if p.is_file()}
@@ -170,12 +186,13 @@ def export():
     german = {p["seedType"]: p for p in json.loads(de_path.read_text())["plants"]}
     translated_german = json.loads((REFERENCE / "translations.de.json").read_text())
     localized_source(english, translated_german)
+    adaptations = json.loads((REFERENCE / "adaptations.json").read_text())
+    apply_pepper_presentation(PROJECT, adaptations, translated_german)
     localized_names = translation_names(rows, names, results, ids, translated_german)
     original_path = SOURCE / "Mods/PvZ_Fusion_Translator/Dumps/LawnStrings.json"
     original = {p["seedType"]: p for p in json.loads(original_path.read_text())["plants"]}
     enum = {int(number): name for name, number in re.findall(
         r"(\w+) = (-?\d+)", (REFERENCE / "PlantType.cs").read_text())}
-    adaptations = json.loads((REFERENCE / "adaptations.json").read_text())
     adaptations[str(SOURCE_ID)] = scared_source()["adaptation"]
     enum[SOURCE_ID] = "BloodSunFlower"
     original[SOURCE_ID] = dict(description=scared_source()["original_english"])
@@ -199,8 +216,10 @@ def export():
         text = english[source_id]
         localized = german.get(source_id, text)
         adjustment = adaptations.get(str(source_id), {})
-        if source_id == SOURCE_ID:
-            image = f"{source_id}.png"
+        image = entry_portrait(source_id, adjustment)
+        if image != f"{source_id}.png":
+            portrait_proof = dict(source_id=source_id, reused_from=int(Path(image).stem))
+        elif source_id == SOURCE_ID:
             image_bytes[image], portrait_proof = portrait()
         else:
             alias = aliases.get(enum[source_id], {})
@@ -217,7 +236,6 @@ def export():
             from io import BytesIO
             png = BytesIO()
             sprite.image.save(png, format="PNG")
-            image = f"{source_id}.png"
             image_bytes[image] = png.getvalue()
             portrait_proof = dict(source_id=source_id, source_enum=enum[source_id], sprite_name=sprite.m_Name,
                 serialized_file=obj.assets_file.name, sprite_path_id=obj.path_id, texture_path_id=sprite.m_RD.texture.path_id)
@@ -232,6 +250,8 @@ def export():
         proof.append(portrait_proof)
         originals.append(dict(source_id=source_id, original=original[source_id],
                               english=text, german=localized))
+    if any(entry["Portrait"] not in image_bytes for entry in entries):
+        raise ValueError("A reused portrait must also belong to a catalog entry with its own portrait")
     # Finish resolving every source before writing the export.
     OUTPUT.mkdir(exist_ok=True)
     for name, content in image_bytes.items():
@@ -240,7 +260,7 @@ def export():
     (REFERENCE / "original-entries.json").write_text(json.dumps(originals, ensure_ascii=False, indent=2) + "\n")
     input_paths = [PROJECT/UPGRADES, en_path, de_path, REFERENCE/"translations.de.json", REFERENCE/"PlantType.cs", REFERENCE/"adaptations.json",
                    REFERENCE/"portrait-aliases.json", Path(__file__), PROJECT/CONTENT_PATH,
-                   PROJECT/"references/scared-2-12-0/portrait.png", PROJECT/"tools/scared_content.py"]
+                   PROJECT/"references/scared-2-12-0/portrait.png", PROJECT/"tools/scared_content.py", PROJECT/PEPPER_PRESENTATION]
     manifest = dict(bundle=str(BUNDLE), bundle_sha256=sha256(BUNDLE),
                     original_almanac=str(original_path), original_sha256=sha256(original_path),
                     source_assembly_sha256=sha256(SOURCE/"MelonLoader/Il2CppAssemblies/Assembly-CSharp.dll"),

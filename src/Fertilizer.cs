@@ -237,6 +237,7 @@ internal static class Fertilizer
             ChomperFusions.Fertilize(plant);
             GulperShroom.Fertilize(plant);
             MagnetFusions.Fertilize(plant);
+            PepperFusions.Fertilize(plant);
             EatingShrooms.Fertilize(plant);
             Spicicle.Fertilize(plant);
             PumpkinFusions.Fertilize(plant);

@@ -32,8 +32,10 @@ def validate(data):
         if not isinstance(data[section], list) or section == "plants" and not data[section]:
             raise ValueError(f"Expected nonempty plants and a reserved list: {section}")
         for row in data[section]:
-            if not isinstance(row, dict) or set(row) != {"name", "native", "marker"}:
-                raise ValueError(f"Expected name, native and marker in {section}")
+            identity_keys = {"name", "native", "marker"}
+            allowed_keys = identity_keys | {"model"} if section == "plants" else identity_keys
+            if not isinstance(row, dict) or not identity_keys <= row.keys() <= allowed_keys:
+                raise ValueError(f"Expected name, native and marker, with an optional plant model, in {section}")
             if any(not isinstance(value, str) or not re.fullmatch(r"[A-Z][A-Za-z0-9]*", value)
                    for value in row.values()):
                 raise ValueError(f"Invalid C# identifier: {row}")
@@ -48,6 +50,10 @@ def validate(data):
             pairs.add((native, marker))
             if section == "plants":
                 active.add(name)
+    embedded_models = {row["name"] for row in data["plants"] if "model" not in row}
+    for row in data["plants"]:
+        if "model" in row and (not isinstance(row["model"], str) or row["model"] not in embedded_models):
+            raise ValueError(f"Model must name a plant with its own resources: {row}")
     families = data["families"]
     if not isinstance(families, dict):
         raise ValueError("Expected a family dictionary")
@@ -135,7 +141,8 @@ def renderer_source(data, original):
         raise ValueError("Invalid generated renderer section")
     lines = [START, "    private static readonly Assets[] Models =", "    {"]
     for row in data["plants"]:
-        lines.append(f"        new(FusionPlant.{row['name']}, \"{row['name']}\"),")
+        model = row.get("model", row["name"])
+        lines.append(f'        new(FusionPlant.{row["name"]}, "{model}"),')
     lines.extend(["    };", END])
     newline = "\r\n" if "\r\n" in original else "\n"
     return original[:start] + newline.join(lines) + original[end + len(END):]

@@ -256,3 +256,12 @@ namespace LawnGlove {
         internal bool HandleBoardClick(Il2CppReloaded.Gameplay.Board board,int x,int y,int clicks,int player) => true;
     }
 }
+
+namespace FusionMod
+{
+    internal static class PepperFusions
+    {
+        internal static bool Rolling(Il2CppReloaded.Gameplay.Plant plant) => false;
+        internal static bool PopperImmune(Il2CppReloaded.Gameplay.Plant plant) => false;
+    }
+}

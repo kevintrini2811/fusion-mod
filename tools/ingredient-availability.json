@@ -1903,6 +1903,16 @@
       "available": true,
       "identity": "FusionPlant.LumosMagnet",
       "evidence": "MagnetFusions owns the source external-light ranges, digestion and local shock; original body/lightShine exported from prefab45021. Native Magnetshroom owns equipment transitions, item presentation and serialization. See references/magnet-pair-contract/report.md and references/lumos-magnet/implementation-notes.md; runtime acceptance pending."
+    },
+    "Pepper Popper": {
+      "available": true,
+      "identity": "FusionPlant.PepperPopper",
+      "evidence": "FusionMod recipe and behavior in src/PepperFusions.cs. Source and adaptation documented in references/pepper-pair/implementation-notes.md."
+    },
+    "M.A.D. Pepper": {
+      "available": true,
+      "identity": "FusionPlant.MadPepper",
+      "evidence": "FusionMod recipe and behavior in src/PepperFusions.cs. Source and adaptation documented in references/pepper-pair/implementation-notes.md."
     }
   }
 }

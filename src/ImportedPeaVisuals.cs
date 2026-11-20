@@ -487,6 +487,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.WeedSpreader, "WeedSpreader"),
         new(FusionPlant.MagnetBlover, "MagnetBlover"),
         new(FusionPlant.LumosMagnet, "LumosMagnet"),
+        new(FusionPlant.PepperPopper, "BellPepper"),
+        new(FusionPlant.MadPepper, "SolarFlare"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;

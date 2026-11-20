@@ -35,21 +35,22 @@ internal static class BucketController
         if (selected) { BucketPlants.MouseDown(board, x, y, 1, 0); return false; }
         int col = board.PixelToGridX(x, y), row = board.PixelToGridY(x, y);
         if (col < 0 || col >= 9 || row < 0 || row >= board.GetNumRows()) return true;
-        if (cursor.CursorType == CursorType.PlantFromBank)
-        {
-            var incoming = cursor.mType == SeedType.Imitater
-                ? new FusionPlant(cursor.mImitaterType) : new FusionPlant(cursor.mType, cursor.mImitaterType);
-            if ((int)incoming.NativeType < 0 || incoming.NativeType >= SeedType.NumSeedTypes) return true;
-            var target = board.GetPlantsOnLawn(col, row).NormalPlant;
-            // Planting, upgrades, coffee, repairs and recipes keep their normal
-            // confirm action even when a magnet owns usable metal on this tile.
-            if (FusionService.TryResolve(board, incoming, col, row, out var ingredient, out var result)
-                    && FusionService.CheckFusionPlacement(board, ingredient, result) == PlantingReason.Ok
-                || target != null && BucketPlants.CanFeed(target, incoming)
-                || FusionService.CheckNativePlacement(board, col, row, incoming.NativeType) == PlantingReason.Ok)
-                return true;
-        }
+        if (cursor.CursorType == CursorType.PlantFromBank && HasSeedAction(board, cursor, col, row)) return true;
         return !BucketPlants.TrySelect(board, x, y);
+    }
+
+    internal static bool HasSeedAction(Board board, CursorObject cursor, int col, int row)
+    {
+        var incoming = cursor.mType == SeedType.Imitater
+            ? new FusionPlant(cursor.mImitaterType) : new FusionPlant(cursor.mType, cursor.mImitaterType);
+        if ((int)incoming.NativeType < 0 || incoming.NativeType >= SeedType.NumSeedTypes) return true;
+        var target = board.GetPlantsOnLawn(col, row).NormalPlant;
+        // Keep native planting, upgrades, coffee, repairs and fusion confirm
+        // ahead of plant interactions when the gamepad holds a seed packet.
+        return FusionService.TryResolve(board, incoming, col, row, out var ingredient, out var result)
+                && FusionService.CheckFusionPlacement(board, ingredient, result) == PlantingReason.Ok
+            || target != null && BucketPlants.CanFeed(target, incoming)
+            || FusionService.CheckNativePlacement(board, col, row, incoming.NativeType) == PlantingReason.Ok;
     }
 
     internal static bool Cancel(GamepadCursorController controller)

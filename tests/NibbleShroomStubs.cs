@@ -173,3 +173,12 @@ namespace PlantLibrary {
     internal sealed record Definition(Identity Identity);
     internal static class Plants { internal static Definition? Find(Il2CppReloaded.Gameplay.Plant p) => null; }
 }
+
+namespace FusionMod
+{
+    internal static class PepperFusions
+    {
+        internal static bool Rolling(Il2CppReloaded.Gameplay.Plant plant) => false;
+        internal static bool PopperImmune(Il2CppReloaded.Gameplay.Plant plant) => false;
+    }
+}

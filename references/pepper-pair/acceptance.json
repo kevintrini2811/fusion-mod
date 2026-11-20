@@ -1,0 +1,37 @@
+{
+  "version": "24.2.0",
+  "base": "ba53df66b6870c67d136aee71d7a40ffcc365057",
+  "branch": "task/fusion-pair-20261120",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "0b421bdb4247b1aee9173edef9602cfe873ddc26329951965e8ee3213dd90857"
+  },
+  "testedCandidates": {
+    "recipesAndPepperPopper": "5d906b73c36a2f8a13a70cf960a3709dbf86fcfbc868ee890908e13c26c19558",
+    "madPepperAndController": "adada62308f8187eaeb2c9c3364f09c087db44e8f7db85a58e168ebebdad0701"
+  },
+  "versionChangeAfterRuntime": "Version metadata only. The final artifact was rebuilt after the gameplay test.",
+  "offline": {
+    "squish": 3367,
+    "queryScopes": 170,
+    "nibbleShroom": 88,
+    "bucketControllerBoundary": 133,
+    "registrationAndRecipeAvailability": "passed"
+  },
+  "runtime": {
+    "display": "DP-3",
+    "gamepad": "Debug Mod simulated controller",
+    "recipes": "Both orders for each recipe passed via Debug Mod plant.place.",
+    "pepperPopper": "Initial fuse 100, natural roll, freed origin, same-row hit and distant row unaffected.",
+    "madPepper": "Idle; A with selected unplantable Peashooter; same-lane plant destruction and other-lane plant retained; single crater; visible two Doom effects; five base 1800 hits resolved to 900 under Extreme.",
+    "restoration": "Each temporary candidate install was reversed, DP-3 and profile unchanged. Owned game process closed after the final test stop, exit code unavailable.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair/gameplay/final-controller/assessment.md"
+  },
+  "review": "Approved after scope, radius and controller checks.",
+  "limits": [
+    "An isolated 300-damage hit, exact one-second fuse, actual fertilizer application and full enemy-filter coverage were not observed in the short live tests.",
+    "Game Almanac was never opened or queried. One general offline check included bundled catalog and portrait validations before their scope was identified. That check was not repeated.",
+    "The plant packet implementation uses the native seed type. Source Nian and Odyssey-only effects have no equivalent here."
+  ]
+}

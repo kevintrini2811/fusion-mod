@@ -1664,6 +1664,18 @@
       "name": "LumosMagnet",
       "native": "Magnetshroom",
       "marker": "Plantern"
+    },
+    {
+      "name": "PepperPopper",
+      "native": "Jalapeno",
+      "marker": "Cherrybomb",
+      "model": "BellPepper"
+    },
+    {
+      "name": "MadPepper",
+      "native": "Jalapeno",
+      "marker": "Doomshroom",
+      "model": "SolarFlare"
     }
   ],
   "reserved": [],

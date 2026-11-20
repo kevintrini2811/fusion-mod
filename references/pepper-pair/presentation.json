@@ -1,0 +1,32 @@
+{
+  "1179": {
+    "adaptation": {
+      "info": "After one second, this pepper rolls down its row. Contact with a ground zombie creates a small cherry blast for 300 damage and pushes back any surviving contact target. The pepper ignores incoming damage. Fertilizer shortens the remaining fuse to at most half a second.",
+      "flavor": "",
+      "notes": "Uses the existing Bell Pepper artwork and Replanted cherry effects.",
+      "portrait": "1384.png"
+    },
+    "german": {
+      "Name": "Knallpaprika",
+      "Info": "Nach einer Sekunde rollt diese Paprika durch ihre Reihe. Beim Kontakt mit einem Bodenzombie löst sie eine kleine Kirsch-Explosion mit 300 Schaden aus und stößt das getroffene Ziel zurück, falls es überlebt. Die Paprika ignoriert erlittenen Schaden. Dünger verkürzt die Restzeit bis zum Losrollen auf höchstens eine halbe Sekunde.",
+      "Flavor": "",
+      "Notes": "Verwendet das vorhandene Bell-Pepper-Modell und die Kirscheffekte aus Replanted.",
+      "EnglishSha256": "3277f8014ad120200b6abf0581485ac598bdc791f169f8abcdc2c15883b27254"
+    }
+  },
+  "1317": {
+    "adaptation": {
+      "info": "Activate this pepper by clicking or confirming on its tile. It also detonates when crushed. Its fire and doom blasts each deal 1,800 ash damage. A doom blast leaves a crater on its own tile. Plants on other tiles in that row are destroyed and each occupied tile emits another doom blast. Each destroyed plant has a one-in-four chance to drop a free seed packet.",
+      "flavor": "",
+      "notes": "Uses the existing Solar Flare artwork. Dropped packets carry a plant's native seed type.",
+      "portrait": "1308.png"
+    },
+    "german": {
+      "Name": "M.A.D.-Paprika",
+      "Info": "Aktiviere diese Paprika per Klick oder Controller-Bestätigung auf ihrem Feld. Sie explodiert auch beim Zerquetschen. Feuer und Vernichtungsexplosionen verursachen jeweils 1.800 Ascheschaden. Eine Vernichtungsexplosion hinterlässt auf ihrem eigenen Feld einen Krater. Pflanzen auf anderen Feldern derselben Reihe werden zerstört und jedes besetzte Feld löst eine weitere Vernichtungsexplosion aus. Jede zerstörte Pflanze lässt mit einer Chance von eins zu vier eine kostenlose Saatgutkarte fallen.",
+      "Flavor": "",
+      "Notes": "Verwendet das vorhandene Solar-Flare-Modell. Heruntergefallene Karten enthalten den nativen Pflanzentyp.",
+      "EnglishSha256": "0dc20bbf243dc14df26fa035b7301e89ca7f3ce513b68480b698797332f693be"
+    }
+  }
+}

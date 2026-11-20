@@ -12,7 +12,7 @@ internal static class PuffJumperQueries
         for (int i = 0; i < board.m_plants.Count; ++i)
         {
             var plant = board.m_plants[i];
-            if (plant != null && plant.mBoard?.Pointer == board.Pointer && Squish.Airborne(plant)) hidden.Add(plant);
+            if (plant != null && plant.mBoard?.Pointer == board.Pointer && (Squish.Airborne(plant) || PepperFusions.Rolling(plant))) hidden.Add(plant);
         }
         return new(board, hidden);
     }

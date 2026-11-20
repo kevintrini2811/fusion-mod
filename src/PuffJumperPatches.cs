@@ -7,9 +7,11 @@ namespace FusionMod;
 // plant owns its action machine, saved fields, movement and animation phase.
 internal static class PuffJumpers
 {
-    internal static bool Retained(Plant plant) => NibbleShroom.Retained(plant) || Squish.Retained(plant);
+    internal static bool Retained(Plant plant) => NibbleShroom.Retained(plant) || Squish.Retained(plant)
+        || PepperFusions.Rolling(plant);
     internal static bool DamageImmune(Plant plant) => NibbleShroom.DamageImmune(plant)
-        || Squish.Airborne(plant) && ScaredContent.Playing(plant.mBoard) && !plant.mDead && !plant.mSquished;
+        || Squish.Airborne(plant) && ScaredContent.Playing(plant.mBoard) && !plant.mDead && !plant.mSquished
+        || PepperFusions.PopperImmune(plant);
     internal static bool PhysicalRetained(Plant plant) => !plant.mIsOnBoard
         && (NibbleShroom.Activated(plant) && NibbleShroom.Live(plant)
             || Squish.Retained(plant) && Squish.Live(plant) && !Squish.Airborne(plant));
@@ -120,7 +122,7 @@ internal static class PuffJumperProjectileCandidateBounds
         query.Candidate = null;
         if (!__runOriginal || !query.Valid || query.TopDepth != 0
             || query.Board.Pointer != __instance.mBoard?.Pointer) return;
-        if (Squish.Airborne(__instance))
+        if (Squish.Airborne(__instance) || PepperFusions.Rolling(__instance))
             __result = new UnityEngine.Rect(-100000, -100000, 0, 0);
         else if (PuffJumpers.PhysicalRetained(__instance))
         { query.Candidate = __instance; query.CandidateId = __instance.DataID; query.CandidateIdentity = FusionPlant.From(__instance); }

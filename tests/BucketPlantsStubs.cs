@@ -32,7 +32,7 @@ namespace Il2CppReloaded.Gameplay
     public enum ZombieType { Normal, TrafficCone, Pail, Boss, Zamboni, Catapult, Gargantuar, RedeyeGargantuar, Football }
     public class WidgetManager { public int[] LastMouseX=new[] { 0 }, LastMouseY=new[] { 0 }; }
     public class App { public Il2CppReloaded.Services.SoundSystem SoundSystem=new(); public WidgetManager WidgetManager=new(); public GameScenes GameScene; public GameMode GameMode; }
-    public class Cursor { public CursorType CursorType; public SeedType mType=SeedType.None,mImitaterType=SeedType.None; }
+    public class CursorObject { public CursorType CursorType; public SeedType mType=SeedType.None,mImitaterType=SeedType.None; }
     public class MagnetItem { public MagnetItemType ItemType; public float PosX, PosY; }
     public class Lawn { public Plant? NormalPlant,UnderPlant,PumpkinPlant,FlyingPlant; }
     public class Board
@@ -40,7 +40,7 @@ namespace Il2CppReloaded.Gameplay
         public bool Water; public bool IsPoolSquare(int col, int row) => Water;
         public IntPtr Pointer=(IntPtr)1;
         public App mApp=new(); public bool mPaused, FailCreation;
-        public Cursor mCursorObject=new(); public int mX,mY;
+        public CursorObject mCursorObject=new(); public int mX,mY;
         public List<Plant> m_plants=>Plants.Values.ToList();
         public List<Zombie> m_zombies=new(); public List<Projectile> m_projectiles=new();
         public GridItems m_gridItems=new(); public int Suns;
