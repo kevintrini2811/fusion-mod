@@ -924,6 +924,33 @@
     "Portrait": "1262.png"
   },
   {
+    "SourceId": 1082,
+    "Identity": "FusionPlant.CactusDrone",
+    "CanonicalName": "Cactus Drone",
+    "English": {
+      "Name": "Cactus Drone",
+      "Info": "Clears fog and blows away flying Balloon Zombies when planted. Fires two 30-damage air-only spikes down its lane per 1.5-second attack cycle.",
+      "Flavor": "",
+      "Notes": "It shares its tile with a ground plant. Fertilizer restores health. Its model and projectiles use existing cactus artwork.",
+      "Recipes": [
+        "Blover + Cactus"
+      ]
+    },
+    "German": {
+      "Name": "Kaktusdrohne",
+      "Info": "Vertreibt beim Pflanzen Nebel und fliegende Ballonzombies. Schießt je Angriffszyklus von 1,5 Sekunden zwei Stacheln mit je 30 Schaden in die eigene Reihe. Die Stacheln treffen Flugziele.",
+      "Flavor": "",
+      "Notes": "Teilt das Feld mit einer Bodenpflanze. Dünger heilt. Modell und Geschosse verwenden vorhandene Kakteengrafiken.",
+      "Recipes": [
+        "Wehblatt + Kaktee"
+      ]
+    },
+    "Recipes": [
+      "Blover + Cactus"
+    ],
+    "Portrait": "1488.png"
+  },
+  {
     "SourceId": 1438,
     "Identity": "FusionPlant.CaltropShroom",
     "CanonicalName": "Caltrop-shroom",
@@ -1057,6 +1084,33 @@
       "Cherry Bomb + Chomper"
     ],
     "Portrait": "1016.png"
+  },
+  {
+    "SourceId": 1244,
+    "Identity": "FusionPlant.CherryDrone",
+    "CanonicalName": "Cherry Drone",
+    "English": {
+      "Name": "Cherry Drone",
+      "Info": "Flies toward a zombie in its lane or an adjacent lane and triggers a 300-damage cherry blast within one tile of impact. It returns to its air slot after the strike and waits 15 seconds before attacking again.",
+      "Flavor": "",
+      "Notes": "Fertilizer restores health and caps the remaining attack cooldown at half a second. The airborne model is shared with the existing flying cherry.",
+      "Recipes": [
+        "Blover + Cherry Bomb"
+      ]
+    },
+    "German": {
+      "Name": "Kirschdrohne",
+      "Info": "Fliegt einen nahen Zombie in der eigenen oder einer benachbarten Reihe an. Am Treffpunkt löst sie eine Kirschexplosion mit 300 Schaden im Radius von einem Feld aus. Danach kehrt sie zu ihrem Luftfeld zurück und wartet 15 Sekunden bis zum nächsten Angriff.",
+      "Flavor": "",
+      "Notes": "Dünger heilt und verkürzt die verbleibende Wartezeit auf höchstens eine halbe Sekunde. Das Modell stammt von der vorhandenen fliegenden Kirsche.",
+      "Recipes": [
+        "Wehblatt + Kirschbombe"
+      ]
+    },
+    "Recipes": [
+      "Blover + Cherry Bomb"
+    ],
+    "Portrait": "1451.png"
   },
   {
     "SourceId": 1451,

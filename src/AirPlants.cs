@@ -11,6 +11,7 @@ internal static class AirPlants
         float dx = board.GridToPixelX(col, row) - board.GridToPixelX(plant.mPlantCol, plant.mRow);
         float dy = board.GridToPixelY(col, row) - board.GridToPixelY(plant.mPlantCol, plant.mRow);
         plant.mPlantCol = col; plant.mRow = row; plant.mX += dx; plant.mY += dy;
+        if (FusionPlant.From(plant) == FusionPlant.CherryDrone) AirRaidFusions.ResetFlight(plant);
         int order = plant.CalcRenderOrder();
         plant.mShadowRenderOrder += order - plant.mRenderOrder; plant.mRenderOrder = order;
         plant.UpdateReanim();

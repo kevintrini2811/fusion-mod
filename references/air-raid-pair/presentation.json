@@ -1,0 +1,32 @@
+{
+  "1082": {
+    "adaptation": {
+      "info": "Clears fog and blows away flying Balloon Zombies when planted. Fires two 30-damage air-only spikes down its lane per 1.5-second attack cycle.",
+      "flavor": "",
+      "notes": "It shares its tile with a ground plant. Fertilizer restores health. Its model and projectiles use existing cactus artwork.",
+      "portrait": "1488.png"
+    },
+    "german": {
+      "Name": "Kaktusdrohne",
+      "Info": "Vertreibt beim Pflanzen Nebel und fliegende Ballonzombies. Schießt je Angriffszyklus von 1,5 Sekunden zwei Stacheln mit je 30 Schaden in die eigene Reihe. Die Stacheln treffen Flugziele.",
+      "Flavor": "",
+      "Notes": "Teilt das Feld mit einer Bodenpflanze. Dünger heilt. Modell und Geschosse verwenden vorhandene Kakteengrafiken.",
+      "EnglishSha256": "eeb90d647f96b3fcab69092b56bbae786d73a9f2c0a0f8ecffa022cd6c5010f6"
+    }
+  },
+  "1244": {
+    "adaptation": {
+      "info": "Flies toward a zombie in its lane or an adjacent lane and triggers a 300-damage cherry blast within one tile of impact. It returns to its air slot after the strike and waits 15 seconds before attacking again.",
+      "flavor": "",
+      "notes": "Fertilizer restores health and caps the remaining attack cooldown at half a second. The airborne model is shared with the existing flying cherry.",
+      "portrait": "1451.png"
+    },
+    "german": {
+      "Name": "Kirschdrohne",
+      "Info": "Fliegt einen nahen Zombie in der eigenen oder einer benachbarten Reihe an. Am Treffpunkt löst sie eine Kirschexplosion mit 300 Schaden im Radius von einem Feld aus. Danach kehrt sie zu ihrem Luftfeld zurück und wartet 15 Sekunden bis zum nächsten Angriff.",
+      "Flavor": "",
+      "Notes": "Dünger heilt und verkürzt die verbleibende Wartezeit auf höchstens eine halbe Sekunde. Das Modell stammt von der vorhandenen fliegenden Kirsche.",
+      "EnglishSha256": "05fb3f62ac27351b34e5ea9fec7357fa04ea052a245aba209766035a5dd60553"
+    }
+  }
+}

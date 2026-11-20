@@ -7,12 +7,13 @@ namespace FusionMod;
 // damage and two previous handles are sufficient for at most three pierces.
 internal static class CactusProjectiles
 {
-    private const int Ice = -570100, Magnet = -570110, Doom = -570120, Light = -570130, StarMarker = -570140, LightSingle = -570150, Thorn = -570160, Ball = -570170;
+    private const int Ice = -570100, Magnet = -570110, Doom = -570120, Light = -570130, StarMarker = -570140, LightSingle = -570150, Thorn = -570160, Ball = -570170, Drone = -570180;
     internal static int Family(Projectile shot) => shot.mProjectileType == ProjectileType.Star && shot.mCobTargetX == StarMarker ? 5
         : shot.mProjectileType != ProjectileType.Spike ? 0
         : shot.mCobTargetX is <= Ice and >= Ice - 2 ? 1 : shot.mCobTargetX == Magnet ? 2
         : shot.mCobTargetX is <= Doom and >= Doom - 2 ? 3
-        : shot.mCobTargetX is <= Light and >= Light - 2 ? 4 : shot.mCobTargetX == LightSingle ? 6 : shot.mCobTargetX == Thorn ? 7 : shot.mCobTargetX == Ball ? 8 : 0;
+        : shot.mCobTargetX is <= Light and >= Light - 2 ? 4 : shot.mCobTargetX == LightSingle ? 6
+        : shot.mCobTargetX == Thorn ? 7 : shot.mCobTargetX == Ball ? 8 : shot.mCobTargetX == Drone ? 9 : 0;
     internal static int Remaining(Projectile shot) => Family(shot) switch
     { 1 => Ice - (int)shot.mCobTargetX + 1, 3 => Doom - (int)shot.mCobTargetX + 1,
         4 => Light - (int)shot.mCobTargetX + 1, _ => 1 };
@@ -24,14 +25,15 @@ internal static class CactusProjectiles
         var identity = FusionPlant.From(plant);
         bool ice = identity == FusionPlant.IceCactus, thorn = identity == FusionPlant.Thornweed;
         bool doom = identity == FusionPlant.DoomCactus, light = identity == FusionPlant.LumosCactus;
-        bool ball = identity == FusionPlant.BallCactus;
-        bool air = !ball && plant.mTargetX != 0;
+        bool ball = identity == FusionPlant.BallCactus, drone = identity == FusionPlant.CactusDrone;
+        bool air = drone || !ball && plant.mTargetX != 0;
         var shot = plant.mBoard.AddProjectile(plant.mX + plant.mWidth / 2f + (thorn ? 0 : 15),
-            thorn ? plant.mY + plant.mHeight - 10 : plant.mY + plant.mHeight / 2f - (air ? CactusFusions.Unit : 0),
+            thorn ? plant.mY + plant.mHeight - 10 : plant.mY + plant.mHeight / 2f
+                - (drone ? plant.mHeight * .52f : air ? CactusFusions.Unit : 0),
             plant.mRenderOrder + 1, plant.mRow, ProjectileType.Spike);
         if (shot == null || shot.mDead) return null;
-        shot.mCobTargetX = ball ? Ball : thorn ? Thorn : ice ? Ice - 2 : doom ? Doom - 2 : light ? (PumpkinFusions.LightLevel(plant) >= 1 ? Light - 2 : LightSingle) : Magnet;
-        shot.mCobTargetRow = ball ? 30 : ice || thorn ? 20 : light ? 30 : 40;
+        shot.mCobTargetX = drone ? Drone : ball ? Ball : thorn ? Thorn : ice ? Ice - 2 : doom ? Doom - 2 : light ? (PumpkinFusions.LightLevel(plant) >= 1 ? Light - 2 : LightSingle) : Magnet;
+        shot.mCobTargetRow = ball || drone ? 30 : ice || thorn ? 20 : light ? 30 : 40;
         shot.mTargetZombieID = 0;
         shot.mHitTorchwoodGridX = 0;
         shot.mMotionType = ProjectileMotion.Star;
@@ -181,6 +183,7 @@ internal static class CactusProjectiles
         }
         else board.mApp.AddTodParticle(x, y, order,
             family == 1 ? ParticleEffect.SnowpeaSplat : ParticleEffect.PeaSplat);
+        if (family == 9) PlantLibrary.Projectiles.PlaySound("fusion:" + Il2CppReloaded.Services.FoleyType.Splat, board);
         return true;
     }
 }

@@ -491,6 +491,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.MadPepper, "SolarFlare"),
         new(FusionPlant.Hoverleaf, "UmbrellaCap"),
         new(FusionPlant.DroneNut, "FrostWallNut"),
+        new(FusionPlant.CactusDrone, "BallCactus"),
+        new(FusionPlant.CherryDrone, "CherryDroneProjectile"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -866,6 +868,7 @@ internal static partial class ImportedPeaVisuals
         private readonly MaterialPropertyBlock colorEffects = new();
         private Model model => assets.model!;
         private GameObject? root;
+        private Vector3 cherryDroneHome;
         private Vector3 doomGround;
         private SortingGroup? sorting;
         private Renderer? native;
@@ -1033,13 +1036,14 @@ internal static partial class ImportedPeaVisuals
             // DoomSeed is a small spawned spore, not a full-size Doom-shroom.
             // Keep its wrapper scale stable; only its source root grows later.
             if (assets.Identity == FusionPlant.DoomSeed) scale *= .5f;
-            bool airDefense = AirDefenses.Owns(assets.Identity);
-            if (airDefense) scale *= .68f;
+            bool airUtility = AirDefenses.Owns(assets.Identity) || AirRaidFusions.Owns(assets.Identity);
+            if (airUtility) scale *= .68f;
             if (!float.IsFinite(scale) || scale <= 0)
                 throw new InvalidDataException($"Original {assets.Name} artwork has an invalid scale.");
             root.transform.localScale = Vector3.one * scale;
             root.transform.localPosition = new Vector3(target.center.x - bounds.center.x * scale,
-                target.min.y - bounds.min.y * scale + (airDefense && !preview ? plantSize * .52f : 0), 0);
+                target.min.y - bounds.min.y * scale + (airUtility && !preview ? plantSize * .52f : 0), 0);
+            if (assets.Identity == FusionPlant.CherryDrone) cherryDroneHome = root.transform.localPosition;
             if (assets.Identity == FusionPlant.DoomSeed)
             {
                 var ground = renderers[data.GroundNode]!;
@@ -1144,6 +1148,11 @@ internal static partial class ImportedPeaVisuals
             sorting!.sortingLayerID = native.sortingLayerID;
             sorting.sortingOrder = native.sortingOrder;
             if (!visible) return;
+            if (!preview && assets.Identity == FusionPlant.CherryDrone)
+            {
+                var offset = AirRaidFusions.FlightOffset(Plant);
+                root.transform.localPosition = cherryDroneHome + new Vector3(offset.x, -offset.y, 0) * 2.82f;
+            }
             float? shoot = null;
             if (!preview && !FusionPlant.IsMine(assets.Identity) && model.Clips.ContainsKey("shoot"))
             {
@@ -1562,6 +1571,12 @@ internal static partial class ImportedPeaVisuals
                 baseClip = "block";
                 baseTime = Math.Min((AirDefenses.BlockTicks - Plant.mShootingCounter) * .01f,
                     model.Clips[baseClip].Duration - .00001f);
+            }
+            if (!preview && assets.Identity == FusionPlant.CactusDrone && Plant.mShootingCounter > 0)
+            {
+                shoot = null;
+                baseClip = "shoot";
+                baseTime = (AirRaidFusions.CactusShootTicks - Plant.mShootingCounter) * .01f;
             }
             if (!preview && FusionPlant.IsContactUmbrella(assets.Identity))
             {

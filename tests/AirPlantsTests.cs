@@ -44,4 +44,10 @@ Check(!Target(new Plant {SquishAirborne=true}),"exact airborne Squish excluded b
 Check(Target(new Plant()),"ordinary plants and landed Squish keep native target result");
 Check(!Target(new Plant(),false),"native target rejection preserved");
 Check(!Target(air),"permanent air target semantics preserved");
+var cherry = new Plant { mSeedType = SeedType.Blover, Cherry = true, mPlantCol = 2, mRow = 2 };
+AirPlants.Move(board, cherry, 3, 3);
+Check(cherry.FlightReset && cherry.mPlantCol == 3 && cherry.mRow == 3,
+    "Cherry Drone relocation resets its attack at the new air slot");
+AirPlants.Move(board, air, 4, 3);
+Check(!air.FlightReset, "Cherry Drone relocation preserves other air variants");
 Console.WriteLine("Air placement and target checks passed.");

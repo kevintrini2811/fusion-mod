@@ -1923,6 +1923,16 @@
       "available": true,
       "identity": "FusionPlant.DroneNut",
       "evidence": "FusionMod recipe, air layer and abilities in src/AirDefenses.cs. REA source and limitations in references/air-defense-pair/implementation-notes.md."
+    },
+    "Cactus Drone": {
+      "available": true,
+      "identity": "FusionPlant.CactusDrone",
+      "evidence": "Registered in the Fusion Mod with native identities, both recipe directions, shared air placement and source ability in src/AirRaidFusions.cs."
+    },
+    "Cherry Drone": {
+      "available": true,
+      "identity": "FusionPlant.CherryDrone",
+      "evidence": "Registered in the Fusion Mod with native identities, both recipe directions, shared air placement and source ability in src/AirRaidFusions.cs."
     }
   }
 }

@@ -1,0 +1,33 @@
+{
+  "version": "24.4.0",
+  "base": "3f671c1f40f3c9bfa1537e0d59fe20ff2ec66358",
+  "branch": "task/fusion-pair-20261120-03",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "70e03d3f026ff662af5df1616d4f888b5a4699248d0170446e2570ef3ae85b4b"
+  },
+  "testedCandidate": "a351904e8d129c76a170bc403c040fe1b628c82d11dece2748b58be9f32b12d2",
+  "versionChangeAfterRuntime": "Version metadata only. The final artifact was rebuilt after gameplay acceptance.",
+  "offline": {
+    "targetedStrictRecipesAndRegistrations": "passed",
+    "registrationToolTests": 11,
+    "airPlacementHarness": "passed, including Cherry Drone relocation and the existing air variants",
+    "starAndPumpkinHarness": "passed"
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both orders for both fusions passed via Debug Mod plant.place. Each result shared its air tile with a Sunflower.",
+    "visuals": "The active-board screenshot and renderer snapshots show both airborne models.",
+    "cactusDrone": "The first Balloon disappeared on activation and the fog countdown renewed. Two distinct air-only spikes carried 30 base damage. A later Balloon reached BalloonPopping after 15 applied damage in Extreme. A ground Normal zombie remained at 10000 HP.",
+    "cherryDrone": "A nonzero flight offset, 300 base damage, 150 applied damage in Extreme, and the 1376-tick sampled cooldown were observed. Fertilizer healed from 100 to 300 and capped the cooldown at 50. Another 150-damage hit followed within 114 board ticks.",
+    "restoration": "The temporary install returned to the 24.3.0 digest. DP-3 configuration, test profile and profile-selection hashes matched the baseline. The owned process exited via normal shutdown and the Steam exit code was unavailable.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-03/gameplay/assessment.md"
+  },
+  "review": "Approved.",
+  "limits": [
+    "The live scenarios used a Day board. The first sampled Cherry Drone offset already followed the first impact. Continuous pre-impact movement, exact impact ticks and a save/load roundtrip were outside this run.",
+    "Cactus Drone uses the existing Ball Cactus model. Shot spacing inside its two-shot salvo is a port choice.",
+    "The game Almanac and offline Almanac catalog, portrait and image validations were excluded."
+  ]
+}

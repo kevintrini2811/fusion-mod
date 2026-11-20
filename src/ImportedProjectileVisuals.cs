@@ -51,7 +51,7 @@ internal static partial class ImportedPeaVisuals
         var assets = CactusProjectiles.Family(projectile) switch
         { 1 => IceCactusProjectileAssets, 2 => MagnetCactusProjectileAssets, 3 => DoomCactusProjectileAssets,
             4 => LightPierceProjectileAssets, 6 => LightSpikeProjectileAssets,
-            5 => CactusStarProjectileAssets, 7 => CactusSpikeProjectileAssets, 8 => CactusSpikeProjectileAssets, _ => null };
+            5 => CactusStarProjectileAssets, 7 or 8 or 9 => CactusSpikeProjectileAssets, _ => null };
         if (assets == null) return;
         RegisterProjectile(projectile, assets);
     }
@@ -451,7 +451,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == DoomCactusProjectileAssets ? CactusProjectiles.Family(projectile) == 3
                 : assets == LightPierceProjectileAssets ? CactusProjectiles.Family(projectile) == 4
                 : assets == LightSpikeProjectileAssets ? CactusProjectiles.Family(projectile) == 6
-                : assets == CactusSpikeProjectileAssets ? CactusProjectiles.Family(projectile) is 7 or 8
+                : assets == CactusSpikeProjectileAssets ? CactusProjectiles.Family(projectile) is 7 or 8 or 9
                 : assets == CactusStarProjectileAssets ? CactusProjectiles.Family(projectile) == 5
                 : assets == IceCactusProjectileAssets ? CactusProjectiles.Family(projectile) == 1
                 : assets == MagnetCactusProjectileAssets ? CactusProjectiles.Family(projectile) == 2

@@ -18,6 +18,7 @@ UPGRADES = "references/golden-bean-10-0-0/upgrades.json"
 PRESENTATION_FILES = (
     "references/pepper-pair/presentation.json",
     "references/air-defense-pair/presentation.json",
+    "references/air-raid-pair/presentation.json",
 )
 
 

@@ -1688,6 +1688,18 @@
       "native": "Blover",
       "marker": "Wallnut",
       "model": "FrostWallNut"
+    },
+    {
+      "name": "CactusDrone",
+      "native": "Blover",
+      "marker": "Cactus",
+      "model": "BallCactus"
+    },
+    {
+      "name": "CherryDrone",
+      "native": "Blover",
+      "marker": "Cherrybomb",
+      "model": "CherryDroneProjectile"
     }
   ],
   "reserved": [],

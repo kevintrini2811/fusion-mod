@@ -51,9 +51,12 @@ def validate(data):
             if section == "plants":
                 active.add(name)
     embedded_models = {row["name"] for row in data["plants"] if "model" not in row}
+    # The cherry drone also appears as a traveling projectile. Both views
+    # use the model already embedded under that resource name.
+    embedded_models.add("CherryDroneProjectile")
     for row in data["plants"]:
         if "model" in row and (not isinstance(row["model"], str) or row["model"] not in embedded_models):
-            raise ValueError(f"Model must name a plant with its own resources: {row}")
+            raise ValueError(f"Model must name an embedded plant or shared resource: {row}")
     families = data["families"]
     if not isinstance(families, dict):
         raise ValueError("Expected a family dictionary")

@@ -345,6 +345,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant MadPepper = new(SeedType.Jalapeno, SeedType.Doomshroom);
     internal static readonly FusionPlant Hoverleaf = new(SeedType.Blover, SeedType.Umbrella);
     internal static readonly FusionPlant DroneNut = new(SeedType.Blover, SeedType.Wallnut);
+    internal static readonly FusionPlant CactusDrone = new(SeedType.Blover, SeedType.Cactus);
+    internal static readonly FusionPlant CherryDrone = new(SeedType.Blover, SeedType.Cherrybomb);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -675,7 +677,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == NibbleShroom || plant == Squish || plant == GulperShroom ||
         plant == WeedSpreader || plant == MagnetBlover || plant == LumosMagnet ||
         plant == PepperPopper || plant == MadPepper || plant == Hoverleaf ||
-        plant == DroneNut;
+        plant == DroneNut || plant == CactusDrone || plant == CherryDrone;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1016,6 +1018,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Jalapeno, SeedType.Doomshroom) => MadPepper,
             (SeedType.Blover, SeedType.Umbrella) => Hoverleaf,
             (SeedType.Blover, SeedType.Wallnut) => DroneNut,
+            (SeedType.Blover, SeedType.Cactus) => CactusDrone,
+            (SeedType.Blover, SeedType.Cherrybomb) => CherryDrone,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

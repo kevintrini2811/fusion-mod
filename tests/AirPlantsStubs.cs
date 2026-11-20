@@ -15,7 +15,7 @@ namespace Il2CppReloaded.Gameplay
         public IntPtr Pointer = (IntPtr)(++next);
         public SeedType mSeedType;
         public bool SquishAirborne;
-        public bool Camo, Fly, mDead, mIsOnBoard = true;
+        public bool Camo, Fly, Cherry, FlightReset, mDead, mIsOnBoard = true;
         public int mPlantCol, mRow, mRenderOrder, mShadowRenderOrder;
         public float mX, mY;
         public static bool IsFlying(SeedType type) => type == SeedType.InstantCoffee;
@@ -52,12 +52,17 @@ namespace LawnGlove
 namespace FusionMod
 {
     internal static class Squish { internal static bool Airborne(Plant p) => p.SquishAirborne; }
-    internal readonly record struct FusionPlant(SeedType Type, bool Camo = false, bool Fly = false)
+    internal static class AirRaidFusions
+    {
+        internal static void ResetFlight(Plant plant) => plant.FlightReset = true;
+    }
+    internal readonly record struct FusionPlant(SeedType Type, bool Camo = false, bool Fly = false, bool Cherry = false)
     {
         internal SeedType NativeType => Type;
         internal static FusionPlant CamoShroom = new(SeedType.Scaredyshroom, true);
         internal static FusionPlant Flytrapper = new(SeedType.Chomper, false, true);
-        internal static FusionPlant From(Plant plant) => new(plant.mSeedType, plant.Camo, plant.Fly);
+        internal static FusionPlant CherryDrone = new(SeedType.Blover, Cherry: true);
+        internal static FusionPlant From(Plant plant) => new(plant.mSeedType, plant.Camo, plant.Fly, plant.Cherry);
         public static implicit operator FusionPlant(SeedType type) => new(type);
     }
     internal static class ShroomSlots
