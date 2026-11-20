@@ -1,4 +1,6 @@
-# Fusion Mod 24.7.0
+# Fusion Mod 24.8.0
+
+Version 24.8.0 adds Bombrella and Levitater in both recipe orders. Bombrella repels nearby zombies with small cherry explosions and uses charges from cherry healing to protect nearby plants. Levitater hovers above a ground plant and replants a mine that detonates on enemy contact. Its replanting cooldown is 15 seconds. Both plants reuse existing artwork. [Implementation notes](references/umbrella-mine-pair/implementation-notes.md) and [gameplay acceptance](references/umbrella-mine-pair/acceptance.json).
 
 Version 24.7.0 adds Frostburn-wood and Doom-pult in both recipe orders. Frostburn-wood turns Peas into Snow Peas, upgrades Snow Peas to stronger Polar shots and extinguishes Fire Peas. Doom-pult explodes on landing and leaves an ember crater. Landing on water or an existing crater produces a smaller blast, whose radius increases with Melon Pot support. Both plants reuse existing artwork. [Implementation notes](references/frost-doom-pair/implementation-notes.md) and [gameplay acceptance](references/frost-doom-pair/acceptance.json).
 
@@ -2496,7 +2498,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **262 open recipes** with **204 result plants** in the format:
+`fusionen.txt` contains **260 open recipes** with **202 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2930,6 +2932,8 @@ Chomper | Plantern | Lumos Angler
 Plantern | Starfruit | Starglow
 Doom-shroom | Melon-pult | Doom-pult
 Ice-shroom | Torchwood | Frostburn-wood
+Blover | Potato Mine | Levitater
+Cherry Bomb | Umbrella Leaf | Bombrella
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

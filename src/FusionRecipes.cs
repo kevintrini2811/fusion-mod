@@ -18,6 +18,8 @@ internal static class FusionRecipes
         [(SeedType.Blover, SeedType.Cactus)] = FusionPlant.CactusDrone,
         [(SeedType.Blover, SeedType.Cherrybomb)] = FusionPlant.CherryDrone,
         [(SeedType.Blover, SeedType.Umbrella)] = FusionPlant.Hoverleaf,
+        [(SeedType.Blover, SeedType.Potatomine)] = FusionPlant.Levitater,
+        [(SeedType.Cherrybomb, SeedType.Umbrella)] = FusionPlant.Bombrella,
         [(SeedType.Blover, SeedType.Wallnut)] = FusionPlant.DroneNut,
         [(SeedType.Cherrybomb, SeedType.Jalapeno)] = FusionPlant.PepperPopper,
         [(SeedType.Doomshroom, SeedType.Jalapeno)] = FusionPlant.MadPepper,

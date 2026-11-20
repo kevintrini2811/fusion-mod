@@ -200,7 +200,12 @@ internal static class PumpkinFusions
             if (shell == null || FusionPlant.From(shell) != FusionPlant.CherryPumpkin
                 || !ChomperFusions.Active(shell) || Math.Abs(shell.mRow - row) > 1) continue;
             float dx = shell.mX + shell.mWidth / 2f - x, dy = shell.mY + shell.mHeight / 2f - y;
-            if (dx * dx + dy * dy <= radius * radius) ReactivePots.Heal(shell, 200);
+            if (dx * dx + dy * dy <= radius * radius)
+            {
+                int previousHealth = shell.mPlantHealth;
+                ReactivePots.Heal(shell, 200);
+                Bombrella.ChargeFromCherryHeal(shell, previousHealth);
+            }
         }
     }
 
@@ -222,7 +227,9 @@ internal static class PumpkinFusions
         }
         if (first == null) return false;
         shot.Die();
+        int healthBefore = first.mPlantHealth;
         ReactivePots.Heal(first, 200);
+        Bombrella.ChargeFromCherryHeal(first, healthBefore);
         return true;
     }
 

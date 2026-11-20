@@ -204,7 +204,7 @@ namespace FusionMod
     }
 }
 
-namespace Il2CppReloaded.Services { public enum FoleyType { Explosion, Splat } public sealed class SoundSystem { public void PlayFoley(FoleyType type) {} } }
+namespace Il2CppReloaded.Services { public enum FoleyType { Explosion, Splat, Umbrella } public sealed class SoundSystem { public void PlayFoley(FoleyType type) {} } }
 namespace Il2CppSource.Controllers {
     public enum CharacterAnimationTrack { Body }
     public sealed class PlantController { public void SetLoopCount(int count, CharacterAnimationTrack track) {} }

@@ -8,7 +8,8 @@ internal static class AirDefenses
     internal const int BlockTicks = 84;
     internal const int RecoveryDelay = 1002;
 
-    internal static bool Owns(FusionPlant identity) => identity == FusionPlant.Hoverleaf || identity == FusionPlant.DroneNut;
+    internal static bool Owns(FusionPlant identity) => identity == FusionPlant.Hoverleaf
+        || identity == FusionPlant.DroneNut || identity == FusionPlant.Levitater;
     internal static bool IsDrone(Plant plant) => FusionPlant.From(plant) == FusionPlant.DroneNut;
 
     internal static void Initialize(Plant plant, FusionPlant identity)
@@ -26,6 +27,7 @@ internal static class AirDefenses
             return;
         }
         if (plant.mLaunchCounter > 0 && --plant.mLaunchCounter > 0) return;
+        if (identity == FusionPlant.Levitater) return;
         if (plant.mPlantHealth >= plant.mPlantMaxHealth) return;
         // The source waits strictly more than ten seconds, then restores one
         // health per 20 ms. Both countdowns stay in saved source ticks.

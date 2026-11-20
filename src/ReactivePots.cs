@@ -113,7 +113,9 @@ internal static class ReactivePots
         foreach (var pot in pots)
             foreach (var plant in Cell(board, pot.mPlantCol, pot.mRow).ToArray())
             {
+                int previousHealth = plant.mPlantHealth;
                 Heal(plant, 20);
+                Bombrella.ChargeFromCherryHeal(plant, previousHealth);
                 if (!CherryShooter(FusionPlant.From(plant))) continue;
                 var effect = Effects(board, plant.DataID, SeedType.Cherrybomb).FirstOrDefault();
                 // CherryFastShoot replaces its existing effect: refresh, never stack.

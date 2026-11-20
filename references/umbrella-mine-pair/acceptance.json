@@ -1,0 +1,47 @@
+{
+  "version": "24.8.0",
+  "base": "581b72105505262a928c2e3553bb67e852075dc8",
+  "branch": "task/fusion-pair-20261120-07",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "4da0217f9c3a3a676e1dcf9e19ece10569c02ddc8fc57e53c57d37a61701e354"
+  },
+  "testedCandidate": "2712475186a9ca926d7f4c01cfaad6ea58fc7b21a8ccb95030e529ea2d3c6f73",
+  "earlierCandidate": "750ed3690efccc3b0cb5c0739670db4af8d6e55d89a8ce56cf26c0277afa672e",
+  "versionChangeAfterRuntime": "The release updates version metadata after the approved gameplay candidate.",
+  "offline": {
+    "registrationToolTests": 11,
+    "registrationsAndTargetedStrictRecipes": "passed",
+    "umbrellaShellChecks": 62,
+    "defensivePotChecks": 99,
+    "fumeFusionChecks": 13469,
+    "iceInstantChecks": 94,
+    "starFusionHarness": "passed"
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both source ingredient orders produced each intended identity on Day. Both world models were visible.",
+    "bombrellaBlast": "Bombrella started at 600 HP, spent 100 HP repelling one zombie, moved that zombie from x 280 to 398.52, and dealt 150 damage on Extreme. Retested with the corrected 1.5-source-unit radius.",
+    "bombrellaHealing": "Full-health Cherry-nut yielded zero charges. Actual healing granted one charge per recipient. Five blasts healing two plants each yielded ten charges.",
+    "bombrellaProtection": "A ZombiePea consumed two charges and left the Cherry-nut at 1200 HP. A sampled stretch of ordinary bites consumed four charges with the Cherry-nut still at 1200 HP.",
+    "levitater": "A native mine under Levitater ripened and detonated on contact. The replacement had a new ID, Notready state, 300 HP, and 1498 ticks until arming. Levitater recharged with 1498 of 1500 source ticks remaining. Direct API removal at zero cooldown left the tile without a replacement mine.",
+    "restoration": "All three runs restored the baseline SHA-256, checked profile hashes and DP-3. All owned processes were absent after testing.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-07/gameplay/assessment.md",
+    "evidence": {
+      "blast": "bite-v2/0009-check.json",
+      "fullHealth": "0042-check.json",
+      "projectileGuard": "followup/0083-guard-result.json",
+      "biteGuard": "bite-v2/0235-bite-result.json",
+      "nativeMineRearm": "followup/0361-mine-rearmed.json"
+    }
+  },
+  "review": "Approved after the actual-healing guard and radius correction.",
+  "test": "Approved.",
+  "limits": [
+    "The blast radius has source and review evidence. The runtime fixture observed the direct target without isolating an outer boundary.",
+    "The mine fixture observed contact detonation and direct Debug API removal. Native shovel and the managed mine variants were outside the focused gameplay sample.",
+    "The first bite fixture included unprotected follow-up bites before observation. The later multi-charge fixture preserved full target health while charges were spent.",
+    "The gameplay fixtures used temporary Day boards and existing artwork. Almanac, fertilizer and save/load were outside the test scope."
+  ]
+}

@@ -19,6 +19,7 @@
     <Compile Include="../src/PotBoosts.cs" />
     <Compile Include="../src/MelonPot.cs" />
     <Compile Include="../src/SpikePot.cs" />
+    <Compile Include="BombrellaStubs.cs" />
   </ItemGroup>
   <Import Project="Adapters/FusionIdentity.projitems" />
 </Project>

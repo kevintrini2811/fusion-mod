@@ -28,7 +28,7 @@ internal static class ReactiveFumeDamage
             if (Applied || !Valid || Plant.mPlantHealth >= Health) return;
             Applied = true;
             int damage = Health - Plant.mPlantHealth;
-            if (Invulnerable(Plant)) { Plant.mPlantHealth = Health; return; }
+            if (Invulnerable(Plant) || Bombrella.TryProtect(Plant)) { Plant.mPlantHealth = Health; return; }
             damage = LumosEnergy.Absorb(Plant, PlantShields.Absorb(Plant, damage));
             Plant.mPlantHealth = Health - damage;
             if (damage == 0) return;
@@ -50,7 +50,8 @@ internal static class ReactiveFumeDamage
     [ThreadStatic] internal static List<Hit>? Current;
     internal static Hit? Capture(Plant plant, bool bite) =>
         ((FumeSupport.Reactive(FusionPlant.From(plant)) || FusionPlant.From(plant) == FusionPlant.PumpkinMine || Invulnerable(plant)) && FumeFusions.Active(plant)
-            || Spicicle.Guard(plant) != null || PlantShields.Amount(plant) > 0 || FusionPlant.From(plant) == FusionPlant.LumosUmbrella && FumeFusions.Active(plant)) && plant.mPlantHealth > 0 ? new(plant, bite) : null;
+            || Spicicle.Guard(plant) != null || PlantShields.Amount(plant) > 0 || FusionPlant.From(plant) == FusionPlant.LumosUmbrella && FumeFusions.Active(plant)
+            || Bombrella.Guard(plant) != null) && plant.mPlantHealth > 0 ? new(plant, bite) : null;
     internal static void Apply(List<Hit>? hits)
     { if (hits != null) foreach (var hit in hits) hit.Apply(); }
 }
@@ -99,6 +100,14 @@ internal static class ReactiveFumeDeathPatch
     private static bool Prefix(Plant __instance, bool __runOriginal)
     {
         if (!__runOriginal) return true;
+        var board = __instance.mBoard;
+        if (board != null && __instance.mPlantHealth > 0
+            && (RetaliationNuts.RadiusBoard == board.Pointer || RetaliationNuts.FireBoard == board.Pointer)
+            && PlayerPlantingScope.ConsumingIngredient != __instance.Pointer && Bombrella.TryProtect(__instance))
+        {
+            --board.mPlantsEaten;
+            return false;
+        }
         if (ReactiveFumeDamage.Invulnerable(__instance)
             && (RetaliationNuts.RadiusBoard == __instance.mBoard?.Pointer
                 || RetaliationNuts.FireBoard == __instance.mBoard?.Pointer)

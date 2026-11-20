@@ -28,6 +28,7 @@
     <Compile Include="../src/FusionRecipes.cs" />
     <Compile Include="FumeFusionsStubs.cs" />
     <Compile Include="FumeFusionsTests.cs" />
+    <Compile Include="BombrellaStubs.cs" />
   </ItemGroup>
   <Import Project="Adapters/FusionIdentity.projitems" />
   <Import Project="Adapters/MetalArmor.projitems" />

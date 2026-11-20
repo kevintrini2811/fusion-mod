@@ -499,6 +499,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Starglow, "WinterStarfruit"),
         new(FusionPlant.FrostburnWood, "Scorchwood"),
         new(FusionPlant.DoomPult, "MelonMorph"),
+        new(FusionPlant.Bombrella, "UmbrellaHusk"),
+        new(FusionPlant.Levitater, "PeatatoMine"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -1602,6 +1604,7 @@ internal static partial class ImportedPeaVisuals
                         .GetAnimationPercentOnTrack(CharacterAnimationTrack.Body), 0, .99999f);
                 }
             }
+            if (assets.Identity == FusionPlant.Levitater) baseClip = "armed";
             if (FusionPlant.IsMine(assets.Identity) && assets.Identity != FusionPlant.ChipMine && assets.Identity != FusionPlant.LandMine && assets.Identity != FusionPlant.SeaMine)
             {
                 baseClip = assets.Identity == FusionPlant.MineNut || (!preview && Plant.mState == PlantState.PotatoArmed)
@@ -2198,6 +2201,7 @@ internal static partial class ImportedPeaVisuals
                 }
             }
             if (assets.Identity == FusionPlant.FrostburnWood) tint *= new Color(.65f, .87f, 1, 1);
+            if (assets.Identity == FusionPlant.Bombrella) tint *= new Color(1, .69f, .62f, 1);
             for (int i = 0; i < renderers.Length; ++i)
                 if (renderers[i] != null)
                 {

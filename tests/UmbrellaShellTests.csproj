@@ -15,6 +15,7 @@
     <Compile Include="../src/SilverMoney.cs" />
     <Compile Include="../src/SolarChomperPlants.cs" />
     <Compile Include="../src/RollingProjectiles.cs" />
+    <Compile Include="BombrellaStubs.cs" />
   </ItemGroup>
   <Import Project="Adapters/FusionIdentity.projitems" />
   <Import Project="Adapters/Mine.projitems" />

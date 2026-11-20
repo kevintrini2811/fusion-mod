@@ -1,0 +1,32 @@
+{
+  "1207": {
+    "adaptation": {
+      "info": "Repels nearby ground zombies and sets off a small cherry blast for 300 damage at each repelled zombie.",
+      "flavor": "",
+      "notes": "Cherry healing on a nearby Cherry-nut or Cherry Pumpkin adds one charge, up to 100. Bombrella spends two charges to cancel a hit on a plant in its 3×3 area.",
+      "portrait": "1115.png"
+    },
+    "german": {
+      "Name": "Bombenschirm",
+      "Info": "Stößt nahe Bodenzombies zurück. An jedem zurückgestoßenen Zombie löst der Schirm eine kleine Kirschexplosion für 300 Schaden aus.",
+      "Flavor": "",
+      "Notes": "Kirschheilung an einer nahen Kirsch-Nuss oder einem Kirschkürbis gibt eine Ladung. Der Schirm speichert bis zu 100 Ladungen und verbraucht zwei, um einen Treffer im 3×3-Bereich abzufangen.",
+      "EnglishSha256": "d783794b2420f385eec3376228f66e7e4cfaebb60a65038753e2dc7488b03f88"
+    }
+  },
+  "1426": {
+    "adaptation": {
+      "info": "Hovers above plants. When a mine on the same tile detonates on enemy contact, Levitater plants a fresh mine of the same kind.",
+      "flavor": "",
+      "notes": "A successful replant starts a 15-second cooldown.",
+      "portrait": "1007.png"
+    },
+    "german": {
+      "Name": "Schwebekartoffel",
+      "Info": "Schwebt über Pflanzen. Wenn eine Mine auf derselben Kachel bei Feindkontakt zündet, setzt die Schwebekartoffel eine frische Mine derselben Art.",
+      "Flavor": "",
+      "Notes": "Nach dem erfolgreichen Wiedereinsetzen gilt eine Abklingzeit von 15 Sekunden.",
+      "EnglishSha256": "8cd85b986db22b5a3069b5c5f08dbb05bda1c02af95fff5fe2656805c8e93502"
+    }
+  }
+}

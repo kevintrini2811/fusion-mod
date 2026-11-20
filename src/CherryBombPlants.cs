@@ -53,7 +53,11 @@ internal static class CherryBombPlants
             float dx = plant.mX + plant.mWidth / 2f - x;
             float dy = plant.mY + plant.mHeight / 2f - y;
             if (dx * dx + dy * dy <= radius * radius)
+            {
+                int previousHealth = plant.mPlantHealth;
                 plant.mPlantHealth = (int)Math.Min(plant.mPlantMaxHealth, (long)plant.mPlantHealth + 200);
+                Bombrella.ChargeFromCherryHeal(plant, previousHealth);
+            }
         }
     }
 

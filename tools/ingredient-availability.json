@@ -1963,6 +1963,16 @@
       "available": true,
       "identity": "FusionPlant.DoomPult",
       "evidence": "Registers both source recipe orders and a landing explosion with ember craters. See references/frost-doom-pair/implementation-notes.md."
+    },
+    "Bombrella": {
+      "available": true,
+      "identity": "FusionPlant.Bombrella",
+      "evidence": "Registers both source recipe orders, explosive knockback and charged protection. See references/umbrella-mine-pair/implementation-notes.md."
+    },
+    "Levitater": {
+      "available": true,
+      "identity": "FusionPlant.Levitater",
+      "evidence": "Registers both source recipe orders and rearms eligible same-tile mines after contact detonation. See references/umbrella-mine-pair/implementation-notes.md."
     }
   }
 }

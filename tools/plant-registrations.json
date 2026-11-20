@@ -1736,6 +1736,18 @@
       "native": "Melonpult",
       "marker": "Doomshroom",
       "model": "MelonMorph"
+    },
+    {
+      "name": "Bombrella",
+      "native": "Umbrella",
+      "marker": "Cherrybomb",
+      "model": "UmbrellaHusk"
+    },
+    {
+      "name": "Levitater",
+      "native": "Blover",
+      "marker": "Potatomine",
+      "model": "PeatatoMine"
     }
   ],
   "reserved": [],
@@ -1883,7 +1895,8 @@
       "UmbrellaThorn",
       "UmbrellaKale",
       "UmbrellaRind",
-      "LumosUmbrella"
+      "LumosUmbrella",
+      "Bombrella"
     ],
     "IsReactiveNut": [
       "FoulNut",
