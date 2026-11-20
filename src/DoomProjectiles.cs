@@ -135,7 +135,7 @@ internal static class DoomProjectileUpdatePatch
         DoomProjectiles.TickMeteor(__instance); return false;
     }
     private static void Postfix(Projectile __instance)
-    { if (!__instance.mDead && DoomProjectiles.Family(__instance) != 0) ImportedPeaVisuals.EnsureDoomProjectile(__instance); }
+    { if (!__instance.mDead && (DoomProjectiles.Family(__instance) != 0 || OrcaShroom.IsShot(__instance))) ImportedPeaVisuals.EnsureDoomProjectile(__instance); }
 }
 [HarmonyPatch(typeof(Projectile), nameof(Projectile.ConvertToFireball))]
 internal static class DoomProjectileIgnitionPatch

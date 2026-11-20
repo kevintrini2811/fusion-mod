@@ -1,0 +1,45 @@
+{
+  "version": "24.9.0",
+  "base": "c2a17f1fb319f8e9d73c216ba59cfaffc4b00b16",
+  "branch": "task/fusion-pair-20261120-08",
+  "build": {
+    "releaseWarnings": 0,
+    "releaseErrors": 0,
+    "sha256": "9ea263a486cde03bae4bd3f58937e85f59a3cfe32b74bf5318652c09b20948c3"
+  },
+  "testedCandidate": "4ad6b3fa2f72bb2710eff73fc0aae2c540a12fee0b75b28553de958b4bb5ec57",
+  "versionChangeAfterRuntime": "The release updates version metadata after the approved gameplay candidate.",
+  "offline": {
+    "registrationToolTests": 11,
+    "registrationsAndTargetedStrictRecipes": "passed",
+    "magnetFusionChecks": 81,
+    "shroomSlotAndSpreadingChecks": 50703,
+    "projectileAndCraterTimingChecks": 1079,
+    "bucketAndControllerChecks": 133,
+    "fusionClockChecks": 2722,
+    "doomShooterHarness": "passed",
+    "shootingPotsLobberHarness": "passed",
+    "starFusionHarness": "passed"
+  },
+  "runtime": {
+    "display": "DP-3",
+    "recipes": "Both directed recipes succeeded with Sea-shroom as the existing plant, on water without a Lily Pad. Both reversed attempts were rejected. Both world models were visible.",
+    "anchorShroom": "Four Pails lost their metal. First capture snapshots stored 1496, 1491, 1496, then 996 ticks. Fertilizer capped the first three active digestions at 50 ticks and the growth count advanced to 1, 2, then 3 after completion.",
+    "orcaShroom": "Orca stayed idle with a target before feeding. Feeding retained its identity and emitted a marked Melon with 600 base damage. Target HP remained 10000 in flight and fell to 9700 at impact on Extreme. No crater was created. A separate empty-row board showed one marked shot from feeding.",
+    "restoration": "Both processes shut down normally. The guarded restores verified the baseline DLL, DP-3 and profile-selection hashes.",
+    "report": "pvzreplanted/.test-runs/task1-20261120-pair-08/gameplay/assessment.md",
+    "evidence": {
+      "models": "0005-models.json",
+      "anchorFinalAcquisition": "0074-check.json",
+      "orcaFlight": "0131-orca-flight.json",
+      "orcaImpact": "0148-orca-impact.json",
+      "orcaEmptyRow": "empty-row/0026-check.json"
+    }
+  },
+  "review": "Approved.",
+  "test": "Approved.",
+  "limits": [
+    "Existing plant, projectile and portrait resources supply the presentation. Orca uses an adapted firing event in the reused eat animation.",
+    "The runtime fixtures sampled Fog boards, directional recipes, staged digestion and Orca flights. Save and load were outside the focused gameplay test."
+  ]
+}

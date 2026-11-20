@@ -1,0 +1,32 @@
+{
+  "1101": {
+    "adaptation": {
+      "info": "Aquatic magnet that removes metal from nearby zombies. After digesting three items, it grows and digests later items in 10 seconds instead of 15.",
+      "flavor": "",
+      "notes": "Fertilizer can shorten an active digestion.",
+      "portrait": "1100.png"
+    },
+    "german": {
+      "Name": "Ankerpilz",
+      "Info": "Wasserpflanze, die Metall von nahen Zombies abzieht. Nach drei verdauten Metallteilen wächst der Ankerpilz. Weitere Teile verdaut er in 10 statt 15 Sekunden.",
+      "Flavor": "",
+      "Notes": "Dünger kann eine laufende Verdauung verkürzen.",
+      "EnglishSha256": "0204e7f9257978452879f85c39e30e4641a59f0af0308a2fe49c8745efb4a083"
+    }
+  },
+  "1303": {
+    "adaptation": {
+      "info": "Feed a Sea-shroom to launch one small Doom bomb. The bomb deals 600 damage in a 1.5-tile radius when it lands.",
+      "flavor": "",
+      "notes": "It aims at the nearest ground zombie ahead in its row, or throws forward when the row is clear.",
+      "portrait": "1291.png"
+    },
+    "german": {
+      "Name": "Orcapilz",
+      "Info": "Füttere einen Meerpilz, damit der Orcapilz eine kleine Unheilbombe wirft. Bei der Landung verursacht sie 600 Schaden im Radius von 1,5 Feldern.",
+      "Flavor": "",
+      "Notes": "Er zielt auf den nächsten Bodenzombie vor ihm in derselben Reihe. Ohne Ziel wirft er gerade nach vorn.",
+      "EnglishSha256": "8edafdf67e5e2968a0cf900faab3fce8dc3d552992599a494c5599744b1c220a"
+    }
+  }
+}

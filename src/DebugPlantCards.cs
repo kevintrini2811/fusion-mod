@@ -33,7 +33,7 @@ internal static class DebugPlantCards
         return FusionPlant.IsPumpkinFusion(incoming) ? FusionService.ShellTerrain(board, col, row, incoming)
             : AirPlants.Owns(incoming) ? AirPlants.Terrain(board, col, row)
             : FusionService.CheckNativePlacement(board, col, row,
-                incoming == FusionPlant.Splash || incoming == FusionPlant.SeaNut || incoming == FusionPlant.SeaMine || incoming == FusionPlant.GulperShroom
+                FusionService.AquaticTerrain(incoming)
                     ? SeedType.Seashroom : LawnGlove.PlantPlacementRules.TerrainType(incoming.NativeType));
     }
 

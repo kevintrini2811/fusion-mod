@@ -501,6 +501,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.DoomPult, "MelonMorph"),
         new(FusionPlant.Bombrella, "UmbrellaHusk"),
         new(FusionPlant.Levitater, "PeatatoMine"),
+        new(FusionPlant.AnchorShroom, "LumosMagnet"),
+        new(FusionPlant.OrcaShroom, "SharkShroom"),
     };
     // </generated-fusion-models>
     private static GameObject? bucketCursor;
@@ -1815,6 +1817,8 @@ internal static partial class ImportedPeaVisuals
             ImportedPeaVisuals.Pose(model, transforms, baseTime, shoot, renderers, assets.Sprites, baseClip, shootClip);
             if (!preview) idle = visualClock.Sample("overlays", idle);
             if (assets.Identity == FusionPlant.LumosMagnet && !preview) UpdateLanternShine();
+            if (assets.Identity == FusionPlant.AnchorShroom && !preview && Plant.mTargetX >= 3)
+                transforms[0].localScale *= 1.5f;
             if (assets.Identity == FusionPlant.GulperShroom && !preview)
                 transforms[0].localScale *= GulperShroom.Scale(Plant);
             if (assets.Identity == FusionPlant.SeaNut && !preview)
@@ -2202,6 +2206,8 @@ internal static partial class ImportedPeaVisuals
             }
             if (assets.Identity == FusionPlant.FrostburnWood) tint *= new Color(.65f, .87f, 1, 1);
             if (assets.Identity == FusionPlant.Bombrella) tint *= new Color(1, .69f, .62f, 1);
+            if (assets.Identity == FusionPlant.AnchorShroom) tint *= new Color(.62f, .84f, 1, 1);
+            if (assets.Identity == FusionPlant.OrcaShroom) tint *= new Color(.62f, .65f, .8f, 1);
             for (int i = 0; i < renderers.Length; ++i)
                 if (renderers[i] != null)
                 {

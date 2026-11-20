@@ -1,5 +1,32 @@
 [
   {
+    "SourceId": 1101,
+    "Identity": "FusionPlant.AnchorShroom",
+    "CanonicalName": "Anchor-shroom",
+    "English": {
+      "Name": "Anchor-shroom",
+      "Info": "Aquatic magnet that removes metal from nearby zombies. After digesting three items, it grows and digests later items in 10 seconds instead of 15.",
+      "Flavor": "",
+      "Notes": "Fertilizer can shorten an active digestion.",
+      "Recipes": [
+        "Sea-shroom + Magnet-shroom"
+      ]
+    },
+    "German": {
+      "Name": "Ankerpilz",
+      "Info": "Wasserpflanze, die Metall von nahen Zombies abzieht. Nach drei verdauten Metallteilen wächst der Ankerpilz. Weitere Teile verdaut er in 10 statt 15 Sekunden.",
+      "Flavor": "",
+      "Notes": "Dünger kann eine laufende Verdauung verkürzen.",
+      "Recipes": [
+        "Meerpilz + Magnetpilz"
+      ]
+    },
+    "Recipes": [
+      "Sea-shroom + Magnet-shroom"
+    ],
+    "Portrait": "1100.png"
+  },
+  {
     "SourceId": 1338,
     "Identity": "FusionPlant.AuroraPlantern",
     "CanonicalName": "Aurora Plantern",
@@ -5407,6 +5434,33 @@
       "Torchwood + Wall-nut"
     ],
     "Portrait": "1282.png"
+  },
+  {
+    "SourceId": 1303,
+    "Identity": "FusionPlant.OrcaShroom",
+    "CanonicalName": "Orca-shroom",
+    "English": {
+      "Name": "Orca-shroom",
+      "Info": "Feed a Sea-shroom to launch one small Doom bomb. The bomb deals 600 damage in a 1.5-tile radius when it lands.",
+      "Flavor": "",
+      "Notes": "It aims at the nearest ground zombie ahead in its row, or throws forward when the row is clear.",
+      "Recipes": [
+        "Sea-shroom + Doom-shroom"
+      ]
+    },
+    "German": {
+      "Name": "Orcapilz",
+      "Info": "Füttere einen Meerpilz, damit der Orcapilz eine kleine Unheilbombe wirft. Bei der Landung verursacht sie 600 Schaden im Radius von 1,5 Feldern.",
+      "Flavor": "",
+      "Notes": "Er zielt auf den nächsten Bodenzombie vor ihm in derselben Reihe. Ohne Ziel wirft er gerade nach vorn.",
+      "Recipes": [
+        "Meerpilz + Unheilspilz"
+      ]
+    },
+    "Recipes": [
+      "Sea-shroom + Doom-shroom"
+    ],
+    "Portrait": "1291.png"
   },
   {
     "SourceId": 1124,

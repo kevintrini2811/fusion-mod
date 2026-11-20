@@ -355,6 +355,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant DoomPult = new(SeedType.Melonpult, SeedType.Doomshroom);
     internal static readonly FusionPlant Bombrella = new(SeedType.Umbrella, SeedType.Cherrybomb);
     internal static readonly FusionPlant Levitater = new(SeedType.Blover, SeedType.Potatomine);
+    internal static readonly FusionPlant AnchorShroom = new(SeedType.Magnetshroom, SeedType.Seashroom);
+    internal static readonly FusionPlant OrcaShroom = new(SeedType.Seashroom, SeedType.Doomshroom);
 
     internal static bool IsSilver(FusionPlant plant) =>
         plant == SilverNut || plant == SilverGarlic || plant == SilverIceShroom ||
@@ -531,7 +533,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
 
     internal static bool IsSeaFusion(FusionPlant plant) =>
         plant == MinnowShroom || plant == UrchinShroom || plant == SharkShroom ||
-        plant == SeaStar;
+        plant == SeaStar || plant == OrcaShroom;
 
     internal static bool IsSeaSupport(FusionPlant plant) =>
         plant == BeaconShroom || plant == JellyShroom || plant == SwellShroom ||
@@ -571,7 +573,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == NibbleShroom || plant == Squish;
 
     internal static bool IsMagnetFusion(FusionPlant plant) =>
-        plant == MagnetBlover || plant == LumosMagnet;
+        plant == MagnetBlover || plant == LumosMagnet || plant == AnchorShroom;
 
     internal static bool HasImportedVisuals(FusionPlant plant) =>
         plant == BuckShroom || plant == SproutPult || plant == BabyCorn ||
@@ -689,7 +691,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == DroneNut || plant == CactusDrone || plant == CherryDrone ||
         plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
         plant == Starglow || plant == FrostburnWood || plant == DoomPult ||
-        plant == Bombrella || plant == Levitater;
+        plant == Bombrella || plant == Levitater || plant == AnchorShroom ||
+        plant == OrcaShroom;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1040,6 +1043,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Melonpult, SeedType.Doomshroom) => DoomPult,
             (SeedType.Umbrella, SeedType.Cherrybomb) => Bombrella,
             (SeedType.Blover, SeedType.Potatomine) => Levitater,
+            (SeedType.Magnetshroom, SeedType.Seashroom) => AnchorShroom,
+            (SeedType.Seashroom, SeedType.Doomshroom) => OrcaShroom,
             _ => PlantLibrary.Plants.Find(plant) is { } registered
                 ? new(registered.Identity.NativeType, registered.Identity.Marker) : new(plant.mSeedType)
         };

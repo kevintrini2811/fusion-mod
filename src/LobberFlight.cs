@@ -5,6 +5,15 @@ namespace FusionMod;
 // One native ballistic solver serves every imported lobber family.
 internal static class LobberFlight
 {
+    internal static bool AdvanceMelon(Projectile shot)
+    {
+        shot.mVelZ += shot.mAccZ;
+        shot.mPosX += shot.mVelX;
+        shot.mPosY += shot.mVelY;
+        shot.mPosZ += shot.mVelZ;
+        return shot.mVelZ >= 0 && shot.mPosZ >= -30;
+    }
+
     internal static void Launch(Projectile shot, Zombie? target, int ticks)
     {
         float x = shot.mBoard.GridToPixelX(8, shot.mRow) + 80;

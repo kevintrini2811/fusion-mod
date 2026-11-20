@@ -29,13 +29,9 @@ internal static class DoomPult
         var board = shot.mBoard;
         if (shot.mDead || board == null || board.mPaused || !ScaredContent.Playing(board)
             || !FusionTime.SourceStep(shot, typeof(DoomPult))) return;
-        shot.mVelZ += shot.mAccZ;
-        shot.mPosX += shot.mVelX;
-        shot.mPosY += shot.mVelY;
-        shot.mPosZ += shot.mVelZ;
         // The shared solver reaches the target at the native Melon impact
         // height. Confirm land on that step without the native contact hit.
-        if (shot.mVelZ >= 0 && shot.mPosZ >= -30) Land(shot);
+        if (LobberFlight.AdvanceMelon(shot)) Land(shot);
     }
 
     private static void Land(Projectile shot)

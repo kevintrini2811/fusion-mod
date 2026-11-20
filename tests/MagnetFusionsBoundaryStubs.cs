@@ -67,9 +67,9 @@ namespace Il2CppReloaded.Gameplay {
 namespace FusionMod {
     using Il2CppReloaded.Gameplay;
     internal readonly record struct FusionPlant(int Id) {
-        internal static readonly FusionPlant MagnetBlover = new(1), LumosMagnet = new(2);
+        internal static readonly FusionPlant MagnetBlover = new(1), LumosMagnet = new(2), AnchorShroom = new(3);
         internal static FusionPlant From(Plant plant) => plant.Identity;
-        internal static bool IsMagnetFusion(FusionPlant identity) => identity.Id is 1 or 2;
+        internal static bool IsMagnetFusion(FusionPlant identity) => identity.Id is 1 or 2 or 3;
     }
     internal static class ImportedPeaVisuals { internal static void ShowMagnetLight(Plant plant, float x, float y) {} }
     internal static class BucketPlants { internal static bool Held; internal static int Clears; internal static bool Holding(Plant plant) => Held; internal static void Clear() { Held = false; ++Clears; } }

@@ -11,7 +11,7 @@ internal static class FusionProjectileDomains
     internal static bool CustomMotion(Projectile shot) => PotatoProjectiles.Contains(shot)
         || PotatoSeedProjectiles.Contains(shot) || FumeProjectiles.IsNut(shot) || NutProjectiles.Family(shot) == 3
         || RollingProjectiles.TryShot(shot, out _)
-        || SquashLobbers.Family(shot) is not (0 or 7) || DoomPult.IsShot(shot);
+        || SquashLobbers.Family(shot) is not (0 or 7) || DoomPult.IsShot(shot) || OrcaShroom.IsShot(shot);
 
     // Classification during load must not reconstruct managed views or records.
     internal static bool Marked(Projectile shot) => CanonicalAge(shot)
@@ -24,7 +24,8 @@ internal static class FusionProjectileDomains
             || LobberProjectiles.Family(shot) != 0 || ElementalLobbers.Family(shot) != 0
             || SquashLobbers.Family(shot) != 0 || NutProjectiles.Family(shot) != 0
             || ScaredyProjectiles.Family(shot) != 0 || DoomProjectiles.Family(shot) != 0
-            || AirLobbers.IsShot(shot) || DoomPult.IsShot(shot) || GlacierShroom.Contains(shot) || StarCaps.Contains(shot)
+            || AirLobbers.IsShot(shot) || DoomPult.IsShot(shot) || OrcaShroom.IsShot(shot)
+            || GlacierShroom.Contains(shot) || StarCaps.Contains(shot)
             || PuffShooters.Contains(shot) || PuffSpecials.IsIcicle(shot) || PuffSpecials.IsNugget(shot)
             || SunflowerFusions.IsShot(shot) || GutsyShroom.IsShot(shot)
             || shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea

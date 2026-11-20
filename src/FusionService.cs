@@ -29,7 +29,9 @@ internal static class FusionService
             || stack.NormalPlant != null
             || source.mSeedType is SeedType.Lilypad or SeedType.Flowerpot or SeedType.InstantCoffee
             || AirPlants.Owns(source)) return false;
-        var type = GulperShroom.Owns(source) ? SeedType.Seashroom : LawnGlove.PlantPlacementRules.TerrainType(source.mSeedType);
+        var identity = FusionPlant.From(source);
+        var type = identity == FusionPlant.GulperShroom || identity == FusionPlant.AnchorShroom
+            ? SeedType.Seashroom : LawnGlove.PlantPlacementRules.TerrainType(source.mSeedType);
         if (source.mSeedType == SeedType.Cobcannon)
         {
             if (col >= 8 || board.GetPlantsOnLawn(col + 1, row).NormalPlant != null) return false;
@@ -53,7 +55,7 @@ internal static class FusionService
         if (FusionPlant.IsPumpkinFusion(fusion))
             return FusionService.ShellTerrain(board, target.mPlantCol, target.mRow, fusion, target);
         if (AirPlants.Owns(fusion)) return AirPlants.Terrain(board, target.mPlantCol, target.mRow, target);
-        var result = fusion == FusionPlant.Splash || fusion == FusionPlant.SeaNut || fusion == FusionPlant.SeaMine || fusion == FusionPlant.GulperShroom ? SeedType.Seashroom : fusion.NativeType;
+        var result = AquaticTerrain(fusion) ? SeedType.Seashroom : fusion.NativeType;
         if (result == SeedType.Cobcannon)
         {
             if (target.mPlantCol >= 8) return PlantingReason.NotHere;
@@ -101,6 +103,10 @@ internal static class FusionService
             target.mSquished = wasSquished;
         }
     }
+
+    internal static bool AquaticTerrain(FusionPlant identity) => identity == FusionPlant.Splash
+        || identity == FusionPlant.SeaNut || identity == FusionPlant.SeaMine
+        || identity == FusionPlant.GulperShroom || identity == FusionPlant.AnchorShroom;
 
     private static bool IsLive(Plant? plant) => plant != null && !plant.mDead && plant.mIsOnBoard
         && !plant.mSquished && plant.mOnBungeeState == PlantOnBungeeState.NotOnBungee && !plant.NotOnGround();

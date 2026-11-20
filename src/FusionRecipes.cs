@@ -60,6 +60,8 @@ internal static class FusionRecipes
         [(SeedType.Puffshroom, SeedType.Chomper)] = FusionPlant.NibbleShroom,
         [(SeedType.Puffshroom, SeedType.Squash)] = FusionPlant.Squish,
         [(SeedType.Seashroom, SeedType.Chomper)] = FusionPlant.GulperShroom,
+        [(SeedType.Seashroom, SeedType.Magnetshroom)] = FusionPlant.AnchorShroom,
+        [(SeedType.Seashroom, SeedType.Doomshroom)] = FusionPlant.OrcaShroom,
         [(SeedType.Spikeweed, SeedType.Threepeater)] = FusionPlant.WeedSpreader,
         [(SeedType.Puffshroom, SeedType.Fumeshroom)] = SeedType.Fumeshroom,
         [(SeedType.Puffshroom, SeedType.Scaredyshroom)] = SeedType.Scaredyshroom,
@@ -443,7 +445,8 @@ internal static class FusionRecipes
 
     private static bool IsDirected(FusionPlant existing, FusionPlant incoming) =>
         existing == (FusionPlant)SeedType.Puffshroom && (incoming == (FusionPlant)SeedType.Chomper || incoming == (FusionPlant)SeedType.Squash)
-        || existing == (FusionPlant)SeedType.Seashroom && incoming == (FusionPlant)SeedType.Chomper
+        || existing == (FusionPlant)SeedType.Seashroom && (incoming == (FusionPlant)SeedType.Chomper
+            || incoming == (FusionPlant)SeedType.Magnetshroom || incoming == (FusionPlant)SeedType.Doomshroom)
         || existing == FusionPlant.RustShroom && incoming == FusionPlant.FootballHelmet
         || existing == FusionPlant.DormantShroom && incoming == FusionPlant.Bucket;
 

@@ -12,7 +12,7 @@ internal static class FusionPlacementPatch
         if (FusionService.CheckingNativePlacement) return;
         if (LawnGlove.LawnGloveMod.GetCarriedPlant(__instance) is { } carried
             && theType == carried.mSeedType
-            && (FusionPlant.From(carried) == FusionPlant.Splash || FusionPlant.From(carried) == FusionPlant.SeaNut || FusionPlant.From(carried) == FusionPlant.SeaMine || GulperShroom.Owns(carried)))
+            && FusionService.AquaticTerrain(FusionPlant.From(carried)))
         {
             __result = FusionService.CheckNativePlacement(__instance, theGridX, theGridY, SeedType.Seashroom);
             return;

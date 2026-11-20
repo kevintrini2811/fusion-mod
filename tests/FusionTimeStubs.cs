@@ -15,7 +15,7 @@ namespace Il2CppReloaded.Gameplay {
         public IntPtr Pointer = (IntPtr)(++next);
         public bool Playing = true, mPaused;
         public int mMainCounter;
-        public object mApp = new();
+        public Il2CppReloaded.Services.App mApp = new();
         public GridItems m_gridItems = new();
         public Zombie? Target;
         public int PixelToGridY(int x, int y) => y / 100;
@@ -82,7 +82,19 @@ namespace Il2CppReloaded.Gameplay {
     }
 }
 namespace Il2CppReloaded.Services {
-    internal sealed class App { private Il2CppReloaded.Gameplay.Board? board; internal bool ThrowOnBoard = false; public Il2CppReloaded.Gameplay.Board? Board { get => ThrowOnBoard ? throw new InvalidOperationException("board getter failed") : board; set => board = value; } }
+    internal enum FoleyType { PlantGrow }
+    internal sealed class SoundSystem { public void PlayFoley(FoleyType type) { } }
+    internal sealed class App
+    {
+        private Il2CppReloaded.Gameplay.Board? board;
+        internal bool ThrowOnBoard;
+        public Il2CppReloaded.Gameplay.Board? Board
+        {
+            get => ThrowOnBoard ? throw new InvalidOperationException("board getter failed") : board;
+            set => board = value;
+        }
+        public SoundSystem SoundSystem { get; } = new();
+    }
     internal sealed class SerializationService {
         public App? App;
         public bool Deserialize() => true;

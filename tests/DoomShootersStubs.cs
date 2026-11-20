@@ -84,6 +84,7 @@ namespace Il2CppReloaded.Gameplay
 namespace FusionMod
 {
     using Il2CppReloaded.Gameplay;
+    internal static class OrcaShroom { internal static bool IsShot(Projectile shot) => false; }
     internal static class DoomEffects
     {
         internal static void AshDamage(Il2CppReloaded.Gameplay.Zombie zombie, int damage,

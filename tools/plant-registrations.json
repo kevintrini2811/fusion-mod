@@ -1748,6 +1748,18 @@
       "native": "Blover",
       "marker": "Potatomine",
       "model": "PeatatoMine"
+    },
+    {
+      "name": "AnchorShroom",
+      "native": "Magnetshroom",
+      "marker": "Seashroom",
+      "model": "LumosMagnet"
+    },
+    {
+      "name": "OrcaShroom",
+      "native": "Seashroom",
+      "marker": "Doomshroom",
+      "model": "SharkShroom"
     }
   ],
   "reserved": [],
@@ -2073,7 +2085,8 @@
       "MinnowShroom",
       "UrchinShroom",
       "SharkShroom",
-      "SeaStar"
+      "SeaStar",
+      "OrcaShroom"
     ],
     "IsSeaSupport": [
       "BeaconShroom",
@@ -2142,7 +2155,8 @@
     ],
     "IsMagnetFusion": [
       "MagnetBlover",
-      "LumosMagnet"
+      "LumosMagnet",
+      "AnchorShroom"
     ]
   }
 }

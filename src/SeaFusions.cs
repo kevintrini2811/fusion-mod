@@ -9,7 +9,8 @@ namespace FusionMod;
 internal static class SeaFusions
 {
     internal static bool Low(FusionPlant identity) => identity == FusionPlant.MinnowShroom
-        || identity == FusionPlant.UrchinShroom || identity == FusionPlant.SeaStar;
+        || identity == FusionPlant.UrchinShroom || identity == FusionPlant.SeaStar
+        || identity == FusionPlant.AnchorShroom || identity == FusionPlant.OrcaShroom;
     internal const float Unit = 80f / 1.35f;
     internal static bool Active(Plant plant) => ChomperFusions.Active(plant) && !plant.mIsAsleep;
     internal static void Initialize(Plant plant)
@@ -32,7 +33,7 @@ internal static class SeaFusions
     }
 
     internal static bool CanFeed(Plant plant, FusionPlant incoming) => incoming == (FusionPlant)SeedType.Seashroom
-        && (FusionPlant.From(plant) == FusionPlant.SharkShroom && Active(plant)
+        && ((FusionPlant.From(plant) == FusionPlant.SharkShroom || FusionPlant.From(plant) == FusionPlant.OrcaShroom) && Active(plant)
             || SeaSupportFusions.CanFeed(plant, incoming) || PumpkinFusions.CanFeed(plant, incoming));
     internal static Plant? FeedTarget(Board board, int col, int row)
     {
@@ -44,6 +45,7 @@ internal static class SeaFusions
     {
         if (FusionPlant.From(plant) == FusionPlant.SeaShell) { PumpkinFusions.Feed(plant); return; }
         if (FusionPlant.IsSeaSupport(FusionPlant.From(plant))) { SeaSupportFusions.Feed(plant); return; }
+        if (FusionPlant.From(plant) == FusionPlant.OrcaShroom) { plant.mTargetY = -100; return; }
         plant.mTargetX = 1000;
         plant.mTargetY = -100;
         // Source status 25 is PlantStatus.Raised, not a shooting delay.
@@ -81,6 +83,11 @@ internal static class SeaFusions
         if (!Active(plant)) return;
         if (!FusionTime.SourceStep(plant, typeof(SeaFusions))) return;
         var identity = FusionPlant.From(plant);
+        if (identity == FusionPlant.OrcaShroom)
+        {
+            if (plant.mTargetY < 0 && ++plant.mTargetY == -50) OrcaShroom.Shoot(plant);
+            return;
+        }
         if (plant.mTargetY > 0) --plant.mTargetY;
         else if (plant.mTargetY < 0) ++plant.mTargetY;
         if (plant.mTargetX > 0 && --plant.mTargetX == 0)

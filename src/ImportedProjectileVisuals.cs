@@ -28,7 +28,7 @@ internal static partial class ImportedPeaVisuals
     private static readonly Assets DoomMeteorProjectileAssets = new(FusionPlant.DeathStar, "DoomMeteorProjectile");
     internal static void EnsureDoomProjectile(Projectile projectile)
     {
-        var assets = DoomProjectiles.Family(projectile) switch
+        var assets = OrcaShroom.IsShot(projectile) ? DoomProjectileAssets : DoomProjectiles.Family(projectile) switch
         { 1 => DoomPeaProjectileAssets, 2 => DoomProjectileAssets, 3 => BigDoomProjectileAssets,
             4 => DoomMeteorProjectileAssets, _ => null };
         if (assets == null) return;
@@ -452,7 +452,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == GlacierProjectileAssets ? GlacierShroom.Contains(projectile)
                 : assets == SolarCabbageProjectileAssets ? LobberProjectiles.Family(projectile) == 15
                 : assets == DoomPeaProjectileAssets ? DoomProjectiles.Family(projectile) == 1
-                : assets == DoomProjectileAssets ? DoomProjectiles.Family(projectile) == 2
+                : assets == DoomProjectileAssets ? DoomProjectiles.Family(projectile) == 2 || OrcaShroom.IsShot(projectile)
                 : assets == BigDoomProjectileAssets ? DoomProjectiles.Family(projectile) == 3
                 : assets == DoomMeteorProjectileAssets ? DoomProjectiles.Family(projectile) == 4
                 : assets == PotatoSeedProjectileAssets ? PotatoSeedProjectiles.Contains(projectile)

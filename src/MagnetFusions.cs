@@ -1,10 +1,11 @@
 using HarmonyLib;
 using Il2CppReloaded.Gameplay;
+using Il2CppReloaded.Services;
 
 namespace FusionMod;
 
 // Native equipment transitions and MagnetItem serialization remain native.
-// These two variants own only their source attribute clock and acquisition range.
+// These variants own the source attribute clock and acquisition range.
 internal static class MagnetFusions
 {
     internal sealed class AbilityFrame
@@ -57,6 +58,7 @@ internal static class MagnetFusions
         plant.mLaunchCounter = Blover(plant) ? 50 : 0;
         // Blover age, captured physical item kind/age, action age respectively.
         plant.mTargetX = plant.mTargetY = plant.mLaunchRate = plant.mStartRow = 0;
+        if (FusionPlant.From(plant) == FusionPlant.AnchorShroom) plant.mIsAsleep = false;
     }
 
     internal static void Fertilize(Plant plant)
@@ -83,6 +85,7 @@ internal static class MagnetFusions
         var board = plant.mBoard;
         uint id = plant.DataID;
         bool blover = Blover(plant);
+        bool anchor = FusionPlant.From(plant) == FusionPlant.AnchorShroom;
         if (blover)
         {
             ++plant.mTargetX;
@@ -92,13 +95,21 @@ internal static class MagnetFusions
         }
         MoveItem(plant);
         if (plant.mStartRow > 0 && ++plant.mStartRow > 69) plant.mStartRow = 0;
-        if (plant.mLaunchCounter > 0 && --plant.mLaunchCounter > 0) return;
+        if (plant.mLaunchCounter > 0)
+        {
+            if (--plant.mLaunchCounter > 0) return;
+            if (anchor && plant.mTargetX < 3 && plant.mMagnetItems[0].ItemType != MagnetItemType.None)
+            {
+                if (++plant.mTargetX == 3) board.mApp.SoundSystem.PlayFoley(FoleyType.PlantGrow);
+            }
+        }
         // The previous item is digested before acquisition. Light changes do
         // not rewrite an already running interval.
         ClearItem(plant);
-        int light = blover ? 0 : Light(plant);
-        float radius = blover ? 40 * Unit : Radius(light);
-        int rows = blover ? 2 : Rows(light);
+        int light = blover || anchor ? 0 : Light(plant);
+        float radius = blover ? 40 * Unit : anchor ? 4 * Unit : Radius(light);
+        int rows = blover || anchor ? 2 : Rows(light);
+        int interval = blover ? 100 : anchor ? (plant.mTargetX >= 3 ? 1000 : 1500) : Interval(light);
         plant.mTargetY = light * 4;
         for (int i = 0; i < board.m_zombies.Count; ++i)
         {
@@ -115,7 +126,7 @@ internal static class MagnetFusions
             if (!Same(plant, board, id)) return;
             plant.mStateCountdown = 0;
             if (plant.mMagnetItems[0].ItemType == MagnetItemType.None) return;
-            Commit(plant, blover ? 100 : Interval(light));
+            Commit(plant, interval);
             if (!blover && light >= 2) RequestShock(plant, board, id, x, y, row);
             // The captured object is independent of its former zombie. Never
             // read the zombie after damage or equipment callbacks.
@@ -133,7 +144,7 @@ internal static class MagnetFusions
             item.GridItemDie();
             if (!Same(plant, board, id)) return;
             if (item.DataID != itemId || !item.mDead) { ClearItem(plant); return; }
-            Commit(plant, blover ? 100 : Interval(light));
+            Commit(plant, interval);
             if (!blover && light >= 2) RequestShock(plant, board, id, x, y, row);
             return;
         }
@@ -142,7 +153,7 @@ internal static class MagnetFusions
             var item = plant.mMagnetItems[0];
             float x = item.PosX, y = item.PosY;
             int row = dropRow;
-            Commit(plant, blover ? 100 : Interval(light));
+            Commit(plant, interval);
             if (!blover && light >= 2) RequestShock(plant, board, id, x, y, row);
         }
     }

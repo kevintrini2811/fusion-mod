@@ -1973,6 +1973,16 @@
       "available": true,
       "identity": "FusionPlant.Levitater",
       "evidence": "Registers both source recipe orders and rearms eligible same-tile mines after contact detonation. See references/umbrella-mine-pair/implementation-notes.md."
+    },
+    "Anchor-shroom": {
+      "available": true,
+      "identity": "FusionPlant.AnchorShroom",
+      "evidence": "Registers the directed aquatic recipe and changes digestion speed after three completed cycles. See references/aquatic-pair/implementation-notes.md."
+    },
+    "Orca-shroom": {
+      "available": true,
+      "identity": "FusionPlant.OrcaShroom",
+      "evidence": "Registers the directed aquatic recipe and launches a Doom bomb when fed a Sea-shroom. See references/aquatic-pair/implementation-notes.md."
     }
   }
 }
