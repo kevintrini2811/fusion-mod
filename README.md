@@ -1,4 +1,6 @@
-# Fusion Mod 24.12.1
+# Fusion Mod 24.13.0
+
+Version 24.13.0 adds Torch Driftwood and Torch-kelp. Place Torchwood on Sea-shroom for Driftwood or on Tangle Kelp for Torch-kelp. Both convert friendly projectiles in their water lane. Driftwood summons a roasted Sea-shroom after 51 conversions. Further batches strengthen the same child. Torch-kelp summons Roasted Kelp after 101 conversions and keeps its native grab. [Implementation notes](references/aquatic-torches/implementation-notes.md) and [gameplay acceptance](references/aquatic-torches/acceptance.json).
 
 Version 24.12.1 moves the special plant collision rules for basketballs and zombie peas into the projectile query. It keeps native rectangle and home-cell lookups while preserving moving Nibble and Squish targets and the disabled colliders of airborne Squish and rolling peppers.
 
@@ -2506,7 +2508,7 @@ Fall Melon drops three melons across its lane when a ground zombie approaches. S
 
 ## List
 
-`fusionen.txt` contains **252 open recipes** with **194 result plants** in the format:
+`fusionen.txt` contains **250 open recipes** with **192 result plants** in the format:
 
 ```text
 Plant1 | Plant2 | Fusion name
@@ -2950,6 +2952,8 @@ Cherry Bomb | Hypno-shroom | Catalyst-shroom
 Hypno-shroom | Ice-shroom | Cryonic-shroom
 Cherry Bomb | Magnet-shroom | Grenadier Magnet
 Magnet-shroom | Sunflower | Solar Magnet
+Sea-shroom | Torchwood | Torch Driftwood
+Tangle Kelp | Torchwood | Torch-kelp
 ```
 
 Plant a sunflower from the seed card onto an existing sunflower. The game continues to calculate the cost of the incoming Sunflower (usually 50 Sun) and its card cooldown. The merger uses the existing native Twin Sunflower with its normal behavior; no additional Twin Sunflower card or shop activation is necessary. A sunflower in an open field is planted as normal, unchanged. The original Twin Sunflower upgrade card remains usable.

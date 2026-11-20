@@ -46,7 +46,8 @@ internal static class FusionAudio
     {
         if (shot.mDead || shot.mProjectileAge != 0 || ShootingPots.Firing != null || HypnoShooters.FiringZombie != null) return;
         var sound = PuffShooters.Contains(shot) || PuffSpecials.IsIcicle(shot) || PuffSpecials.IsNugget(shot)
-            || GutsyShroom.IsShot(shot) || ScaredyProjectiles.Family(shot) != 0 ? FoleyType.Puff : FoleyType.Throw;
+            || GutsyShroom.IsShot(shot) || ScaredyProjectiles.Family(shot) != 0
+            || SeaProjectiles.Family(shot) == SeaProjectiles.RoastedFamily ? FoleyType.Puff : FoleyType.Throw;
         PlantLibrary.Projectiles.PlaySound("fusion:" + sound, shot.mBoard);
     }
 }

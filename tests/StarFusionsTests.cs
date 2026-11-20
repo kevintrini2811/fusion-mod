@@ -60,6 +60,33 @@ static class Program
         if (args.Contains("--cactus-only")) { Console.WriteLine("Cactus regression cases passed."); return; }
         SeaFusionsCases.Run();
         SeaSupportCases.Run();
+        foreach (var (native, expected) in new[] { (SeedType.Tanglekelp, FusionPlant.TorchKelp),
+            (SeedType.Seashroom, FusionPlant.TorchDriftwood) })
+        {
+            Check(FusionRecipes.TryGet(native, SeedType.Torchwood, out var fusion) && fusion == expected,
+                "aquatic foundation accepts Torchwood");
+            Check(!FusionRecipes.TryGet(SeedType.Torchwood, native, out _), "reversed aquatic recipe is rejected");
+        }
+        var roastBoard = new Board();
+        var roasted = Plant(roastBoard, FusionPlant.RoastedSeaShroom);
+        SeaFusions.Initialize(roasted);
+        SeaFusions.Fire(roasted);
+        Check(roastBoard.m_projectiles.Single().mCobTargetRow == 20, "roasted spore starts at twenty damage");
+        roasted.mShootingCounter = 11;
+        SeaFusions.Fire(roasted);
+        var grownShot = Restore(roastBoard.m_projectiles.Last());
+        var grownTarget = Zombie(roastBoard);
+        RoastedSeaImpactScope.Prefix(grownShot, grownTarget, out var impactScope);
+        try
+        {
+            int unrelated = 20, hitDamage = 20, repeat = 20;
+            RoastedSeaDamagePatch.Prefix(Zombie(roastBoard), ref unrelated);
+            RoastedSeaDamagePatch.Prefix(grownTarget, ref hitDamage);
+            RoastedSeaDamagePatch.Prefix(grownTarget, ref repeat);
+            Check(unrelated == 20 && hitDamage == 240 && repeat == 20,
+                "saved grown spore overrides only its own first native target hit");
+        }
+        finally { RoastedSeaImpactScope.Finalizer(impactScope); }
         var recipes=new[]{(SeedType.Garlic,FusionPlant.Starlic),(SeedType.Iceshroom,FusionPlant.WinterStarfruit),
             (SeedType.Jalapeno,FusionPlant.SpicyStarfruit),(SeedType.Peashooter,FusionPlant.Starshooter)};
         foreach(var (ingredient,result) in recipes) {

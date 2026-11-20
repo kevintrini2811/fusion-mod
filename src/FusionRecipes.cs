@@ -38,6 +38,8 @@ internal static class FusionRecipes
         [(SeedType.Torchwood, SeedType.Starfruit)] = FusionPlant.Sparkwood,
         [(SeedType.Torchwood, SeedType.Hypnoshroom)] = FusionPlant.Hypnowood,
         [(SeedType.Seashroom, SeedType.Blover)] = FusionPlant.TideShroom,
+        [(SeedType.Seashroom, SeedType.Torchwood)] = FusionPlant.TorchDriftwood,
+        [(SeedType.Tanglekelp, SeedType.Torchwood)] = FusionPlant.TorchKelp,
         [(SeedType.Plantern, SeedType.Doomshroom)] = FusionPlant.BlacklightPlantern,
         [(SeedType.Torchwood, SeedType.Jalapeno)] = FusionPlant.Scorchwood,
         [(SeedType.Torchwood, SeedType.Garlic)] = FusionPlant.Stenchwood,
@@ -452,7 +454,9 @@ internal static class FusionRecipes
     private static bool IsDirected(FusionPlant existing, FusionPlant incoming) =>
         existing == (FusionPlant)SeedType.Puffshroom && (incoming == (FusionPlant)SeedType.Chomper || incoming == (FusionPlant)SeedType.Squash)
         || existing == (FusionPlant)SeedType.Seashroom && (incoming == (FusionPlant)SeedType.Chomper
-            || incoming == (FusionPlant)SeedType.Magnetshroom || incoming == (FusionPlant)SeedType.Doomshroom)
+            || incoming == (FusionPlant)SeedType.Magnetshroom || incoming == (FusionPlant)SeedType.Doomshroom
+            || incoming == (FusionPlant)SeedType.Torchwood)
+        || existing == (FusionPlant)SeedType.Tanglekelp && incoming == (FusionPlant)SeedType.Torchwood
         || existing == FusionPlant.RustShroom && incoming == FusionPlant.FootballHelmet
         || existing == FusionPlant.DormantShroom && incoming == FusionPlant.Bucket;
 

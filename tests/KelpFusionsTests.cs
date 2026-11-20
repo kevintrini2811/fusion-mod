@@ -55,6 +55,21 @@ board.Occupied = true;
 Check(!TingleKelp.Spawn(board, 1, 1) && board.m_plants.Count == before + 1,
     "reproduction cannot consume an existing plant");
 Check(!TingleKelp.Spawn(board, -1, 1), "out-of-bounds reproduction rejected");
+var fireBoard = new Board();
+var fireSource = fireBoard.AddPlant(1, 1, FusionPlant.KelpSpreader.NativeType, FusionPlant.KelpSpreader.Marker)!;
+KelpProjectiles.Shoot(fireSource, 1);
+var fiery = fireBoard.m_projectiles.Single();
+var direct = Target(fireBoard); direct.mPosX = fiery.mPosX; direct.mPosY = fiery.mPosY - 20;
+var splashed = Target(fireBoard); splashed.mPosX = fiery.mPosX + 35; splashed.mPosY = direct.mPosY;
+var outside = Target(fireBoard); outside.mPosX = fiery.mPosX + 100; outside.mPosY = direct.mPosY;
+var otherRow = Target(fireBoard); otherRow.mRow = 2; otherRow.mPosX = fiery.mPosX; otherRow.mPosY = direct.mPosY;
+KelpProjectiles.Ignite(fiery, 2);
+KelpProjectiles.Impact(fiery, direct);
+Check(fiery.mDead && direct.Damage.SequenceEqual(new[] { 50 }) && splashed.Damage.SequenceEqual(new[] { 16 })
+    && KelpEffects.Stacks(direct) == 1 && KelpEffects.Stacks(splashed) == 1
+    && direct.ColdClears == 1 && splashed.ColdClears == 1 && outside.Damage.Count == 0 && otherRow.Damage.Count == 0,
+    "ignited Kelp adds twenty damage, distributes capped same-lane splash, and applies one Kelp stack");
+
 var grappleBoard = new Board();
 var grapple = grappleBoard.AddPlant(1, 1, FusionPlant.GrappleKelp.NativeType, FusionPlant.GrappleKelp.Marker)!;
 GrappleKelp.Initialize(grapple);

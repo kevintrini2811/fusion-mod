@@ -58,6 +58,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant SolarSquash = new(SeedType.Squash, SeedType.Sunflower);
     internal static readonly FusionPlant SpicyKelp = new(SeedType.Tanglekelp, SeedType.Jalapeno);
     internal static readonly FusionPlant DoomKelp = new(SeedType.Tanglekelp, SeedType.Doomshroom);
+    internal static readonly FusionPlant TorchKelp = new(SeedType.Tanglekelp, SeedType.Torchwood);
+    internal static readonly FusionPlant RoastedKelp = new(SeedType.Tanglekelp, SeedType.Cobcannon);
     internal static readonly FusionPlant ButterNut = new(SeedType.Wallnut, SeedType.Kernelpult);
     internal static readonly FusionPlant UmbrellaHusk = new(SeedType.Umbrella, SeedType.Kernelpult);
     internal static readonly FusionPlant Torchflower = new(SeedType.Sunflower, SeedType.Torchwood);
@@ -319,6 +321,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant RoastedPumpkin = new(SeedType.Pumpkinshell, SeedType.Cobcannon);
     internal static readonly FusionPlant RoastedPotato = new(SeedType.Potatomine, SeedType.Cobcannon);
     internal static readonly FusionPlant TideShroom = new(SeedType.Seashroom, SeedType.Blover);
+    internal static readonly FusionPlant TorchDriftwood = new(SeedType.Seashroom, SeedType.Torchwood);
+    internal static readonly FusionPlant RoastedSeaShroom = new(SeedType.Seashroom, SeedType.Cobcannon);
     internal static readonly FusionPlant BlacklightPlantern = new(SeedType.Plantern, SeedType.Doomshroom);
     internal static readonly FusionPlant Scorchwood = new(SeedType.Torchwood, SeedType.Jalapeno);
     internal static readonly FusionPlant Stenchwood = new(SeedType.Torchwood, SeedType.Garlic);
@@ -540,7 +544,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
 
     internal static bool IsSeaFusion(FusionPlant plant) =>
         plant == MinnowShroom || plant == UrchinShroom || plant == SharkShroom ||
-        plant == SeaStar || plant == OrcaShroom;
+        plant == SeaStar || plant == OrcaShroom || plant == RoastedSeaShroom;
 
     internal static bool IsSeaSupport(FusionPlant plant) =>
         plant == BeaconShroom || plant == JellyShroom || plant == SwellShroom ||
@@ -600,109 +604,110 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == GloomShroom || plant == FrostGloomShroom || plant == FlameGloomShroom ||
         plant == GutsyShroom || plant == StarchShroom || plant == Icerock ||
         plant == Hearthrock || plant == StarrySquash || plant == SolarSquash ||
-        plant == SpicyKelp || plant == DoomKelp || plant == ButterNut ||
-        plant == UmbrellaHusk || plant == Torchflower || plant == SilverNut ||
-        plant == SilverGarlic || plant == SilverIceShroom || plant == SilverSunflower ||
-        plant == SilverDoomShroom || plant == SilverHypnoShroom || plant == SilverCabbage ||
-        plant == SilverMelon || plant == SolarPot || plant == SunsetShroom ||
-        plant == SolarFlare || plant == SolarBlover || plant == LandMine ||
-        plant == FoulNut || plant == StarNut || plant == PeaSquash ||
-        plant == IronSquash || plant == StenchSpreader || plant == SnowThreepeater ||
-        plant == CherrySpreader || plant == ScorchedThreepeater || plant == CharredThreepeater ||
-        plant == FalloutBlover || plant == Solarfruit || plant == HypnoGarlic ||
-        plant == Flytrapper || plant == HypnoPea || plant == HypnoRepeater ||
-        plant == SplitHypno || plant == GatlingHypno || plant == PoisonPea ||
-        plant == PoisonRepeater || plant == SplitPoison || plant == GatlingPoison ||
-        plant == ThornNut || plant == IceMine || plant == HypnoMine ||
-        plant == ChipMine || plant == BlazePea || plant == BlazeRepeater ||
-        plant == SplitBlaze || plant == GatlingBlaze || plant == Solarweed ||
-        plant == Iceweed || plant == Scorchweed || plant == SpikeNut ||
-        plant == FlameWallNut || plant == FrostWallNut || plant == FlameTallNut ||
-        plant == FrostTallNut || plant == CherrySquash || plant == SpicySquash ||
-        plant == IcySquash || plant == HypnoSquash || plant == TwinMarigold ||
-        plant == UmbrellaShell || plant == ChompMine || plant == SolarChomper ||
-        plant == SolarNut || plant == TwinSolarNut || plant == PeatatoMine ||
-        plant == SolarMine || plant == MineNut || plant == Bucket ||
-        plant == FootballHelmet || plant == FootballNut || plant == FootballGatling ||
-        plant == BuckNut || plant == Buckshooter || plant == PeaNut ||
-        plant == ChompShooter || plant == ChompNut || plant == Chompzilla ||
-        plant == CherryChomper || plant == CherryNut || plant == SolarBomb ||
-        plant == ClusterMine || plant == SnowRepeater || plant == SnowSplit ||
-        plant == GatlingSnow || plant == SolarShooter || plant == CherryShooter ||
-        plant == Cherrypeater || plant == SplitCherry || plant == GatlingCherry ||
-        plant == ExplodeOShooter || plant == SilverPot || plant == SilverUmbrella ||
-        plant == SilverKernel || plant == LumosPot || plant == CabbagePot ||
-        plant == ButterPot || plant == UmbrellaPot || plant == NutPot ||
-        plant == GarlicPot || plant == SpikePot || plant == MelonPot ||
-        plant == CherryPot || plant == HotPot || plant == HypnoPot ||
-        plant == DoomPot || plant == PeaPot || plant == TriPot ||
-        plant == KernelTriPult || plant == MelonTriPult || plant == TacoPult ||
-        plant == CobPult || plant == OverripeMelon || plant == CabbageTriPult ||
-        plant == Coldslaw || plant == KimchiPult || plant == Cobsicle ||
-        plant == SaladPult || plant == CabbageNut || plant == MelonNut ||
-        plant == ThreeNuts || plant == SquashNut || plant == TingleKelp ||
-        plant == GrappleKelp || plant == TangleNut || plant == SpikeKelp ||
-        plant == EyesZombieHead || plant == BloodSunflower || plant == Cyclover ||
-        plant == Disguster || plant == BreezeBlover || plant == MindBlover ||
-        plant == BoostShroom || plant == BlowtorchShroom || plant == WallopShroom ||
-        plant == CaltropShroom || plant == GarbagePult || plant == ClovePult ||
-        plant == GarlicPult || plant == SummerMelon || plant == Starlic ||
-        plant == WinterStarfruit || plant == SpicyStarfruit || plant == Starshooter ||
-        plant == FrostCattail || plant == FlameCattail || plant == HypnoMelon ||
-        plant == HypnoPepper || plant == MinnowShroom || plant == UrchinShroom ||
-        plant == SharkShroom || plant == SeaStar || plant == BeaconShroom ||
-        plant == JellyShroom || plant == SwellShroom || plant == HermitShroom ||
-        plant == StarryPumpkin || plant == ThornyPumpkin || plant == PuffKin ||
-        plant == FumingPumpkin || plant == CherryPumpkin || plant == StinkyPumpkin ||
-        plant == ScarelessPumpkin || plant == NutShell || plant == WindyPumpkin ||
-        plant == SpikyPumpkin || plant == JackOPlantern || plant == SeaShell ||
-        plant == LettucePult || plant == ButternutPult || plant == GourdPult ||
-        plant == SpringMelon || plant == DormantShroom || plant == MorphShroom ||
-        plant == MelonMorph || plant == Starmorph || plant == SaguaroShroom ||
-        plant == IceCactus || plant == MagnetCactus || plant == IllumiNut ||
-        plant == DoomGarlic || plant == DoomNut || plant == Doomflower ||
-        plant == CraterTot || plant == DoomSeed || plant == PumpkinPod ||
-        plant == MelonShell || plant == CryoPumpkin || plant == PyroPumpkin ||
-        plant == KernelMorph || plant == RustShroom || plant == MetalPult ||
-        plant == IronStar || plant == DoomPea || plant == GatlingDoom ||
-        plant == DoomSpreader || plant == DeathStar || plant == UmbrellaClove ||
-        plant == UmbrellaThorn || plant == DamagePult || plant == StarburstShroom ||
-        plant == RayShroom || plant == BlubberShroom || plant == SunriseShroom ||
-        plant == BushShroom || plant == Beamshooter || plant == Rebeamer ||
-        plant == SplitBeam || plant == GatlingBeam || plant == Starthorn ||
-        plant == DoomCactus || plant == LumosCactus || plant == Thornweed ||
-        plant == Butterweed || plant == Springweed || plant == Splash ||
-        plant == SeaNut || plant == StrangleKelp || plant == KelpSpreader ||
-        plant == SquashSpreader || plant == Squashweed || plant == GoldenNut ||
-        plant == GoldenSunflower || plant == TangleMine || plant == KelpMine ||
-        plant == SeaMine || plant == PotatoMasher || plant == PotatoMash ||
-        plant == PerfumeShroom || plant == TangleWeed || plant == Glowver ||
-        plant == FrenzyShroom || plant == PhoenixThreepeater || plant == SolarPult ||
-        plant == Triplantern || plant == AuroraPlantern || plant == BloverPot ||
-        plant == ScaredyPot || plant == Multipeater || plant == SeaPot ||
-        plant == CabbageDropper || plant == ButterFly || plant == CherryPop ||
-        plant == BallCactus || plant == BelchShroom || plant == HungryShroom ||
-        plant == TriggerShroom || plant == Spicicle || plant == Chompkin ||
-        plant == PumpkinMine || plant == SunnyPumpkin || plant == GlacierShroom ||
-        plant == ThreetatoMine || plant == MarigoldMine || plant == UmbrellaKale ||
-        plant == UmbrellaRind || plant == LumosUmbrella || plant == IcePot ||
-        plant == RoastedSquash || plant == RoastedWallNut || plant == RoastedPumpkin ||
-        plant == RoastedPotato || plant == TideShroom || plant == BlacklightPlantern ||
-        plant == Scorchwood || plant == Stenchwood || plant == Nutwood ||
-        plant == Torchthree || plant == Sparkwood || plant == Hypnowood ||
-        plant == HotPotato || plant == Boomwood || plant == Squashwood ||
-        plant == Torchweed || plant == RoastedSpikeweed || plant == HypnoChomper ||
-        plant == BoltPult || plant == FootballShroom || plant == DoomplateShroom ||
-        plant == NibbleShroom || plant == Squish || plant == GulperShroom ||
-        plant == WeedSpreader || plant == MagnetBlover || plant == LumosMagnet ||
-        plant == SolarMagnet || plant == GrenadierMagnet || plant == PepperPopper ||
-        plant == MadPepper || plant == Hoverleaf || plant == DroneNut ||
-        plant == CactusDrone || plant == CherryDrone || plant == FallMelon ||
-        plant == SquashDrone || plant == LumosAngler || plant == Starglow ||
-        plant == FrostburnWood || plant == DoomPult || plant == Bombrella ||
-        plant == Levitater || plant == AnchorShroom || plant == OrcaShroom ||
-        plant == TrippyShroom || plant == CometShroom || plant == CatalystShroom ||
-        plant == CryonicShroom;
+        plant == SpicyKelp || plant == DoomKelp || plant == TorchKelp ||
+        plant == RoastedKelp || plant == ButterNut || plant == UmbrellaHusk ||
+        plant == Torchflower || plant == SilverNut || plant == SilverGarlic ||
+        plant == SilverIceShroom || plant == SilverSunflower || plant == SilverDoomShroom ||
+        plant == SilverHypnoShroom || plant == SilverCabbage || plant == SilverMelon ||
+        plant == SolarPot || plant == SunsetShroom || plant == SolarFlare ||
+        plant == SolarBlover || plant == LandMine || plant == FoulNut ||
+        plant == StarNut || plant == PeaSquash || plant == IronSquash ||
+        plant == StenchSpreader || plant == SnowThreepeater || plant == CherrySpreader ||
+        plant == ScorchedThreepeater || plant == CharredThreepeater || plant == FalloutBlover ||
+        plant == Solarfruit || plant == HypnoGarlic || plant == Flytrapper ||
+        plant == HypnoPea || plant == HypnoRepeater || plant == SplitHypno ||
+        plant == GatlingHypno || plant == PoisonPea || plant == PoisonRepeater ||
+        plant == SplitPoison || plant == GatlingPoison || plant == ThornNut ||
+        plant == IceMine || plant == HypnoMine || plant == ChipMine ||
+        plant == BlazePea || plant == BlazeRepeater || plant == SplitBlaze ||
+        plant == GatlingBlaze || plant == Solarweed || plant == Iceweed ||
+        plant == Scorchweed || plant == SpikeNut || plant == FlameWallNut ||
+        plant == FrostWallNut || plant == FlameTallNut || plant == FrostTallNut ||
+        plant == CherrySquash || plant == SpicySquash || plant == IcySquash ||
+        plant == HypnoSquash || plant == TwinMarigold || plant == UmbrellaShell ||
+        plant == ChompMine || plant == SolarChomper || plant == SolarNut ||
+        plant == TwinSolarNut || plant == PeatatoMine || plant == SolarMine ||
+        plant == MineNut || plant == Bucket || plant == FootballHelmet ||
+        plant == FootballNut || plant == FootballGatling || plant == BuckNut ||
+        plant == Buckshooter || plant == PeaNut || plant == ChompShooter ||
+        plant == ChompNut || plant == Chompzilla || plant == CherryChomper ||
+        plant == CherryNut || plant == SolarBomb || plant == ClusterMine ||
+        plant == SnowRepeater || plant == SnowSplit || plant == GatlingSnow ||
+        plant == SolarShooter || plant == CherryShooter || plant == Cherrypeater ||
+        plant == SplitCherry || plant == GatlingCherry || plant == ExplodeOShooter ||
+        plant == SilverPot || plant == SilverUmbrella || plant == SilverKernel ||
+        plant == LumosPot || plant == CabbagePot || plant == ButterPot ||
+        plant == UmbrellaPot || plant == NutPot || plant == GarlicPot ||
+        plant == SpikePot || plant == MelonPot || plant == CherryPot ||
+        plant == HotPot || plant == HypnoPot || plant == DoomPot ||
+        plant == PeaPot || plant == TriPot || plant == KernelTriPult ||
+        plant == MelonTriPult || plant == TacoPult || plant == CobPult ||
+        plant == OverripeMelon || plant == CabbageTriPult || plant == Coldslaw ||
+        plant == KimchiPult || plant == Cobsicle || plant == SaladPult ||
+        plant == CabbageNut || plant == MelonNut || plant == ThreeNuts ||
+        plant == SquashNut || plant == TingleKelp || plant == GrappleKelp ||
+        plant == TangleNut || plant == SpikeKelp || plant == EyesZombieHead ||
+        plant == BloodSunflower || plant == Cyclover || plant == Disguster ||
+        plant == BreezeBlover || plant == MindBlover || plant == BoostShroom ||
+        plant == BlowtorchShroom || plant == WallopShroom || plant == CaltropShroom ||
+        plant == GarbagePult || plant == ClovePult || plant == GarlicPult ||
+        plant == SummerMelon || plant == Starlic || plant == WinterStarfruit ||
+        plant == SpicyStarfruit || plant == Starshooter || plant == FrostCattail ||
+        plant == FlameCattail || plant == HypnoMelon || plant == HypnoPepper ||
+        plant == MinnowShroom || plant == UrchinShroom || plant == SharkShroom ||
+        plant == SeaStar || plant == BeaconShroom || plant == JellyShroom ||
+        plant == SwellShroom || plant == HermitShroom || plant == StarryPumpkin ||
+        plant == ThornyPumpkin || plant == PuffKin || plant == FumingPumpkin ||
+        plant == CherryPumpkin || plant == StinkyPumpkin || plant == ScarelessPumpkin ||
+        plant == NutShell || plant == WindyPumpkin || plant == SpikyPumpkin ||
+        plant == JackOPlantern || plant == SeaShell || plant == LettucePult ||
+        plant == ButternutPult || plant == GourdPult || plant == SpringMelon ||
+        plant == DormantShroom || plant == MorphShroom || plant == MelonMorph ||
+        plant == Starmorph || plant == SaguaroShroom || plant == IceCactus ||
+        plant == MagnetCactus || plant == IllumiNut || plant == DoomGarlic ||
+        plant == DoomNut || plant == Doomflower || plant == CraterTot ||
+        plant == DoomSeed || plant == PumpkinPod || plant == MelonShell ||
+        plant == CryoPumpkin || plant == PyroPumpkin || plant == KernelMorph ||
+        plant == RustShroom || plant == MetalPult || plant == IronStar ||
+        plant == DoomPea || plant == GatlingDoom || plant == DoomSpreader ||
+        plant == DeathStar || plant == UmbrellaClove || plant == UmbrellaThorn ||
+        plant == DamagePult || plant == StarburstShroom || plant == RayShroom ||
+        plant == BlubberShroom || plant == SunriseShroom || plant == BushShroom ||
+        plant == Beamshooter || plant == Rebeamer || plant == SplitBeam ||
+        plant == GatlingBeam || plant == Starthorn || plant == DoomCactus ||
+        plant == LumosCactus || plant == Thornweed || plant == Butterweed ||
+        plant == Springweed || plant == Splash || plant == SeaNut ||
+        plant == StrangleKelp || plant == KelpSpreader || plant == SquashSpreader ||
+        plant == Squashweed || plant == GoldenNut || plant == GoldenSunflower ||
+        plant == TangleMine || plant == KelpMine || plant == SeaMine ||
+        plant == PotatoMasher || plant == PotatoMash || plant == PerfumeShroom ||
+        plant == TangleWeed || plant == Glowver || plant == FrenzyShroom ||
+        plant == PhoenixThreepeater || plant == SolarPult || plant == Triplantern ||
+        plant == AuroraPlantern || plant == BloverPot || plant == ScaredyPot ||
+        plant == Multipeater || plant == SeaPot || plant == CabbageDropper ||
+        plant == ButterFly || plant == CherryPop || plant == BallCactus ||
+        plant == BelchShroom || plant == HungryShroom || plant == TriggerShroom ||
+        plant == Spicicle || plant == Chompkin || plant == PumpkinMine ||
+        plant == SunnyPumpkin || plant == GlacierShroom || plant == ThreetatoMine ||
+        plant == MarigoldMine || plant == UmbrellaKale || plant == UmbrellaRind ||
+        plant == LumosUmbrella || plant == IcePot || plant == RoastedSquash ||
+        plant == RoastedWallNut || plant == RoastedPumpkin || plant == RoastedPotato ||
+        plant == TideShroom || plant == TorchDriftwood || plant == RoastedSeaShroom ||
+        plant == BlacklightPlantern || plant == Scorchwood || plant == Stenchwood ||
+        plant == Nutwood || plant == Torchthree || plant == Sparkwood ||
+        plant == Hypnowood || plant == HotPotato || plant == Boomwood ||
+        plant == Squashwood || plant == Torchweed || plant == RoastedSpikeweed ||
+        plant == HypnoChomper || plant == BoltPult || plant == FootballShroom ||
+        plant == DoomplateShroom || plant == NibbleShroom || plant == Squish ||
+        plant == GulperShroom || plant == WeedSpreader || plant == MagnetBlover ||
+        plant == LumosMagnet || plant == SolarMagnet || plant == GrenadierMagnet ||
+        plant == PepperPopper || plant == MadPepper || plant == Hoverleaf ||
+        plant == DroneNut || plant == CactusDrone || plant == CherryDrone ||
+        plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
+        plant == Starglow || plant == FrostburnWood || plant == DoomPult ||
+        plant == Bombrella || plant == Levitater || plant == AnchorShroom ||
+        plant == OrcaShroom || plant == TrippyShroom || plant == CometShroom ||
+        plant == CatalystShroom || plant == CryonicShroom;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -756,6 +761,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Squash, SeedType.Sunflower) => SolarSquash,
             (SeedType.Tanglekelp, SeedType.Jalapeno) => SpicyKelp,
             (SeedType.Tanglekelp, SeedType.Doomshroom) => DoomKelp,
+            (SeedType.Tanglekelp, SeedType.Torchwood) => TorchKelp,
+            (SeedType.Tanglekelp, SeedType.Cobcannon) => RoastedKelp,
             (SeedType.Wallnut, SeedType.Kernelpult) => ButterNut,
             (SeedType.Umbrella, SeedType.Kernelpult) => UmbrellaHusk,
             (SeedType.Sunflower, SeedType.Torchwood) => Torchflower,
@@ -1017,6 +1024,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Pumpkinshell, SeedType.Cobcannon) => RoastedPumpkin,
             (SeedType.Potatomine, SeedType.Cobcannon) => RoastedPotato,
             (SeedType.Seashroom, SeedType.Blover) => TideShroom,
+            (SeedType.Seashroom, SeedType.Torchwood) => TorchDriftwood,
+            (SeedType.Seashroom, SeedType.Cobcannon) => RoastedSeaShroom,
             (SeedType.Plantern, SeedType.Doomshroom) => BlacklightPlantern,
             (SeedType.Torchwood, SeedType.Jalapeno) => Scorchwood,
             (SeedType.Torchwood, SeedType.Garlic) => Stenchwood,

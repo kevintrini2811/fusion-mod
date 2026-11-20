@@ -10,7 +10,8 @@ internal static class SeaFusions
 {
     internal static bool Low(FusionPlant identity) => identity == FusionPlant.MinnowShroom
         || identity == FusionPlant.UrchinShroom || identity == FusionPlant.SeaStar
-        || identity == FusionPlant.AnchorShroom || identity == FusionPlant.OrcaShroom;
+        || identity == FusionPlant.AnchorShroom || identity == FusionPlant.OrcaShroom
+        || identity == FusionPlant.TorchDriftwood || identity == FusionPlant.RoastedSeaShroom;
     internal const float Unit = 80f / 1.35f;
     internal static bool Active(Plant plant) => ChomperFusions.Active(plant) && !plant.mIsAsleep;
     internal static void Initialize(Plant plant)
@@ -66,6 +67,7 @@ internal static class SeaFusions
         float distance = float.MaxValue, origin = plant.mX + plant.mWidth / 2f;
         var identity = FusionPlant.From(plant);
         float range = identity == FusionPlant.MinnowShroom ? 4.5f * Unit
+            : identity == FusionPlant.RoastedSeaShroom ? 3 * Unit
             : identity == FusionPlant.SharkShroom ? (plant.mTargetX > 0 ? 14 : 7) * Unit : float.MaxValue;
         for (int i = 0; i < plant.mBoard.m_zombies.Count; ++i)
         {
@@ -138,6 +140,11 @@ internal static class SeaFusions
             return;
         }
         if (identity == FusionPlant.SharkShroom) { Smoke(plant); return; }
+        if (identity == FusionPlant.RoastedSeaShroom)
+        {
+            SeaProjectiles.Spawn(plant, SeaProjectiles.RoastedFamily, 0, 20 * (1 + Math.Clamp(plant.mShootingCounter, 0, 11)));
+            return;
+        }
         int count = identity == FusionPlant.MinnowShroom ? plant.mShootingCounter : 1;
         bool air = (plant.mDoSpecialCountdown & 2) != 0;
         for (int i = 0; i < count; ++i)

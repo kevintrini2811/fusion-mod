@@ -14,6 +14,44 @@ var hypno=Make(FusionPlant.Hypnowood);hypno.mTargetY=59;TorchFusions.Convert(Sho
 hypno.mTargetY=10;var colored=Shot(hypno,tag:-30);TorchFusions.Convert(colored);Check(hypno.mTargetY==14&&HypnoShooters.IsFire(colored),"hypno pea credits four");TorchFusions.Convert(Shot(hypno,tag:-20));Check(hypno.mTargetY==14,"ally cannot farm credit");
 var snow=Shot(hypno,ProjectileType.Snowpea);TorchFusions.Convert(snow);Check(snow.mProjectileType==ProjectileType.Pea&&hypno.mTargetY==14,"thaw gives no credit");hypno.mBoard.mPaused=true;TorchFusions.Convert(Shot(hypno));Check(hypno.mTargetY==14,"pause");hypno.mBoard.mPaused=false;
 var attacker=new Zombie {mBoard=hypno.mBoard};hypno.mBoard.FailPlant=true;Check(!TorchFusions.Bite(hypno,attacker)&&!hypno.mDead&&!attacker.mMindControlled,"failed replacement retains plant and enemy");hypno.mBoard.FailPlant=false;Check(TorchFusions.Bite(hypno,attacker)&&hypno.mDead&&attacker.mMindControlled,"bite atomically restores native torchwood");
+
+var driftwood = Make(FusionPlant.TorchDriftwood);
+for (int i = 0; i < 50; ++i) TorchFusions.Convert(Shot(driftwood));
+Check(driftwood.mTargetX == 50 && driftwood.mBoard.m_plants.Count == 1, "Driftwood waits through the first 50 conversions");
+var thawed = Shot(driftwood, ProjectileType.Snowpea);
+TorchFusions.Convert(thawed);
+var roastedSea = driftwood.mBoard.m_plants.Single(p => FusionPlant.From(p) == FusionPlant.RoastedSeaShroom);
+TorchFusions.Convert(thawed);
+Check(thawed.mProjectileType == ProjectileType.Pea && roastedSea.mPlantCol == 4 && driftwood.mTargetX == 0,
+    "the 51st conversion thaws and summons once in the immediate right cell");
+for (int i = 0; i < 13; ++i)
+{
+    driftwood.mTargetX = 50;
+    TorchFusions.Convert(Shot(driftwood));
+}
+Check(roastedSea.mShootingCounter == 11 && driftwood.mBoard.m_plants.Count == 2, "Driftwood grows one child at most eleven times");
+var obstructed = Make(FusionPlant.TorchDriftwood);
+obstructed.mTargetX = 50;
+obstructed.mBoard.Blocked.Add((4, obstructed.mRow));
+TorchFusions.Convert(Shot(obstructed));
+Check(obstructed.mTargetX == 0 && obstructed.mBoard.m_plants.Count == 1,
+    "a blocked immediate right cell spends Driftwood credit without scanning farther");
+
+var torchKelp = Make(FusionPlant.TorchKelp);
+torchKelp.mTargetX = 99;
+var smallKelpShot = Shot(torchKelp, tag: -460010);
+TorchFusions.Convert(smallKelpShot);
+Check(torchKelp.mTargetX == 100 && smallKelpShot.mCobTargetX == ChargeTorchFusions.SmallFire
+    && smallKelpShot.mCobTargetRow == 40, "small pea ignites for an extra twenty and adds one credit");
+torchKelp.mBoard.Blocked.Add((4, torchKelp.mRow));
+var kelpShot = Shot(torchKelp, tag: -540021);
+kelpShot.mCobTargetRow = 30;
+TorchFusions.IgniteKelp(kelpShot);
+TorchFusions.IgniteKelp(kelpShot);
+Check(KelpProjectiles.IsFire(kelpShot) && kelpShot.mCobTargetRow == 50 && torchKelp.mTargetX == 0
+    && torchKelp.mBoard.m_plants.Any(p => FusionPlant.From(p) == FusionPlant.RoastedKelp && p.mPlantCol == 5),
+    "the 101st conversion ignites one Kelp shot once and summons in the first legal cell");
+
 // A projectile-heavy board without converter hosts must scan its population
 // once per tick, independent of projectile count or the three converter queries.
 var crowded = new Board();

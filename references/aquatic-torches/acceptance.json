@@ -1,0 +1,90 @@
+{
+  "status": "Approved",
+  "releaseVersion": "24.13.0",
+  "releaseSha256": "b86376386cc865f1c8ade40239fab0845daed24120624a054a2dffc9d2028167",
+  "candidateVersion": "24.12.1",
+  "candidateSha256": "4f072a32df4cd40eb33f85f87360c1598515b2e75b1af96fcd3d967180253beb",
+  "poolFixCommit": "3ff3e9ff53855a50fbbb6b181b24bbe4dac653b3",
+  "debugVersion": "1.3.34",
+  "debugSha256": "922d04cf3206eb07c879d021ab465879ca779526613a4c73fe53779c11c41570",
+  "gameplayEvidenceRoot": "task1-20261120-pair-12/resume-24.12.1/gameplay",
+  "checks": {
+    "directedRecipes": [
+      "0006-recipe-Tanglekelp.json",
+      "0008-recipe-Seashroom.json"
+    ],
+    "poolTallnutControl": {
+      "rows": [
+        2,
+        3
+      ],
+      "snorkelInitialBodyHealth": 1000000,
+      "snorkelFinalBodyHealth": {
+        "2": 995720,
+        "3": 995460
+      },
+      "tallnutFinalHealth": {
+        "2": 5200,
+        "3": 5188
+      },
+      "phase": "SnorkelEatingInPool",
+      "evidence": "0033-final-board.json, 0034-check.json"
+    },
+    "driftwood": {
+      "firstConversionBracket": [
+        50,
+        51
+      ],
+      "growthConversionBracket": [
+        101,
+        102
+      ],
+      "sameChildId": 21,
+      "observedProjectileMarker": -560004,
+      "observedProjectileDamageField": 40,
+      "evidence": "0021-seaChild-observed.json, 0029-growth-observed.json, 0030-growth-shot-observed.json"
+    },
+    "torchKelp": {
+      "firstConversionBracket": [
+        99,
+        101
+      ],
+      "childId": 22,
+      "evidence": "0028-kelpChild-observed.json"
+    },
+    "offline": {
+      "TorchFusionsTests": {
+        "checks": 3126,
+        "passed": true
+      },
+      "KelpFusionsTests": {
+        "passed": true
+      },
+      "StarFusionsTests": {
+        "passed": true
+      },
+      "NativePlantTimingCoreTests": {
+        "checks": 531,
+        "passed": true
+      },
+      "NibbleShroomTests": {
+        "checks": 110,
+        "passed": true
+      },
+      "SquishTests": {
+        "checks": 3367,
+        "passed": true
+      }
+    }
+  },
+  "postflight": {
+    "passed": true,
+    "evidence": "postflight-independent.json"
+  },
+  "limits": [
+    "The release updates version metadata after gameplay acceptance.",
+    "Snow, small pea, and Kelp conversions were covered by offline tests.",
+    "The upgraded Driftwood projectile damage field was observed. Its individual hit remained unverified.",
+    "Fog and the cursor obscured fine projectile detail in the screenshot."
+  ]
+}

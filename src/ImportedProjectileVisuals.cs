@@ -549,7 +549,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == FireNutProjectileAssets ? projectile.mCobTargetX == RollingProjectiles.IgnitedNut
                 : assets == NutProjectileAssets ? NutProjectiles.Family(projectile) == 3 || RollingProjectiles.TryShot(projectile, out var nut) && nut.Nut && !nut.SolarBall
                 : assets == ChompProjectileAssets ? RollingProjectiles.Chunk(projectile) == 0 && RollingProjectiles.TryShot(projectile, out var chomp) && !chomp.Nut && !chomp.Weed : assets == SolarProjectileAssets ? SolarShooter.TryShot(projectile, out _)
-                : assets == SeaSporeProjectileAssets ? SeaProjectiles.Family(projectile) is 1 or 2
+                : assets == SeaSporeProjectileAssets ? SeaProjectiles.Family(projectile) is 1 or 2 or SeaProjectiles.RoastedFamily
                 : assets == SeaSpikeProjectileAssets ? SeaProjectiles.Family(projectile) == 3
                 : assets == SeaStarProjectileAssets ? StarProjectiles.Family(projectile) == 6
                 : assets == ZombieBlockAssets ? RollingProjectiles.Chunk(projectile) == 1
@@ -618,6 +618,8 @@ internal static partial class ImportedPeaVisuals
                     renderer.color = assets == SpeedyProjectileAssets && ScaredyProjectiles.Family(projectile) == 7
                         ? TrippySporeColors[TrippyShroom.ColorIndex(projectile)] * new Color(1, 1, 1, node.Color[3])
                         : new Color(node.Color[0], node.Color[1], node.Color[2], node.Color[3]);
+                    if (assets == KelpProjectileAssets && KelpProjectiles.IsFire(projectile) && node.Name != "Shadow")
+                        renderer.color *= new Color(1.5f, .7f, .28f, 1);
                 }
                 Pose(model, transforms, FusionProjectileTime.AgeSeconds(projectile), null);
                 if (ReportedProjectileBoards.Add((Board, assets.Name)))

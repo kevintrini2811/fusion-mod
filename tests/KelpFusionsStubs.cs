@@ -4,6 +4,11 @@ namespace HarmonyLib
     [AttributeUsage(AttributeTargets.Class)] public sealed class HarmonyPatch : Attribute
     { public HarmonyPatch() { } public HarmonyPatch(Type type, string method) { } }
 }
+namespace Il2CppReloaded.Services
+{
+    public enum FoleyType { Splat }
+    public sealed class SoundSystem { public void PlayFoley(FoleyType type) { } }
+}
 namespace Il2CppReloaded.Gameplay
 {
     public enum PlantRowType { Normal, Pool }
@@ -20,7 +25,7 @@ namespace Il2CppReloaded.Gameplay
     public enum ProjectileMotion { Straight }
     public enum PlantState { Notready, TanglekelpGrabbing, SunshroomSmall, SunshroomBig }
     public enum ZombieID : uint { }
-    public enum ParticleEffect { Powie }
+    public enum ParticleEffect { Powie, FireballDeath }
     [Flags] public enum DamageFlags { BypassesShield = 1, Spike = 32, HitsShieldAndBody = 64, DoesntLeaveBody = 128 }
     [Flags] public enum DamageRangeFlags { Ground = 1, Submerged = 2, OffGround = 4 }
     public readonly record struct Rect(float xMin, float yMin, float xMax, float yMax);
@@ -30,7 +35,9 @@ namespace Il2CppReloaded.Gameplay
             (int)(Math.Min(first.xMax, second.xMax) - Math.Max(first.xMin, second.xMin));
     }
     public sealed class App
-    { public GameScenes GameScene = GameScenes.Playing; public GameMode GameMode; public Board Board = null!; public void AddTodParticle(float x, float y, int order, ParticleEffect effect) { } }
+    { public GameScenes GameScene = GameScenes.Playing; public GameMode GameMode; public Board Board = null!;
+      public Il2CppReloaded.Services.SoundSystem SoundSystem = new();
+      public void AddTodParticle(float x, float y, int order, ParticleEffect effect) { } }
     public sealed class Pool<T> : List<T> where T : new()
     {
         public bool Fail;
@@ -102,6 +109,7 @@ namespace Il2CppReloaded.Gameplay
     {
         private static uint next;
         public uint DataID = ++next;
+        public IntPtr Pointer => (IntPtr)DataID;
         public Board mBoard = null!;
         public ZombieType mZombieType;
         public ZombiePhase mZombiePhase;
@@ -116,7 +124,9 @@ namespace Il2CppReloaded.Gameplay
         public void PogoBreak(int flags) => mHasObject = false;
         public bool IsBobsledTeamWithSled() => false;
         public void BobsledCrash() { }
-        public int PoolChecks;
+        public int PoolChecks, ColdClears;
+        public bool IsFlying() => mZombiePhase == ZombiePhase.BalloonFlying;
+        public void RemoveColdEffects() => ++ColdClears;
         public List<int> Damage = new();
         public bool IsDeadOrDying() => mDead || mBodyHealth <= 0;
         public Rect GetZombieRect() => new(mPosX - 10, mPosY, mPosX + 10, mPosY + 80);
@@ -177,6 +187,7 @@ namespace FusionMod
     internal static class SquashFusions
     { internal static bool Eligible(Board b, Zombie z, DamageRangeFlags flags) => !z.IsDeadOrDying() && !z.mMindControlled && z.mBoard == b; }
     internal static class ScaredyFusions { internal const float SourceUnit = 80f / 1.35f; }
+    internal static class TorchFusions { internal static void IgniteKelp(Projectile shot) { } }
     internal static class FusionService
     { internal static PlantingReason CheckNativePlacement(Board b, int col, int row, SeedType seed) => b.Occupied ? PlantingReason.NotHere : PlantingReason.Ok; }
     internal static class ImportedPeaVisuals { internal static void EnsureKelpProjectile(Projectile shot) { } internal static void EnsureMiniSquashProjectile(Projectile shot) { } }

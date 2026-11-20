@@ -27,7 +27,6 @@ namespace Il2CppReloaded.Gameplay
         public void UpdateShooter() {} public void UpdateProductionPlant() {}
         public void UpdateChomper() {} public void UpdateScaredyShroom() {}
     }
-    public sealed partial class Zombie { public IntPtr Pointer => (IntPtr)DataID; }
     public sealed partial class Projectile { public IntPtr Pointer => (IntPtr)DataID; }
 }
 namespace Il2CppReloaded.Services

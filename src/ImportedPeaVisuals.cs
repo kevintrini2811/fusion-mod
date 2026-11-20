@@ -204,6 +204,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.SolarSquash, "SolarSquash"),
         new(FusionPlant.SpicyKelp, "SpicyKelp"),
         new(FusionPlant.DoomKelp, "DoomKelp"),
+        new(FusionPlant.TorchKelp, "SpicyKelp"),
+        new(FusionPlant.RoastedKelp, "SpicyKelp"),
         new(FusionPlant.ButterNut, "ButterNut"),
         new(FusionPlant.UmbrellaHusk, "UmbrellaHusk"),
         new(FusionPlant.Torchflower, "Torchflower"),
@@ -465,6 +467,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.RoastedPumpkin, "RoastedPumpkin"),
         new(FusionPlant.RoastedPotato, "RoastedPotato"),
         new(FusionPlant.TideShroom, "TideShroom"),
+        new(FusionPlant.TorchDriftwood, "TideShroom"),
+        new(FusionPlant.RoastedSeaShroom, "MinnowShroom"),
         new(FusionPlant.BlacklightPlantern, "BlacklightPlantern"),
         new(FusionPlant.Scorchwood, "Scorchwood"),
         new(FusionPlant.Stenchwood, "Stenchwood"),
@@ -1529,7 +1533,8 @@ internal static partial class ImportedPeaVisuals
             if (FusionPlant.IsSeaFusion(assets.Identity))
             {
                 shoot = null;
-                bool grown = !preview && Plant.mShootingCounter > 0 && assets.Identity != FusionPlant.MinnowShroom;
+                bool grown = !preview && Plant.mShootingCounter > 0 && assets.Identity != FusionPlant.MinnowShroom
+                    && assets.Identity != FusionPlant.RoastedSeaShroom;
                 baseClip = grown && assets.Identity != FusionPlant.SharkShroom ? "idle2" : "idle";
                 if (!preview && Plant.mTargetY != 0)
                 {
@@ -1833,6 +1838,8 @@ internal static partial class ImportedPeaVisuals
             if (assets.Identity == FusionPlant.LumosMagnet && !preview) UpdateLanternShine();
             if (assets.Identity == FusionPlant.AnchorShroom && !preview && Plant.mTargetX >= 3)
                 transforms[0].localScale *= 1.5f;
+            if (assets.Identity == FusionPlant.RoastedSeaShroom && !preview)
+                transforms[0].localScale *= 1 + Math.Clamp(Plant.mShootingCounter, 0, 11) * .04f;
             if (assets.Identity == FusionPlant.GulperShroom && !preview)
                 transforms[0].localScale *= GulperShroom.Scale(Plant);
             if (assets.Identity == FusionPlant.SeaNut && !preview)
@@ -1917,7 +1924,9 @@ internal static partial class ImportedPeaVisuals
                 Apply(transforms, sun, idle % sun.Duration, true);
                 ApplySprites(sun, idle % sun.Duration);
             }
-            if ((FusionPlant.IsKelp(assets.Identity) || assets.Identity == FusionPlant.StrangleKelp || assets.Identity == FusionPlant.KelpSpreader)
+            if ((FusionPlant.IsKelp(assets.Identity) || assets.Identity == FusionPlant.StrangleKelp
+                || assets.Identity == FusionPlant.KelpSpreader || assets.Identity == FusionPlant.TorchKelp
+                || assets.Identity == FusionPlant.RoastedKelp)
                 && !preview && Plant.mState == PlantState.TanglekelpGrabbing
                 && (assets.Identity != FusionPlant.StrangleKelp || Plant.mTargetY == 0))
             {
@@ -2223,6 +2232,10 @@ internal static partial class ImportedPeaVisuals
             if (assets.Identity == FusionPlant.AnchorShroom) tint *= new Color(.62f, .84f, 1, 1);
             if (assets.Identity == FusionPlant.SolarMagnet) tint *= new Color(1, .84f, .38f, 1);
             if (assets.Identity == FusionPlant.GrenadierMagnet) tint *= new Color(1, .45f, .53f, 1);
+            if (assets.Identity == FusionPlant.TorchKelp || assets.Identity == FusionPlant.TorchDriftwood)
+                tint *= new Color(1, .72f, .44f, 1);
+            if (assets.Identity == FusionPlant.RoastedKelp || assets.Identity == FusionPlant.RoastedSeaShroom)
+                tint *= new Color(1, .82f, .57f, 1);
             if (assets.Identity == FusionPlant.OrcaShroom) tint *= new Color(.62f, .65f, .8f, 1);
             if (assets.Identity == FusionPlant.TrippyShroom) tint *= new Color(1, .63f, .97f, 1);
             if (assets.Identity == FusionPlant.CometShroom) tint *= new Color(1, .84f, .46f, 1);

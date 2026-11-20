@@ -1,5 +1,6 @@
 using HarmonyLib;
 using Il2CppReloaded.Gameplay;
+using Il2CppReloaded.Services;
 
 namespace FusionMod;
 
@@ -8,43 +9,68 @@ namespace FusionMod;
 internal static class TorchFusions
 {
     internal static bool Owns(FusionPlant identity) => identity == FusionPlant.Nutwood || identity == FusionPlant.Squashwood
-        || identity == FusionPlant.Torchthree || identity == FusionPlant.Sparkwood || identity == FusionPlant.Hypnowood;
+        || identity == FusionPlant.Torchthree || identity == FusionPlant.Sparkwood || identity == FusionPlant.Hypnowood
+        || identity == FusionPlant.TorchDriftwood;
+    private static bool Aquatic(FusionPlant identity) => identity == FusionPlant.TorchKelp
+        || identity == FusionPlant.TorchDriftwood;
 
     internal static void Initialize(Plant plant)
     {
-        if (!Owns(FusionPlant.From(plant))) return;
-        plant.mPlantHealth = plant.mPlantMaxHealth = FusionPlant.From(plant) == FusionPlant.Nutwood ? 4000 : 300;
-        plant.mTargetX = plant.mTargetY = plant.mShootingCounter = 0;
+        var identity = FusionPlant.From(plant);
+        if (Owns(identity))
+        {
+            plant.mPlantHealth = plant.mPlantMaxHealth = identity == FusionPlant.Nutwood ? 4000 : 300;
+            plant.mTargetX = plant.mTargetY = plant.mShootingCounter = 0;
+            // The source Driftwood is a Torchwood with aquatic placement.
+            if (identity == FusionPlant.TorchDriftwood) plant.mIsAsleep = false;
+        }
+        if (identity == FusionPlant.TorchKelp) plant.mTargetX = 0;
+    }
+
+    private static IEnumerable<Plant> Crossings(Projectile shot, bool aquaticOnly)
+    {
+        List<Plant>? candidates = null;
+        foreach (var entry in TorchPlantIndex.For(shot.mBoard))
+        {
+            var plant = entry.Plant;
+            if (!entry.IsCurrent(shot.mBoard)) continue;
+            var identity = FusionPlant.From(plant);
+            if (!(Aquatic(identity) || !aquaticOnly && Owns(identity))
+                || !BeamShooters.Active(plant) || plant.NotOnGround() || plant.mRow != shot.mRow
+                || shot.mHitTorchwoodGridX == plant.mPlantCol) continue;
+            float x = plant.mX + plant.mWidth / 2f;
+            float y = plant.mY + plant.mHeight / 2f;
+            if (Math.Min(shot.mPosX, shot.mPosX + shot.mVelX) > x + 16
+                || Math.Max(shot.mPosX, shot.mPosX + shot.mVelX) < x - 16
+                || Math.Abs(shot.mPosY + shot.mPosZ - y) > 60) continue;
+            (candidates ??= new()).Add(plant);
+        }
+        if (candidates == null) return Array.Empty<Plant>();
+        return shot.mVelX >= 0 ? candidates.OrderBy(p => p.mPlantCol)
+            : candidates.OrderByDescending(p => p.mPlantCol);
     }
 
     internal static void Convert(Projectile shot)
     {
         var board = shot.mBoard;
         if (shot.mDead || board == null || board.mPaused || shot.mPosZ != 0) return;
-        var indexed = TorchPlantIndex.For(board);
-        if (indexed.Length == 0) return;
+        if (TorchPlantIndex.For(board).Length == 0) return;
         bool snow = shot.mProjectileType == ProjectileType.Snowpea && shot.mCobTargetX >= 0;
         bool hypno = HypnoShooters.Contains(shot) && !HypnoShooters.IsFire(shot);
+        bool small = PuffShooters.Contains(shot);
         bool plain = shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea && shot.mCobTargetX >= 0;
         bool star = shot.mProjectileType == ProjectileType.Star && StarProjectiles.Family(shot) != 3
             && StarProjectiles.Family(shot) != 9 && CactusProjectiles.Family(shot) == 0;
-        if (!snow && !hypno && !plain && !star) return;
-        var candidates = new List<Plant>();
-        foreach (var entry in indexed)
-        {
-            var plant = entry.Plant;
-            if (!entry.IsCurrent(board) || !Owns(FusionPlant.From(plant)) || !BeamShooters.Active(plant) || plant.NotOnGround()
-                || plant.mRow != shot.mRow || shot.mHitTorchwoodGridX == plant.mPlantCol) continue;
-            float x = plant.mX + plant.mWidth / 2f;
-            float y = plant.mY + plant.mHeight / 2f;
-            if (Math.Min(shot.mPosX, shot.mPosX + shot.mVelX) > x + 16
-                || Math.Max(shot.mPosX, shot.mPosX + shot.mVelX) < x - 16
-                || Math.Abs(shot.mPosY - y) > 60) continue;
-            candidates.Add(plant);
-        }
-        foreach (var plant in shot.mVelX >= 0 ? candidates.OrderBy(p => p.mPlantCol) : candidates.OrderByDescending(p => p.mPlantCol))
+        if (!snow && !hypno && !small && !plain && !star) return;
+        foreach (var plant in Crossings(shot, aquaticOnly: small))
         {
             var identity = FusionPlant.From(plant);
+            if (Aquatic(identity))
+            {
+                if (hypno || star) continue;
+                if (ConvertAquatic(shot, plant, snow, small)) CreditAquatic(plant, identity);
+                return;
+            }
             if (star)
             {
                 if (identity != FusionPlant.Sparkwood) continue;
@@ -88,6 +114,66 @@ internal static class TorchFusions
             if (identity == FusionPlant.Squashwood) CreditSquash(plant);
             return;
         }
+    }
+
+    private static bool ConvertAquatic(Projectile shot, Plant plant, bool snow, bool small)
+    {
+        FusionProjectileTime.AdoptConversion(shot);
+        ImportedPeaVisuals.ForgetProjectile(shot);
+        if (small)
+        {
+            shot.mCobTargetX = ChargeTorchFusions.SmallFire;
+            shot.mCobTargetRow = 40;
+            shot.mProjectileType = ProjectileType.Fireball;
+            shot.mMotionType = ProjectileMotion.Star;
+            shot.mShadowY = shot.mPosY + PuffShooters.FlightHeight;
+            ImportedPeaVisuals.EnsureChargeTorchProjectile(shot);
+            shot.mBoard.mApp.SoundSystem.PlayFoley(FoleyType.FirePea);
+        }
+        else if (snow)
+        {
+            shot.ConvertToPea(plant.mPlantCol);
+            if (shot.mProjectileType == ProjectileType.Snowpea) return false;
+        }
+        else
+        {
+            shot.ConvertToFireball(plant.mPlantCol);
+            if (shot.mProjectileType is not (ProjectileType.Fireball or ProjectileType.PeashooterFireball)) return false;
+        }
+        shot.mHitTorchwoodGridX = plant.mPlantCol;
+        return true;
+    }
+
+    internal static void IgniteKelp(Projectile shot)
+    {
+        if (KelpProjectiles.IsFire(shot)) return;
+        var plant = Crossings(shot, aquaticOnly: true).FirstOrDefault();
+        if (plant == null) return;
+        ImportedPeaVisuals.ForgetProjectile(shot);
+        KelpProjectiles.Ignite(shot, plant.mPlantCol);
+        CreditAquatic(plant, FusionPlant.From(plant));
+        shot.mBoard.mApp.SoundSystem.PlayFoley(FoleyType.FirePea);
+    }
+
+    private static void CreditAquatic(Plant plant, FusionPlant identity)
+    {
+        bool kelp = identity == FusionPlant.TorchKelp;
+        if (++plant.mTargetX <= (kelp ? 100 : 50)) return;
+        plant.mTargetX = 0; // Source spends the count even if placement fails.
+        if (kelp)
+        {
+            TorchweedFusions.SummonAhead(plant, FusionPlant.RoastedKelp);
+            return;
+        }
+        int col = plant.mPlantCol + 1;
+        if (col >= 9) return;
+        var child = plant.mBoard.GetPlantsOnLawn(col, plant.mRow).NormalPlant;
+        // The immediate right cell grows an existing child up to eleven times.
+        if (child != null && FusionPlant.From(child) == FusionPlant.RoastedSeaShroom && !child.mDead
+            && child.mIsOnBoard && !child.NotOnGround())
+            child.mShootingCounter = Math.Min(11, child.mShootingCounter + 1);
+        else if (FusionService.CheckNativePlacement(plant.mBoard, col, plant.mRow, SeedType.Seashroom) == PlantingReason.Ok)
+            TorchweedFusions.SummonAt(plant, FusionPlant.RoastedSeaShroom, col);
     }
 
     internal static void CreditSquash(Plant plant)

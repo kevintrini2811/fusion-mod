@@ -251,6 +251,18 @@
       "marker": "Doomshroom"
     },
     {
+      "name": "TorchKelp",
+      "native": "Tanglekelp",
+      "marker": "Torchwood",
+      "model": "SpicyKelp"
+    },
+    {
+      "name": "RoastedKelp",
+      "native": "Tanglekelp",
+      "marker": "Cobcannon",
+      "model": "SpicyKelp"
+    },
+    {
       "name": "ButterNut",
       "native": "Wallnut",
       "marker": "Kernelpult"
@@ -1556,6 +1568,18 @@
       "marker": "Blover"
     },
     {
+      "name": "TorchDriftwood",
+      "native": "Seashroom",
+      "marker": "Torchwood",
+      "model": "TideShroom"
+    },
+    {
+      "name": "RoastedSeaShroom",
+      "native": "Seashroom",
+      "marker": "Cobcannon",
+      "model": "MinnowShroom"
+    },
+    {
       "name": "BlacklightPlantern",
       "native": "Plantern",
       "marker": "Doomshroom"
@@ -2125,7 +2149,8 @@
       "UrchinShroom",
       "SharkShroom",
       "SeaStar",
-      "OrcaShroom"
+      "OrcaShroom",
+      "RoastedSeaShroom"
     ],
     "IsSeaSupport": [
       "BeaconShroom",

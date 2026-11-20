@@ -1989,6 +1989,16 @@
       "identity": "FusionPlant.GrenadierMagnet",
       "evidence": "Both recipe orders produce a Magnet-shroom that throws its captured item up to five times. See references/solar-grenadier-magnets/implementation-notes.md."
     },
+    "Torch Driftwood": {
+      "available": true,
+      "identity": "FusionPlant.TorchDriftwood",
+      "evidence": "Directed aquatic recipe and projectile-driven Sea-shroom summoning and growth. See references/aquatic-torches/implementation-notes.md."
+    },
+    "Torch-kelp": {
+      "available": true,
+      "identity": "FusionPlant.TorchKelp",
+      "evidence": "Directed aquatic recipe and projectile-driven Kelp summoning. See references/aquatic-torches/implementation-notes.md."
+    },
     "Orca-shroom": {
       "available": true,
       "identity": "FusionPlant.OrcaShroom",

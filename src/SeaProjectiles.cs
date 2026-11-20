@@ -8,21 +8,23 @@ namespace FusionMod;
 internal static class SeaProjectiles
 {
     private const int Marker = -560000;
+    internal const int RoastedFamily = 4;
     internal static int Family(Projectile shot) => shot.mCobTargetX switch
     {
         Marker - 1 when shot.mProjectileType == ProjectileType.Pea => 1,
         Marker - 2 when shot.mProjectileType == ProjectileType.Pea => 2,
         Marker - 3 when shot.mProjectileType == ProjectileType.Spike => 3,
+        Marker - RoastedFamily when shot.mProjectileType == ProjectileType.Pea => RoastedFamily,
         _ => 0
     };
-    internal static Projectile? Spawn(Plant plant, int family, float offset)
+    internal static Projectile? Spawn(Plant plant, int family, float offset, int damage = 20)
     {
         var shot = plant.mBoard.AddProjectile(plant.mX + plant.mWidth / 2f + 15,
             plant.mY + plant.mHeight / 2f + offset, plant.mRenderOrder + 1, plant.mRow,
             family == 3 ? ProjectileType.Spike : ProjectileType.Pea);
         if (shot == null || shot.mDead) return null;
         shot.mCobTargetX = Marker - family;
-        shot.mCobTargetRow = 20;
+        shot.mCobTargetRow = damage;
         shot.mHitTorchwoodGridX = plant.mRow;
         shot.mMotionType = ProjectileMotion.Star;
         shot.mVelX = 6 * SeaFusions.Unit / 100;
@@ -89,3 +91,31 @@ internal static class SeaProjectileIgnitionPatch
 [HarmonyPatch(typeof(Projectile), nameof(Projectile.ConvertToPea))]
 internal static class SeaProjectileThawPatch
 { private static bool Prefix(Projectile __instance) => SeaProjectiles.Family(__instance) == 0; }
+
+[HarmonyPatch(typeof(Projectile), nameof(Projectile.DoImpact))]
+internal static class RoastedSeaImpactScope
+{
+    internal sealed record Hit(IntPtr Target, uint Id, IntPtr Board, int Damage);
+    [ThreadStatic] internal static Hit? Current;
+
+    internal static void Prefix(Projectile __instance, Zombie theZombie, out Hit? __state)
+    {
+        __state = Current;
+        Current = theZombie != null && !__instance.mDead && __instance.mBoard is { } board
+            && SeaProjectiles.Family(__instance) == SeaProjectiles.RoastedFamily
+            ? new(theZombie.Pointer, theZombie.DataID, board.Pointer, __instance.mCobTargetRow) : null;
+    }
+    internal static void Finalizer(Hit? __state) => Current = __state;
+}
+
+[HarmonyPatch(typeof(Zombie), nameof(Zombie.TakeDamage))]
+internal static class RoastedSeaDamagePatch
+{
+    internal static void Prefix(Zombie __instance, ref int theDamage)
+    {
+        if (RoastedSeaImpactScope.Current is not { } hit || __instance.Pointer != hit.Target
+            || __instance.DataID != hit.Id || __instance.mBoard?.Pointer != hit.Board) return;
+        RoastedSeaImpactScope.Current = null;
+        theDamage = hit.Damage;
+    }
+}

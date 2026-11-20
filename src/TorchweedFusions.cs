@@ -246,17 +246,22 @@ internal static class TorchweedFusions
         for (int col = plant.mPlantCol + 1; col < 9; ++col)
         {
             if (FusionService.CheckNativePlacement(board, col, plant.mRow, result.NativeType) != PlantingReason.Ok) continue;
-            var previous = PlayerPlantingScope.Current;
-            try
-            {
-                // This is a free source summon, never another seed transaction.
-                PlayerPlantingScope.Current = null;
-                var child = board.AddPlant(col, plant.mRow, result.NativeType, result.Marker);
-                return child != null && !child.mDead && child.mIsOnBoard;
-            }
-            finally { PlayerPlantingScope.Current = previous; }
+            return SummonAt(plant, result, col);
         }
         return false;
+    }
+
+    internal static bool SummonAt(Plant plant, FusionPlant result, int col)
+    {
+        var previous = PlayerPlantingScope.Current;
+        try
+        {
+            // A free summon has no player seed transaction.
+            PlayerPlantingScope.Current = null;
+            var child = plant.mBoard.AddPlant(col, plant.mRow, result.NativeType, result.Marker);
+            return child != null && !child.mDead && child.mIsOnBoard;
+        }
+        finally { PlayerPlantingScope.Current = previous; }
     }
 }
 
