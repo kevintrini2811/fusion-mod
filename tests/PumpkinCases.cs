@@ -35,6 +35,22 @@ internal static class PumpkinCases
         }
         var hot = Plant(new(), FusionPlant.PyroPumpkin); hot.mTargetX = 1800;
         PumpkinFusions.Fertilize(hot); Check(hot.mTargetX == 1800, "Fertilizer preserves heat");
+        var doomBoard = new Board();
+        var pot = Plant(doomBoard, SeedType.Flowerpot);
+        var doom = Plant(doomBoard, FusionPlant.DoomPumpkin);
+        var pea = Plant(doomBoard, SeedType.Peashooter);
+        doom.mTargetX = 99;
+        doom.mLaunchCounter = 1;
+        doomBoard.FailAllocation = true;
+        PumpkinFusions.Tick(doom);
+        Check(doom.mTargetX == 100 && !pot.mDead && !pea.mDead && doom.mIsOnBoard && !doom.mSquished,
+            "Doom Pumpkin restores the shell after placement and retains both candidates if allocation fails");
+        doom.mLaunchCounter = 1;
+        doomBoard.FailAllocation = false;
+        PumpkinFusions.Tick(doom);
+        Check(doom.mTargetX == 0 && pot.mDead && !pea.mDead && doom.mIsOnBoard && !doom.mSquished
+            && doomBoard.LastPlantingEffect is { } grown && FusionPlant.From(grown) == FusionPlant.DoomPot,
+            "Doom Pumpkin can replace the pot underneath it and spend charge on just one candidate");
         var feedBoard = new Board();
         var seaShell = Plant(feedBoard, FusionPlant.SeaShell);
         seaShell.mPlantHealth = 1000;

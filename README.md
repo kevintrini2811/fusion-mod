@@ -1,4 +1,6 @@
-# Fusion Mod 24.14.0
+# Fusion Mod 24.15.0
+
+Version 24.15.0 adds Pumpkin Brazier and Doom Pumpkin. Place Torchwood or Doom-shroom on Pumpkin for the respective fusion. After 51 pea ignitions or thaws, Pumpkin Brazier grows a Roasted Pumpkin in the first free shell position to its right. Ice Pot cools that child into a regular Pumpkin. Doom Pumpkin spends 100 energy to apply a Doom-shroom recipe to one plant on its tile and skips Ultimate results. Both fusions use tinted versions of existing shell models.
 
 Version 24.14.0 adds Curse-shroom and Zodiac-shroom in both recipe orders. Curse-shroom hypnotizes its biter and leaves a Doom crater when that zombie dies or leaves the lawn. Zodiac-shroom hypnotizes its biter and launches rotating salvos of five sea stars while that zombie lives. [Implementation notes](references/hypno-bite-pair/implementation-notes.md) and [gameplay acceptance](references/hypno-bite-pair/acceptance.json).
 

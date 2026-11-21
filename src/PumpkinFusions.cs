@@ -94,6 +94,11 @@ internal static class PumpkinFusions
         plant.mTargetX = identity == FusionPlant.NutShell ? 3 : identity == FusionPlant.SpikyPumpkin ? -1 : 0;
         if (identity == FusionPlant.WindyPumpkin) plant.mLaunchCounter = 3000;
         if (identity == FusionPlant.JackOPlantern) plant.mLaunchCounter = 1500;
+        if (identity == FusionPlant.DoomPumpkin)
+        {
+            plant.mTargetX = 80 + plant.mBoard.Rand(16);
+            plant.mLaunchCounter = 10 + plant.mBoard.Rand(41);
+        }
     }
 
     internal static void Fertilize(Plant plant)
@@ -117,6 +122,11 @@ internal static class PumpkinFusions
         if (!ChomperFusions.Active(plant)) return;
         if (!FusionTime.SourceStep(plant, typeof(PumpkinFusions))) return;
         var identity = FusionPlant.From(plant);
+        if (identity == FusionPlant.DoomPumpkin)
+        {
+            TickDoom(plant);
+            return;
+        }
         if (identity == FusionPlant.WindyPumpkin || identity == FusionPlant.JackOPlantern)
         {
             if (plant.mLaunchCounter > 0 && --plant.mLaunchCounter > 0) return;
@@ -163,6 +173,53 @@ internal static class PumpkinFusions
             }
         }
         --plant.mStartRow;
+    }
+
+    private static void TickDoom(Plant shell)
+    {
+        if (shell.NotOnGround() || shell.mLaunchCounter > 0 && --shell.mLaunchCounter > 0) return;
+        shell.mLaunchCounter = 50;
+        if (shell.mTargetX < 100 && ++shell.mTargetX < 100) return;
+
+        var board = shell.mBoard;
+        int col = shell.mPlantCol, row = shell.mRow;
+        for (int i = 0; i < board.m_plants.Count; ++i)
+        {
+            var plant = board.m_plants[i];
+            if (plant == null || plant.Pointer == shell.Pointer || plant.mPlantCol != col || plant.mRow != row
+                || !ShroomSlots.Live(plant)) continue;
+            var ingredient = FusionPlant.From(plant);
+            // Gatling Doom is Ultimate in the source. Other currently
+            // registered Doom-shroom recipe results pass its Ultimate filter.
+            if (!FusionRecipes.TryGet(ingredient, SeedType.Doomshroom, out var result)
+                || result == FusionPlant.GatlingDoom
+                || !FusionRecipes.AcceptsIngredient(plant, result)
+                || !CanDoomFuse(shell, plant, result)) continue;
+
+            var previous = PlayerPlantingScope.Current;
+            PlayerPlantingScope.Current = null;
+            try
+            {
+                var fused = board.AddPlant(col, row, result.NativeType, result.Marker);
+                if (fused == null || fused.mDead || !fused.mIsOnBoard) return;
+                if (ShroomSlots.IsSmall(ingredient) && ShroomSlots.IsSmall(result))
+                    ShroomSlots.Position(fused, col, row, ShroomSlots.Slot(plant));
+                shell.mTargetX -= 100;
+                FusionService.CompleteFusion(fused, plant, SeedType.Doomshroom, activateIce: false);
+                if (!fused.mDead && fused.mIsOnBoard) board.DoPlantingEffects(col, row, fused);
+            }
+            finally { PlayerPlantingScope.Current = previous; }
+            return;
+        }
+    }
+
+    private static bool CanDoomFuse(Plant shell, Plant target, FusionPlant result)
+    {
+        // Native placement rejects inserting a pot under a pumpkin. This
+        // transmutation replaces the already present support in its own slot.
+        var board = shell.mBoard;
+        using var hidden = result == FusionPlant.DoomPot ? new PlantQueryHide(board, new[] { shell }) : null;
+        return FusionService.CheckFusionPlacement(board, target, result) == PlantingReason.Ok;
     }
 
     // The original kernel grows over 50 seconds in Update, independently of

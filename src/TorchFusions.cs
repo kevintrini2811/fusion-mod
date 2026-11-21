@@ -30,23 +30,27 @@ internal static class TorchFusions
     private static IEnumerable<Plant> Crossings(Projectile shot, bool aquaticOnly)
     {
         List<Plant>? candidates = null;
+        bool backwards = shot.mMotionType == ProjectileMotion.Backwards;
+        float dx = backwards ? -3.33f : shot.mVelX;
         foreach (var entry in TorchPlantIndex.For(shot.mBoard))
         {
             var plant = entry.Plant;
             if (!entry.IsCurrent(shot.mBoard)) continue;
             var identity = FusionPlant.From(plant);
-            if (!(Aquatic(identity) || !aquaticOnly && Owns(identity))
-                || !BeamShooters.Active(plant) || plant.NotOnGround() || plant.mRow != shot.mRow
+            bool brazier = identity == FusionPlant.PumpkinBrazier;
+            if (!(Aquatic(identity) || !aquaticOnly && (Owns(identity) || brazier))
+                || !BeamShooters.Active(plant) || plant.NotOnGround()
+                || plant.mRow != shot.mRow && !(brazier && shot.mMotionType is ProjectileMotion.Homing or ProjectileMotion.Star)
                 || shot.mHitTorchwoodGridX == plant.mPlantCol) continue;
             float x = plant.mX + plant.mWidth / 2f;
             float y = plant.mY + plant.mHeight / 2f;
-            if (Math.Min(shot.mPosX, shot.mPosX + shot.mVelX) > x + 16
-                || Math.Max(shot.mPosX, shot.mPosX + shot.mVelX) < x - 16
+            if (Math.Min(shot.mPosX, shot.mPosX + dx) > x + 16
+                || Math.Max(shot.mPosX, shot.mPosX + dx) < x - 16
                 || Math.Abs(shot.mPosY + shot.mPosZ - y) > 60) continue;
             (candidates ??= new()).Add(plant);
         }
         if (candidates == null) return Array.Empty<Plant>();
-        return shot.mVelX >= 0 ? candidates.OrderBy(p => p.mPlantCol)
+        return dx >= 0 ? candidates.OrderBy(p => p.mPlantCol)
             : candidates.OrderByDescending(p => p.mPlantCol);
     }
 
@@ -68,7 +72,15 @@ internal static class TorchFusions
             if (Aquatic(identity))
             {
                 if (hypno || star) continue;
-                if (ConvertAquatic(shot, plant, snow, small)) CreditAquatic(plant, identity);
+                if (ConvertPea(shot, plant, snow, small)) CreditAquatic(plant, identity);
+                return;
+            }
+            if (identity == FusionPlant.PumpkinBrazier)
+            {
+                if (hypno || star) continue;
+                if (ConvertPea(shot, plant, snow, small: false) && ++plant.mTargetX > 50
+                    && TorchweedFusions.SummonAhead(plant, FusionPlant.RoastedPumpkin))
+                    plant.mTargetX = 0;
                 return;
             }
             if (star)
@@ -116,7 +128,7 @@ internal static class TorchFusions
         }
     }
 
-    private static bool ConvertAquatic(Projectile shot, Plant plant, bool snow, bool small)
+    private static bool ConvertPea(Projectile shot, Plant plant, bool snow, bool small)
     {
         FusionProjectileTime.AdoptConversion(shot);
         ImportedPeaVisuals.ForgetProjectile(shot);

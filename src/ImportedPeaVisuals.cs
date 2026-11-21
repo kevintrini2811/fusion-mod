@@ -465,6 +465,8 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.RoastedSquash, "RoastedSquash"),
         new(FusionPlant.RoastedWallNut, "RoastedWallNut"),
         new(FusionPlant.RoastedPumpkin, "RoastedPumpkin"),
+        new(FusionPlant.PumpkinBrazier, "RoastedPumpkin"),
+        new(FusionPlant.DoomPumpkin, "FumingPumpkin"),
         new(FusionPlant.RoastedPotato, "RoastedPotato"),
         new(FusionPlant.TideShroom, "TideShroom"),
         new(FusionPlant.TorchDriftwood, "TideShroom"),
@@ -2045,7 +2047,8 @@ internal static partial class ImportedPeaVisuals
                 if (!preview && Plant.mLaunchCounter > 0)
                     ApplySprites(model.Clips["flash"], (100 - Plant.mLaunchCounter) * .01f);
             }
-            if (FusionPlant.IsPumpkinFusion(assets.Identity))
+            bool pumpkinShell = FusionPlant.IsPumpkinFusion(assets.Identity) || assets.Identity == FusionPlant.RoastedPumpkin;
+            if (pumpkinShell)
             {
                 int stage = Plant.mPlantHealth * 3L > Plant.mPlantMaxHealth * 2L ? 0
                     : Plant.mPlantHealth * 3L > Plant.mPlantMaxHealth ? 1 : 2;
@@ -2088,7 +2091,7 @@ internal static partial class ImportedPeaVisuals
                 for (int i = 0; i < model.Nodes.Length; ++i)
                     if (renderers[i] != null && model.Nodes[i].Path.StartsWith("leaves/", StringComparison.Ordinal))
                         renderers[i]!.sortingOrder += 32;
-            if (!preview && FusionPlant.IsPumpkinFusion(assets.Identity))
+            if (!preview && pumpkinShell)
             {
                 // A single SortingGroup cannot enclose another controller.
                 // Place the source back and face on either side of its occupant.
@@ -2243,6 +2246,8 @@ internal static partial class ImportedPeaVisuals
             if (assets.Identity == FusionPlant.CometShroom) tint *= new Color(1, .84f, .46f, 1);
             if (assets.Identity == FusionPlant.CatalystShroom) tint *= new Color(1, .46f, .61f, 1);
             if (assets.Identity == FusionPlant.CryonicShroom) tint *= new Color(.52f, .85f, 1, 1);
+            if (assets.Identity == FusionPlant.PumpkinBrazier) tint *= new Color(1, .73f, .43f, 1);
+            if (assets.Identity == FusionPlant.DoomPumpkin) tint *= new Color(.62f, .61f, .82f, 1);
             for (int i = 0; i < renderers.Length; ++i)
                 if (renderers[i] != null)
                 {

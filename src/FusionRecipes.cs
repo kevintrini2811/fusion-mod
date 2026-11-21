@@ -128,6 +128,8 @@ internal static class FusionRecipes
         [(SeedType.Pumpkinshell, SeedType.Melonpult)] = FusionPlant.MelonShell,
         [(SeedType.Pumpkinshell, SeedType.Iceshroom)] = FusionPlant.CryoPumpkin,
         [(SeedType.Pumpkinshell, SeedType.Jalapeno)] = FusionPlant.PyroPumpkin,
+        [(SeedType.Pumpkinshell, SeedType.Torchwood)] = FusionPlant.PumpkinBrazier,
+        [(SeedType.Pumpkinshell, SeedType.Doomshroom)] = FusionPlant.DoomPumpkin,
         [(SeedType.Garlic, SeedType.Doomshroom)] = FusionPlant.DoomGarlic,
         [(SeedType.Wallnut, SeedType.Doomshroom)] = FusionPlant.DoomNut,
         [(SeedType.Sunflower, SeedType.Doomshroom)] = FusionPlant.Doomflower,
@@ -459,6 +461,7 @@ internal static class FusionRecipes
             || incoming == (FusionPlant)SeedType.Magnetshroom || incoming == (FusionPlant)SeedType.Doomshroom
             || incoming == (FusionPlant)SeedType.Torchwood)
         || existing == (FusionPlant)SeedType.Tanglekelp && incoming == (FusionPlant)SeedType.Torchwood
+        || existing == (FusionPlant)SeedType.Pumpkinshell && incoming is { NativeType: SeedType.Torchwood or SeedType.Doomshroom, Marker: SeedType.None }
         || existing == FusionPlant.RustShroom && incoming == FusionPlant.FootballHelmet
         || existing == FusionPlant.DormantShroom && incoming == FusionPlant.Bucket;
 

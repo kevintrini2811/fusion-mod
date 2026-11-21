@@ -18,6 +18,7 @@
     <Compile Include="SeaSupportCases.cs" />
     <Compile Include="PumpkinCases.cs" />
     <Compile Include="../src/PumpkinFusions.cs" />
+    <Compile Include="../src/PlantQueryHide.cs" />
     <Compile Include="../src/AirDefenses.cs" />
     <Compile Include="../src/SeaSupportFusions.cs" />
     <Compile Include="../src/SeaFusions.cs" />

@@ -28,7 +28,7 @@ internal static class TorchPlantIndex
         {
             var plant = source[i];
             if (plant != null && plant.mSeedType is SeedType.Torchwood or SeedType.Potatomine or SeedType.Spikeweed
-                or SeedType.Seashroom or SeedType.Tanglekelp)
+                or SeedType.Seashroom or SeedType.Tanglekelp or SeedType.Pumpkinshell)
                 (candidates ??= new()).Add(new(plant, (uint)plant.DataID));
         }
         // Replace the array instead of mutating it: a nested conversion or

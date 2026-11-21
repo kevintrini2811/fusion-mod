@@ -245,8 +245,13 @@ internal static class TorchweedFusions
         var board = plant.mBoard;
         for (int col = plant.mPlantCol + 1; col < 9; ++col)
         {
+            // Native Pumpkin placement can accept repairs on damaged shells.
+            // A free child needs its own empty accessory slot.
+            if (result == FusionPlant.RoastedPumpkin
+                && board.GetPlantsOnLawn(col, plant.mRow).PumpkinPlant is { mDead: false }) continue;
             if (FusionService.CheckNativePlacement(board, col, plant.mRow, result.NativeType) != PlantingReason.Ok) continue;
-            return SummonAt(plant, result, col);
+            if (SummonAt(plant, result, col)) return true;
+            if (result != FusionPlant.RoastedPumpkin) return false;
         }
         return false;
     }
@@ -258,8 +263,11 @@ internal static class TorchweedFusions
         {
             // A free summon has no player seed transaction.
             PlayerPlantingScope.Current = null;
-            var child = plant.mBoard.AddPlant(col, plant.mRow, result.NativeType, result.Marker);
-            return child != null && !child.mDead && child.mIsOnBoard;
+            var board = plant.mBoard;
+            var child = board.AddPlant(col, plant.mRow, result.NativeType, result.Marker);
+            if (child == null || child.mDead || !child.mIsOnBoard) return false;
+            if (result == FusionPlant.RoastedPumpkin) board.DoPlantingEffects(col, child.mRow, child);
+            return true;
         }
         finally { PlayerPlantingScope.Current = previous; }
     }

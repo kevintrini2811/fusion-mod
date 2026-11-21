@@ -319,6 +319,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
     internal static readonly FusionPlant RoastedSquash = new(SeedType.Squash, SeedType.Cobcannon);
     internal static readonly FusionPlant RoastedWallNut = new(SeedType.Wallnut, SeedType.Cobcannon);
     internal static readonly FusionPlant RoastedPumpkin = new(SeedType.Pumpkinshell, SeedType.Cobcannon);
+    internal static readonly FusionPlant PumpkinBrazier = new(SeedType.Pumpkinshell, SeedType.Torchwood);
+    internal static readonly FusionPlant DoomPumpkin = new(SeedType.Pumpkinshell, SeedType.Doomshroom);
     internal static readonly FusionPlant RoastedPotato = new(SeedType.Potatomine, SeedType.Cobcannon);
     internal static readonly FusionPlant TideShroom = new(SeedType.Seashroom, SeedType.Blover);
     internal static readonly FusionPlant TorchDriftwood = new(SeedType.Seashroom, SeedType.Torchwood);
@@ -559,7 +561,7 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == SpikyPumpkin || plant == JackOPlantern || plant == SeaShell ||
         plant == PumpkinPod || plant == MelonShell || plant == CryoPumpkin ||
         plant == PyroPumpkin || plant == Chompkin || plant == PumpkinMine ||
-        plant == SunnyPumpkin;
+        plant == SunnyPumpkin || plant == PumpkinBrazier || plant == DoomPumpkin;
 
     internal static bool IsCactusFusion(FusionPlant plant) =>
         plant == SaguaroShroom || plant == IceCactus || plant == MagnetCactus ||
@@ -693,24 +695,24 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
         plant == SunnyPumpkin || plant == GlacierShroom || plant == ThreetatoMine ||
         plant == MarigoldMine || plant == UmbrellaKale || plant == UmbrellaRind ||
         plant == LumosUmbrella || plant == IcePot || plant == RoastedSquash ||
-        plant == RoastedWallNut || plant == RoastedPumpkin || plant == RoastedPotato ||
-        plant == TideShroom || plant == TorchDriftwood || plant == RoastedSeaShroom ||
-        plant == BlacklightPlantern || plant == Scorchwood || plant == Stenchwood ||
-        plant == Nutwood || plant == Torchthree || plant == Sparkwood ||
-        plant == Hypnowood || plant == HotPotato || plant == Boomwood ||
-        plant == Squashwood || plant == Torchweed || plant == RoastedSpikeweed ||
-        plant == HypnoChomper || plant == BoltPult || plant == FootballShroom ||
-        plant == DoomplateShroom || plant == NibbleShroom || plant == Squish ||
-        plant == GulperShroom || plant == WeedSpreader || plant == MagnetBlover ||
-        plant == LumosMagnet || plant == SolarMagnet || plant == GrenadierMagnet ||
-        plant == PepperPopper || plant == MadPepper || plant == Hoverleaf ||
-        plant == DroneNut || plant == CactusDrone || plant == CherryDrone ||
-        plant == FallMelon || plant == SquashDrone || plant == LumosAngler ||
-        plant == Starglow || plant == FrostburnWood || plant == DoomPult ||
-        plant == Bombrella || plant == Levitater || plant == AnchorShroom ||
-        plant == OrcaShroom || plant == TrippyShroom || plant == CometShroom ||
-        plant == CatalystShroom || plant == CryonicShroom || plant == CurseShroom ||
-        plant == ZodiacShroom;
+        plant == RoastedWallNut || plant == RoastedPumpkin || plant == PumpkinBrazier ||
+        plant == DoomPumpkin || plant == RoastedPotato || plant == TideShroom ||
+        plant == TorchDriftwood || plant == RoastedSeaShroom || plant == BlacklightPlantern ||
+        plant == Scorchwood || plant == Stenchwood || plant == Nutwood ||
+        plant == Torchthree || plant == Sparkwood || plant == Hypnowood ||
+        plant == HotPotato || plant == Boomwood || plant == Squashwood ||
+        plant == Torchweed || plant == RoastedSpikeweed || plant == HypnoChomper ||
+        plant == BoltPult || plant == FootballShroom || plant == DoomplateShroom ||
+        plant == NibbleShroom || plant == Squish || plant == GulperShroom ||
+        plant == WeedSpreader || plant == MagnetBlover || plant == LumosMagnet ||
+        plant == SolarMagnet || plant == GrenadierMagnet || plant == PepperPopper ||
+        plant == MadPepper || plant == Hoverleaf || plant == DroneNut ||
+        plant == CactusDrone || plant == CherryDrone || plant == FallMelon ||
+        plant == SquashDrone || plant == LumosAngler || plant == Starglow ||
+        plant == FrostburnWood || plant == DoomPult || plant == Bombrella ||
+        plant == Levitater || plant == AnchorShroom || plant == OrcaShroom ||
+        plant == TrippyShroom || plant == CometShroom || plant == CatalystShroom ||
+        plant == CryonicShroom || plant == CurseShroom || plant == ZodiacShroom;
 
     internal static FusionPlant From(Plant plant) =>
         (plant.mSeedType, plant.mImitaterType) switch
@@ -1025,6 +1027,8 @@ internal readonly record struct FusionPlant(SeedType NativeType, SeedType Marker
             (SeedType.Squash, SeedType.Cobcannon) => RoastedSquash,
             (SeedType.Wallnut, SeedType.Cobcannon) => RoastedWallNut,
             (SeedType.Pumpkinshell, SeedType.Cobcannon) => RoastedPumpkin,
+            (SeedType.Pumpkinshell, SeedType.Torchwood) => PumpkinBrazier,
+            (SeedType.Pumpkinshell, SeedType.Doomshroom) => DoomPumpkin,
             (SeedType.Potatomine, SeedType.Cobcannon) => RoastedPotato,
             (SeedType.Seashroom, SeedType.Blover) => TideShroom,
             (SeedType.Seashroom, SeedType.Torchwood) => TorchDriftwood,

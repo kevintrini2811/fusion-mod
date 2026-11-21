@@ -38,10 +38,12 @@ namespace Il2CppReloaded.Gameplay {
         public int GetNumRows() => 5;
         public int GridToPixelX(int col,int row) => col*80; public int GridToPixelY(int col,int row) => row*100;
         public int Cards;
+        public Plant? LastPlantingEffect;
+        public void DoPlantingEffects(int col, int row, Plant plant) => LastPlantingEffect = plant;
         public Coin? AddCoin(float x,float y,CoinType type,CoinMotion motion) { if(FailAllocation)return null; ++Cards;return new Coin(); }
         public Lawn GetPlantsOnLawn(int col,int row)
         {
-            var occupants = m_plants.Where(p => !p.mDead && p.mPlantCol == col && p.mRow == row);
+            var occupants = m_plants.Where(p => !p.mDead && p.mIsOnBoard && !p.mSquished && p.mPlantCol == col && p.mRow == row);
             return new Lawn {
                 NormalPlant = occupants.FirstOrDefault(p => p.mSeedType != SeedType.Pumpkinshell && !FusionMod.AirDefenses.Owns(FusionMod.FusionPlant.From(p))),
                 PumpkinPlant = occupants.FirstOrDefault(p => p.mSeedType == SeedType.Pumpkinshell),
@@ -80,7 +82,7 @@ namespace Il2CppReloaded.Gameplay {
         public Board mBoard = null!; public SeedType mSeedType,mImitaterType;
         public int mPlantHealth=300,mPlantMaxHealth=300,mDoSpecialCountdown,mStartRow,mShootingCounter,mTargetX,mTargetY,mLaunchCounter,mLaunchRate;
         public int mPlantCol,mRow,mWidth=80,mHeight=80,mRenderOrder,mEatenFlashCountdown;
-        public float mX,mY; public bool mDead,mIsAsleep,mIsOnBoard=true,Carried;
+        public float mX,mY; public bool mDead,mIsAsleep,mIsOnBoard=true,Carried,mSquished;
         public Rect GetPlantAttackRect(PlantWeapon weapon) => new(mX - 20,mY,mX + 100,mY + 80);
         public bool NotOnGround() => Carried; public void Die() => mDead=true;
         public void MouseDown() {} public void Squish() {} public void SpikeRockTakeDamage() {} public void PlantInitialize() {} public void UpdateAbilities() {} public void StarFruitFire() {} public void UpdateShooter() {} public void UpdateShooting() {} public void Fire() {} public void DoSpecial() {}
@@ -122,6 +124,14 @@ namespace FusionMod {
     internal static class PotFusions { internal static void FadeFog(IntPtr array,int cols,int rows,int col,int row,int radius=0) { } }
     internal static class PuffShooters { internal const float FlightHeight = 40; }
     internal static class PlayerPlantingScope { internal static IntPtr ConsumingIngredient = IntPtr.Zero; internal static object? Current; internal static Il2CppReloaded.Gameplay.Board? ActiveBoard = null; internal static void Consume(Plant plant) => plant.Die(); }
+    internal static class ShroomSlots
+    {
+        internal static bool Live(Plant plant) => !plant.mDead && plant.mIsOnBoard && !plant.mSquished && !plant.NotOnGround();
+        internal static bool IsSmall(FusionPlant plant) => plant.NativeType is SeedType.Puffshroom or SeedType.Sunshroom;
+        internal static int Slot(Plant plant) => 0;
+        internal static void Position(Plant plant, int col, int row, int slot)
+        { plant.mPlantCol = col; plant.mRow = row; }
+    }
     internal static class FusionService {
         internal static bool CreatingBatch = false,CheckingNativePlacement = false;
         internal static PlantingReason CheckNativePlacement(Board board,int col,int row,SeedType type) => PlantingReason.Ok;
@@ -130,7 +140,10 @@ namespace FusionMod {
             var p=board.GetPlantsOnLawn(col,row).NormalPlant;
             return p!=null&&FusionRecipes.TryGet(FusionPlant.From(p),incoming,out var result)?new(){new(p,result)}:new();
         }
-        internal static Il2CppReloaded.Gameplay.PlantingReason CheckFusionPlacement(Il2CppReloaded.Gameplay.Board b,Il2CppReloaded.Gameplay.Plant p,FusionPlant result) => Il2CppReloaded.Gameplay.PlantingReason.Ok;
+        internal static PlantingReason CheckFusionPlacement(Board board, Plant target, FusionPlant result) =>
+            result == FusionPlant.DoomPot && board.GetPlantsOnLawn(target.mPlantCol, target.mRow).PumpkinPlant != null
+                ? PlantingReason.NotHere : PlantingReason.Ok;
+        internal static void CompleteFusion(Plant fused, Plant target, FusionPlant incoming, bool activateIce = true) => target.Die();
         internal static void CompleteBatch(Il2CppReloaded.Gameplay.Board board,FusionPlant incoming,List<Plan> plans) {
             if(board.FailAllocation)throw new InvalidOperationException("allocation");
             foreach(var plan in plans) plan.Target.Die();

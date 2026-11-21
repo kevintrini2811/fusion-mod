@@ -13,7 +13,7 @@ namespace Il2CppReloaded.Gameplay {
  public struct Vector2 {public float x,y;public Vector2(float a,float b){x=a;y=b;}}
  public struct Rect { public Vector2 center=>new((xMin+xMax)/2,0);public float yMin=>0;public float yMax=>80;public float xMin,xMax; public Rect(float left,float right){xMin=left;xMax=right;} }
  public enum ProjectileType { Pea,PeashooterPea,Snowpea,Star,Fireball,PeashooterFireball }
- public enum ProjectileMotion { Straight,Threepeater,Star,Puff,Homing }
+ public enum ProjectileMotion { Straight,Threepeater,Star,Puff,Homing,Backwards }
  public enum ZombieID:uint {}
  public enum PlantState { Notready }
  public enum PlantingReason { Ok,NotHere }
@@ -24,14 +24,19 @@ namespace Il2CppReloaded.Gameplay {
  public sealed class Board {
   private static long next;public IntPtr Pointer=(IntPtr)(++next);public int RandomValue=100000;public int Rand(int maximum)=>Math.Clamp(RandomValue,0,maximum-1);public int mMainCounter;public bool mPaused,Full,FailPlant; public readonly CountingPlants m_plants=new(); public readonly List<Projectile> Shots=new();public readonly List<Zombie> m_zombies=new();public App mApp=new();
   public readonly HashSet<(int Col,int Row)> Blocked=new();
+  public Plant? LastPlantingEffect;
   public List<Projectile> m_projectiles=>Shots;public float GetPosYBasedOnRow(float x,int row)=>0;
-  public Layers GetPlantsOnLawn(int col,int row)=>new(){NormalPlant=m_plants.FirstOrDefault(p=>!p.mDead&&p.mPlantCol==col&&p.mRow==row)};
+  public Layers GetPlantsOnLawn(int col,int row)=>new(){
+   NormalPlant=m_plants.FirstOrDefault(p=>!p.mDead&&p.mPlantCol==col&&p.mRow==row&&p.mSeedType!=SeedType.Pumpkinshell),
+   PumpkinPlant=m_plants.FirstOrDefault(p=>!p.mDead&&p.mPlantCol==col&&p.mRow==row&&p.mSeedType==SeedType.Pumpkinshell)
+  };
   public void DisposeBoard(){}
+  public void DoPlantingEffects(int col,int row,Plant plant)=>LastPlantingEffect=plant;
   public int GetNumRows()=>6;
   public Projectile AddProjectile(float x,float y,int order,int row,ProjectileType type) { var p=new Projectile {mBoard=this,mPosX=x,mPosY=y,mRow=row,mProjectileType=type};Shots.Add(p);return p; }
   public Plant? AddPlant(int col,int row,SeedType seed,SeedType marker) { if(FailPlant)return null;var p=new Plant {mBoard=this,mPlantCol=col,mRow=row,mSeedType=seed,mImitaterType=marker};m_plants.Add(p);return p; }
  }
- public sealed class Layers {public Plant? NormalPlant;}
+ public sealed class Layers {public Plant? NormalPlant,PumpkinPlant;}
  public sealed class Plant {
   private static uint next;public uint DataID=++next;public void Die()=>mDead=true;
   public Board mBoard=null!;public SeedType mSeedType,mImitaterType;public bool mDead,mIsAsleep,mIsOnBoard=true;

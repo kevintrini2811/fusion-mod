@@ -37,6 +37,40 @@ TorchFusions.Convert(Shot(obstructed));
 Check(obstructed.mTargetX == 0 && obstructed.mBoard.m_plants.Count == 1,
     "a blocked immediate right cell spends Driftwood credit without scanning farther");
 
+var brazier = Make(FusionPlant.PumpkinBrazier);
+Check(FusionRecipes.TryGet(SeedType.Pumpkinshell, SeedType.Torchwood, out var brazierRecipe)
+    && brazierRecipe == FusionPlant.PumpkinBrazier
+    && !FusionRecipes.TryGet(SeedType.Torchwood, SeedType.Pumpkinshell, out _), "Brazier recipe is directed");
+Check(FusionRecipes.TryGet(SeedType.Pumpkinshell, SeedType.Doomshroom, out var doomPumpkinRecipe)
+    && doomPumpkinRecipe == FusionPlant.DoomPumpkin
+    && !FusionRecipes.TryGet(SeedType.Doomshroom, SeedType.Pumpkinshell, out _), "Doom Pumpkin recipe is directed");
+Check(!FusionRecipes.Partners(FusionPlant.RoastedPumpkin).Any(), "Roasted Pumpkin is excluded from every recipe");
+for (int i = 0; i < 50; ++i) TorchFusions.Convert(Shot(brazier));
+Check(brazier.mTargetX == 50 && brazier.mBoard.m_plants.Count == 1, "Brazier waits through 50 conversions");
+var wrongRow = Shot(brazier);
+++wrongRow.mRow;
+TorchFusions.Convert(wrongRow);
+TorchFusions.Convert(Shot(brazier, tag: -20));
+Check(wrongRow.mProjectileType == ProjectileType.Pea && brazier.mTargetX == 50,
+    "ordinary off-lane and hypnotized-zombie peas do not charge Brazier");
+var firstShell = brazier.mBoard.AddPlant(4, brazier.mRow, SeedType.Pumpkinshell, SeedType.None)!;
+var interior = brazier.mBoard.AddPlant(6, brazier.mRow, SeedType.Peashooter, SeedType.None)!;
+brazier.mBoard.Blocked.Add((5, brazier.mRow));
+brazier.mBoard.Full = true;
+var cold = Shot(brazier, ProjectileType.Snowpea);
+TorchFusions.Convert(cold);
+TorchFusions.Convert(cold);
+Check(cold.mProjectileType == ProjectileType.Pea && brazier.mTargetX == 51, "thaw charges only once and a full row keeps credit");
+brazier.mBoard.Full = false;
+var backwards = Shot(brazier);
+backwards.mMotionType = ProjectileMotion.Backwards;
+backwards.mPosX = brazier.mX + brazier.mWidth / 2 + 18;
+TorchFusions.Convert(backwards);
+var roastedPumpkin = brazier.mBoard.m_plants.Single(p => FusionPlant.From(p) == FusionPlant.RoastedPumpkin);
+Check(backwards.mProjectileType == ProjectileType.Fireball && brazier.mTargetX == 0 && roastedPumpkin.mPlantCol == 6
+    && !firstShell.mDead && !interior.mDead, "next crossing skips blocked and occupied shells and spawns above the first legal interior");
+Check(brazier.mBoard.LastPlantingEffect == roastedPumpkin, "Brazier uses the native planting effect for the spawned child");
+
 var torchKelp = Make(FusionPlant.TorchKelp);
 torchKelp.mTargetX = 99;
 var smallKelpShot = Shot(torchKelp, tag: -460010);

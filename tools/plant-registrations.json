@@ -1558,6 +1558,18 @@
       "marker": "Cobcannon"
     },
     {
+      "name": "PumpkinBrazier",
+      "native": "Pumpkinshell",
+      "marker": "Torchwood",
+      "model": "RoastedPumpkin"
+    },
+    {
+      "name": "DoomPumpkin",
+      "native": "Pumpkinshell",
+      "marker": "Doomshroom",
+      "model": "FumingPumpkin"
+    },
+    {
       "name": "RoastedPotato",
       "native": "Potatomine",
       "marker": "Cobcannon"
@@ -2189,7 +2201,9 @@
       "PyroPumpkin",
       "Chompkin",
       "PumpkinMine",
-      "SunnyPumpkin"
+      "SunnyPumpkin",
+      "PumpkinBrazier",
+      "DoomPumpkin"
     ],
     "IsCactusFusion": [
       "SaguaroShroom",
