@@ -73,7 +73,7 @@ namespace Il2CppReloaded.Gameplay {
     public class FogArray { public IntPtr Pointer; public T Cast<T>() where T:new()=>new(); }
     public enum CursorType { Normal, Shovel }
     public class Cursor { public CursorType CursorType; }
-    public enum PlantState { Ready, UmbrellaTriggered }
+    public enum PlantState { Ready, UmbrellaTriggered, UmbrellaReflecting }
     public class Plant {
         public App mApp => mBoard.mApp;
         public PlantState mState;
@@ -185,7 +185,7 @@ namespace FusionMod {
 namespace Il2CppSystem { public class Array { public int GetLength(int dimension) => dimension==0?12:7; } }
 
 namespace FusionMod { internal static class CherryShooter { internal static bool IsExplosive(Il2CppReloaded.Gameplay.Projectile p) => p.mCobTargetX == -41010; } }
-namespace FusionMod { internal static class OrcaShroom { internal static void Shoot(Il2CppReloaded.Gameplay.Plant plant) { } } }
+namespace FusionMod { internal static partial class OrcaShroom { internal static void Shoot(Il2CppReloaded.Gameplay.Plant plant) { } } }
 
 namespace LawnGlove { public static class LawnGloveMod { public static Il2CppReloaded.Gameplay.Plant? GetCarriedPlant(Il2CppReloaded.Gameplay.Board board) => board.m_plants.FirstOrDefault(p=>p.Carried); } }
 

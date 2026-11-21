@@ -10,7 +10,7 @@ internal static class TorchFusions
 {
     internal static bool Owns(FusionPlant identity) => identity == FusionPlant.Nutwood || identity == FusionPlant.Squashwood
         || identity == FusionPlant.Torchthree || identity == FusionPlant.Sparkwood || identity == FusionPlant.Hypnowood
-        || identity == FusionPlant.TorchDriftwood;
+        || identity == FusionPlant.TorchDriftwood || identity == FusionPlant.Doomwood;
     private static bool Aquatic(FusionPlant identity) => identity == FusionPlant.TorchKelp
         || identity == FusionPlant.TorchDriftwood;
 
@@ -21,6 +21,7 @@ internal static class TorchFusions
         {
             plant.mPlantHealth = plant.mPlantMaxHealth = identity == FusionPlant.Nutwood ? 4000 : 300;
             plant.mTargetX = plant.mTargetY = plant.mShootingCounter = 0;
+            if (identity == FusionPlant.Doomwood) plant.mTargetY = Doomwood.InitialEnergy;
             // The source Driftwood is a Torchwood with aquatic placement.
             if (identity == FusionPlant.TorchDriftwood) plant.mIsAsleep = false;
         }
@@ -40,7 +41,8 @@ internal static class TorchFusions
             bool brazier = identity == FusionPlant.PumpkinBrazier;
             if (!(Aquatic(identity) || !aquaticOnly && (Owns(identity) || brazier))
                 || !BeamShooters.Active(plant) || plant.NotOnGround()
-                || plant.mRow != shot.mRow && !(brazier && shot.mMotionType is ProjectileMotion.Homing or ProjectileMotion.Star)
+                || plant.mRow != shot.mRow && !((brazier || identity == FusionPlant.Doomwood)
+                    && shot.mMotionType is ProjectileMotion.Homing or ProjectileMotion.Star)
                 || shot.mHitTorchwoodGridX == plant.mPlantCol) continue;
             float x = plant.mX + plant.mWidth / 2f;
             float y = plant.mY + plant.mHeight / 2f;
@@ -65,10 +67,17 @@ internal static class TorchFusions
         bool plain = shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea && shot.mCobTargetX >= 0;
         bool star = shot.mProjectileType == ProjectileType.Star && StarProjectiles.Family(shot) != 3
             && StarProjectiles.Family(shot) != 9 && CactusProjectiles.Family(shot) == 0;
-        if (!snow && !hypno && !small && !plain && !star) return;
+        bool usual = snow || hypno || small || plain || star;
+        if (!usual && !Doomwood.ExtraInput(shot)) return;
         foreach (var plant in Crossings(shot, aquaticOnly: small))
         {
             var identity = FusionPlant.From(plant);
+            if (identity == FusionPlant.Doomwood)
+            {
+                if (Doomwood.Convert(plant, shot, snow, plain)) return;
+                continue;
+            }
+            if (!usual) continue;
             if (Aquatic(identity))
             {
                 if (hypno || star) continue;
@@ -128,7 +137,7 @@ internal static class TorchFusions
         }
     }
 
-    private static bool ConvertPea(Projectile shot, Plant plant, bool snow, bool small)
+    internal static bool ConvertPea(Projectile shot, Plant plant, bool snow, bool small)
     {
         FusionProjectileTime.AdoptConversion(shot);
         ImportedPeaVisuals.ForgetProjectile(shot);
@@ -262,7 +271,14 @@ internal static class HypnowoodBitePatch
 
 [HarmonyPatch(typeof(Plant), nameof(Plant.UpdateAbilities))]
 internal static class TorchFusionAbilityPatch
-{ private static bool Prefix(Plant __instance) => !TorchFusions.Owns(FusionPlant.From(__instance)); }
+{
+    private static bool Prefix(Plant __instance)
+    {
+        var identity = FusionPlant.From(__instance);
+        if (identity == FusionPlant.Doomwood) Doomwood.Tick(__instance);
+        return !TorchFusions.Owns(identity);
+    }
+}
 [HarmonyPatch(typeof(Plant), nameof(Plant.UpdateTorchwood))]
 internal static class TorchFusionNativePatch
 { private static bool Prefix(Plant __instance) => !TorchFusions.Owns(FusionPlant.From(__instance)); }

@@ -480,6 +480,7 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.Hypnowood, "Hypnowood"),
         new(FusionPlant.HotPotato, "HotPotato"),
         new(FusionPlant.Boomwood, "Boomwood"),
+        new(FusionPlant.Doomwood, "Boomwood"),
         new(FusionPlant.Squashwood, "Squashwood"),
         new(FusionPlant.Torchweed, "Torchweed"),
         new(FusionPlant.RoastedSpikeweed, "RoastedSpikeweed"),
@@ -508,6 +509,7 @@ internal static partial class ImportedPeaVisuals
         new(FusionPlant.FrostburnWood, "Scorchwood"),
         new(FusionPlant.DoomPult, "MelonMorph"),
         new(FusionPlant.Bombrella, "UmbrellaHusk"),
+        new(FusionPlant.Doombrella, "UmbrellaHusk"),
         new(FusionPlant.Levitater, "PeatatoMine"),
         new(FusionPlant.AnchorShroom, "LumosMagnet"),
         new(FusionPlant.OrcaShroom, "SharkShroom"),
@@ -2234,6 +2236,9 @@ internal static partial class ImportedPeaVisuals
             }
             if (assets.Identity == FusionPlant.FrostburnWood) tint *= new Color(.65f, .87f, 1, 1);
             if (assets.Identity == FusionPlant.Bombrella) tint *= new Color(1, .69f, .62f, 1);
+            if (assets.Identity == FusionPlant.Doombrella) tint *= new Color(.68f, .57f, 1, 1);
+            if (assets.Identity == FusionPlant.Doomwood) tint *= !preview && Plant.mTargetY <= 0
+                ? new Color(.64f, .60f, .66f, 1) : new Color(.78f, .53f, 1, 1);
             if (assets.Identity == FusionPlant.AnchorShroom) tint *= new Color(.62f, .84f, 1, 1);
             if (assets.Identity == FusionPlant.SolarMagnet) tint *= new Color(1, .84f, .38f, 1);
             if (assets.Identity == FusionPlant.GrenadierMagnet) tint *= new Color(1, .45f, .53f, 1);

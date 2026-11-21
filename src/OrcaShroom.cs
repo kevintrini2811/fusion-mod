@@ -6,10 +6,11 @@ namespace FusionMod;
 
 internal static class OrcaShroom
 {
-    private const int Marker = -520303, BaseDamage = 600, FlightTicks = 150;
+    private const int Marker = -520303, UmbrellaCarrier = -520304;
+    private const int BaseDamage = 600, UmbrellaDamage = 80, FlightTicks = 150;
 
     internal static bool IsShot(Projectile shot) => shot.mProjectileType == ProjectileType.Melon
-        && shot.mCobTargetX == Marker;
+        && shot.mCobTargetX is Marker or UmbrellaCarrier;
 
     internal static void Shoot(Plant plant)
     {
@@ -26,14 +27,56 @@ internal static class OrcaShroom
         board.mApp.SoundSystem.PlayFoley(FoleyType.Throw);
     }
 
+    internal static void LaunchUmbrella(Plant plant)
+    {
+        var board = plant.mBoard;
+        float x = plant.mX + plant.mWidth * .5f, y = plant.mY + plant.mHeight * .5f - 10;
+        var carrier = board.AddProjectile(x, y, plant.mRenderOrder + 1, plant.mRow, ProjectileType.Melon);
+        if (carrier == null || carrier.mDead) return;
+        carrier.mCobTargetX = UmbrellaCarrier;
+        carrier.mCobTargetRow = UmbrellaDamage;
+        LobberFlight.LaunchAt(carrier, x, y, FlightTicks);
+        ImportedPeaVisuals.EnsureDoomProjectile(carrier);
+        board.mApp.SoundSystem.PlayFoley(FoleyType.Throw);
+    }
+
+    private static void SplitUmbrella(Projectile carrier)
+    {
+        var board = carrier.mBoard;
+        float x = carrier.mPosX, y = carrier.mPosY + carrier.mPosZ + PuffShooters.FlightHeight;
+        int row = carrier.mRow, order = carrier.mRenderOrder;
+        int damage = FumeProjectiles.Damage(carrier, UmbrellaDamage);
+        carrier.Die();
+        for (int i = 0; i < board.m_zombies.Count; ++i)
+        {
+            var zombie = board.m_zombies[i];
+            if (zombie == null || zombie.mRow != row || !EmberEffects.Has(zombie)
+                || !SquashFusions.Eligible(board, zombie, DamageRangeFlags.Ground | DamageRangeFlags.Flying
+                    | DamageRangeFlags.Submerged | DamageRangeFlags.OffGround)) continue;
+            var child = board.AddProjectile(x, y, order, row, ProjectileType.Melon);
+            if (child == null || child.mDead) continue;
+            child.mCobTargetX = Marker;
+            child.mCobTargetRow = damage;
+            LobberFlight.Launch(child, zombie, 100);
+            ImportedPeaVisuals.EnsureDoomProjectile(child);
+        }
+    }
+
     internal static void Fly(Projectile shot)
     {
         var board = shot.mBoard;
         if (shot.mDead || board == null || board.mPaused || !ScaredContent.Playing(board)
-            || !FusionTime.SourceStep(shot, typeof(OrcaShroom)) || !LobberFlight.AdvanceMelon(shot)) return;
+            || !FusionTime.SourceStep(shot, typeof(OrcaShroom))) return;
+        bool landed = LobberFlight.AdvanceMelon(shot);
+        if (shot.mCobTargetX == UmbrellaCarrier)
+        {
+            if (shot.mVelZ >= 0) SplitUmbrella(shot);
+            return;
+        }
+        if (!landed) return;
         float x = shot.mPosX, y = shot.mPosY;
         int row = shot.mRow, order = shot.mRenderOrder;
-        int damage = FumeProjectiles.Damage(shot, BaseDamage);
+        int damage = FumeProjectiles.Damage(shot, Math.Max(0, shot.mCobTargetRow));
         uint id = shot.DataID;
         shot.Die();
         if (!shot.mDead || shot.DataID != id || shot.mBoard?.Pointer != board.Pointer

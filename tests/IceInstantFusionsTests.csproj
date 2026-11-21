@@ -14,6 +14,7 @@
     <Compile Include="../src/CherryBombPlants.cs" />
     <Compile Include="../src/CherryShooter.cs" />
     <Compile Include="../src/DoomEffects.cs" />
+    <Compile Include="Adapters/DoomwoodCharge.cs" />
     <Compile Include="../src/FusionRecipes.cs" />
     <Compile Include="BombrellaStubs.cs" />
   </ItemGroup>

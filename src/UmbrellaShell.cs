@@ -20,6 +20,7 @@ internal static class UmbrellaShell
             : identity == FusionPlant.Bombrella ? 600 : 1000;
         plant.mLaunchCounter = plant.mShootingCounter = 0;
         if (identity == FusionPlant.Bombrella) plant.mTargetX = 0;
+        if (identity == FusionPlant.Doombrella) plant.mTargetY = 0;
     }
 
     internal static bool CanHit(Plant plant, Zombie zombie) => !zombie.mDead
@@ -28,19 +29,37 @@ internal static class UmbrellaShell
         && zombie.EffectedByDamage(DamageRangeFlags.Ground)
         && zombie.mZombieType is not (ZombieType.Boss or ZombieType.Zamboni or ZombieType.Catapult);
 
+    internal static void Fertilize(Plant plant)
+    {
+        if (FusionPlant.From(plant) == FusionPlant.Doombrella && plant.mLaunchCounter > 50)
+            plant.mLaunchCounter = 50;
+    }
+
     internal static void Update(Plant plant)
     {
         var identity = FusionPlant.From(plant);
         if (!FusionPlant.IsContactUmbrella(identity) || !ChomperFusions.Active(plant)) return;
         if (!FusionTime.SourceStep(plant, typeof(UmbrellaShell))) return;
         if (plant.mShootingCounter > 0) --plant.mShootingCounter;
-        if (plant.mLaunchCounter > 0 && --plant.mLaunchCounter > 0) return;
+        if (plant.mLaunchCounter > 0) --plant.mLaunchCounter;
+        bool doom = identity == FusionPlant.Doombrella;
+        if (doom)
+        {
+            bool reflecting = plant.mState == PlantState.UmbrellaReflecting;
+            if (reflecting && plant.mTargetY == 0 && plant.mLaunchCounter == 0)
+            {
+                plant.mLaunchCounter = CooldownTicks;
+                OrcaShroom.LaunchUmbrella(plant);
+            }
+            plant.mTargetY = reflecting ? 1 : 0;
+        }
+        if (plant.mLaunchCounter > 0) return;
         if (identity == FusionPlant.UmbrellaThorn) { Thorn(plant); return; }
         var board = plant.mBoard;
         uint plantId = plant.DataID;
         bool clove = identity == FusionPlant.UmbrellaClove;
         float x = plant.mX + plant.mWidth / 2f;
-        bool rowPulse = clove || identity == FusionPlant.Bombrella;
+        bool rowPulse = clove || identity == FusionPlant.Bombrella || doom;
         float y = plant.mY + plant.mHeight / 2f - (rowPulse ? .5f * SourceUnit : 0);
         float radius = rowPulse ? 2 * SourceUnit : 160;
         // Source contact collider is 2.355 units wide. Require contact in the
@@ -60,7 +79,8 @@ internal static class UmbrellaShell
         if (!contact) return;
         plant.mLaunchCounter = CooldownTicks;
         plant.mShootingCounter = AnimationTicks;
-        if (identity == FusionPlant.Bombrella) board.mApp.SoundSystem.PlayFoley(FoleyType.Umbrella);
+        if (identity == FusionPlant.Bombrella || doom) board.mApp.SoundSystem.PlayFoley(FoleyType.Umbrella);
+        if (doom) OrcaShroom.LaunchUmbrella(plant);
         var targets = new List<(Zombie Zombie, uint Id)>();
         for (int i = 0; i < zombies.Count; ++i)
         {
@@ -71,7 +91,7 @@ internal static class UmbrellaShell
             float dy = y - Math.Clamp(y, rect.yMin, rect.yMax);
             if (dx * dx + dy * dy <= radius * radius) targets.Add((zombie, zombie.DataID));
         }
-        int pulseDamage = identity == FusionPlant.UmbrellaKale ? 0
+        int pulseDamage = identity == FusionPlant.UmbrellaKale || doom ? 0
             : identity == FusionPlant.UmbrellaRind ? (int)Math.Min(int.MaxValue, 80L + plant.mTargetX) : 40;
         if (identity == FusionPlant.UmbrellaRind) plant.mTargetX = 0;
         int count = 0;
@@ -100,9 +120,11 @@ internal static class UmbrellaShell
                 ? (PotBoosts.HasSupport(plant, FusionPlant.UmbrellaPot) ? 4 : 2) * SourceUnit
                 : PotBoosts.HasSupport(plant, FusionPlant.UmbrellaPot) ? 240 : 160;
             if (zombie.mIsEating) zombie.StopEating();
-            zombie.mPosX = Math.Min(850, zombie.mPosX + push);
+            float distance = doom ? (PotBoosts.HasSupport(plant, FusionPlant.UmbrellaPot) ? 3 : 2) * SourceUnit : push;
+            zombie.mPosX = Math.Min(850, zombie.mPosX + distance);
             zombie.mX = (int)zombie.mPosX;
             zombie.UpdateZombiePosition();
+            if (doom && zombie.DataID == id && CanHit(plant, zombie)) EmberEffects.Apply(zombie, explode: false);
         }
         // Inherited CornUmbrella.DamageHealth charges once per pulse, by count.
         if (count == 0 || plant.DataID != plantId || plant.mBoard?.Pointer != board.Pointer

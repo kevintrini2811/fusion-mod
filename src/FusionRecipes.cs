@@ -34,6 +34,8 @@ internal static class FusionRecipes
         [(SeedType.Torchwood, SeedType.Wallnut)] = FusionPlant.Nutwood,
         [(SeedType.Potatomine, SeedType.Torchwood)] = FusionPlant.HotPotato,
         [(SeedType.Torchwood, SeedType.Cherrybomb)] = FusionPlant.Boomwood,
+        [(SeedType.Doomshroom, SeedType.Torchwood)] = FusionPlant.Doomwood,
+        [(SeedType.Doomshroom, SeedType.Umbrella)] = FusionPlant.Doombrella,
         [(SeedType.Torchwood, SeedType.Threepeater)] = FusionPlant.Torchthree,
         [(SeedType.Torchwood, SeedType.Starfruit)] = FusionPlant.Sparkwood,
         [(SeedType.Torchwood, SeedType.Hypnoshroom)] = FusionPlant.Hypnowood,

@@ -3,4 +3,5 @@
   <ItemGroup><Compile Include="TorchFusionsTests.cs"/><Compile Include="TorchFusionsStubs.cs"/><Compile Include="../src/TorchFusions.cs"/><Compile Include="../src/TorchweedFusions.cs"/><Compile Include="../src/RollingProjectiles.cs"/><Compile Include="../src/ChargeTorchFusions.cs"/><Compile Include="../src/TorchPlantIndex.cs"/><Compile Include="../src/FusionPlant.cs"/><Compile Include="Adapters/SeedType.cs"/><Compile Include="Adapters/PlantLibraryIdentity.cs"/></ItemGroup>
   <ItemGroup><Compile Include="Adapters/FusionTime.cs" /></ItemGroup>
   <ItemGroup><Compile Include="../src/FusionRecipes.cs" /></ItemGroup>
+  <ItemGroup><Compile Include="../src/Doomwood.cs" /></ItemGroup>
 </Project>

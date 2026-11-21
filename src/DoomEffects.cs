@@ -21,9 +21,11 @@ internal static class DoomEffects
 
     internal static void Damage(Board board, int row, float x, float y, int order, bool fire = false,
         int damage = 1800, bool global = false, int freezeTicks = 0, float radius = 5f / 1.35f * 80,
-        Action? confirmedKill = null, Func<bool>? ownsPayload = null, bool showEffects = true)
+        Action? confirmedKill = null, Func<bool>? ownsPayload = null, bool showEffects = true, bool chargeDoomwood = true)
     {
         if (fire) { ReactivePots.Fire(board, row); PumpkinSupport.FireEnergy(board, row, damage); }
+        else if (showEffects && chargeDoomwood && (ownsPayload == null || ownsPayload()))
+            Doomwood.ChargeRadius(board, x, y);
         var range = DamageRangeFlags.Ground | DamageRangeFlags.Flying | DamageRangeFlags.Submerged
             | DamageRangeFlags.Dog | DamageRangeFlags.OffGround | DamageRangeFlags.Underground;
         var targets = new List<(Zombie Zombie, uint Id)>();

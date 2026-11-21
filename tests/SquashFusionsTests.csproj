@@ -15,6 +15,7 @@
     <Compile Include="../src/SquashFusions.cs" />
     <Compile Include="../src/KelpFusions.cs" />
     <Compile Include="../src/DoomEffects.cs" />
+    <Compile Include="Adapters/DoomwoodCharge.cs" />
     <Compile Include="../src/Jawbreaker.cs" />
     <Compile Include="../src/ChomperVariants.cs" />
     <Compile Include="../src/SolarSquash.cs" />

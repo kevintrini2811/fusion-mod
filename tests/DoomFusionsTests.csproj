@@ -16,6 +16,7 @@
     <Compile Include="../src/HypnoBiteEffects.cs" />
     <Compile Include="../src/PotatoSeedProjectiles.cs" />
     <Compile Include="../src/DoomEffects.cs" />
+    <Compile Include="Adapters/DoomwoodCharge.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adapters/PumpkinSupport.cs" />

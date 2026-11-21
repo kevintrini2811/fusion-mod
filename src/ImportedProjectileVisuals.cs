@@ -29,8 +29,9 @@ internal static partial class ImportedPeaVisuals
     internal static void EnsureDoomProjectile(Projectile projectile)
     {
         var assets = OrcaShroom.IsShot(projectile) ? DoomProjectileAssets : DoomProjectiles.Family(projectile) switch
-        { 1 => DoomPeaProjectileAssets, 2 => DoomProjectileAssets, 3 => BigDoomProjectileAssets,
-            4 => DoomMeteorProjectileAssets, _ => null };
+        { 1 or Doomwood.BurningDoomPea => DoomPeaProjectileAssets, 2 => DoomProjectileAssets,
+            3 or Doomwood.BurningDoom => BigDoomProjectileAssets, 4 => DoomMeteorProjectileAssets,
+            Doomwood.PurplePea => BlazeProjectileAssets, _ => null };
         if (assets == null) return;
         RegisterProjectile(projectile, assets);
     }
@@ -456,9 +457,9 @@ internal static partial class ImportedPeaVisuals
             && projectile.mBoard?.Pointer == Board && (assets == PhoenixProjectileAssets ? PhoenixProjectiles.Contains(projectile)
                 : assets == GlacierProjectileAssets ? GlacierShroom.Contains(projectile)
                 : assets == SolarCabbageProjectileAssets ? LobberProjectiles.Family(projectile) == 15
-                : assets == DoomPeaProjectileAssets ? DoomProjectiles.Family(projectile) == 1
+                : assets == DoomPeaProjectileAssets ? DoomProjectiles.Family(projectile) is 1 or Doomwood.BurningDoomPea
                 : assets == DoomProjectileAssets ? DoomProjectiles.Family(projectile) == 2 || OrcaShroom.IsShot(projectile)
-                : assets == BigDoomProjectileAssets ? DoomProjectiles.Family(projectile) == 3
+                : assets == BigDoomProjectileAssets ? DoomProjectiles.Family(projectile) is 3 or Doomwood.BurningDoom
                 : assets == DoomMeteorProjectileAssets ? DoomProjectiles.Family(projectile) == 4
                 : assets == PotatoSeedProjectileAssets ? PotatoSeedProjectiles.Contains(projectile)
                 : assets == DoomCactusProjectileAssets ? CactusProjectiles.Family(projectile) == 3
@@ -544,7 +545,7 @@ internal static partial class ImportedPeaVisuals
                 : assets == PotatoFireProjectileAssets ? projectile.mCobTargetX == ChargeTorchFusions.PotatoFire
                 : assets == ScorchProjectileAssets ? projectile.mCobTargetX == SupportTorchFusions.Scorch
                 : assets == StenchFireProjectileAssets ? projectile.mCobTargetX == SupportTorchFusions.Stench
-                : assets == PoisonProjectileAssets ? PoisonShooters.Contains(projectile) : assets == BlazeProjectileAssets ? BlazeShooters.Contains(projectile) : assets == HelmetProjectileAssets ? IronProjectiles.IsRed(projectile) && IronProjectiles.Contains(projectile) : assets == IronProjectileAssets ? !IronProjectiles.IsRed(projectile) && IronProjectiles.Contains(projectile) : assets == SolarNutBallAssets ? RollingProjectiles.TryShot(projectile, out var solar) && solar.SolarBall
+                : assets == PoisonProjectileAssets ? PoisonShooters.Contains(projectile) : assets == BlazeProjectileAssets ? BlazeShooters.Contains(projectile) || DoomProjectiles.Family(projectile) == Doomwood.PurplePea : assets == HelmetProjectileAssets ? IronProjectiles.IsRed(projectile) && IronProjectiles.Contains(projectile) : assets == IronProjectileAssets ? !IronProjectiles.IsRed(projectile) && IronProjectiles.Contains(projectile) : assets == SolarNutBallAssets ? RollingProjectiles.TryShot(projectile, out var solar) && solar.SolarBall
                 : assets == WeedProjectileAssets ? RollingProjectiles.IsWeed(projectile)
                 : assets == FireNutProjectileAssets ? projectile.mCobTargetX == RollingProjectiles.IgnitedNut
                 : assets == NutProjectileAssets ? NutProjectiles.Family(projectile) == 3 || RollingProjectiles.TryShot(projectile, out var nut) && nut.Nut && !nut.SolarBall
@@ -620,6 +621,8 @@ internal static partial class ImportedPeaVisuals
                         : new Color(node.Color[0], node.Color[1], node.Color[2], node.Color[3]);
                     if (assets == KelpProjectileAssets && KelpProjectiles.IsFire(projectile) && node.Name != "Shadow")
                         renderer.color *= new Color(1.5f, .7f, .28f, 1);
+                    if (DoomProjectiles.Family(projectile) >= Doomwood.PurplePea && node.Name != "Shadow")
+                        renderer.color *= new Color(1, .58f, 1.35f, 1);
                 }
                 Pose(model, transforms, FusionProjectileTime.AgeSeconds(projectile), null);
                 if (ReportedProjectileBoards.Add((Board, assets.Name)))

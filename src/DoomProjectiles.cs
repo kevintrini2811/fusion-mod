@@ -12,7 +12,8 @@ internal static class DoomProjectiles
     internal const float Unit = 80f / 1.35f;
     internal static int Family(Projectile shot) =>
         shot.mProjectileType is ProjectileType.Pea or ProjectileType.PeashooterPea
-        && shot.mCobTargetX is <= Marker - 1 and >= Marker - 4 ? Marker - (int)shot.mCobTargetX : 0;
+            or ProjectileType.Fireball or ProjectileType.PeashooterFireball
+        && shot.mCobTargetX is <= Marker - 1 and >= Marker - 7 ? Marker - (int)shot.mCobTargetX : 0;
 
     internal static void Track(Projectile shot, int family, int damage)
     {
@@ -33,15 +34,22 @@ internal static class DoomProjectiles
         uint id = zombie?.DataID ?? 0;
         shot.Die(); // Commit before callbacks, even if the hit is lethal.
         if (zombie == null || !Live(board, zombie)) return true;
+        if (family == Doomwood.PurplePea)
+        {
+            Doomwood.PurpleImpact(board, zombie, x, y, order, damage);
+            return true;
+        }
         // Bullet_doom.HitZombie: the enlarged shot runs its radius-three
         // explosion before the ordinary shield-bypassing direct hit.
         if (family == 3) Blast(board, x, y, row, order, damage);
+        else if (family is Doomwood.BurningDoomPea or Doomwood.BurningDoom)
+            DoomEffects.Damage(board, row, x, y, order, damage: damage, radius: 4 * Unit, chargeDoomwood: false);
         if (zombie.DataID == id && Live(board, zombie)) zombie.TakeDamage(damage, DamageFlags.BypassesShield);
         board.mApp.AddTodParticle(x, y, order, ParticleEffect.Powie);
         return true;
     }
 
-    private static bool Live(Board board, Zombie zombie) => !zombie.mDead && !zombie.IsDeadOrDying()
+    internal static bool Live(Board board, Zombie zombie) => !zombie.mDead && !zombie.IsDeadOrDying()
         && !zombie.mMindControlled && zombie.mBoard?.Pointer == board.Pointer;
 
     internal static void Blast(Board board, float x, float y, int row, int order, int damage)

@@ -85,6 +85,7 @@ internal static class EmberEffects
         if (item == null) return;
         bool explode = item.mGridY != 0;
         item.GridItemDie(); // Consume before the first nested death callback.
+        Doomwood.ChargeRadius(death.Board, death.X, death.Y, ticks: 1000, units: 4);
         var nuts = new List<(Plant Plant, uint Id)>();
         for (int i = 0; i < death.Board.m_plants.Count; ++i)
         {
@@ -99,7 +100,7 @@ internal static class EmberEffects
             if (plant.DataID == id && MineFusions.Active(plant)) ReactivePots.Heal(plant, 100);
         if (explode)
             DoomEffects.Damage(death.Board, death.Row, death.X, death.Y, death.Order,
-                damage: 300, radius: 2f * 80 / 1.35f);
+                damage: 300, radius: 2f * 80 / 1.35f, chargeDoomwood: false);
     }
 
     internal static void Tick(GridItem item)

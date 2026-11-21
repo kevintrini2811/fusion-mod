@@ -1,4 +1,6 @@
-# Fusion Mod 24.15.0
+# Fusion Mod 24.16.0
+
+Version 24.16.0 adds Doomwood and Doombrella. Fuse Doom-shroom with Torchwood or Umbrella Leaf in either order. Charged Doomwood ignites ember-spreading peas and spends energy to upgrade Doom projectiles. Doombrella marks zombies with Ember during ground knockback and launches a carrier that splits toward marked targets in its row. The two plants use tinted versions of existing models.
 
 Version 24.15.0 adds Pumpkin Brazier and Doom Pumpkin. Place Torchwood or Doom-shroom on Pumpkin for the respective fusion. After 51 pea ignitions or thaws, Pumpkin Brazier grows a Roasted Pumpkin in the first free shell position to its right. Ice Pot cools that child into a regular Pumpkin. Doom Pumpkin spends 100 energy to apply a Doom-shroom recipe to one plant on its tile and skips Ultimate results. Both fusions use tinted versions of existing shell models.
 

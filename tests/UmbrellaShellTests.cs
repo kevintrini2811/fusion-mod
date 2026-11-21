@@ -61,6 +61,31 @@ foreach(string mode in new[]{"friendly","dead","dying","airborne","other-board",
 }
 var q2=Shell();Target(q2,100,1,80);UmbrellaShell.Update(q2);
 Check(q2.mLaunchCounter==0,"adjacent row alone cannot trigger contact");
+var doom = new Plant { mSeedType = SeedType.Umbrella, mImitaterType = SeedType.Doomshroom };
+UmbrellaShell.Initialize(doom);
+var ember = Target(doom);
+var otherLane = Target(doom, 100, 1, 80);
+UmbrellaShell.Update(doom);
+Check(doom.mPlantMaxHealth == 1000 && doom.mPlantHealth == 900 && doom.mLaunchCounter == 100,
+    "Doombrella contact uses the one-second umbrella recovery and health cost");
+Check(EmberEffects.Has(ember) && !EmberEffects.Has(otherLane) && ember.Damage == 0
+    && OrcaShroom.Launched == doom, "contact marks the target and launches without direct damage");
+doom = new Plant { mSeedType = SeedType.Umbrella, mImitaterType = SeedType.Doomshroom, mState = PlantState.UmbrellaReflecting };
+UmbrellaShell.Initialize(doom);
+UmbrellaShell.Update(doom);
+Check(OrcaShroom.Launched == doom && doom.mTargetY == 1, "native reflection starts one launch");
+OrcaShroom.Launched = null;
+for (int tick = 0; tick < UmbrellaShell.CooldownTicks; ++tick)
+    UmbrellaShell.Update(doom);
+Check(OrcaShroom.Launched == null && doom.mLaunchCounter == 0 && doom.mTargetY == 1,
+    "a sustained reflection cannot launch again after a full uninterrupted cooldown");
+doom.mState = PlantState.Ready;
+UmbrellaShell.Update(doom);
+doom.mState = PlantState.UmbrellaReflecting;
+UmbrellaShell.Update(doom);
+Check(OrcaShroom.Launched == doom, "a fresh reflection edge starts another launch");
+UmbrellaShell.Fertilize(doom);
+Check(doom.mLaunchCounter == 50 && doom.mTargetY == 1, "fertilizer shortens recovery without replaying the reflection");
 var lethal=Shell();lethal.mPlantHealth=100;Target(lethal);UmbrellaShell.Update(lethal);
 Check(lethal.mDead,"self damage can kill");
 var normal=new Plant{mSeedType=SeedType.Umbrella};Target(normal);

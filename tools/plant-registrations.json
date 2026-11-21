@@ -1637,6 +1637,12 @@
       "marker": "Cherrybomb"
     },
     {
+      "name": "Doomwood",
+      "native": "Torchwood",
+      "marker": "Doomshroom",
+      "model": "Boomwood"
+    },
+    {
       "name": "Squashwood",
       "native": "Torchwood",
       "marker": "Squash"
@@ -1789,6 +1795,12 @@
       "name": "Bombrella",
       "native": "Umbrella",
       "marker": "Cherrybomb",
+      "model": "UmbrellaHusk"
+    },
+    {
+      "name": "Doombrella",
+      "native": "Umbrella",
+      "marker": "Doomshroom",
       "model": "UmbrellaHusk"
     },
     {
@@ -1995,7 +2007,8 @@
       "UmbrellaKale",
       "UmbrellaRind",
       "LumosUmbrella",
-      "Bombrella"
+      "Bombrella",
+      "Doombrella"
     ],
     "IsReactiveNut": [
       "FoulNut",

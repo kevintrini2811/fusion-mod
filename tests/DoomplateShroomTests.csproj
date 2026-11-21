@@ -9,6 +9,7 @@
     <Compile Include="DoomplateShroomStubs.cs" />
     <Compile Include="../src/DoomplateShroom.cs" />
     <Compile Include="../src/DoomEffects.cs" />
+    <Compile Include="Adapters/DoomwoodCharge.cs" />
     <Compile Include="../src/FusionTime.cs" />
     <Compile Include="../src/FusionNativeTimeRecords.cs" />
     <Compile Include="../src/FusionCraterTime.cs" />

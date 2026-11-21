@@ -15,7 +15,7 @@ namespace Il2CppReloaded.Gameplay
     public enum ZombieType { Normal, Gravestone, Target }
     public enum GameScenes { Playing, Loading }
     public enum PlantWeapon { Primary }
-    public enum ProjectileType { Pea, PeashooterPea, Star }
+    public enum ProjectileType { Pea, PeashooterPea, Star, Fireball, PeashooterFireball }
     public enum ProjectileMotion { Straight, Star }
     [Flags] public enum DamageRangeFlags { Ground = 1, Flying = 2 }
     [Flags] public enum DamageFlags { BypassesShield = 1 }
@@ -87,8 +87,14 @@ namespace FusionMod
     internal static class OrcaShroom { internal static bool IsShot(Projectile shot) => false; }
     internal static class DoomEffects
     {
+        internal static void Damage(Board board, int row, float x, float y, int order, int damage, float radius, bool chargeDoomwood) { }
         internal static void AshDamage(Il2CppReloaded.Gameplay.Zombie zombie, int damage,
             Il2CppReloaded.Gameplay.DamageFlags flags) => zombie.TakeDamage(damage, flags);
+    }
+    internal static class Doomwood
+    {
+        internal const int PurplePea = 5, BurningDoomPea = 6, BurningDoom = 7;
+        internal static void PurpleImpact(Board board, Zombie zombie, float x, float y, int order, int damage) { }
     }
     internal static class ChomperFusions
     {

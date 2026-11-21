@@ -9,3 +9,9 @@ internal static class Bombrella
     internal static void Repel(Plant plant, Zombie zombie) { }
     internal static void ChargeFromCherryHeal(Plant plant, int previousHealth) { }
 }
+
+internal static partial class OrcaShroom
+{
+    internal static Plant? Launched;
+    internal static void LaunchUmbrella(Plant plant) => Launched = plant;
+}

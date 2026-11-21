@@ -71,6 +71,32 @@ Check(backwards.mProjectileType == ProjectileType.Fireball && brazier.mTargetX =
     && !firstShell.mDead && !interior.mDead, "next crossing skips blocked and occupied shells and spawns above the first legal interior");
 Check(brazier.mBoard.LastPlantingEffect == roastedPumpkin, "Brazier uses the native planting effect for the spawned child");
 
+var wood = Make(FusionPlant.Doomwood);
+Check(wood.mTargetY == 6000, "Doomwood begins with 60 energy");
+var purple = Shot(wood);
+TorchFusions.Convert(purple);
+Check(DoomProjectiles.Family(purple) == Doomwood.PurplePea && purple.mCobTargetRow == 50
+    && wood.mTargetX == 1, "charged Doomwood ignites a pea for 30 additional damage");
+var doomPea = Shot(wood);
+DoomProjectiles.Track(doomPea, 1, 70);
+TorchFusions.Convert(doomPea);
+Check(DoomProjectiles.Family(doomPea) == Doomwood.BurningDoomPea && doomPea.mCobTargetRow == 140
+    && wood.mTargetY == 5000, "Doom Pea strengthens once and consumes ten energy");
+var doomShot = Shot(wood);
+DoomProjectiles.Track(doomShot, 2, 300);
+TorchFusions.Convert(doomShot);
+Check(DoomProjectiles.Family(doomShot) == Doomwood.BurningDoom && doomShot.mCobTargetRow == 1800
+    && wood.mTargetY == 4000, "ordinary Doom shot uses the sixfold conversion");
+Doomwood.Fertilize(wood);
+Check(wood.mTargetY == 50, "fertilizer caps Doomwood energy to half a second");
+wood.mTargetY = 1;
+Doomwood.Tick(wood);
+wood.mTargetX = 60;
+TorchFusions.Convert(Shot(wood, ProjectileType.Snowpea));
+Check(wood.mTargetY == 6000 && wood.mTargetX == 0, "the 61st conversion recharges exhausted Doomwood");
+Doomwood.Charge(wood, 60000);
+Check(wood.mTargetY == 60000, "charge cannot exceed 600 energy");
+
 var torchKelp = Make(FusionPlant.TorchKelp);
 torchKelp.mTargetX = 99;
 var smallKelpShot = Shot(torchKelp, tag: -460010);

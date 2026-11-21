@@ -7,7 +7,8 @@ namespace HarmonyLib {
 }
 namespace Il2CppReloaded.Gameplay {
  [Flags] public enum DamageRangeFlags { Ground=1,Flying=2,Dog=4,Submerged=8,OffGround=16 }
- [Flags] public enum DamageFlags { BypassesShield=1,DoesntLeaveBody=0x10,Spike=0x20 }
+ [Flags] public enum DamageFlags { BypassesShield=1,HitsShieldAndBody=2,DoesntLeaveBody=0x10,Spike=0x20 }
+ public enum ParticleEffect { FireballDeath }
  public enum ZombieType { Normal,Gravestone,Target,Zamboni,Catapult,Balloon,Boss,Gargantuar,RedeyeGargantuar }
  public enum ZombiePhase { BalloonFlying,BalloonPopping,BalloonWalking }
  public struct Vector2 {public float x,y;public Vector2(float a,float b){x=a;y=b;}}
@@ -42,7 +43,7 @@ namespace Il2CppReloaded.Gameplay {
   public Board mBoard=null!;public SeedType mSeedType,mImitaterType;public bool mDead,mIsAsleep,mIsOnBoard=true;
   public PlantState mState;public int mStateCountdown;public int mDoSpecialCountdown, mLaunchCounter,mStartRow,mPlantHealth,mPlantMaxHealth,mTargetX,mTargetY,mShootingCounter,mPlantCol,mRow,mRenderOrder;
   public float mX,mY,mWidth=80,mHeight=80;public bool NotOnGround()=>false;
-  public void PlantInitialize(){} public void Fire(){} public void UpdateAbilities(){} public void UpdateTorchwood(){} public void UpdateSpikeweed(){}
+  public void PlantInitialize(){} public void Fire(){} public void UpdateAbilities(){} public void UpdateTorchwood(){} public void UpdateSpikeweed(){} public void DoSpecial(){}
  }
  public sealed class Projectile {
   private static uint next;public uint DataID=++next;public IntPtr Pointer=(IntPtr)next;public ZombieID mTargetZombieID;public int mLastPortalX,mProjectileAge;
@@ -121,7 +122,7 @@ namespace FusionMod {
 
 namespace Il2CppReloaded.Services { public enum FoleyType {FirePea,Splat} }
 namespace Il2CppReloaded.Gameplay {
- public sealed class App {public Sound SoundSystem=new();}
+ public sealed class App {public Sound SoundSystem=new(); public void AddTodParticle(float x,float y,int order,ParticleEffect effect){}}
  public sealed class Sound {public void PlayFoley(Il2CppReloaded.Services.FoleyType sound) {}}
 }
 
@@ -130,6 +131,18 @@ namespace Il2CppReloaded.Constants {public static class Gameplay {public static 
 namespace PlantLibrary {public static class Projectiles {public static void PlaySound(string sound,Il2CppReloaded.Gameplay.Board board){} public static void NotifyBorn(Il2CppReloaded.Gameplay.Projectile p){}}}
 namespace FusionMod {
  using Il2CppReloaded.Gameplay;
+ internal static class EmberEffects
+ {
+  internal static readonly HashSet<Zombie> Marked = new();
+  internal static void Apply(Zombie zombie, bool explode) => Marked.Add(zombie);
+ }
+ internal static class DoomProjectiles
+ {
+  internal const float Unit = 80f / 1.35f;
+  internal static int Family(Projectile shot) => shot.mCobTargetX is <= -580001 and >= -580007 ? -580000 - (int)shot.mCobTargetX : 0;
+  internal static void Track(Projectile shot, int family, int damage) { shot.mCobTargetX = -580000 - family; shot.mCobTargetRow = damage; }
+  internal static bool Live(Board board, Zombie zombie) => !zombie.mDead && zombie.mBoard == board && !zombie.mMindControlled;
+ }
  internal static class PotatoProjectiles {internal static bool Contains(Projectile p)=>false;}
  internal static class KelpProjectiles {
   internal static bool IsFire(Projectile p)=>p.mCobTargetX==-540022;

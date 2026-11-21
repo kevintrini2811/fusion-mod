@@ -248,6 +248,8 @@ internal static class Fertilizer
             FumeSupport.Fertilize(plant);
             DoomFusions.Fertilize(plant);
             DoomShooters.Fertilize(plant);
+            Doomwood.Fertilize(plant);
+            UmbrellaShell.Fertilize(plant);
             SquashLobbers.Fertilize(plant);
             // Fertilizer instantly arms real underground potatoes in this cell.
             // Bucket, Cluster Mine and Chomp-mine have no buried growth phase.

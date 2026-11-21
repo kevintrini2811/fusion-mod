@@ -26,7 +26,12 @@ internal static class SupportTorchFusions
         if (identity == FusionPlant.TideShroom) { TideCurrent.Tick(plant); return; }
         if (!FusionTime.SourceStep(plant, typeof(SupportTorchFusions))) return;
         if (identity == FusionPlant.BlacklightPlantern)
-        { if (plant.mTargetY > 0) --plant.mTargetY; if (plant.mTargetY == 0) plant.mTargetY = 300; }
+        {
+            if (plant.mTargetY > 0) --plant.mTargetY;
+            if (plant.mTargetY != 0) return;
+            plant.mTargetY = 300;
+            Doomwood.PlanternPulse(plant);
+        }
     }
     internal static void Convert(Projectile shot)
     {
